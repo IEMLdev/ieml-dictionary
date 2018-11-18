@@ -37,13 +37,14 @@ if __name__ == '__main__':
             res += "Terms:"
             for c in root:
                 res += """
-    - index: {}
+    - ieml: "{}"
+      index: {}
       translations:
           fr: >
               {}
           en: >
               {}
-""".format(get_index(root, c), *get_translations(c))
+""".format(str(c.script), get_index(root, c), *get_translations(c))
             p = [e for e in root.relations.contains if len(e) != 1 and e != root]
             res += "Paradigms:"
             for c in p:
