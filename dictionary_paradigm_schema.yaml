@@ -1,0 +1,57 @@
+schema;translations_sch:
+    type: map
+    mapping:
+        fr:
+                required: True
+                type: str
+        en:
+                required: True
+                type: str
+        comment:
+                required: False
+                type: str
+
+type: map
+mapping:
+    RootParadigm: 
+        type: map
+        required: True
+        mapping:
+            ieml:
+                required: True
+                type: str
+            translations:
+                required: True
+                include: translations_sch     
+            inhibitions:
+                required: True
+                type: seq
+                sequence:
+                    - type: str
+                      enum: ['father_substance', 'father_attribute', 'father_mode', 'twin', 'opposed', 'associated', 'crossed']
+
+    Terms:
+        type: seq
+        sequence:
+            - type: map
+              mapping:
+                  index:
+                      required: True
+                      type: seq
+                      sequence:
+                          - type: int
+                  translations:
+                      required: True
+                      include: translations_sch     
+    Paradigms:
+        type: seq
+        sequence:
+            - type: map
+              mapping:
+                  ieml:
+                      required: True
+                      type: str
+                  translations:
+                      required: True
+                      include: translations_sch     
+
