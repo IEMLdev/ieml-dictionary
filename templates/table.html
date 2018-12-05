@@ -1,0 +1,130 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="content">
+<div class="property">
+    <h3>{{script.ieml}}</h3>
+
+    {% for lang in script.translations %}
+    <div class="entry">
+        <h4> {{lang}} </h4> <span>{{script.translations[lang]}}</span>
+    </div>
+    {% endfor %}
+</div>
+
+    <div class="property">
+        <h3>Script</h3>
+        <div class="entry">
+            <h4>Layer</h4> <span>{{script.layer}}</span>
+        </div>
+        <div class="entry">
+            <h4>Size</h4> <span>{{script.size}}</span>
+        </div>
+    </div>
+
+
+    <div class="property">
+        <h3>Tables</h3>
+
+        <div class="entry">
+
+            <h4>Parent</h4>
+
+            {% if script.tables.parent == "Root" %}
+            <span> Root paradigm </span>
+            {% else %}
+            <a href="/{{script.tables.parent}}"> {{script.tables.parent}} </a>
+            {% endif %}
+        </div>
+
+        <div class="entry">
+            <h4>Rank</h4>
+            <span>{{script.tables.rank}}</span>
+        </div>
+
+        <div class="entry">
+
+            <h4>Ndim</h4>
+            <span>{{script.tables.dim}}</span>
+        </div>
+
+        <div class="entry">
+
+            <h4>Shape</h4>
+            <span>{{script.tables.shape}}</span>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="table">
+    {% macro _cell(cell) -%}
+    <div class="cell">
+        <div class="ieml">
+            <a href="/{{cell.ieml}}"> {{cell.ieml}} </a>
+        </div>
+        <div class="translations">
+            {% for lang in cell.translations %}
+            <div class="lang">
+                <h5> {{lang}} </h5>
+                <span>{{cell.translations[lang]}}</span>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    {%- endmacro %}
+    {% macro _column(script, table) -%}
+    <table>
+            <tr>
+                <th> {{_cell(script)}} </th>
+            </tr>
+            {% for cell in table.cells %}
+            <tr>
+                <td>
+                    {{_cell(cell)}}
+                </td>
+            </tr>
+            {% endfor%}
+        </table>
+
+    {%- endmacro %}
+
+    {% macro _table(table) -%}
+        <table>
+            <tr>
+                <th></th>
+                {% for cell in table.columns %}
+                <th> {{_cell(cell)}} </th>
+                {% endfor %}
+            </tr>
+            {% for row in table.cells %}
+            <tr>
+                <th>
+                    {{_cell(table.rows[loop.index - 1])}}
+                </th>
+
+                {% for cell in row%}
+
+                <td>
+                    {{_cell(cell)}}
+                </td>
+                {% endfor%}
+            </tr>
+            {% endfor%}
+        </table>
+    {%- endmacro %}
+
+   {% if script.tables.dim == 1 %}
+        {{_column(script, script.tables)}}
+    {% elif script.tables.dim == 2 %}
+        {{_table(script.tables)}}
+    {% elif script.tables.dim > 2 %}
+        {% for s, table in script.tables.cells.items() %}
+        <h4>
+            {{_cell(table)}}
+        </h4>
+            {{_table(table.tables)}}
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock content %}

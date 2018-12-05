@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block content %}
+<li>
+    {% for script in scripts%}
+        <ul>
+            <a href="/{{script.ieml}}">{{script.ieml}}</a>
+        </ul>
+    {% endfor %}
+</li>
+{% endblock content %}
