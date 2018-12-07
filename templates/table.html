@@ -1,59 +1,125 @@
 {% extends "main.html" %}
 {% block content %}
-<div class="content">
-<div class="property">
-    <h3>{{script.ieml}}</h3>
-
-    {% for lang in script.translations %}
-    <div class="entry">
-        <h4> {{lang}} </h4> <span>{{script.translations[lang]}}</span>
-    </div>
-    {% endfor %}
-</div>
-
-    <div class="property">
-        <h3>Script</h3>
-        <div class="entry">
-            <h4>Layer</h4> <span>{{script.layer}}</span>
-        </div>
-        <div class="entry">
-            <h4>Size</h4> <span>{{script.size}}</span>
+<div class="content-v">
+    <h2>{{script.ieml}}</h2>
+    <div class="content-h">
+        <div class="property">
+            <h3>Translations</h3>
+            {% for lang in script.translations %}
+            <div class="entry">
+                <h4> {{lang|upper}} </h4> <span>{{script.translations[lang]}}</span>
+            </div>
+            {% endfor %}
         </div>
     </div>
+    <div class="content-h">
+        <div class="property">
+            <h3>Properties</h3>
+            <div class="entry">
+                <h4>Layer</h4> <span>{{script.layer}}</span>
+            </div>
+            <div class="entry">
+                <h4>Size</h4> <span>{{script.size}}</span>
+            </div>
+            <div class="entry">
+                <h4>Type</h4>
+                <span>{{script.type}}</span>
+            </div>
+            <div class="entry">
+                <h4>Parent table</h4>
+
+                {% if script.tables.parent == "Root" %}
+                <span> Root paradigm </span>
+                {% else %}
+                <a href="/{{script.tables.parent}}"> {{script.tables.parent}} </a>
+                {% endif %}
+            </div>
+
+            <div class="entry">
+                <h4>Rank</h4>
+                <span>{{script.tables.rank}}</span>
+            </div>
 
 
-    <div class="property">
-        <h3>Tables</h3>
+            <div class="entry">
 
-        <div class="entry">
+                <h4>Ndim of table</h4>
+                <span>{{script.tables.dim}}</span>
+            </div>
 
-            <h4>Parent</h4>
+            <div class="entry">
 
-            {% if script.tables.parent == "Root" %}
-            <span> Root paradigm </span>
-            {% else %}
-            <a href="/{{script.tables.parent}}"> {{script.tables.parent}} </a>
-            {% endif %}
+                <h4>Shape</h4>
+                <span>{{script.tables.shape}}</span>
+            </div>
         </div>
+        <div class="content-v" style="flex: 2 2;">
+            <h3>Relations</h3>
+            <div class="content-h">
+                <div class="property">
+                    <!--<select>-->
+                        <!--<option value="volvo">In root paradigms</option>-->
+                        <!--<option value="saab">Saab</option>-->
+                        <!--<option value="mercedes">Mercedes</option>-->
+                        <!--<option value="audi">Audi</option>-->
+                    <!--</select>-->
+                    <h4>Siblings</h4>
+                    {% for rel, siblings in script.relations['sibling'].items() %}
+                    <div class="entry">
+                        <h5>{{rel}}</h5>
+                        <ul>
+                            {% for s in siblings %}
+                            <li><a href="/{{s.ieml}}"> {{s.ieml}} </a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                <!--</div>-->
+                <!--<div class="property">-->
+                    <h4>Inclusion</h4>
+                    {% for rel, inclusions in script.relations['inclusion'].items() %}
+                    <div class="entry">
+                        <h5>{{rel}}</h5>
 
+                        <ul>
+                            {% for s in inclusions %}
+                            <li><a href="/{{s.ieml}}"> {{s.ieml}} </a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="property">
+                    <h4>Father</h4>
+                    {% for rel, inclusions in script.relations['father'].items() %}
+                    <div class="entry">
+                        <h5>{{rel}}</h5>
+
+                        <ul>
+                            {% for s in inclusions %}
+                            <li><a href="/{{s.ieml}}"> {{s.ieml}} </a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="property">
+        <h4>Child</h4>
+        {% for rel, inclusions in script.relations['child'].items() %}
         <div class="entry">
-            <h4>Rank</h4>
-            <span>{{script.tables.rank}}</span>
+            <h5>{{rel}}</h5>
+
+            <ul>
+                {% for s in inclusions %}
+                <li><a href="/{{s.ieml}}"> {{s.ieml}} </a></li>
+                {% endfor %}
+            </ul>
         </div>
+        {% endfor %}
 
-        <div class="entry">
-
-            <h4>Ndim</h4>
-            <span>{{script.tables.dim}}</span>
+    </div>
+            </div>
         </div>
-
-        <div class="entry">
-
-            <h4>Shape</h4>
-            <span>{{script.tables.shape}}</span>
-        </div>
-
-
     </div>
 </div>
 
