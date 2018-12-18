@@ -1,4 +1,11 @@
+.popup {
+    z-index: 1000;
+    position: absolute;
+    background-color: white; 
+}
+
 body {
+    
     font-size: 12px;
 }
 
@@ -26,11 +33,11 @@ h5 {
     margin-left: 10px;
 }
 
-ul {
+/*ul {
     margin-top: 2px;
     max-height: 80px;
     overflow-y: scroll;
-}
+}*/
 .content-h {
     display: flex;
     flex-direction: row;
@@ -55,9 +62,17 @@ ul {
 .table table {
      margin: auto;
 }
-.table {
-     padding-top: 20px;
+table {
+    padding-top: 20px;
+    text-align: center;
 }
+table th {
+    padding: 0.25rem;
+}
+table dl {
+    font-size: 11px;    
+}
+
 th {
     padding: 20px;
     border: black 1px solid;

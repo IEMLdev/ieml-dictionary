@@ -144,11 +144,30 @@ def index():
     return render_template('index.html', scripts=scripts)
 
 
-@app.route('/<s>')
+@app.route('/scripts/<s>')
 def view_table(s):
     try:
         script = dictionary[s]
     except KeyError:
         return "<strong>{}</strong> not defined in dictionary".format(s)
 
-    return render_template('table.html', script=get_table(script))
+    all_scripts = [{
+        'ieml': str(s),
+        'fr': dictionary.translations[s].fr,
+        'en': dictionary.translations[s].en
+    } for s in dictionary.scripts]
+
+    return render_template('table.html', script=get_table(script), all_scripts=all_scripts)
+
+
+
+# import json
+# @app.route('/search/<query>')
+# def search(query):
+#     results = []
+#     for s in dictionary.scripts:
+#         if query in dictionary.translations[s].fr or query in dictionary.translations[s].en \
+#             or query in s:
+#             results.append(s)
+
+#     return json.dumps()
