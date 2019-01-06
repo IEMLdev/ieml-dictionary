@@ -1,0 +1,291 @@
+{% extends "main.html" %}
+
+{% macro _cell(cell) -%}
+    <div class="cell">
+        <div class="ieml">
+            <a href="{{url_for('scripts', filename=cell.ieml)}}"> {{cell.ieml}} </a>
+        </div>
+        <dl class="translations">
+            {% for lang in cell.translations %}
+            <dt>{{lang}} </dt>
+            <dd>{{cell.translations[lang]}}</dd>
+            {% endfor %}
+        </dl>
+    </div>
+{%- endmacro %}
+{% macro _column(script, table) -%}
+    <table>
+        <tr>
+            <th> {{_cell(script)}} </th>
+        </tr>
+        {% for cell in table.cells %}
+        <tr>
+            <td>
+                {{_cell(cell)}}
+            </td>
+        </tr>
+        {% endfor%}
+    </table>
+{%- endmacro %}
+
+{% macro _table(table) -%}
+    <table class="table table-bordered">
+        <tr>
+            <th></th>
+            {% for cell in table.columns %}
+            <th> {{_cell(cell)}} </th>
+            {% endfor %}
+        </tr>
+        {% for row in table.cells %}
+        <tr>
+            <th>
+                {{_cell(table.rows[loop.index - 1])}}
+            </th>
+
+            {% for cell in row%}
+
+            <td>
+                {{_cell(cell)}}
+            </td>
+            {% endfor%}
+        </tr>
+        {% endfor%}
+    </table>
+{%- endmacro %}
+{% macro _table_header(s) -%}
+    <div class="card-header">Table <a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a> {{s.translations['fr']}}</div>
+{%- endmacro %}
+{% macro _table_menu_tabs() -%}
+    {% if script.tables.dim == 1 %}
+    <a class="nav-item nav-link"
+       id="nav-tables-tab"
+       data-toggle="tab"
+       href="#tables"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Tables {{script.ieml}}</a>
+    {% elif script.tables.dim == 2 %}
+    <a class="nav-item nav-link"
+       id="nav-tables-tab"
+       data-toggle="tab"
+       href="#tables"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Tables {{script.ieml}}</a>
+    {% elif script.tables.dim > 2 %}
+        {% for s, table in script.tables.cells.items() %}
+        <a class="nav-item nav-link"
+           id="nav-tables-{{loop.index}}-tab"
+           data-toggle="tab"
+           href="#tables-{{loop.index}}"
+           role="tab"
+           aria-controls="tables"
+           aria-selected="false">Tables {{table.ieml}}</a>
+        {% endfor %}
+    {% endif %}
+{%- endmacro %}
+
+{% macro _table_tabs() -%}
+    {% if script.tables.dim == 1 %}
+    <div class="tab-pane fade table"
+       role="tabpanel"
+       id="tables"
+       aria-labelledby="nav-tables-tab">
+
+        <div class="card">
+            {{_table_header(script)}}
+            <div class="card-body">
+                {{_column(script, script.tables)}}
+            </div>
+        </div>
+    </div>
+    {% elif script.tables.dim == 2 %}
+    <div class="tab-pane fade table"
+       role="tabpanel"
+       id="tables"
+       aria-labelledby="nav-tables-tab">
+
+        <div class="card">
+            {{_table_header(script)}}
+            <div class="card-body">
+                {{_table(script.tables)}}
+            </div>
+        </div>
+    </div>
+    {% elif script.tables.dim > 2 %}
+        {% for s, table in script.tables.cells.items() %}
+        <div class="tab-pane fade table"
+           role="tabpanel"
+           id="tables-{{loop.index}}"
+           aria-labelledby="nav-tables-{{loop.index}}-tab">
+
+            <div class="card">
+                {{_table_header(table)}}
+                <div class="card-body">
+                    {{_table(table.tables)}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+{%- endmacro %}
+
+{% macro _relation_accordion(reltype, relations) -%}
+<div class="card">
+    <div class="card-header" id="heading-{{reltype}}">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#{{reltype}}"
+                    aria-expanded="false"
+                    aria-controls="{{reltype}}">
+                {{reltype}}
+            </button>
+        </h5>
+    </div>
+
+    <div id="{{reltype}}"
+         class="collapse"
+         aria-labelledby="heading-{{reltype}}"
+         data-parent="#accordion-relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                {% for s in relations %}
+                    <tr>
+                        <td><a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a></td>
+                        <td>{{s.translations.fr}}</td>
+                        <td>{{s.translations.en}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{%- endmacro %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h2 class="text-center">
+            {{script.ieml}}
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        {% for lang in script.translations %}
+                        <dt> {{lang|upper}} </dt>
+                        <dd>{{script.translations[lang]}}</dd>
+                        {% endfor %}
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-6">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>{{script.layer}}</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>{{script.size}}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-3">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>{{script.type}}</dd>
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        {% if script.tables.parent == "Root" %}
+                                        Root paradigm
+                                        {% else %}
+                                        <a href="{{url_for('scripts', filename=script.tables.parent)}}"> {{script.tables.parent}} </a>
+                                        {% endif %}
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>{{script.tables.rank}}</dd>
+
+                                    <dt>Ndim of table</dt>
+                                    <dd>{{script.tables.dim}}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-3">
+                                <dl>
+                                    <dt>Shape of table</dt>
+                                    <dd>{{script.tables.shape}}</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <nav>
+            <div class="nav nav-tabs" role="tablist">
+                <a class="nav-item nav-link"
+                   id="nav-relations-tab"
+                   data-toggle="tab"
+                   href="#relations"
+                   role="tab"
+                   aria-controls="relations"
+                   aria-selected="true">Relations</a>
+                {{_table_menu_tabs()}}
+            </div>
+        </nav>
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <div class="card">
+                    <div class="card-header">Relations</div>
+                    <div class="card-body" id="accordion-relations">
+                        <div class="row">
+                            <div class="col-sm-6">
+                            {% for rel, relations in script.relations['sibling'].items() %}
+                                {{_relation_accordion(rel, relations)}}
+                            {% endfor %}
+
+                            {% for rel, relations in script.relations['inclusion'].items() %}
+                                {{_relation_accordion(rel, relations)}}
+                            {% endfor %}
+                            </div>
+                            <div class="col-sm-6">
+                            {% for rel, relations in script.relations['father'].items() %}
+                                {{_relation_accordion('father-' + rel, relations)}}
+                            {% endfor %}
+                            {% for rel, relations in script.relations['child'].items() %}
+                                {{_relation_accordion('child-' + rel, relations)}}
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{_table_tabs()}}
+        </div>
+    </div>
+
+{% endblock content %}

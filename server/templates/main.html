@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+	  <!-- Navbar brand -->
+	  <a class="navbar-brand">{% block current %}{% endblock %}</a>
+
+	  <!-- Collapsible content -->
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#translations">Translations <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#properties">Properties</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#tables">Tables</a>
+			</li>
+		</ul>
+		
+	    <form id="search_form" class="form-inline ml-auto">
+	      <div class="md-form my-0">
+	        <input id="search_dictionary" class="form-control" type="text" placeholder="Search entry" aria-label="Search">
+	        <div class="popup">
+	        	<ul class="list-group" id="search_results">
+	        		{% for script in all_scripts %}
+					  <a href="/scripts/{{script.ieml}}" class="list-group-item list-group-item-action flex-column align-items-start" data-ieml="{{script.ieml}}" data-fr="{{script.fr}}" data-en="{{script.en}}" style="display: none;">
+					    <div class="d-flex w-100 justify-content-between">
+					      <h5 class="mb-1">{{script.ieml}}</h5>
+					      <small class="text-muted">{{script.layer}}</small>
+					    </div>
+					    <p class="mb-1">{{script.fr}}</p>
+					    <p class="mb-1">{{script.en}}</p>
+					  </a>	        		
+					{% endfor %}
+	        	</ul>
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+	  <!-- Collapsible content -->
+	</nav>
+
+
+{% block content %}{% endblock %}
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) { 
+			var input = document.getElementById('search_dictionary');
+
+			input.oninput = function() {
+				var query = input.value
+				var list = document.getElementById("search_results");
+
+				if (query == '') {
+					Array.from(list.children).map((node) => node.style.display = "none")
+					return
+				}
+
+
+				// Loop through all list items, and hide those who don't match the search query
+				for (var node of list.children) {
+					var ieml = node.getAttribute('data-ieml')
+					var fr = node.getAttribute('data-fr')
+					var en = node.getAttribute('data-en')
+
+					if (!ieml.includes(query) && !fr.includes(query)  && !en.includes(query)) {
+						node.style.display = "none";
+					} else {
+						node.style.display = "";
+					}
+				}
+			}
+			document.getElementById("search_form").addEventListener('submit', function(event){event.preventDefault();});	
+		});
+	</script>
+	<!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+</body>
+</html>
