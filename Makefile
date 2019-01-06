@@ -11,7 +11,7 @@ normalize:
 	$(PYTHON) scripts/normalize_dictionary.py
 
 site: 
-	$(PYTHON) server/generate_site.py site
+	$(PYTHON) server/generate_site.py docs
 
 serve: site
-	cd site && $(PYTHON) -m http.server
+	cd docs && $(PYTHON) -m http.server
