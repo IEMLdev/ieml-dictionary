@@ -1,0 +1,2874 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            S:
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>signe</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>sign</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>0</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>1</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Cell</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>6</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="I_.html"> I: </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="I_.html"> I: </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>0</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(1,)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_.html">M:</a></td>
+                        <td>representation, noun, triad</td>
+                        <td>représentation, nom, triade</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="F_.html">F:</a></td>
+                        <td>fullness | form | pentad | dyad/pentad dialectic</td>
+                        <td>plénitude | forme | pentade | dialectique dyade/triade</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="I_.html">I:</a></td>
+                        <td>information, emptiness/form and monad/pentad dialectics</td>
+                        <td>information, dialectiques vide/forme et monade/pentade</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-mode"
+                    aria-expanded="false"
+                    aria-controls="child-mode">
+                child-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-mode"
+         class="collapse"
+         aria-labelledby="heading-child-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_O_S_..html">E:O:S:.</a></td>
+                        <td>comparative minus</td>
+                        <td>moins comparatif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_E_M_..html">E:E:M:.</a></td>
+                        <td>case indicators for verb clauses</td>
+                        <td>indicateurs de cas pour clauses verbales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_U_M_..html">E:U:M:.</a></td>
+                        <td>qualitative variation | qualitative comparison</td>
+                        <td>variation qualitative | comparaison qualitative</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_A_M_..html">E:A:M:.</a></td>
+                        <td>quantitative variation | quantitative comparaison</td>
+                        <td>variation quantitative | comparaison quantitative</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_S_M_..html">E:S:M:.</a></td>
+                        <td>time distribution | the substance happens in the attribute according to the mode</td>
+                        <td>distribution dans le temps | la substance arrive dans l'attribut selon le mode</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_B_M_..html">E:B:M:.</a></td>
+                        <td>frequency distribution | the substance happens in the attribute according to the mode</td>
+                        <td>distribution de fréquence | la substance arrive dans l'attribut selon le mode</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_T_M_..html">E:T:M:.</a></td>
+                        <td>space distribution | the substance is located in the attribute according to the mode</td>
+                        <td>distribution dans l'espace | la substance est dans l'attribut selon le mode</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_S_..html">E:M:S:.</a></td>
+                        <td>distributive minus</td>
+                        <td>moins distributif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_E_F_..html">E:E:F:.</a></td>
+                        <td>case indicators | clause modes</td>
+                        <td>indicateurs de cas | modes de clause</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_S_..html">E:F:S:.</a></td>
+                        <td>less</td>
+                        <td>moins</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_O_M_..html">E:O:M:.</a></td>
+                        <td>variation (adverbs of)</td>
+                        <td>variation (adverbes de)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_M_..html">E:M:M:.</a></td>
+                        <td>distribution (adverbs of)</td>
+                        <td>distribution (adverbes de)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_M_..html">E:F:M:.</a></td>
+                        <td>gradient adverb | in topic or clause mode</td>
+                        <td>adverbes de gradient | en mode de topic ou de clause</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="U_O_.f.S_.-.html">U:O:.f.S:.-</a></td>
+                        <td>shape and display an image</td>
+                        <td>former et afficher une image</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_O_.f.S_.-.html">A:O:.f.S:.-</a></td>
+                        <td>see and hide an image</td>
+                        <td>voir et cacher une image</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_U_.f.S_.-.html">O:U:.f.S:.-</a></td>
+                        <td>shape and see an image</td>
+                        <td>former et voir une image</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_A_.f.S_.-.html">O:A:.f.S:.-</a></td>
+                        <td>display and hide a visual image</td>
+                        <td>afficher et cacher une image visuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_O_.f.S_.-.html">O:O:.f.S:.-</a></td>
+                        <td>control visual experience</td>
+                        <td>contrôler l'expérience visuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="wo.f.F_.-.html">wo.f.F:.-</a></td>
+                        <td>modulate phenomena</td>
+                        <td>moduler les phénomènes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="wa.f.F_.-.html">wa.f.F:.-</a></td>
+                        <td>display sensorimotricity</td>
+                        <td>exposer la sensori-motricité</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="wu.f.F_.-.html">wu.f.F:.-</a></td>
+                        <td>feel | recognize shapes</td>
+                        <td>sentir | reconnaître les formes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="we.f.F_.-.html">we.f.F:.-</a></td>
+                        <td>shut off sensorimotricity</td>
+                        <td>interrompre la sensori-motricité</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.U_.E_T_.+I_.-.html">E:.U:.E:T:.+I:.-</a></td>
+                        <td>metadata: nature of data</td>
+                        <td>métadonnées: nature des données</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.A_.E_T_.+I_.-.html">E:.A:.E:T:.+I:.-</a></td>
+                        <td>metadata: identity of data</td>
+                        <td>métadonnées: identité des données</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.O_.E_T_.+I_.-.html">E:.O:.E:T:.+I:.-</a></td>
+                        <td>document metadata</td>
+                        <td>métadonnées documentaires</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_O_.f.F_.-.html">O:O:.f.F:.-</a></td>
+                        <td>control sensori-motor experience</td>
+                        <td>contrôler l'expérience sensori-motrice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.S_.U_.-'.html">B:.S:.n.-B:S:+T:.-n.S:.U:.-'</a></td>
+                        <td>ground plant, grass</td>
+                        <td>plante terrestre, herbe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-k.-n.T_.A_.-+n.S_+B_.U_.-'.html">B:.S:.n.-k.-n.T:.A:.-+n.S:+B:.U:.-'</a></td>
+                        <td>domestic plants</td>
+                        <td>plantes domestiques</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-n.-n.T_.A_.-+n.S_+B_.U_.-'.html">B:.S:.n.-n.-n.T:.A:.-+n.S:+B:.U:.-'</a></td>
+                        <td>wild plants</td>
+                        <td>plantes sauvages</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-k.-u.M_.-'.html">B:.B:.n.-k.-u.M:.-'</a></td>
+                        <td>domestic animals</td>
+                        <td>animaux domestiques</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-n.-u.M_.-'.html">B:.B:.n.-n.-u.M:.-'</a></td>
+                        <td>wild animals</td>
+                        <td>animaux sauvages</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.T_.A_.-+n.S_+B_.U_.-'.html">B:.S:.n.-B:S:+T:.-n.T:.A:.-+n.S:+B:.U:.-'</a></td>
+                        <td>plant</td>
+                        <td>végétal, plante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-B_S_+T_.-u.M_.-'.html">B:.B:.n.-B:S:+T:.-u.M:.-'</a></td>
+                        <td>animal</td>
+                        <td>animal</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.T_.A_.-+n.S_+B_.U_.-'+B_.B_.n.-B_S_+T_.-u.M_.-'.html">B:.S:.n.-B:S:+T:.-n.T:.A:.-+n.S:+B:.U:.-'+B:.B:.n.-B:S:+T:.-u.M:.-'</a></td>
+                        <td>animals and vegetals</td>
+                        <td>animaux et végétaux</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'j.-U_.-'M_.-'_.html">b.-S:.U:.-'j.-U:.-'M:.-',</a></td>
+                        <td>symmetry one</td>
+                        <td>symétrie un</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'j.-A_.-'M_.-'_.html">b.-S:.U:.-'j.-A:.-'M:.-',</a></td>
+                        <td>symmetry two</td>
+                        <td>symétrie deux</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'g.-U_.-'M_.-'_.html">b.-S:.U:.-'g.-U:.-'M:.-',</a></td>
+                        <td>symmetry three</td>
+                        <td>symétrie trois</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'g.-A_.-'M_.-'_.html">b.-S:.U:.-'g.-A:.-'M:.-',</a></td>
+                        <td>symmetry four</td>
+                        <td>symétrie quatre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'h.-U_.-'M_.-'_.html">b.-S:.U:.-'h.-U:.-'M:.-',</a></td>
+                        <td>symmetry five</td>
+                        <td>symétrie cinq</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'h.-A_.-'M_.-'_.html">b.-S:.U:.-'h.-A:.-'M:.-',</a></td>
+                        <td>symmetry six</td>
+                        <td>symétrie six</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'c.-U_.-'M_.-'_.html">b.-S:.U:.-'c.-U:.-'M:.-',</a></td>
+                        <td>symmetry seven</td>
+                        <td>symétrie sept</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'c.-A_.-'M_.-'_.html">b.-S:.U:.-'c.-A:.-'M:.-',</a></td>
+                        <td>symmetry eight</td>
+                        <td>symétrie huit</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'p.-U_.-'M_.-'_.html">b.-S:.U:.-'p.-U:.-'M:.-',</a></td>
+                        <td>symmetry nine</td>
+                        <td>symétrie neuf</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'p.-A_.-'M_.-'_.html">b.-S:.U:.-'p.-A:.-'M:.-',</a></td>
+                        <td>symmetry ten</td>
+                        <td>symétrie dix</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'x.-U_.-'M_.-'_.html">b.-S:.U:.-'x.-U:.-'M:.-',</a></td>
+                        <td>symmetry eleven</td>
+                        <td>symétrie onze</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'x.-A_.-'M_.-'_.html">b.-S:.U:.-'x.-A:.-'M:.-',</a></td>
+                        <td>symmetry twelve</td>
+                        <td>symétrie douze</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'M_.-'_.html">n.-S:.U:.-'S:.-'M:.-',</a></td>
+                        <td>northern continental areas</td>
+                        <td>zones continentales nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'M_.-'_.html">n.-S:.U:.-'B:.-'M:.-',</a></td>
+                        <td>central continental areas</td>
+                        <td>zones continentales centrales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'M_.-'_.html">n.-S:.U:.-'T:.-'M:.-',</a></td>
+                        <td>southern continental area</td>
+                        <td>zones continentales sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'S_.-'_.html">n.-S:.U:.-'M:.-'S:.-',</a></td>
+                        <td>western continents</td>
+                        <td>continents ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'S_.-'M_.-'_.html">n.-T:.A:.-'S:.-'M:.-',</a></td>
+                        <td>north ocean</td>
+                        <td>océan nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'B_.-'M_.-'_.html">n.-T:.A:.-'B:.-'M:.-',</a></td>
+                        <td>central ocean</td>
+                        <td>océan central</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'T_.-'M_.-'_.html">n.-T:.A:.-'T:.-'M:.-',</a></td>
+                        <td>south ocean</td>
+                        <td>océan sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'S_.-'_.html">n.-T:.A:.-'M:.-'S:.-',</a></td>
+                        <td>Atlantic ocean</td>
+                        <td>océan Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'U_.-'F_.-'_.html">b.-S:.A:.-'U:.-'F:.-',</a></td>
+                        <td>white</td>
+                        <td>blanc</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'A_.-'F_.-'_.html">b.-S:.A:.-'A:.-'F:.-',</a></td>
+                        <td>black</td>
+                        <td>noir</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'S_.-'F_.-'_.html">b.-S:.A:.-'S:.-'F:.-',</a></td>
+                        <td>blue</td>
+                        <td>bleu</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'B_.-'F_.-'_.html">b.-S:.A:.-'B:.-'F:.-',</a></td>
+                        <td>yellow</td>
+                        <td>jaune</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'T_.-'F_.-'_.html">b.-S:.A:.-'T:.-'F:.-',</a></td>
+                        <td>red</td>
+                        <td>rouge</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'S_.-'_.html">b.-S:.A:.-'F:.-'S:.-',</a></td>
+                        <td>blueish</td>
+                        <td>tirant sur le bleu</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'e.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>plectrum</td>
+                        <td>plectre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'e.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>bow</td>
+                        <td>archet</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'wu.f.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'wu.f.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>keyboard</td>
+                        <td>clavier</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'a.S_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'a.S:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>bellows</td>
+                        <td>soufflet</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'i.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'i.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>stick or hammer</td>
+                        <td>baguette ou marteau</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'b.i.-l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'b.i.-l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>pipe</td>
+                        <td>tuyau</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>bell</td>
+                        <td>cloche</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>vibrating membrane</td>
+                        <td>membrane vibrante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.o.-n.o.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.o.-n.o.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>walls, acoustic architecture</td>
+                        <td>murs, architecture acoustique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>string</td>
+                        <td>corde</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>sound box</td>
+                        <td>caisse de résonance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>whistle</td>
+                        <td>sifflet</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>vibrating plate</td>
+                        <td>plaquette vibrante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',</a></td>
+                        <td>aquatic landscape</td>
+                        <td>paysage aquatique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'M_.-'_.html">n.-S:.U:.-'M:.-'M:.-',</a></td>
+                        <td>continental zones</td>
+                        <td>zones continentales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'M_.-'_.html">n.-T:.A:.-'M:.-'M:.-',</a></td>
+                        <td>main seas</td>
+                        <td>mers principales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.-S_.U_.-'n.-T_.A_.-'l.-S_.O_.-'_+n.-T_.A_.-'M_.-'M_.-'_.html">s.-S:.U:.-'n.-T:.A:.-'l.-S:.O:.-',+n.-T:.A:.-'M:.-'M:.-',</a></td>
+                        <td>oceans</td>
+                        <td>océans</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'s.-S_.U_.-'l.-S_.O_.-'_+n.-S_.U_.-'M_.-'M_.-'_.html">n.-S:.U:.-'s.-S:.U:.-'l.-S:.O:.-',+n.-S:.U:.-'M:.-'M:.-',</a></td>
+                        <td>continents</td>
+                        <td>continents</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'M_O_.-O_.-'S_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'S:.-',</a></td>
+                        <td>lines, one dimensional forms</td>
+                        <td>lignes, formes à une dimension</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_+l.-y.-'E_U_.M_T_.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',+l.-y.-'E:U:.M:T:.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>landscape</td>
+                        <td>paysage</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'b.i.-l.i.-'+l.o.-n.o.-'+l.i.-t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'b.i.-l.i.-'+l.o.-n.o.-'+l.i.-t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>parts of musical instruments, orchestra, lutherie: resonators</td>
+                        <td>partie des instruments de musique, orchestre, lutherie: résonateurs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'F_.-'_.html">b.-S:.A:.-'F:.-'F:.-',</a></td>
+                        <td>colors</td>
+                        <td>couleurs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>parts of musical instruments, orchestra, lutherie: mediators</td>
+                        <td>parties des instruments de musique, orchestre, lutherie: médiateurs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>parts of musical instruments, orchestra, lutherie: vibrators</td>
+                        <td>parties des instruments de musique, orchestre, lutherie: vibrateurs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'M:.-',</a></td>
+                        <td>visual shapes: symmetries and dimensions</td>
+                        <td>formes visuelles: symétries et dimensions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.U_.-'O_M_.-'O_.-'_+b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html">b.-S:.U:.-'O:M:.-'O:.-',+b.-S:.U:.-'M:O:.-O:.-'M:.-',</a></td>
+                        <td>visual shapes</td>
+                        <td>formes visuelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>parts of musical instruments, orchestra, lutherie: mediators and vibrating parts</td>
+                        <td>parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="m.-M_.O_.-'m.-M_.O_.-'E_A_S_+T_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:S:+T:.-',</a></td>
+                        <td>sentiments</td>
+                        <td>sentiments</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>Canada</td>
+                        <td>Canada</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',B:.-',M:.-',_</a></td>
+                        <td>United States of America, USA</td>
+                        <td>Etats Unis d'Amérique, USA</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',T:.-',M:.-',_</a></td>
+                        <td>Mexico</td>
+                        <td>Mexique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>West coast, Pacific zone of North America</td>
+                        <td>côte Ouest, zone Pacifique de l'Amérique du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>northern Europe</td>
+                        <td>Europe du nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',B:.-',M:.-',_</a></td>
+                        <td>median Europe</td>
+                        <td>Europe médiane</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',T:.-',M:.-',_</a></td>
+                        <td>southern Europe</td>
+                        <td>Europe du sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>western Europe</td>
+                        <td>Europe de l'ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',S:.-',M:.-',_</a></td>
+                        <td>Russia</td>
+                        <td>Russie</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',B:.-',M:.-',_</a></td>
+                        <td>Central Asia</td>
+                        <td>Asie centrale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',T:.-',M:.-',_</a></td>
+                        <td>From the asian Middle East to the South Eastern Asia, through Iran and Central Asia</td>
+                        <td>Du Moyen-Orient asiatique à l'Asie du Sud-Est en passant par l'Iran et l'Asie centrale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',S:.-',_</a></td>
+                        <td>Western Asia</td>
+                        <td>Asie de l'Ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>north central America and Caribbean</td>
+                        <td>Amérique centrale et Caraïbes nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',B:.-',M:.-',_</a></td>
+                        <td>Central America and Caribbean: middle zone</td>
+                        <td>Amérique centrale et Caraïbes: zone médiane</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',T:.-',M:.-',_</a></td>
+                        <td>south central America and Caribbean</td>
+                        <td>Amérique centrale et Caraïbes sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>continental central american countries</td>
+                        <td>Pays continentaux d'Amérique centrale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>North african countries with a coast on the mediterranean sea</td>
+                        <td>Pays d'Afrique du Nord avec une côte sur la mer Méditerranée</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',B:.-',M:.-',_</a></td>
+                        <td>North african countries located on the southern part of the Sahara desert</td>
+                        <td>Pays d'Afrique bordant au Sud le désert du Sahara</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',T:.-',M:.-',_</a></td>
+                        <td>Tropical rainy Africa at the south of savannah, horn of Africa</td>
+                        <td>Afrique tropicale humide au sud de la savane, corne de l'Afrique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>Countries of northern and southern Africa on the western part of the continent, bordering the Atlantic ocean</td>
+                        <td>Pays d'Afrique du nord et du centre à l'ouest du continent, bordant l'océan Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>North of South America</td>
+                        <td>Nord de l'Amérique du sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'S:.-',B:.-',M:.-',_</a></td>
+                        <td>Median area of South America</td>
+                        <td>Zone médiane de l'Amérique du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>Countries of South America on the Pacific coast</td>
+                        <td>Pays de la façade Pacifique de l'Amérique du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>Equatorial Africa</td>
+                        <td>Afrique équatoriale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',B:.-',M:.-',_</a></td>
+                        <td>Tropical south Africa</td>
+                        <td>Afrique tropicale sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',T:.-',M:.-',_</a></td>
+                        <td>Southern tip of Africa</td>
+                        <td>Pointe sud de l'Afrique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>Southern Africa looking to the Atlantic</td>
+                        <td>Afrique australe tournée vers l'Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',S:.-',_</a></td>
+                        <td>Australia West middle part</td>
+                        <td>Australie, moitié Ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>North American countries</td>
+                        <td>Pays d'Amérique du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>European countries</td>
+                        <td>Pays européens</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries from Northern Asia</td>
+                        <td>Pays d'Asie du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>Central America and Caribbean countries</td>
+                        <td>Pays d'Amérique centrale et des Caraïbes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries of northern and central Africa</td>
+                        <td>Pays d'Afrique du nord et du centre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries from southern Asia</td>
+                        <td>Pays d'Asie du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>South American countries</td>
+                        <td>Pays d'Amérique du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>Southern african countries</td>
+                        <td>Pays d'Afrique australe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Oceanian countries</td>
+                        <td>Pays d'Océanie</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-attribute"
+                    aria-expanded="false"
+                    aria-controls="child-attribute">
+                child-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-attribute"
+         class="collapse"
+         aria-labelledby="heading-child-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_S_O_..html">E:S:O:.</a></td>
+                        <td>hypothetic construction | if</td>
+                        <td>construction hypothétique | si</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_S_..html">O:S:.</a></td>
+                        <td>signifying actions</td>
+                        <td>actions signifiantes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_S_M_..html">E:S:M:.</a></td>
+                        <td>time distribution | the substance happens in the attribute according to the mode</td>
+                        <td>distribution dans le temps | la substance arrive dans l'attribut selon le mode</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_U_..html">E:M:U:.</a></td>
+                        <td>inferential may</td>
+                        <td>peut inférentiel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_A_..html">E:M:A:.</a></td>
+                        <td>inferential must</td>
+                        <td>doit inférentiel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_S_..html">E:M:S:.</a></td>
+                        <td>distributive minus</td>
+                        <td>moins distributif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_B_..html">E:M:B:.</a></td>
+                        <td>distributive medium</td>
+                        <td>medium distributif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_T_..html">E:M:T:.</a></td>
+                        <td>distributive plus</td>
+                        <td>plus distributif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="U_M_..html">U:M:.</a></td>
+                        <td>virtual actions</td>
+                        <td>actions virtuelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_M_..html">A:M:.</a></td>
+                        <td>actions virtuelles</td>
+                        <td>actions actuelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_..html">S:M:.</a></td>
+                        <td>becoming of the sign</td>
+                        <td>devenir du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_M_..html">B:M:.</a></td>
+                        <td>becoming of the being</td>
+                        <td>devenir de l'être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_M_..html">T:M:.</a></td>
+                        <td>becoming of the thing</td>
+                        <td>devenir de la choses</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_S_..html">M:S:.</a></td>
+                        <td>becoming sign</td>
+                        <td>devenir signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_S_..html">E:F:S:.</a></td>
+                        <td>less</td>
+                        <td>moins</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_B_..html">E:F:B:.</a></td>
+                        <td>medium (gradient)</td>
+                        <td>medium (gradient)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_T_..html">E:F:T:.</a></td>
+                        <td>more</td>
+                        <td>plus</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_O_..html">E:M:O:.</a></td>
+                        <td>inference types | in a clause: the substance (the subject) has the attribute (the predicate) following the inference type in mode</td>
+                        <td>types d'inférence | dans une clause: la substance (le sujet) possède l'attribut (le prédicat) selon le type d'inférence en mode</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_..html">O:M:.</a></td>
+                        <td>actions</td>
+                        <td>actions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_M_M_..html">E:M:M:.</a></td>
+                        <td>distribution (adverbs of)</td>
+                        <td>distribution (adverbes de)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_..html">M:M:.</a></td>
+                        <td>dimensions of interaction | ennead</td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.+M_O_..html">O:M:.+M:O:.</a></td>
+                        <td>actions and agents | vertical and horizontal hexads</td>
+                        <td>actions et agents | hexades verticale et horizontale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_F_M_..html">E:F:M:.</a></td>
+                        <td>gradient adverb | in topic or clause mode</td>
+                        <td>adverbes de gradient | en mode de topic ou de clause</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.U_O_.-.html">E:.S:.U:O:.-</a></td>
+                        <td>pronoun of number in the first person</td>
+                        <td>pronom de nombre à la première personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.A_O_.-.html">E:.S:.A:O:.-</a></td>
+                        <td>pronoun of gender in the first person</td>
+                        <td>pronom de genre à la première personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.O_U_.-.html">E:.S:.O:U:.-</a></td>
+                        <td>pronoun in the first person masculine singular</td>
+                        <td>pronom à la première personne masculin singulier</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.O_A_.-.html">E:.S:.O:A:.-</a></td>
+                        <td>pronoun at the first person plural feminine</td>
+                        <td>pronom à la première personne du pluriel féminin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.S_O_.-.html">E:.S:.S:O:.-</a></td>
+                        <td>set-element role</td>
+                        <td>rôle ensembliste</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.B_O_.-.html">E:.S:.B:O:.-</a></td>
+                        <td>functional role</td>
+                        <td>rôle fonctionnel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.T_O_.-.html">E:.S:.T:O:.-</a></td>
+                        <td>mereological role</td>
+                        <td>rôle méréologique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_S_.S_.-.html">O:S:.S:.-</a></td>
+                        <td>move-blow by sliping</td>
+                        <td>bouger-souffler en glissant</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_B_.S_.-.html">O:B:.S:.-</a></td>
+                        <td>move-blow by containing</td>
+                        <td>bouger-souffler en contenant</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_T_.S_.-.html">O:T:.S:.-</a></td>
+                        <td>move-blow by displacing</td>
+                        <td>bouger-souffler en déplaçant</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.M_U_.-.html">E:.S:.M:U:.-</a></td>
+                        <td>virtualizing specification</td>
+                        <td>spécification virtualisante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.M_A_.-.html">E:.S:.M:A:.-</a></td>
+                        <td>actualising specification</td>
+                        <td>spécification actualisante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.wo.-.html">E:.M:.wo.-</a></td>
+                        <td>singular pronoun of person</td>
+                        <td>pronom de personne singulier</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.wa.-.html">E:.M:.wa.-</a></td>
+                        <td>plural pronoun of person</td>
+                        <td>pronom de personne pluriel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.wu.-.html">E:.M:.wu.-</a></td>
+                        <td>masculine pronoun of person</td>
+                        <td>pronom de personne masculin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.we.-.html">E:.M:.we.-</a></td>
+                        <td>feminine pronoun of person</td>
+                        <td>pronom de personne féminin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.j.-.html">E:.M:.j.-</a></td>
+                        <td>virtual formal cause</td>
+                        <td>cause formelle virtuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.g.-.html">E:.M:.g.-</a></td>
+                        <td>actual formal cause</td>
+                        <td>cause formelle actuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.h.-.html">E:.M:.h.-</a></td>
+                        <td>virtual systemic cause</td>
+                        <td>cause systémique virtuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.c.-.html">E:.M:.c.-</a></td>
+                        <td>actual systemic cause</td>
+                        <td>cause systémique actuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.p.-.html">E:.M:.p.-</a></td>
+                        <td>virtual existential cause</td>
+                        <td>cause existentielle virtuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.x.-.html">E:.M:.x.-</a></td>
+                        <td>actual existential cause</td>
+                        <td>cause existentielle actuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="U_M_.S_.-.html">U:M:.S:.-</a></td>
+                        <td>move-blow elements</td>
+                        <td>bouger-souffler des éléments</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_M_.S_.-.html">A:M:.S:.-</a></td>
+                        <td>move-blow oneself</td>
+                        <td>bouger-souffler soi-même</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.S_.n.-.html">M:.S:.n.-</a></td>
+                        <td>biological level (vegetal)</td>
+                        <td>niveau biologique (végétaux)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.O_O_.-.html">E:.S:.O:O:.-</a></td>
+                        <td>pronoun in the first person</td>
+                        <td>pronom à la première personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.wo.-.html">E:.F:.wo.-</a></td>
+                        <td>singular pronoun</td>
+                        <td>pronom singulier</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.wa.-.html">E:.F:.wa.-</a></td>
+                        <td>plural pronoun</td>
+                        <td>pronom pluriel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.wu.-.html">E:.F:.wu.-</a></td>
+                        <td>masculine pronoun</td>
+                        <td>pronom masculin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.we.-.html">E:.F:.we.-</a></td>
+                        <td>feminine pronoun</td>
+                        <td>pronom féminin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="y.F_.-.html">y.F:.-</a></td>
+                        <td>perform a topological act</td>
+                        <td>accomplir un acte topologique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="o.F_.-.html">o.F:.-</a></td>
+                        <td>manipulate valuable objects</td>
+                        <td>manipuler des objets de valeur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="e.F_.-.html">e.F:.-</a></td>
+                        <td>place | displace objects</td>
+                        <td>placer | déplacer des objets</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="u.F_.-.html">u.F:.-</a></td>
+                        <td>move oneself</td>
+                        <td>se déplacer</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="a.F_.-.html">a.F:.-</a></td>
+                        <td>perform metabolic function</td>
+                        <td>accomplir une fonction métabolique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="i.F_.-.html">i.F:.-</a></td>
+                        <td>perform a physical movement energetically</td>
+                        <td>accomplir un mouvement énergique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.M_O_.-.html">E:.S:.M:O:.-</a></td>
+                        <td>specifying cause</td>
+                        <td>cause spécifiante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.S_O_.-.html">E:.M:.S:O:.-</a></td>
+                        <td>formal cause | formal role</td>
+                        <td>cause formelle | rôle formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.B_O_.-.html">E:.M:.B:O:.-</a></td>
+                        <td>systemic cause</td>
+                        <td>cause systémique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.T_O_.-.html">E:.M:.T:O:.-</a></td>
+                        <td>existential cause</td>
+                        <td>cause existentielle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.S_.-.html">O:M:.S:.-</a></td>
+                        <td>move-blow</td>
+                        <td>bouger-souffler</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_.I_.n.-.html">S:.I:.n.-</a></td>
+                        <td>code</td>
+                        <td>code</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.I_.n.-.html">B:.I:.n.-</a></td>
+                        <td>generative process</td>
+                        <td>processus générateur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_.I_.n.-.html">T:.I:.n.-</a></td>
+                        <td>emerging forms</td>
+                        <td>formes émergentes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.U_O_.-.html">E:.F:.U:O:.-</a></td>
+                        <td>indifferent number</td>
+                        <td>nombre indifférent</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.A_O_.-.html">E:.F:.A:O:.-</a></td>
+                        <td>neutral gender</td>
+                        <td>genre neutre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.O_O_.-.html">E:.M:.O:O:.-</a></td>
+                        <td>pronoun of person (first, second, third)</td>
+                        <td>pronom de personne (première, deuxième, troisième)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="U_M_.F_.-.html">U:M:.F:.-</a></td>
+                        <td>move objectively</td>
+                        <td>bouger objectivement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_M_.F_.-.html">A:M:.F:.-</a></td>
+                        <td>move subjectively</td>
+                        <td>bouger subjectivement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.M_O_.-.html">E:.M:.M:O:.-</a></td>
+                        <td>causal roles | in clause mode: the substance is a causal role of the attribute</td>
+                        <td>rôles causaux | en mode de clause, la substance est un role causal de l'attribut</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.M_.-.html">O:M:.M:.-</a></td>
+                        <td>provoke a physical change</td>
+                        <td>provoquer un changement physique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.I_.n.-.html">M:.I:.n.-</a></td>
+                        <td>nature's levels</td>
+                        <td>niveaux de la nature</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.O_O_.-.html">E:.F:.O:O:.-</a></td>
+                        <td>pronouns</td>
+                        <td>pronoms</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.F_.-.html">O:M:.F:.-</a></td>
+                        <td>movements and physical actions (verbs)</td>
+                        <td>mouvements et actions physiques (verbes)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.O_S_.-t.-'.html">E:.-S:.O:S:.-t.-'</a></td>
+                        <td>future according to sign</td>
+                        <td>futur selon le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.O_B_.-t.-'.html">E:.-S:.O:B:.-t.-'</a></td>
+                        <td>future according to being</td>
+                        <td>futur selon l'être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.O_T_.-t.-'.html">E:.-S:.O:T:.-t.-'</a></td>
+                        <td>future according to thing</td>
+                        <td>futur selon la chose</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.-S_.O_.-'.html">s.-S:.O:.-'</a></td>
+                        <td>temperature</td>
+                        <td>température</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.S_.U_.-'.html">B:.S:.n.-B:S:+T:.-n.S:.U:.-'</a></td>
+                        <td>ground plant, grass</td>
+                        <td>plante terrestre, herbe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.B_.U_.-'.html">B:.S:.n.-B:S:+T:.-n.B:.U:.-'</a></td>
+                        <td>tree</td>
+                        <td>arbre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.T_.A_.-'.html">B:.S:.n.-B:S:+T:.-n.T:.A:.-'</a></td>
+                        <td>aquatic plant</td>
+                        <td>plante aquatique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-B_S_+T_.-u.S_.-'.html">B:.B:.n.-B:S:+T:.-u.S:.-'</a></td>
+                        <td>flying animal, bird</td>
+                        <td>animal volant, oiseau</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-B_S_+T_.-u.B_.-'.html">B:.B:.n.-B:S:+T:.-u.B:.-'</a></td>
+                        <td>aquatic animal, fish</td>
+                        <td>animal aquatique, poisson</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-B_S_+T_.-u.T_.-'.html">B:.B:.n.-B:S:+T:.-u.T:.-'</a></td>
+                        <td>ground animal</td>
+                        <td>animal terrestre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.O_.-'.html">n.-S:.O:.-'</a></td>
+                        <td>north and south elements</td>
+                        <td>éléments du nord et du sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-S_.O_.-'.html">l.-S:.O:.-'</a></td>
+                        <td>north-south axis</td>
+                        <td>axe nord-sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.U_M_.-t.-'.html">E:.-S:.U:M:.-t.-'</a></td>
+                        <td>virtual future</td>
+                        <td>futur virtuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.S_M_.-l.-'.html">E:.-S:.S:M:.-l.-'</a></td>
+                        <td>objective origin</td>
+                        <td>origine objective</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.B_M_.-l.-'.html">E:.-S:.B:M:.-l.-'</a></td>
+                        <td>course</td>
+                        <td>parcours</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.T_M_.-l.-'.html">E:.-S:.T:M:.-l.-'</a></td>
+                        <td>objective end</td>
+                        <td>fin objective</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.M_S_.-l.-'.html">E:.-S:.M:S:.-l.-'</a></td>
+                        <td>shifter</td>
+                        <td>moteur (situation spatiale)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.M_B_.-l.-'.html">E:.-S:.M:B:.-l.-'</a></td>
+                        <td>path</td>
+                        <td>chemin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.M_T_.-l.-'.html">E:.-S:.M:T:.-l.-'</a></td>
+                        <td>traversal</td>
+                        <td>traversée</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.s.-l.-'.html">E:.-M:.s.-l.-'</a></td>
+                        <td>dynamic origin</td>
+                        <td>origine dynamique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.b.-l.-'.html">E:.-M:.b.-l.-'</a></td>
+                        <td>relative origin</td>
+                        <td>origine relative</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.t.-l.-'.html">E:.-M:.t.-l.-'</a></td>
+                        <td>absolute origin</td>
+                        <td>origine absolue</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.k.-l.-'.html">E:.-M:.k.-l.-'</a></td>
+                        <td>dynamic intermediary</td>
+                        <td>intermédiaire dynamique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.m.-l.-'.html">E:.-M:.m.-l.-'</a></td>
+                        <td>relative intermediary</td>
+                        <td>intermediaire relatif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.n.-l.-'.html">E:.-M:.n.-l.-'</a></td>
+                        <td>absolute intermediary</td>
+                        <td>intermédiaire absolu</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.d.-l.-'.html">E:.-M:.d.-l.-'</a></td>
+                        <td>dynamic termination</td>
+                        <td>terminaison dynamique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.f.-l.-'.html">E:.-M:.f.-l.-'</a></td>
+                        <td>relative termination</td>
+                        <td>terminaison relative</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.l.-l.-'.html">E:.-M:.l.-l.-'</a></td>
+                        <td>absolute termination</td>
+                        <td>terminaison absolue</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wo.-M_.-'.html">s.wo.-M:.-'</a></td>
+                        <td>subjectivation process</td>
+                        <td>processus de subjectivation</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wa.-M_.-'.html">s.wa.-M:.-'</a></td>
+                        <td>ideas content</td>
+                        <td>contenu des idées</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wu.-M_.-'.html">s.wu.-M:.-'</a></td>
+                        <td>signification</td>
+                        <td>signification</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.we.-M_.-'.html">s.we.-M:.-'</a></td>
+                        <td>media</td>
+                        <td>médias</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-M_.U_.-'.html">n.-M:.U:.-'</a></td>
+                        <td>north-east-high elements</td>
+                        <td>éléments nord-est-haut</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-M_.A_.-'.html">n.-M:.A:.-'</a></td>
+                        <td>south-west-low elements</td>
+                        <td>éléments sud-ouest-bas</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-M_.U_.-'.html">l.-M:.U:.-'</a></td>
+                        <td>transverse north-east rise</td>
+                        <td>montée transversale nord-est</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-M_.A_.-'.html">l.-M:.A:.-'</a></td>
+                        <td>transverse south-west descent</td>
+                        <td>descente transversale sud-ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.O_O_.-S_.-'.html">s.O:O:.-S:.-'</a></td>
+                        <td>cognitive signs</td>
+                        <td>signes cognitifs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.y.-t.-'.html">E:.-F:.y.-t.-'</a></td>
+                        <td>cognitive mood</td>
+                        <td>mode cognitif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.o.-t.-'.html">E:.-F:.o.-t.-'</a></td>
+                        <td>optative mood</td>
+                        <td>mode optatif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.e.-t.-'.html">E:.-F:.e.-t.-'</a></td>
+                        <td>abilitative mood</td>
+                        <td>mode abilitatif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.u.-t.-'.html">E:.-F:.u.-t.-'</a></td>
+                        <td>expressive mood</td>
+                        <td>mode expressif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.a.-t.-'.html">E:.-F:.a.-t.-'</a></td>
+                        <td>promisive mood</td>
+                        <td>mode promissif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.i.-t.-'.html">E:.-F:.i.-t.-'</a></td>
+                        <td>imperative mood</td>
+                        <td>mode impératif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.s.-l.-'.html">E:.-F:.s.-l.-'</a></td>
+                        <td>tension of exi-stance</td>
+                        <td>tension d'exi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.b.-l.-'.html">E:.-F:.b.-l.-'</a></td>
+                        <td>relation of exi-stance</td>
+                        <td>relation d'exi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.t.-l.-'.html">E:.-F:.t.-l.-'</a></td>
+                        <td>structure of exi-stance</td>
+                        <td>structure d'exi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.k.-l.-'.html">E:.-F:.k.-l.-'</a></td>
+                        <td>tension d'inter-stance</td>
+                        <td>tension d'inter-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.m.-l.-'.html">E:.-F:.m.-l.-'</a></td>
+                        <td>relation of inter-stance</td>
+                        <td>relation d'inter-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.n.-l.-'.html">E:.-F:.n.-l.-'</a></td>
+                        <td>structure of inter-stance</td>
+                        <td>structure d'inter-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.d.-l.-'.html">E:.-F:.d.-l.-'</a></td>
+                        <td>tension of insi-stance</td>
+                        <td>tension d'insi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.f.-l.-'.html">E:.-F:.f.-l.-'</a></td>
+                        <td>relation of insi-stance</td>
+                        <td>relation d'insi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.l.-l.-'.html">E:.-F:.l.-l.-'</a></td>
+                        <td>structure of insi-stance</td>
+                        <td>structure d'insi-stance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wo.-F_.-'.html">s.wo.-F:.-'</a></td>
+                        <td>reflexive intelligence</td>
+                        <td>intelligence réflexive</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wa.-F_.-'.html">s.wa.-F:.-'</a></td>
+                        <td>communication of ideas</td>
+                        <td>communication des idées</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.wu.-F_.-'.html">s.wu.-F:.-'</a></td>
+                        <td>system of concepts (sensorium)</td>
+                        <td>système de concepts (sensorium)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.we.-F_.-'.html">s.we.-F:.-'</a></td>
+                        <td>system of symbols</td>
+                        <td>système de symboles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.O_M_.-t.-'.html">E:.-S:.O:M:.-t.-'</a></td>
+                        <td>future tense</td>
+                        <td>temps futur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.-M_.O_.-'.html">s.-M:.O:.-'</a></td>
+                        <td>elementary qualities</td>
+                        <td>qualités élémentaires</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-M_.O_.-'.html">b.-M:.O:.-'</a></td>
+                        <td>visual qualities</td>
+                        <td>qualités visuelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.-M_.O_.-'.html">t.-M:.O:.-'</a></td>
+                        <td>seasons</td>
+                        <td>saisons</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.T_.A_.-+n.S_+B_.U_.-'.html">B:.S:.n.-B:S:+T:.-n.T:.A:.-+n.S:+B:.U:.-'</a></td>
+                        <td>plant</td>
+                        <td>végétal, plante</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.B_.n.-B_S_+T_.-u.M_.-'.html">B:.B:.n.-B:S:+T:.-u.M:.-'</a></td>
+                        <td>animal</td>
+                        <td>animal</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="k.-M_.O_.-'.html">k.-M:.O:.-'</a></td>
+                        <td>auditory qualities, strength</td>
+                        <td>qualités auditives, force</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="m.-M_.O_.-'.html">m.-M:.O:.-'</a></td>
+                        <td>emotions</td>
+                        <td>émotions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-M_.O_.-'.html">n.-M:.O:.-'</a></td>
+                        <td>elements</td>
+                        <td>éléments</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="d.-M_.O_.-'.html">d.-M:.O:.-'</a></td>
+                        <td>textures</td>
+                        <td>textures</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.-M_.O_.-'.html">f.-M:.O:.-'</a></td>
+                        <td>tastes</td>
+                        <td>goûts</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-M_.O_.-'.html">l.-M:.O:.-'</a></td>
+                        <td>spatial directions</td>
+                        <td>directions spatiales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.M_M_.-l.-'.html">E:.-S:.M:M:.-l.-'</a></td>
+                        <td>path roles</td>
+                        <td>rôles de chemin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.S_M_.-l.-'.html">E:.-M:.S:M:.-l.-'</a></td>
+                        <td>beginning</td>
+                        <td>commencement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.B_M_.-l.-'.html">E:.-M:.B:M:.-l.-'</a></td>
+                        <td>intermediary</td>
+                        <td>intermédiaire</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.T_M_.-l.-'.html">E:.-M:.T:M:.-l.-'</a></td>
+                        <td>termination</td>
+                        <td>terminaison</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.M_B_.-l.-'.html">E:.-M:.M:B:.-l.-'</a></td>
+                        <td>lateral</td>
+                        <td>lateral</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.-S_.U_.-'.html">M:M:.-S:.U:.-'</a></td>
+                        <td>northern qualities</td>
+                        <td>qualités septentrionales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.-S_.A_.-'.html">M:M:.-S:.A:.-'</a></td>
+                        <td>southern qualities</td>
+                        <td>qualités australes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-B_S_+T_.-n.T_.A_.-+n.S_+B_.U_.-'+B_.B_.n.-B_S_+T_.-u.M_.-'.html">B:.S:.n.-B:S:+T:.-n.T:.A:.-+n.S:+B:.U:.-'+B:.B:.n.-B:S:+T:.-u.M:.-'</a></td>
+                        <td>animals and vegetals</td>
+                        <td>animaux et végétaux</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.U_M_.-t.-'.html">E:.-F:.U:M:.-t.-'</a></td>
+                        <td>declarative mood</td>
+                        <td>mode déclaratif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.A_M_.-t.-'.html">E:.-F:.A:M:.-t.-'</a></td>
+                        <td>performative mood</td>
+                        <td>mode performatif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.S_M_.-l.-'.html">E:.-F:.S:M:.-l.-'</a></td>
+                        <td>exi-stance (spatial situation)</td>
+                        <td>exi-stance (spatial situation)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.B_M_.-l.-'.html">E:.-F:.B:M:.-l.-'</a></td>
+                        <td>inter-stance (spatial situation)</td>
+                        <td>inter-stance (situation spatiale)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.T_M_.-l.-'.html">E:.-F:.T:M:.-l.-'</a></td>
+                        <td>insi-stance (spatial situation)</td>
+                        <td>insi-stance (situation spatiale)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.O_M_.-t.-'.html">E:.-M:.O:M:.-t.-'</a></td>
+                        <td>tense | time | when</td>
+                        <td>temps | quand</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.O_O_.-F_.-'.html">s.O:O:.-F:.-'</a></td>
+                        <td>symbolic cognition</td>
+                        <td>cognition symbolique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.M_M_.-l.-'.html">E:.-M:.M:M:.-l.-'</a></td>
+                        <td>situation: path</td>
+                        <td>situation: cheminement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.O_M_.-t.-'.html">E:.-F:.O:M:.-t.-'</a></td>
+                        <td>conjugations and verbal modes, tense, time</td>
+                        <td>conjugaisons et modes verbaux, temps</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.M_M_.-l.-'.html">E:.-F:.M:M:.-l.-'</a></td>
+                        <td>spatial situation, in the space | where</td>
+                        <td>situation spatiale, dans l'espace | où</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.-M_.O_.-'.html">M:M:.-M:.O:.-'</a></td>
+                        <td>qualities</td>
+                        <td>qualités</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-'E_.-U_.n.+S_+T_S_.-l.-'_.html">B:.S:.n.-'E:.-U:.n.+S:+T:S:.-l.-',</a></td>
+                        <td>parts of the plants from top to down</td>
+                        <td>parties des plantes de haut en bas</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'M_.-'_.html">n.-S:.U:.-'S:.-'M:.-',</a></td>
+                        <td>northern continental areas</td>
+                        <td>zones continentales nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'S_.-'_.html">n.-S:.U:.-'M:.-'S:.-',</a></td>
+                        <td>western continents</td>
+                        <td>continents ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'B_.-'_.html">n.-S:.U:.-'M:.-'B:.-',</a></td>
+                        <td>central continents</td>
+                        <td>continents centraux</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'T_.-'_.html">n.-S:.U:.-'M:.-'T:.-',</a></td>
+                        <td>eastern continents</td>
+                        <td>continents est</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'S_.-'M_.-'_.html">n.-T:.A:.-'S:.-'M:.-',</a></td>
+                        <td>north ocean</td>
+                        <td>océan nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'S_.-'_.html">n.-T:.A:.-'M:.-'S:.-',</a></td>
+                        <td>Atlantic ocean</td>
+                        <td>océan Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'B_.-'_.html">n.-T:.A:.-'M:.-'B:.-',</a></td>
+                        <td>Indian ocean</td>
+                        <td>ocean Indien</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'T_.-'_.html">n.-T:.A:.-'M:.-'T:.-',</a></td>
+                        <td>Pacific ocean</td>
+                        <td>océan Pacifique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="j.-'F_.-'k.o.-t.o.-'_.html">j.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>epistemic mutation</td>
+                        <td>mutation épistémique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="g.-'F_.-'k.o.-t.o.-'_.html">g.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>education mutation</td>
+                        <td>mutation éducative</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-l.o.-'F_.-'_.html">s.o.-l.o.-'F:.-',</a></td>
+                        <td>simple proportions</td>
+                        <td>simples proportions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'S_.-'F_.-'_.html">b.-S:.A:.-'S:.-'F:.-',</a></td>
+                        <td>blue</td>
+                        <td>bleu</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'U_.-'_.html">b.-S:.A:.-'F:.-'U:.-',</a></td>
+                        <td>white leaning</td>
+                        <td>tirant sur le blanc</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'A_.-'_.html">b.-S:.A:.-'F:.-'A:.-',</a></td>
+                        <td>blackish</td>
+                        <td>tirant sur le noir</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'S_.-'_.html">b.-S:.A:.-'F:.-'S:.-',</a></td>
+                        <td>blueish</td>
+                        <td>tirant sur le bleu</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'B_.-'_.html">b.-S:.A:.-'F:.-'B:.-',</a></td>
+                        <td>yellowish</td>
+                        <td>tirant sur le jaune</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'T_.-'_.html">b.-S:.A:.-'F:.-'T:.-',</a></td>
+                        <td>reddish</td>
+                        <td>tirant sur le rouge</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="h.-'F_.-'k.o.-t.o.-'_.html">h.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>religious mutation</td>
+                        <td>mutation religieuse</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="c.-'F_.-'k.o.-t.o.-'_.html">c.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>political mutation</td>
+                        <td>mutation politique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="p.-'F_.-'k.o.-t.o.-'_.html">p.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>economic mutation</td>
+                        <td>mutation économique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="x.-'F_.-'k.o.-t.o.-'_.html">x.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>technical mutation</td>
+                        <td>mutation technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_O_.-'S_.-'k.o.-t.o.-'_.html">M:O:.-'S:.-'k.o.-t.o.-',</a></td>
+                        <td>literate regime</td>
+                        <td>régime lettré</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.S_.n.-'we.O_O_.t.-'+E_.-T_.n.+f.-+U_.n.+S_+T_S_.-l.-'_.html">B:.S:.n.-'we.O:O:.t.-'+E:.-T:.n.+f.-+U:.n.+S:+T:S:.-l.-',</a></td>
+                        <td>parts of the plants</td>
+                        <td>parties des plantes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'M_.-'M_.-'_.html">n.-S:.U:.-'M:.-'M:.-',</a></td>
+                        <td>continental zones</td>
+                        <td>zones continentales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-T_.A_.-'M_.-'M_.-'_.html">n.-T:.A:.-'M:.-'M:.-',</a></td>
+                        <td>main seas</td>
+                        <td>mers principales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-S_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-S:.U:.-',</a></td>
+                        <td>mediators and vibrating parts made of earthy matters (ceramic, plastic, glass...)</td>
+                        <td>médiateurs et parties vibrantes faites de matière terreuse (céramique, plastique, verre...)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-B:.U:.-',</a></td>
+                        <td>mediators and vibrating parts made of wood</td>
+                        <td>médiateurs et parties vibrantes faites de bois</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-B_.A_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-B:.A:.-',</a></td>
+                        <td>mediators and vibrating parts made of metal</td>
+                        <td>médiateurs et parties vibrantes faites de métal</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.o.-n.o.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.o.-n.o.-',</a></td>
+                        <td>mediators and vibrating parts made of human flesh</td>
+                        <td>médiateurs et parties vibrantes faites de chair humaine</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'f.o.-f.o.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'f.o.-f.o.-',</a></td>
+                        <td>mediators diaries and vibrating parts made of animal matter</td>
+                        <td>médiateurs et parties vibrantes faites de matière animale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.-S_.U_.-'n.-T_.A_.-'l.-S_.O_.-'_+n.-T_.A_.-'M_.-'M_.-'_.html">s.-S:.U:.-'n.-T:.A:.-'l.-S:.O:.-',+n.-T:.A:.-'M:.-'M:.-',</a></td>
+                        <td>oceans</td>
+                        <td>océans</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'s.-S_.U_.-'l.-S_.O_.-'_+n.-S_.U_.-'M_.-'M_.-'_.html">n.-S:.U:.-'s.-S:.U:.-'l.-S:.O:.-',+n.-S:.U:.-'M:.-'M:.-',</a></td>
+                        <td>continents</td>
+                        <td>continents</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.-S_.A_.-'F_.-'F_.-'_.html">b.-S:.A:.-'F:.-'F:.-',</a></td>
+                        <td>colors</td>
+                        <td>couleurs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_O_.-'F_.-'k.o.-t.o.-'_.html">M:O:.-'F:.-'k.o.-t.o.-',</a></td>
+                        <td>cultural evolution | historical periods</td>
+                        <td>évolution culturelle | périodes historiques</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
+                        <td>parts of musical instruments, orchestra, lutherie: mediators and vibrating parts</td>
+                        <td>parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'j.-'_M_.-'__.html">s.o.-k.o.-'j.-',M:.-',_</a></td>
+                        <td>knowledge networks, ideas ecosystem</td>
+                        <td>réseaux de connaissances, écosystèmes d'idées</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'g.-'_M_.-'__.html">s.o.-k.o.-'g.-',M:.-',_</a></td>
+                        <td>information network, ecosystem of messages and documents</td>
+                        <td>réseaux d'information, écosystème de messages et de documents</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'h.-'_M_.-'__.html">s.o.-k.o.-'h.-',M:.-',_</a></td>
+                        <td>network of wills, ethical disposition, ecosystem of subjectivities</td>
+                        <td>réseau de volontés, disposition éthique, écosystème de subjectivités</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'c.-'_M_.-'__.html">s.o.-k.o.-'c.-',M:.-',_</a></td>
+                        <td>social network, ecosystem of interpersonal relations</td>
+                        <td>réseau social, écosystème de relations interpersonnelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'p.-'_M_.-'__.html">s.o.-k.o.-'p.-',M:.-',_</a></td>
+                        <td>network of strengths, ecosystem of powers</td>
+                        <td>réseau de forces, écosystème de pouvoirs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'x.-'_M_.-'__.html">s.o.-k.o.-'x.-',M:.-',_</a></td>
+                        <td>network of bodies, biophysical ecosytem</td>
+                        <td>réseau de corps, écosystème biophysique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'wo.-',M:.-',_</a></td>
+                        <td>unmanned terrestrial vehicle</td>
+                        <td>véhicule terrestre sans conducteur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wa.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'wa.-',M:.-',_</a></td>
+                        <td>manned terrestrial vehicle</td>
+                        <td>véhicule terrestre avec conducteur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wu.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'wu.-',M:.-',_</a></td>
+                        <td>freight terrestrial vehicle</td>
+                        <td>véhicule terrestre cargo</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'we.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'we.-',M:.-',_</a></td>
+                        <td>terrestrial vehicle for passengers</td>
+                        <td>vehicle terrestre pour passagers</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>Canada</td>
+                        <td>Canada</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>West coast, Pacific zone of North America</td>
+                        <td>côte Ouest, zone Pacifique de l'Amérique du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',B:.-',_</a></td>
+                        <td>North America: central continental zone</td>
+                        <td>Amérique du Nord: zone centrale, continentale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',T:.-',_</a></td>
+                        <td>East Coast, Atlantic zone</td>
+                        <td>Côte Est, zone Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>northern Europe</td>
+                        <td>Europe du nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>western Europe</td>
+                        <td>Europe de l'ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',B:.-',_</a></td>
+                        <td>central Europe</td>
+                        <td>Europe centrale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',T:.-',_</a></td>
+                        <td>eastern Europe</td>
+                        <td>Europe de l'est</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',S:.-',M:.-',_</a></td>
+                        <td>Russia</td>
+                        <td>Russie</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',S:.-',_</a></td>
+                        <td>Western Asia</td>
+                        <td>Asie de l'Ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',B:.-',_</a></td>
+                        <td>Median Asia</td>
+                        <td>Asie médiane</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',T:.-',_</a></td>
+                        <td>Oriental Asia</td>
+                        <td>Asie Orientale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>north central America and Caribbean</td>
+                        <td>Amérique centrale et Caraïbes nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>continental central american countries</td>
+                        <td>Pays continentaux d'Amérique centrale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',B:.-',_</a></td>
+                        <td>western caribbean Islands</td>
+                        <td>îles caraïbes occidentales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',T:.-',_</a></td>
+                        <td>eastern caribbean islands</td>
+                        <td>îles caraïbes orientales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>North african countries with a coast on the mediterranean sea</td>
+                        <td>Pays d'Afrique du Nord avec une côte sur la mer Méditerranée</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>Countries of northern and southern Africa on the western part of the continent, bordering the Atlantic ocean</td>
+                        <td>Pays d'Afrique du nord et du centre à l'ouest du continent, bordant l'océan Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',B:.-',_</a></td>
+                        <td>Countries of northern and central Africa, median area</td>
+                        <td>Pays d'Afrique du nord et du centre, zone médiane</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',T:.-',_</a></td>
+                        <td>North and central Africa, oriental part, facing the red sea and the indian ocean</td>
+                        <td>Afrique du nord et du centre: partie orientale, faisant face à la mer rouge et à l'océan indien</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'S:.-',S:.-',M:.-',_</a></td>
+                        <td>North of South America</td>
+                        <td>Nord de l'Amérique du sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',S:.-',_</a></td>
+                        <td>Countries of South America on the Pacific coast</td>
+                        <td>Pays de la façade Pacifique de l'Amérique du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',B:.-',_</a></td>
+                        <td>Countries of the central and atlantic area (except Brazil) of South America</td>
+                        <td>Pays de la zone centrale et Atlantique (hors Brésil) de l'Amérique du sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',T:.-',_</a></td>
+                        <td>Brazil</td>
+                        <td>Brésil</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',S:.-',M:.-',_</a></td>
+                        <td>Equatorial Africa</td>
+                        <td>Afrique équatoriale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',S:.-',_</a></td>
+                        <td>Southern Africa looking to the Atlantic</td>
+                        <td>Afrique australe tournée vers l'Atlantique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',B:.-',_</a></td>
+                        <td>Countries from the center of southern Africa</td>
+                        <td>Pays du centre de l'Afrique Australe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',T:.-',_</a></td>
+                        <td>Southern Africa looking to the indian ocean</td>
+                        <td>Afrique Australe tournée vers l'océan indien</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',S:.-',_</a></td>
+                        <td>Australia West middle part</td>
+                        <td>Australie, moitié Ouest</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',B:.-',_</a></td>
+                        <td>Australia, Eastern part</td>
+                        <td>Australie, moitié orientale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',T:.-',_</a></td>
+                        <td>Papua, Islands, New Zeland</td>
+                        <td>Papouasie, îles, Nouvelle Zélande</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'O_O_.-'_S_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'O:O:.-',S:.-',_</a></td>
+                        <td>rail vehicles</td>
+                        <td>véhicules sur rail</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'M_O_.-'_S_.-'__.html">s.o.-k.o.-'M:O:.-',S:.-',_</a></td>
+                        <td>formal or abstract moments of collective intelligence</td>
+                        <td>moments formels ou abstraits de l'intelligence collective</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>North American countries</td>
+                        <td>Pays d'Amérique du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>European countries</td>
+                        <td>Pays européens</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'S_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'S:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries from Northern Asia</td>
+                        <td>Pays d'Asie du Nord</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>Central America and Caribbean countries</td>
+                        <td>Pays d'Amérique centrale et des Caraïbes</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries of northern and central Africa</td>
+                        <td>Pays d'Afrique du nord et du centre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'B_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Countries from southern Asia</td>
+                        <td>Pays d'Asie du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'S_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'S:.-',M:.-',M:.-',_</a></td>
+                        <td>South American countries</td>
+                        <td>Pays d'Amérique du Sud</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_</a></td>
+                        <td>Southern african countries</td>
+                        <td>Pays d'Afrique australe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_</a></td>
+                        <td>Oceanian countries</td>
+                        <td>Pays d'Océanie</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'O_O_.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'O:O:.-',M:.-',_</a></td>
+                        <td>kinds of surface vehicles</td>
+                        <td>genres de véhicules de surface</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="s.o.-k.o.-'M_O_.-'_M_.-'__.html">s.o.-k.o.-'M:O:.-',M:.-',_</a></td>
+                        <td>ecosystems of collective intelligence: ternary dialectics (eight nouns)</td>
+                        <td>écosystèmes de l'intelligence collective: dialectiques ternaires (dix-huit noms)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_S_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:S:.-',_;</a></td>
+                        <td>third finger | toe</td>
+                        <td>troisième doigt | orteil</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__S_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_S:.-',_;</a></td>
+                        <td>heel of the hand and the foot</td>
+                        <td>talon de la main et du pied</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_B_.-'__M_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'wo.-',B:.-',_M:.-',_;</a></td>
+                        <td>unmanned wheeled vehicle</td>
+                        <td>véhicule à roues sans conducteur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wa.-'_B_.-'__M_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'wa.-',B:.-',_M:.-',_;</a></td>
+                        <td>manned wheeled vehicle</td>
+                        <td>véhicule à roues avec conducteur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'wu.-'_B_.-'__M_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'wu.-',B:.-',_M:.-',_;</a></td>
+                        <td>freight wheeled vehicle</td>
+                        <td>véhicule à roues cargo</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'we.-'_B_.-'__M_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'we.-',B:.-',_M:.-',_;</a></td>
+                        <td>wheeled vehicle for passengers</td>
+                        <td>véhicule à roues pour passagers</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-U_.-'__M_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-U:.-',_M:.-',_;</a></td>
+                        <td>body of the hand</td>
+                        <td>corps de la main</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-A_.-'__M_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-A:.-',_M:.-',_;</a></td>
+                        <td>body of the foot</td>
+                        <td>corps du pied</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'O_O_.-'_B_.-'__S_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'O:O:.-',B:.-',_S:.-',_;</a></td>
+                        <td>tri or bicycle | small vehicle</td>
+                        <td>deux ou trois roues | petit véhicule</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-U_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-U:.-',_E:F:.-',_;</a></td>
+                        <td>fingers</td>
+                        <td>doigts</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-A_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-A:.-',_E:F:.-',_;</a></td>
+                        <td>toes</td>
+                        <td>orteils</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__M_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_M:.-',_;</a></td>
+                        <td>body of the hand and the foot</td>
+                        <td>corps de la main et du pied</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:F:.-',_;</a></td>
+                        <td>fingers and toes</td>
+                        <td>doigts et orteils</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.i.-s.i.-'u.T_.-U_.-'O_O_.-'_B_.-'__M_.-'___.html">t.i.-s.i.-'u.T:.-U:.-'O:O:.-',B:.-',_M:.-',_;</a></td>
+                        <td>kinds of road vehicles</td>
+                        <td>genres de véhicules sur route</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__M_.-'___+f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_M:.-',_;+f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:F:.-',_;</a></td>
+                        <td>parts of hands and feet</td>
+                        <td>parties des mains et des pieds</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-substance"
+                    aria-expanded="false"
+                    aria-controls="child-substance">
+                child-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-substance"
+         class="collapse"
+         aria-labelledby="heading-child-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="S_O_..html">S:O:.</a></td>
+                        <td>signifying agents</td>
+                        <td>agents signifiants</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_..html">S:M:.</a></td>
+                        <td>becoming of the sign</td>
+                        <td>devenir du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_U_..html">M:U:.</a></td>
+                        <td>virtual agents</td>
+                        <td>agents virtuels</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_A_..html">M:A:.</a></td>
+                        <td>actual agents</td>
+                        <td>agents actuels</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_S_..html">M:S:.</a></td>
+                        <td>becoming sign</td>
+                        <td>devenir signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_B_..html">M:B:.</a></td>
+                        <td>becoming being</td>
+                        <td>devenir être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_T_..html">M:T:.</a></td>
+                        <td>becoming thing</td>
+                        <td>devenir chose</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_O_..html">M:O:.</a></td>
+                        <td>agents</td>
+                        <td>agents</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_..html">M:M:.</a></td>
+                        <td>dimensions of interaction | ennead</td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.+M_O_..html">O:M:.+M:O:.</a></td>
+                        <td>actions and agents | vertical and horizontal hexads</td>
+                        <td>actions et agents | hexades verticale et horizontale</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_.E_A_M_.-.html">S:.E:A:M:.-</a></td>
+                        <td>size in length</td>
+                        <td>taille en longueur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.E_.n.-.html">M:.E:.n.-</a></td>
+                        <td>mathematic level</td>
+                        <td>niveau mathématique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.E_A_S_.-.html">M:.E:A:S:.-</a></td>
+                        <td>small</td>
+                        <td>petit</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.E_A_B_.-.html">M:.E:A:B:.-</a></td>
+                        <td>medium</td>
+                        <td>moyen</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.E_A_T_.-.html">M:.E:A:T:.-</a></td>
+                        <td>large</td>
+                        <td>grand</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.U_.n.-.html">M:.U:.n.-</a></td>
+                        <td>energetic level</td>
+                        <td>niveau énergétique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.A_.n.-.html">M:.A:.n.-</a></td>
+                        <td>mineral and molecular level</td>
+                        <td>niveau minéral et moléculaire</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.S_.n.-.html">M:.S:.n.-</a></td>
+                        <td>biological level (vegetal)</td>
+                        <td>niveau biologique (végétaux)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.B_.n.-.html">M:.B:.n.-</a></td>
+                        <td>animal level</td>
+                        <td>niveau animal</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.T_.n.-.html">M:.T:.n.-</a></td>
+                        <td>cultural level</td>
+                        <td>niveau culturel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_.I_.n.-.html">S:.I:.n.-</a></td>
+                        <td>code</td>
+                        <td>code</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.E_A_M_.-.html">M:.E:A:M:.-</a></td>
+                        <td>adjectives for size</td>
+                        <td>adjectifs de taille</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_.I_.n.-.html">M:.I:.n.-</a></td>
+                        <td>nature's levels</td>
+                        <td>niveaux de la nature</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="i.B_.-+u.M_.-U_.-'.html">i.B:.-+u.M:.-U:.-'</a></td>
+                        <td>top movement</td>
+                        <td>mouvement haut</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="i.B_.-+u.M_.-A_.-'.html">i.B:.-+u.M:.-A:.-'</a></td>
+                        <td>low motion</td>
+                        <td>mouvement bas</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="i.B_.-+u.M_.-O_.-'.html">i.B:.-+u.M:.-O:.-'</a></td>
+                        <td>movements in environments (verbs)</td>
+                        <td>mouvements et milieux (verbes)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
+                        <td>Body parts: head and trunk</td>
+                        <td>Parties du corps: la tête et le tronc</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__+f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
+                        <td>body parts</td>
+                        <td>parties du corps</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

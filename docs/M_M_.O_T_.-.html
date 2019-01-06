@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            M:M:.O:T:.-
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>développement humain de la chose</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>human development of the thing</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>18</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>2</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="M_M_.O_M_.-.html"> M:M:.O:M:.- </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="O_M_.M_M_.-+M_M_.O_M_.-.html"> O:M:.M:M:.-+M:M:.O:M:.- </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(9, 2)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table M:M:.O:T:.-</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_.O_M_.-.html">M:M:.O:M:.-</a></td>
+                        <td>human development</td>
+                        <td>développement humain</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
+                        <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="s.O_T_.-.html">s.O:T:.-</a></td>
+                        <td>concrete thought factors</td>
+                        <td>facteurs concrets de pensée</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="b.O_T_.-.html">b.O:T:.-</a></td>
+                        <td>concrete language factors</td>
+                        <td>facteurs concrets de langage</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.O_T_.-.html">t.O:T:.-</a></td>
+                        <td>concrete memory factors</td>
+                        <td>facteurs concrets de mémoire</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="k.O_T_.-.html">k.O:T:.-</a></td>
+                        <td>concrete society factors</td>
+                        <td>facteurs concrets de société</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="m.O_T_.-.html">m.O:T:.-</a></td>
+                        <td>concrete production of an affective bond</td>
+                        <td>production concrète de lien affectif</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="n.O_T_.-.html">n.O:T:.-</a></td>
+                        <td>concrete world factors</td>
+                        <td>facteurs concrets de monde</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="d.O_T_.-.html">d.O:T:.-</a></td>
+                        <td>concrete factors of truth</td>
+                        <td>facteurs concrets de vérité</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.O_T_.-.html">f.O:T:.-</a></td>
+                        <td>concrete life factors</td>
+                        <td>facteurs concrets de vie</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.O_T_.-.html">l.O:T:.-</a></td>
+                        <td>concrete space factors</td>
+                        <td>facteurs concrets d'espace</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.e.-.html">S:M:.e.-</a></td>
+                        <td>know how of the sign, trivium in the narrow sense</td>
+                        <td>savoir faire portant sur les signes, trivium au sens étroit</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.i.-.html">S:M:.i.-</a></td>
+                        <td>sign in technical substance</td>
+                        <td>signe en substance technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_M_.e.-.html">B:M:.e.-</a></td>
+                        <td>expertise on beings</td>
+                        <td>savoir faire portant sur les êtres</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_M_.i.-.html">B:M:.i.-</a></td>
+                        <td>being in technical substance</td>
+                        <td>être en substance technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_M_.e.-.html">T:M:.e.-</a></td>
+                        <td>know how of the thing</td>
+                        <td>savoir faire portant sur les choses</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_M_.i.-.html">T:M:.i.-</a></td>
+                        <td>thing in technical substance</td>
+                        <td>chose en substance technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_S_.e.-.html">M:S:.e.-</a></td>
+                        <td>grammar</td>
+                        <td>grammaire</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_S_.i.-.html">M:S:.i.-</a></td>
+                        <td>sign in technical attribute</td>
+                        <td>signe en attribut technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_B_.e.-.html">M:B:.e.-</a></td>
+                        <td>dialectic</td>
+                        <td>dialectique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_B_.i.-.html">M:B:.i.-</a></td>
+                        <td>being in technical attribute</td>
+                        <td>être en attribut technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_T_.e.-.html">M:T:.e.-</a></td>
+                        <td>rhetorics</td>
+                        <td>rhétorique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_T_.i.-.html">M:T:.i.-</a></td>
+                        <td>thing in technical attribute</td>
+                        <td>chose en attribut technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.e.-.html">M:M:.e.-</a></td>
+                        <td>kinds of competencies</td>
+                        <td>genres de compétences</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.i.-.html">M:M:.i.-</a></td>
+                        <td>kind of tools | technology</td>
+                        <td>genres d'outils | techniques</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="O_T_..html">O:T:.</a></td>
+                        <td>effective actions</td>
+                        <td>actions effectives</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_..html">M:M:.</a></td>
+                        <td>dimensions of interaction | ennead</td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="M_M_.O_T_.-.html">M:M:.O:T:.-</a> human development of the thing</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_M_.O_T_.-.html"> M:M:.O:T:.- </a>
+            <span class="translation"
+                data-fr="human development of the thing"
+                data-en="développement humain de la chose">
+                human development of the thing
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_M_.e.-.html"> M:M:.e.- </a>
+            <span class="translation"
+                data-fr="kinds of competencies"
+                data-en="genres de compétences">
+                kinds of competencies
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_M_.i.-.html"> M:M:.i.- </a>
+            <span class="translation"
+                data-fr="kind of tools | technology"
+                data-en="genres d'outils | techniques">
+                kind of tools | technology
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="s.O_T_.-.html"> s.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete thought factors"
+                data-en="facteurs concrets de pensée">
+                concrete thought factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="s.e.-.html"> s.e.- </a>
+            <span class="translation"
+                data-fr="mastery of codes, grammar in the narrow sense"
+                data-en="maîtrise des codes, grammaire au sens étroit">
+                mastery of codes, grammar in the narrow sense
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="s.i.-.html"> s.i.- </a>
+            <span class="translation"
+                data-fr="interface | translation tech."
+                data-en="interface | tech. de traduction">
+                interface | translation tech.
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="b.O_T_.-.html"> b.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete language factors"
+                data-en="facteurs concrets de langage">
+                concrete language factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="b.e.-.html"> b.e.- </a>
+            <span class="translation"
+                data-fr="reasoning ability, dialectic in the narrow sense"
+                data-en="capacité de raisonner, dialectique au sens étroit">
+                reasoning ability, dialectic in the narrow sense
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="b.i.-.html"> b.i.- </a>
+            <span class="translation"
+                data-fr="medium | transmission technique"
+                data-en="médium | technique de transmission">
+                medium | transmission technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="t.O_T_.-.html"> t.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete memory factors"
+                data-en="facteurs concrets de mémoire">
+                concrete memory factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="t.e.-.html"> t.e.- </a>
+            <span class="translation"
+                data-fr="ability to convince, rhetoric in a narrow sense"
+                data-en="capacité de convaincre, rhétorique au sens étroit">
+                ability to convince, rhetoric in a narrow sense
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="t.i.-.html"> t.i.- </a>
+            <span class="translation"
+                data-fr="container | conservation technique"
+                data-en="contenant | technique de conservation">
+                container | conservation technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="k.O_T_.-.html"> k.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete society factors"
+                data-en="facteurs concrets de société">
+                concrete society factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="k.e.-.html"> k.e.- </a>
+            <span class="translation"
+                data-fr="self-control"
+                data-en="maîtrise de soi">
+                self-control
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="k.i.-.html"> k.i.- </a>
+            <span class="translation"
+                data-fr="gift | technique of exchange"
+                data-en="don | technique d'échange">
+                gift | technique of exchange
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="m.O_T_.-.html"> m.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete production of an affective bond"
+                data-en="production concrète de lien affectif">
+                concrete production of an affective bond
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="m.e.-.html"> m.e.- </a>
+            <span class="translation"
+                data-fr="negotiation ability"
+                data-en="capacité de négocier">
+                negotiation ability
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="m.i.-.html"> m.i.- </a>
+            <span class="translation"
+                data-fr="toy | seduction technique"
+                data-en="jouet | technique de séduction">
+                toy | seduction technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="n.O_T_.-.html"> n.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete world factors"
+                data-en="facteurs concrets de monde">
+                concrete world factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="n.e.-.html"> n.e.- </a>
+            <span class="translation"
+                data-fr="leadership"
+                data-en="capacité de diriger">
+                leadership
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="n.i.-.html"> n.i.- </a>
+            <span class="translation"
+                data-fr="fire | transformation technique"
+                data-en="feu | technique de transformation">
+                fire | transformation technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="d.O_T_.-.html"> d.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete factors of truth"
+                data-en="facteurs concrets de vérité">
+                concrete factors of truth
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="d.e.-.html"> d.e.- </a>
+            <span class="translation"
+                data-fr="sensorimotor ability"
+                data-en="habileté sensori-motrice">
+                sensorimotor ability
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="d.i.-.html"> d.i.- </a>
+            <span class="translation"
+                data-fr="meter | technique of measurement"
+                data-en="mètre | technique de mesure">
+                meter | technique of measurement
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.O_T_.-.html"> f.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete life factors"
+                data-en="facteurs concrets de vie">
+                concrete life factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.e.-.html"> f.e.- </a>
+            <span class="translation"
+                data-fr="technical ability"
+                data-en="habileté technique">
+                technical ability
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.i.-.html"> f.i.- </a>
+            <span class="translation"
+                data-fr="organ | caring technique"
+                data-en="organe | technique de soin">
+                organ | caring technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="l.O_T_.-.html"> l.O:T:.- </a>
+            <span class="translation"
+                data-fr="concrete space factors"
+                data-en="facteurs concrets d'espace">
+                concrete space factors
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="l.e.-.html"> l.e.- </a>
+            <span class="translation"
+                data-fr="engineering competence"
+                data-en="compétence en ingénierie">
+                engineering competence
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="l.i.-.html"> l.i.- </a>
+            <span class="translation"
+                data-fr="knot | connection technique"
+                data-en="noeud | technique de connection">
+                knot | connection technique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

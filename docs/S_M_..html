@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            S:M:.
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>devenir du signe</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>becoming of the sign</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>3</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table1D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>3</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="M_M_..html"> M:M:. </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="M_M_..html"> M:M:. </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(3,)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table S:M:.</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_..html">M:M:.</a></td>
+                        <td>dimensions of interaction | ennead</td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="S_.html">S:</a></td>
+                        <td>sign</td>
+                        <td>signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.html">B:</a></td>
+                        <td>being</td>
+                        <td>être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_.html">T:</a></td>
+                        <td>thing</td>
+                        <td>chose</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="S_.html">S:</a></td>
+                        <td>sign</td>
+                        <td>signe</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-mode"
+                    aria-expanded="false"
+                    aria-controls="child-mode">
+                child-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-mode"
+         class="collapse"
+         aria-labelledby="heading-child-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="l.-y.-'E_U_.t.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'E:U:.t.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>high parts of the landscape</td>
+                        <td>parties hautes du paysage</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'E_U_.n.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'E:U:.n.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>parts of the landscape that extend in length</td>
+                        <td>parties du paysage qui s'étendent en longueur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'E_U_.l.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'E:U:.l.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>low parts of the landscape</td>
+                        <td>parties basses du paysage</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',</a></td>
+                        <td>aquatic landscape</td>
+                        <td>paysage aquatique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'E_U_.M_T_.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'E:U:.M:T:.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>landforms</td>
+                        <td>relief terrestre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_+l.-y.-'E_U_.M_T_.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',+l.-y.-'E:U:.M:T:.-l.-'E:U:.S:M:.-l.-',</a></td>
+                        <td>landscape</td>
+                        <td>paysage</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-attribute"
+                    aria-expanded="false"
+                    aria-controls="child-attribute">
+                child-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-attribute"
+         class="collapse"
+         aria-labelledby="heading-child-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="wo.S_M_.-.html">wo.S:M:.-</a></td>
+                        <td>cultivate the variation of sign experience</td>
+                        <td>cultiver la variation de l'expérience du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="wa.S_M_.-.html">wa.S:M:.-</a></td>
+                        <td>cultivate the strength of the action of sign</td>
+                        <td>cultiver la force de l'action du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="y.S_M_.-.html">y.S:M:.-</a></td>
+                        <td>ignore sign</td>
+                        <td>ignorer le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="o.S_M_.-.html">o.S:M:.-</a></td>
+                        <td>darken the sign</td>
+                        <td>assombrir le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="e.S_M_.-.html">e.S:M:.-</a></td>
+                        <td>lack skills in the trivium of the sign</td>
+                        <td>manquer d'habiletés dans le trivium du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="wu.S_M_.-.html">wu.S:M:.-</a></td>
+                        <td>cultivate the subtlety of sign perception</td>
+                        <td>cultiver la subtilité de la perception du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="we.S_M_.-.html">we.S:M:.-</a></td>
+                        <td>cultivate a sustainable balance of sign</td>
+                        <td>cultiver un équilibre durable du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="u.S_M_.-.html">u.S:M:.-</a></td>
+                        <td>destroy the sign of meaning</td>
+                        <td>détruire le signe de la signification</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="a.S_M_.-.html">a.S:M:.-</a></td>
+                        <td>destroy the sign of social relations</td>
+                        <td>détruire le signe des relations sociales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="i.S_M_.-.html">i.S:M:.-</a></td>
+                        <td>destroy the sign technically</td>
+                        <td>détruire le signe techniquement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="j.S_M_.-.html">j.S:M:.-</a></td>
+                        <td>formal poetical obstacle</td>
+                        <td>obstacle poétique formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="g.S_M_.-.html">g.S:M:.-</a></td>
+                        <td>communication with formal obstacle</td>
+                        <td>obstacle formel à la communication</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="h.S_M_.-.html">h.S:M:.-</a></td>
+                        <td>formal spiritual obstacle</td>
+                        <td>obstacle spirituel formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="c.S_M_.-.html">c.S:M:.-</a></td>
+                        <td>formal socio-political obstacle</td>
+                        <td>obstacle socio-politique formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="p.S_M_.-.html">p.S:M:.-</a></td>
+                        <td>formal economic obstacle</td>
+                        <td>obstacle économique formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="x.S_M_.-.html">x.S:M:.-</a></td>
+                        <td>formal technical obstacle</td>
+                        <td>obstacle technique formel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-U_.S_M_.-l.-'.html">E:.-U:.S:M:.-l.-'</a></td>
+                        <td>high</td>
+                        <td>en haut</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-A_.S_M_.-l.-'.html">E:.-A:.S:M:.-l.-'</a></td>
+                        <td>front</td>
+                        <td>en avant</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-S_.S_M_.-l.-'.html">E:.-S:.S:M:.-l.-'</a></td>
+                        <td>objective origin</td>
+                        <td>origine objective</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-B_.S_M_.-l.-'.html">E:.-B:.S:M:.-l.-'</a></td>
+                        <td>subjective origin</td>
+                        <td>origine subjective</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-T_.S_M_.-l.-'.html">E:.-T:.S:M:.-l.-'</a></td>
+                        <td>to the outside</td>
+                        <td>vers l'extérieur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-O_.S_M_.-l.-'.html">E:.-O:.S:M:.-l.-'</a></td>
+                        <td>top | face</td>
+                        <td>haut | face</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-M_.S_M_.-l.-'.html">E:.-M:.S:M:.-l.-'</a></td>
+                        <td>beginning</td>
+                        <td>commencement</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.-F_.S_M_.-l.-'.html">E:.-F:.S:M:.-l.-'</a></td>
+                        <td>exi-stance (spatial situation)</td>
+                        <td>exi-stance (spatial situation)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="t.-x.-s.y.-'wa.e.-S_M_.-'_.html">t.-x.-s.y.-'wa.e.-S:M:.-',</a></td>
+                        <td>personal intelligence</td>
+                        <td>intelligence personnelle</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-substance"
+                    aria-expanded="false"
+                    aria-controls="child-substance">
+                child-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-substance"
+         class="collapse"
+         aria-labelledby="heading-child-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="S_M_.wo.-.html">S:M:.wo.-</a></td>
+                        <td>intellectual connexion</td>
+                        <td>connexion intellectuelle</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.wa.-.html">S:M:.wa.-</a></td>
+                        <td>effort to open up</td>
+                        <td>effort d'ouverture</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.y.-.html">S:M:.y.-</a></td>
+                        <td>knowing by sign</td>
+                        <td>connaissance par le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.o.-.html">S:M:.o.-</a></td>
+                        <td>desiring the sign</td>
+                        <td>désir du signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.e.-.html">S:M:.e.-</a></td>
+                        <td>know how of the sign, trivium in the narrow sense</td>
+                        <td>savoir faire portant sur les signes, trivium au sens étroit</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.wu.-.html">S:M:.wu.-</a></td>
+                        <td>blooming of aesthetic complexity</td>
+                        <td>épanouissement de complexité esthétique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.we.-.html">S:M:.we.-</a></td>
+                        <td>stable culture</td>
+                        <td>culture stable</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.u.-.html">S:M:.u.-</a></td>
+                        <td>signifying sign</td>
+                        <td>signifie le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.a.-.html">S:M:.a.-</a></td>
+                        <td>socialize with sign</td>
+                        <td>socialise par le signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.i.-.html">S:M:.i.-</a></td>
+                        <td>sign in technical substance</td>
+                        <td>signe en substance technique</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_M_.O_M_.-.html">S:M:.O:M:.-</a></td>
+                        <td>sign of human development</td>
+                        <td>signe du développement humain</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="S_M_..html">S:M:.</a> becoming of the sign</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="S_M_..html"> S:M:. </a>
+            <span class="translation"
+                data-fr="becoming of the sign"
+                data-en="devenir du signe">
+                becoming of the sign
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="s..html"> s. </a>
+            <span class="translation"
+                data-fr="reflection"
+                data-en="réflexions">
+                reflection
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="b..html"> b. </a>
+            <span class="translation"
+                data-fr="language"
+                data-en="langages">
+                language
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="t..html"> t. </a>
+            <span class="translation"
+                data-fr="memory"
+                data-en="mémoires">
+                memory
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            M:M:.-h.-'
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>sacré, religion</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>sacred, religion</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>3</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>9</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>3</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="M_M_.-O_M_.+M_O_.-'.html"> M:M:.-O:M:.+M:O:.-' </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="M_M_.-O_M_.+M_O_.-E_.-+s.y.-'.html"> M:M:.-O:M:.+M:O:.-E:.-+s.y.-' </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(3, 3)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table M:M:.-h.-'</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-associated">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#associated"
+                    aria-expanded="false"
+                    aria-controls="associated">
+                associated
+            </button>
+        </h5>
+    </div>
+
+    <div id="associated"
+         class="collapse"
+         aria-labelledby="heading-associated"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_.-h.-s.y.-'.html">M:M:.-h.-s.y.-'</a></td>
+                        <td>sacred | religion studies</td>
+                        <td>études du sacré | de la religion</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_.-M_O_.-'.html">M:M:.-M:O:.-'</a></td>
+                        <td>objects of humanities and social sciences (2)</td>
+                        <td>objets des sciences humaines (2)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.-O_M_.+M_O_.-'.html">M:M:.-O:M:.+M:O:.-'</a></td>
+                        <td>objects of humanities and social sciences</td>
+                        <td>objets des sciences humaines</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_M_.-O_M_.+M_O_.-E_.-+s.y.-'.html">M:M:.-O:M:.+M:O:.-E:.-+s.y.-'</a></td>
+                        <td>humanities, social sciences and their objects</td>
+                        <td>les sciences humaines et leurs objets</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="h..html">h.</a></td>
+                        <td>subject</td>
+                        <td>sujet</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="M_M_..html">M:M:.</a></td>
+                        <td>dimensions of interaction | ennead</td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="M_M_.-h.-'.html">M:M:.-h.-'</a> sacred, religion</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_M_.-h.-'.html"> M:M:.-h.-' </a>
+            <span class="translation"
+                data-fr="sacred, religion"
+                data-en="sacré, religion">
+                sacred, religion
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_S_.-h.-'.html"> M:S:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_B_.-h.-'.html"> M:B:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="M_T_.-h.-'.html"> M:T:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="S_M_.-h.-'.html"> S:M:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="s.-h.-'.html"> s.-h.-' </a>
+            <span class="translation"
+                data-fr="divinity"
+                data-en="divinité">
+                divinity
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="b.-h.-'.html"> b.-h.-' </a>
+            <span class="translation"
+                data-fr="sacred literature"
+                data-en="littérature sacrée">
+                sacred literature
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="t.-h.-'.html"> t.-h.-' </a>
+            <span class="translation"
+                data-fr="sacred history"
+                data-en="histoire sacrée">
+                sacred history
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="B_M_.-h.-'.html"> B:M:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="k.-h.-'.html"> k.-h.-' </a>
+            <span class="translation"
+                data-fr="religious institution | community"
+                data-en="institution | communauté religieuse">
+                religious institution | community
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="m.-h.-'.html"> m.-h.-' </a>
+            <span class="translation"
+                data-fr="sage, saint, martyr"
+                data-en="sage, saint, martyr">
+                sage, saint, martyr
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="n.-h.-'.html"> n.-h.-' </a>
+            <span class="translation"
+                data-fr="sacred art | architecture"
+                data-en="art | architecture sacrée">
+                sacred art | architecture
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="T_M_.-h.-'.html"> T:M:.-h.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="d.-h.-'.html"> d.-h.-' </a>
+            <span class="translation"
+                data-fr="religious prescription | interdiction, taboo"
+                data-en="interdiction | prescription religieuse, tabou">
+                religious prescription | interdiction, taboo
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.-h.-'.html"> f.-h.-' </a>
+            <span class="translation"
+                data-fr="spiritual practise, personal piety, interiority"
+                data-en="pratique spirituelle, piété personnelle, intériorité">
+                spiritual practise, personal piety, interiority
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="l.-h.-'.html"> l.-h.-' </a>
+            <span class="translation"
+                data-fr="sacred place, pilgrimage"
+                data-en="lieu saint, pélerinage">
+                sacred place, pilgrimage
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

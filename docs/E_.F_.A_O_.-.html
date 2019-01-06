@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            E:.F:.A:O:.-
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>genre neutre</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>neutral gender</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>10</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Auxiliary</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>2</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="E_.F_.O_O_.-.html"> E:.F:.O:O:.- </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="E_.F_.O_O_.-.html"> E:.F:.O:O:.- </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(5, 2)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table E:.F:.A:O:.-</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-associated">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#associated"
+                    aria-expanded="false"
+                    aria-controls="associated">
+                associated
+            </button>
+        </h5>
+    </div>
+
+    <div id="associated"
+         class="collapse"
+         aria-labelledby="heading-associated"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_.F_.U_O_.-.html">E:.F:.U:O:.-</a></td>
+                        <td>indifferent number</td>
+                        <td>nombre indifférent</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_.F_.O_O_.-.html">E:.F:.O:O:.-</a></td>
+                        <td>pronouns</td>
+                        <td>pronoms</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_.U_.A_O_.-.html">E:.U:.A:O:.-</a></td>
+                        <td>demonstrative pronoun of gender</td>
+                        <td>pronom démonstratif de genre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.A_.A_O_.-.html">E:.A:.A:O:.-</a></td>
+                        <td>possessive pronoun of gender</td>
+                        <td>pronom possessif de genre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.O_.wu.-.html">E:.O:.wu.-</a></td>
+                        <td>possessive | demonstrative masculine</td>
+                        <td>possessif | demonstratif masculin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.O_.we.-.html">E:.O:.we.-</a></td>
+                        <td>possessive | demonstrative feminine</td>
+                        <td>possessif | demonstratif féminin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.S_.A_O_.-.html">E:.S:.A:O:.-</a></td>
+                        <td>pronoun of gender in the first person</td>
+                        <td>pronom de genre à la première personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.B_.A_O_.-.html">E:.B:.A:O:.-</a></td>
+                        <td>pronoun of gender in the second person</td>
+                        <td>pronom de genre à la seconde personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.T_.A_O_.-.html">E:.T:.A:O:.-</a></td>
+                        <td>gender pronoun at the third person</td>
+                        <td>pronom de genre à la troisième personne</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.wu.-.html">E:.M:.wu.-</a></td>
+                        <td>masculine pronoun of person</td>
+                        <td>pronom de personne masculin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.M_.we.-.html">E:.M:.we.-</a></td>
+                        <td>feminine pronoun of person</td>
+                        <td>pronom de personne féminin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.wu.-.html">E:.F:.wu.-</a></td>
+                        <td>masculine pronoun</td>
+                        <td>pronom masculin</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_.F_.we.-.html">E:.F:.we.-</a></td>
+                        <td>feminine pronoun</td>
+                        <td>pronom féminin</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-mode"
+                    aria-expanded="false"
+                    aria-controls="father-mode">
+                father-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-mode"
+         class="collapse"
+         aria-labelledby="heading-father-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="A_O_..html">A:O:.</a></td>
+                        <td>from the inter-actant</td>
+                        <td>à  partir de l'inter-actant</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="U_.html">U:</a></td>
+                        <td>virtual</td>
+                        <td>virtuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_.html">A:</a></td>
+                        <td>actual</td>
+                        <td>actuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_.html">S:</a></td>
+                        <td>sign</td>
+                        <td>signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.html">B:</a></td>
+                        <td>being</td>
+                        <td>être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_.html">T:</a></td>
+                        <td>thing</td>
+                        <td>chose</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="E_.F_.A_O_.-.html">E:.F:.A:O:.-</a> neutral gender</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="3" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.F_.A_O_.-.html"> E:.F:.A:O:.- </a>
+            <span class="translation"
+                data-fr="neutral gender"
+                data-en="genre neutre">
+                neutral gender
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.F_.wu.-.html"> E:.F:.wu.- </a>
+            <span class="translation"
+                data-fr="masculine pronoun"
+                data-en="pronom masculin">
+                masculine pronoun
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.F_.we.-.html"> E:.F:.we.- </a>
+            <span class="translation"
+                data-fr="feminine pronoun"
+                data-en="pronom féminin">
+                feminine pronoun
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.U_.A_O_.-.html"> E:.U:.A:O:.- </a>
+            <span class="translation"
+                data-fr="demonstrative pronoun of gender"
+                data-en="pronom démonstratif de genre">
+                demonstrative pronoun of gender
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.U_.wu.-.html"> E:.U:.wu.- </a>
+            <span class="translation"
+                data-fr="demonstrative masculine"
+                data-en="démonstratif masculin">
+                demonstrative masculine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.U_.we.-.html"> E:.U:.we.- </a>
+            <span class="translation"
+                data-fr="demonstrative feminine"
+                data-en="démonstratif féminin">
+                demonstrative feminine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.A_.A_O_.-.html"> E:.A:.A:O:.- </a>
+            <span class="translation"
+                data-fr="possessive pronoun of gender"
+                data-en="pronom possessif de genre">
+                possessive pronoun of gender
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.A_.wu.-.html"> E:.A:.wu.- </a>
+            <span class="translation"
+                data-fr="possessive masculine"
+                data-en="possessif masculin">
+                possessive masculine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.A_.we.-.html"> E:.A:.we.- </a>
+            <span class="translation"
+                data-fr="possessive feminine"
+                data-en="possessif féminin">
+                possessive feminine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.S_.A_O_.-.html"> E:.S:.A:O:.- </a>
+            <span class="translation"
+                data-fr="pronoun of gender in the first person"
+                data-en="pronom de genre à la première personne">
+                pronoun of gender in the first person
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.S_.wu.-.html"> E:.S:.wu.- </a>
+            <span class="translation"
+                data-fr="first person masculine"
+                data-en="première personne masculin">
+                first person masculine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.S_.we.-.html"> E:.S:.we.- </a>
+            <span class="translation"
+                data-fr="first person feminine"
+                data-en="première personne féminin">
+                first person feminine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.B_.A_O_.-.html"> E:.B:.A:O:.- </a>
+            <span class="translation"
+                data-fr="pronoun of gender in the second person"
+                data-en="pronom de genre à la seconde personne">
+                pronoun of gender in the second person
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.B_.wu.-.html"> E:.B:.wu.- </a>
+            <span class="translation"
+                data-fr="second person masculine"
+                data-en="deuxième personne masculin">
+                second person masculine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.B_.we.-.html"> E:.B:.we.- </a>
+            <span class="translation"
+                data-fr="second person feminine"
+                data-en="deuxième personne féminin">
+                second person feminine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.T_.A_O_.-.html"> E:.T:.A:O:.- </a>
+            <span class="translation"
+                data-fr="gender pronoun at the third person"
+                data-en="pronom de genre à la troisième personne">
+                gender pronoun at the third person
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.T_.wu.-.html"> E:.T:.wu.- </a>
+            <span class="translation"
+                data-fr="third person masculine"
+                data-en="troisième personne masculin">
+                third person masculine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_.T_.we.-.html"> E:.T:.we.- </a>
+            <span class="translation"
+                data-fr="third person feminine"
+                data-en="troisième personne féminin">
+                third person feminine
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

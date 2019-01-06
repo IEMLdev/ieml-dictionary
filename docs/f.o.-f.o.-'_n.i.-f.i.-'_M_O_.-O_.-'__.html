@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>Parties du corps: membres</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>body parts: limbs</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>5</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>12</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>1</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__+f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_ </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__+f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_ </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(6, 2)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__+f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
+                        <td>body parts</td>
+                        <td>parties du corps</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_j.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',j.-O:.-',_</a></td>
+                        <td>first joint of the limb</td>
+                        <td>première articulation du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_g.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',g.-O:.-',_</a></td>
+                        <td>first segment of the limb</td>
+                        <td>premier segment du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_</a></td>
+                        <td>second joint of the limb</td>
+                        <td>deuxième articulation du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_c.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',c.-O:.-',_</a></td>
+                        <td>second segment of the limb</td>
+                        <td>deuxième segment du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_p.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',p.-O:.-',_</a></td>
+                        <td>third joint of the limb</td>
+                        <td>troisième articulation du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_</a></td>
+                        <td>third segment (end) of the limb</td>
+                        <td>troisième segment (extrémité) du membre</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-U_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-U:.-',_</a></td>
+                        <td>arm, superior limb</td>
+                        <td>bras, membre supérieur</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-A_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-A:.-',_</a></td>
+                        <td>leg, inferior limb</td>
+                        <td>jambe, membre inférieur</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-mode"
+                    aria-expanded="false"
+                    aria-controls="father-mode">
+                father-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-mode"
+         class="collapse"
+         aria-labelledby="heading-father-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="U_.html">U:</a></td>
+                        <td>virtual</td>
+                        <td>virtuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_.html">A:</a></td>
+                        <td>actual</td>
+                        <td>actuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="M_O_..html">M:O:.</a></td>
+                        <td>agents</td>
+                        <td>agents</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="n.i.-f.i.-'.html">n.i.-f.i.-'</a></td>
+                        <td>limb, end of limb, hand and foot</td>
+                        <td>membre, extrémité, main et pied</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="f.o.-f.o.-'.html">f.o.-f.o.-'</a></td>
+                        <td>body</td>
+                        <td>corps</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a> body parts: limbs</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="body parts: limbs"
+                data-en="Parties du corps: membres">
+                body parts: limbs
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="arm, superior limb"
+                data-en="bras, membre supérieur">
+                arm, superior limb
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="leg, inferior limb"
+                data-en="jambe, membre inférieur">
+                leg, inferior limb
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="first joint of the limb"
+                data-en="première articulation du membre">
+                first joint of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="shoulder"
+                data-en="épaule">
+                shoulder
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="groin"
+                data-en="aine">
+                groin
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="first segment of the limb"
+                data-en="premier segment du membre">
+                first segment of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="arm"
+                data-en="bras (entre le coude et l'épaule)">
+                arm
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="thigh"
+                data-en="cuisse">
+                thigh
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="second joint of the limb"
+                data-en="deuxième articulation du membre">
+                second joint of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="elbow"
+                data-en="coude">
+                elbow
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="knee"
+                data-en="genou">
+                knee
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="second segment of the limb"
+                data-en="deuxième segment du membre">
+                second segment of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="forearm"
+                data-en="avant-bras">
+                forearm
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="shank"
+                data-en="mollet, jaret">
+                shank
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="third joint of the limb"
+                data-en="troisième articulation du membre">
+                third joint of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="wrist"
+                data-en="poignet">
+                wrist
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="ankle"
+                data-en="cheville">
+                ankle
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_ </a>
+            <span class="translation"
+                data-fr="third segment (end) of the limb"
+                data-en="troisième segment (extrémité) du membre">
+                third segment (end) of the limb
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-U:.-',_ </a>
+            <span class="translation"
+                data-fr="hand"
+                data-en="main">
+                hand
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-A:.-',_ </a>
+            <span class="translation"
+                data-fr="foot"
+                data-en="pied">
+                foot
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>

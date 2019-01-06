@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="static/css/table.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<base href="https://iemldev.github.io/ieml-dictionary/">
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            E:E:F:.
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> EN </dt>
+                        <dd>indicateurs de cas | modes de clause</dd>
+                        
+                        <dt> FR </dt>
+                        <dd>case indicators | clause modes</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>5</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table1D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Auxiliary</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>0</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        Root paradigm
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="E_E_F_..html"> E:E:F:. </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(5,)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table E:E:F:.</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="E_E_O_..html">E:E:O:.</a></td>
+                        <td>case indicators for noun clauses</td>
+                        <td>indicateurs de cas pour clauses nominales</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="E_E_M_..html">E:E:M:.</a></td>
+                        <td>case indicators for verb clauses</td>
+                        <td>indicateurs de cas pour clauses verbales</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-mode"
+                    aria-expanded="false"
+                    aria-controls="father-mode">
+                father-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-mode"
+         class="collapse"
+         aria-labelledby="heading-father-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="U_.html">U:</a></td>
+                        <td>virtual</td>
+                        <td>virtuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="A_.html">A:</a></td>
+                        <td>actual</td>
+                        <td>actuel</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="S_.html">S:</a></td>
+                        <td>sign</td>
+                        <td>signe</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="B_.html">B:</a></td>
+                        <td>being</td>
+                        <td>être</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="T_.html">T:</a></td>
+                        <td>thing</td>
+                        <td>chose</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="E_E_F_..html">E:E:F:.</a> case indicators | clause modes</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_F_..html"> E:E:F:. </a>
+            <span class="translation"
+                data-fr="case indicators | clause modes"
+                data-en="indicateurs de cas | modes de clause">
+                case indicators | clause modes
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_U_..html"> E:E:U:. </a>
+            <span class="translation"
+                data-fr="attribute of the noun, copula | in mode: relation between a noun-substance in a role of subject and a noun-attribute in a role of predicate"
+                data-en="attribut du nom, copule | en mode: relation entre un nom-substance en rôle de sujet et un nom-attribut en rôle de prédicat">
+                attribute of the noun, copula | in mode: relation between a noun-substance in a role of subject and a noun-attribute in a role of predicate
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_A_..html"> E:E:A:. </a>
+            <span class="translation"
+                data-fr="genitive, of | in mode: relation between a noun-substance in a role of owner or whole and a noun-attribute in a role of property or part"
+                data-en="génitif, de | en mode: relation entre un nom-substance en rôle de propriétaire ou de tout et un nom-attribut en rôle de propriété ou de partie">
+                genitive, of | in mode: relation between a noun-substance in a role of owner or whole and a noun-attribute in a role of property or part
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_S_..html"> E:E:S:. </a>
+            <span class="translation"
+                data-fr="nominative | in mode: relation between a verb-substance and a noun-attribute in a role of agent"
+                data-en="nominatif | en mode: relation entre un verbe-substance et un nom-attribut en rôle d'agent">
+                nominative | in mode: relation between a verb-substance and a noun-attribute in a role of agent
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_B_..html"> E:E:B:. </a>
+            <span class="translation"
+                data-fr="dative, to | in mode: relation between a verb-substance and a noun-attribute in beneficiary role"
+                data-en="datif, à | en mode: relation entre un verbe-substance et un nom-attribut en rôle de bénéficiaire">
+                dative, to | in mode: relation between a verb-substance and a noun-attribute in beneficiary role
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+        <tr>
+            
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="E_E_T_..html"> E:E:T:. </a>
+            <span class="translation"
+                data-fr="accusative | relation between a verb and a noun in a role of object"
+                data-en="accusatif | relation entre un verbe et un nom en rôle d'objet">
+                accusative | relation between a verb and a noun in a role of object
+            </span>
+        </div>
+    
+    </td>
+    
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="static/js/popper.min.js"></script>
+	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+</body>
+</html>
