@@ -1,6 +1,6 @@
 from jinja2 import Environment, FileSystemLoader, UndefinedError
 from functools import lru_cache
-
+from urllib.parse import quote
 from ieml.constants import DICTIONARY_FOLDER
 from ieml.dictionary import Dictionary
 from ieml.dictionary.table.table import TableSet, Table1D, Table2D, Cell
@@ -93,7 +93,7 @@ def get_table(dictionary, r):
 
 def url_for(folder, filename):
     if folder == 'scripts':
-        e = filename + '.html'
+        e = quote(filename) + '.html'
     else:
         e = os.path.join(folder, filename)
 
