@@ -1,6 +1,6 @@
 from jinja2 import Environment, FileSystemLoader, UndefinedError
 from functools import lru_cache
-from urllib.parse import quote
+import re
 from ieml.constants import DICTIONARY_FOLDER
 from ieml.dictionary import Dictionary
 from ieml.dictionary.table.table import TableSet, Table1D, Table2D, Cell
@@ -91,17 +91,11 @@ def get_table(dictionary, r):
     }
 
 
-def url_for(folder, filename):
-    if folder == 'scripts':
-        e = quote(filename) + '.html'
-    else:
-        e = os.path.join(folder, filename)
-
-    return e
-
-
 I_TO_CLASS = ['aux', 'verb', 'noun']
 
+
+def _script_to_filename(s):
+    return "{}.html".format(re.sub(r'[,:;]', '_', str(s)))
 
 def generate_script_site(dictionary, output_folder, base_url):
     from shutil import copytree, rmtree
@@ -115,8 +109,6 @@ def generate_script_site(dictionary, output_folder, base_url):
 
     copytree(os.path.join(local_folder, 'static'), static_folder)
 
-    env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
-    env.globals['url_for'] = url_for
 
     all_scripts = [{
         'ieml': str(s),
@@ -133,6 +125,18 @@ def generate_script_site(dictionary, output_folder, base_url):
         'nb_paradigms': len([s for s in dictionary.scripts if len(s) != 1]),
         'nb_relations': len(dictionary.relations.pandas())
     }
+
+
+    def url_for(folder, filename):
+        if folder == 'scripts':
+            e = _script_to_filename(filename)
+        else:
+            e = os.path.join(folder, filename)
+
+        return e
+
+    env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
+    env.globals['url_for'] = url_for
 
     template = env.get_template('index.html')
 
@@ -154,7 +158,7 @@ def generate_script_site(dictionary, output_folder, base_url):
             print("Unable to generate templates for script: {}, no HTML generated.".format(str(script)), file=sys.stderr)
             continue
 
-        with open(os.path.join(output_folder, str(script) + '.html'), 'w') as fp:
+        with open(os.path.join(output_folder, _script_to_filename(script)), 'w') as fp:
             print(rendered, file=fp)
 
 

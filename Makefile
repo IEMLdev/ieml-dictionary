@@ -14,7 +14,7 @@ site:
 	$(PYTHON) server/generate_site.py docs https://iemldev.github.io/ieml-dictionary/
 
 site-debug: 
-	$(PYTHON) server/generate_site.py site-debug http://localhost:8000/
+	$(PYTHON) server/generate_site.py docs-debug http://localhost:8000/
 
 serve: site-debug
-	cd site-debug && $(PYTHON) -m http.server 8000
+	cd docs-debug && $(PYTHON) -m http.server 8000
