@@ -1,8 +1,17 @@
-run:
-	FLASK_APP=server.py flask run
+PYTHON=PYTHONPATH='$(shell pwd)' python3.5
 
-extract:
-	python extract_dictionary.py dictionary_2018-09-03_20:39:39
+.PHONY: all
 
-check:
-	find dictionary/* | xargs -I % -t pykwalify -s dictionary_paradigm_schema.yaml -d %
+all: site validate normalize
+
+validate:
+	$(PYTHON) scripts/validate_dictionary.py
+
+normalize:
+	$(PYTHON) scripts/normalize_dictionary.py
+
+site: 
+	$(PYTHON) server/generate_site.py site
+
+serve: site
+	cd site && $(PYTHON) -m http.server

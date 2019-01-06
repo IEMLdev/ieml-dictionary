@@ -1,137 +1,119 @@
 {% extends "main.html" %}
 
-{% macro _cell(cell) -%}
-    <div class="cell">
-        <div class="ieml">
-            <a href="{{url_for('scripts', filename=cell.ieml)}}"> {{cell.ieml}} </a>
+{% macro _cell(cell, is_cell, colspan=1) -%}
+    {% if is_cell %}
+    <td class="cell" style="background-color: {{cell.color}};">
+    {% else %}
+    <th class="cell" colspan="{{colspan}}" style="background-color: {{cell.color}};">
+    {% endif %}
+        <div class="ieml-cell">
+            <a class="ieml" href="{{url_for('scripts', filename=cell.ieml)}}"> {{cell.ieml}} </a>
+            <span class="translation"
+                data-fr="{{cell.translations.fr}}"
+                data-en="{{cell.translations.en}}">
+                {{cell.translations.fr}}
+            </span>
         </div>
-        <dl class="translations">
-            {% for lang in cell.translations %}
-            <dt>{{lang}} </dt>
-            <dd>{{cell.translations[lang]}}</dd>
-            {% endfor %}
-        </dl>
-    </div>
+    {% if is_cell %}
+    </td>
+    {% else %}
+    </th>
+    {% endif %}
 {%- endmacro %}
+
 {% macro _column(script, table) -%}
-    <table>
+    <table class="table table-bordered table-fixed">
         <tr>
-            <th> {{_cell(script)}} </th>
+            {{_cell(script, False)}}
         </tr>
         {% for cell in table.cells %}
         <tr>
-            <td>
-                {{_cell(cell)}}
-            </td>
+            {{_cell(cell, True)}}
         </tr>
         {% endfor%}
     </table>
 {%- endmacro %}
 
 {% macro _table(table) -%}
-    <table class="table table-bordered">
+    <table class="table table-bordered table-fixed">
         <tr>
-            <th></th>
+            {{_cell(table.header, False, table.columns|length + 1)}}
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
             {% for cell in table.columns %}
-            <th> {{_cell(cell)}} </th>
+                {{_cell(cell, False)}}
             {% endfor %}
         </tr>
         {% for row in table.cells %}
         <tr>
-            <th>
-                {{_cell(table.rows[loop.index - 1])}}
-            </th>
+            {{_cell(table.rows[loop.index - 1], False)}}
 
             {% for cell in row%}
-
-            <td>
-                {{_cell(cell)}}
-            </td>
+                {{_cell(cell, True)}}
             {% endfor%}
         </tr>
         {% endfor%}
     </table>
 {%- endmacro %}
+
 {% macro _table_header(s) -%}
     <div class="card-header">Table <a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a> {{s.translations['fr']}}</div>
 {%- endmacro %}
-{% macro _table_menu_tabs() -%}
-    {% if script.tables.dim == 1 %}
-    <a class="nav-item nav-link"
-       id="nav-tables-tab"
-       data-toggle="tab"
-       href="#tables"
-       role="tab"
-       aria-controls="tables"
-       aria-selected="false">Tables {{script.ieml}}</a>
-    {% elif script.tables.dim == 2 %}
-    <a class="nav-item nav-link"
-       id="nav-tables-tab"
-       data-toggle="tab"
-       href="#tables"
-       role="tab"
-       aria-controls="tables"
-       aria-selected="false">Tables {{script.ieml}}</a>
-    {% elif script.tables.dim > 2 %}
+
+{% macro _table_menu_tabs(script, idx) -%}
+    {% if script.tables.dim > 2 %}
         {% for s, table in script.tables.cells.items() %}
-        <a class="nav-item nav-link"
-           id="nav-tables-{{loop.index}}-tab"
-           data-toggle="tab"
-           href="#tables-{{loop.index}}"
-           role="tab"
-           aria-controls="tables"
-           aria-selected="false">Tables {{table.ieml}}</a>
+            {{ _table_menu_tabs(table, loop.index) }}
         {% endfor %}
+    {% elif script.tables.dim == 0 %}
+    {% else %}
+    <a class="nav-item nav-link"
+       id="nav-tables-{{idx}}-tab"
+       data-toggle="tab"
+       href="#tables-{{idx}}"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table {{script.ieml}}</a>
     {% endif %}
 {%- endmacro %}
 
-{% macro _table_tabs() -%}
+{% macro _table_tabs(script, idx) -%}
     {% if script.tables.dim == 1 %}
-    <div class="tab-pane fade table"
+    <div class="tab-pane fade table m-1"
        role="tabpanel"
-       id="tables"
-       aria-labelledby="nav-tables-tab">
+       id="tables-{{idx}}"
+       aria-labelledby="nav-tables-{{idx}}-tab">
 
-        <div class="card">
-            {{_table_header(script)}}
-            <div class="card-body">
+        <!--<div class="card">-->
+            <!--{{_table_header(script)}}-->
+            <!--<div class="card-body">-->
                 {{_column(script, script.tables)}}
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
     </div>
     {% elif script.tables.dim == 2 %}
-    <div class="tab-pane fade table"
+    <div class="tab-pane fade table m-1"
        role="tabpanel"
-       id="tables"
-       aria-labelledby="nav-tables-tab">
+       id="tables-{{idx}}"
+       aria-labelledby="nav-tables-{{idx}}-tab">
 
-        <div class="card">
-            {{_table_header(script)}}
-            <div class="card-body">
+        <!--<div class="card">-->
+            <!--{{_table_header(script)}}-->
+            <!--<div class="card-body">-->
                 {{_table(script.tables)}}
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
     </div>
     {% elif script.tables.dim > 2 %}
         {% for s, table in script.tables.cells.items() %}
-        <div class="tab-pane fade table"
-           role="tabpanel"
-           id="tables-{{loop.index}}"
-           aria-labelledby="nav-tables-{{loop.index}}-tab">
-
-            <div class="card">
-                {{_table_header(table)}}
-                <div class="card-body">
-                    {{_table(table.tables)}}
-                </div>
-            </div>
-        </div>
+            {{ _table_tabs(table, loop.index) }}
         {% endfor %}
     {% endif %}
 {%- endmacro %}
 
 {% macro _relation_accordion(reltype, relations) -%}
-<div class="card">
+<div class="card m-1">
     <div class="card-header" id="heading-{{reltype}}">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -147,7 +129,7 @@
     <div id="{{reltype}}"
          class="collapse"
          aria-labelledby="heading-{{reltype}}"
-         data-parent="#accordion-relations">
+         data-parent="#relations">
         <div class="card-body">
             <table class="table">
                 <tbody>
@@ -166,14 +148,13 @@
 {%- endmacro %}
 
 {% block content %}
-
     <div class="container-fluid">
-        <h2 class="text-center">
+        <h2 class="text-center m-4">
             {{script.ieml}}
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
             <div class="card">
                 <div class="card-header">Translations</div>
                 <div class="card-body">
@@ -186,13 +167,13 @@
                 </div>
             </div>
         </div>
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
 
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <dl class="list-group list-group-flush">
                                     <dt>Layer</dt>
                                     <dd>{{script.layer}}</dd>
@@ -201,10 +182,24 @@
                                     <dd>{{script.size}}</dd>
                                 </dl>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <dl class="list-group list-group-flush">
                                     <dt>Type</dt>
                                     <dd>{{script.type}}</dd>
+                                    <dt>Class</dt>
+                                    <dd>{{script.class}}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>{{script.tables.rank}}</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
                                     <dd>
@@ -214,20 +209,19 @@
                                         <a href="{{url_for('scripts', filename=script.tables.parent)}}"> {{script.tables.parent}} </a>
                                         {% endif %}
                                     </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="{{url_for('scripts', filename=script.tables.root)}}"> {{script.tables.root}} </a>
+                                    </dd>
+
                                 </dl>
                             </div>
 
-                            <div class="col-sm-3">
+                            <div class="col-sm-2">
                                 <dl>
-                                    <dt>Rank</dt>
-                                    <dd>{{script.tables.rank}}</dd>
-
                                     <dt>Ndim of table</dt>
                                     <dd>{{script.tables.dim}}</dd>
-                                </dl>
-                            </div>
-                            <div class="col-sm-3">
-                                <dl>
+
                                     <dt>Shape of table</dt>
                                     <dd>{{script.tables.shape}}</dd>
                                 </dl>
@@ -238,54 +232,81 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <nav>
-            <div class="nav nav-tabs" role="tablist">
-                <a class="nav-item nav-link"
-                   id="nav-relations-tab"
-                   data-toggle="tab"
-                   href="#relations"
-                   role="tab"
-                   aria-controls="relations"
-                   aria-selected="true">Relations</a>
-                {{_table_menu_tabs()}}
-            </div>
-        </nav>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            {{_table_menu_tabs(script, 1)}}
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
 
-                <div class="card">
-                    <div class="card-header">Relations</div>
-                    <div class="card-body" id="accordion-relations">
-                        <div class="row">
-                            <div class="col-sm-6">
-                            {% for rel, relations in script.relations['sibling'].items() %}
-                                {{_relation_accordion(rel, relations)}}
-                            {% endfor %}
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
 
-                            {% for rel, relations in script.relations['inclusion'].items() %}
-                                {{_relation_accordion(rel, relations)}}
-                            {% endfor %}
-                            </div>
-                            <div class="col-sm-6">
-                            {% for rel, relations in script.relations['father'].items() %}
-                                {{_relation_accordion('father-' + rel, relations)}}
-                            {% endfor %}
-                            {% for rel, relations in script.relations['child'].items() %}
-                                {{_relation_accordion('child-' + rel, relations)}}
-                            {% endfor %}
-                            </div>
-                        </div>
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    {% for rel, relations in script.relations['sibling'].items() %}
+                        {{_relation_accordion(rel, relations)}}
+                    {% endfor %}
+
+                    {% for rel, relations in script.relations['inclusion'].items() %}
+                        {{_relation_accordion(rel, relations)}}
+                    {% endfor %}
+                    </div>
+                    <div class="col-sm-6">
+                    {% for rel, relations in script.relations['father'].items() %}
+                        {{_relation_accordion('father-' + rel, relations)}}
+                    {% endfor %}
+                    {% for rel, relations in script.relations['child'].items() %}
+                        {{_relation_accordion('child-' + rel, relations)}}
+                    {% endfor %}
                     </div>
                 </div>
+                    <!--</div>-->
+                <!--</div>-->
             </div>
 
-            {{_table_tabs()}}
+            {{_table_tabs(script, 1)}}
         </div>
     </div>
 
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
 {% endblock content %}

@@ -2,14 +2,14 @@ schema;translations_sch:
     type: map
     mapping:
         fr:
-                required: True
-                type: str
+            required: True
+            type: str
         en:
-                required: True
-                type: str
+            required: True
+            type: str
         comment:
-                required: False
-                type: str
+            required: False
+            type: str
 
 type: map
 mapping:
@@ -38,11 +38,6 @@ mapping:
                   ieml:
                       required: True
                       type: str
-                  index:
-                      required: True
-                      type: seq
-                      sequence:
-                          - type: int
                   translations:
                       required: True
                       include: translations_sch     
@@ -56,5 +51,4 @@ mapping:
                       type: str
                   translations:
                       required: True
-                      include: translations_sch     
-
+                      include: translations_sch

@@ -1,10 +1,113 @@
 {% extends "main.html" %}
+
+
 {% block content %}
-<li>
-    {% for script in scripts%}
-        <ul>
-            <a href="/{{script.ieml}}">{{script.ieml}}</a>
-        </ul>
-    {% endfor %}
-</li>
+<div class="container-fluid">
+    <form id="search_form" class="form m-2">
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="filter_type" class="ml-1" style="font-size: 12px;">Filter types</label>
+                <select id="filter_type" class="custom-select">
+                    <option value="all" selected>All</option>
+                    <option value="root">Root paradigms</option>
+                    <option value="paradigm">Paradigms</option>
+                    <option value="seme">Semes</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="filter_class" class="ml-1" style="font-size: 12px;">Filter grammatical class</label>
+                <select id="filter_class" class="custom-select">
+                    <option value="all" selected>All</option>
+                    <option value="noun">Noun</option>
+                    <option value="verb">Verb</option>
+                    <option value="aux">Auxiliary</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="filter_layer" class="ml-1" style="font-size: 12px;">Filter layers</label>
+                <select id="filter_layer" class="custom-select">
+                    <option value="all" selected>All</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="search_dictionary" class="ml-1" style="font-size: 12px;">Search entries</label>
+                <input id="search_dictionary"
+                   class="form-control"
+                   type="text"
+                   placeholder="Search dictionary"
+                   aria-label="Search">
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <tbody id="search_results">
+            {% for s in scripts%}
+            <tr data-ieml="{{s.ieml}}"
+                data-fr="{{s.fr}}"
+                data-en="{{s.en}}"
+                data-layer="{{s.layer}}"
+                data-type="{{s.type}}"
+                data-class="{{s.class}}">
+
+                <td><a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a></td>
+                <td>{{s.fr}}</td>
+                <td>{{s.en}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			var input = document.getElementById('search_dictionary');
+            var select_layer = document.getElementById('filter_layer');
+            var select_type = document.getElementById('filter_type');
+            var select_class = document.getElementById('filter_class');
+
+			function filter_dictionary() {
+				var query = input.value
+				var query_layer = select_layer.value
+				var query_type = select_type.value
+				var query_class = select_class.value
+
+				var list = document.getElementById("search_results");
+
+				for (var node of list.children) {
+					var ieml = node.getAttribute('data-ieml')
+					var fr = node.getAttribute('data-fr')
+					var en = node.getAttribute('data-en')
+					var layer = node.getAttribute('data-layer')
+					var type = node.getAttribute('data-type')
+					var klass = node.getAttribute('data-class')
+
+					if ((ieml.includes(query) || fr.includes(query) || en.includes(query)) &&
+					    (query_type == 'all' || query_type == type) &&
+					    (query_layer == 'all' || query_layer == layer) &&
+					    (query_class == 'all' || query_class == klass)) {
+						node.style.display = "";
+					} else {
+						node.style.display = "none";
+					}
+				}
+			}
+
+            filter_dictionary()
+            
+			input.addEventListener('input', filter_dictionary)
+			select_layer.addEventListener('change', filter_dictionary)
+			select_type.addEventListener('change', filter_dictionary)
+            select_class.addEventListener('change', filter_dictionary)
+
+			document.getElementById("search_form").addEventListener('submit', function(event){event.preventDefault();});
+		});
+	</script>
+
 {% endblock content %}
