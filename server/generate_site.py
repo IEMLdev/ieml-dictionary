@@ -93,9 +93,9 @@ def get_table(dictionary, r):
 
 def url_for(folder, filename):
     if folder == 'scripts':
-        e = '/' + filename + '.html'
+        e = filename + '.html'
     else:
-        e = os.path.join('/', folder, filename)
+        e = os.path.join(folder, filename)
 
     return e
 
