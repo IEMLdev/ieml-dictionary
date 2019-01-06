@@ -11,7 +11,10 @@ normalize:
 	$(PYTHON) scripts/normalize_dictionary.py
 
 site: 
-	$(PYTHON) server/generate_site.py docs
+	$(PYTHON) server/generate_site.py docs https://iemldev.github.io/ieml-dictionary/
 
-serve: site
-	cd docs && $(PYTHON) -m http.server
+site-debug: 
+	$(PYTHON) server/generate_site.py site-debug http://localhost:8000/
+
+serve: site-debug
+	cd site-debug && $(PYTHON) -m http.server 8000

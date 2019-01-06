@@ -103,7 +103,7 @@ def url_for(folder, filename):
 I_TO_CLASS = ['aux', 'verb', 'noun']
 
 
-def generate_script_site(dictionary, output_folder):
+def generate_script_site(dictionary, output_folder, base_url):
     from shutil import copytree, rmtree
 
     if os.path.isdir(output_folder):
@@ -138,7 +138,8 @@ def generate_script_site(dictionary, output_folder):
 
     with open(os.path.join(output_folder, 'index.html'), 'w') as fp:
         print(template.render(scripts=all_scripts,
-                              dictionary_stats=dictionary_stats), file=fp)
+                              dictionary_stats=dictionary_stats,
+                              base_url=base_url), file=fp)
 
     template = env.get_template('script.html')
 
@@ -146,7 +147,8 @@ def generate_script_site(dictionary, output_folder):
         try:
             rendered = template.render(script=get_table(dictionary, script),
                                        all_scripts=all_scripts,
-                                       dictionary_stats=dictionary_stats)
+                                       dictionary_stats=dictionary_stats,
+                                       base_url=base_url)
         except UndefinedError as e:
             print(e.__repr__(), file=sys.stderr)
             print("Unable to generate templates for script: {}, no HTML generated.".format(str(script)), file=sys.stderr)
@@ -162,9 +164,13 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Generate the dictionary static website.')
 
     parser.add_argument('output_folder', type=str, help='the website output folder')
+    parser.add_argument('base_url', type=str, help='the website base url')
+
     parser.add_argument('--dictionary-folder', type=str, required=False, default=DICTIONARY_FOLDER,
                         help='the dictionary definition folder')
+
+
     args = parser.parse_args()
 
     dictionary = Dictionary.load(args.dictionary_folder)
-    generate_script_site(dictionary, args.output_folder)
+    generate_script_site(dictionary, args.output_folder, base_url=args.base_url)
