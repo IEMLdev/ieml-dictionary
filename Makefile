@@ -1,19 +1,23 @@
-PYTHON=PYTHONPATH='$(shell pwd)' python3.5
+PYTHON=PYTHONPATH='$(shell pwd)' venv/bin/python
 
 .PHONY: all
 
 all: site validate normalize
 
-validate:
+venv:
+	virtualenv -ppython3.6 venv
+	$(PYTHON) -m pip install -r requirements.txt
+
+validate: venv
 	$(PYTHON) scripts/validate_dictionary.py
 
-normalize:
+normalize: venv
 	$(PYTHON) scripts/normalize_dictionary.py
 
-site: 
+site: venv
 	$(PYTHON) server/generate_site.py docs https://iemldev.github.io/ieml-dictionary/
 
-site-debug: 
+site-debug: venv
 	$(PYTHON) server/generate_site.py docs-debug http://localhost:8000/
 
 serve: site-debug
