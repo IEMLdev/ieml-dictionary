@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="/static/css/table.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!--<base href="/./.">-->
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            M:M:.a.-
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> FR </dt>
+                        <dd>genres de rôles sociaux</dd>
+                        
+                        <dt> EN </dt>
+                        <dd>kinds of social roles</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>9</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>3</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="/M:M:.O:M:.-.html"> M:M:.O:M:.- </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="/O:M:.M:M:.-+M:M:.O:M:.-.html"> O:M:.M:M:.-+M:M:.O:M:.- </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(3, 3)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table M:M:.a.-</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-opposed">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#opposed"
+                    aria-expanded="false"
+                    aria-controls="opposed">
+                opposed
+            </button>
+        </h5>
+    </div>
+
+    <div id="opposed"
+         class="collapse"
+         aria-labelledby="heading-opposed"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/a.M:M:.-.html">a.M:M:.-</a></td>
+                        <td>détruire les relations sociales</td>
+                        <td>destroy social relations</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:.O:B:.-.html">M:M:.O:B:.-</a></td>
+                        <td>développement humain de l'être</td>
+                        <td>human development of the being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.A:M:.-.html">M:M:.A:M:.-</a></td>
+                        <td>développement humain actuel</td>
+                        <td>actual human development</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.O:M:.-.html">M:M:.O:M:.-</a></td>
+                        <td>développement humain</td>
+                        <td>human development</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:.M:M:.-+M:M:.O:M:.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
+                        <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/S:M:.a.-.html">S:M:.a.-</a></td>
+                        <td>socialise par le signe</td>
+                        <td>socialize with sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.a.-.html">B:M:.a.-</a></td>
+                        <td>socialise par l'être</td>
+                        <td>socialize with being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/T:M:.a.-.html">T:M:.a.-</a></td>
+                        <td>socialise par la chose</td>
+                        <td>socialize with thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:S:.a.-.html">M:S:.a.-</a></td>
+                        <td>rôle tourné vers le signe</td>
+                        <td>role facing sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:B:.a.-.html">M:B:.a.-</a></td>
+                        <td>rôle tourné vers l'être</td>
+                        <td>role facing being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:T:.a.-.html">M:T:.a.-</a></td>
+                        <td>rôle tourné vers la chose</td>
+                        <td>role facing thing</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/a..html">a.</a></td>
+                        <td>s'engager</td>
+                        <td>be commited</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:..html">M:M:.</a></td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-attribute"
+                    aria-expanded="false"
+                    aria-controls="child-attribute">
+                child-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-attribute"
+         class="collapse"
+         aria-labelledby="heading-child-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/s.a.-M:M:.a.-'.html">s.a.-M:M:.a.-'</a></td>
+                        <td>interprétation en substance</td>
+                        <td>interpretation in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/s.a.-M:M:.a.-f.o.-'.html">s.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>interprète en substance</td>
+                        <td>interpreter in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.a.-M:M:.a.-'.html">b.a.-M:M:.a.-'</a></td>
+                        <td>récit en substance</td>
+                        <td>story in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.a.-M:M:.a.-f.o.-'.html">b.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>conteur en substance</td>
+                        <td>storyteller in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.a.-M:M:.a.-'.html">t.a.-M:M:.a.-'</a></td>
+                        <td>inscription en substance</td>
+                        <td>registration in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.a.-M:M:.a.-f.o.-'.html">t.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>scribe en substance</td>
+                        <td>scribe in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.e.-M:M:.a.-'.html">k.e.-M:M:.a.-'</a></td>
+                        <td>finalités personnelles</td>
+                        <td>personal finalities</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.e.-M:M:.a.-wa.e.-'.html">k.e.-M:M:.a.-wa.e.-'</a></td>
+                        <td>grammaire de l'être</td>
+                        <td>grammar of the being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.a.-M:M:.a.-'.html">k.a.-M:M:.a.-'</a></td>
+                        <td>unité sociale en substance</td>
+                        <td>social unity in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.a.-M:M:.a.-f.o.-'.html">k.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>chef en substance</td>
+                        <td>chief in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.e.-M:M:.a.-'.html">m.e.-M:M:.a.-'</a></td>
+                        <td>finalités inter-personnelles</td>
+                        <td>inter-personal finalities</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.e.-M:M:.a.-wa.e.-'.html">m.e.-M:M:.a.-wa.e.-'</a></td>
+                        <td>dialectique de l'être</td>
+                        <td>dialectic of the being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.a.-M:M:.a.-'.html">m.a.-M:M:.a.-'</a></td>
+                        <td>chaleur affective en substance</td>
+                        <td>affective warmth in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.a.-M:M:.a.-f.o.-'.html">m.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>parent en substance</td>
+                        <td>parent in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.e.-M:M:.a.-'.html">n.e.-M:M:.a.-'</a></td>
+                        <td>finalités collectives</td>
+                        <td>collective finalities</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.e.-M:M:.a.-wa.e.-'.html">n.e.-M:M:.a.-wa.e.-'</a></td>
+                        <td>rhétorique de l'être</td>
+                        <td>rhetoric of the being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.a.-M:M:.a.-'.html">n.a.-M:M:.a.-'</a></td>
+                        <td>responsabilité en substance</td>
+                        <td>responsibility in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.a.-M:M:.a.-f.o.-'.html">n.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>juge en substance</td>
+                        <td>judge in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/d.a.-M:M:.a.-'.html">d.a.-M:M:.a.-'</a></td>
+                        <td>recherche en substance</td>
+                        <td>research in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/d.a.-M:M:.a.-f.o.-'.html">d.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>chercheur en substance</td>
+                        <td>researcher in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/f.a.-M:M:.a.-'.html">f.a.-M:M:.a.-'</a></td>
+                        <td>soin en substance</td>
+                        <td>care in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/f.a.-M:M:.a.-f.o.-'.html">f.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>guérisseur en substance</td>
+                        <td>healer in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/l.a.-M:M:.a.-'.html">l.a.-M:M:.a.-'</a></td>
+                        <td>protection en substance</td>
+                        <td>protection in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/l.a.-M:M:.a.-f.o.-'.html">l.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>gardien en substance</td>
+                        <td>guardian in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.e.-M:M:.a.-'.html">B:M:.e.-M:M:.a.-'</a></td>
+                        <td>finalités des êtres</td>
+                        <td>finalities of beings</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.e.-M:M:.a.-wa.e.-'.html">B:M:.e.-M:M:.a.-wa.e.-'</a></td>
+                        <td>vertus | arts des êtres</td>
+                        <td>virtues | arts of beings</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.e.-M:M:.a.-E:.-+wa.e.-'.html">B:M:.e.-M:M:.a.-E:.-+wa.e.-'</a></td>
+                        <td>les vertus et leurs objets</td>
+                        <td>virtues and their objects</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'.html">S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'</a></td>
+                        <td>objets des arts et compétences</td>
+                        <td>objects of arts and competencies</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-wa.e.-'+B:M:.e.-M:M:.a.-wa.e.-'+T:M:.e.-M:M:.i.-wa.e.-'.html">S:M:.e.-M:M:.u.-wa.e.-'+B:M:.e.-M:M:.a.-wa.e.-'+T:M:.e.-M:M:.i.-wa.e.-'</a></td>
+                        <td>arts et vertus (compétences)</td>
+                        <td>arts and virtues (competencies)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-'.html">M:M:.a.-M:M:.a.-'</a></td>
+                        <td>fonctions sociales</td>
+                        <td>social functions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-f.o.-'.html">M:M:.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>rôles sociaux</td>
+                        <td>social rôles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
+                        <td>compétences et objets de compétences</td>
+                        <td>competencies and objects of competencies</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-E:.-+f.o.-'.html">M:M:.a.-M:M:.a.-E:.-+f.o.-'</a></td>
+                        <td>fonctions et acteurs sociaux</td>
+                        <td>social actors and functions</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-substance"
+                    aria-expanded="false"
+                    aria-controls="child-substance">
+                child-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-substance"
+         class="collapse"
+         aria-labelledby="heading-child-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-s.a.-'.html">M:M:.a.-s.a.-'</a></td>
+                        <td>interprétation en attribut</td>
+                        <td>interpretation in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-s.a.-f.o.-'.html">M:M:.a.-s.a.-f.o.-'</a></td>
+                        <td>interprète en attribut</td>
+                        <td>interpreter in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-b.a.-'.html">M:M:.a.-b.a.-'</a></td>
+                        <td>récit en attribut</td>
+                        <td>story in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-b.a.-f.o.-'.html">M:M:.a.-b.a.-f.o.-'</a></td>
+                        <td>conteur en attribut</td>
+                        <td>storyteller in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-t.a.-'.html">M:M:.a.-t.a.-'</a></td>
+                        <td>inscription en attribut</td>
+                        <td>registration in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-t.a.-f.o.-'.html">M:M:.a.-t.a.-f.o.-'</a></td>
+                        <td>scribe en attribut</td>
+                        <td>scribe in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-k.a.-'.html">M:M:.a.-k.a.-'</a></td>
+                        <td>unité sociale en attribut</td>
+                        <td>social unity in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-k.a.-f.o.-'.html">M:M:.a.-k.a.-f.o.-'</a></td>
+                        <td>chef en attribut</td>
+                        <td>chief in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-m.a.-'.html">M:M:.a.-m.a.-'</a></td>
+                        <td>chaleur affective en attribut</td>
+                        <td>affective warmth in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-m.a.-f.o.-'.html">M:M:.a.-m.a.-f.o.-'</a></td>
+                        <td>parent en attribut</td>
+                        <td>parent in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-n.a.-'.html">M:M:.a.-n.a.-'</a></td>
+                        <td>responsabilité en attribut</td>
+                        <td>responsibility in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-n.a.-f.o.-'.html">M:M:.a.-n.a.-f.o.-'</a></td>
+                        <td>juge en attribut</td>
+                        <td>judge in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-d.a.-'.html">M:M:.a.-d.a.-'</a></td>
+                        <td>recherche en attribut</td>
+                        <td>research in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-d.a.-f.o.-'.html">M:M:.a.-d.a.-f.o.-'</a></td>
+                        <td>chercheur en attribut</td>
+                        <td>researcher in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-f.a.-'.html">M:M:.a.-f.a.-'</a></td>
+                        <td>soin en attribut</td>
+                        <td>care in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-f.a.-f.o.-'.html">M:M:.a.-f.a.-f.o.-'</a></td>
+                        <td>guérisseur en attribut</td>
+                        <td>healer in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-l.a.-'.html">M:M:.a.-l.a.-'</a></td>
+                        <td>protection en attribut</td>
+                        <td>protection in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-l.a.-f.o.-'.html">M:M:.a.-l.a.-f.o.-'</a></td>
+                        <td>gardien en attribut</td>
+                        <td>guardian in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-'.html">M:M:.a.-M:M:.a.-'</a></td>
+                        <td>fonctions sociales</td>
+                        <td>social functions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-f.o.-'.html">M:M:.a.-M:M:.a.-f.o.-'</a></td>
+                        <td>rôles sociaux</td>
+                        <td>social rôles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-M:M:.a.-E:.-+f.o.-'.html">M:M:.a.-M:M:.a.-E:.-+f.o.-'</a></td>
+                        <td>fonctions et acteurs sociaux</td>
+                        <td>social actors and functions</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="/M:M:.a.-.html">M:M:.a.-</a> genres de rôles sociaux</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:M:.a.-.html"> M:M:.a.- </a>
+            <span class="translation"
+                data-fr="genres de rôles sociaux"
+                data-en="kinds of social roles">
+                genres de rôles sociaux
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:S:.a.-.html"> M:S:.a.- </a>
+            <span class="translation"
+                data-fr="rôle tourné vers le signe"
+                data-en="role facing sign">
+                rôle tourné vers le signe
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:B:.a.-.html"> M:B:.a.- </a>
+            <span class="translation"
+                data-fr="rôle tourné vers l'être"
+                data-en="role facing being">
+                rôle tourné vers l'être
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:T:.a.-.html"> M:T:.a.- </a>
+            <span class="translation"
+                data-fr="rôle tourné vers la chose"
+                data-en="role facing thing">
+                rôle tourné vers la chose
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/S:M:.a.-.html"> S:M:.a.- </a>
+            <span class="translation"
+                data-fr="socialise par le signe"
+                data-en="socialize with sign">
+                socialise par le signe
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/s.a.-.html"> s.a.- </a>
+            <span class="translation"
+                data-fr="interprète"
+                data-en="interpreter">
+                interprète
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/b.a.-.html"> b.a.- </a>
+            <span class="translation"
+                data-fr="conteur"
+                data-en="storyteller">
+                conteur
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/t.a.-.html"> t.a.- </a>
+            <span class="translation"
+                data-fr="scribe"
+                data-en="scribe">
+                scribe
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/B:M:.a.-.html"> B:M:.a.- </a>
+            <span class="translation"
+                data-fr="socialise par l'être"
+                data-en="socialize with being">
+                socialise par l'être
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/k.a.-.html"> k.a.- </a>
+            <span class="translation"
+                data-fr="chef, roi, président, directeur"
+                data-en="chief, king, head of state, president, director">
+                chef, roi, président, directeur
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/m.a.-.html"> m.a.- </a>
+            <span class="translation"
+                data-fr="parent"
+                data-en="parent">
+                parent
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/n.a.-.html"> n.a.- </a>
+            <span class="translation"
+                data-fr="juge"
+                data-en="judge">
+                juge
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/T:M:.a.-.html"> T:M:.a.- </a>
+            <span class="translation"
+                data-fr="socialise par la chose"
+                data-en="socialize with thing">
+                socialise par la chose
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/d.a.-.html"> d.a.- </a>
+            <span class="translation"
+                data-fr="chercheur"
+                data-en="researcher">
+                chercheur
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/f.a.-.html"> f.a.- </a>
+            <span class="translation"
+                data-fr="guérisseur"
+                data-en="healer">
+                guérisseur
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/l.a.-.html"> l.a.- </a>
+            <span class="translation"
+                data-fr="gardien"
+                data-en="guardian">
+                gardien
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/popper.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

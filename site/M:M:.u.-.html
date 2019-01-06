@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="/static/css/table.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!--<base href="/./.">-->
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            M:M:.u.-
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> FR </dt>
+                        <dd>genres de signes</dd>
+                        
+                        <dt> EN </dt>
+                        <dd>kinds of signs</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>9</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Noun</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>3</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="/M:M:.O:M:.-.html"> M:M:.O:M:.- </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="/O:M:.M:M:.-+M:M:.O:M:.-.html"> O:M:.M:M:.-+M:M:.O:M:.- </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(3, 3)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table M:M:.u.-</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-opposed">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#opposed"
+                    aria-expanded="false"
+                    aria-controls="opposed">
+                opposed
+            </button>
+        </h5>
+    </div>
+
+    <div id="opposed"
+         class="collapse"
+         aria-labelledby="heading-opposed"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/u.M:M:.-.html">u.M:M:.-</a></td>
+                        <td>détruire la signification</td>
+                        <td>destroy meaning</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:.O:S:.-.html">M:M:.O:S:.-</a></td>
+                        <td>développement humain du signe</td>
+                        <td>human development of the sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.A:M:.-.html">M:M:.A:M:.-</a></td>
+                        <td>développement humain actuel</td>
+                        <td>actual human development</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.O:M:.-.html">M:M:.O:M:.-</a></td>
+                        <td>développement humain</td>
+                        <td>human development</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:.M:M:.-+M:M:.O:M:.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
+                        <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/S:M:.u.-.html">S:M:.u.-</a></td>
+                        <td>signifie le signe</td>
+                        <td>signifying sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.u.-.html">B:M:.u.-</a></td>
+                        <td>signifie l'être</td>
+                        <td>signifying being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/T:M:.u.-.html">T:M:.u.-</a></td>
+                        <td>signifie la chose</td>
+                        <td>signifying thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:S:.u.-.html">M:S:.u.-</a></td>
+                        <td>signe tourné vers le signe</td>
+                        <td>sign oriented sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:B:.u.-.html">M:B:.u.-</a></td>
+                        <td>signe tourné vers l'être</td>
+                        <td>being oriented sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:T:.u.-.html">M:T:.u.-</a></td>
+                        <td>signe tourné vers la chose</td>
+                        <td>thing oriented sign</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/u..html">u.</a></td>
+                        <td>dire</td>
+                        <td>say</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:..html">M:M:.</a></td>
+                        <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-attribute"
+                    aria-expanded="false"
+                    aria-controls="child-attribute">
+                child-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-attribute"
+         class="collapse"
+         aria-labelledby="heading-child-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/s.e.-M:M:.u.-'.html">s.e.-M:M:.u.-'</a></td>
+                        <td>formes élémentaires</td>
+                        <td>elementary forms</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/s.e.-M:M:.u.-wa.e.-'.html">s.e.-M:M:.u.-wa.e.-'</a></td>
+                        <td>grammaire du signe</td>
+                        <td>grammar of sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/s.u.-M:M:.u.-'.html">s.u.-M:M:.u.-'</a></td>
+                        <td>image en substance</td>
+                        <td>image in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/s.u.-M:M:.u.-d.u.-'.html">s.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>image en substance (qualité)</td>
+                        <td>image in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.e.-M:M:.u.-'.html">b.e.-M:M:.u.-'</a></td>
+                        <td>cultures des formes</td>
+                        <td>forms culture</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.e.-M:M:.u.-wa.e.-'.html">b.e.-M:M:.u.-wa.e.-'</a></td>
+                        <td>dialectique du signe</td>
+                        <td>dialectic of sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.u.-M:M:.u.-'.html">b.u.-M:M:.u.-'</a></td>
+                        <td>parole en substance</td>
+                        <td>speech in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.u.-M:M:.u.-d.u.-'.html">b.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>parole en substance (qualité)</td>
+                        <td>speech in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.e.-M:M:.u.-'.html">t.e.-M:M:.u.-'</a></td>
+                        <td>formes originales</td>
+                        <td>original forms</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.e.-M:M:.u.-wa.e.-'.html">t.e.-M:M:.u.-wa.e.-'</a></td>
+                        <td>rhétorique du signe</td>
+                        <td>rhetoric of sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.u.-M:M:.u.-'.html">t.u.-M:M:.u.-'</a></td>
+                        <td>marque en substance</td>
+                        <td>mark in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/t.u.-M:M:.u.-d.u.-'.html">t.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>marque en substance (qualité)</td>
+                        <td>mark in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.u.-M:M:.u.-'.html">k.u.-M:M:.u.-'</a></td>
+                        <td>symbole en substance</td>
+                        <td>symbol in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/k.u.-M:M:.u.-d.u.-'.html">k.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>symbole en substance (qualité)</td>
+                        <td>symbol in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.u.-M:M:.u.-'.html">m.u.-M:M:.u.-'</a></td>
+                        <td>symptôme en substance</td>
+                        <td>symptom in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/m.u.-M:M:.u.-d.u.-'.html">m.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>symptôme en substance (qualité)</td>
+                        <td>symptom in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.u.-M:M:.u.-'.html">n.u.-M:M:.u.-'</a></td>
+                        <td>nom en substance</td>
+                        <td>name in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/n.u.-M:M:.u.-d.u.-'.html">n.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>nom en substance (qualité)</td>
+                        <td>name in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/d.u.-M:M:.u.-'.html">d.u.-M:M:.u.-'</a></td>
+                        <td>pointeur en substance</td>
+                        <td>pointer in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/d.u.-M:M:.u.-d.u.-'.html">d.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>pointeur en substance (qualité)</td>
+                        <td>pointer in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/f.u.-M:M:.u.-'.html">f.u.-M:M:.u.-'</a></td>
+                        <td>sensation en substance</td>
+                        <td>sensation in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/f.u.-M:M:.u.-d.u.-'.html">f.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>sensation en substance (qualité)</td>
+                        <td>sensation en substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/l.u.-M:M:.u.-'.html">l.u.-M:M:.u.-'</a></td>
+                        <td>trace en substance</td>
+                        <td>trace in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/l.u.-M:M:.u.-d.u.-'.html">l.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>trace en substance (qualité)</td>
+                        <td>trace in substance (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-'.html">S:M:.e.-M:M:.u.-'</a></td>
+                        <td>formes des signes</td>
+                        <td>forms of the signs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-wa.e.-'.html">S:M:.e.-M:M:.u.-wa.e.-'</a></td>
+                        <td>arts des signes</td>
+                        <td>arts of signs</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-E:.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'</a></td>
+                        <td>les arts des signes et leurs objets</td>
+                        <td>arts of signs and their objects</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'.html">S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'</a></td>
+                        <td>objets des arts et compétences</td>
+                        <td>objects of arts and competencies</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-wa.e.-'+B:M:.e.-M:M:.a.-wa.e.-'+T:M:.e.-M:M:.i.-wa.e.-'.html">S:M:.e.-M:M:.u.-wa.e.-'+B:M:.e.-M:M:.a.-wa.e.-'+T:M:.e.-M:M:.i.-wa.e.-'</a></td>
+                        <td>arts et vertus (compétences)</td>
+                        <td>arts and virtues (competencies)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-'.html">M:M:.u.-M:M:.u.-'</a></td>
+                        <td>fonctions sémiotiques</td>
+                        <td>semiotic functions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-d.u.-'.html">M:M:.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>qualités sémiotiques</td>
+                        <td>semiotic qualities</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
+                        <td>compétences et objets de compétences</td>
+                        <td>competencies and objects of competencies</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-E:.-+d.u.-'.html">M:M:.u.-M:M:.u.-E:.-+d.u.-'</a></td>
+                        <td>fonctions et qualités sémiotiques</td>
+                        <td>semiotic functions and qualities</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-substance"
+                    aria-expanded="false"
+                    aria-controls="child-substance">
+                child-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-substance"
+         class="collapse"
+         aria-labelledby="heading-child-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-s.u.-'.html">M:M:.u.-s.u.-'</a></td>
+                        <td>image en attribut</td>
+                        <td>image in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-s.u.-d.u.-'.html">M:M:.u.-s.u.-d.u.-'</a></td>
+                        <td>image en attribut (qualité)</td>
+                        <td>image in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-b.u.-'.html">M:M:.u.-b.u.-'</a></td>
+                        <td>parole en attribut</td>
+                        <td>speech in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-b.u.-d.u.-'.html">M:M:.u.-b.u.-d.u.-'</a></td>
+                        <td>parole en attribut (qualité)</td>
+                        <td>speech in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-t.u.-'.html">M:M:.u.-t.u.-'</a></td>
+                        <td>marque en attribut</td>
+                        <td>mark in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-t.u.-d.u.-'.html">M:M:.u.-t.u.-d.u.-'</a></td>
+                        <td>marque en attribut (qualité)</td>
+                        <td>mark in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-k.u.-'.html">M:M:.u.-k.u.-'</a></td>
+                        <td>symbole en attribut</td>
+                        <td>symbol in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-k.u.-d.u.-'.html">M:M:.u.-k.u.-d.u.-'</a></td>
+                        <td>symbole en attribut (qualité)</td>
+                        <td>symbol in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-m.u.-'.html">M:M:.u.-m.u.-'</a></td>
+                        <td>symptôme en attribut</td>
+                        <td>symptom in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-m.u.-d.u.-'.html">M:M:.u.-m.u.-d.u.-'</a></td>
+                        <td>symptôme en attribut (qualité)</td>
+                        <td>symptom in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-n.u.-'.html">M:M:.u.-n.u.-'</a></td>
+                        <td>nom en attribut</td>
+                        <td>name in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-n.u.-d.u.-'.html">M:M:.u.-n.u.-d.u.-'</a></td>
+                        <td>nom en attribut (qualité)</td>
+                        <td>name in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-d.u.-'.html">M:M:.u.-d.u.-'</a></td>
+                        <td>pointeur en attribut</td>
+                        <td>pointer in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-d.u.-d.u.-'.html">M:M:.u.-d.u.-d.u.-'</a></td>
+                        <td>pointeur en attribut (qualité)</td>
+                        <td>pointer in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-f.u.-'.html">M:M:.u.-f.u.-'</a></td>
+                        <td>sensation en attribut</td>
+                        <td>sensation in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-f.u.-d.u.-'.html">M:M:.u.-f.u.-d.u.-'</a></td>
+                        <td>sensation en attribut (qualité)</td>
+                        <td>sensation in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-l.u.-'.html">M:M:.u.-l.u.-'</a></td>
+                        <td>trace en attribut</td>
+                        <td>trace in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-l.u.-d.u.-'.html">M:M:.u.-l.u.-d.u.-'</a></td>
+                        <td>trace en attribut (qualité)</td>
+                        <td>trace in attribute (quality)</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-'.html">M:M:.u.-M:M:.u.-'</a></td>
+                        <td>fonctions sémiotiques</td>
+                        <td>semiotic functions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-d.u.-'.html">M:M:.u.-M:M:.u.-d.u.-'</a></td>
+                        <td>qualités sémiotiques</td>
+                        <td>semiotic qualities</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.u.-M:M:.u.-E:.-+d.u.-'.html">M:M:.u.-M:M:.u.-E:.-+d.u.-'</a></td>
+                        <td>fonctions et qualités sémiotiques</td>
+                        <td>semiotic functions and qualities</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="/M:M:.u.-.html">M:M:.u.-</a> genres de signes</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:M:.u.-.html"> M:M:.u.- </a>
+            <span class="translation"
+                data-fr="genres de signes"
+                data-en="kinds of signs">
+                genres de signes
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:S:.u.-.html"> M:S:.u.- </a>
+            <span class="translation"
+                data-fr="signe tourné vers le signe"
+                data-en="sign oriented sign">
+                signe tourné vers le signe
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:B:.u.-.html"> M:B:.u.- </a>
+            <span class="translation"
+                data-fr="signe tourné vers l'être"
+                data-en="being oriented sign">
+                signe tourné vers l'être
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/M:T:.u.-.html"> M:T:.u.- </a>
+            <span class="translation"
+                data-fr="signe tourné vers la chose"
+                data-en="thing oriented sign">
+                signe tourné vers la chose
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/S:M:.u.-.html"> S:M:.u.- </a>
+            <span class="translation"
+                data-fr="signifie le signe"
+                data-en="signifying sign">
+                signifie le signe
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/s.u.-.html"> s.u.- </a>
+            <span class="translation"
+                data-fr="image, signe analogique, représentation"
+                data-en="image, analog sign, representation">
+                image, signe analogique, représentation
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/b.u.-.html"> b.u.- </a>
+            <span class="translation"
+                data-fr="parole | signe linguistique"
+                data-en="speech | linguistic sign">
+                parole | signe linguistique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/t.u.-.html"> t.u.- </a>
+            <span class="translation"
+                data-fr="marque | signe durable"
+                data-en="mark | enduring sign">
+                marque | signe durable
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/B:M:.u.-.html"> B:M:.u.- </a>
+            <span class="translation"
+                data-fr="signifie l'être"
+                data-en="signifying being">
+                signifie l'être
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/k.u.-.html"> k.u.- </a>
+            <span class="translation"
+                data-fr="symbole | signe conventionnel"
+                data-en="symbol | conventional sign">
+                symbole | signe conventionnel
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/m.u.-.html"> m.u.- </a>
+            <span class="translation"
+                data-fr="symptôme | signe d'affect"
+                data-en="symptom | sign of affect">
+                symptôme | signe d'affect
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/n.u.-.html"> n.u.- </a>
+            <span class="translation"
+                data-fr="nom | place symbolique"
+                data-en="name | symbolic place">
+                nom | place symbolique
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/T:M:.u.-.html"> T:M:.u.- </a>
+            <span class="translation"
+                data-fr="signifie la chose"
+                data-en="signifying thing">
+                signifie la chose
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/d.u.-.html"> d.u.- </a>
+            <span class="translation"
+                data-fr="pointeur | signe indiciel"
+                data-en="pointer | indexation sign">
+                pointeur | signe indiciel
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/f.u.-.html"> f.u.- </a>
+            <span class="translation"
+                data-fr="sensation | signe phénomenal"
+                data-en="sensation | phenomenal sign">
+                sensation | signe phénomenal
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #d9eaff;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/l.u.-.html"> l.u.- </a>
+            <span class="translation"
+                data-fr="trace | signe matériel"
+                data-en="trace | material sign">
+                trace | signe matériel
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/popper.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="/static/css/table.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!--<base href="/./.">-->
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            a.
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> FR </dt>
+                        <dd>s'engager</dd>
+                        
+                        <dt> EN </dt>
+                        <dd>be commited</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>1</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Cell</dd>
+                                    <dt>Class</dt>
+                                    <dd>Verb</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>6</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="/O:M:.+M:O:..html"> O:M:.+M:O:. </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="/O:M:.+M:O:..html"> O:M:.+M:O:. </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>0</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(1,)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-opposed">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#opposed"
+                    aria-expanded="false"
+                    aria-controls="opposed">
+                opposed
+            </button>
+        </h5>
+    </div>
+
+    <div id="opposed"
+         class="collapse"
+         aria-labelledby="heading-opposed"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/c..html">c.</a></td>
+                        <td>individu</td>
+                        <td>individual</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/O:B:..html">O:B:.</a></td>
+                        <td>actions personnelles</td>
+                        <td>personal actions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/A:M:..html">A:M:.</a></td>
+                        <td>actions actuelles</td>
+                        <td>actions virtuelles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:..html">O:M:.</a></td>
+                        <td>actions</td>
+                        <td>actions</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:.+M:O:..html">O:M:.+M:O:.</a></td>
+                        <td>actions et agents | hexades verticale et horizontale</td>
+                        <td>actions and agents | vertical and horizontal hexads</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/B:.html">B:</a></td>
+                        <td>être</td>
+                        <td>being</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-substance"
+                    aria-expanded="false"
+                    aria-controls="father-substance">
+                father-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-substance"
+         class="collapse"
+         aria-labelledby="heading-father-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/A:.html">A:</a></td>
+                        <td>actuel</td>
+                        <td>actual</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-attribute"
+                    aria-expanded="false"
+                    aria-controls="child-attribute">
+                child-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-attribute"
+         class="collapse"
+         aria-labelledby="heading-child-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/U:O:.a.-.html">U:O:.a.-</a></td>
+                        <td>trouver sa place et cultiver son caractère</td>
+                        <td>find one's place and cultivate one's character</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/A:O:.a.-.html">A:O:.a.-</a></td>
+                        <td>discerner les caractères et renouveler ses engagements</td>
+                        <td>discern the characters and renew one's commitments</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:U:.a.-.html">O:U:.a.-</a></td>
+                        <td>trouver sa place et discerner les charactères</td>
+                        <td>find one's place and discern the characters</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:A:.a.-.html">O:A:.a.-</a></td>
+                        <td>cultiver son caractère et renouveler ses engagements</td>
+                        <td>cultivate one's character and renew one's commitments</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:S:.a.-.html">O:S:.a.-</a></td>
+                        <td>performer dans la relation sociale selon le signe</td>
+                        <td>perform into social relation according to sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:B:.a.-.html">O:B:.a.-</a></td>
+                        <td>performer dans la relation sociale selon l'être</td>
+                        <td>perform into social relation according to being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:T:.a.-.html">O:T:.a.-</a></td>
+                        <td>performer dans la relation sociale selon la chose</td>
+                        <td>perform into social relation according to thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:O:.a.-.html">S:O:.a.-</a></td>
+                        <td>conditions communicationnelles de l'intégration</td>
+                        <td>conditions of the integration in communication</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:O:.a.-.html">B:O:.a.-</a></td>
+                        <td>conditions affectives de l'intégration</td>
+                        <td>affective conditions of the integration</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/T:O:.a.-.html">T:O:.a.-</a></td>
+                        <td>conditions concrètes de l'intégration</td>
+                        <td>concrete conditions of the integration</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/U:M:.a.-.html">U:M:.a.-</a></td>
+                        <td>performer virtuellement dans la relation sociale</td>
+                        <td>perform virtually into social relation</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/A:M:.a.-.html">A:M:.a.-</a></td>
+                        <td>performer actuellement dans la relation sociale</td>
+                        <td>perform actually into social relation</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/S:M:.a.-.html">S:M:.a.-</a></td>
+                        <td>socialise par le signe</td>
+                        <td>socialize with sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/B:M:.a.-.html">B:M:.a.-</a></td>
+                        <td>socialise par l'être</td>
+                        <td>socialize with being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/T:M:.a.-.html">T:M:.a.-</a></td>
+                        <td>socialise par la chose</td>
+                        <td>socialize with thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:U:.a.-.html">M:U:.a.-</a></td>
+                        <td>conditions virtuelles de l'intégration</td>
+                        <td>virtual conditions of the integration</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:A:.a.-.html">M:A:.a.-</a></td>
+                        <td>conditions actuelles de l'intégration</td>
+                        <td>actual conditions of the integration</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:S:.a.-.html">M:S:.a.-</a></td>
+                        <td>rôle tourné vers le signe</td>
+                        <td>role facing sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:B:.a.-.html">M:B:.a.-</a></td>
+                        <td>rôle tourné vers l'être</td>
+                        <td>role facing being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:T:.a.-.html">M:T:.a.-</a></td>
+                        <td>rôle tourné vers la chose</td>
+                        <td>role facing thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:O:.a.-.html">O:O:.a.-</a></td>
+                        <td>travailler l'engagement</td>
+                        <td>work on commitment</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:.a.-.html">O:M:.a.-</a></td>
+                        <td>s'engager en attribut</td>
+                        <td>commit in attribute</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:O:.a.-.html">M:O:.a.-</a></td>
+                        <td>conditions de l'intégration</td>
+                        <td>conditions of integration</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.a.-.html">M:M:.a.-</a></td>
+                        <td>genres de rôles sociaux</td>
+                        <td>kinds of social roles</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-F:.a.-t.-'.html">E:.-F:.a.-t.-'</a></td>
+                        <td>mode promissif</td>
+                        <td>promisive mood</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.-a.-'.html">M:M:.-a.-'</a></td>
+                        <td>phénomènes collectifs</td>
+                        <td>collective phenomena</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:M:.-a.-s.y.-'.html">M:M:.-a.-s.y.-'</a></td>
+                        <td>études de la société</td>
+                        <td>society studies</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/b.-S:.U:.-'a.-'O:.-',.html">b.-S:.U:.-'a.-'O:.-',</a></td>
+                        <td>déformation</td>
+                        <td>deformation</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/M:O:.-'a.-'n.o.-s.o.-',.html">M:O:.-'a.-'n.o.-s.o.-',</a></td>
+                        <td>contenu relationnel</td>
+                        <td>relational content</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-child-substance">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#child-substance"
+                    aria-expanded="false"
+                    aria-controls="child-substance">
+                child-substance
+            </button>
+        </h5>
+    </div>
+
+    <div id="child-substance"
+         class="collapse"
+         aria-labelledby="heading-child-substance"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/a.U:O:.-.html">a.U:O:.-</a></td>
+                        <td>créer de la richesse</td>
+                        <td>create some wealth</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.A:O:.-.html">a.A:O:.-</a></td>
+                        <td>créer la société</td>
+                        <td>create the society</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:U:.-.html">a.O:U:.-</a></td>
+                        <td>créer virtuellement</td>
+                        <td>create virtually</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:A:.-.html">a.O:A:.-</a></td>
+                        <td>créer actuellement</td>
+                        <td>create actually</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:S:.-.html">a.O:S:.-</a></td>
+                        <td>performer sur une base sociale selon le signe</td>
+                        <td>perform on a social basis according to sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:B:.-.html">a.O:B:.-</a></td>
+                        <td>performer sur une base sociale selon l'être</td>
+                        <td>perform on a social basis according to being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:T:.-.html">a.O:T:.-</a></td>
+                        <td>performer sur une base sociale selon la chose</td>
+                        <td>perform on a social basis according to thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.S:O:.-.html">a.S:O:.-</a></td>
+                        <td>s'engager dans une oeuvre selon le sign</td>
+                        <td>commit to a work according to sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.B:O:.-.html">a.B:O:.-</a></td>
+                        <td>s'engager dans une oeuvre selon l'être</td>
+                        <td>commit to a work according to being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.T:O:.-.html">a.T:O:.-</a></td>
+                        <td>s'engager dans une oeuvre selon la chose</td>
+                        <td>commit to a work according to thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.U:M:.-.html">a.U:M:.-</a></td>
+                        <td>performer virtuellement sur une base sociale</td>
+                        <td>perform virtually on a social basis</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.A:M:.-.html">a.A:M:.-</a></td>
+                        <td>performer actuellement sur une base sociale</td>
+                        <td>perform actually on a social basis</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.S:M:.-.html">a.S:M:.-</a></td>
+                        <td>détruire le signe des relations sociales</td>
+                        <td>destroy the sign of social relations</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.B:M:.-.html">a.B:M:.-</a></td>
+                        <td>détruire l'être des relations sociales</td>
+                        <td>destroy the being of social relations</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.T:M:.-.html">a.T:M:.-</a></td>
+                        <td>détruire la chose des relations sociales</td>
+                        <td>destroy the thing of social relations</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:U:.-.html">a.M:U:.-</a></td>
+                        <td>s'engager dans une oeuvre virtuellement</td>
+                        <td>commit to a work virtually</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:A:.-.html">a.M:A:.-</a></td>
+                        <td>s'engager dans une oeuvre actuellement</td>
+                        <td>commit to a work actually</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:S:.-.html">a.M:S:.-</a></td>
+                        <td>montrer le signe des relations détruites</td>
+                        <td>show the sign of destroyed relationships</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:B:.-.html">a.M:B:.-</a></td>
+                        <td>montrer l'être des relations détruites</td>
+                        <td>show the being of destroyed relationships</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:T:.-.html">a.M:T:.-</a></td>
+                        <td>montrer la chose des relations détruites</td>
+                        <td>show the thing of destroyed relationship</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:O:.-.html">a.O:O:.-</a></td>
+                        <td>créer | initier</td>
+                        <td>create | initiate</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.F:.-.html">a.F:.-</a></td>
+                        <td>accomplir une fonction métabolique</td>
+                        <td>perform metabolic function</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.O:M:.-.html">a.O:M:.-</a></td>
+                        <td>s'engager en substance</td>
+                        <td>commit in substance</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:O:.-.html">a.M:O:.-</a></td>
+                        <td>s'engager dans une oeuvre</td>
+                        <td>commit to a work</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.M:M:.-.html">a.M:M:.-</a></td>
+                        <td>détruire les relations sociales</td>
+                        <td>destroy social relations</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/a.-O:M:.-'s.o.-k.o.-',.html">a.-O:M:.-'s.o.-k.o.-',</a></td>
+                        <td>valoriser le lien social</td>
+                        <td>valorize the social bond</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:.-a.-'s.o.-k.o.-',.html">O:M:.-a.-'s.o.-k.o.-',</a></td>
+                        <td>renforcer le lien social</td>
+                        <td>strengthen social bond</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/popper.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

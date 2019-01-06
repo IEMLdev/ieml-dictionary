@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="/static/css/table.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<!--<base href="/./.">-->
+	<meta charset="UTF-8">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/./index.html">Dictionary</a>
+            <button class="btn btn-outline-light ml-auto"
+                  data-toggle="modal"
+                  data-target="#modal-stats">
+              &#9432;
+            </button>
+        </div>
+    </nav>
+
+	
+    <div class="container-fluid">
+        <h2 class="text-center m-4">
+            E:.-O:.O:M:.-t.-'
+        </h2>
+
+        <div class="row" id="translations">
+            <div class="col-sm-4">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        
+                        <dt> FR </dt>
+                        <dd>diathèse | voix grammaticale</dd>
+                        
+                        <dt> EN </dt>
+                        <dd>diathesis | grammatical voice</dd>
+                        
+                    </dl>
+                </div>
+            </div>
+        </div>
+            <div class="col-sm-8">
+                <div class="card" id="properties">
+                    <div class="card-header">Properties</div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Layer</dt>
+                                    <dd>3</dd>
+
+                                    <dt>Size</dt>
+                                    <dd>12</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>Table2D</dd>
+                                    <dt>Class</dt>
+                                    <dd>Auxiliary</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Rank</dt>
+                                    <dd>2</dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
+
+                                    <dt>Parent</dt>
+                                    <dd>
+                                        
+                                        <a href="/E:.-F:.O:M:.-t.-'.html"> E:.-F:.O:M:.-t.-' </a>
+                                        
+                                    </dd>
+                                    <dt>Root paradigm</dt>
+                                    <dd>
+                                        <a href="/E:.-F:.O:M:.-t.-'.html"> E:.-F:.O:M:.-t.-' </a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <dl>
+                                    <dt>Ndim of table</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Shape of table</dt>
+                                    <dd>(2, 6)</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav nav-tabs mt-2" role="tablist">
+            <a class="nav-item nav-link active"
+               id="nav-relations-tab"
+               data-toggle="tab"
+               href="#relations"
+               role="tab"
+               aria-controls="relations"
+               aria-selected="true">Relations</a>
+            
+    <a class="nav-item nav-link"
+       id="nav-tables-1-tab"
+       data-toggle="tab"
+       href="#tables-1"
+       role="tab"
+       aria-controls="tables"
+       aria-selected="false">Table E:.-O:.O:M:.-t.-'</a>
+    
+
+            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
+                <option value="fr" selected >Fr</option>
+                <option value="en">En</option>
+            </select>
+        </div>
+
+        <div class="tab-content" id="tab-content">
+            <div class="tab-pane fade show active"
+               id="relations"
+               role="tabpanel"
+               aria-labelledby="nav-relations-tab">
+
+                <!--<div class="card">-->
+                    <!--<div class="card-header">Relations</div>-->
+                    <!--<div class="card-body" id="accordion-relations">-->
+                <!--<div class="card">-->
+                   <!--<div class="card-body">-->
+
+                <div class="row m-1">
+                    <div class="col-sm-6">
+                    
+
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contained">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contained"
+                    aria-expanded="false"
+                    aria-controls="contained">
+                contained
+            </button>
+        </h5>
+    </div>
+
+    <div id="contained"
+         class="collapse"
+         aria-labelledby="heading-contained"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/E:.-F:.O:M:.-t.-'.html">E:.-F:.O:M:.-t.-'</a></td>
+                        <td>conjugaisons et modes verbaux, temps</td>
+                        <td>conjugations and verbal modes, tense, time</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-contains">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#contains"
+                    aria-expanded="false"
+                    aria-controls="contains">
+                contains
+            </button>
+        </h5>
+    </div>
+
+    <div id="contains"
+         class="collapse"
+         aria-labelledby="heading-contains"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.O:S:.-t.-'.html">E:.-U:.O:S:.-t.-'</a></td>
+                        <td>voix passive selon le signe</td>
+                        <td>passive voice according to sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.O:B:.-t.-'.html">E:.-U:.O:B:.-t.-'</a></td>
+                        <td>voix passive selon l'être</td>
+                        <td>passive voice according to being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.O:T:.-t.-'.html">E:.-U:.O:T:.-t.-'</a></td>
+                        <td>voix passive selon la chose</td>
+                        <td>passive voice according to thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.O:S:.-t.-'.html">E:.-A:.O:S:.-t.-'</a></td>
+                        <td>voix active selon le signe</td>
+                        <td>active voice according to sign</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.O:B:.-t.-'.html">E:.-A:.O:B:.-t.-'</a></td>
+                        <td>voix active selon l'être</td>
+                        <td>active voice according to being</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.O:T:.-t.-'.html">E:.-A:.O:T:.-t.-'</a></td>
+                        <td>voix active selon la chose</td>
+                        <td>active voice according to thing</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.U:M:.-t.-'.html">E:.-U:.U:M:.-t.-'</a></td>
+                        <td>voix passive virtuelle</td>
+                        <td>virtual passive voice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.A:M:.-t.-'.html">E:.-U:.A:M:.-t.-'</a></td>
+                        <td>voix passive actuelle</td>
+                        <td>actual passive voice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.U:M:.-t.-'.html">E:.-A:.U:M:.-t.-'</a></td>
+                        <td>voix active virtuelle</td>
+                        <td>virtual active voice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.A:M:.-t.-'.html">E:.-A:.A:M:.-t.-'</a></td>
+                        <td>voix active actuelle</td>
+                        <td>actual active voice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-U:.O:M:.-t.-'.html">E:.-U:.O:M:.-t.-'</a></td>
+                        <td>voix passive</td>
+                        <td>passive voice</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/E:.-A:.O:M:.-t.-'.html">E:.-A:.O:M:.-t.-'</a></td>
+                        <td>voix active</td>
+                        <td>active voice</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    </div>
+                    <div class="col-sm-6">
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-attribute">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-attribute"
+                    aria-expanded="false"
+                    aria-controls="father-attribute">
+                father-attribute
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-attribute"
+         class="collapse"
+         aria-labelledby="heading-father-attribute"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/U:.html">U:</a></td>
+                        <td>virtuel</td>
+                        <td>virtual</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/A:.html">A:</a></td>
+                        <td>actuel</td>
+                        <td>actual</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a href="/O:M:..html">O:M:.</a></td>
+                        <td>actions</td>
+                        <td>actions</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                        <div class="card m-1">
+    <div class="card-header" id="heading-father-mode">
+        <h5 class="mb-0">
+            <button class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#father-mode"
+                    aria-expanded="false"
+                    aria-controls="father-mode">
+                father-mode
+            </button>
+        </h5>
+    </div>
+
+    <div id="father-mode"
+         class="collapse"
+         aria-labelledby="heading-father-mode"
+         data-parent="#relations">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                
+                    <tr>
+                        <td><a href="/t..html">t.</a></td>
+                        <td>mémoires</td>
+                        <td>memory</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    </div>
+                </div>
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+            
+    <div class="tab-pane fade table m-1"
+       role="tabpanel"
+       id="tables-1"
+       aria-labelledby="nav-tables-1-tab">
+
+        <!--<div class="card">-->
+            <!--<div class="card-header">Table <a href="/E:.-O:.O:M:.-t.-'.html">E:.-O:.O:M:.-t.-'</a> diathèse | voix grammaticale</div>-->
+            <!--<div class="card-body">-->
+                <table class="table table-bordered table-fixed">
+        <tr>
+            
+    <th class="cell" colspan="7" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.O:M:.-t.-'.html"> E:.-O:.O:M:.-t.-' </a>
+            <span class="translation"
+                data-fr="diathèse | voix grammaticale"
+                data-en="diathesis | grammatical voice">
+                diathèse | voix grammaticale
+            </span>
+        </div>
+    
+    </th>
+    
+        </tr>
+        <tr>
+            <th style="background-color: lightgrey;"></th>
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.y.-t.-'.html"> E:.-O:.y.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.o.-t.-'.html"> E:.-O:.o.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.e.-t.-'.html"> E:.-O:.e.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.u.-t.-'.html"> E:.-O:.u.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.a.-t.-'.html"> E:.-O:.a.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+                
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-O:.i.-t.-'.html"> E:.-O:.i.-t.-' </a>
+            <span class="translation"
+                data-fr=""
+                data-en="">
+                
+            </span>
+        </div>
+    
+    </th>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.O:M:.-t.-'.html"> E:.-U:.O:M:.-t.-' </a>
+            <span class="translation"
+                data-fr="voix passive"
+                data-en="passive voice">
+                voix passive
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.y.-t.-'.html"> E:.-U:.y.-t.-' </a>
+            <span class="translation"
+                data-fr="connu"
+                data-en="known">
+                connu
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.o.-t.-'.html"> E:.-U:.o.-t.-' </a>
+            <span class="translation"
+                data-fr="voulu"
+                data-en="wanted">
+                voulu
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.e.-t.-'.html"> E:.-U:.e.-t.-' </a>
+            <span class="translation"
+                data-fr="capable | habilité"
+                data-en="able | enabled">
+                capable | habilité
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.u.-t.-'.html"> E:.-U:.u.-t.-' </a>
+            <span class="translation"
+                data-fr="exprimé"
+                data-en="expressed">
+                exprimé
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.a.-t.-'.html"> E:.-U:.a.-t.-' </a>
+            <span class="translation"
+                data-fr="engagé"
+                data-en="committed">
+                engagé
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-U:.i.-t.-'.html"> E:.-U:.i.-t.-' </a>
+            <span class="translation"
+                data-fr="devant être fait"
+                data-en="must be done">
+                devant être fait
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+        <tr>
+            
+    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.O:M:.-t.-'.html"> E:.-A:.O:M:.-t.-' </a>
+            <span class="translation"
+                data-fr="voix active"
+                data-en="active voice">
+                voix active
+            </span>
+        </div>
+    
+    </th>
+    
+
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.y.-t.-'.html"> E:.-A:.y.-t.-' </a>
+            <span class="translation"
+                data-fr="connaissant"
+                data-en="knowing">
+                connaissant
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.o.-t.-'.html"> E:.-A:.o.-t.-' </a>
+            <span class="translation"
+                data-fr="voulant"
+                data-en="willing">
+                voulant
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.e.-t.-'.html"> E:.-A:.e.-t.-' </a>
+            <span class="translation"
+                data-fr="capacitant | habilitant"
+                data-en="abling | enabling">
+                capacitant | habilitant
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.u.-t.-'.html"> E:.-A:.u.-t.-' </a>
+            <span class="translation"
+                data-fr="exprimant"
+                data-en="expressing">
+                exprimant
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.a.-t.-'.html"> E:.-A:.a.-t.-' </a>
+            <span class="translation"
+                data-fr="engageant"
+                data-en="committing">
+                engageant
+            </span>
+        </div>
+    
+    </td>
+    
+            
+                
+    <td class="cell" style="background-color: #fff1bc;">
+    
+        <div class="ieml-cell">
+            <a class="ieml" href="/E:.-A:.i.-t.-'.html"> E:.-A:.i.-t.-' </a>
+            <span class="translation"
+                data-fr="devant faire"
+                data-en="must do">
+                devant faire
+            </span>
+        </div>
+    
+    </td>
+    
+            
+        </tr>
+        
+    </table>
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    
+        </div>
+    </div>
+
+<script>
+    	document.addEventListener("DOMContentLoaded", function(event) {
+			var select_language = document.getElementById('selectLanguage');
+
+			function do_select_language() {
+				var lang = select_language.value
+
+				var list = document.getElementsByClassName("translation");
+
+				for (var node of list) {
+					var text = node.getAttribute('data-' + lang)
+                    node.textContent = text
+				}
+			}
+
+            do_select_language()
+
+			select_language.addEventListener('change', do_select_language)
+		});
+
+</script>
+
+
+    <div class="modal fade"
+         id="modal-stats"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="infoTitle"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoTitle">Dictionary informations</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <dl class="list-inline navbar-nav">
+                        <dt>Number of root paradigms</dt>
+                        <dd>85</dd>
+                        <dt>Number of semes</dt>
+                        <dd>2707</dd>
+                        <dt>Number of paradigms</dt>
+                        <dd>2224</dd>
+                        <dt>Number of relations</dt>
+                        <dd>1175503</dd>
+                    </dl>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="/static/js/popper.min.js"></script>
+	<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>
