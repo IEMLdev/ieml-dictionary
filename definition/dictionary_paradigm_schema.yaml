@@ -7,9 +7,17 @@ schema;translations_sch:
         en:
             required: True
             type: str
-        comment:
+
+schema;comments_sch:
+    type: map
+    mapping:
+        fr:
             required: False
             type: str
+        en:
+            required: False
+            type: str
+
 
 type: map
 mapping:
@@ -29,6 +37,9 @@ mapping:
                 sequence:
                     - type: str
                       enum: ['father_substance', 'father_attribute', 'father_mode', 'twin', 'opposed', 'associated', 'crossed']
+            comments:
+                required: False
+                include: comments_sch
 
     Semes:
         type: seq
@@ -40,7 +51,11 @@ mapping:
                       type: str
                   translations:
                       required: True
-                      include: translations_sch     
+                      include: translations_sch
+                  comments:
+                      required: False
+                      include: comments_sch
+
     Paradigms:
         type: seq
         sequence:
@@ -52,3 +67,6 @@ mapping:
                   translations:
                       required: True
                       include: translations_sch
+                  comments:
+                      required: False
+                      include: comments_sch
