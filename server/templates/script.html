@@ -148,29 +148,28 @@
 {%- endmacro %}
 
 {% block content %}
-    <div class="container-fluid">
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             {{script.ieml}}
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        {% for lang in script.translations %}
-                        <dt> {{lang|upper}} </dt>
-                        <dd>{{script.translations[lang]}}</dd>
-                        {% endfor %}
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            {% for lang in script.translations %}
+                            <dt> {{lang|upper}} </dt>
+                            <dd>{{script.translations[lang]}}</dd>
+                            {% endfor %}
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -198,7 +197,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -217,7 +216,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>{{script.tables.dim}}</dd>
@@ -235,12 +234,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             {{_table_menu_tabs(script, 1)}}
 
             <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
@@ -251,6 +259,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            {{script.comments.fr}}
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            {{script.comments.en}}
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -263,21 +290,23 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    {% for rel, relations in script.relations['sibling'].items() %}
-                        {{_relation_accordion(rel, relations)}}
-                    {% endfor %}
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        {% for rel, relations in script.relations['sibling'].items() %}
+                            {{_relation_accordion(rel, relations)}}
+                        {% endfor %}
 
-                    {% for rel, relations in script.relations['inclusion'].items() %}
-                        {{_relation_accordion(rel, relations)}}
-                    {% endfor %}
+                        {% for rel, relations in script.relations['inclusion'].items() %}
+                            {{_relation_accordion(rel, relations)}}
+                        {% endfor %}
                     </div>
                     <div class="col-sm-6">
-                    {% for rel, relations in script.relations['father'].items() %}
-                        {{_relation_accordion('father-' + rel, relations)}}
-                    {% endfor %}
-                    {% for rel, relations in script.relations['child'].items() %}
-                        {{_relation_accordion('child-' + rel, relations)}}
-                    {% endfor %}
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        {% for rel, relations in script.relations['father'].items() %}
+                            {{_relation_accordion('father-' + rel, relations)}}
+                        {% endfor %}
+                        {% for rel, relations in script.relations['child'].items() %}
+                            {{_relation_accordion('child-' + rel, relations)}}
+                        {% endfor %}
                     </div>
                 </div>
                     <!--</div>-->
@@ -286,7 +315,7 @@
 
             {{_table_tabs(script, 1)}}
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -300,6 +329,16 @@
 				for (var node of list) {
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
+				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
 				}
 			}
 

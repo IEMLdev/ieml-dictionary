@@ -1,7 +1,6 @@
 {% extends "main.html" %}
 
-
-{% block content %}
+{% block header_fixed %}
 <div class="container-fluid">
     <form id="search_form" class="form m-2">
         <div class="form-row">
@@ -46,8 +45,12 @@
             </div>
         </div>
     </form>
+</div>
+{% endblock %}
 
-    <table class="table">
+{% block content %}
+<!--<div class="container-fluid">-->
+    <table class="table table-striped">
         <tbody id="search_results">
             {% for s in scripts%}
             <tr data-ieml="{{s.ieml}}"
@@ -64,7 +67,7 @@
             {% endfor %}
         </tbody>
     </table>
-</div>
+<!--</div>-->
 	<script>
 		document.addEventListener("DOMContentLoaded", function(event) {
 			var input = document.getElementById('search_dictionary');

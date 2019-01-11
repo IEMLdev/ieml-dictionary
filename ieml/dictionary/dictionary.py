@@ -1,5 +1,5 @@
 import hashlib
-from typing import List
+from typing import List, Dict
 
 import dill
 
@@ -16,8 +16,13 @@ import yaml
 
 from ieml.dictionary.table.table_structure import TableStructure
 
-Translations = namedtuple('Translations', list(LANGUAGES))
+
+Translations = namedtuple('Translations', sorted(LANGUAGES))
 Translations.__getitem__ = lambda self, item: self.__getattribute__(item) if item in LANGUAGES \
+    else tuple.__getitem__(self, item)
+
+Comments = namedtuple('Comments', sorted(LANGUAGES))
+Comments.__getitem__ = lambda self, item: self.__getattribute__(item) if item in LANGUAGES \
     else tuple.__getitem__(self, item)
 
 
@@ -112,10 +117,14 @@ class Dictionary:
 
         scripts = []
         translations = {'fr': {}, 'en': {}}
+        comments = {'fr': {}, 'en': {}}
 
-        def _add_translations(ieml, c):
+        def _add_metadatas(ieml, c):
             translations['fr'][ieml] = c['translations']['fr'].strip()
             translations['en'][ieml] = c['translations']['en'].strip()
+            if 'comments' in c:
+                if 'fr' in c['comments']: comments['fr'][ieml] = c['comments']['fr'].strip()
+                if 'en' in c['comments']: comments['en'][ieml] = c['comments']['en'].strip()
 
         roots = []
         inhibitions = {}
@@ -132,20 +141,20 @@ class Dictionary:
 
                 roots.append(root)
 
-                _add_translations(root, d['RootParadigm'])
+                _add_metadatas(root, d['RootParadigm'])
                 scripts.append(root)
 
                 if 'Semes' in d and d['Semes']:
                     for c in d['Semes']:
                         n_ss += 1
                         scripts.append(c['ieml'])
-                        _add_translations(c['ieml'], c)
+                        _add_metadatas(c['ieml'], c)
 
                 if 'Paradigms' in d and d['Paradigms']:
                     for c in d['Paradigms']:
                         n_p += 1
                         scripts.append(c['ieml'])
-                        _add_translations(c['ieml'], c)
+                        _add_metadatas(c['ieml'], c)
 
             except (KeyError, TypeError):
                 raise ValueError("'{}' is not a valid dictionary yaml file".format(f))
@@ -153,7 +162,11 @@ class Dictionary:
         print("Dictionary.load: Read {} root paradigms, {} paradigms and {} semes".format(len(roots), n_p, n_ss), file=sys.stderr)
 
         print("Dictionary.load: Computing table structure and relations ...", file=sys.stderr)
-        dictionary = cls(scripts=scripts, translations=translations, root_paradigms=roots, inhibitions=inhibitions)
+        dictionary = cls(scripts=scripts,
+                         translations=translations,
+                         root_paradigms=roots,
+                         inhibitions=inhibitions,
+                         comments=comments)
         print("Dictionary.load: Computing table structure and relations", file=sys.stderr)
 
         if use_cache:
@@ -162,7 +175,13 @@ class Dictionary:
 
         return dictionary
 
-    def __init__(self, scripts, root_paradigms, translations, inhibitions):
+    def __init__(self,
+                 scripts: List[str],
+                 root_paradigms: List[str],
+                 translations: Dict[str, Dict[str, str]],
+                 inhibitions: Dict[str, List[str]],
+                 comments: Dict[str, Dict[str, str]]):
+        
         self.scripts = np.array(sorted(script(s) for s in scripts))
         self.index = {e: i for i, e in enumerate(self.scripts)}
 
@@ -172,6 +191,10 @@ class Dictionary:
 
         # scripts to translations
         self.translations = {s: Translations(fr=translations['fr'][s], en=translations['en'][s]) for s in self.scripts}
+
+        # scripts to translations
+        self.comments = {s: Comments(fr=comments['fr'][s] if s in comments['fr'] else '',
+                                     en=comments['en'][s] if s in comments['en'] else '') for s in self.scripts}
 
         # map of root paradigm script -> inhibitions list values
         self._inhibitions = inhibitions
@@ -197,7 +220,5 @@ class Dictionary:
 if __name__ == '__main__':
     d = Dictionary.load()
 
-    # rel = d.relations.pandas()
-    # print(set(rel[rel['mode'] == 'father_attribute']['attribute']))
     for s in d.scripts:
         print("en", d.translations[s]['en'])

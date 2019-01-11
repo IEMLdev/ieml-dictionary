@@ -7,6 +7,7 @@ from ieml.dictionary.table.table import TableSet, Table1D, Table2D, Cell
 import os
 from tqdm import tqdm
 import sys
+import markdown
 
 RELATIONS_CATEGORIES = {
     'inclusion': ['contains', 'contained'],
@@ -17,6 +18,7 @@ RELATIONS_CATEGORIES = {
 SAM = ["substance", "attribute", "mode"]
 I_TO_CLASS_DISPLAY = ['Auxiliary', 'Verb', 'Noun']
 CLASS_TO_COLOR = ['#fff1bc', '#ffe5d7', '#d9eaff']
+CLASS_TO_COLOR_HEADER = ['#fff38e', '#ffd8c0', '#94ceff']
 
 
 @lru_cache(maxsize=10000)
@@ -32,7 +34,7 @@ def get_table(dictionary, r):
         return {
             'ieml': str(s),
             'translations': translations,
-            'color': CLASS_TO_COLOR[s.script_class]
+            'color': CLASS_TO_COLOR[s.script_class] if len(s) == 1 else CLASS_TO_COLOR_HEADER[s.script_class]
         }
 
     if isinstance(t, Cell):
@@ -69,13 +71,14 @@ def get_table(dictionary, r):
     # relations['inclusion']['table_2_4'] = [_cell(tt) for tt in t.root.relations.contained if tt.rank in [2,4]]
 
     return {
-            'ieml': str(r),
+            # 'ieml': str(r),
             'type': t.__class__.__name__,
             'class': I_TO_CLASS_DISPLAY[r.script_class],
             'layer': r.layer,
             'size': len(r),
-            'translations': {l: dictionary.translations[r][l] for l in ['fr', 'en']},
-            'color': CLASS_TO_COLOR[r.script_class],
+            # 'translations': {l: dictionary.translations[r][l] for l in ['fr', 'en']},
+            'comments': {l: markdown.markdown(dictionary.comments[r][l]) for l in ['fr', 'en']},
+            # 'color': CLASS_TO_COLOR[r.script_class],
             'tables': {
                 'rank': t.rank,
                 'parent': str(t.parent.script) if t.parent else 'Root',
@@ -88,6 +91,7 @@ def get_table(dictionary, r):
                 'header': _cell(r)
             },
             'relations': relations,
+            **_cell(r)
     }
 
 
@@ -96,6 +100,7 @@ I_TO_CLASS = ['aux', 'verb', 'noun']
 
 def _script_to_filename(s):
     return "{}.html".format(re.sub(r'[,:;]', '_', str(s)))
+
 
 def generate_script_site(dictionary, output_folder, base_url):
     from shutil import copytree, rmtree
@@ -135,6 +140,7 @@ def generate_script_site(dictionary, output_folder, base_url):
 
         return e
 
+
     env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
     env.globals['url_for'] = url_for
 
@@ -147,7 +153,7 @@ def generate_script_site(dictionary, output_folder, base_url):
 
     template = env.get_template('script.html')
 
-    for script in tqdm(dictionary.scripts):
+    for script in tqdm(dictionary.scripts, "Generating site at {}".format(output_folder)):
         try:
             rendered = template.render(script=get_table(dictionary, script),
                                        all_scripts=all_scripts,

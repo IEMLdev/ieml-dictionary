@@ -1,15 +1,14 @@
 import sys
 
-from queue import Queue
-from multiprocessing import Process
+from multiprocessing import Process, Queue
 
-from logging import ERROR
+from logging import ERROR, NOTSET
 from pykwalify import core
 
 from ieml.dictionary import Dictionary
 from scripts.normalize_dictionary import normalize_dictionary_file
 
-core.log.level = ERROR
+core.log.level = NOTSET
 
 from pykwalify.core import Core
 from pykwalify.errors import SchemaError
@@ -105,3 +104,6 @@ if __name__ == '__main__':
 
     if not validate(args.dictionary_folder):
         sys.exit(1)
+    else:
+        print("No error found. Validation complete.", file=sys.stderr)
+        sys.exit(0)
