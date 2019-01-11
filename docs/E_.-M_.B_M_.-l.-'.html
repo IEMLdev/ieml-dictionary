@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.-M:.B:M:.-l.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>intermediary</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>intermédiaire</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>intermédiaire</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>intermediary</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +202,14 @@
                 
                     <tr>
                         <td><a href="E_.-S_.B_M_.-l.-'.html">E:.-S:.B:M:.-l.-'</a></td>
-                        <td>course</td>
                         <td>parcours</td>
+                        <td>course</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.B_M_.-l.-'.html">E:.-B:.B:M:.-l.-'</a></td>
-                        <td>proximity</td>
                         <td>proximité</td>
+                        <td>proximity</td>
                     </tr>
                 
                     <tr>
@@ -188,20 +220,20 @@
                 
                     <tr>
                         <td><a href="E_.-M_.k.-l.-'.html">E:.-M:.k.-l.-'</a></td>
-                        <td>dynamic intermediary</td>
                         <td>intermédiaire dynamique</td>
+                        <td>dynamic intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.m.-l.-'.html">E:.-M:.m.-l.-'</a></td>
-                        <td>relative intermediary</td>
                         <td>intermediaire relatif</td>
+                        <td>relative intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.n.-l.-'.html">E:.-M:.n.-l.-'</a></td>
-                        <td>absolute intermediary</td>
                         <td>intermédiaire absolu</td>
+                        <td>absolute intermediary</td>
                     </tr>
                 
                 </tbody>
@@ -209,8 +241,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -233,20 +265,20 @@
                 
                     <tr>
                         <td><a href="E_.-F_.B_M_.-l.-'.html">E:.-F:.B:M:.-l.-'</a></td>
-                        <td>inter-stance (spatial situation)</td>
                         <td>inter-stance (situation spatiale)</td>
+                        <td>inter-stance (spatial situation)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.M_M_.-l.-'.html">E:.-M:.M:M:.-l.-'</a></td>
-                        <td>situation: path</td>
                         <td>situation: cheminement</td>
+                        <td>situation: path</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.M_M_.-l.-'.html">E:.-F:.M:M:.-l.-'</a></td>
-                        <td>spatial situation, in the space | where</td>
                         <td>situation spatiale, dans l'espace | où</td>
+                        <td>spatial situation, in the space | where</td>
                     </tr>
                 
                 </tbody>
@@ -254,11 +286,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -281,26 +314,26 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_..html">B:M:.</a></td>
-                        <td>becoming of the being</td>
                         <td>devenir de l'être</td>
+                        <td>becoming of the being</td>
                     </tr>
                 
                 </tbody>
@@ -308,8 +341,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -332,8 +365,8 @@
                 
                     <tr>
                         <td><a href="l..html">l.</a></td>
+                        <td>espace</td>
                         <td>space</td>
-                        <td>espaces</td>
                     </tr>
                 
                 </tbody>
@@ -341,8 +374,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -356,19 +389,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.-M_.B_M_.-l.-'.html">E:.-M:.B:M:.-l.-'</a> intermediary</div>-->
+            <!--<div class="card-header">Table <a href="E_.-M_.B_M_.-l.-'.html">E:.-M:.B:M:.-l.-'</a> intermédiaire</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #fff1bc;">
+    <th class="cell" colspan="4" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-M_.B_M_.-l.-'.html"> E:.-M:.B:M:.-l.-' </a>
             <span class="translation"
-                data-fr="intermediary"
-                data-en="intermédiaire">
-                intermediary
+                data-fr="intermédiaire"
+                data-en="intermediary">
+                intermédiaire
             </span>
         </div>
     
@@ -379,14 +412,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-M_.k.-l.-'.html"> E:.-M:.k.-l.-' </a>
             <span class="translation"
-                data-fr="dynamic intermediary"
-                data-en="intermédiaire dynamique">
-                dynamic intermediary
+                data-fr="intermédiaire dynamique"
+                data-en="dynamic intermediary">
+                intermédiaire dynamique
             </span>
         </div>
     
@@ -394,14 +427,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-M_.m.-l.-'.html"> E:.-M:.m.-l.-' </a>
             <span class="translation"
-                data-fr="relative intermediary"
-                data-en="intermediaire relatif">
-                relative intermediary
+                data-fr="intermediaire relatif"
+                data-en="relative intermediary">
+                intermediaire relatif
             </span>
         </div>
     
@@ -409,14 +442,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-M_.n.-l.-'.html"> E:.-M:.n.-l.-' </a>
             <span class="translation"
-                data-fr="absolute intermediary"
-                data-en="intermédiaire absolu">
-                absolute intermediary
+                data-fr="intermédiaire absolu"
+                data-en="absolute intermediary">
+                intermédiaire absolu
             </span>
         </div>
     
@@ -427,14 +460,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.B_M_.-l.-'.html"> E:.-S:.B:M:.-l.-' </a>
             <span class="translation"
-                data-fr="course"
-                data-en="parcours">
-                course
+                data-fr="parcours"
+                data-en="course">
+                parcours
             </span>
         </div>
     
@@ -463,9 +496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.m.-l.-'.html"> E:.-S:.m.-l.-' </a>
             <span class="translation"
-                data-fr="route"
-                data-en="trajet">
-                route
+                data-fr="trajet"
+                data-en="route">
+                trajet
             </span>
         </div>
     
@@ -478,9 +511,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.n.-l.-'.html"> E:.-S:.n.-l.-' </a>
             <span class="translation"
-                data-fr="way, road, channel, tunnel (role)"
-                data-en="voie, route, canal, tunnel (rôle)">
-                way, road, channel, tunnel (role)
+                data-fr="voie, route, canal, tunnel (rôle)"
+                data-en="way, road, channel, tunnel (role)">
+                voie, route, canal, tunnel (rôle)
             </span>
         </div>
     
@@ -491,14 +524,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.B_M_.-l.-'.html"> E:.-B:.B:M:.-l.-' </a>
             <span class="translation"
-                data-fr="proximity"
-                data-en="proximité">
-                proximity
+                data-fr="proximité"
+                data-en="proximity">
+                proximité
             </span>
         </div>
     
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.k.-l.-'.html"> E:.-B:.k.-l.-' </a>
             <span class="translation"
-                data-fr="limiting, at the edge"
-                data-en="limitant, au bord">
-                limiting, at the edge
+                data-fr="limitant, au bord"
+                data-en="limiting, at the edge">
+                limitant, au bord
             </span>
         </div>
     
@@ -527,9 +560,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.m.-l.-'.html"> E:.-B:.m.-l.-' </a>
             <span class="translation"
-                data-fr="between"
-                data-en="entre">
-                between
+                data-fr="entre"
+                data-en="between">
+                entre
             </span>
         </div>
     
@@ -542,9 +575,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.n.-l.-'.html"> E:.-B:.n.-l.-' </a>
             <span class="translation"
-                data-fr="near | there"
-                data-en="là | près">
-                near | there
+                data-fr="là | près"
+                data-en="near | there">
+                là | près
             </span>
         </div>
     
@@ -555,7 +588,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.B_M_.-l.-'.html"> E:.-T:.B:M:.-l.-' </a>
@@ -576,9 +609,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.k.-l.-'.html"> E:.-T:.k.-l.-' </a>
             <span class="translation"
-                data-fr="by"
-                data-en="par">
-                by
+                data-fr="par"
+                data-en="by">
+                par
             </span>
         </div>
     
@@ -591,9 +624,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.m.-l.-'.html"> E:.-T:.m.-l.-' </a>
             <span class="translation"
-                data-fr="through"
-                data-en="à  travers">
-                through
+                data-fr="à  travers"
+                data-en="through">
+                à  travers
             </span>
         </div>
     
@@ -606,9 +639,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.n.-l.-'.html"> E:.-T:.n.-l.-' </a>
             <span class="translation"
-                data-fr="around"
-                data-en="autour">
-                around
+                data-fr="autour"
+                data-en="around">
+                autour
             </span>
         </div>
     
@@ -623,7 +656,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -638,6 +671,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -647,6 +690,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -683,5 +727,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

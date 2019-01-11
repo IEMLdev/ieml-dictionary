@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             t.o.-n.o.-M:O:.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>calendar time units</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>unités de temps du calendrier</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>unités de temps du calendrier</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>calendar time units</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,13 +175,15 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -173,8 +206,8 @@
                 
                     <tr>
                         <td><a href="t.o.-.html">t.o.-</a></td>
-                        <td>right moment | good timing, evolution, value of time</td>
                         <td>moment opportun | occasion, évolution, valeur du temps</td>
+                        <td>right moment | good timing, evolution, value of time</td>
                     </tr>
                 
                 </tbody>
@@ -182,8 +215,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="n.o.-.html">n.o.-</a></td>
-                        <td>will for cosmos</td>
                         <td>volonté de cosmos</td>
+                        <td>will for cosmos</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -248,8 +281,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -263,19 +296,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="t.o.-n.o.-M_O_.-'.html">t.o.-n.o.-M:O:.-'</a> calendar time units</div>-->
+            <!--<div class="card-header">Table <a href="t.o.-n.o.-M_O_.-'.html">t.o.-n.o.-M:O:.-'</a> unités de temps du calendrier</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-M_O_.-'.html"> t.o.-n.o.-M:O:.-' </a>
             <span class="translation"
-                data-fr="calendar time units"
-                data-en="unités de temps du calendrier">
-                calendar time units
+                data-fr="unités de temps du calendrier"
+                data-en="calendar time units">
+                unités de temps du calendrier
             </span>
         </div>
     
@@ -286,7 +319,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-M_U_.-'.html"> t.o.-n.o.-M:U:.-' </a>
@@ -301,7 +334,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-M_A_.-'.html"> t.o.-n.o.-M:A:.-' </a>
@@ -319,7 +352,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-S_O_.-'.html"> t.o.-n.o.-S:O:.-' </a>
@@ -340,9 +373,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-j.-'.html"> t.o.-n.o.-j.-' </a>
             <span class="translation"
-                data-fr="day"
-                data-en="journée">
-                day
+                data-fr="journée"
+                data-en="day">
+                journée
             </span>
         </div>
     
@@ -355,9 +388,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-g.-'.html"> t.o.-n.o.-g.-' </a>
             <span class="translation"
-                data-fr="week"
-                data-en="semaine">
-                week
+                data-fr="semaine"
+                data-en="week">
+                semaine
             </span>
         </div>
     
@@ -368,7 +401,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-B_O_.-'.html"> t.o.-n.o.-B:O:.-' </a>
@@ -389,9 +422,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-h.-'.html"> t.o.-n.o.-h.-' </a>
             <span class="translation"
-                data-fr="month"
-                data-en="mois">
-                month
+                data-fr="mois"
+                data-en="month">
+                mois
             </span>
         </div>
     
@@ -404,9 +437,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-c.-'.html"> t.o.-n.o.-c.-' </a>
             <span class="translation"
-                data-fr="year"
-                data-en="année">
-                year
+                data-fr="année"
+                data-en="year">
+                année
             </span>
         </div>
     
@@ -417,7 +450,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-T_O_.-'.html"> t.o.-n.o.-T:O:.-' </a>
@@ -438,9 +471,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-p.-'.html"> t.o.-n.o.-p.-' </a>
             <span class="translation"
-                data-fr="century"
-                data-en="siècle">
-                century
+                data-fr="siècle"
+                data-en="century">
+                siècle
             </span>
         </div>
     
@@ -453,9 +486,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.o.-n.o.-x.-'.html"> t.o.-n.o.-x.-' </a>
             <span class="translation"
-                data-fr="millennium"
-                data-en="millénaire">
-                millennium
+                data-fr="millénaire"
+                data-en="millennium">
+                millénaire
             </span>
         </div>
     
@@ -470,7 +503,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -485,6 +518,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -494,6 +537,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -530,5 +574,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

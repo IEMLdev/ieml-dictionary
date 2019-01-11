@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             t.i.-s.i.-'u.T:.-U:.-'wo.-',M:.-',_
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>unmanned terrestrial vehicle</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>véhicule terrestre sans conducteur</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>véhicule terrestre sans conducteur</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>unmanned terrestrial vehicle</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'u.T_.-U_.-'O_O_.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'O:O:.-',M:.-',_</a></td>
-                        <td>kinds of surface vehicles</td>
                         <td>genres de véhicules de surface</td>
+                        <td>kinds of surface vehicles</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_.html">t.i.-s.i.-'u.T:.-U:.-'wo.-',</a></td>
-                        <td>unmanned surface vehicle</td>
                         <td>véhicule de surface sans conducteur</td>
+                        <td>unmanned surface vehicle</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -239,20 +272,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -260,8 +293,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -275,19 +308,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'wo.-',M:.-',_</a> unmanned terrestrial vehicle</div>-->
+            <!--<div class="card-header">Table <a href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_M_.-'__.html">t.i.-s.i.-'u.T:.-U:.-'wo.-',M:.-',_</a> véhicule terrestre sans conducteur</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_M_.-'__.html"> t.i.-s.i.-'u.T:.-U:.-'wo.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="unmanned terrestrial vehicle"
-                data-en="véhicule terrestre sans conducteur">
-                unmanned terrestrial vehicle
+                data-fr="véhicule terrestre sans conducteur"
+                data-en="unmanned terrestrial vehicle">
+                véhicule terrestre sans conducteur
             </span>
         </div>
     
@@ -302,9 +335,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_S_.-'__.html"> t.i.-s.i.-'u.T:.-U:.-'wo.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="unmanned rail vehicle"
-                data-en="véhicule sur rail sans conducteur">
-                unmanned rail vehicle
+                data-fr="véhicule sur rail sans conducteur"
+                data-en="unmanned rail vehicle">
+                véhicule sur rail sans conducteur
             </span>
         </div>
     
@@ -319,9 +352,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_B_.-'__.html"> t.i.-s.i.-'u.T:.-U:.-'wo.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="unmanned road vehicle"
-                data-en="véhicule sur route sans conducteur">
-                unmanned road vehicle
+                data-fr="véhicule sur route sans conducteur"
+                data-en="unmanned road vehicle">
+                véhicule sur route sans conducteur
             </span>
         </div>
     
@@ -336,9 +369,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-s.i.-'u.T_.-U_.-'wo.-'_T_.-'__.html"> t.i.-s.i.-'u.T:.-U:.-'wo.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="unmanned all terrain vehicle"
-                data-en="véhicule tout terrain sans conducteur">
-                unmanned all terrain vehicle
+                data-fr="véhicule tout terrain sans conducteur"
+                data-en="unmanned all terrain vehicle">
+                véhicule tout terrain sans conducteur
             </span>
         </div>
     
@@ -352,7 +385,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -367,6 +400,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -376,6 +419,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -412,5 +456,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

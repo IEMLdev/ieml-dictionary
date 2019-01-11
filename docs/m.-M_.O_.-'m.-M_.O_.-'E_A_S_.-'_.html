@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             m.-M:.O:.-'m.-M:.O:.-'E:A:S:.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>nascent sentiments</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sentiments à l'état naissant</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sentiments à l'état naissant</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>nascent sentiments</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-twin">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-M_.O_.-'E_A_T_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:T:.-',</a></td>
-                        <td>strong sentiments</td>
                         <td>sentiments forts</td>
+                        <td>strong sentiments</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,8 +233,8 @@
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-M_.O_.-'E_A_T_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:T:.-',</a></td>
-                        <td>strong sentiments</td>
                         <td>sentiments forts</td>
+                        <td>strong sentiments</td>
                     </tr>
                 
                 </tbody>
@@ -210,8 +242,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -234,8 +266,8 @@
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-M_.O_.-'E_A_T_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:T:.-',</a></td>
-                        <td>strong sentiments</td>
                         <td>sentiments forts</td>
+                        <td>strong sentiments</td>
                     </tr>
                 
                 </tbody>
@@ -243,10 +275,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,74 +301,74 @@
                 
                     <tr>
                         <td><a href="m.-S_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-S:.U:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>light fear in substance</td>
                         <td>légère peur en substance</td>
+                        <td>light fear in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-S_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-S:.A:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>light surprise in substance</td>
                         <td>légère surprise en substance</td>
+                        <td>light surprise in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-B_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-B:.U:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>nascent desire in substance</td>
                         <td>désir naissant en substance</td>
+                        <td>nascent desire in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-B_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-B:.A:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>light irritation in substance</td>
                         <td>légère irritation en substance</td>
+                        <td>light irritation in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-T_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-T:.U:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>light joy in substance</td>
                         <td>joie légère en substance</td>
+                        <td>light joy in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-T_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-T:.A:.-'m.-M:.O:.-'E:A:S:.-',</a></td>
-                        <td>light sadness in substance</td>
                         <td>légère tristesse en substance</td>
+                        <td>light sadness in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-S_.U_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-S:.U:.-'E:A:S:.-',</a></td>
-                        <td>light fear in attribute</td>
                         <td>légère peur en attribut</td>
+                        <td>light fear in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-S_.A_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-S:.A:.-'E:A:S:.-',</a></td>
-                        <td>light surprise in attribute</td>
                         <td>légère surprise en attribut</td>
+                        <td>light surprise in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-B_.U_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-B:.U:.-'E:A:S:.-',</a></td>
-                        <td>nascent desire in attribute</td>
                         <td>désir naissant en attribut</td>
+                        <td>nascent desire in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-B_.A_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-B:.A:.-'E:A:S:.-',</a></td>
-                        <td>light irritation in attribute</td>
                         <td>légère irritation en attribut</td>
+                        <td>light irritation in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-T_.U_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-T:.U:.-'E:A:S:.-',</a></td>
-                        <td>light joy in attribute</td>
                         <td>joie légère en attribut</td>
+                        <td>light joy in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'m.-T_.A_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-T:.A:.-'E:A:S:.-',</a></td>
-                        <td>light sadness in attribute</td>
                         <td>légère tristesse en attribut</td>
+                        <td>light sadness in attribute</td>
                     </tr>
                 
                 </tbody>
@@ -344,8 +376,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -377,11 +409,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -404,8 +437,8 @@
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'.html">m.-M:.O:.-'</a></td>
-                        <td>emotions</td>
                         <td>émotions</td>
+                        <td>emotions</td>
                     </tr>
                 
                 </tbody>
@@ -413,8 +446,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -437,8 +470,8 @@
                 
                     <tr>
                         <td><a href="m.-M_.O_.-'.html">m.-M:.O:.-'</a></td>
-                        <td>emotions</td>
                         <td>émotions</td>
+                        <td>emotions</td>
                     </tr>
                 
                 </tbody>
@@ -446,8 +479,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -470,8 +503,8 @@
                 
                     <tr>
                         <td><a href="E_A_S_..html">E:A:S:.</a></td>
-                        <td>less, a few, slightly | in clause mode: there is less substance than attribute, or the substance has less attribute than... (the comparison is built with E:.U:.g.- in mode, in a second clause with the same substance)</td>
                         <td>peu, moins | en mode de clause: il y a moins de substance que d'attribut, ou bien la substance a moins d'attribut que... (la comparaison se construit avec E:.U:.g.- en mode, dans une seconde clause ayant la même substance)</td>
+                        <td>less, a few, slightly | in clause mode: there is less substance than attribute, or the substance has less attribute than... (the comparison is built with E:.U:.g.- in mode, in a second clause with the same substance)</td>
                     </tr>
                 
                 </tbody>
@@ -479,8 +512,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -494,19 +527,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="m.-M_.O_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:S:.-',</a> nascent sentiments</div>-->
+            <!--<div class="card-header">Table <a href="m.-M_.O_.-'m.-M_.O_.-'E_A_S_.-'_.html">m.-M:.O:.-'m.-M:.O:.-'E:A:S:.-',</a> sentiments à l'état naissant</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="7" style="background-color: #d9eaff;">
+    <th class="cell" colspan="7" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="nascent sentiments"
-                data-en="sentiments à l'état naissant">
-                nascent sentiments
+                data-fr="sentiments à l'état naissant"
+                data-en="nascent sentiments">
+                sentiments à l'état naissant
             </span>
         </div>
     
@@ -517,14 +550,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light fear in attribute"
-                data-en="légère peur en attribut">
-                light fear in attribute
+                data-fr="légère peur en attribut"
+                data-en="light fear in attribute">
+                légère peur en attribut
             </span>
         </div>
     
@@ -532,14 +565,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light surprise in attribute"
-                data-en="légère surprise en attribut">
-                light surprise in attribute
+                data-fr="légère surprise en attribut"
+                data-en="light surprise in attribute">
+                légère surprise en attribut
             </span>
         </div>
     
@@ -547,14 +580,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="nascent desire in attribute"
-                data-en="désir naissant en attribut">
-                nascent desire in attribute
+                data-fr="désir naissant en attribut"
+                data-en="nascent desire in attribute">
+                désir naissant en attribut
             </span>
         </div>
     
@@ -562,14 +595,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light irritation in attribute"
-                data-en="légère irritation en attribut">
-                light irritation in attribute
+                data-fr="légère irritation en attribut"
+                data-en="light irritation in attribute">
+                légère irritation en attribut
             </span>
         </div>
     
@@ -577,14 +610,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light joy in attribute"
-                data-en="joie légère en attribut">
-                light joy in attribute
+                data-fr="joie légère en attribut"
+                data-en="light joy in attribute">
+                joie légère en attribut
             </span>
         </div>
     
@@ -592,14 +625,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-M_.O_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-M:.O:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light sadness in attribute"
-                data-en="légère tristesse en attribut">
-                light sadness in attribute
+                data-fr="légère tristesse en attribut"
+                data-en="light sadness in attribute">
+                légère tristesse en attribut
             </span>
         </div>
     
@@ -610,14 +643,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light fear in substance"
-                data-en="légère peur en substance">
-                light fear in substance
+                data-fr="légère peur en substance"
+                data-en="light fear in substance">
+                légère peur en substance
             </span>
         </div>
     
@@ -631,9 +664,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="concern"
-                data-en="inquiétude">
-                concern
+                data-fr="inquiétude"
+                data-en="concern">
+                inquiétude
             </span>
         </div>
     
@@ -646,9 +679,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light frightened surprise"
-                data-en="légère surprise apeurée">
-                light frightened surprise
+                data-fr="légère surprise apeurée"
+                data-en="light frightened surprise">
+                légère surprise apeurée
             </span>
         </div>
     
@@ -661,9 +694,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="openness"
-                data-en="attitude d'ouverture">
-                openness
+                data-fr="attitude d'ouverture"
+                data-en="openness">
+                attitude d'ouverture
             </span>
         </div>
     
@@ -676,9 +709,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="complain"
-                data-en="plainte">
-                complain
+                data-fr="plainte"
+                data-en="complain">
+                plainte
             </span>
         </div>
     
@@ -691,9 +724,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="cautious attitude"
-                data-en="attitude prudente">
-                cautious attitude
+                data-fr="attitude prudente"
+                data-en="cautious attitude">
+                attitude prudente
             </span>
         </div>
     
@@ -706,9 +739,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.U_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-S:.U:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="reserved attitude"
-                data-en="attitude réservée">
-                reserved attitude
+                data-fr="attitude réservée"
+                data-en="reserved attitude">
+                attitude réservée
             </span>
         </div>
     
@@ -719,14 +752,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light surprise in substance"
-                data-en="légère surprise en substance">
-                light surprise in substance
+                data-fr="légère surprise en substance"
+                data-en="light surprise in substance">
+                légère surprise en substance
             </span>
         </div>
     
@@ -740,9 +773,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="doubt, scepticism"
-                data-en="doute, scepticisme">
-                doubt, scepticism
+                data-fr="doute, scepticisme"
+                data-en="doubt, scepticism">
+                doute, scepticisme
             </span>
         </div>
     
@@ -755,9 +788,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="increased attention | interest"
-                data-en="accroissement de l'attention, de l'intérêt">
-                increased attention | interest
+                data-fr="accroissement de l'attention, de l'intérêt"
+                data-en="increased attention | interest">
+                accroissement de l'attention, de l'intérêt
             </span>
         </div>
     
@@ -770,9 +803,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="approving attitude, "I like""
-                data-en="attitude d'approbation, "j'aime"">
-                approving attitude, "I like"
+                data-fr="attitude d'approbation, "j'aime""
+                data-en="approving attitude, "I like"">
+                attitude d'approbation, "j'aime"
             </span>
         </div>
     
@@ -785,9 +818,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="defiance"
-                data-en="attitude de défi">
-                defiance
+                data-fr="attitude de défi"
+                data-en="defiance">
+                attitude de défi
             </span>
         </div>
     
@@ -800,9 +833,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="greeting, "hi", happiness to meet someone"
-                data-en="salutation, plaisir de rencontrer quelqu'un">
-                greeting, "hi", happiness to meet someone
+                data-fr="salutation, plaisir de rencontrer quelqu'un"
+                data-en="greeting, "hi", happiness to meet someone">
+                salutation, plaisir de rencontrer quelqu'un
             </span>
         </div>
     
@@ -815,9 +848,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-S_.A_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-S:.A:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="sadness caused by distance, separation"
-                data-en="tristesse due à l'éloignement, à la séparation">
-                sadness caused by distance, separation
+                data-fr="tristesse due à l'éloignement, à la séparation"
+                data-en="sadness caused by distance, separation">
+                tristesse due à l'éloignement, à la séparation
             </span>
         </div>
     
@@ -828,14 +861,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-B:.U:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="nascent desire in substance"
-                data-en="désir naissant en substance">
-                nascent desire in substance
+                data-fr="désir naissant en substance"
+                data-en="nascent desire in substance">
+                désir naissant en substance
             </span>
         </div>
     
@@ -849,9 +882,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.U_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-B:.U:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="worry"
-                data-en="souci">
-                worry
+                data-fr="souci"
+                data-en="worry">
+                souci
             </span>
         </div>
     
@@ -864,9 +897,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.U_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-B:.U:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="good impression"
-                data-en="bonne impression">
-                good impression
+                data-fr="bonne impression"
+                data-en="good impression">
+                bonne impression
             </span>
         </div>
     
@@ -909,9 +942,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.U_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-B:.U:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="flirting attitude"
-                data-en="flirt">
-                flirting attitude
+                data-fr="flirt"
+                data-en="flirting attitude">
+                flirt
             </span>
         </div>
     
@@ -924,9 +957,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.U_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-B:.U:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="feeling of exclusion"
-                data-en="sentiment d'exclusion">
-                feeling of exclusion
+                data-fr="sentiment d'exclusion"
+                data-en="feeling of exclusion">
+                sentiment d'exclusion
             </span>
         </div>
     
@@ -937,14 +970,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light irritation in substance"
-                data-en="légère irritation en substance">
-                light irritation in substance
+                data-fr="légère irritation en substance"
+                data-en="light irritation in substance">
+                légère irritation en substance
             </span>
         </div>
     
@@ -958,9 +991,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="recoil"
-                data-en="mouvement de recul">
-                recoil
+                data-fr="mouvement de recul"
+                data-en="recoil">
+                mouvement de recul
             </span>
         </div>
     
@@ -988,9 +1021,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="competitive zeal"
-                data-en="ardeur compétitive">
-                competitive zeal
+                data-fr="ardeur compétitive"
+                data-en="competitive zeal">
+                ardeur compétitive
             </span>
         </div>
     
@@ -1003,9 +1036,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="repulsion"
-                data-en="répulsion">
-                repulsion
+                data-fr="répulsion"
+                data-en="repulsion">
+                répulsion
             </span>
         </div>
     
@@ -1018,9 +1051,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="mockery, derision"
-                data-en="moquerie, dérision">
-                mockery, derision
+                data-fr="moquerie, dérision"
+                data-en="mockery, derision">
+                moquerie, dérision
             </span>
         </div>
     
@@ -1033,9 +1066,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-B_.A_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-B:.A:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="protestation, reproach"
-                data-en="protestation, reproche">
-                protestation, reproach
+                data-fr="protestation, reproche"
+                data-en="protestation, reproach">
+                protestation, reproche
             </span>
         </div>
     
@@ -1046,14 +1079,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light joy in substance"
-                data-en="joie légère en substance">
-                light joy in substance
+                data-fr="joie légère en substance"
+                data-en="light joy in substance">
+                joie légère en substance
             </span>
         </div>
     
@@ -1067,9 +1100,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="confidence"
-                data-en="confiance">
-                confidence
+                data-fr="confiance"
+                data-en="confidence">
+                confiance
             </span>
         </div>
     
@@ -1082,9 +1115,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="appreciation"
-                data-en="appréciation">
-                appreciation
+                data-fr="appréciation"
+                data-en="appreciation">
+                appréciation
             </span>
         </div>
     
@@ -1097,9 +1130,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="friendly smile"
-                data-en="sourire amical">
-                friendly smile
+                data-fr="sourire amical"
+                data-en="friendly smile">
+                sourire amical
             </span>
         </div>
     
@@ -1112,9 +1145,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="pride"
-                data-en="fièreté">
-                pride
+                data-fr="fièreté"
+                data-en="pride">
+                fièreté
             </span>
         </div>
     
@@ -1127,9 +1160,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="amusement, entertainment"
-                data-en="amusement">
-                amusement, entertainment
+                data-fr="amusement"
+                data-en="amusement, entertainment">
+                amusement
             </span>
         </div>
     
@@ -1142,9 +1175,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.U_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-T:.U:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="feeling of being touched, moved"
-                data-en="sentiment d'être touché, ému">
-                feeling of being touched, moved
+                data-fr="sentiment d'être touché, ému"
+                data-en="feeling of being touched, moved">
+                sentiment d'être touché, ému
             </span>
         </div>
     
@@ -1155,14 +1188,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-M_.O_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-M:.O:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="light sadness in substance"
-                data-en="légère tristesse en substance">
-                light sadness in substance
+                data-fr="légère tristesse en substance"
+                data-en="light sadness in substance">
+                légère tristesse en substance
             </span>
         </div>
     
@@ -1176,9 +1209,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-S_.U_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-S:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="boredom"
-                data-en="ennui">
-                boredom
+                data-fr="ennui"
+                data-en="boredom">
+                ennui
             </span>
         </div>
     
@@ -1191,9 +1224,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-S_.A_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-S:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="bad impression"
-                data-en="mauvaise impression">
-                bad impression
+                data-fr="mauvaise impression"
+                data-en="bad impression">
+                mauvaise impression
             </span>
         </div>
     
@@ -1206,9 +1239,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-B_.U_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-B:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="nostalgia"
-                data-en="nostalgie">
-                nostalgia
+                data-fr="nostalgie"
+                data-en="nostalgia">
+                nostalgie
             </span>
         </div>
     
@@ -1221,9 +1254,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-B_.A_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-B:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="sourness"
-                data-en="aigreur">
-                sourness
+                data-fr="aigreur"
+                data-en="sourness">
+                aigreur
             </span>
         </div>
     
@@ -1236,9 +1269,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-T_.U_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-T:.U:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="mixed feelings, ambivalence"
-                data-en="sentiments confus, ambivalence">
-                mixed feelings, ambivalence
+                data-fr="sentiments confus, ambivalence"
+                data-en="mixed feelings, ambivalence">
+                sentiments confus, ambivalence
             </span>
         </div>
     
@@ -1251,9 +1284,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.-T_.A_.-'m.-T_.A_.-'E_A_S_.-'_.html"> m.-T:.A:.-'m.-T:.A:.-'E:A:S:.-', </a>
             <span class="translation"
-                data-fr="depression, spleen, mélancholy"
-                data-en="dépression, spleen, mélancolie">
-                depression, spleen, mélancholy
+                data-fr="dépression, spleen, mélancolie"
+                data-en="depression, spleen, mélancholy">
+                dépression, spleen, mélancolie
             </span>
         </div>
     
@@ -1268,7 +1301,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1283,6 +1316,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1292,6 +1335,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1328,5 +1372,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

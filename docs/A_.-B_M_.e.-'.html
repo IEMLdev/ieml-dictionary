@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             A:.-B:M:.e.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>gain the actual skills of the trivium of being</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>acquérir les compétences actuelles du trivium de l'être</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>acquérir les compétences actuelles du trivium de l'être</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>gain the actual skills of the trivium of being</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,20 +202,20 @@
                 
                     <tr>
                         <td><a href="O_.-B_M_.e.-'.html">O:.-B:M:.e.-'</a></td>
-                        <td>gain the trivium of being</td>
                         <td>acquérir le trivium de l'être</td>
+                        <td>gain the trivium of being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.-M_M_.e.-'.html">A:.-M:M:.e.-'</a></td>
-                        <td>actual ability (gain)</td>
                         <td>habileté actuelle (acquérir)</td>
+                        <td>actual ability (gain)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_.-M_M_.e.-'.html">O:.-M:M:.e.-'</a></td>
-                        <td>ability domains (verbs)</td>
                         <td>domaines d'habileté (verbes)</td>
+                        <td>ability domains (verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -191,11 +223,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -218,8 +251,8 @@
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                 </tbody>
@@ -227,8 +260,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -251,8 +284,8 @@
                 
                     <tr>
                         <td><a href="B_M_.e.-.html">B:M:.e.-</a></td>
-                        <td>expertise on beings</td>
                         <td>savoir faire portant sur les êtres</td>
+                        <td>expertise on beings</td>
                     </tr>
                 
                 </tbody>
@@ -260,8 +293,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -275,19 +308,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="A_.-B_M_.e.-'.html">A:.-B:M:.e.-'</a> gain the actual skills of the trivium of being</div>-->
+            <!--<div class="card-header">Table <a href="A_.-B_M_.e.-'.html">A:.-B:M:.e.-'</a> acquérir les compétences actuelles du trivium de l'être</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_.-B_M_.e.-'.html"> A:.-B:M:.e.-' </a>
             <span class="translation"
-                data-fr="gain the actual skills of the trivium of being"
-                data-en="acquérir les compétences actuelles du trivium de l'être">
-                gain the actual skills of the trivium of being
+                data-fr="acquérir les compétences actuelles du trivium de l'être"
+                data-en="gain the actual skills of the trivium of being">
+                acquérir les compétences actuelles du trivium de l'être
             </span>
         </div>
     
@@ -302,9 +335,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="A_.-k.e.-'.html"> A:.-k.e.-' </a>
             <span class="translation"
-                data-fr="affective autonomy (gain)"
-                data-en="autonomie affective (acquérir)">
-                affective autonomy (gain)
+                data-fr="autonomie affective (acquérir)"
+                data-en="affective autonomy (gain)">
+                autonomie affective (acquérir)
             </span>
         </div>
     
@@ -319,9 +352,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="A_.-m.e.-'.html"> A:.-m.e.-' </a>
             <span class="translation"
-                data-fr="respect for the interlocutor (gain)"
-                data-en="respect de l'interlocuteur (acquérir)">
-                respect for the interlocutor (gain)
+                data-fr="respect de l'interlocuteur (acquérir)"
+                data-en="respect for the interlocutor (gain)">
+                respect de l'interlocuteur (acquérir)
             </span>
         </div>
     
@@ -336,9 +369,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="A_.-n.e.-'.html"> A:.-n.e.-' </a>
             <span class="translation"
-                data-fr="inspire (gain the ability to)"
-                data-en="inspirer (acquérir la capacité d')">
-                inspire (gain the ability to)
+                data-fr="inspirer (acquérir la capacité d')"
+                data-en="inspire (gain the ability to)">
+                inspirer (acquérir la capacité d')
             </span>
         </div>
     
@@ -352,7 +385,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -367,6 +400,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -376,6 +419,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -412,5 +456,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

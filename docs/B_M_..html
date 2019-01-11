@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             B:M:.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>becoming of the being</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>devenir de l'être</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>devenir de l'être</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>becoming of the being</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -239,20 +272,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -260,9 +293,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -285,68 +318,68 @@
                 
                     <tr>
                         <td><a href="B_M_.wo.-.html">B:M:.wo.-</a></td>
-                        <td>spiritual direction</td>
                         <td>direction spirituelle</td>
+                        <td>spiritual direction</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.wa.-.html">B:M:.wa.-</a></td>
-                        <td>existential effort</td>
                         <td>effort existentiel</td>
+                        <td>existential effort</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.y.-.html">B:M:.y.-</a></td>
-                        <td>knowing by being</td>
                         <td>connaissance par l'être</td>
+                        <td>knowing by being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.o.-.html">B:M:.o.-</a></td>
-                        <td>desiring the being</td>
                         <td>désir de l'être</td>
+                        <td>desiring the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-.html">B:M:.e.-</a></td>
-                        <td>expertise on beings</td>
                         <td>savoir faire portant sur les êtres</td>
+                        <td>expertise on beings</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.wu.-.html">B:M:.wu.-</a></td>
-                        <td>liberation of aesthetic energy</td>
                         <td>libération d'énergie esthétique</td>
+                        <td>liberation of aesthetic energy</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.we.-.html">B:M:.we.-</a></td>
-                        <td>stable society</td>
                         <td>société stable</td>
+                        <td>stable society</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.u.-.html">B:M:.u.-</a></td>
-                        <td>signifying being</td>
                         <td>signifie l'être</td>
+                        <td>signifying being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.a.-.html">B:M:.a.-</a></td>
-                        <td>socialize with being</td>
                         <td>socialise par l'être</td>
+                        <td>socialize with being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.i.-.html">B:M:.i.-</a></td>
-                        <td>being in technical substance</td>
                         <td>être en substance technique</td>
+                        <td>being in technical substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.O_M_.-.html">B:M:.O:M:.-</a></td>
-                        <td>being of human development</td>
                         <td>être du développement humain</td>
+                        <td>being of human development</td>
                     </tr>
                 
                 </tbody>
@@ -354,8 +387,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -378,122 +411,122 @@
                 
                     <tr>
                         <td><a href="wo.B_M_.-.html">wo.B:M:.-</a></td>
-                        <td>cultivate the variation of being experience</td>
                         <td>cultiver la variation de l'expérience de l'être</td>
+                        <td>cultivate the variation of being experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.B_M_.-.html">wa.B:M:.-</a></td>
-                        <td>cultivate the strength of the action of being</td>
                         <td>cultiver la force de l'action de l'être</td>
+                        <td>cultivate the strength of the action of being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="y.B_M_.-.html">y.B:M:.-</a></td>
-                        <td>ignore being</td>
                         <td>ignorer l'être</td>
+                        <td>ignore being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="o.B_M_.-.html">o.B:M:.-</a></td>
-                        <td>darken the being</td>
                         <td>assombrir l'être</td>
+                        <td>darken the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="e.B_M_.-.html">e.B:M:.-</a></td>
-                        <td>lack skills in the trivium of the being</td>
                         <td>manquer d'habiletés dans le trivium de l'être</td>
+                        <td>lack skills in the trivium of the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.B_M_.-.html">wu.B:M:.-</a></td>
-                        <td>cultivate the subtlety of being perception</td>
                         <td>cultiver la subtilité de la perception de l'être</td>
+                        <td>cultivate the subtlety of being perception</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.B_M_.-.html">we.B:M:.-</a></td>
-                        <td>cultivate a sustainable balance of being</td>
                         <td>cultiver un équilibre durable de l'être</td>
+                        <td>cultivate a sustainable balance of being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="u.B_M_.-.html">u.B:M:.-</a></td>
-                        <td>destroy the being of meaning</td>
                         <td>détruire l'être de la signification</td>
+                        <td>destroy the being of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="a.B_M_.-.html">a.B:M:.-</a></td>
-                        <td>destroy the being of social relations</td>
                         <td>détruire l'être des relations sociales</td>
+                        <td>destroy the being of social relations</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.B_M_.-.html">i.B:M:.-</a></td>
-                        <td>destroy the being technically</td>
                         <td>détruire l'être techniquement</td>
+                        <td>destroy the being technically</td>
                     </tr>
                 
                     <tr>
                         <td><a href="j.B_M_.-.html">j.B:M:.-</a></td>
-                        <td>existential poetical obstacle</td>
                         <td>obstacle poétique existentiel</td>
+                        <td>existential poetical obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.B_M_.-.html">g.B:M:.-</a></td>
-                        <td>communication with subjective obstacle</td>
                         <td>obstacle subjectif à la communication</td>
+                        <td>communication with subjective obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.B_M_.-.html">h.B:M:.-</a></td>
-                        <td>existential spiritual obstacle</td>
                         <td>obstacle spirituel existentiel</td>
+                        <td>existential spiritual obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.B_M_.-.html">c.B:M:.-</a></td>
-                        <td>existential socio-political obstacle</td>
                         <td>obstacle socio-politique existentiel</td>
+                        <td>existential socio-political obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.B_M_.-.html">p.B:M:.-</a></td>
-                        <td>subjective economic obstacle</td>
                         <td>obstacle économique subjectif</td>
+                        <td>subjective economic obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.B_M_.-.html">x.B:M:.-</a></td>
-                        <td>existential technical obstacle</td>
                         <td>obstacle technique existentiel</td>
+                        <td>existential technical obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.B_M_.-l.-'.html">E:.-U:.B:M:.-l.-'</a></td>
-                        <td>median (vertical axis)</td>
                         <td>médian (axe vertical)</td>
+                        <td>median (vertical axis)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.B_M_.-l.-'.html">E:.-A:.B:M:.-l.-'</a></td>
-                        <td>median (horizontal axis)</td>
                         <td>médian (axe horizontal)</td>
+                        <td>median (horizontal axis)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.B_M_.-l.-'.html">E:.-S:.B:M:.-l.-'</a></td>
-                        <td>course</td>
                         <td>parcours</td>
+                        <td>course</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.B_M_.-l.-'.html">E:.-B:.B:M:.-l.-'</a></td>
-                        <td>proximity</td>
                         <td>proximité</td>
+                        <td>proximity</td>
                     </tr>
                 
                     <tr>
@@ -504,26 +537,26 @@
                 
                     <tr>
                         <td><a href="E_.-O_.B_M_.-l.-'.html">E:.-O:.B:M:.-l.-'</a></td>
-                        <td>middle</td>
                         <td>milieu</td>
+                        <td>middle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.B_M_.-l.-'.html">E:.-M:.B:M:.-l.-'</a></td>
-                        <td>intermediary</td>
                         <td>intermédiaire</td>
+                        <td>intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.B_M_.-l.-'.html">E:.-F:.B:M:.-l.-'</a></td>
-                        <td>inter-stance (spatial situation)</td>
                         <td>inter-stance (situation spatiale)</td>
+                        <td>inter-stance (spatial situation)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-x.-s.y.-'wa.e.-B_M_.-'_.html">t.-x.-s.y.-'wa.e.-B:M:.-',</a></td>
-                        <td>critical intelligence</td>
                         <td>intelligence critique</td>
+                        <td>critical intelligence</td>
                     </tr>
                 
                 </tbody>
@@ -531,7 +564,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -545,19 +578,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="B_M_..html">B:M:.</a> becoming of the being</div>-->
+            <!--<div class="card-header">Table <a href="B_M_..html">B:M:.</a> devenir de l'être</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_..html"> B:M:. </a>
             <span class="translation"
-                data-fr="becoming of the being"
-                data-en="devenir de l'être">
-                becoming of the being
+                data-fr="devenir de l'être"
+                data-en="becoming of the being">
+                devenir de l'être
             </span>
         </div>
     
@@ -572,9 +605,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k..html"> k. </a>
             <span class="translation"
-                data-fr="society"
-                data-en="sociétés">
-                society
+                data-fr="société"
+                data-en="society">
+                société
             </span>
         </div>
     
@@ -590,7 +623,7 @@
             <a class="ieml" href="m..html"> m. </a>
             <span class="translation"
                 data-fr="affect"
-                data-en="affects">
+                data-en="affect">
                 affect
             </span>
         </div>
@@ -606,9 +639,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n..html"> n. </a>
             <span class="translation"
-                data-fr="world"
-                data-en="mondes">
-                world
+                data-fr="monde"
+                data-en="world">
+                monde
             </span>
         </div>
     
@@ -622,7 +655,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -637,6 +670,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -646,6 +689,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -682,5 +726,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:B:M:.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>frequency distribution | the substance happens in the attribute according to the mode</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>distribution de fréquence | la substance arrive dans l'attribut selon le mode</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>distribution de fréquence | la substance arrive dans l'attribut selon le mode</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>frequency distribution | the substance happens in the attribute according to the mode</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +202,14 @@
                 
                     <tr>
                         <td><a href="E_M_M_..html">E:M:M:.</a></td>
-                        <td>distribution (adverbs of)</td>
                         <td>distribution (adverbes de)</td>
+                        <td>distribution (adverbs of)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_F_M_..html">E:F:M:.</a></td>
-                        <td>gradient adverb | in topic or clause mode</td>
                         <td>adverbes de gradient | en mode de topic ou de clause</td>
+                        <td>gradient adverb | in topic or clause mode</td>
                     </tr>
                 
                 </tbody>
@@ -185,11 +217,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -212,8 +245,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,20 +278,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -266,9 +299,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -291,8 +324,8 @@
                 
                     <tr>
                         <td><a href="p.E_B_M_.-.html">p.E:B:M:.-</a></td>
-                        <td>frequency (gradient adjective)</td>
                         <td>fréquence (adjectifs de gradient)</td>
+                        <td>frequency (gradient adjective)</td>
                     </tr>
                 
                 </tbody>
@@ -300,7 +333,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,19 +347,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_B_M_..html">E:B:M:.</a> frequency distribution | the substance happens in the attribute according to the mode</div>-->
+            <!--<div class="card-header">Table <a href="E_B_M_..html">E:B:M:.</a> distribution de fréquence | la substance arrive dans l'attribut selon le mode</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_B_M_..html"> E:B:M:. </a>
             <span class="translation"
-                data-fr="frequency distribution | the substance happens in the attribute according to the mode"
-                data-en="distribution de fréquence | la substance arrive dans l'attribut selon le mode">
-                frequency distribution | the substance happens in the attribute according to the mode
+                data-fr="distribution de fréquence | la substance arrive dans l'attribut selon le mode"
+                data-en="frequency distribution | the substance happens in the attribute according to the mode">
+                distribution de fréquence | la substance arrive dans l'attribut selon le mode
             </span>
         </div>
     
@@ -341,9 +374,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_B_S_..html"> E:B:S:. </a>
             <span class="translation"
-                data-fr="rarely, isolated occurrence"
-                data-en="rarement, occurence isolée">
-                rarely, isolated occurrence
+                data-fr="rarement, occurence isolée"
+                data-en="rarely, isolated occurrence">
+                rarement, occurence isolée
             </span>
         </div>
     
@@ -358,9 +391,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_B_B_..html"> E:B:B:. </a>
             <span class="translation"
-                data-fr="usually | regularly"
-                data-en="généralement | régulièrement">
-                usually | regularly
+                data-fr="généralement | régulièrement"
+                data-en="usually | regularly">
+                généralement | régulièrement
             </span>
         </div>
     
@@ -375,9 +408,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_B_T_..html"> E:B:T:. </a>
             <span class="translation"
-                data-fr="often"
-                data-en="souvent">
-                often
+                data-fr="souvent"
+                data-en="often">
+                souvent
             </span>
         </div>
     
@@ -391,7 +424,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -406,6 +439,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -415,6 +458,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -451,5 +495,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

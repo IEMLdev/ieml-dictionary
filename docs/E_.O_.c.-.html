@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.O:.c.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>manner of choice</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>manière de choix</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>manière de choix</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>manner of choice</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,32 +200,32 @@
                 
                     <tr>
                         <td><a href="E_.O_.j.-.html">E:.O:.j.-</a></td>
-                        <td>manner of resemblance</td>
                         <td>manière de ressemblance</td>
+                        <td>manner of resemblance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.O_.g.-.html">E:.O:.g.-</a></td>
-                        <td>manner of relationship</td>
                         <td>manière d'identité</td>
+                        <td>manner of relationship</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.O_.h.-.html">E:.O:.h.-</a></td>
-                        <td>manner of tropism</td>
                         <td>manière de tropisme</td>
+                        <td>manner of tropism</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.O_.p.-.html">E:.O:.p.-</a></td>
-                        <td>manner of definition</td>
                         <td>manière de définition</td>
+                        <td>manner of definition</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.O_.x.-.html">E:.O:.x.-</a></td>
-                        <td>manner of presence</td>
                         <td>manière de présence</td>
+                        <td>manner of presence</td>
                     </tr>
                 
                 </tbody>
@@ -201,10 +233,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,14 +259,14 @@
                 
                     <tr>
                         <td><a href="E_.O_.B_O_.-.html">E:.O:.B:O:.-</a></td>
-                        <td>manner of orientation</td>
                         <td>mode d'orientation</td>
+                        <td>manner of orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.O_.M_O_.-.html">E:.O:.M:O:.-</a></td>
-                        <td>manner auxiliary (adverbs, articles, prepositions) | in topic or clause mode | in clause mode: the substance is in relation to the attribute according to the manner</td>
                         <td>auxiliaires de manière (adverbes, articles, prépositions) | en mode de topic ou de clause | en mode de clause: la substance est en relation avec l'attribut selon la manière</td>
+                        <td>manner auxiliary (adverbs, articles, prepositions) | in topic or clause mode | in clause mode: the substance is in relation to the attribute according to the manner</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,14 +302,14 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                 </tbody>
@@ -284,8 +317,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -308,8 +341,8 @@
                 
                     <tr>
                         <td><a href="c..html">c.</a></td>
-                        <td>individual</td>
                         <td>individu</td>
+                        <td>individual</td>
                     </tr>
                 
                 </tbody>
@@ -317,8 +350,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -332,19 +365,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.O_.c.-.html">E:.O:.c.-</a> manner of choice</div>-->
+            <!--<div class="card-header">Table <a href="E_.O_.c.-.html">E:.O:.c.-</a> manière de choix</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.O_.c.-.html"> E:.O:.c.- </a>
             <span class="translation"
-                data-fr="manner of choice"
-                data-en="manière de choix">
-                manner of choice
+                data-fr="manière de choix"
+                data-en="manner of choice">
+                manière de choix
             </span>
         </div>
     
@@ -359,9 +392,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.U_.c.-.html"> E:.U:.c.- </a>
             <span class="translation"
-                data-fr="anti | against | opposition"
-                data-en="anti | contre | opposition">
-                anti | against | opposition
+                data-fr="anti | contre | opposition"
+                data-en="anti | against | opposition">
+                anti | contre | opposition
             </span>
         </div>
     
@@ -376,9 +409,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.c.-.html"> E:.A:.c.- </a>
             <span class="translation"
-                data-fr="pro | for | support"
-                data-en="pro | pour | adhésion">
-                pro | for | support
+                data-fr="pro | pour | adhésion"
+                data-en="pro | for | support">
+                pro | pour | adhésion
             </span>
         </div>
     
@@ -392,7 +425,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -407,6 +440,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -416,6 +459,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -452,5 +496,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

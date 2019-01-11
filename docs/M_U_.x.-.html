@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:U:.x.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>virtual transformation in matter</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>transformation virtuelle dans la matière</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>transformation virtuelle dans la matière</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>virtual transformation in matter</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-crossed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="U_M_.i.-.html">U:M:.i.-</a></td>
-                        <td>perform virtually into concrete matters</td>
                         <td>performer virtuellement dans le concret</td>
+                        <td>perform virtually into concrete matters</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,8 +233,8 @@
                 
                     <tr>
                         <td><a href="x.M_U_.-.html">x.M:U:.-</a></td>
-                        <td>virtual material transformation</td>
                         <td>transformation matérielle virtuelle</td>
+                        <td>virtual material transformation</td>
                     </tr>
                 
                 </tbody>
@@ -210,10 +242,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -236,20 +268,20 @@
                 
                     <tr>
                         <td><a href="M_O_.x.-.html">M:O:.x.-</a></td>
-                        <td>body in attribute</td>
                         <td>corps en attribut</td>
+                        <td>body in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.M_O_.-.html">M:O:.M:O:.-</a></td>
-                        <td>objects of performance</td>
                         <td>objets de performance</td>
+                        <td>objects of performance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.O_M_.-+M_O_.M_O_.-.html">O:M:.O:M:.-+M:O:.M:O:.-</a></td>
-                        <td>performative acts and objects of performance (verbs and nouns)</td>
                         <td>actes performatifs et objets de performance (verbes et noms)</td>
+                        <td>performative acts and objects of performance (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -257,11 +289,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -284,8 +317,8 @@
                 
                     <tr>
                         <td><a href="M_U_..html">M:U:.</a></td>
-                        <td>virtual agents</td>
                         <td>agents virtuels</td>
+                        <td>virtual agents</td>
                     </tr>
                 
                 </tbody>
@@ -293,8 +326,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -317,8 +350,8 @@
                 
                     <tr>
                         <td><a href="x..html">x.</a></td>
-                        <td>body</td>
                         <td>corps</td>
+                        <td>body</td>
                     </tr>
                 
                 </tbody>
@@ -326,8 +359,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,19 +374,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_U_.x.-.html">M:U:.x.-</a> virtual transformation in matter</div>-->
+            <!--<div class="card-header">Table <a href="M_U_.x.-.html">M:U:.x.-</a> transformation virtuelle dans la matière</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.x.-.html"> M:U:.x.- </a>
             <span class="translation"
-                data-fr="virtual transformation in matter"
-                data-en="transformation virtuelle dans la matière">
-                virtual transformation in matter
+                data-fr="transformation virtuelle dans la matière"
+                data-en="virtual transformation in matter">
+                transformation virtuelle dans la matière
             </span>
         </div>
     
@@ -368,9 +401,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.x.-.html"> j.x.- </a>
             <span class="translation"
-                data-fr="mathematical formalism"
-                data-en="formalisme mathématique">
-                mathematical formalism
+                data-fr="formalisme mathématique"
+                data-en="mathematical formalism">
+                formalisme mathématique
             </span>
         </div>
     
@@ -385,9 +418,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.x.-.html"> h.x.- </a>
             <span class="translation"
-                data-fr="applicant, candidate"
-                data-en="candidat">
-                applicant, candidate
+                data-fr="candidat"
+                data-en="applicant, candidate">
+                candidat
             </span>
         </div>
     
@@ -402,9 +435,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.x.-.html"> p.x.- </a>
             <span class="translation"
-                data-fr="exchange"
-                data-en="échange">
-                exchange
+                data-fr="échange"
+                data-en="exchange">
+                échange
             </span>
         </div>
     
@@ -418,7 +451,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -433,6 +466,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -442,6 +485,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -478,5 +522,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

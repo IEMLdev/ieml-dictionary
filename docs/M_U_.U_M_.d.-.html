@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:U:.U:M:.d.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>philosophical anthropology</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>anthropologie philosophique</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>anthropologie philosophique</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>philosophical anthropology</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,38 +202,38 @@
                 
                     <tr>
                         <td><a href="j.U_M_.d.-.html">j.U:M:.d.-</a></td>
-                        <td>epistemology, forms of knowledge</td>
                         <td>épistémologie, formes de connaissance</td>
+                        <td>epistemology, forms of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.d.-.html">h.U:M:.d.-</a></td>
-                        <td>ethics, subjective forms</td>
                         <td>éthique, formes subjectives</td>
+                        <td>ethics, subjective forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.U_M_.d.-.html">p.U:M:.d.-</a></td>
-                        <td>ontology, objective forms</td>
                         <td>ontologie, formes objectives</td>
+                        <td>ontology, objective forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.y.d.-.html">M:U:.y.d.-</a></td>
-                        <td>inside moment</td>
                         <td>moment intérieur</td>
+                        <td>inside moment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.o.d.-.html">M:U:.o.d.-</a></td>
-                        <td>interactive moment</td>
                         <td>moment interactif</td>
+                        <td>interactive moment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.e.d.-.html">M:U:.e.d.-</a></td>
-                        <td>outside moment</td>
                         <td>moment extérieur</td>
+                        <td>outside moment</td>
                     </tr>
                 
                 </tbody>
@@ -209,11 +241,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -236,8 +269,8 @@
                 
                     <tr>
                         <td><a href="M_U_..html">M:U:.</a></td>
-                        <td>virtual agents</td>
                         <td>agents virtuels</td>
+                        <td>virtual agents</td>
                     </tr>
                 
                 </tbody>
@@ -245,8 +278,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +302,8 @@
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="d..html">d.</a></td>
+                        <td>vérité</td>
                         <td>truth</td>
-                        <td>vérités</td>
                     </tr>
                 
                 </tbody>
@@ -311,9 +344,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -336,20 +369,20 @@
                 
                     <tr>
                         <td><a href="M_U_.U_M_.d.-U_.-'.html">M:U:.U:M:.d.-U:.-'</a></td>
-                        <td>moment actuel</td>
                         <td>moment virtuel</td>
+                        <td>moment actuel</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.U_M_.d.-A_.-'.html">M:U:.U:M:.d.-A:.-'</a></td>
-                        <td>actual moment</td>
                         <td>moment actuel</td>
+                        <td>actual moment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.U_M_.d.-O_.-'.html">M:U:.U:M:.d.-O:.-'</a></td>
-                        <td>philosophical anthropology: dialectics</td>
                         <td>anthropologie philosophique: dialectiques</td>
+                        <td>philosophical anthropology: dialectics</td>
                     </tr>
                 
                 </tbody>
@@ -357,7 +390,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -371,19 +404,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_U_.U_M_.d.-.html">M:U:.U:M:.d.-</a> philosophical anthropology</div>-->
+            <!--<div class="card-header">Table <a href="M_U_.U_M_.d.-.html">M:U:.U:M:.d.-</a> anthropologie philosophique</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.U_M_.d.-.html"> M:U:.U:M:.d.- </a>
             <span class="translation"
-                data-fr="philosophical anthropology"
-                data-en="anthropologie philosophique">
-                philosophical anthropology
+                data-fr="anthropologie philosophique"
+                data-en="philosophical anthropology">
+                anthropologie philosophique
             </span>
         </div>
     
@@ -394,14 +427,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.y.d.-.html"> M:U:.y.d.- </a>
             <span class="translation"
-                data-fr="inside moment"
-                data-en="moment intérieur">
-                inside moment
+                data-fr="moment intérieur"
+                data-en="inside moment">
+                moment intérieur
             </span>
         </div>
     
@@ -409,14 +442,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.o.d.-.html"> M:U:.o.d.- </a>
             <span class="translation"
-                data-fr="interactive moment"
-                data-en="moment interactif">
-                interactive moment
+                data-fr="moment interactif"
+                data-en="interactive moment">
+                moment interactif
             </span>
         </div>
     
@@ -424,14 +457,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.e.d.-.html"> M:U:.e.d.- </a>
             <span class="translation"
-                data-fr="outside moment"
-                data-en="moment extérieur">
-                outside moment
+                data-fr="moment extérieur"
+                data-en="outside moment">
+                moment extérieur
             </span>
         </div>
     
@@ -442,14 +475,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="j.U_M_.d.-.html"> j.U:M:.d.- </a>
             <span class="translation"
-                data-fr="epistemology, forms of knowledge"
-                data-en="épistémologie, formes de connaissance">
-                epistemology, forms of knowledge
+                data-fr="épistémologie, formes de connaissance"
+                data-en="epistemology, forms of knowledge">
+                épistémologie, formes de connaissance
             </span>
         </div>
     
@@ -463,9 +496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.y.d.-.html"> j.y.d.- </a>
             <span class="translation"
-                data-fr="theoretical knowledge"
-                data-en="connaissance théorique">
-                theoretical knowledge
+                data-fr="connaissance théorique"
+                data-en="theoretical knowledge">
+                connaissance théorique
             </span>
         </div>
     
@@ -478,9 +511,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.o.d.-.html"> j.o.d.- </a>
             <span class="translation"
-                data-fr="hermeneutical knowledge"
-                data-en="connaissance herméneutique">
-                hermeneutical knowledge
+                data-fr="connaissance herméneutique"
+                data-en="hermeneutical knowledge">
+                connaissance herméneutique
             </span>
         </div>
     
@@ -493,9 +526,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.e.d.-.html"> j.e.d.- </a>
             <span class="translation"
-                data-fr="aesthetic knowledge"
-                data-en="connaissance esthétique">
-                aesthetic knowledge
+                data-fr="connaissance esthétique"
+                data-en="aesthetic knowledge">
+                connaissance esthétique
             </span>
         </div>
     
@@ -506,14 +539,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.U_M_.d.-.html"> h.U:M:.d.- </a>
             <span class="translation"
-                data-fr="ethics, subjective forms"
-                data-en="éthique, formes subjectives">
-                ethics, subjective forms
+                data-fr="éthique, formes subjectives"
+                data-en="ethics, subjective forms">
+                éthique, formes subjectives
             </span>
         </div>
     
@@ -527,9 +560,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.d.-.html"> h.y.d.- </a>
             <span class="translation"
-                data-fr="subjectivity at the first person"
-                data-en="subjectivité à la première personne">
-                subjectivity at the first person
+                data-fr="subjectivité à la première personne"
+                data-en="subjectivity at the first person">
+                subjectivité à la première personne
             </span>
         </div>
     
@@ -542,9 +575,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.o.d.-.html"> h.o.d.- </a>
             <span class="translation"
-                data-fr="subjectivity at the second person"
-                data-en="subjectivité à la deuxième personne">
-                subjectivity at the second person
+                data-fr="subjectivité à la deuxième personne"
+                data-en="subjectivity at the second person">
+                subjectivité à la deuxième personne
             </span>
         </div>
     
@@ -557,9 +590,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.e.d.-.html"> h.e.d.- </a>
             <span class="translation"
-                data-fr="subjectivity at the third person"
-                data-en="subjectivité à la troisième personne">
-                subjectivity at the third person
+                data-fr="subjectivité à la troisième personne"
+                data-en="subjectivity at the third person">
+                subjectivité à la troisième personne
             </span>
         </div>
     
@@ -570,14 +603,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.U_M_.d.-.html"> p.U:M:.d.- </a>
             <span class="translation"
-                data-fr="ontology, objective forms"
-                data-en="ontologie, formes objectives">
-                ontology, objective forms
+                data-fr="ontologie, formes objectives"
+                data-en="ontology, objective forms">
+                ontologie, formes objectives
             </span>
         </div>
     
@@ -591,9 +624,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.y.d.-.html"> p.y.d.- </a>
             <span class="translation"
-                data-fr="logical objectivity"
-                data-en="objectivité logique">
-                logical objectivity
+                data-fr="objectivité logique"
+                data-en="logical objectivity">
+                objectivité logique
             </span>
         </div>
     
@@ -606,9 +639,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.o.d.-.html"> p.o.d.- </a>
             <span class="translation"
-                data-fr="causal objectivity"
-                data-en="objectivité causale">
-                causal objectivity
+                data-fr="objectivité causale"
+                data-en="causal objectivity">
+                objectivité causale
             </span>
         </div>
     
@@ -621,9 +654,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.e.d.-.html"> p.e.d.- </a>
             <span class="translation"
-                data-fr="real objectivity"
-                data-en="objectivité réelle">
-                real objectivity
+                data-fr="objectivité réelle"
+                data-en="real objectivity">
+                objectivité réelle
             </span>
         </div>
     
@@ -638,7 +671,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -653,6 +686,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -662,6 +705,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -698,5 +742,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

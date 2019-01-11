@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             wo.M:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>experience variation</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>variation de l'expérience</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>variation de l'expérience</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>experience variation</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,38 +202,38 @@
                 
                     <tr>
                         <td><a href="wo.S_M_.-.html">wo.S:M:.-</a></td>
-                        <td>cultivate the variation of sign experience</td>
                         <td>cultiver la variation de l'expérience du signe</td>
+                        <td>cultivate the variation of sign experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.B_M_.-.html">wo.B:M:.-</a></td>
-                        <td>cultivate the variation of being experience</td>
                         <td>cultiver la variation de l'expérience de l'être</td>
+                        <td>cultivate the variation of being experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.T_M_.-.html">wo.T:M:.-</a></td>
-                        <td>cultivate the variation of thing experience</td>
                         <td>cultiver la variation de l'expérience de la chose</td>
+                        <td>cultivate the variation of thing experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.M_S_.-.html">wo.M:S:.-</a></td>
-                        <td>cultivate the sign of experience variation</td>
                         <td>cultiver le signe de la variation de l'expérience</td>
+                        <td>cultivate the sign of experience variation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.M_B_.-.html">wo.M:B:.-</a></td>
-                        <td>cultivate the being of experience variation</td>
                         <td>cultiver l'être de la variation de l'expérience</td>
+                        <td>cultivate the being of experience variation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.M_T_.-.html">wo.M:T:.-</a></td>
-                        <td>cultivate the thing of experience variation</td>
                         <td>cultiver la chose de la variation de l'expérience</td>
+                        <td>cultivate the thing of experience variation</td>
                     </tr>
                 
                 </tbody>
@@ -209,8 +241,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -233,8 +265,8 @@
                 
                     <tr>
                         <td><a href="O_O_.M_M_.-.html">O:O:.M:M:.-</a></td>
-                        <td>nurturing action, personal development (verbs)</td>
                         <td>nourrir l'action, développement personnel (verbes)</td>
+                        <td>nurturing action, personal development (verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +302,8 @@
                 
                     <tr>
                         <td><a href="wo..html">wo.</a></td>
-                        <td>exist, begin</td>
                         <td>exister, devenir</td>
+                        <td>exist, begin</td>
                     </tr>
                 
                 </tbody>
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -326,19 +359,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="wo.M_M_.-.html">wo.M:M:.-</a> experience variation</div>-->
+            <!--<div class="card-header">Table <a href="wo.M_M_.-.html">wo.M:M:.-</a> variation de l'expérience</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.M_M_.-.html"> wo.M:M:.- </a>
             <span class="translation"
-                data-fr="experience variation"
-                data-en="variation de l'expérience">
-                experience variation
+                data-fr="variation de l'expérience"
+                data-en="experience variation">
+                variation de l'expérience
             </span>
         </div>
     
@@ -349,14 +382,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.M_S_.-.html"> wo.M:S:.- </a>
             <span class="translation"
-                data-fr="cultivate the sign of experience variation"
-                data-en="cultiver le signe de la variation de l'expérience">
-                cultivate the sign of experience variation
+                data-fr="cultiver le signe de la variation de l'expérience"
+                data-en="cultivate the sign of experience variation">
+                cultiver le signe de la variation de l'expérience
             </span>
         </div>
     
@@ -364,14 +397,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.M_B_.-.html"> wo.M:B:.- </a>
             <span class="translation"
-                data-fr="cultivate the being of experience variation"
-                data-en="cultiver l'être de la variation de l'expérience">
-                cultivate the being of experience variation
+                data-fr="cultiver l'être de la variation de l'expérience"
+                data-en="cultivate the being of experience variation">
+                cultiver l'être de la variation de l'expérience
             </span>
         </div>
     
@@ -379,14 +412,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.M_T_.-.html"> wo.M:T:.- </a>
             <span class="translation"
-                data-fr="cultivate the thing of experience variation"
-                data-en="cultiver la chose de la variation de l'expérience">
-                cultivate the thing of experience variation
+                data-fr="cultiver la chose de la variation de l'expérience"
+                data-en="cultivate the thing of experience variation">
+                cultiver la chose de la variation de l'expérience
             </span>
         </div>
     
@@ -397,14 +430,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.S_M_.-.html"> wo.S:M:.- </a>
             <span class="translation"
-                data-fr="cultivate the variation of sign experience"
-                data-en="cultiver la variation de l'expérience du signe">
-                cultivate the variation of sign experience
+                data-fr="cultiver la variation de l'expérience du signe"
+                data-en="cultivate the variation of sign experience">
+                cultiver la variation de l'expérience du signe
             </span>
         </div>
     
@@ -418,9 +451,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.s.-.html"> wo.s.- </a>
             <span class="translation"
-                data-fr="brainstorm"
-                data-en="brasser les idées">
-                brainstorm
+                data-fr="brasser les idées"
+                data-en="brainstorm">
+                brasser les idées
             </span>
         </div>
     
@@ -433,9 +466,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.b.-.html"> wo.b.- </a>
             <span class="translation"
-                data-fr="augment linguistic resources"
-                data-en="augmenter les ressources linguistiques">
-                augment linguistic resources
+                data-fr="augmenter les ressources linguistiques"
+                data-en="augment linguistic resources">
+                augmenter les ressources linguistiques
             </span>
         </div>
     
@@ -448,9 +481,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.t.-.html"> wo.t.- </a>
             <span class="translation"
-                data-fr="remember"
-                data-en="se remémorer">
-                remember
+                data-fr="se remémorer"
+                data-en="remember">
+                se remémorer
             </span>
         </div>
     
@@ -461,14 +494,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.B_M_.-.html"> wo.B:M:.- </a>
             <span class="translation"
-                data-fr="cultivate the variation of being experience"
-                data-en="cultiver la variation de l'expérience de l'être">
-                cultivate the variation of being experience
+                data-fr="cultiver la variation de l'expérience de l'être"
+                data-en="cultivate the variation of being experience">
+                cultiver la variation de l'expérience de l'être
             </span>
         </div>
     
@@ -482,9 +515,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.k.-.html"> wo.k.- </a>
             <span class="translation"
-                data-fr="plant the seeds of social change"
-                data-en="semer les graines du changement social">
-                plant the seeds of social change
+                data-fr="semer les graines du changement social"
+                data-en="plant the seeds of social change">
+                semer les graines du changement social
             </span>
         </div>
     
@@ -497,9 +530,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.m.-.html"> wo.m.- </a>
             <span class="translation"
-                data-fr="change emotional patterns"
-                data-en="changer les réflexes émotionnels">
-                change emotional patterns
+                data-fr="changer les réflexes émotionnels"
+                data-en="change emotional patterns">
+                changer les réflexes émotionnels
             </span>
         </div>
     
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.n.-.html"> wo.n.- </a>
             <span class="translation"
-                data-fr="change world representation"
-                data-en="changer de représentation du monde">
-                change world representation
+                data-fr="changer de représentation du monde"
+                data-en="change world representation">
+                changer de représentation du monde
             </span>
         </div>
     
@@ -525,14 +558,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.T_M_.-.html"> wo.T:M:.- </a>
             <span class="translation"
-                data-fr="cultivate the variation of thing experience"
-                data-en="cultiver la variation de l'expérience de la chose">
-                cultivate the variation of thing experience
+                data-fr="cultiver la variation de l'expérience de la chose"
+                data-en="cultivate the variation of thing experience">
+                cultiver la variation de l'expérience de la chose
             </span>
         </div>
     
@@ -546,9 +579,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.d.-.html"> wo.d.- </a>
             <span class="translation"
-                data-fr="meditate on different theories"
-                data-en="méditer sur différentes théories">
-                meditate on different theories
+                data-fr="méditer sur différentes théories"
+                data-en="meditate on different theories">
+                méditer sur différentes théories
             </span>
         </div>
     
@@ -561,9 +594,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.f.-.html"> wo.f.- </a>
             <span class="translation"
-                data-fr="experiment new bodily habits"
-                data-en="expérimenter de nouvelles habitudes corporelles">
-                experiment new bodily habits
+                data-fr="expérimenter de nouvelles habitudes corporelles"
+                data-en="experiment new bodily habits">
+                expérimenter de nouvelles habitudes corporelles
             </span>
         </div>
     
@@ -576,9 +609,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.l.-.html"> wo.l.- </a>
             <span class="translation"
-                data-fr="make room | reorganize"
-                data-en="faire de l'espace | réorganiser">
-                make room | reorganize
+                data-fr="faire de l'espace | réorganiser"
+                data-en="make room | reorganize">
+                faire de l'espace | réorganiser
             </span>
         </div>
     
@@ -593,7 +626,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -608,6 +641,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -617,6 +660,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -653,5 +697,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

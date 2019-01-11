@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             i.h.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>elaborate an interpretation</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>élaborer une interprétation</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>élaborer une interprétation</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>elaborate an interpretation</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,10 +168,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -163,44 +195,44 @@
                 
                     <tr>
                         <td><a href="i.B_O_.-.html">i.B:O:.-</a></td>
-                        <td>achieve a work according to being</td>
                         <td>parachever une oeuvre selon l'être</td>
+                        <td>achieve a work according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.h.-.html">O:T:.h.-</a></td>
-                        <td>work on the interpretation according to thing</td>
                         <td>travailler l'interprétation selon la chose</td>
+                        <td>work on the interpretation according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_U_.-.html">i.M:U:.-</a></td>
-                        <td>achieve a work virtually</td>
                         <td>parachever une oeuvre virtuellement</td>
+                        <td>achieve a work virtually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.h.-.html">A:M:.h.-</a></td>
-                        <td>work on the interpretation actually</td>
                         <td>travailler l'interprétation actuellement</td>
+                        <td>work on the interpretation actually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_O_.-.html">i.M:O:.-</a></td>
-                        <td>achieve  | improve a work</td>
                         <td>achever | améliorer une oeuvre</td>
+                        <td>achieve  | improve a work</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.h.-.html">O:M:.h.-</a></td>
-                        <td>work on the interpretation</td>
                         <td>travailler l'interprétation</td>
+                        <td>work on the interpretation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_O_.-.html">O:M:.M:O:.-</a></td>
-                        <td>cycle: creating a work of the mind (verbs)</td>
                         <td>cycle de la création d'une œuvre de l'esprit (verbes)</td>
+                        <td>cycle: creating a work of the mind (verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -208,11 +240,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -235,8 +268,8 @@
                 
                     <tr>
                         <td><a href="i..html">i.</a></td>
-                        <td>do</td>
                         <td>faire</td>
+                        <td>do</td>
                     </tr>
                 
                 </tbody>
@@ -244,8 +277,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -268,8 +301,8 @@
                 
                     <tr>
                         <td><a href="h..html">h.</a></td>
-                        <td>subject</td>
                         <td>sujet</td>
+                        <td>subject</td>
                     </tr>
                 
                 </tbody>
@@ -277,8 +310,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -287,7 +320,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -302,6 +335,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -311,6 +354,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -347,5 +391,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             wu.O:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>exert critical judgement</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>exercer son jugement critique</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>exercer son jugement critique</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>exert critical judgement</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,32 +202,32 @@
                 
                     <tr>
                         <td><a href="wu.O_S_.-.html">wu.O:S:.-</a></td>
-                        <td>exercise critical judgement according to the sign</td>
                         <td>exercer son jugement critique selon le signe</td>
+                        <td>exercise critical judgement according to the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_B_.-.html">wu.O:B:.-</a></td>
-                        <td>exercise critical jugement according to the being</td>
                         <td>exercer son jugement critique selon l'être</td>
+                        <td>exercise critical jugement according to the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_T_.-.html">wu.O:T:.-</a></td>
-                        <td>exercise critical judgement according to the thing</td>
                         <td>exercer son jugement critique selon la chose</td>
+                        <td>exercise critical judgement according to the thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.U_M_.-.html">wu.U:M:.-</a></td>
-                        <td>exercise critical judgement into the virtual</td>
                         <td>exercer son jugement critique dans le virtuel</td>
+                        <td>exercise critical judgement into the virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.A_M_.-.html">wu.A:M:.-</a></td>
-                        <td>exercise critical judgement into the actual</td>
                         <td>exercer son jugement critique dans l'actuel</td>
+                        <td>exercise critical judgement into the actual</td>
                     </tr>
                 
                 </tbody>
@@ -203,8 +235,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,8 +259,8 @@
                 
                     <tr>
                         <td><a href="O_O_.O_M_.-.html">O:O:.O:M:.-</a></td>
-                        <td>work cycle</td>
                         <td>cycle de travail</td>
+                        <td>work cycle</td>
                     </tr>
                 
                 </tbody>
@@ -236,11 +268,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -263,8 +296,8 @@
                 
                     <tr>
                         <td><a href="wu..html">wu.</a></td>
-                        <td>perceive</td>
                         <td>percevoir</td>
+                        <td>perceive</td>
                     </tr>
                 
                 </tbody>
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -305,8 +338,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -320,19 +353,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="wu.O_M_.-.html">wu.O:M:.-</a> exert critical judgement</div>-->
+            <!--<div class="card-header">Table <a href="wu.O_M_.-.html">wu.O:M:.-</a> exercer son jugement critique</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.O_M_.-.html"> wu.O:M:.- </a>
             <span class="translation"
-                data-fr="exert critical judgement"
-                data-en="exercer son jugement critique">
-                exert critical judgement
+                data-fr="exercer son jugement critique"
+                data-en="exert critical judgement">
+                exercer son jugement critique
             </span>
         </div>
     
@@ -343,14 +376,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.O_S_.-.html"> wu.O:S:.- </a>
             <span class="translation"
-                data-fr="exercise critical judgement according to the sign"
-                data-en="exercer son jugement critique selon le signe">
-                exercise critical judgement according to the sign
+                data-fr="exercer son jugement critique selon le signe"
+                data-en="exercise critical judgement according to the sign">
+                exercer son jugement critique selon le signe
             </span>
         </div>
     
@@ -358,14 +391,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.O_B_.-.html"> wu.O:B:.- </a>
             <span class="translation"
-                data-fr="exercise critical jugement according to the being"
-                data-en="exercer son jugement critique selon l'être">
-                exercise critical jugement according to the being
+                data-fr="exercer son jugement critique selon l'être"
+                data-en="exercise critical jugement according to the being">
+                exercer son jugement critique selon l'être
             </span>
         </div>
     
@@ -373,14 +406,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.O_T_.-.html"> wu.O:T:.- </a>
             <span class="translation"
-                data-fr="exercise critical judgement according to the thing"
-                data-en="exercer son jugement critique selon la chose">
-                exercise critical judgement according to the thing
+                data-fr="exercer son jugement critique selon la chose"
+                data-en="exercise critical judgement according to the thing">
+                exercer son jugement critique selon la chose
             </span>
         </div>
     
@@ -391,14 +424,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.U_M_.-.html"> wu.U:M:.- </a>
             <span class="translation"
-                data-fr="exercise critical judgement into the virtual"
-                data-en="exercer son jugement critique dans le virtuel">
-                exercise critical judgement into the virtual
+                data-fr="exercer son jugement critique dans le virtuel"
+                data-en="exercise critical judgement into the virtual">
+                exercer son jugement critique dans le virtuel
             </span>
         </div>
     
@@ -412,9 +445,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.y.-.html"> wu.y.- </a>
             <span class="translation"
-                data-fr="question accepted knowledge"
-                data-en="questionner les savoirs reçus">
-                question accepted knowledge
+                data-fr="questionner les savoirs reçus"
+                data-en="question accepted knowledge">
+                questionner les savoirs reçus
             </span>
         </div>
     
@@ -427,9 +460,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.o.-.html"> wu.o.- </a>
             <span class="translation"
-                data-fr="question oneself"
-                data-en="se remettre en question">
-                question oneself
+                data-fr="se remettre en question"
+                data-en="question oneself">
+                se remettre en question
             </span>
         </div>
     
@@ -442,9 +475,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.e.-.html"> wu.e.- </a>
             <span class="translation"
-                data-fr="assess competences"
-                data-en="évaluer les compétences">
-                assess competences
+                data-fr="évaluer les compétences"
+                data-en="assess competences">
+                évaluer les compétences
             </span>
         </div>
     
@@ -455,14 +488,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.A_M_.-.html"> wu.A:M:.- </a>
             <span class="translation"
-                data-fr="exercise critical judgement into the actual"
-                data-en="exercer son jugement critique dans l'actuel">
-                exercise critical judgement into the actual
+                data-fr="exercer son jugement critique dans l'actuel"
+                data-en="exercise critical judgement into the actual">
+                exercer son jugement critique dans l'actuel
             </span>
         </div>
     
@@ -476,9 +509,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.u.-.html"> wu.u.- </a>
             <span class="translation"
-                data-fr="navigate the communication channels"
-                data-en="s'orienter dans les canaux de communication">
-                navigate the communication channels
+                data-fr="s'orienter dans les canaux de communication"
+                data-en="navigate the communication channels">
+                s'orienter dans les canaux de communication
             </span>
         </div>
     
@@ -491,9 +524,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.a.-.html"> wu.a.- </a>
             <span class="translation"
-                data-fr="discern characters"
-                data-en="discerner les caractères">
-                discern characters
+                data-fr="discerner les caractères"
+                data-en="discern characters">
+                discerner les caractères
             </span>
         </div>
     
@@ -506,9 +539,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.i.-.html"> wu.i.- </a>
             <span class="translation"
-                data-fr="test equipment"
-                data-en="tester l'équipement">
-                test equipment
+                data-fr="tester l'équipement"
+                data-en="test equipment">
+                tester l'équipement
             </span>
         </div>
     
@@ -523,7 +556,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -538,6 +571,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -547,6 +590,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -583,5 +627,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

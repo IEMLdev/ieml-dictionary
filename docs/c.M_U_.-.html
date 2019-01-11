@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             c.M:U:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>virtual transformation of people</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>transformation virtuelle des personnes</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>transformation virtuelle des personnes</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>virtual transformation of people</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-crossed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="a.U_M_.-.html">a.U:M:.-</a></td>
-                        <td>perform virtually on a social basis</td>
                         <td>performer virtuellement sur une base sociale</td>
+                        <td>perform virtually on a social basis</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,8 +233,8 @@
                 
                     <tr>
                         <td><a href="M_U_.c.-.html">M:U:.c.-</a></td>
-                        <td>virtual transformation in people</td>
                         <td>transformation virtuelle dans les personnes</td>
+                        <td>virtual transformation in people</td>
                     </tr>
                 
                 </tbody>
@@ -210,10 +242,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -236,20 +268,20 @@
                 
                     <tr>
                         <td><a href="c.M_O_.-.html">c.M:O:.-</a></td>
-                        <td>individual in substance</td>
                         <td>individu en substance</td>
+                        <td>individual in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.M_O_.-.html">M:O:.M:O:.-</a></td>
-                        <td>objects of performance</td>
                         <td>objets de performance</td>
+                        <td>objects of performance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.O_M_.-+M_O_.M_O_.-.html">O:M:.O:M:.-+M:O:.M:O:.-</a></td>
-                        <td>performative acts and objects of performance (verbs and nouns)</td>
                         <td>actes performatifs et objets de performance (verbes et noms)</td>
+                        <td>performative acts and objects of performance (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -257,11 +289,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -284,8 +317,8 @@
                 
                     <tr>
                         <td><a href="c..html">c.</a></td>
-                        <td>individual</td>
                         <td>individu</td>
+                        <td>individual</td>
                     </tr>
                 
                 </tbody>
@@ -293,8 +326,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -317,8 +350,8 @@
                 
                     <tr>
                         <td><a href="M_U_..html">M:U:.</a></td>
-                        <td>virtual agents</td>
                         <td>agents virtuels</td>
+                        <td>virtual agents</td>
                     </tr>
                 
                 </tbody>
@@ -326,8 +359,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,19 +374,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="c.M_U_.-.html">c.M:U:.-</a> virtual transformation of people</div>-->
+            <!--<div class="card-header">Table <a href="c.M_U_.-.html">c.M:U:.-</a> transformation virtuelle des personnes</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="c.M_U_.-.html"> c.M:U:.- </a>
             <span class="translation"
-                data-fr="virtual transformation of people"
-                data-en="transformation virtuelle des personnes">
-                virtual transformation of people
+                data-fr="transformation virtuelle des personnes"
+                data-en="virtual transformation of people">
+                transformation virtuelle des personnes
             </span>
         </div>
     
@@ -368,9 +401,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.j.-.html"> c.j.- </a>
             <span class="translation"
-                data-fr="teaching"
-                data-en="enseignement">
-                teaching
+                data-fr="enseignement"
+                data-en="teaching">
+                enseignement
             </span>
         </div>
     
@@ -385,9 +418,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.h.-.html"> c.h.- </a>
             <span class="translation"
-                data-fr="staff, employee"
-                data-en="personnel, employé">
-                staff, employee
+                data-fr="personnel, employé"
+                data-en="staff, employee">
+                personnel, employé
             </span>
         </div>
     
@@ -402,9 +435,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.p.-.html"> c.p.- </a>
             <span class="translation"
-                data-fr="offer"
-                data-en="offre">
-                offer
+                data-fr="offre"
+                data-en="offer">
+                offre
             </span>
         </div>
     
@@ -418,7 +451,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -433,6 +466,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -442,6 +485,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -478,5 +522,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

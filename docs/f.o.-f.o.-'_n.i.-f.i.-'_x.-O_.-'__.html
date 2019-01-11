@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>third segment (end) of the limb</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>troisième segment (extrémité) du membre</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>troisième segment (extrémité) du membre</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>third segment (end) of the limb</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,32 +200,32 @@
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_j.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',j.-O:.-',_</a></td>
-                        <td>first joint of the limb</td>
                         <td>première articulation du membre</td>
+                        <td>first joint of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_g.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',g.-O:.-',_</a></td>
-                        <td>first segment of the limb</td>
                         <td>premier segment du membre</td>
+                        <td>first segment of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_</a></td>
-                        <td>second joint of the limb</td>
                         <td>deuxième articulation du membre</td>
+                        <td>second joint of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_c.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',c.-O:.-',_</a></td>
-                        <td>second segment of the limb</td>
                         <td>deuxième segment du membre</td>
+                        <td>second segment of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_p.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',p.-O:.-',_</a></td>
-                        <td>third joint of the limb</td>
                         <td>troisième articulation du membre</td>
+                        <td>third joint of the limb</td>
                     </tr>
                 
                 </tbody>
@@ -201,10 +233,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,14 +259,14 @@
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a></td>
-                        <td>body parts: limbs</td>
                         <td>Parties du corps: membres</td>
+                        <td>body parts: limbs</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__+f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>body parts</td>
                         <td>parties du corps</td>
+                        <td>body parts</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +302,8 @@
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'.html">f.o.-f.o.-'</a></td>
-                        <td>body</td>
                         <td>corps</td>
+                        <td>body</td>
                     </tr>
                 
                 </tbody>
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="n.i.-f.i.-'.html">n.i.-f.i.-'</a></td>
-                        <td>limb, end of limb, hand and foot</td>
                         <td>membre, extrémité, main et pied</td>
+                        <td>limb, end of limb, hand and foot</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -335,20 +368,20 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x..html">x.</a></td>
-                        <td>body</td>
                         <td>corps</td>
+                        <td>body</td>
                     </tr>
                 
                 </tbody>
@@ -356,9 +389,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -381,68 +414,68 @@
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_U_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:U:.-',_;</a></td>
-                        <td>fifth finger | toe</td>
                         <td>cinquième doigt | orteil</td>
+                        <td>fifth finger | toe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_A_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:A:.-',_;</a></td>
-                        <td>fourth finger | toe</td>
                         <td>quatrième doigt | orteil</td>
+                        <td>fourth finger | toe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_S_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:S:.-',_;</a></td>
-                        <td>third finger | toe</td>
                         <td>troisième doigt | orteil</td>
+                        <td>third finger | toe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_B_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:B:.-',_;</a></td>
-                        <td>second finger | toe</td>
                         <td>second doigt | orteil</td>
+                        <td>second finger | toe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_T_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:T:.-',_;</a></td>
-                        <td>first finger | toe</td>
                         <td>premier doigt | orteil</td>
+                        <td>first finger | toe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__S_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_S:.-',_;</a></td>
-                        <td>heel of the hand and the foot</td>
                         <td>talon de la main et du pied</td>
+                        <td>heel of the hand and the foot</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__B_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_B:.-',_;</a></td>
-                        <td>palm and sole (face of the extremity)</td>
                         <td>paume et plante (face de l'extrémité)</td>
+                        <td>palm and sole (face of the extremity)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__T_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_T:.-',_;</a></td>
-                        <td>back of the hand and top of the foot</td>
                         <td>dos de la main et du pied</td>
+                        <td>back of the hand and top of the foot</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__M_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_M:.-',_;</a></td>
-                        <td>body of the hand and the foot</td>
                         <td>corps de la main et du pied</td>
+                        <td>body of the hand and the foot</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:F:.-',_;</a></td>
-                        <td>fingers and toes</td>
                         <td>doigts et orteils</td>
+                        <td>fingers and toes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__M_.-'___+f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__E_F_.-'___.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_M:.-',_;+f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_E:F:.-',_;</a></td>
-                        <td>parts of hands and feet</td>
                         <td>parties des mains et des pieds</td>
+                        <td>parts of hands and feet</td>
                     </tr>
                 
                 </tbody>
@@ -450,7 +483,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -464,19 +497,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_</a> third segment (end) of the limb</div>-->
+            <!--<div class="card-header">Table <a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_</a> troisième segment (extrémité) du membre</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_ </a>
             <span class="translation"
-                data-fr="third segment (end) of the limb"
-                data-en="troisième segment (extrémité) du membre">
-                third segment (end) of the limb
+                data-fr="troisième segment (extrémité) du membre"
+                data-en="third segment (end) of the limb">
+                troisième segment (extrémité) du membre
             </span>
         </div>
     
@@ -491,9 +524,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-U:.-',_ </a>
             <span class="translation"
-                data-fr="hand"
-                data-en="main">
-                hand
+                data-fr="main"
+                data-en="hand">
+                main
             </span>
         </div>
     
@@ -508,9 +541,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-A:.-',_ </a>
             <span class="translation"
-                data-fr="foot"
-                data-en="pied">
-                foot
+                data-fr="pied"
+                data-en="foot">
+                pied
             </span>
         </div>
     
@@ -524,7 +557,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -539,6 +572,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -548,6 +591,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -584,5 +628,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.A:.E:T:.+I:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>metadata: identity of data</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>métadonnées: identité des données</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>métadonnées: identité des données</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>metadata: identity of data</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="E_.O_.E_T_.+I_.-.html">E:.O:.E:T:.+I:.-</a></td>
-                        <td>document metadata</td>
                         <td>métadonnées documentaires</td>
+                        <td>document metadata</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -239,32 +272,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -287,19 +320,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.A_.E_T_.+I_.-.html">E:.A:.E:T:.+I:.-</a> metadata: identity of data</div>-->
+            <!--<div class="card-header">Table <a href="E_.A_.E_T_.+I_.-.html">E:.A:.E:T:.+I:.-</a> métadonnées: identité des données</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.E_T_.+I_.-.html"> E:.A:.E:T:.+I:.- </a>
             <span class="translation"
-                data-fr="metadata: identity of data"
-                data-en="métadonnées: identité des données">
-                metadata: identity of data
+                data-fr="métadonnées: identité des données"
+                data-en="metadata: identity of data">
+                métadonnées: identité des données
             </span>
         </div>
     
@@ -314,9 +347,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.-.html"> E:.A:.- </a>
             <span class="translation"
-                data-fr="metadata: authors, contributors..."
-                data-en="métadonnées: auteurs, contributeurs...">
-                metadata: authors, contributors...
+                data-fr="métadonnées: auteurs, contributeurs..."
+                data-en="metadata: authors, contributors...">
+                métadonnées: auteurs, contributeurs...
             </span>
         </div>
     
@@ -331,9 +364,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.E_T_.-.html"> E:.A:.E:T:.- </a>
             <span class="translation"
-                data-fr="metadata: publishing house, journal..."
-                data-en="métadonnées: maison d'édition, journal...">
-                metadata: publishing house, journal...
+                data-fr="métadonnées: maison d'édition, journal..."
+                data-en="metadata: publishing house, journal...">
+                métadonnées: maison d'édition, journal...
             </span>
         </div>
     
@@ -348,9 +381,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.U_.-.html"> E:.A:.U:.- </a>
             <span class="translation"
-                data-fr="metadata: date of publication, version"
-                data-en="métadonnées: date de publication, version...">
-                metadata: date of publication, version
+                data-fr="métadonnées: date de publication, version..."
+                data-en="metadata: date of publication, version">
+                métadonnées: date de publication, version...
             </span>
         </div>
     
@@ -365,9 +398,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.A_.-.html"> E:.A:.A:.- </a>
             <span class="translation"
-                data-fr="metadata: rights, license"
-                data-en="métadonnées: droits, licence...">
-                metadata: rights, license
+                data-fr="métadonnées: droits, licence..."
+                data-en="metadata: rights, license">
+                métadonnées: droits, licence...
             </span>
         </div>
     
@@ -382,9 +415,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.S_.-.html"> E:.A:.S:.- </a>
             <span class="translation"
-                data-fr="metadata: natural language"
-                data-en="métadonnées: langue naturelle">
-                metadata: natural language
+                data-fr="métadonnées: langue naturelle"
+                data-en="metadata: natural language">
+                métadonnées: langue naturelle
             </span>
         </div>
     
@@ -399,9 +432,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.B_.-.html"> E:.A:.B:.- </a>
             <span class="translation"
-                data-fr="metadata: file's format"
-                data-en="métadonnées: format de fichier">
-                metadata: file's format
+                data-fr="métadonnées: format de fichier"
+                data-en="metadata: file's format">
+                métadonnées: format de fichier
             </span>
         </div>
     
@@ -416,9 +449,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.A_.T_.-.html"> E:.A:.T:.- </a>
             <span class="translation"
-                data-fr="metadata: size of the file"
-                data-en="métadonnées: taille du fichier">
-                metadata: size of the file
+                data-fr="métadonnées: taille du fichier"
+                data-en="metadata: size of the file">
+                métadonnées: taille du fichier
             </span>
         </div>
     
@@ -432,7 +465,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -447,6 +480,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -456,6 +499,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -492,5 +536,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

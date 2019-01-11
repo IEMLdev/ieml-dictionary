@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             h.y.-wu.wu.t.-E:.-+S:M:.e.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>superior cycle (adult)</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>cycle supérieur (adulte)</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>cycle supérieur (adulte)</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>superior cycle (adult)</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="h.y.-wu.O_O_.t.-E_.-+S_M_.e.-'.html">h.y.-wu.O:O:.t.-E:.-+S:M:.e.-'</a></td>
-                        <td>scholarship cycle</td>
                         <td>cycle scolaire</td>
+                        <td>scholarship cycle</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="h.y.-.html">h.y.-</a></td>
-                        <td>school</td>
                         <td>école</td>
+                        <td>school</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -239,8 +272,8 @@
                 
                     <tr>
                         <td><a href="wu.wu.t.-.html">wu.wu.t.-</a></td>
-                        <td>be mature</td>
                         <td>être mûr</td>
+                        <td>be mature</td>
                     </tr>
                 
                 </tbody>
@@ -248,8 +281,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -272,8 +305,8 @@
                 
                     <tr>
                         <td><a href="S_M_.e.-.html">S:M:.e.-</a></td>
-                        <td>know how of the sign, trivium in the narrow sense</td>
                         <td>savoir faire portant sur les signes, trivium au sens étroit</td>
+                        <td>know how of the sign, trivium in the narrow sense</td>
                     </tr>
                 
                 </tbody>
@@ -281,8 +314,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -296,19 +329,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="h.y.-wu.wu.t.-E_.-+S_M_.e.-'.html">h.y.-wu.wu.t.-E:.-+S:M:.e.-'</a> superior cycle (adult)</div>-->
+            <!--<div class="card-header">Table <a href="h.y.-wu.wu.t.-E_.-+S_M_.e.-'.html">h.y.-wu.wu.t.-E:.-+S:M:.e.-'</a> cycle supérieur (adulte)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-wu.wu.t.-E_.-+S_M_.e.-'.html"> h.y.-wu.wu.t.-E:.-+S:M:.e.-' </a>
             <span class="translation"
-                data-fr="superior cycle (adult)"
-                data-en="cycle supérieur (adulte)">
-                superior cycle (adult)
+                data-fr="cycle supérieur (adulte)"
+                data-en="superior cycle (adult)">
+                cycle supérieur (adulte)
             </span>
         </div>
     
@@ -323,9 +356,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-wu.wu.t.-'.html"> h.y.-wu.wu.t.-' </a>
             <span class="translation"
-                data-fr="higher education institution, university"
-                data-en="institution d'éducation supérieure, université">
-                higher education institution, university
+                data-fr="institution d'éducation supérieure, université"
+                data-en="higher education institution, university">
+                institution d'éducation supérieure, université
             </span>
         </div>
     
@@ -340,9 +373,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-wu.wu.t.-s.e.-'.html"> h.y.-wu.wu.t.-s.e.-' </a>
             <span class="translation"
-                data-fr="bac, graduation cycle, college"
-                data-en="cycle de bacalauréat, de licence">
-                bac, graduation cycle, college
+                data-fr="cycle de bacalauréat, de licence"
+                data-en="bac, graduation cycle, college">
+                cycle de bacalauréat, de licence
             </span>
         </div>
     
@@ -357,9 +390,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-wu.wu.t.-b.e.-'.html"> h.y.-wu.wu.t.-b.e.-' </a>
             <span class="translation"
-                data-fr="master cycle (higher education)"
-                data-en="cycle de maîtrise universitaire">
-                master cycle (higher education)
+                data-fr="cycle de maîtrise universitaire"
+                data-en="master cycle (higher education)">
+                cycle de maîtrise universitaire
             </span>
         </div>
     
@@ -374,9 +407,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-wu.wu.t.-t.e.-'.html"> h.y.-wu.wu.t.-t.e.-' </a>
             <span class="translation"
-                data-fr="doctorate"
-                data-en="doctorat">
-                doctorate
+                data-fr="doctorat"
+                data-en="doctorate">
+                doctorat
             </span>
         </div>
     
@@ -390,7 +423,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -405,6 +438,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -414,6 +457,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -450,5 +494,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

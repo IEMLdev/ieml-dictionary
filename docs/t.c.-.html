@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             t.c.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>political legacy</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>legs politique</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>legs politique</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>political legacy</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -161,8 +193,8 @@
                 
                     <tr>
                         <td><a href="c.t.-.html">c.t.-</a></td>
-                        <td>erosion of political base</td>
                         <td>érosion de la base politique</td>
+                        <td>erosion of political base</td>
                     </tr>
                 
                 </tbody>
@@ -170,10 +202,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -196,38 +228,38 @@
                 
                     <tr>
                         <td><a href="t.B_O_.-.html">t.B:O:.-</a></td>
-                        <td>subjective projection in time</td>
                         <td>projection subjective dans le temps</td>
+                        <td>subjective projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.M_A_.-.html">t.M:A:.-</a></td>
-                        <td>actual projection in time</td>
                         <td>projection actuelle dans le temps</td>
+                        <td>actual projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.M_O_.-.html">t.M:O:.-</a></td>
-                        <td>projection in time</td>
                         <td>projection dans le temps</td>
+                        <td>projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.c.-.html">M:M:.c.-</a></td>
-                        <td>political creation</td>
                         <td>création politique</td>
+                        <td>political creation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.M_O_.-.html">M:M:.M:O:.-</a></td>
-                        <td>creation-innovation cycle</td>
                         <td>cycle de création-innovation</td>
+                        <td>creation-innovation cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.M_M_.-+M_M_.M_O_.-.html">M:O:.M:M:.-+M:M:.M:O:.-</a></td>
-                        <td>déterminations of creation (positive and negative)</td>
                         <td>déterminants de la création (positifs et négatifs)</td>
+                        <td>déterminations of creation (positive and negative)</td>
                     </tr>
                 
                 </tbody>
@@ -235,11 +267,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -262,8 +295,8 @@
                 
                     <tr>
                         <td><a href="t..html">t.</a></td>
+                        <td>mémoire</td>
                         <td>memory</td>
-                        <td>mémoires</td>
                     </tr>
                 
                 </tbody>
@@ -271,8 +304,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -295,8 +328,8 @@
                 
                     <tr>
                         <td><a href="c..html">c.</a></td>
-                        <td>individual</td>
                         <td>individu</td>
+                        <td>individual</td>
                     </tr>
                 
                 </tbody>
@@ -304,8 +337,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,7 +347,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -329,6 +362,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -338,6 +381,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -374,5 +418,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

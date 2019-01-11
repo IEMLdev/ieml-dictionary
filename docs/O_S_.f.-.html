@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:S:.f.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>weaken life in an abstract way</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>affaiblir la vie abstraitement</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>affaiblir la vie abstraitement</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>weaken life in an abstract way</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="f.O_S_.-.html">f.O:S:.-</a></td>
-                        <td>abstract life factors</td>
                         <td>facteurs abstraits de vie</td>
+                        <td>abstract life factors</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,20 +235,20 @@
                 
                     <tr>
                         <td><a href="O_M_.f.-.html">O:M:.f.-</a></td>
-                        <td>weaken life</td>
                         <td>affaiblir la vie</td>
+                        <td>weaken life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-.html">O:M:.M:M:.-</a></td>
-                        <td>undermine human development</td>
                         <td>saper le développement humain</td>
+                        <td>undermine human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
-                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                         <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -224,11 +256,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -251,8 +284,8 @@
                 
                     <tr>
                         <td><a href="O_S_..html">O:S:.</a></td>
-                        <td>signifying actions</td>
                         <td>actions signifiantes</td>
+                        <td>signifying actions</td>
                     </tr>
                 
                 </tbody>
@@ -260,8 +293,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -284,8 +317,8 @@
                 
                     <tr>
                         <td><a href="f..html">f.</a></td>
+                        <td>vie</td>
                         <td>life</td>
-                        <td>vies</td>
                     </tr>
                 
                 </tbody>
@@ -293,8 +326,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -308,19 +341,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_S_.f.-.html">O:S:.f.-</a> weaken life in an abstract way</div>-->
+            <!--<div class="card-header">Table <a href="O_S_.f.-.html">O:S:.f.-</a> affaiblir la vie abstraitement</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_S_.f.-.html"> O:S:.f.- </a>
             <span class="translation"
-                data-fr="weaken life in an abstract way"
-                data-en="affaiblir la vie abstraitement">
-                weaken life in an abstract way
+                data-fr="affaiblir la vie abstraitement"
+                data-en="weaken life in an abstract way">
+                affaiblir la vie abstraitement
             </span>
         </div>
     
@@ -335,9 +368,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.f.-.html"> y.f.- </a>
             <span class="translation"
-                data-fr="intoxicate | deceive"
-                data-en="intoxiquer | tromper">
-                intoxicate | deceive
+                data-fr="intoxiquer | tromper"
+                data-en="intoxicate | deceive">
+                intoxiquer | tromper
             </span>
         </div>
     
@@ -352,9 +385,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.f.-.html"> u.f.- </a>
             <span class="translation"
-                data-fr="shun one's sensations | anesthetize"
-                data-en="fuir ses sensations | anesthésier">
-                shun one's sensations | anesthetize
+                data-fr="fuir ses sensations | anesthésier"
+                data-en="shun one's sensations | anesthetize">
+                fuir ses sensations | anesthésier
             </span>
         </div>
     
@@ -368,7 +401,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -383,6 +416,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -392,6 +435,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -428,5 +472,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:O:.U:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>condition of virtual activity</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>condition de l'activité virtuelle</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>condition de l'activité virtuelle</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>condition of virtual activity</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,146 +202,146 @@
                 
                     <tr>
                         <td><a href="S_O_.y.-.html">S:O:.y.-</a></td>
-                        <td>intellectual conditions of knowledge</td>
                         <td>conditions intellectuelles du savoir</td>
+                        <td>intellectual conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_O_.o.-.html">S:O:.o.-</a></td>
-                        <td>unconscious conditions of desire</td>
                         <td>conditions inconscientes du désir</td>
+                        <td>unconscious conditions of desire</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_O_.e.-.html">S:O:.e.-</a></td>
-                        <td>conditions of power in the communication</td>
                         <td>conditions du pouvoir dans la communication</td>
+                        <td>conditions of power in the communication</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.y.-.html">B:O:.y.-</a></td>
-                        <td>social conditions of knowledge</td>
                         <td>conditions sociales du savoir</td>
+                        <td>social conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.o.-.html">B:O:.o.-</a></td>
-                        <td>energetic conditions of desire</td>
                         <td>conditions énergétiques du désir</td>
+                        <td>energetic conditions of desire</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.e.-.html">B:O:.e.-</a></td>
-                        <td>energetic conditions of power</td>
                         <td>conditions énergétique du pouvoir</td>
+                        <td>energetic conditions of power</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.y.-.html">T:O:.y.-</a></td>
-                        <td>empirical conditions of knowledge</td>
                         <td>conditions empiriques du savoir</td>
+                        <td>empirical conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.o.-.html">T:O:.o.-</a></td>
-                        <td>conditions of desire fulfillment</td>
                         <td>conditions d'accomplissement du désir</td>
+                        <td>conditions of desire fulfillment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.e.-.html">T:O:.e.-</a></td>
-                        <td>concrete conditions of power</td>
                         <td>conditions concrètes du pouvoir</td>
+                        <td>concrete conditions of power</td>
                     </tr>
                 
                     <tr>
                         <td><a href="j.U_M_.-.html">j.U:M:.-</a></td>
-                        <td>virtual structural framwork</td>
                         <td>cadre structurel virtuel</td>
+                        <td>virtual structural framwork</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.U_M_.-.html">g.U:M:.-</a></td>
-                        <td>virtual process of expression</td>
                         <td>processus d'expression virtuel</td>
+                        <td>virtual process of expression</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.-.html">h.U:M:.-</a></td>
-                        <td>virtual semantic framework</td>
                         <td>cadre sémantique virtuel</td>
+                        <td>virtual semantic framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.U_M_.-.html">c.U:M:.-</a></td>
-                        <td>virtual personal process</td>
                         <td>processus personnel virtuel</td>
+                        <td>virtual personal process</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.U_M_.-.html">p.U:M:.-</a></td>
-                        <td>virtual referential framework</td>
                         <td>cadre référentiel virtuel</td>
+                        <td>virtual referential framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.U_M_.-.html">x.U:M:.-</a></td>
-                        <td>virtual material process</td>
                         <td>processus matériel virtuel</td>
+                        <td>virtual material process</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.y.-.html">M:U:.y.-</a></td>
-                        <td>virtual conditions of knowledge</td>
                         <td>conditions virtuelles du savoir</td>
+                        <td>virtual conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.o.-.html">M:U:.o.-</a></td>
-                        <td>virtual conditions of desire</td>
                         <td>conditions virtuelles du désir</td>
+                        <td>virtual conditions of desire</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.e.-.html">M:U:.e.-</a></td>
-                        <td>virtual conditions of power</td>
                         <td>conditions virtuelles du pouvoir</td>
+                        <td>virtual conditions of power</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.y.-.html">M:A:.y.-</a></td>
-                        <td>actual conditions of knowledge</td>
                         <td>conditions actuelles du savoir</td>
+                        <td>actual conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.o.-.html">M:A:.o.-</a></td>
-                        <td>actual conditions of desire</td>
                         <td>conditions actuelles du désir</td>
+                        <td>actual conditions of desire</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.e.-.html">M:A:.e.-</a></td>
-                        <td>actual conditions of power</td>
                         <td>conditions actuelles du pouvoir</td>
+                        <td>actual conditions of power</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.y.-.html">M:O:.y.-</a></td>
-                        <td>conditions of knowledge</td>
                         <td>conditions du savoir</td>
+                        <td>conditions of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.o.-.html">M:O:.o.-</a></td>
-                        <td>conditions of desire</td>
                         <td>conditions du désir</td>
+                        <td>conditions of desire</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.e.-.html">M:O:.e.-</a></td>
-                        <td>conditions of power</td>
                         <td>conditions du pouvoir</td>
+                        <td>conditions of power</td>
                     </tr>
                 
                 </tbody>
@@ -317,8 +349,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -341,8 +373,8 @@
                 
                     <tr>
                         <td><a href="M_O_.O_M_.-.html">M:O:.O:M:.-</a></td>
-                        <td>conditions of activity</td>
                         <td>conditions de l'activité</td>
+                        <td>conditions of activity</td>
                     </tr>
                 
                 </tbody>
@@ -350,11 +382,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -386,8 +419,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -410,8 +443,8 @@
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -419,8 +452,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -434,19 +467,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_O_.U_M_.-.html">M:O:.U:M:.-</a> condition of virtual activity</div>-->
+            <!--<div class="card-header">Table <a href="M_O_.U_M_.-.html">M:O:.U:M:.-</a> condition de l'activité virtuelle</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.U_M_.-.html"> M:O:.U:M:.- </a>
             <span class="translation"
-                data-fr="condition of virtual activity"
-                data-en="condition de l'activité virtuelle">
-                condition of virtual activity
+                data-fr="condition de l'activité virtuelle"
+                data-en="condition of virtual activity">
+                condition de l'activité virtuelle
             </span>
         </div>
     
@@ -457,14 +490,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.y.-.html"> M:O:.y.- </a>
             <span class="translation"
-                data-fr="conditions of knowledge"
-                data-en="conditions du savoir">
-                conditions of knowledge
+                data-fr="conditions du savoir"
+                data-en="conditions of knowledge">
+                conditions du savoir
             </span>
         </div>
     
@@ -472,14 +505,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.o.-.html"> M:O:.o.- </a>
             <span class="translation"
-                data-fr="conditions of desire"
-                data-en="conditions du désir">
-                conditions of desire
+                data-fr="conditions du désir"
+                data-en="conditions of desire">
+                conditions du désir
             </span>
         </div>
     
@@ -487,14 +520,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.e.-.html"> M:O:.e.- </a>
             <span class="translation"
-                data-fr="conditions of power"
-                data-en="conditions du pouvoir">
-                conditions of power
+                data-fr="conditions du pouvoir"
+                data-en="conditions of power">
+                conditions du pouvoir
             </span>
         </div>
     
@@ -505,14 +538,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="j.U_M_.-.html"> j.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual structural framwork"
-                data-en="cadre structurel virtuel">
-                virtual structural framwork
+                data-fr="cadre structurel virtuel"
+                data-en="virtual structural framwork">
+                cadre structurel virtuel
             </span>
         </div>
     
@@ -526,9 +559,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.y.-.html"> j.y.- </a>
             <span class="translation"
-                data-fr="hypothesis | conceptual framework"
-                data-en="hypothèse | cadre conceptuel">
-                hypothesis | conceptual framework
+                data-fr="hypothèse | cadre conceptuel"
+                data-en="hypothesis | conceptual framework">
+                hypothèse | cadre conceptuel
             </span>
         </div>
     
@@ -541,9 +574,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.o.-.html"> j.o.- </a>
             <span class="translation"
-                data-fr="acknowledgement of the unconscious"
-                data-en="reconnaissance de l'inconscient">
-                acknowledgement of the unconscious
+                data-fr="reconnaissance de l'inconscient"
+                data-en="acknowledgement of the unconscious">
+                reconnaissance de l'inconscient
             </span>
         </div>
     
@@ -556,9 +589,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.e.-.html"> j.e.- </a>
             <span class="translation"
-                data-fr="obedience"
-                data-en="obéissance">
-                obedience
+                data-fr="obéissance"
+                data-en="obedience">
+                obéissance
             </span>
         </div>
     
@@ -569,14 +602,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="g.U_M_.-.html"> g.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual process of expression"
-                data-en="processus d'expression virtuel">
-                virtual process of expression
+                data-fr="processus d'expression virtuel"
+                data-en="virtual process of expression">
+                processus d'expression virtuel
             </span>
         </div>
     
@@ -590,9 +623,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.y.-.html"> g.y.- </a>
             <span class="translation"
-                data-fr="bibliography, literature review"
-                data-en="bibliographie, revue de littérature">
-                bibliography, literature review
+                data-fr="bibliographie, revue de littérature"
+                data-en="bibliography, literature review">
+                bibliographie, revue de littérature
             </span>
         </div>
     
@@ -605,9 +638,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.o.-.html"> g.o.- </a>
             <span class="translation"
-                data-fr="expression of the unconscious"
-                data-en="expression de l'inconscient">
-                expression of the unconscious
+                data-fr="expression de l'inconscient"
+                data-en="expression of the unconscious">
+                expression de l'inconscient
             </span>
         </div>
     
@@ -620,9 +653,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.e.-.html"> g.e.- </a>
             <span class="translation"
-                data-fr="order | decree"
-                data-en="ordre | décret">
-                order | decree
+                data-fr="ordre | décret"
+                data-en="order | decree">
+                ordre | décret
             </span>
         </div>
     
@@ -633,14 +666,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.U_M_.-.html"> h.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual semantic framework"
-                data-en="cadre sémantique virtuel">
-                virtual semantic framework
+                data-fr="cadre sémantique virtuel"
+                data-en="virtual semantic framework">
+                cadre sémantique virtuel
             </span>
         </div>
     
@@ -654,9 +687,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.-.html"> h.y.- </a>
             <span class="translation"
-                data-fr="school"
-                data-en="école">
-                school
+                data-fr="école"
+                data-en="school">
+                école
             </span>
         </div>
     
@@ -669,9 +702,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.o.-.html"> h.o.- </a>
             <span class="translation"
-                data-fr="impulse"
-                data-en="pulsion">
-                impulse
+                data-fr="pulsion"
+                data-en="impulse">
+                pulsion
             </span>
         </div>
     
@@ -684,9 +717,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.e.-.html"> h.e.- </a>
             <span class="translation"
-                data-fr="legitimacy"
-                data-en="légitimité">
-                legitimacy
+                data-fr="légitimité"
+                data-en="legitimacy">
+                légitimité
             </span>
         </div>
     
@@ -697,14 +730,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="c.U_M_.-.html"> c.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual personal process"
-                data-en="processus personnel virtuel">
-                virtual personal process
+                data-fr="processus personnel virtuel"
+                data-en="virtual personal process">
+                processus personnel virtuel
             </span>
         </div>
     
@@ -718,9 +751,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.y.-.html"> c.y.- </a>
             <span class="translation"
-                data-fr="diploma | credit for competency"
-                data-en="diplôme | crédit de compétence">
-                diploma | credit for competency
+                data-fr="diplôme | crédit de compétence"
+                data-en="diploma | credit for competency">
+                diplôme | crédit de compétence
             </span>
         </div>
     
@@ -733,9 +766,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.o.-.html"> c.o.- </a>
             <span class="translation"
-                data-fr="prohibition | renunciation"
-                data-en="interdit | renoncement">
-                prohibition | renunciation
+                data-fr="interdit | renoncement"
+                data-en="prohibition | renunciation">
+                interdit | renoncement
             </span>
         </div>
     
@@ -748,9 +781,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.e.-.html"> c.e.- </a>
             <span class="translation"
-                data-fr="seizure of power"
-                data-en="prise du pouvoir">
-                seizure of power
+                data-fr="prise du pouvoir"
+                data-en="seizure of power">
+                prise du pouvoir
             </span>
         </div>
     
@@ -761,14 +794,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.U_M_.-.html"> p.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual referential framework"
-                data-en="cadre référentiel virtuel">
-                virtual referential framework
+                data-fr="cadre référentiel virtuel"
+                data-en="virtual referential framework">
+                cadre référentiel virtuel
             </span>
         </div>
     
@@ -812,9 +845,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.e.-.html"> p.e.- </a>
             <span class="translation"
-                data-fr="domain of competence"
-                data-en="domaine de compétence">
-                domain of competence
+                data-fr="domaine de compétence"
+                data-en="domain of competence">
+                domaine de compétence
             </span>
         </div>
     
@@ -825,14 +858,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="x.U_M_.-.html"> x.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual material process"
-                data-en="processus matériel virtuel">
-                virtual material process
+                data-fr="processus matériel virtuel"
+                data-en="virtual material process">
+                processus matériel virtuel
             </span>
         </div>
     
@@ -846,9 +879,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.y.-.html"> x.y.- </a>
             <span class="translation"
-                data-fr="experience | experimentation"
-                data-en="expérience | expérimentation">
-                experience | experimentation
+                data-fr="expérience | expérimentation"
+                data-en="experience | experimentation">
+                expérience | expérimentation
             </span>
         </div>
     
@@ -861,9 +894,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.o.-.html"> x.o.- </a>
             <span class="translation"
-                data-fr="enjoyment"
-                data-en="jouissance">
-                enjoyment
+                data-fr="jouissance"
+                data-en="enjoyment">
+                jouissance
             </span>
         </div>
     
@@ -876,9 +909,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.e.-.html"> x.e.- </a>
             <span class="translation"
-                data-fr="exercise of power"
-                data-en="exercice du pouvoir">
-                exercise of power
+                data-fr="exercice du pouvoir"
+                data-en="exercise of power">
+                exercice du pouvoir
             </span>
         </div>
     
@@ -893,7 +926,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -908,6 +941,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -917,6 +960,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -953,5 +997,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

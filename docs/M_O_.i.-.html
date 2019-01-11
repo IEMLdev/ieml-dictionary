@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:O:.i.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>condition of efficiency</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>condition de l'efficacité</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>condition de l'efficacité</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>condition of efficiency</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,32 +202,32 @@
                 
                     <tr>
                         <td><a href="S_O_.i.-.html">S:O:.i.-</a></td>
-                        <td>intellectual conditions of the efficiency</td>
                         <td>conditions intellectuelles de l'efficacité</td>
+                        <td>intellectual conditions of the efficiency</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.i.-.html">B:O:.i.-</a></td>
-                        <td>affective conditions of the efficiency</td>
                         <td>conditions affectives de l'efficacité</td>
+                        <td>affective conditions of the efficiency</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.i.-.html">T:O:.i.-</a></td>
-                        <td>concrete conditions of the efficiency</td>
                         <td>conditions concrètes de l'efficacité</td>
+                        <td>concrete conditions of the efficiency</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.i.-.html">M:U:.i.-</a></td>
-                        <td>virtual conditions of the efficiency</td>
                         <td>conditions virtuelles de l'efficacité</td>
+                        <td>virtual conditions of the efficiency</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.i.-.html">M:A:.i.-</a></td>
-                        <td>actual conditions of the efficiency</td>
                         <td>conditions actuelles de l'efficacité</td>
+                        <td>actual conditions of the efficiency</td>
                     </tr>
                 
                 </tbody>
@@ -203,8 +235,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,14 +259,14 @@
                 
                     <tr>
                         <td><a href="M_O_.A_M_.-.html">M:O:.A:M:.-</a></td>
-                        <td>condition of actual activity</td>
                         <td>condition de l'activité actuelle</td>
+                        <td>condition of actual activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.O_M_.-.html">M:O:.O:M:.-</a></td>
-                        <td>conditions of activity</td>
                         <td>conditions de l'activité</td>
+                        <td>conditions of activity</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="i..html">i.</a></td>
-                        <td>do</td>
                         <td>faire</td>
+                        <td>do</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -326,19 +359,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_O_.i.-.html">M:O:.i.-</a> condition of efficiency</div>-->
+            <!--<div class="card-header">Table <a href="M_O_.i.-.html">M:O:.i.-</a> condition de l'efficacité</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.i.-.html"> M:O:.i.- </a>
             <span class="translation"
-                data-fr="condition of efficiency"
-                data-en="condition de l'efficacité">
-                condition of efficiency
+                data-fr="condition de l'efficacité"
+                data-en="condition of efficiency">
+                condition de l'efficacité
             </span>
         </div>
     
@@ -349,14 +382,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.i.-.html"> M:U:.i.- </a>
             <span class="translation"
-                data-fr="virtual conditions of the efficiency"
-                data-en="conditions virtuelles de l'efficacité">
-                virtual conditions of the efficiency
+                data-fr="conditions virtuelles de l'efficacité"
+                data-en="virtual conditions of the efficiency">
+                conditions virtuelles de l'efficacité
             </span>
         </div>
     
@@ -364,14 +397,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_A_.i.-.html"> M:A:.i.- </a>
             <span class="translation"
-                data-fr="actual conditions of the efficiency"
-                data-en="conditions actuelles de l'efficacité">
-                actual conditions of the efficiency
+                data-fr="conditions actuelles de l'efficacité"
+                data-en="actual conditions of the efficiency">
+                conditions actuelles de l'efficacité
             </span>
         </div>
     
@@ -382,14 +415,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_O_.i.-.html"> S:O:.i.- </a>
             <span class="translation"
-                data-fr="intellectual conditions of the efficiency"
-                data-en="conditions intellectuelles de l'efficacité">
-                intellectual conditions of the efficiency
+                data-fr="conditions intellectuelles de l'efficacité"
+                data-en="intellectual conditions of the efficiency">
+                conditions intellectuelles de l'efficacité
             </span>
         </div>
     
@@ -403,9 +436,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.i.-.html"> j.i.- </a>
             <span class="translation"
-                data-fr="strategy"
-                data-en="stratégie">
-                strategy
+                data-fr="stratégie"
+                data-en="strategy">
+                stratégie
             </span>
         </div>
     
@@ -418,9 +451,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.i.-.html"> g.i.- </a>
             <span class="translation"
-                data-fr="tactics"
-                data-en="tactique">
-                tactics
+                data-fr="tactique"
+                data-en="tactics">
+                tactique
             </span>
         </div>
     
@@ -431,14 +464,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_O_.i.-.html"> B:O:.i.- </a>
             <span class="translation"
-                data-fr="affective conditions of the efficiency"
-                data-en="conditions affectives de l'efficacité">
-                affective conditions of the efficiency
+                data-fr="conditions affectives de l'efficacité"
+                data-en="affective conditions of the efficiency">
+                conditions affectives de l'efficacité
             </span>
         </div>
     
@@ -452,9 +485,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.i.-.html"> h.i.- </a>
             <span class="translation"
-                data-fr="acknowledgement of the facts"
-                data-en="reconnaissance des faits">
-                acknowledgement of the facts
+                data-fr="reconnaissance des faits"
+                data-en="acknowledgement of the facts">
+                reconnaissance des faits
             </span>
         </div>
     
@@ -480,14 +513,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_O_.i.-.html"> T:O:.i.- </a>
             <span class="translation"
-                data-fr="concrete conditions of the efficiency"
-                data-en="conditions concrètes de l'efficacité">
-                concrete conditions of the efficiency
+                data-fr="conditions concrètes de l'efficacité"
+                data-en="concrete conditions of the efficiency">
+                conditions concrètes de l'efficacité
             </span>
         </div>
     
@@ -501,9 +534,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.i.-.html"> p.i.- </a>
             <span class="translation"
-                data-fr="modeling, model | rehearsal"
-                data-en="modélisation, modèle | répétition">
-                modeling, model | rehearsal
+                data-fr="modélisation, modèle | répétition"
+                data-en="modeling, model | rehearsal">
+                modélisation, modèle | répétition
             </span>
         </div>
     
@@ -516,9 +549,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.i.-.html"> x.i.- </a>
             <span class="translation"
-                data-fr="manufacturing | execution"
-                data-en="fabrication | exécution">
-                manufacturing | execution
+                data-fr="fabrication | exécution"
+                data-en="manufacturing | execution">
+                fabrication | exécution
             </span>
         </div>
     
@@ -533,7 +566,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -548,6 +581,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -557,6 +600,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -593,5 +637,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             f.e.-M:M:.i.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>areas of activity</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>domaines d'activité</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>domaines d'activité</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>areas of activity</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="f.e.-M_M_.i.-wa.e.-'.html">f.e.-M:M:.i.-wa.e.-'</a></td>
-                        <td>technical abilities</td>
                         <td>habiletés techniques</td>
+                        <td>technical abilities</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,26 +235,26 @@
                 
                     <tr>
                         <td><a href="T_M_.e.-M_M_.i.-'.html">T:M:.e.-M:M:.i.-'</a></td>
-                        <td>efficiencies of things</td>
                         <td>efficacités des choses</td>
+                        <td>efficiencies of things</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_M_.e.-M_M_.i.-E_.-+wa.e.-'.html">T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
-                        <td>technical skills (things) and their objects</td>
                         <td>les compétences techniques (choses) et leurs objets</td>
+                        <td>technical skills (things) and their objects</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-'+B_M_.e.-M_M_.a.-'+T_M_.e.-M_M_.i.-'.html">S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'</a></td>
-                        <td>objects of arts and competencies</td>
                         <td>objets des arts et compétences</td>
+                        <td>objects of arts and competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-E_.-+wa.e.-'+B_M_.e.-M_M_.a.-E_.-+wa.e.-'+T_M_.e.-M_M_.i.-E_.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
-                        <td>competencies and objects of competencies</td>
                         <td>compétences et objets de compétences</td>
+                        <td>competencies and objects of competencies</td>
                     </tr>
                 
                 </tbody>
@@ -230,11 +262,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -257,8 +290,8 @@
                 
                     <tr>
                         <td><a href="f.e.-.html">f.e.-</a></td>
-                        <td>technical ability</td>
                         <td>habileté technique</td>
+                        <td>technical ability</td>
                     </tr>
                 
                 </tbody>
@@ -266,8 +299,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -290,8 +323,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-.html">M:M:.i.-</a></td>
-                        <td>kind of tools | technology</td>
                         <td>genres d'outils | techniques</td>
+                        <td>kind of tools | technology</td>
                     </tr>
                 
                 </tbody>
@@ -299,8 +332,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,19 +347,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="f.e.-M_M_.i.-'.html">f.e.-M:M:.i.-'</a> areas of activity</div>-->
+            <!--<div class="card-header">Table <a href="f.e.-M_M_.i.-'.html">f.e.-M:M:.i.-'</a> domaines d'activité</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-M_M_.i.-'.html"> f.e.-M:M:.i.-' </a>
             <span class="translation"
-                data-fr="areas of activity"
-                data-en="domaines d'activité">
-                areas of activity
+                data-fr="domaines d'activité"
+                data-en="areas of activity">
+                domaines d'activité
             </span>
         </div>
     
@@ -337,7 +370,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-M_S_.i.-'.html"> f.e.-M:S:.i.-' </a>
@@ -352,7 +385,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-M_B_.i.-'.html"> f.e.-M:B:.i.-' </a>
@@ -367,7 +400,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-M_T_.i.-'.html"> f.e.-M:T:.i.-' </a>
@@ -385,7 +418,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-S_M_.i.-'.html"> f.e.-S:M:.i.-' </a>
@@ -406,9 +439,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-s.i.-'.html"> f.e.-s.i.-' </a>
             <span class="translation"
-                data-fr="data and software integration"
-                data-en="intégration de données et de logiciels">
-                data and software integration
+                data-fr="intégration de données et de logiciels"
+                data-en="data and software integration">
+                intégration de données et de logiciels
             </span>
         </div>
     
@@ -421,9 +454,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-b.i.-'.html"> f.e.-b.i.-' </a>
             <span class="translation"
-                data-fr="content production tools"
-                data-en="outils de production de contenu">
-                content production tools
+                data-fr="outils de production de contenu"
+                data-en="content production tools">
+                outils de production de contenu
             </span>
         </div>
     
@@ -436,9 +469,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-t.i.-'.html"> f.e.-t.i.-' </a>
             <span class="translation"
-                data-fr="vehicle, engine, machine (production and maintenance)"
-                data-en="véhicule, moteur, machine (production et entretien)">
-                vehicle, engine, machine (production and maintenance)
+                data-fr="véhicule, moteur, machine (production et entretien)"
+                data-en="vehicle, engine, machine (production and maintenance)">
+                véhicule, moteur, machine (production et entretien)
             </span>
         </div>
     
@@ -449,7 +482,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-B_M_.i.-'.html"> f.e.-B:M:.i.-' </a>
@@ -470,9 +503,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-k.i.-'.html"> f.e.-k.i.-' </a>
             <span class="translation"
-                data-fr="commerce, sales, purchase, barter, economic transactions (area of activity)"
-                data-en="commerce, vente, achat, troc, transactions économiques (domaine d’activité)">
-                commerce, sales, purchase, barter, economic transactions (area of activity)
+                data-fr="commerce, vente, achat, troc, transactions économiques (domaine d’activité)"
+                data-en="commerce, sales, purchase, barter, economic transactions (area of activity)">
+                commerce, vente, achat, troc, transactions économiques (domaine d’activité)
             </span>
         </div>
     
@@ -485,9 +518,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-m.i.-'.html"> f.e.-m.i.-' </a>
             <span class="translation"
-                data-fr="decoration, furnishing, design"
-                data-en="décoration, ameublement, design">
-                decoration, furnishing, design
+                data-fr="décoration, ameublement, design"
+                data-en="decoration, furnishing, design">
+                décoration, ameublement, design
             </span>
         </div>
     
@@ -500,9 +533,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-n.i.-'.html"> f.e.-n.i.-' </a>
             <span class="translation"
-                data-fr="laboratories, plants using ovens (chemistry, metallurgy, pottery), production with energy spending"
-                data-en="laboratoires, usines utilisant des fours (chimique, sidérurgique, céramique), production avec dépense d'énergie">
-                laboratories, plants using ovens (chemistry, metallurgy, pottery), production with energy spending
+                data-fr="laboratoires, usines utilisant des fours (chimique, sidérurgique, céramique), production avec dépense d'énergie"
+                data-en="laboratories, plants using ovens (chemistry, metallurgy, pottery), production with energy spending">
+                laboratoires, usines utilisant des fours (chimique, sidérurgique, céramique), production avec dépense d'énergie
             </span>
         </div>
     
@@ -513,7 +546,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-T_M_.i.-'.html"> f.e.-T:M:.i.-' </a>
@@ -534,9 +567,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-d.i.-'.html"> f.e.-d.i.-' </a>
             <span class="translation"
-                data-fr="measurement, control, effector (area of activity)"
-                data-en="mesure, contrôle, effecteur (domaine d'activité)">
-                measurement, control, effector (area of activity)
+                data-fr="mesure, contrôle, effecteur (domaine d'activité)"
+                data-en="measurement, control, effector (area of activity)">
+                mesure, contrôle, effecteur (domaine d'activité)
             </span>
         </div>
     
@@ -549,9 +582,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-f.i.-'.html"> f.e.-f.i.-' </a>
             <span class="translation"
-                data-fr="physical intervention on an organism, medical care, surgery, graft, prosthesis, pharmacy"
-                data-en="intervention physique sur un organisme, soins médicaux, chirurgie, greffe, prothèse, pharmacie">
-                physical intervention on an organism, medical care, surgery, graft, prosthesis, pharmacy
+                data-fr="intervention physique sur un organisme, soins médicaux, chirurgie, greffe, prothèse, pharmacie"
+                data-en="physical intervention on an organism, medical care, surgery, graft, prosthesis, pharmacy">
+                intervention physique sur un organisme, soins médicaux, chirurgie, greffe, prothèse, pharmacie
             </span>
         </div>
     
@@ -564,9 +597,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.e.-l.i.-'.html"> f.e.-l.i.-' </a>
             <span class="translation"
-                data-fr="civil engineering, roads, bridges, tunnels, construction"
-                data-en="génie civil, ponts et chaussées, tunnels, mines, construction">
-                civil engineering, roads, bridges, tunnels, construction
+                data-fr="génie civil, ponts et chaussées, tunnels, mines, construction"
+                data-en="civil engineering, roads, bridges, tunnels, construction">
+                génie civil, ponts et chaussées, tunnels, mines, construction
             </span>
         </div>
     
@@ -581,7 +614,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -596,6 +629,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -605,6 +648,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -641,5 +685,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

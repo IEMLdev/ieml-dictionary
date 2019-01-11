@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             p.-'F:.-'k.o.-t.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>economic mutation</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>mutation économique</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>mutation économique</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>economic mutation</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="M_O_.-'F_.-'k.o.-t.o.-'_.html">M:O:.-'F:.-'k.o.-t.o.-',</a></td>
-                        <td>cultural evolution | historical periods</td>
                         <td>évolution culturelle | périodes historiques</td>
+                        <td>cultural evolution | historical periods</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="p..html">p.</a></td>
-                        <td>object</td>
                         <td>objet</td>
+                        <td>object</td>
                     </tr>
                 
                 </tbody>
@@ -215,8 +248,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -239,32 +272,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -296,8 +329,8 @@
                 
                     <tr>
                         <td><a href="k.o.-t.o.-'.html">k.o.-t.o.-'</a></td>
-                        <td>history</td>
                         <td>histoire</td>
+                        <td>history</td>
                     </tr>
                 
                 </tbody>
@@ -305,8 +338,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -320,19 +353,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="p.-'F_.-'k.o.-t.o.-'_.html">p.-'F:.-'k.o.-t.o.-',</a> economic mutation</div>-->
+            <!--<div class="card-header">Table <a href="p.-'F_.-'k.o.-t.o.-'_.html">p.-'F:.-'k.o.-t.o.-',</a> mutation économique</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.-'F_.-'k.o.-t.o.-'_.html"> p.-'F:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="economic mutation"
-                data-en="mutation économique">
-                economic mutation
+                data-fr="mutation économique"
+                data-en="economic mutation">
+                mutation économique
             </span>
         </div>
     
@@ -347,9 +380,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'U_.-'k.o.-t.o.-'_.html"> p.-'U:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="hunting | gathering | domestication of plants and animals"
-                data-en="chasse | cueillette | domestication des plantes et animaux">
-                hunting | gathering | domestication of plants and animals
+                data-fr="chasse | cueillette | domestication des plantes et animaux"
+                data-en="hunting | gathering | domestication of plants and animals">
+                chasse | cueillette | domestication des plantes et animaux
             </span>
         </div>
     
@@ -364,9 +397,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'A_.-'k.o.-t.o.-'_.html"> p.-'A:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="large scale farming (neolithic revolution)"
-                data-en="agriculture à grande échelle (révolution néolithique)">
-                large scale farming (neolithic revolution)
+                data-fr="agriculture à grande échelle (révolution néolithique)"
+                data-en="large scale farming (neolithic revolution)">
+                agriculture à grande échelle (révolution néolithique)
             </span>
         </div>
     
@@ -381,9 +414,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'S_.-'k.o.-t.o.-'_.html"> p.-'S:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="money | trade revolution"
-                data-en="monnaie | révolution commerciale">
-                money | trade revolution
+                data-fr="monnaie | révolution commerciale"
+                data-en="money | trade revolution">
+                monnaie | révolution commerciale
             </span>
         </div>
     
@@ -398,9 +431,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'B_.-'k.o.-t.o.-'_.html"> p.-'B:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="industrial revolution"
-                data-en="révolution industrielle">
-                industrial revolution
+                data-fr="révolution industrielle"
+                data-en="industrial revolution">
+                révolution industrielle
             </span>
         </div>
     
@@ -415,9 +448,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'T_.-'k.o.-t.o.-'_.html"> p.-'T:.-'k.o.-t.o.-', </a>
             <span class="translation"
-                data-fr="information economy"
-                data-en="économie de l'information">
-                information economy
+                data-fr="économie de l'information"
+                data-en="information economy">
+                économie de l'information
             </span>
         </div>
     
@@ -431,7 +464,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -446,6 +479,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -455,6 +498,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -491,5 +535,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

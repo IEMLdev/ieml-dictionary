@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             l.-O:M:.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>spatial | topological phenomena (1)</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>phénomènes spatiaux | topologiques (1)</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>phénomènes spatiaux | topologiques (1)</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>spatial | topological phenomena (1)</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="l.-O_M_.-s.y.-'.html">l.-O:M:.-s.y.-'</a></td>
-                        <td>situated humanity studies (1)</td>
                         <td>études de l'humanité située (1)</td>
+                        <td>situated humanity studies (1)</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,26 +235,26 @@
                 
                     <tr>
                         <td><a href="l.-O_M_.+M_O_.-'.html">l.-O:M:.+M:O:.-'</a></td>
-                        <td>objects of situated humanity studies</td>
                         <td>objets des études de l'humanité située</td>
+                        <td>objects of situated humanity studies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-O_M_.-'.html">M:M:.-O:M:.-'</a></td>
-                        <td>objects of humanities and social sciences (1)</td>
                         <td>objets des sciences humaines (1)</td>
+                        <td>objects of humanities and social sciences (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-O_M_.+M_O_.-'.html">M:M:.-O:M:.+M:O:.-'</a></td>
-                        <td>objects of humanities and social sciences</td>
                         <td>objets des sciences humaines</td>
+                        <td>objects of humanities and social sciences</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-O_M_.+M_O_.-E_.-+s.y.-'.html">M:M:.-O:M:.+M:O:.-E:.-+s.y.-'</a></td>
-                        <td>humanities, social sciences and their objects</td>
                         <td>les sciences humaines et leurs objets</td>
+                        <td>humanities, social sciences and their objects</td>
                     </tr>
                 
                 </tbody>
@@ -230,11 +262,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -257,8 +290,8 @@
                 
                     <tr>
                         <td><a href="l..html">l.</a></td>
+                        <td>espace</td>
                         <td>space</td>
-                        <td>espaces</td>
                     </tr>
                 
                 </tbody>
@@ -266,8 +299,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -299,8 +332,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,19 +347,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="l.-O_M_.-'.html">l.-O:M:.-'</a> spatial | topological phenomena (1)</div>-->
+            <!--<div class="card-header">Table <a href="l.-O_M_.-'.html">l.-O:M:.-'</a> phénomènes spatiaux | topologiques (1)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-O_M_.-'.html"> l.-O:M:.-' </a>
             <span class="translation"
-                data-fr="spatial | topological phenomena (1)"
-                data-en="phénomènes spatiaux | topologiques (1)">
-                spatial | topological phenomena (1)
+                data-fr="phénomènes spatiaux | topologiques (1)"
+                data-en="spatial | topological phenomena (1)">
+                phénomènes spatiaux | topologiques (1)
             </span>
         </div>
     
@@ -337,7 +370,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-O_S_.-'.html"> l.-O:S:.-' </a>
@@ -352,7 +385,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-O_B_.-'.html"> l.-O:B:.-' </a>
@@ -367,7 +400,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-O_T_.-'.html"> l.-O:T:.-' </a>
@@ -385,7 +418,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-U_M_.-'.html"> l.-U:M:.-' </a>
@@ -406,9 +439,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-y.-'.html"> l.-y.-' </a>
             <span class="translation"
-                data-fr="planet Earth"
-                data-en="la planète Terre">
-                planet Earth
+                data-fr="la planète Terre"
+                data-en="planet Earth">
+                la planète Terre
             </span>
         </div>
     
@@ -421,9 +454,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-o.-'.html"> l.-o.-' </a>
             <span class="translation"
-                data-fr="international relations"
-                data-en="relations internationales">
-                international relations
+                data-fr="relations internationales"
+                data-en="international relations">
+                relations internationales
             </span>
         </div>
     
@@ -436,9 +469,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-e.-'.html"> l.-e.-' </a>
             <span class="translation"
-                data-fr="international trade"
-                data-en="commerce international">
-                international trade
+                data-fr="commerce international"
+                data-en="international trade">
+                commerce international
             </span>
         </div>
     
@@ -449,7 +482,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.-A_M_.-'.html"> l.-A:M:.-' </a>
@@ -470,9 +503,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-u.-'.html"> l.-u.-' </a>
             <span class="translation"
-                data-fr="transcultural communication"
-                data-en="communication transculturelle">
-                transcultural communication
+                data-fr="communication transculturelle"
+                data-en="transcultural communication">
+                communication transculturelle
             </span>
         </div>
     
@@ -485,9 +518,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-a.-'.html"> l.-a.-' </a>
             <span class="translation"
-                data-fr="social network"
-                data-en="réseau social">
-                social network
+                data-fr="réseau social"
+                data-en="social network">
+                réseau social
             </span>
         </div>
     
@@ -500,9 +533,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.-i.-'.html"> l.-i.-' </a>
             <span class="translation"
-                data-fr="physics | molecular technosciences"
-                data-en="technosciences physiques | moléculaires">
-                physics | molecular technosciences
+                data-fr="technosciences physiques | moléculaires"
+                data-en="physics | molecular technosciences">
+                technosciences physiques | moléculaires
             </span>
         </div>
     
@@ -517,7 +550,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -532,6 +565,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -541,6 +584,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -577,5 +621,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

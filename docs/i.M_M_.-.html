@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             i.M:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>destroy technically</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>détruire techniquement</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>détruire techniquement</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>destroy technically</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-.html">M:M:.i.-</a></td>
-                        <td>kind of tools | technology</td>
                         <td>genres d'outils | techniques</td>
+                        <td>kind of tools | technology</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,38 +235,38 @@
                 
                     <tr>
                         <td><a href="i.S_M_.-.html">i.S:M:.-</a></td>
-                        <td>destroy the sign technically</td>
                         <td>détruire le signe techniquement</td>
+                        <td>destroy the sign technically</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.B_M_.-.html">i.B:M:.-</a></td>
-                        <td>destroy the being technically</td>
                         <td>détruire l'être techniquement</td>
+                        <td>destroy the being technically</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.T_M_.-.html">i.T:M:.-</a></td>
-                        <td>destroy the thing technically</td>
                         <td>détruire la chose techniquement</td>
+                        <td>destroy the thing technically</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_S_.-.html">i.M:S:.-</a></td>
-                        <td>show the sign of technical destruction</td>
                         <td>montrer le signe de la destruction technique</td>
+                        <td>show the sign of technical destruction</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_B_.-.html">i.M:B:.-</a></td>
-                        <td>show the being of technical destruction</td>
                         <td>montrer l'être de la destruction technique</td>
+                        <td>show the being of technical destruction</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_T_.-.html">i.M:T:.-</a></td>
-                        <td>show the thing of technical destruction</td>
                         <td>montrer la chose de la destruction technique</td>
+                        <td>show the thing of technical destruction</td>
                     </tr>
                 
                 </tbody>
@@ -242,8 +274,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -266,14 +298,14 @@
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-.html">O:M:.M:M:.-</a></td>
-                        <td>undermine human development</td>
                         <td>saper le développement humain</td>
+                        <td>undermine human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
-                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                         <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -281,11 +313,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -308,8 +341,8 @@
                 
                     <tr>
                         <td><a href="i..html">i.</a></td>
-                        <td>do</td>
                         <td>faire</td>
+                        <td>do</td>
                     </tr>
                 
                 </tbody>
@@ -317,8 +350,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -341,8 +374,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -350,8 +383,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -365,19 +398,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="i.M_M_.-.html">i.M:M:.-</a> destroy technically</div>-->
+            <!--<div class="card-header">Table <a href="i.M_M_.-.html">i.M:M:.-</a> détruire techniquement</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.M_M_.-.html"> i.M:M:.- </a>
             <span class="translation"
-                data-fr="destroy technically"
-                data-en="détruire techniquement">
-                destroy technically
+                data-fr="détruire techniquement"
+                data-en="destroy technically">
+                détruire techniquement
             </span>
         </div>
     
@@ -388,14 +421,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.M_S_.-.html"> i.M:S:.- </a>
             <span class="translation"
-                data-fr="show the sign of technical destruction"
-                data-en="montrer le signe de la destruction technique">
-                show the sign of technical destruction
+                data-fr="montrer le signe de la destruction technique"
+                data-en="show the sign of technical destruction">
+                montrer le signe de la destruction technique
             </span>
         </div>
     
@@ -403,14 +436,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.M_B_.-.html"> i.M:B:.- </a>
             <span class="translation"
-                data-fr="show the being of technical destruction"
-                data-en="montrer l'être de la destruction technique">
-                show the being of technical destruction
+                data-fr="montrer l'être de la destruction technique"
+                data-en="show the being of technical destruction">
+                montrer l'être de la destruction technique
             </span>
         </div>
     
@@ -418,14 +451,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.M_T_.-.html"> i.M:T:.- </a>
             <span class="translation"
-                data-fr="show the thing of technical destruction"
-                data-en="montrer la chose de la destruction technique">
-                show the thing of technical destruction
+                data-fr="montrer la chose de la destruction technique"
+                data-en="show the thing of technical destruction">
+                montrer la chose de la destruction technique
             </span>
         </div>
     
@@ -436,14 +469,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.S_M_.-.html"> i.S:M:.- </a>
             <span class="translation"
-                data-fr="destroy the sign technically"
-                data-en="détruire le signe techniquement">
-                destroy the sign technically
+                data-fr="détruire le signe techniquement"
+                data-en="destroy the sign technically">
+                détruire le signe techniquement
             </span>
         </div>
     
@@ -457,9 +490,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.s.-.html"> i.s.- </a>
             <span class="translation"
-                data-fr="block interfaces"
-                data-en="bloquer les interfaces">
-                block interfaces
+                data-fr="bloquer les interfaces"
+                data-en="block interfaces">
+                bloquer les interfaces
             </span>
         </div>
     
@@ -472,9 +505,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.b.-.html"> i.b.- </a>
             <span class="translation"
-                data-fr="cut off transmission"
-                data-en="interrompre la transmission">
-                cut off transmission
+                data-fr="interrompre la transmission"
+                data-en="cut off transmission">
+                interrompre la transmission
             </span>
         </div>
     
@@ -487,9 +520,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.t.-.html"> i.t.- </a>
             <span class="translation"
-                data-fr="break, smash, destroy, provoque dammage"
-                data-en="briser, fracasser, détruire, faire des dégâts">
-                break, smash, destroy, provoque dammage
+                data-fr="briser, fracasser, détruire, faire des dégâts"
+                data-en="break, smash, destroy, provoque dammage">
+                briser, fracasser, détruire, faire des dégâts
             </span>
         </div>
     
@@ -500,14 +533,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.B_M_.-.html"> i.B:M:.- </a>
             <span class="translation"
-                data-fr="destroy the being technically"
-                data-en="détruire l'être techniquement">
-                destroy the being technically
+                data-fr="détruire l'être techniquement"
+                data-en="destroy the being technically">
+                détruire l'être techniquement
             </span>
         </div>
     
@@ -521,9 +554,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.k.-.html"> i.k.- </a>
             <span class="translation"
-                data-fr="steal"
-                data-en="voler quelque chose">
-                steal
+                data-fr="voler quelque chose"
+                data-en="steal">
+                voler quelque chose
             </span>
         </div>
     
@@ -536,9 +569,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.m.-.html"> i.m.- </a>
             <span class="translation"
-                data-fr="use weapons"
-                data-en="utiliser des armes">
-                use weapons
+                data-fr="utiliser des armes"
+                data-en="use weapons">
+                utiliser des armes
             </span>
         </div>
     
@@ -551,9 +584,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.n.-.html"> i.n.- </a>
             <span class="translation"
-                data-fr="provoke an accident"
-                data-en="provoquer un accident">
-                provoke an accident
+                data-fr="provoquer un accident"
+                data-en="provoke an accident">
+                provoquer un accident
             </span>
         </div>
     
@@ -564,14 +597,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.T_M_.-.html"> i.T:M:.- </a>
             <span class="translation"
-                data-fr="destroy the thing technically"
-                data-en="détruire la chose techniquement">
-                destroy the thing technically
+                data-fr="détruire la chose techniquement"
+                data-en="destroy the thing technically">
+                détruire la chose techniquement
             </span>
         </div>
     
@@ -585,9 +618,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.d.-.html"> i.d.- </a>
             <span class="translation"
-                data-fr="break down | wreck a mechanism"
-                data-en="dérégler | détraquer un mécanisme">
-                break down | wreck a mechanism
+                data-fr="dérégler | détraquer un mécanisme"
+                data-en="break down | wreck a mechanism">
+                dérégler | détraquer un mécanisme
             </span>
         </div>
     
@@ -600,9 +633,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.f.-.html"> i.f.- </a>
             <span class="translation"
-                data-fr="be sick | injured"
-                data-en="être malade | blessé">
-                be sick | injured
+                data-fr="être malade | blessé"
+                data-en="be sick | injured">
+                être malade | blessé
             </span>
         </div>
     
@@ -615,9 +648,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.l.-.html"> i.l.- </a>
             <span class="translation"
-                data-fr="be caught in a trap"
-                data-en="tomber dans un piège">
-                be caught in a trap
+                data-fr="tomber dans un piège"
+                data-en="be caught in a trap">
+                tomber dans un piège
             </span>
         </div>
     
@@ -632,7 +665,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -647,6 +680,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -656,6 +699,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -692,5 +736,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

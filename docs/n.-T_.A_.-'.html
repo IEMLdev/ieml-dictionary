@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             n.-T:.A:.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>water</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>eau</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>eau</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>water</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,10 +168,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -163,32 +195,32 @@
                 
                     <tr>
                         <td><a href="n.-T_.O_.-'.html">n.-T:.O:.-'</a></td>
-                        <td>elements of low and high</td>
                         <td>éléments du haut et du bas</td>
+                        <td>elements of low and high</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-M_.A_.-'.html">n.-M:.A:.-'</a></td>
-                        <td>south-west-low elements</td>
                         <td>éléments sud-ouest-bas</td>
+                        <td>south-west-low elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-M_.O_.-'.html">n.-M:.O:.-'</a></td>
-                        <td>elements</td>
                         <td>éléments</td>
+                        <td>elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-T_.A_.-'.html">M:M:.-T:.A:.-'</a></td>
-                        <td>deepness qualities</td>
                         <td>qualités des profondeurs</td>
+                        <td>deepness qualities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-M_.O_.-'.html">M:M:.-M:.O:.-'</a></td>
-                        <td>qualities</td>
                         <td>qualités</td>
+                        <td>qualities</td>
                     </tr>
                 
                 </tbody>
@@ -196,11 +228,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -223,8 +256,8 @@
                 
                     <tr>
                         <td><a href="n..html">n.</a></td>
+                        <td>monde</td>
                         <td>world</td>
-                        <td>mondes</td>
                     </tr>
                 
                 </tbody>
@@ -232,8 +265,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -256,14 +289,14 @@
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -271,9 +304,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -296,50 +329,50 @@
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'S_.-'M_.-'_.html">n.-T:.A:.-'S:.-'M:.-',</a></td>
-                        <td>north ocean</td>
                         <td>océan nord</td>
+                        <td>north ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'B_.-'M_.-'_.html">n.-T:.A:.-'B:.-'M:.-',</a></td>
-                        <td>central ocean</td>
                         <td>océan central</td>
+                        <td>central ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'T_.-'M_.-'_.html">n.-T:.A:.-'T:.-'M:.-',</a></td>
-                        <td>south ocean</td>
                         <td>océan sud</td>
+                        <td>south ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'M_.-'S_.-'_.html">n.-T:.A:.-'M:.-'S:.-',</a></td>
-                        <td>Atlantic ocean</td>
                         <td>océan Atlantique</td>
+                        <td>Atlantic ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'M_.-'B_.-'_.html">n.-T:.A:.-'M:.-'B:.-',</a></td>
-                        <td>Indian ocean</td>
                         <td>ocean Indien</td>
+                        <td>Indian ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'M_.-'T_.-'_.html">n.-T:.A:.-'M:.-'T:.-',</a></td>
-                        <td>Pacific ocean</td>
                         <td>océan Pacifique</td>
+                        <td>Pacific ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-T_.A_.-'M_.-'M_.-'_.html">n.-T:.A:.-'M:.-'M:.-',</a></td>
-                        <td>main seas</td>
                         <td>mers principales</td>
+                        <td>main seas</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.-S_.U_.-'n.-T_.A_.-'l.-S_.O_.-'_+n.-T_.A_.-'M_.-'M_.-'_.html">s.-S:.U:.-'n.-T:.A:.-'l.-S:.O:.-',+n.-T:.A:.-'M:.-'M:.-',</a></td>
-                        <td>oceans</td>
                         <td>océans</td>
+                        <td>oceans</td>
                     </tr>
                 
                 </tbody>
@@ -347,8 +380,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -371,74 +404,74 @@
                 
                     <tr>
                         <td><a href="s.-S_.U_.-'n.-T_.A_.-'l.-S_.O_.-'_.html">s.-S:.U:.-'n.-T:.A:.-'l.-S:.O:.-',</a></td>
-                        <td>polar seas</td>
                         <td>mers polaires</td>
+                        <td>polar seas</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',</a></td>
-                        <td>aquatic landscape</td>
                         <td>paysage aquatique</td>
+                        <td>aquatic landscape</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.-S_.U_.-'n.-T_.A_.-'l.-S_.O_.-'_+n.-T_.A_.-'M_.-'M_.-'_.html">s.-S:.U:.-'n.-T:.A:.-'l.-S:.O:.-',+n.-T:.A:.-'M:.-'M:.-',</a></td>
-                        <td>oceans</td>
                         <td>océans</td>
+                        <td>oceans</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-y.-'n.-T_.A_.-'e.B_.-'+n.-S_.U_.-'+E_.S_.S_M_.-l.-'_+l.-y.-'E_U_.M_T_.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'n.-T:.A:.-'e.B:.-'+n.-S:.U:.-'+E:.S:.S:M:.-l.-',+l.-y.-'E:U:.M:T:.-l.-'E:U:.S:M:.-l.-',</a></td>
-                        <td>landscape</td>
                         <td>paysage</td>
+                        <td>landscape</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_s.u.-l.u.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',s.u.-l.u.-',_</a></td>
-                        <td>shadow and light phenomena</td>
                         <td>phénomènes d'ombre et de lumière</td>
+                        <td>shadow and light phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_b.-S_.A_.-'U_.-'U_.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',b.-S:.A:.-'U:.-'U:.-',_</a></td>
-                        <td>bright white phenomena</td>
                         <td>phénomènes d'un blanc éclatant</td>
+                        <td>bright white phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_b.-B_.A_.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',b.-B:.A:.-',_</a></td>
-                        <td>fuzzy phenomena</td>
                         <td>phénomènes flous</td>
+                        <td>fuzzy phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_t.o.-f.o.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',t.o.-f.o.-',_</a></td>
-                        <td>phenomena that come and go</td>
                         <td>phénomènes qui vont et viennent</td>
+                        <td>phenomena that come and go</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_m.-B_.U_.-'m.-B_.U_.-'E_A_T_.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',m.-B:.U:.-'m.-B:.U:.-'E:A:T:.-',_</a></td>
-                        <td>violent phenomena</td>
                         <td>phénomènes violents</td>
+                        <td>violent phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_d.-S_.U_.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',d.-S:.U:.-',_</a></td>
-                        <td>fixed, solid phenomena</td>
                         <td>phénomènes solides, fixes</td>
+                        <td>fixed, solid phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_n.-T_.A_.-'_b.-S_.A_.-'U_.-'U_.-'_+m.-B_.U_.-'m.-B_.U_.-'E_A_T_.-'_+s.u.-l.u.-'+b.-B_.A_.-'+t.o.-f.o.-'+d.-S_.U_.-'__.html">l.-T:.U:.-',n.-T:.A:.-',b.-S:.A:.-'U:.-'U:.-',+m.-B:.U:.-'m.-B:.U:.-'E:A:T:.-',+s.u.-l.u.-'+b.-B:.A:.-'+t.o.-f.o.-'+d.-S:.U:.-',_</a></td>
-                        <td>waters from the sky</td>
                         <td>eaux du ciel</td>
+                        <td>waters from the sky</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-T_.U_.-'_b.-T_.U_.-'+n.-T_.A_.-'_b.-S_.A_.-'U_.-'U_.-'_+m.-B_.U_.-'m.-B_.U_.-'E_A_T_.-'_+s.u.-l.u.-'+b.-B_.A_.-'+t.o.-f.o.-'+d.-S_.U_.-'__.html">l.-T:.U:.-',b.-T:.U:.-'+n.-T:.A:.-',b.-S:.A:.-'U:.-'U:.-',+m.-B:.U:.-'m.-B:.U:.-'E:A:T:.-',+s.u.-l.u.-'+b.-B:.A:.-'+t.o.-f.o.-'+d.-S:.U:.-',_</a></td>
-                        <td>celestial and meteorological phenomena</td>
                         <td>phénomènes célestes et météorologiques</td>
+                        <td>celestial and meteorological phenomena</td>
                     </tr>
                 
                 </tbody>
@@ -446,7 +479,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -455,7 +488,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -470,6 +503,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -479,6 +522,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -515,5 +559,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

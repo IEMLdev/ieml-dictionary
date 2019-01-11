@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             S:M:.e.-t.u.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>logical forms</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>formes logiques</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>formes logiques</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>logical forms</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="S_M_.e.-t.u.-wa.e.-'.html">S:M:.e.-t.u.-wa.e.-'</a></td>
-                        <td>computing arts</td>
                         <td>arts du calcul</td>
+                        <td>computing arts</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,26 +235,26 @@
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-'.html">S:M:.e.-M:M:.u.-'</a></td>
-                        <td>forms of the signs</td>
                         <td>formes des signes</td>
+                        <td>forms of the signs</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-E_.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'</a></td>
-                        <td>arts of signs and their objects</td>
                         <td>les arts des signes et leurs objets</td>
+                        <td>arts of signs and their objects</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-'+B_M_.e.-M_M_.a.-'+T_M_.e.-M_M_.i.-'.html">S:M:.e.-M:M:.u.-'+B:M:.e.-M:M:.a.-'+T:M:.e.-M:M:.i.-'</a></td>
-                        <td>objects of arts and competencies</td>
                         <td>objets des arts et compétences</td>
+                        <td>objects of arts and competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-E_.-+wa.e.-'+B_M_.e.-M_M_.a.-E_.-+wa.e.-'+T_M_.e.-M_M_.i.-E_.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
-                        <td>competencies and objects of competencies</td>
                         <td>compétences et objets de compétences</td>
+                        <td>competencies and objects of competencies</td>
                     </tr>
                 
                 </tbody>
@@ -230,11 +262,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -257,8 +290,8 @@
                 
                     <tr>
                         <td><a href="S_M_.e.-.html">S:M:.e.-</a></td>
-                        <td>know how of the sign, trivium in the narrow sense</td>
                         <td>savoir faire portant sur les signes, trivium au sens étroit</td>
+                        <td>know how of the sign, trivium in the narrow sense</td>
                     </tr>
                 
                 </tbody>
@@ -266,8 +299,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -290,8 +323,8 @@
                 
                     <tr>
                         <td><a href="t.u.-.html">t.u.-</a></td>
-                        <td>mark | enduring sign</td>
                         <td>marque | signe durable</td>
+                        <td>mark | enduring sign</td>
                     </tr>
                 
                 </tbody>
@@ -299,8 +332,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,19 +347,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="S_M_.e.-t.u.-'.html">S:M:.e.-t.u.-'</a> logical forms</div>-->
+            <!--<div class="card-header">Table <a href="S_M_.e.-t.u.-'.html">S:M:.e.-t.u.-'</a> formes logiques</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_M_.e.-t.u.-'.html"> S:M:.e.-t.u.-' </a>
             <span class="translation"
-                data-fr="logical forms"
-                data-en="formes logiques">
-                logical forms
+                data-fr="formes logiques"
+                data-en="logical forms">
+                formes logiques
             </span>
         </div>
     
@@ -341,9 +374,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.e.-t.u.-'.html"> s.e.-t.u.-' </a>
             <span class="translation"
-                data-fr="arithmetic operation"
-                data-en="opération arithmétique">
-                arithmetic operation
+                data-fr="opération arithmétique"
+                data-en="arithmetic operation">
+                opération arithmétique
             </span>
         </div>
     
@@ -358,9 +391,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.e.-t.u.-'.html"> b.e.-t.u.-' </a>
             <span class="translation"
-                data-fr="logical culture"
-                data-en="culture logique">
-                logical culture
+                data-fr="culture logique"
+                data-en="logical culture">
+                culture logique
             </span>
         </div>
     
@@ -375,9 +408,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.e.-t.u.-'.html"> t.e.-t.u.-' </a>
             <span class="translation"
-                data-fr="augmented cognition"
-                data-en="cognition augmentée">
-                augmented cognition
+                data-fr="cognition augmentée"
+                data-en="augmented cognition">
+                cognition augmentée
             </span>
         </div>
     
@@ -391,7 +424,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -406,6 +439,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -415,6 +458,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -451,5 +495,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

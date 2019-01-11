@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.-U:.M:O:.-t.o.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>absolute temporal relation (from a fixed date)</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>relation temporelle absolue (par rapport à une date fixe)</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>relation temporelle absolue (par rapport à une date fixe)</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>absolute temporal relation (from a fixed date)</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="E_.-O_.M_O_.-t.o.-'.html">E:.-O:.M:O:.-t.o.-'</a></td>
-                        <td>temporal relations auxiliaries, time</td>
                         <td>auxiliaires de relations temporelles, temps</td>
+                        <td>temporal relations auxiliaries, time</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="t.o.-.html">t.o.-</a></td>
-                        <td>right moment | good timing, evolution, value of time</td>
                         <td>moment opportun | occasion, évolution, valeur du temps</td>
+                        <td>right moment | good timing, evolution, value of time</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -269,19 +302,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.-U_.M_O_.-t.o.-'.html">E:.-U:.M:O:.-t.o.-'</a> absolute temporal relation (from a fixed date)</div>-->
+            <!--<div class="card-header">Table <a href="E_.-U_.M_O_.-t.o.-'.html">E:.-U:.M:O:.-t.o.-'</a> relation temporelle absolue (par rapport à une date fixe)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #fff1bc;">
+    <th class="cell" colspan="3" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.M_O_.-t.o.-'.html"> E:.-U:.M:O:.-t.o.-' </a>
             <span class="translation"
-                data-fr="absolute temporal relation (from a fixed date)"
-                data-en="relation temporelle absolue (par rapport à une date fixe)">
-                absolute temporal relation (from a fixed date)
+                data-fr="relation temporelle absolue (par rapport à une date fixe)"
+                data-en="absolute temporal relation (from a fixed date)">
+                relation temporelle absolue (par rapport à une date fixe)
             </span>
         </div>
     
@@ -292,7 +325,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.M_U_.-t.o.-'.html"> E:.-U:.M:U:.-t.o.-' </a>
@@ -307,7 +340,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.M_A_.-t.o.-'.html"> E:.-U:.M:A:.-t.o.-' </a>
@@ -325,7 +358,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.S_O_.-t.o.-'.html"> E:.-U:.S:O:.-t.o.-' </a>
@@ -346,9 +379,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.j.-t.o.-'.html"> E:.-U:.j.-t.o.-' </a>
             <span class="translation"
-                data-fr="after the referenced date, later, absolute perfect future"
-                data-en="après la date de reférence, plus tard, futur absolu parfait">
-                after the referenced date, later, absolute perfect future
+                data-fr="après la date de reférence, plus tard, futur absolu parfait"
+                data-en="after the referenced date, later, absolute perfect future">
+                après la date de reférence, plus tard, futur absolu parfait
             </span>
         </div>
     
@@ -361,9 +394,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.g.-t.o.-'.html"> E:.-U:.g.-t.o.-' </a>
             <span class="translation"
-                data-fr="ongoing after the referenced date, later, imperfect absolute future"
-                data-en="en cours après la date de référence, plus tard, futur absolu imparfait">
-                ongoing after the referenced date, later, imperfect absolute future
+                data-fr="en cours après la date de référence, plus tard, futur absolu imparfait"
+                data-en="ongoing after the referenced date, later, imperfect absolute future">
+                en cours après la date de référence, plus tard, futur absolu imparfait
             </span>
         </div>
     
@@ -374,7 +407,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.B_O_.-t.o.-'.html"> E:.-U:.B:O:.-t.o.-' </a>
@@ -395,9 +428,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.h.-t.o.-'.html"> E:.-U:.h.-t.o.-' </a>
             <span class="translation"
-                data-fr="at the same referenced date or time, meanwhile (perfect)"
-                data-en="à la même date, en même temps que, pendant la date ou période de référence (parfait)">
-                at the same referenced date or time, meanwhile (perfect)
+                data-fr="à la même date, en même temps que, pendant la date ou période de référence (parfait)"
+                data-en="at the same referenced date or time, meanwhile (perfect)">
+                à la même date, en même temps que, pendant la date ou période de référence (parfait)
             </span>
         </div>
     
@@ -410,9 +443,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.c.-t.o.-'.html"> E:.-U:.c.-t.o.-' </a>
             <span class="translation"
-                data-fr="during the referenced time, period, era | at the same time (imperfect)"
-                data-en="pendant la période de référence, en même temps que (imparfait)">
-                during the referenced time, period, era | at the same time (imperfect)
+                data-fr="pendant la période de référence, en même temps que (imparfait)"
+                data-en="during the referenced time, period, era | at the same time (imperfect)">
+                pendant la période de référence, en même temps que (imparfait)
             </span>
         </div>
     
@@ -423,7 +456,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.T_O_.-t.o.-'.html"> E:.-U:.T:O:.-t.o.-' </a>
@@ -444,9 +477,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.p.-t.o.-'.html"> E:.-U:.p.-t.o.-' </a>
             <span class="translation"
-                data-fr="before the referenced date, earlier, early, in a perfect absolute past"
-                data-en="avant la date de référence, plus tôt, tôt, dans un passé absolu parfait">
-                before the referenced date, earlier, early, in a perfect absolute past
+                data-fr="avant la date de référence, plus tôt, tôt, dans un passé absolu parfait"
+                data-en="before the referenced date, earlier, early, in a perfect absolute past">
+                avant la date de référence, plus tôt, tôt, dans un passé absolu parfait
             </span>
         </div>
     
@@ -459,9 +492,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.x.-t.o.-'.html"> E:.-U:.x.-t.o.-' </a>
             <span class="translation"
-                data-fr="ongoing before the referenced date (in its past), earlier, early"
-                data-en="s'étant déroulé avant la date de référence (dans son passé), plus tôt">
-                ongoing before the referenced date (in its past), earlier, early
+                data-fr="s'étant déroulé avant la date de référence (dans son passé), plus tôt"
+                data-en="ongoing before the referenced date (in its past), earlier, early">
+                s'étant déroulé avant la date de référence (dans son passé), plus tôt
             </span>
         </div>
     
@@ -476,7 +509,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -491,6 +524,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -500,6 +543,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -536,5 +580,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             b.a.-M:M:.a.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>story in substance</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>récit en substance</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>récit en substance</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>story in substance</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="b.a.-M_M_.a.-f.o.-'.html">b.a.-M:M:.a.-f.o.-'</a></td>
-                        <td>storyteller in substance</td>
                         <td>conteur en substance</td>
+                        <td>storyteller in substance</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,14 +233,14 @@
                 
                     <tr>
                         <td><a href="M_M_.a.-b.a.-'.html">M:M:.a.-b.a.-'</a></td>
-                        <td>story in attribute</td>
                         <td>récit en attribut</td>
+                        <td>story in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.a.-b.a.-f.o.-'.html">M:M:.a.-b.a.-f.o.-'</a></td>
-                        <td>storyteller in attribute</td>
                         <td>conteur en attribut</td>
+                        <td>storyteller in attribute</td>
                     </tr>
                 
                 </tbody>
@@ -216,10 +248,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -242,14 +274,14 @@
                 
                     <tr>
                         <td><a href="M_M_.a.-M_M_.a.-'.html">M:M:.a.-M:M:.a.-'</a></td>
-                        <td>social functions</td>
                         <td>fonctions sociales</td>
+                        <td>social functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.a.-M_M_.a.-E_.-+f.o.-'.html">M:M:.a.-M:M:.a.-E:.-+f.o.-'</a></td>
-                        <td>social actors and functions</td>
                         <td>fonctions et acteurs sociaux</td>
+                        <td>social actors and functions</td>
                     </tr>
                 
                 </tbody>
@@ -257,11 +289,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -284,8 +317,8 @@
                 
                     <tr>
                         <td><a href="b.a.-.html">b.a.-</a></td>
-                        <td>storyteller</td>
                         <td>conteur</td>
+                        <td>storyteller</td>
                     </tr>
                 
                 </tbody>
@@ -293,8 +326,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -317,8 +350,8 @@
                 
                     <tr>
                         <td><a href="M_M_.a.-.html">M:M:.a.-</a></td>
-                        <td>kinds of social roles</td>
                         <td>genres de rôles sociaux</td>
+                        <td>kinds of social roles</td>
                     </tr>
                 
                 </tbody>
@@ -326,8 +359,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,19 +374,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="b.a.-M_M_.a.-'.html">b.a.-M:M:.a.-'</a> story in substance</div>-->
+            <!--<div class="card-header">Table <a href="b.a.-M_M_.a.-'.html">b.a.-M:M:.a.-'</a> récit en substance</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-M_M_.a.-'.html"> b.a.-M:M:.a.-' </a>
             <span class="translation"
-                data-fr="story in substance"
-                data-en="récit en substance">
-                story in substance
+                data-fr="récit en substance"
+                data-en="story in substance">
+                récit en substance
             </span>
         </div>
     
@@ -364,7 +397,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-M_S_.a.-'.html"> b.a.-M:S:.a.-' </a>
@@ -379,7 +412,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-M_B_.a.-'.html"> b.a.-M:B:.a.-' </a>
@@ -394,7 +427,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-M_T_.a.-'.html"> b.a.-M:T:.a.-' </a>
@@ -412,7 +445,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-S_M_.a.-'.html"> b.a.-S:M:.a.-' </a>
@@ -433,9 +466,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-s.a.-'.html"> b.a.-s.a.-' </a>
             <span class="translation"
-                data-fr="reading"
-                data-en="lecture">
-                reading
+                data-fr="lecture"
+                data-en="reading">
+                lecture
             </span>
         </div>
     
@@ -448,9 +481,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-b.a.-'.html"> b.a.-b.a.-' </a>
             <span class="translation"
-                data-fr="literature"
-                data-en="littérature">
-                literature
+                data-fr="littérature"
+                data-en="literature">
+                littérature
             </span>
         </div>
     
@@ -463,9 +496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-t.a.-'.html"> b.a.-t.a.-' </a>
             <span class="translation"
-                data-fr="accounts"
-                data-en="comptes">
-                accounts
+                data-fr="comptes"
+                data-en="accounts">
+                comptes
             </span>
         </div>
     
@@ -476,7 +509,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-B_M_.a.-'.html"> b.a.-B:M:.a.-' </a>
@@ -497,9 +530,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-k.a.-'.html"> b.a.-k.a.-' </a>
             <span class="translation"
-                data-fr="political action"
-                data-en="action politique">
-                political action
+                data-fr="action politique"
+                data-en="political action">
+                action politique
             </span>
         </div>
     
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-m.a.-'.html"> b.a.-m.a.-' </a>
             <span class="translation"
-                data-fr="erotism"
-                data-en="érotisme">
-                erotism
+                data-fr="érotisme"
+                data-en="erotism">
+                érotisme
             </span>
         </div>
     
@@ -540,7 +573,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-T_M_.a.-'.html"> b.a.-T:M:.a.-' </a>
@@ -561,9 +594,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-d.a.-'.html"> b.a.-d.a.-' </a>
             <span class="translation"
-                data-fr="advertisement"
-                data-en="publicité">
-                advertisement
+                data-fr="publicité"
+                data-en="advertisement">
+                publicité
             </span>
         </div>
     
@@ -576,9 +609,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-f.a.-'.html"> b.a.-f.a.-' </a>
             <span class="translation"
-                data-fr="medical care"
-                data-en="soin médical">
-                medical care
+                data-fr="soin médical"
+                data-en="medical care">
+                soin médical
             </span>
         </div>
     
@@ -591,9 +624,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.a.-l.a.-'.html"> b.a.-l.a.-' </a>
             <span class="translation"
-                data-fr="transportation"
-                data-en="transport">
-                transportation
+                data-fr="transport"
+                data-en="transportation">
+                transport
             </span>
         </div>
     
@@ -608,7 +641,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -623,6 +656,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -632,6 +675,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -668,5 +712,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

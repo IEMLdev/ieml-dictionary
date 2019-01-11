@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             f.u.-d.u.-d.u.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>remarkable</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>remarquable</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>remarquable</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>remarkable</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -194,14 +226,14 @@
                 
                     <tr>
                         <td><a href="d.u.-f.u.-'.html">d.u.-f.u.-'</a></td>
-                        <td>presence</td>
                         <td>présence</td>
+                        <td>presence</td>
                     </tr>
                 
                     <tr>
                         <td><a href="d.u.-f.u.-d.u.-'.html">d.u.-f.u.-d.u.-'</a></td>
-                        <td>present</td>
                         <td>présent</td>
+                        <td>present</td>
                     </tr>
                 
                 </tbody>
@@ -209,10 +241,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -235,26 +267,26 @@
                 
                     <tr>
                         <td><a href="f.u.-M_M_.u.-d.u.-'.html">f.u.-M:M:.u.-d.u.-'</a></td>
-                        <td>sensation en substance (quality)</td>
                         <td>sensation en substance (qualité)</td>
+                        <td>sensation en substance (quality)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-d.u.-d.u.-'.html">M:M:.u.-d.u.-d.u.-'</a></td>
-                        <td>pointer in attribute (quality)</td>
                         <td>pointeur en attribut (qualité)</td>
+                        <td>pointer in attribute (quality)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-M_M_.u.-d.u.-'.html">M:M:.u.-M:M:.u.-d.u.-'</a></td>
-                        <td>semiotic qualities</td>
                         <td>qualités sémiotiques</td>
+                        <td>semiotic qualities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-M_M_.u.-E_.-+d.u.-'.html">M:M:.u.-M:M:.u.-E:.-+d.u.-'</a></td>
-                        <td>semiotic functions and qualities</td>
                         <td>fonctions et qualités sémiotiques</td>
+                        <td>semiotic functions and qualities</td>
                     </tr>
                 
                 </tbody>
@@ -262,11 +294,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -289,8 +322,8 @@
                 
                     <tr>
                         <td><a href="f.u.-.html">f.u.-</a></td>
-                        <td>sensation | phenomenal sign</td>
                         <td>sensation | signe phénomenal</td>
+                        <td>sensation | phenomenal sign</td>
                     </tr>
                 
                 </tbody>
@@ -298,8 +331,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -322,8 +355,8 @@
                 
                     <tr>
                         <td><a href="d.u.-.html">d.u.-</a></td>
-                        <td>pointer | indexation sign</td>
                         <td>pointeur | signe indiciel</td>
+                        <td>pointer | indexation sign</td>
                     </tr>
                 
                 </tbody>
@@ -331,8 +364,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -355,8 +388,8 @@
                 
                     <tr>
                         <td><a href="d.u.-.html">d.u.-</a></td>
-                        <td>pointer | indexation sign</td>
                         <td>pointeur | signe indiciel</td>
+                        <td>pointer | indexation sign</td>
                     </tr>
                 
                 </tbody>
@@ -364,8 +397,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -374,7 +407,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -389,6 +422,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -398,6 +441,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -434,5 +478,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

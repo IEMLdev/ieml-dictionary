@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:M:.wa.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>practical sources of meaning</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sources pratiques du sens</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sources pratiques du sens</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>practical sources of meaning</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-crossed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="M_M_.wu.-.html">M:M:.wu.-</a></td>
-                        <td>aesthetic sources of meaning</td>
                         <td>sources esthétiques du sens</td>
+                        <td>aesthetic sources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,38 +235,38 @@
                 
                     <tr>
                         <td><a href="S_M_.wa.-.html">S:M:.wa.-</a></td>
-                        <td>effort to open up</td>
                         <td>effort d'ouverture</td>
+                        <td>effort to open up</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.wa.-.html">B:M:.wa.-</a></td>
-                        <td>existential effort</td>
                         <td>effort existentiel</td>
+                        <td>existential effort</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_M_.wa.-.html">T:M:.wa.-</a></td>
-                        <td>practical effort</td>
                         <td>effort pratique</td>
+                        <td>practical effort</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.wa.-.html">M:S:.wa.-</a></td>
-                        <td>quest for rightness</td>
                         <td>quête de justesse</td>
+                        <td>quest for rightness</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_B_.wa.-.html">M:B:.wa.-</a></td>
-                        <td>quest for decisive action</td>
                         <td>quête de l'action décisive</td>
+                        <td>quest for decisive action</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_T_.wa.-.html">M:T:.wa.-</a></td>
-                        <td>quest for opportunity</td>
                         <td>quête de l'opportunité</td>
+                        <td>quest for opportunity</td>
                     </tr>
                 
                 </tbody>
@@ -242,8 +274,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -266,8 +298,8 @@
                 
                     <tr>
                         <td><a href="M_M_.O_O_.-.html">M:M:.O:O:.-</a></td>
-                        <td>resources of meaning</td>
                         <td>ressources du sens</td>
+                        <td>resources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -275,11 +307,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -335,8 +368,8 @@
                 
                     <tr>
                         <td><a href="wa..html">wa.</a></td>
-                        <td>act</td>
                         <td>agir</td>
+                        <td>act</td>
                     </tr>
                 
                 </tbody>
@@ -344,8 +377,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -359,19 +392,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_M_.wa.-.html">M:M:.wa.-</a> practical sources of meaning</div>-->
+            <!--<div class="card-header">Table <a href="M_M_.wa.-.html">M:M:.wa.-</a> sources pratiques du sens</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.wa.-.html"> M:M:.wa.- </a>
             <span class="translation"
-                data-fr="practical sources of meaning"
-                data-en="sources pratiques du sens">
-                practical sources of meaning
+                data-fr="sources pratiques du sens"
+                data-en="practical sources of meaning">
+                sources pratiques du sens
             </span>
         </div>
     
@@ -382,14 +415,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_S_.wa.-.html"> M:S:.wa.- </a>
             <span class="translation"
-                data-fr="quest for rightness"
-                data-en="quête de justesse">
-                quest for rightness
+                data-fr="quête de justesse"
+                data-en="quest for rightness">
+                quête de justesse
             </span>
         </div>
     
@@ -397,14 +430,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_B_.wa.-.html"> M:B:.wa.- </a>
             <span class="translation"
-                data-fr="quest for decisive action"
-                data-en="quête de l'action décisive">
-                quest for decisive action
+                data-fr="quête de l'action décisive"
+                data-en="quest for decisive action">
+                quête de l'action décisive
             </span>
         </div>
     
@@ -412,14 +445,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_T_.wa.-.html"> M:T:.wa.- </a>
             <span class="translation"
-                data-fr="quest for opportunity"
-                data-en="quête de l'opportunité">
-                quest for opportunity
+                data-fr="quête de l'opportunité"
+                data-en="quest for opportunity">
+                quête de l'opportunité
             </span>
         </div>
     
@@ -430,14 +463,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_M_.wa.-.html"> S:M:.wa.- </a>
             <span class="translation"
-                data-fr="effort to open up"
-                data-en="effort d'ouverture">
-                effort to open up
+                data-fr="effort d'ouverture"
+                data-en="effort to open up">
+                effort d'ouverture
             </span>
         </div>
     
@@ -451,9 +484,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wa.-.html"> s.wa.- </a>
             <span class="translation"
-                data-fr="context"
-                data-en="contexte">
-                context
+                data-fr="contexte"
+                data-en="context">
+                contexte
             </span>
         </div>
     
@@ -466,9 +499,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.wa.-.html"> b.wa.- </a>
             <span class="translation"
-                data-fr="negotiation | coordination"
-                data-en="négociation | coordination">
-                negotiation | coordination
+                data-fr="négociation | coordination"
+                data-en="negotiation | coordination">
+                négociation | coordination
             </span>
         </div>
     
@@ -481,9 +514,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.wa.-.html"> t.wa.- </a>
             <span class="translation"
-                data-fr="chance | unexpected events"
-                data-en="hasard | événements inattendus">
-                chance | unexpected events
+                data-fr="hasard | événements inattendus"
+                data-en="chance | unexpected events">
+                hasard | événements inattendus
             </span>
         </div>
     
@@ -494,14 +527,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.wa.-.html"> B:M:.wa.- </a>
             <span class="translation"
-                data-fr="existential effort"
-                data-en="effort existentiel">
-                existential effort
+                data-fr="effort existentiel"
+                data-en="existential effort">
+                effort existentiel
             </span>
         </div>
     
@@ -515,9 +548,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.wa.-.html"> k.wa.- </a>
             <span class="translation"
-                data-fr="community of action"
-                data-en="communauté d'action">
-                community of action
+                data-fr="communauté d'action"
+                data-en="community of action">
+                communauté d'action
             </span>
         </div>
     
@@ -530,9 +563,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.wa.-.html"> m.wa.- </a>
             <span class="translation"
-                data-fr="audacity"
-                data-en="audace">
-                audacity
+                data-fr="audace"
+                data-en="audacity">
+                audace
             </span>
         </div>
     
@@ -545,9 +578,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.wa.-.html"> n.wa.- </a>
             <span class="translation"
-                data-fr="practical wisdom | prudence"
-                data-en="sagesse pratique | prudence">
-                practical wisdom | prudence
+                data-fr="sagesse pratique | prudence"
+                data-en="practical wisdom | prudence">
+                sagesse pratique | prudence
             </span>
         </div>
     
@@ -558,14 +591,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_M_.wa.-.html"> T:M:.wa.- </a>
             <span class="translation"
-                data-fr="practical effort"
-                data-en="effort pratique">
-                practical effort
+                data-fr="effort pratique"
+                data-en="practical effort">
+                effort pratique
             </span>
         </div>
     
@@ -579,9 +612,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.wa.-.html"> d.wa.- </a>
             <span class="translation"
-                data-fr="ethical constraint"
-                data-en="contrainte éthique">
-                ethical constraint
+                data-fr="contrainte éthique"
+                data-en="ethical constraint">
+                contrainte éthique
             </span>
         </div>
     
@@ -594,9 +627,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.wa.-.html"> f.wa.- </a>
             <span class="translation"
-                data-fr="physical activity"
-                data-en="activité physique">
-                physical activity
+                data-fr="activité physique"
+                data-en="physical activity">
+                activité physique
             </span>
         </div>
     
@@ -609,9 +642,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.wa.-.html"> l.wa.- </a>
             <span class="translation"
-                data-fr="freedom of movement"
-                data-en="liberté de circulation">
-                freedom of movement
+                data-fr="liberté de circulation"
+                data-en="freedom of movement">
+                liberté de circulation
             </span>
         </div>
     
@@ -626,7 +659,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -641,6 +674,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -650,6 +693,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -686,5 +730,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

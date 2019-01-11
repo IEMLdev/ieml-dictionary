@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.-F:.M:M:.-l.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>spatial situation, in the space | where</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>situation spatiale, dans l'espace | où</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>situation spatiale, dans l'espace | où</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>spatial situation, in the space | where</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,206 +202,206 @@
                 
                     <tr>
                         <td><a href="E_.-O_.s.-l.-'.html">E:.-O:.s.-l.-'</a></td>
-                        <td>absolute direction: top / front</td>
                         <td>direction absolue: haut / avant</td>
+                        <td>absolute direction: top / front</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.b.-l.-'.html">E:.-O:.b.-l.-'</a></td>
-                        <td>relative position: top / front</td>
                         <td>position relative: haut / avant</td>
+                        <td>relative position: top / front</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.t.-l.-'.html">E:.-O:.t.-l.-'</a></td>
-                        <td>absolute position: top / front</td>
                         <td>position absolue: haut / avant</td>
+                        <td>absolute position: top / front</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.k.-l.-'.html">E:.-O:.k.-l.-'</a></td>
-                        <td>perpendicular to the axis</td>
                         <td>perpendiculaire à l'axe</td>
+                        <td>perpendicular to the axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.m.-l.-'.html">E:.-O:.m.-l.-'</a></td>
-                        <td>same side | level</td>
                         <td>même côté | niveau</td>
+                        <td>same side | level</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.n.-l.-'.html">E:.-O:.n.-l.-'</a></td>
-                        <td>half-length</td>
                         <td>mi-longueur</td>
+                        <td>half-length</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.d.-l.-'.html">E:.-O:.d.-l.-'</a></td>
-                        <td>absolute direction : to the bottom, the back</td>
                         <td>direction absolue : vers le bas, l'arrière</td>
+                        <td>absolute direction : to the bottom, the back</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.f.-l.-'.html">E:.-O:.f.-l.-'</a></td>
-                        <td>relative position: lower, behind</td>
                         <td>position relative: en bas, derrière</td>
+                        <td>relative position: lower, behind</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.l.-l.-'.html">E:.-O:.l.-l.-'</a></td>
-                        <td>absolute position: bottom, back</td>
                         <td>position absolue: base, dos</td>
+                        <td>absolute position: bottom, back</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.S_M_.-l.-'.html">E:.-U:.S:M:.-l.-'</a></td>
-                        <td>high</td>
                         <td>en haut</td>
+                        <td>high</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.B_M_.-l.-'.html">E:.-U:.B:M:.-l.-'</a></td>
-                        <td>median (vertical axis)</td>
                         <td>médian (axe vertical)</td>
+                        <td>median (vertical axis)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.T_M_.-l.-'.html">E:.-U:.T:M:.-l.-'</a></td>
-                        <td>down</td>
                         <td>en bas</td>
+                        <td>down</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_S_.-l.-'.html">E:.-U:.M:S:.-l.-'</a></td>
-                        <td>absolute direction in relation to a vertical axis</td>
                         <td>direction absolue par rapport à un axe vertical</td>
+                        <td>absolute direction in relation to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_B_.-l.-'.html">E:.-U:.M:B:.-l.-'</a></td>
-                        <td>relative position in relation to a vertical axis</td>
                         <td>position relative par rapport à un axe vertical</td>
+                        <td>relative position in relation to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_T_.-l.-'.html">E:.-U:.M:T:.-l.-'</a></td>
-                        <td>absolute position in relation to a vertical axis</td>
                         <td>position absolue par rapport à un axe vertical</td>
+                        <td>absolute position in relation to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.S_M_.-l.-'.html">E:.-A:.S:M:.-l.-'</a></td>
-                        <td>front</td>
                         <td>en avant</td>
+                        <td>front</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.B_M_.-l.-'.html">E:.-A:.B:M:.-l.-'</a></td>
-                        <td>median (horizontal axis)</td>
                         <td>médian (axe horizontal)</td>
+                        <td>median (horizontal axis)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.T_M_.-l.-'.html">E:.-A:.T:M:.-l.-'</a></td>
-                        <td>back-</td>
                         <td>en arrière</td>
+                        <td>back-</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_S_.-l.-'.html">E:.-A:.M:S:.-l.-'</a></td>
-                        <td>movement in relation to a horizontal axis</td>
                         <td>mouvement par rapport à un axe horizontal</td>
+                        <td>movement in relation to a horizontal axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_B_.-l.-'.html">E:.-A:.M:B:.-l.-'</a></td>
-                        <td>relative position in relation to a horizontal axis</td>
                         <td>position relative par rapport à un axe horizontal</td>
+                        <td>relative position in relation to a horizontal axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_T_.-l.-'.html">E:.-A:.M:T:.-l.-'</a></td>
-                        <td>absolute position in relation to a horizontal axis</td>
                         <td>position absolue par rapport à un axe horizontal</td>
+                        <td>absolute position in relation to a horizontal axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.S_M_.-l.-'.html">E:.-S:.S:M:.-l.-'</a></td>
-                        <td>objective origin</td>
                         <td>origine objective</td>
+                        <td>objective origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.B_M_.-l.-'.html">E:.-S:.B:M:.-l.-'</a></td>
-                        <td>course</td>
                         <td>parcours</td>
+                        <td>course</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.T_M_.-l.-'.html">E:.-S:.T:M:.-l.-'</a></td>
-                        <td>objective end</td>
                         <td>fin objective</td>
+                        <td>objective end</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.M_S_.-l.-'.html">E:.-S:.M:S:.-l.-'</a></td>
-                        <td>shifter</td>
                         <td>moteur (situation spatiale)</td>
+                        <td>shifter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.M_B_.-l.-'.html">E:.-S:.M:B:.-l.-'</a></td>
-                        <td>path</td>
                         <td>chemin</td>
+                        <td>path</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.M_T_.-l.-'.html">E:.-S:.M:T:.-l.-'</a></td>
-                        <td>traversal</td>
                         <td>traversée</td>
+                        <td>traversal</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.S_M_.-l.-'.html">E:.-B:.S:M:.-l.-'</a></td>
-                        <td>subjective origin</td>
                         <td>origine subjective</td>
+                        <td>subjective origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.B_M_.-l.-'.html">E:.-B:.B:M:.-l.-'</a></td>
-                        <td>proximity</td>
                         <td>proximité</td>
+                        <td>proximity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.T_M_.-l.-'.html">E:.-B:.T:M:.-l.-'</a></td>
-                        <td>subjective end</td>
                         <td>fin subjective</td>
+                        <td>subjective end</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.M_S_.-l.-'.html">E:.-B:.M:S:.-l.-'</a></td>
-                        <td>inside-outside orientation</td>
                         <td>orientation dedans-dehors</td>
+                        <td>inside-outside orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.M_B_.-l.-'.html">E:.-B:.M:B:.-l.-'</a></td>
-                        <td>lateral orientation</td>
                         <td>orientation latérale</td>
+                        <td>lateral orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.M_T_.-l.-'.html">E:.-B:.M:T:.-l.-'</a></td>
-                        <td>distance orientation</td>
                         <td>orientation de distance</td>
+                        <td>distance orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.S_M_.-l.-'.html">E:.-T:.S:M:.-l.-'</a></td>
-                        <td>to the outside</td>
                         <td>vers l'extérieur</td>
+                        <td>to the outside</td>
                     </tr>
                 
                     <tr>
@@ -380,98 +412,98 @@
                 
                     <tr>
                         <td><a href="E_.-T_.T_M_.-l.-'.html">E:.-T:.T:M:.-l.-'</a></td>
-                        <td>to the inside</td>
                         <td>vers l'intérieur</td>
+                        <td>to the inside</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.M_S_.-l.-'.html">E:.-T:.M:S:.-l.-'</a></td>
-                        <td>relative to a point</td>
                         <td>relatif à un point</td>
+                        <td>relative to a point</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.M_B_.-l.-'.html">E:.-T:.M:B:.-l.-'</a></td>
-                        <td>relative to a place</td>
                         <td>relatif à un lieu</td>
+                        <td>relative to a place</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.M_T_.-l.-'.html">E:.-T:.M:T:.-l.-'</a></td>
-                        <td>relative to a center</td>
                         <td>relatif à un centre</td>
+                        <td>relative to a center</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.s.-l.-'.html">E:.-M:.s.-l.-'</a></td>
-                        <td>dynamic origin</td>
                         <td>origine dynamique</td>
+                        <td>dynamic origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.b.-l.-'.html">E:.-M:.b.-l.-'</a></td>
-                        <td>relative origin</td>
                         <td>origine relative</td>
+                        <td>relative origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.t.-l.-'.html">E:.-M:.t.-l.-'</a></td>
-                        <td>absolute origin</td>
                         <td>origine absolue</td>
+                        <td>absolute origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.k.-l.-'.html">E:.-M:.k.-l.-'</a></td>
-                        <td>dynamic intermediary</td>
                         <td>intermédiaire dynamique</td>
+                        <td>dynamic intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.m.-l.-'.html">E:.-M:.m.-l.-'</a></td>
-                        <td>relative intermediary</td>
                         <td>intermediaire relatif</td>
+                        <td>relative intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.n.-l.-'.html">E:.-M:.n.-l.-'</a></td>
-                        <td>absolute intermediary</td>
                         <td>intermédiaire absolu</td>
+                        <td>absolute intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.d.-l.-'.html">E:.-M:.d.-l.-'</a></td>
-                        <td>dynamic termination</td>
                         <td>terminaison dynamique</td>
+                        <td>dynamic termination</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.f.-l.-'.html">E:.-M:.f.-l.-'</a></td>
-                        <td>relative termination</td>
                         <td>terminaison relative</td>
+                        <td>relative termination</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.l.-l.-'.html">E:.-M:.l.-l.-'</a></td>
-                        <td>absolute termination</td>
                         <td>terminaison absolue</td>
+                        <td>absolute termination</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.s.-l.-'.html">E:.-F:.s.-l.-'</a></td>
-                        <td>tension of exi-stance</td>
                         <td>tension d'exi-stance</td>
+                        <td>tension of exi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.b.-l.-'.html">E:.-F:.b.-l.-'</a></td>
-                        <td>relation of exi-stance</td>
                         <td>relation d'exi-stance</td>
+                        <td>relation of exi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.t.-l.-'.html">E:.-F:.t.-l.-'</a></td>
-                        <td>structure of exi-stance</td>
                         <td>structure d'exi-stance</td>
+                        <td>structure of exi-stance</td>
                     </tr>
                 
                     <tr>
@@ -482,68 +514,68 @@
                 
                     <tr>
                         <td><a href="E_.-F_.m.-l.-'.html">E:.-F:.m.-l.-'</a></td>
-                        <td>relation of inter-stance</td>
                         <td>relation d'inter-stance</td>
+                        <td>relation of inter-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.n.-l.-'.html">E:.-F:.n.-l.-'</a></td>
-                        <td>structure of inter-stance</td>
                         <td>structure d'inter-stance</td>
+                        <td>structure of inter-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.d.-l.-'.html">E:.-F:.d.-l.-'</a></td>
-                        <td>tension of insi-stance</td>
                         <td>tension d'insi-stance</td>
+                        <td>tension of insi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.f.-l.-'.html">E:.-F:.f.-l.-'</a></td>
-                        <td>relation of insi-stance</td>
                         <td>relation d'insi-stance</td>
+                        <td>relation of insi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.l.-l.-'.html">E:.-F:.l.-l.-'</a></td>
-                        <td>structure of insi-stance</td>
                         <td>structure d'insi-stance</td>
+                        <td>structure of insi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.S_M_.-l.-'.html">E:.-O:.S:M:.-l.-'</a></td>
-                        <td>top | face</td>
                         <td>haut | face</td>
+                        <td>top | face</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.B_M_.-l.-'.html">E:.-O:.B:M:.-l.-'</a></td>
-                        <td>middle</td>
                         <td>milieu</td>
+                        <td>middle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.T_M_.-l.-'.html">E:.-O:.T:M:.-l.-'</a></td>
-                        <td>low</td>
                         <td>bas</td>
+                        <td>low</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_M_.-l.-'.html">E:.-U:.M:M:.-l.-'</a></td>
-                        <td>situation relative to a vertical axis</td>
                         <td>situation par rapport à un axe vertical</td>
+                        <td>situation relative to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_M_.-l.-'.html">E:.-A:.M:M:.-l.-'</a></td>
-                        <td>situation relative to a horizontal axis</td>
                         <td>situation par rapport à un axe horizontal</td>
+                        <td>situation relative to a horizontal axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.M_M_.-l.-'.html">E:.-S:.M:M:.-l.-'</a></td>
-                        <td>path roles</td>
                         <td>rôles de chemin</td>
+                        <td>path roles</td>
                     </tr>
                 
                     <tr>
@@ -554,26 +586,26 @@
                 
                     <tr>
                         <td><a href="E_.-T_.M_M_.-l.-'.html">E:.-T:.M:M:.-l.-'</a></td>
-                        <td>movement</td>
                         <td>mouvement</td>
+                        <td>movement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.S_M_.-l.-'.html">E:.-M:.S:M:.-l.-'</a></td>
-                        <td>beginning</td>
                         <td>commencement</td>
+                        <td>beginning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.B_M_.-l.-'.html">E:.-M:.B:M:.-l.-'</a></td>
-                        <td>intermediary</td>
                         <td>intermédiaire</td>
+                        <td>intermediary</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.T_M_.-l.-'.html">E:.-M:.T:M:.-l.-'</a></td>
-                        <td>termination</td>
                         <td>terminaison</td>
+                        <td>termination</td>
                     </tr>
                 
                     <tr>
@@ -590,26 +622,26 @@
                 
                     <tr>
                         <td><a href="E_.-F_.B_M_.-l.-'.html">E:.-F:.B:M:.-l.-'</a></td>
-                        <td>inter-stance (spatial situation)</td>
                         <td>inter-stance (situation spatiale)</td>
+                        <td>inter-stance (spatial situation)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.T_M_.-l.-'.html">E:.-F:.T:M:.-l.-'</a></td>
-                        <td>insi-stance (spatial situation)</td>
                         <td>insi-stance (situation spatiale)</td>
+                        <td>insi-stance (spatial situation)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.M_M_.-l.-'.html">E:.-O:.M:M:.-l.-'</a></td>
-                        <td>place: axial orientation</td>
                         <td>lieu: orientation axiale</td>
+                        <td>place: axial orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.M_M_.-l.-'.html">E:.-M:.M:M:.-l.-'</a></td>
-                        <td>situation: path</td>
                         <td>situation: cheminement</td>
+                        <td>situation: path</td>
                     </tr>
                 
                 </tbody>
@@ -617,11 +649,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -644,38 +677,38 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -683,8 +716,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -707,8 +740,8 @@
                 
                     <tr>
                         <td><a href="l..html">l.</a></td>
+                        <td>espace</td>
                         <td>space</td>
-                        <td>espaces</td>
                     </tr>
                 
                 </tbody>
@@ -716,8 +749,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -731,19 +764,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.-F_.M_M_.-l.-'.html">E:.-F:.M:M:.-l.-'</a> spatial situation, in the space | where</div>-->
+            <!--<div class="card-header">Table <a href="E_.-F_.M_M_.-l.-'.html">E:.-F:.M:M:.-l.-'</a> situation spatiale, dans l'espace | où</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="10" style="background-color: #fff1bc;">
+    <th class="cell" colspan="10" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.M_M_.-l.-'.html"> E:.-F:.M:M:.-l.-' </a>
             <span class="translation"
-                data-fr="spatial situation, in the space | where"
-                data-en="situation spatiale, dans l'espace | où">
-                spatial situation, in the space | where
+                data-fr="situation spatiale, dans l'espace | où"
+                data-en="spatial situation, in the space | where">
+                situation spatiale, dans l'espace | où
             </span>
         </div>
     
@@ -754,14 +787,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.s.-l.-'.html"> E:.-F:.s.-l.-' </a>
             <span class="translation"
-                data-fr="tension of exi-stance"
-                data-en="tension d'exi-stance">
-                tension of exi-stance
+                data-fr="tension d'exi-stance"
+                data-en="tension of exi-stance">
+                tension d'exi-stance
             </span>
         </div>
     
@@ -769,14 +802,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.b.-l.-'.html"> E:.-F:.b.-l.-' </a>
             <span class="translation"
-                data-fr="relation of exi-stance"
-                data-en="relation d'exi-stance">
-                relation of exi-stance
+                data-fr="relation d'exi-stance"
+                data-en="relation of exi-stance">
+                relation d'exi-stance
             </span>
         </div>
     
@@ -784,14 +817,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.t.-l.-'.html"> E:.-F:.t.-l.-' </a>
             <span class="translation"
-                data-fr="structure of exi-stance"
-                data-en="structure d'exi-stance">
-                structure of exi-stance
+                data-fr="structure d'exi-stance"
+                data-en="structure of exi-stance">
+                structure d'exi-stance
             </span>
         </div>
     
@@ -799,7 +832,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.k.-l.-'.html"> E:.-F:.k.-l.-' </a>
@@ -814,14 +847,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.m.-l.-'.html"> E:.-F:.m.-l.-' </a>
             <span class="translation"
-                data-fr="relation of inter-stance"
-                data-en="relation d'inter-stance">
-                relation of inter-stance
+                data-fr="relation d'inter-stance"
+                data-en="relation of inter-stance">
+                relation d'inter-stance
             </span>
         </div>
     
@@ -829,14 +862,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.n.-l.-'.html"> E:.-F:.n.-l.-' </a>
             <span class="translation"
-                data-fr="structure of inter-stance"
-                data-en="structure d'inter-stance">
-                structure of inter-stance
+                data-fr="structure d'inter-stance"
+                data-en="structure of inter-stance">
+                structure d'inter-stance
             </span>
         </div>
     
@@ -844,14 +877,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.d.-l.-'.html"> E:.-F:.d.-l.-' </a>
             <span class="translation"
-                data-fr="tension of insi-stance"
-                data-en="tension d'insi-stance">
-                tension of insi-stance
+                data-fr="tension d'insi-stance"
+                data-en="tension of insi-stance">
+                tension d'insi-stance
             </span>
         </div>
     
@@ -859,14 +892,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.f.-l.-'.html"> E:.-F:.f.-l.-' </a>
             <span class="translation"
-                data-fr="relation of insi-stance"
-                data-en="relation d'insi-stance">
-                relation of insi-stance
+                data-fr="relation d'insi-stance"
+                data-en="relation of insi-stance">
+                relation d'insi-stance
             </span>
         </div>
     
@@ -874,14 +907,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.l.-l.-'.html"> E:.-F:.l.-l.-' </a>
             <span class="translation"
-                data-fr="structure of insi-stance"
-                data-en="structure d'insi-stance">
-                structure of insi-stance
+                data-fr="structure d'insi-stance"
+                data-en="structure of insi-stance">
+                structure d'insi-stance
             </span>
         </div>
     
@@ -892,14 +925,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.M_M_.-l.-'.html"> E:.-U:.M:M:.-l.-' </a>
             <span class="translation"
-                data-fr="situation relative to a vertical axis"
-                data-en="situation par rapport à un axe vertical">
-                situation relative to a vertical axis
+                data-fr="situation par rapport à un axe vertical"
+                data-en="situation relative to a vertical axis">
+                situation par rapport à un axe vertical
             </span>
         </div>
     
@@ -913,9 +946,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.s.-l.-'.html"> E:.-U:.s.-l.-' </a>
             <span class="translation"
-                data-fr="to the top, height"
-                data-en="vers le haut, hauteur">
-                to the top, height
+                data-fr="vers le haut, hauteur"
+                data-en="to the top, height">
+                vers le haut, hauteur
             </span>
         </div>
     
@@ -928,9 +961,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.b.-l.-'.html"> E:.-U:.b.-l.-' </a>
             <span class="translation"
-                data-fr="on, above, on top"
-                data-en="sur, au dessus">
-                on, above, on top
+                data-fr="sur, au dessus"
+                data-en="on, above, on top">
+                sur, au dessus
             </span>
         </div>
     
@@ -943,9 +976,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.t.-l.-'.html"> E:.-U:.t.-l.-' </a>
             <span class="translation"
-                data-fr="summit"
-                data-en="sommet">
-                summit
+                data-fr="sommet"
+                data-en="summit">
+                sommet
             </span>
         </div>
     
@@ -958,9 +991,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.k.-l.-'.html"> E:.-U:.k.-l.-' </a>
             <span class="translation"
-                data-fr="horizontally"
-                data-en="horizontalement">
-                horizontally
+                data-fr="horizontalement"
+                data-en="horizontally">
+                horizontalement
             </span>
         </div>
     
@@ -973,9 +1006,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.m.-l.-'.html"> E:.-U:.m.-l.-' </a>
             <span class="translation"
-                data-fr="at same level"
-                data-en="au même niveau">
-                at same level
+                data-fr="au même niveau"
+                data-en="at same level">
+                au même niveau
             </span>
         </div>
     
@@ -988,9 +1021,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.n.-l.-'.html"> E:.-U:.n.-l.-' </a>
             <span class="translation"
-                data-fr="half-height"
-                data-en="mi-hauteur">
-                half-height
+                data-fr="mi-hauteur"
+                data-en="half-height">
+                mi-hauteur
             </span>
         </div>
     
@@ -1003,9 +1036,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.d.-l.-'.html"> E:.-U:.d.-l.-' </a>
             <span class="translation"
-                data-fr="downward, depth"
-                data-en="vers le bas, profondeur">
-                downward, depth
+                data-fr="vers le bas, profondeur"
+                data-en="downward, depth">
+                vers le bas, profondeur
             </span>
         </div>
     
@@ -1018,9 +1051,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.f.-l.-'.html"> E:.-U:.f.-l.-' </a>
             <span class="translation"
-                data-fr="under"
-                data-en="sous">
-                under
+                data-fr="sous"
+                data-en="under">
+                sous
             </span>
         </div>
     
@@ -1033,9 +1066,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.l.-l.-'.html"> E:.-U:.l.-l.-' </a>
             <span class="translation"
-                data-fr="bottom | basis"
-                data-en="fond | base | cul">
-                bottom | basis
+                data-fr="fond | base | cul"
+                data-en="bottom | basis">
+                fond | base | cul
             </span>
         </div>
     
@@ -1046,14 +1079,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.M_M_.-l.-'.html"> E:.-A:.M:M:.-l.-' </a>
             <span class="translation"
-                data-fr="situation relative to a horizontal axis"
-                data-en="situation par rapport à un axe horizontal">
-                situation relative to a horizontal axis
+                data-fr="situation par rapport à un axe horizontal"
+                data-en="situation relative to a horizontal axis">
+                situation par rapport à un axe horizontal
             </span>
         </div>
     
@@ -1067,9 +1100,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.s.-l.-'.html"> E:.-A:.s.-l.-' </a>
             <span class="translation"
-                data-fr="ahead | to the front"
-                data-en="vers l'avant">
-                ahead | to the front
+                data-fr="vers l'avant"
+                data-en="ahead | to the front">
+                vers l'avant
             </span>
         </div>
     
@@ -1082,9 +1115,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.b.-l.-'.html"> E:.-A:.b.-l.-' </a>
             <span class="translation"
-                data-fr="in front of"
-                data-en="devant">
-                in front of
+                data-fr="devant"
+                data-en="in front of">
+                devant
             </span>
         </div>
     
@@ -1097,9 +1130,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.t.-l.-'.html"> E:.-A:.t.-l.-' </a>
             <span class="translation"
-                data-fr="face (situation), anterior"
-                data-en="face, antérieur">
-                face (situation), anterior
+                data-fr="face, antérieur"
+                data-en="face (situation), anterior">
+                face, antérieur
             </span>
         </div>
     
@@ -1112,9 +1145,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.k.-l.-'.html"> E:.-A:.k.-l.-' </a>
             <span class="translation"
-                data-fr="vertically"
-                data-en="verticalement">
-                vertically
+                data-fr="verticalement"
+                data-en="vertically">
+                verticalement
             </span>
         </div>
     
@@ -1127,9 +1160,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.m.-l.-'.html"> E:.-A:.m.-l.-' </a>
             <span class="translation"
-                data-fr="on the same side"
-                data-en="du même côté">
-                on the same side
+                data-fr="du même côté"
+                data-en="on the same side">
+                du même côté
             </span>
         </div>
     
@@ -1142,9 +1175,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.n.-l.-'.html"> E:.-A:.n.-l.-' </a>
             <span class="translation"
-                data-fr="half way"
-                data-en="mi-chemin">
-                half way
+                data-fr="mi-chemin"
+                data-en="half way">
+                mi-chemin
             </span>
         </div>
     
@@ -1157,9 +1190,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.d.-l.-'.html"> E:.-A:.d.-l.-' </a>
             <span class="translation"
-                data-fr="to the back"
-                data-en="vers l'arrière">
-                to the back
+                data-fr="vers l'arrière"
+                data-en="to the back">
+                vers l'arrière
             </span>
         </div>
     
@@ -1172,9 +1205,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.f.-l.-'.html"> E:.-A:.f.-l.-' </a>
             <span class="translation"
-                data-fr="behind"
-                data-en="derrière">
-                behind
+                data-fr="derrière"
+                data-en="behind">
+                derrière
             </span>
         </div>
     
@@ -1187,9 +1220,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.l.-l.-'.html"> E:.-A:.l.-l.-' </a>
             <span class="translation"
-                data-fr="back, posterior"
-                data-en="dos, postérieur">
-                back, posterior
+                data-fr="dos, postérieur"
+                data-en="back, posterior">
+                dos, postérieur
             </span>
         </div>
     
@@ -1200,14 +1233,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.M_M_.-l.-'.html"> E:.-S:.M:M:.-l.-' </a>
             <span class="translation"
-                data-fr="path roles"
-                data-en="rôles de chemin">
-                path roles
+                data-fr="rôles de chemin"
+                data-en="path roles">
+                rôles de chemin
             </span>
         </div>
     
@@ -1221,9 +1254,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.s.-l.-'.html"> E:.-S:.s.-l.-' </a>
             <span class="translation"
-                data-fr="source, beginning"
-                data-en="source, commencement">
-                source, beginning
+                data-fr="source, commencement"
+                data-en="source, beginning">
+                source, commencement
             </span>
         </div>
     
@@ -1236,9 +1269,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.b.-l.-'.html"> E:.-S:.b.-l.-' </a>
             <span class="translation"
-                data-fr="point of departure"
-                data-en="point de départ">
-                point of departure
+                data-fr="point de départ"
+                data-en="point of departure">
+                point de départ
             </span>
         </div>
     
@@ -1251,9 +1284,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.t.-l.-'.html"> E:.-S:.t.-l.-' </a>
             <span class="translation"
-                data-fr="entry point"
-                data-en="point d'entrée">
-                entry point
+                data-fr="point d'entrée"
+                data-en="entry point">
+                point d'entrée
             </span>
         </div>
     
@@ -1281,9 +1314,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.m.-l.-'.html"> E:.-S:.m.-l.-' </a>
             <span class="translation"
-                data-fr="route"
-                data-en="trajet">
-                route
+                data-fr="trajet"
+                data-en="route">
+                trajet
             </span>
         </div>
     
@@ -1296,9 +1329,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.n.-l.-'.html"> E:.-S:.n.-l.-' </a>
             <span class="translation"
-                data-fr="way, road, channel, tunnel (role)"
-                data-en="voie, route, canal, tunnel (rôle)">
-                way, road, channel, tunnel (role)
+                data-fr="voie, route, canal, tunnel (rôle)"
+                data-en="way, road, channel, tunnel (role)">
+                voie, route, canal, tunnel (rôle)
             </span>
         </div>
     
@@ -1311,9 +1344,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.d.-l.-'.html"> E:.-S:.d.-l.-' </a>
             <span class="translation"
-                data-fr="well, termination, end"
-                data-en="puits, terminaison, fin">
-                well, termination, end
+                data-fr="puits, terminaison, fin"
+                data-en="well, termination, end">
+                puits, terminaison, fin
             </span>
         </div>
     
@@ -1326,9 +1359,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.f.-l.-'.html"> E:.-S:.f.-l.-' </a>
             <span class="translation"
-                data-fr="arrival point"
-                data-en="point d'arrivée">
-                arrival point
+                data-fr="point d'arrivée"
+                data-en="arrival point">
+                point d'arrivée
             </span>
         </div>
     
@@ -1341,9 +1374,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.l.-l.-'.html"> E:.-S:.l.-l.-' </a>
             <span class="translation"
-                data-fr="point of exit"
-                data-en="point de sortie">
-                point of exit
+                data-fr="point de sortie"
+                data-en="point of exit">
+                point de sortie
             </span>
         </div>
     
@@ -1354,7 +1387,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.M_M_.-l.-'.html"> E:.-B:.M:M:.-l.-' </a>
@@ -1375,9 +1408,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.s.-l.-'.html"> E:.-B:.s.-l.-' </a>
             <span class="translation"
-                data-fr="openning"
-                data-en="ouverture">
-                openning
+                data-fr="ouverture"
+                data-en="openning">
+                ouverture
             </span>
         </div>
     
@@ -1390,9 +1423,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.b.-l.-'.html"> E:.-B:.b.-l.-' </a>
             <span class="translation"
-                data-fr="at the left, left side"
-                data-en="à gauche, côté gauche">
-                at the left, left side
+                data-fr="à gauche, côté gauche"
+                data-en="at the left, left side">
+                à gauche, côté gauche
             </span>
         </div>
     
@@ -1405,9 +1438,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.t.-l.-'.html"> E:.-B:.t.-l.-' </a>
             <span class="translation"
-                data-fr="center, at the center"
-                data-en="centre, au centre">
-                center, at the center
+                data-fr="centre, au centre"
+                data-en="center, at the center">
+                centre, au centre
             </span>
         </div>
     
@@ -1420,9 +1453,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.k.-l.-'.html"> E:.-B:.k.-l.-' </a>
             <span class="translation"
-                data-fr="limiting, at the edge"
-                data-en="limitant, au bord">
-                limiting, at the edge
+                data-fr="limitant, au bord"
+                data-en="limiting, at the edge">
+                limitant, au bord
             </span>
         </div>
     
@@ -1435,9 +1468,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.m.-l.-'.html"> E:.-B:.m.-l.-' </a>
             <span class="translation"
-                data-fr="between"
-                data-en="entre">
-                between
+                data-fr="entre"
+                data-en="between">
+                entre
             </span>
         </div>
     
@@ -1450,9 +1483,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.n.-l.-'.html"> E:.-B:.n.-l.-' </a>
             <span class="translation"
-                data-fr="near | there"
-                data-en="là | près">
-                near | there
+                data-fr="là | près"
+                data-en="near | there">
+                là | près
             </span>
         </div>
     
@@ -1465,9 +1498,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.d.-l.-'.html"> E:.-B:.d.-l.-' </a>
             <span class="translation"
-                data-fr="closing"
-                data-en="fermeture">
-                closing
+                data-fr="fermeture"
+                data-en="closing">
+                fermeture
             </span>
         </div>
     
@@ -1480,9 +1513,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.f.-l.-'.html"> E:.-B:.f.-l.-' </a>
             <span class="translation"
-                data-fr="at the right, right side"
-                data-en="à  droite, côté droit">
-                at the right, right side
+                data-fr="à  droite, côté droit"
+                data-en="at the right, right side">
+                à  droite, côté droit
             </span>
         </div>
     
@@ -1495,9 +1528,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.l.-l.-'.html"> E:.-B:.l.-l.-' </a>
             <span class="translation"
-                data-fr="over there | far away"
-                data-en="là-bas | loin">
-                over there | far away
+                data-fr="là-bas | loin"
+                data-en="over there | far away">
+                là-bas | loin
             </span>
         </div>
     
@@ -1508,14 +1541,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.M_M_.-l.-'.html"> E:.-T:.M:M:.-l.-' </a>
             <span class="translation"
-                data-fr="movement"
-                data-en="mouvement">
-                movement
+                data-fr="mouvement"
+                data-en="movement">
+                mouvement
             </span>
         </div>
     
@@ -1529,9 +1562,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.s.-l.-'.html"> E:.-T:.s.-l.-' </a>
             <span class="translation"
-                data-fr="from"
-                data-en="à partir de">
-                from
+                data-fr="à partir de"
+                data-en="from">
+                à partir de
             </span>
         </div>
     
@@ -1544,9 +1577,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.b.-l.-'.html"> E:.-T:.b.-l.-' </a>
             <span class="translation"
-                data-fr="out of"
-                data-en="hors de">
-                out of
+                data-fr="hors de"
+                data-en="out of">
+                hors de
             </span>
         </div>
     
@@ -1559,9 +1592,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.t.-l.-'.html"> E:.-T:.t.-l.-' </a>
             <span class="translation"
-                data-fr="centrifugal"
-                data-en="centrifuge">
-                centrifugal
+                data-fr="centrifuge"
+                data-en="centrifugal">
+                centrifuge
             </span>
         </div>
     
@@ -1574,9 +1607,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.k.-l.-'.html"> E:.-T:.k.-l.-' </a>
             <span class="translation"
-                data-fr="by"
-                data-en="par">
-                by
+                data-fr="par"
+                data-en="by">
+                par
             </span>
         </div>
     
@@ -1589,9 +1622,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.m.-l.-'.html"> E:.-T:.m.-l.-' </a>
             <span class="translation"
-                data-fr="through"
-                data-en="à  travers">
-                through
+                data-fr="à  travers"
+                data-en="through">
+                à  travers
             </span>
         </div>
     
@@ -1604,9 +1637,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.n.-l.-'.html"> E:.-T:.n.-l.-' </a>
             <span class="translation"
-                data-fr="around"
-                data-en="autour">
-                around
+                data-fr="autour"
+                data-en="around">
+                autour
             </span>
         </div>
     
@@ -1619,9 +1652,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.d.-l.-'.html"> E:.-T:.d.-l.-' </a>
             <span class="translation"
-                data-fr="toward"
-                data-en="en direction de">
-                toward
+                data-fr="en direction de"
+                data-en="toward">
+                en direction de
             </span>
         </div>
     
@@ -1634,9 +1667,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.f.-l.-'.html"> E:.-T:.f.-l.-' </a>
             <span class="translation"
-                data-fr="in | into"
-                data-en="dans">
-                in | into
+                data-fr="dans"
+                data-en="in | into">
+                dans
             </span>
         </div>
     
@@ -1649,9 +1682,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.l.-l.-'.html"> E:.-T:.l.-l.-' </a>
             <span class="translation"
-                data-fr="centripetal"
-                data-en="centripète">
-                centripetal
+                data-fr="centripète"
+                data-en="centripetal">
+                centripète
             </span>
         </div>
     
@@ -1666,7 +1699,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1681,6 +1714,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1690,6 +1733,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1726,5 +1770,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

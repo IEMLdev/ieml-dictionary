@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>Southern african countries</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>Pays d'Afrique australe</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>Pays d'Afrique australe</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>Southern african countries</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,38 +202,38 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',S:.-',M:.-',_</a></td>
-                        <td>Equatorial Africa</td>
                         <td>Afrique équatoriale</td>
+                        <td>Equatorial Africa</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',B:.-',M:.-',_</a></td>
-                        <td>Tropical south Africa</td>
                         <td>Afrique tropicale sud</td>
+                        <td>Tropical south Africa</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',T:.-',M:.-',_</a></td>
-                        <td>Southern tip of Africa</td>
                         <td>Pointe sud de l'Afrique</td>
+                        <td>Southern tip of Africa</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',S:.-',_</a></td>
-                        <td>Southern Africa looking to the Atlantic</td>
                         <td>Afrique australe tournée vers l'Atlantique</td>
+                        <td>Southern Africa looking to the Atlantic</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',B:.-',_</a></td>
-                        <td>Countries from the center of southern Africa</td>
                         <td>Pays du centre de l'Afrique Australe</td>
+                        <td>Countries from the center of southern Africa</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',T:.-',_</a></td>
-                        <td>Southern Africa looking to the indian ocean</td>
                         <td>Afrique Australe tournée vers l'océan indien</td>
+                        <td>Southern Africa looking to the indian ocean</td>
                     </tr>
                 
                 </tbody>
@@ -209,11 +241,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -236,8 +269,8 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'B_.-'_.html">n.-S:.U:.-'T:.-'B:.-',</a></td>
-                        <td>southern Africa</td>
                         <td>Afrique australe</td>
+                        <td>southern Africa</td>
                     </tr>
                 
                 </tbody>
@@ -245,8 +278,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,20 +302,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -290,8 +323,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -314,20 +347,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -335,8 +368,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -350,19 +383,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_</a> Southern african countries</div>-->
+            <!--<div class="card-header">Table <a href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_</a> Pays d'Afrique australe</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',M:.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="Southern african countries"
-                data-en="Pays d'Afrique australe">
-                Southern african countries
+                data-fr="Pays d'Afrique australe"
+                data-en="Southern african countries">
+                Pays d'Afrique australe
             </span>
         </div>
     
@@ -373,14 +406,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',M:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Southern Africa looking to the Atlantic"
-                data-en="Afrique australe tournée vers l'Atlantique">
-                Southern Africa looking to the Atlantic
+                data-fr="Afrique australe tournée vers l'Atlantique"
+                data-en="Southern Africa looking to the Atlantic">
+                Afrique australe tournée vers l'Atlantique
             </span>
         </div>
     
@@ -388,14 +421,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',M:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Countries from the center of southern Africa"
-                data-en="Pays du centre de l'Afrique Australe">
-                Countries from the center of southern Africa
+                data-fr="Pays du centre de l'Afrique Australe"
+                data-en="Countries from the center of southern Africa">
+                Pays du centre de l'Afrique Australe
             </span>
         </div>
     
@@ -403,14 +436,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_M_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',M:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Southern Africa looking to the indian ocean"
-                data-en="Afrique Australe tournée vers l'océan indien">
-                Southern Africa looking to the indian ocean
+                data-fr="Afrique Australe tournée vers l'océan indien"
+                data-en="Southern Africa looking to the indian ocean">
+                Afrique Australe tournée vers l'océan indien
             </span>
         </div>
     
@@ -421,14 +454,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',S:.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="Equatorial Africa"
-                data-en="Afrique équatoriale">
-                Equatorial Africa
+                data-fr="Afrique équatoriale"
+                data-en="Equatorial Africa">
+                Afrique équatoriale
             </span>
         </div>
     
@@ -442,9 +475,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',S:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Gabon, Congo (Brazzaville), Equatorial Guinea"
-                data-en="Gabon, Congo (Brazzaville), Guinée équatoriale">
-                Gabon, Congo (Brazzaville), Equatorial Guinea
+                data-fr="Gabon, Congo (Brazzaville), Guinée équatoriale"
+                data-en="Gabon, Congo (Brazzaville), Equatorial Guinea">
+                Gabon, Congo (Brazzaville), Guinée équatoriale
             </span>
         </div>
     
@@ -457,9 +490,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',S:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Democratic Republic of the Congo (Kinshasa)"
-                data-en="République démocratique du Congo (Kinshasa)">
-                Democratic Republic of the Congo (Kinshasa)
+                data-fr="République démocratique du Congo (Kinshasa)"
+                data-en="Democratic Republic of the Congo (Kinshasa)">
+                République démocratique du Congo (Kinshasa)
             </span>
         </div>
     
@@ -472,9 +505,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_S_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',S:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Burundi, Kenya, Ouganda, Rwanda, Tanzania"
-                data-en="Burundi, Kenya, Ouganda, Rwanda, Tanzanie">
-                Burundi, Kenya, Ouganda, Rwanda, Tanzania
+                data-fr="Burundi, Kenya, Ouganda, Rwanda, Tanzanie"
+                data-en="Burundi, Kenya, Ouganda, Rwanda, Tanzania">
+                Burundi, Kenya, Ouganda, Rwanda, Tanzanie
             </span>
         </div>
     
@@ -485,14 +518,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_B_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',B:.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="Tropical south Africa"
-                data-en="Afrique tropicale sud">
-                Tropical south Africa
+                data-fr="Afrique tropicale sud"
+                data-en="Tropical south Africa">
+                Afrique tropicale sud
             </span>
         </div>
     
@@ -521,9 +554,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_B_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',B:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Zambia, Zimbabwe"
-                data-en="Zambie, Zimbabwe">
-                Zambia, Zimbabwe
+                data-fr="Zambie, Zimbabwe"
+                data-en="Zambia, Zimbabwe">
+                Zambie, Zimbabwe
             </span>
         </div>
     
@@ -536,9 +569,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_B_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',B:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Malawi, Mozambique; îles: Comores, Madagascar, Mauritius, Reunion"
-                data-en="Malawi, Mozambique; îles: Comores, Madagascar, Maurice, Réunion">
-                Malawi, Mozambique; îles: Comores, Madagascar, Mauritius, Reunion
+                data-fr="Malawi, Mozambique; îles: Comores, Madagascar, Maurice, Réunion"
+                data-en="Malawi, Mozambique; îles: Comores, Madagascar, Mauritius, Reunion">
+                Malawi, Mozambique; îles: Comores, Madagascar, Maurice, Réunion
             </span>
         </div>
     
@@ -549,14 +582,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_T_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',T:.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="Southern tip of Africa"
-                data-en="Pointe sud de l'Afrique">
-                Southern tip of Africa
+                data-fr="Pointe sud de l'Afrique"
+                data-en="Southern tip of Africa">
+                Pointe sud de l'Afrique
             </span>
         </div>
     
@@ -570,9 +603,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_T_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',T:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Namibia"
-                data-en="Namibie">
-                Namibia
+                data-fr="Namibie"
+                data-en="Namibia">
+                Namibie
             </span>
         </div>
     
@@ -600,9 +633,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'B_.-'_T_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'B:.-',T:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="South Africa, Lesotho, Swaziland"
-                data-en="Afrique du Sud, Lesotho, Swaziland">
-                South Africa, Lesotho, Swaziland
+                data-fr="Afrique du Sud, Lesotho, Swaziland"
+                data-en="South Africa, Lesotho, Swaziland">
+                Afrique du Sud, Lesotho, Swaziland
             </span>
         </div>
     
@@ -617,7 +650,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -632,6 +665,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -641,6 +684,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -677,5 +721,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

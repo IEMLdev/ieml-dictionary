@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             h.O:M:.m.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>types of subjective self-reference</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>types d'auto-référence subjective</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>types d'auto-référence subjective</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>types of subjective self-reference</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,32 +202,32 @@
                 
                     <tr>
                         <td><a href="h.O_S_.m.-.html">h.O:S:.m.-</a></td>
-                        <td>absence from the world</td>
                         <td>absence au monde</td>
+                        <td>absence from the world</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_B_.m.-.html">h.O:B:.m.-</a></td>
-                        <td>presence to self and the world</td>
                         <td>présence à soi et au monde</td>
+                        <td>presence to self and the world</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_T_.m.-.html">h.O:T:.m.-</a></td>
-                        <td>absence to oneself</td>
                         <td>absence à soi</td>
+                        <td>absence to oneself</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.m.-.html">h.U:M:.m.-</a></td>
-                        <td>inter-subjective tropism</td>
                         <td>tropisme inter-subjectif</td>
+                        <td>inter-subjective tropism</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.A_M_.m.-.html">h.A:M:.m.-</a></td>
-                        <td>integration of the self</td>
                         <td>intégration du moi</td>
+                        <td>integration of the self</td>
                     </tr>
                 
                 </tbody>
@@ -203,11 +235,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -230,8 +263,8 @@
                 
                     <tr>
                         <td><a href="h..html">h.</a></td>
-                        <td>subject</td>
                         <td>sujet</td>
+                        <td>subject</td>
                     </tr>
                 
                 </tbody>
@@ -239,8 +272,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -297,7 +330,7 @@
                     <tr>
                         <td><a href="m..html">m.</a></td>
                         <td>affect</td>
-                        <td>affects</td>
+                        <td>affect</td>
                     </tr>
                 
                 </tbody>
@@ -305,8 +338,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -320,19 +353,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="h.O_M_.m.-.html">h.O:M:.m.-</a> types of subjective self-reference</div>-->
+            <!--<div class="card-header">Table <a href="h.O_M_.m.-.html">h.O:M:.m.-</a> types d'auto-référence subjective</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.O_M_.m.-.html"> h.O:M:.m.- </a>
             <span class="translation"
-                data-fr="types of subjective self-reference"
-                data-en="types d'auto-référence subjective">
-                types of subjective self-reference
+                data-fr="types d'auto-référence subjective"
+                data-en="types of subjective self-reference">
+                types d'auto-référence subjective
             </span>
         </div>
     
@@ -343,14 +376,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.O_S_.m.-.html"> h.O:S:.m.- </a>
             <span class="translation"
-                data-fr="absence from the world"
-                data-en="absence au monde">
-                absence from the world
+                data-fr="absence au monde"
+                data-en="absence from the world">
+                absence au monde
             </span>
         </div>
     
@@ -358,14 +391,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.O_B_.m.-.html"> h.O:B:.m.- </a>
             <span class="translation"
-                data-fr="presence to self and the world"
-                data-en="présence à soi et au monde">
-                presence to self and the world
+                data-fr="présence à soi et au monde"
+                data-en="presence to self and the world">
+                présence à soi et au monde
             </span>
         </div>
     
@@ -373,14 +406,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.O_T_.m.-.html"> h.O:T:.m.- </a>
             <span class="translation"
-                data-fr="absence to oneself"
-                data-en="absence à soi">
-                absence to oneself
+                data-fr="absence à soi"
+                data-en="absence to oneself">
+                absence à soi
             </span>
         </div>
     
@@ -391,14 +424,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.U_M_.m.-.html"> h.U:M:.m.- </a>
             <span class="translation"
-                data-fr="inter-subjective tropism"
-                data-en="tropisme inter-subjectif">
-                inter-subjective tropism
+                data-fr="tropisme inter-subjectif"
+                data-en="inter-subjective tropism">
+                tropisme inter-subjectif
             </span>
         </div>
     
@@ -412,9 +445,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.y.m.-.html"> h.y.m.- </a>
             <span class="translation"
-                data-fr="introversion, autism"
-                data-en="introversion, autisme">
-                introversion, autism
+                data-fr="introversion, autisme"
+                data-en="introversion, autism">
+                introversion, autisme
             </span>
         </div>
     
@@ -427,9 +460,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.o.m.-.html"> h.o.m.- </a>
             <span class="translation"
-                data-fr="interversion, sociability"
-                data-en="interversion, sociabilité">
-                interversion, sociability
+                data-fr="interversion, sociabilité"
+                data-en="interversion, sociability">
+                interversion, sociabilité
             </span>
         </div>
     
@@ -442,9 +475,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.e.m.-.html"> h.e.m.- </a>
             <span class="translation"
-                data-fr="extraversion, narcissism"
-                data-en="extraversion, narcissisme">
-                extraversion, narcissism
+                data-fr="extraversion, narcissisme"
+                data-en="extraversion, narcissism">
+                extraversion, narcissisme
             </span>
         </div>
     
@@ -455,14 +488,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.A_M_.m.-.html"> h.A:M:.m.- </a>
             <span class="translation"
-                data-fr="integration of the self"
-                data-en="intégration du moi">
-                integration of the self
+                data-fr="intégration du moi"
+                data-en="integration of the self">
+                intégration du moi
             </span>
         </div>
     
@@ -476,9 +509,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.u.m.-.html"> h.u.m.- </a>
             <span class="translation"
-                data-fr="fragmented self, schizophrenia"
-                data-en="moi fragmenté, schizophrénie">
-                fragmented self, schizophrenia
+                data-fr="moi fragmenté, schizophrénie"
+                data-en="fragmented self, schizophrenia">
+                moi fragmenté, schizophrénie
             </span>
         </div>
     
@@ -491,9 +524,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.a.m.-.html"> h.a.m.- </a>
             <span class="translation"
-                data-fr="integer self, open individuation"
-                data-en="moi intégré, individuation ouverte">
-                integer self, open individuation
+                data-fr="moi intégré, individuation ouverte"
+                data-en="integer self, open individuation">
+                moi intégré, individuation ouverte
             </span>
         </div>
     
@@ -506,9 +539,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.i.m.-.html"> h.i.m.- </a>
             <span class="translation"
-                data-fr="merged self, paranoia"
-                data-en="moi fusionné, paranoïa">
-                merged self, paranoia
+                data-fr="moi fusionné, paranoïa"
+                data-en="merged self, paranoia">
+                moi fusionné, paranoïa
             </span>
         </div>
     
@@ -523,7 +556,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -538,6 +571,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -547,6 +590,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -583,5 +627,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

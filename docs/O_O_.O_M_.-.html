@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:O:.O:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>work cycle</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>cycle de travail</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>cycle de travail</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>work cycle</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,320 +202,320 @@
                 
                     <tr>
                         <td><a href="wo.O_S_.-.html">wo.O:S:.-</a></td>
-                        <td>identify key-points according to sign</td>
                         <td>identifier les points clés selon le signe</td>
+                        <td>identify key-points according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_B_.-.html">wo.O:B:.-</a></td>
-                        <td>identify key-points according to being</td>
                         <td>identifier les points-clés selon l'être</td>
+                        <td>identify key-points according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_T_.-.html">wo.O:T:.-</a></td>
-                        <td>identify key-points according to thing</td>
                         <td>identifier les points-clés selon la chose</td>
+                        <td>identify key-points according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_S_.-.html">wa.O:S:.-</a></td>
-                        <td>master the activity according to the sign</td>
                         <td>maîtriser l'activité selon le signe</td>
+                        <td>master the activity according to the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_B_.-.html">wa.O:B:.-</a></td>
-                        <td>master the activity according to the being</td>
                         <td>maîtriser l'activité selon l'être</td>
+                        <td>master the activity according to the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_T_.-.html">wa.O:T:.-</a></td>
-                        <td>master the activity according to the thing</td>
                         <td>maîtriser l'activité selon la chose</td>
+                        <td>master the activity according to the thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.y.-.html">U:O:.y.-</a></td>
-                        <td>navigate and master the knowledge</td>
                         <td>s'orienter dans les savoirs et les maîtriser</td>
+                        <td>navigate and master the knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.o.-.html">U:O:.o.-</a></td>
-                        <td>establish principles and stick to them</td>
                         <td>établir des principes et s'y tenir</td>
+                        <td>establish principles and stick to them</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.e.-.html">U:O:.e.-</a></td>
-                        <td>identify and master competencies</td>
                         <td>identifier et maîtriser les compétences</td>
+                        <td>identify and master competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.u.-.html">U:O:.u.-</a></td>
-                        <td>follow the conversation and find the information</td>
                         <td>suivre la conversation et trouver l'information</td>
+                        <td>follow the conversation and find the information</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.a.-.html">U:O:.a.-</a></td>
-                        <td>find one's place and cultivate one's character</td>
                         <td>trouver sa place et cultiver son caractère</td>
+                        <td>find one's place and cultivate one's character</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.i.-.html">U:O:.i.-</a></td>
-                        <td>choose and use the equipment</td>
                         <td>choisir et utiliser l'équipement</td>
+                        <td>choose and use the equipment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_S_.-.html">wu.O:S:.-</a></td>
-                        <td>exercise critical judgement according to the sign</td>
                         <td>exercer son jugement critique selon le signe</td>
+                        <td>exercise critical judgement according to the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_B_.-.html">wu.O:B:.-</a></td>
-                        <td>exercise critical jugement according to the being</td>
                         <td>exercer son jugement critique selon l'être</td>
+                        <td>exercise critical jugement according to the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_T_.-.html">wu.O:T:.-</a></td>
-                        <td>exercise critical judgement according to the thing</td>
                         <td>exercer son jugement critique selon la chose</td>
+                        <td>exercise critical judgement according to the thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_S_.-.html">we.O:S:.-</a></td>
-                        <td>renew the activity according to the sign</td>
                         <td>renouveler l'activité selon le signe</td>
+                        <td>renew the activity according to the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_B_.-.html">we.O:B:.-</a></td>
-                        <td>renew the activity according to the being</td>
                         <td>renouveler l'activité selon l'être</td>
+                        <td>renew the activity according to the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_T_.-.html">we.O:T:.-</a></td>
-                        <td>renew the activity according to the thing</td>
                         <td>renouveler l'activité selon la chose</td>
+                        <td>renew the activity according to the thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.y.-.html">A:O:.y.-</a></td>
-                        <td>question and rebuild the knowledge</td>
                         <td>questionner et reconstruire les savoirs</td>
+                        <td>question and rebuild the knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.o.-.html">A:O:.o.-</a></td>
-                        <td>question oneself and renew objectives</td>
                         <td>se remettre en question et renouveler les objectifs</td>
+                        <td>question oneself and renew objectives</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.e.-.html">A:O:.e.-</a></td>
-                        <td>assess and renew the competencies</td>
                         <td>évaluer et renouveler les compétences</td>
+                        <td>assess and renew the competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.u.-.html">A:O:.u.-</a></td>
-                        <td>navigate the communication channels and update one's documentation</td>
                         <td>s'orienter dans les canaux de communication et mettre à jour sa documentation</td>
+                        <td>navigate the communication channels and update one's documentation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.a.-.html">A:O:.a.-</a></td>
-                        <td>discern the characters and renew one's commitments</td>
                         <td>discerner les caractères et renouveler ses engagements</td>
+                        <td>discern the characters and renew one's commitments</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.i.-.html">A:O:.i.-</a></td>
-                        <td>test and renew the equipment</td>
                         <td>tester et renouveler l'équipement</td>
+                        <td>test and renew the equipment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.y.-.html">O:U:.y.-</a></td>
-                        <td>navigate the knowledge and question it</td>
                         <td>s'orienter dans les savoirs et les questionner</td>
+                        <td>navigate the knowledge and question it</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.o.-.html">O:U:.o.-</a></td>
-                        <td>establish principles and question oneself</td>
                         <td>établir des principes et se remettre en question</td>
+                        <td>establish principles and question oneself</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.e.-.html">O:U:.e.-</a></td>
-                        <td>identity and assess the competencies</td>
                         <td>identifier et évaluer les compétences</td>
+                        <td>identity and assess the competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.u.-.html">O:U:.u.-</a></td>
-                        <td>follow the conversation and navigate the communication channels</td>
                         <td>suivre la conversation et s'orienter dans les canaux de communication</td>
+                        <td>follow the conversation and navigate the communication channels</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.a.-.html">O:U:.a.-</a></td>
-                        <td>find one's place and discern the characters</td>
                         <td>trouver sa place et discerner les charactères</td>
+                        <td>find one's place and discern the characters</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.i.-.html">O:U:.i.-</a></td>
-                        <td>choose and test the equipment</td>
                         <td>choisir et tester l'équipement</td>
+                        <td>choose and test the equipment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.y.-.html">O:A:.y.-</a></td>
-                        <td>master and rebuild the knowledge</td>
                         <td>maîtriser et reconstruire les savoirs</td>
+                        <td>master and rebuild the knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.o.-.html">O:A:.o.-</a></td>
-                        <td>stick to principles and renew objectives</td>
                         <td>s'en tenir aux principes et renouveler les objectifs</td>
+                        <td>stick to principles and renew objectives</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.e.-.html">O:A:.e.-</a></td>
-                        <td>master and renew the competencies</td>
                         <td>maîtriser et renouveler les compétences</td>
+                        <td>master and renew the competencies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.u.-.html">O:A:.u.-</a></td>
-                        <td>find the information and update one's documentation</td>
                         <td>trouver l'information et mettre à jour sa documentation</td>
+                        <td>find the information and update one's documentation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.a.-.html">O:A:.a.-</a></td>
-                        <td>cultivate one's character and renew one's commitments</td>
                         <td>cultiver son caractère et renouveler ses engagements</td>
+                        <td>cultivate one's character and renew one's commitments</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.U_M_.-.html">wo.U:M:.-</a></td>
-                        <td>identify virtual points</td>
                         <td>identifier les points virtuels</td>
+                        <td>identify virtual points</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.A_M_.-.html">wo.A:M:.-</a></td>
-                        <td>identitify actual points</td>
                         <td>identifier les points actuels</td>
+                        <td>identitify actual points</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.U_M_.-.html">wa.U:M:.-</a></td>
-                        <td>master the virtual activity</td>
                         <td>maîtriser l'activité virtuelle</td>
+                        <td>master the virtual activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.A_M_.-.html">wa.A:M:.-</a></td>
-                        <td>master the actual activity</td>
                         <td>maîtriser l'activité actuelle</td>
+                        <td>master the actual activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.U_M_.-.html">wu.U:M:.-</a></td>
-                        <td>exercise critical judgement into the virtual</td>
                         <td>exercer son jugement critique dans le virtuel</td>
+                        <td>exercise critical judgement into the virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.A_M_.-.html">wu.A:M:.-</a></td>
-                        <td>exercise critical judgement into the actual</td>
                         <td>exercer son jugement critique dans l'actuel</td>
+                        <td>exercise critical judgement into the actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.U_M_.-.html">we.U:M:.-</a></td>
-                        <td>renew the virtual activity</td>
                         <td>renouveler l'activité virtuelle</td>
+                        <td>renew the virtual activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.A_M_.-.html">we.A:M:.-</a></td>
-                        <td>renew the actual activity</td>
                         <td>renouveler l'activité actuelle</td>
+                        <td>renew the actual activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.y.-.html">O:O:.y.-</a></td>
-                        <td>work on knowledge</td>
                         <td>travailler les savoirs</td>
+                        <td>work on knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.o.-.html">O:O:.o.-</a></td>
-                        <td>work on principles</td>
                         <td>travailler les principes</td>
+                        <td>work on principles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.e.-.html">O:O:.e.-</a></td>
-                        <td>work on skills</td>
                         <td>travailler les compétences</td>
+                        <td>work on skills</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.u.-.html">O:O:.u.-</a></td>
-                        <td>work on communication</td>
                         <td>travailler la communication</td>
+                        <td>work on communication</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.a.-.html">O:O:.a.-</a></td>
-                        <td>work on commitment</td>
                         <td>travailler l'engagement</td>
+                        <td>work on commitment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.i.-.html">O:O:.i.-</a></td>
-                        <td>work on equipment</td>
                         <td>travailler l'équipement</td>
+                        <td>work on equipment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_M_.-.html">wo.O:M:.-</a></td>
-                        <td>identify key-points of one's activity</td>
                         <td>identifier les points clé de son activité</td>
+                        <td>identify key-points of one's activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_M_.-.html">wa.O:M:.-</a></td>
-                        <td>master one's activity</td>
                         <td>maîtriser son activité</td>
+                        <td>master one's activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_M_.-.html">wu.O:M:.-</a></td>
-                        <td>exert critical judgement</td>
                         <td>exercer son jugement critique</td>
+                        <td>exert critical judgement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_M_.-.html">we.O:M:.-</a></td>
-                        <td>renew the activity</td>
                         <td>renouveler son activité</td>
+                        <td>renew the activity</td>
                     </tr>
                 
                 </tbody>
@@ -491,11 +523,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -518,8 +551,8 @@
                 
                     <tr>
                         <td><a href="O_O_..html">O:O:.</a></td>
-                        <td>interaction phases | tetrad</td>
                         <td>phases de l'interaction | tétrade</td>
+                        <td>interaction phases | tetrad</td>
                     </tr>
                 
                 </tbody>
@@ -527,8 +560,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -560,8 +593,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -575,19 +608,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_O_.O_M_.-.html">O:O:.O:M:.-</a> work cycle</div>-->
+            <!--<div class="card-header">Table <a href="O_O_.O_M_.-.html">O:O:.O:M:.-</a> cycle de travail</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="7" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="7" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.O_M_.-.html"> O:O:.O:M:.- </a>
             <span class="translation"
-                data-fr="work cycle"
-                data-en="cycle de travail">
-                work cycle
+                data-fr="cycle de travail"
+                data-en="work cycle">
+                cycle de travail
             </span>
         </div>
     
@@ -598,14 +631,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.y.-.html"> O:O:.y.- </a>
             <span class="translation"
-                data-fr="work on knowledge"
-                data-en="travailler les savoirs">
-                work on knowledge
+                data-fr="travailler les savoirs"
+                data-en="work on knowledge">
+                travailler les savoirs
             </span>
         </div>
     
@@ -613,14 +646,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.o.-.html"> O:O:.o.- </a>
             <span class="translation"
-                data-fr="work on principles"
-                data-en="travailler les principes">
-                work on principles
+                data-fr="travailler les principes"
+                data-en="work on principles">
+                travailler les principes
             </span>
         </div>
     
@@ -628,14 +661,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.e.-.html"> O:O:.e.- </a>
             <span class="translation"
-                data-fr="work on skills"
-                data-en="travailler les compétences">
-                work on skills
+                data-fr="travailler les compétences"
+                data-en="work on skills">
+                travailler les compétences
             </span>
         </div>
     
@@ -643,14 +676,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.u.-.html"> O:O:.u.- </a>
             <span class="translation"
-                data-fr="work on communication"
-                data-en="travailler la communication">
-                work on communication
+                data-fr="travailler la communication"
+                data-en="work on communication">
+                travailler la communication
             </span>
         </div>
     
@@ -658,14 +691,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.a.-.html"> O:O:.a.- </a>
             <span class="translation"
-                data-fr="work on commitment"
-                data-en="travailler l'engagement">
-                work on commitment
+                data-fr="travailler l'engagement"
+                data-en="work on commitment">
+                travailler l'engagement
             </span>
         </div>
     
@@ -673,14 +706,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_O_.i.-.html"> O:O:.i.- </a>
             <span class="translation"
-                data-fr="work on equipment"
-                data-en="travailler l'équipement">
-                work on equipment
+                data-fr="travailler l'équipement"
+                data-en="work on equipment">
+                travailler l'équipement
             </span>
         </div>
     
@@ -691,14 +724,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wo.O_M_.-.html"> wo.O:M:.- </a>
             <span class="translation"
-                data-fr="identify key-points of one's activity"
-                data-en="identifier les points clé de son activité">
-                identify key-points of one's activity
+                data-fr="identifier les points clé de son activité"
+                data-en="identify key-points of one's activity">
+                identifier les points clé de son activité
             </span>
         </div>
     
@@ -712,9 +745,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.y.-.html"> wo.y.- </a>
             <span class="translation"
-                data-fr="find one's bearings into knowledge"
-                data-en="s'orienter dans les savoirs">
-                find one's bearings into knowledge
+                data-fr="s'orienter dans les savoirs"
+                data-en="find one's bearings into knowledge">
+                s'orienter dans les savoirs
             </span>
         </div>
     
@@ -727,9 +760,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.o.-.html"> wo.o.- </a>
             <span class="translation"
-                data-fr="establish principles"
-                data-en="établir des principes">
-                establish principles
+                data-fr="établir des principes"
+                data-en="establish principles">
+                établir des principes
             </span>
         </div>
     
@@ -742,9 +775,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.e.-.html"> wo.e.- </a>
             <span class="translation"
-                data-fr="identify competences"
-                data-en="identifier les compétences">
-                identify competences
+                data-fr="identifier les compétences"
+                data-en="identify competences">
+                identifier les compétences
             </span>
         </div>
     
@@ -757,9 +790,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.u.-.html"> wo.u.- </a>
             <span class="translation"
-                data-fr="follow conversation threads"
-                data-en="suivre les fils de la conversation">
-                follow conversation threads
+                data-fr="suivre les fils de la conversation"
+                data-en="follow conversation threads">
+                suivre les fils de la conversation
             </span>
         </div>
     
@@ -772,9 +805,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.a.-.html"> wo.a.- </a>
             <span class="translation"
-                data-fr="find one's rightful place"
-                data-en="trouver sa juste place">
-                find one's rightful place
+                data-fr="trouver sa juste place"
+                data-en="find one's rightful place">
+                trouver sa juste place
             </span>
         </div>
     
@@ -787,9 +820,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wo.i.-.html"> wo.i.- </a>
             <span class="translation"
-                data-fr="choose equipment"
-                data-en="choisir l'équipement">
-                choose equipment
+                data-fr="choisir l'équipement"
+                data-en="choose equipment">
+                choisir l'équipement
             </span>
         </div>
     
@@ -800,14 +833,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wa.O_M_.-.html"> wa.O:M:.- </a>
             <span class="translation"
-                data-fr="master one's activity"
-                data-en="maîtriser son activité">
-                master one's activity
+                data-fr="maîtriser son activité"
+                data-en="master one's activity">
+                maîtriser son activité
             </span>
         </div>
     
@@ -821,9 +854,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.y.-.html"> wa.y.- </a>
             <span class="translation"
-                data-fr="master the knowledge"
-                data-en="maîtriser les savoirs">
-                master the knowledge
+                data-fr="maîtriser les savoirs"
+                data-en="master the knowledge">
+                maîtriser les savoirs
             </span>
         </div>
     
@@ -836,9 +869,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.o.-.html"> wa.o.- </a>
             <span class="translation"
-                data-fr="stick to principles"
-                data-en="s'en tenir aux principes">
-                stick to principles
+                data-fr="s'en tenir aux principes"
+                data-en="stick to principles">
+                s'en tenir aux principes
             </span>
         </div>
     
@@ -851,9 +884,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.e.-.html"> wa.e.- </a>
             <span class="translation"
-                data-fr="master competences"
-                data-en="maîtriser les compétences">
-                master competences
+                data-fr="maîtriser les compétences"
+                data-en="master competences">
+                maîtriser les compétences
             </span>
         </div>
     
@@ -866,9 +899,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.u.-.html"> wa.u.- </a>
             <span class="translation"
-                data-fr="find | show information"
-                data-en="trouver | indiquer l'information">
-                find | show information
+                data-fr="trouver | indiquer l'information"
+                data-en="find | show information">
+                trouver | indiquer l'information
             </span>
         </div>
     
@@ -881,9 +914,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.a.-.html"> wa.a.- </a>
             <span class="translation"
-                data-fr="cultivate one's character"
-                data-en="cultiver son caractère">
-                cultivate one's character
+                data-fr="cultiver son caractère"
+                data-en="cultivate one's character">
+                cultiver son caractère
             </span>
         </div>
     
@@ -896,9 +929,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wa.i.-.html"> wa.i.- </a>
             <span class="translation"
-                data-fr="use equipment"
-                data-en="utiliser l'équipement">
-                use equipment
+                data-fr="utiliser l'équipement"
+                data-en="use equipment">
+                utiliser l'équipement
             </span>
         </div>
     
@@ -909,14 +942,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="wu.O_M_.-.html"> wu.O:M:.- </a>
             <span class="translation"
-                data-fr="exert critical judgement"
-                data-en="exercer son jugement critique">
-                exert critical judgement
+                data-fr="exercer son jugement critique"
+                data-en="exert critical judgement">
+                exercer son jugement critique
             </span>
         </div>
     
@@ -930,9 +963,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.y.-.html"> wu.y.- </a>
             <span class="translation"
-                data-fr="question accepted knowledge"
-                data-en="questionner les savoirs reçus">
-                question accepted knowledge
+                data-fr="questionner les savoirs reçus"
+                data-en="question accepted knowledge">
+                questionner les savoirs reçus
             </span>
         </div>
     
@@ -945,9 +978,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.o.-.html"> wu.o.- </a>
             <span class="translation"
-                data-fr="question oneself"
-                data-en="se remettre en question">
-                question oneself
+                data-fr="se remettre en question"
+                data-en="question oneself">
+                se remettre en question
             </span>
         </div>
     
@@ -960,9 +993,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.e.-.html"> wu.e.- </a>
             <span class="translation"
-                data-fr="assess competences"
-                data-en="évaluer les compétences">
-                assess competences
+                data-fr="évaluer les compétences"
+                data-en="assess competences">
+                évaluer les compétences
             </span>
         </div>
     
@@ -975,9 +1008,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.u.-.html"> wu.u.- </a>
             <span class="translation"
-                data-fr="navigate the communication channels"
-                data-en="s'orienter dans les canaux de communication">
-                navigate the communication channels
+                data-fr="s'orienter dans les canaux de communication"
+                data-en="navigate the communication channels">
+                s'orienter dans les canaux de communication
             </span>
         </div>
     
@@ -990,9 +1023,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.a.-.html"> wu.a.- </a>
             <span class="translation"
-                data-fr="discern characters"
-                data-en="discerner les caractères">
-                discern characters
+                data-fr="discerner les caractères"
+                data-en="discern characters">
+                discerner les caractères
             </span>
         </div>
     
@@ -1005,9 +1038,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.i.-.html"> wu.i.- </a>
             <span class="translation"
-                data-fr="test equipment"
-                data-en="tester l'équipement">
-                test equipment
+                data-fr="tester l'équipement"
+                data-en="test equipment">
+                tester l'équipement
             </span>
         </div>
     
@@ -1018,14 +1051,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="we.O_M_.-.html"> we.O:M:.- </a>
             <span class="translation"
-                data-fr="renew the activity"
-                data-en="renouveler son activité">
-                renew the activity
+                data-fr="renouveler son activité"
+                data-en="renew the activity">
+                renouveler son activité
             </span>
         </div>
     
@@ -1039,9 +1072,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.y.-.html"> we.y.- </a>
             <span class="translation"
-                data-fr="rebuild knowledge"
-                data-en="reconstruire les savoirs">
-                rebuild knowledge
+                data-fr="reconstruire les savoirs"
+                data-en="rebuild knowledge">
+                reconstruire les savoirs
             </span>
         </div>
     
@@ -1054,9 +1087,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.o.-.html"> we.o.- </a>
             <span class="translation"
-                data-fr="renew objectives"
-                data-en="renouveler les objectifs">
-                renew objectives
+                data-fr="renouveler les objectifs"
+                data-en="renew objectives">
+                renouveler les objectifs
             </span>
         </div>
     
@@ -1069,9 +1102,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.e.-.html"> we.e.- </a>
             <span class="translation"
-                data-fr="renew competences"
-                data-en="renouveler les compétences">
-                renew competences
+                data-fr="renouveler les compétences"
+                data-en="renew competences">
+                renouveler les compétences
             </span>
         </div>
     
@@ -1084,9 +1117,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.u.-.html"> we.u.- </a>
             <span class="translation"
-                data-fr="update one's documentation"
-                data-en="mettre à  jour sa documentation">
-                update one's documentation
+                data-fr="mettre à  jour sa documentation"
+                data-en="update one's documentation">
+                mettre à  jour sa documentation
             </span>
         </div>
     
@@ -1099,9 +1132,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.a.-.html"> we.a.- </a>
             <span class="translation"
-                data-fr="renew one's commitments"
-                data-en="renouveler ses engagements">
-                renew one's commitments
+                data-fr="renouveler ses engagements"
+                data-en="renew one's commitments">
+                renouveler ses engagements
             </span>
         </div>
     
@@ -1114,9 +1147,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.i.-.html"> we.i.- </a>
             <span class="translation"
-                data-fr="renew equipment"
-                data-en="renouveler l'équipement">
-                renew equipment
+                data-fr="renouveler l'équipement"
+                data-en="renew equipment">
+                renouveler l'équipement
             </span>
         </div>
     
@@ -1131,7 +1164,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1146,6 +1179,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1155,6 +1198,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1191,5 +1235,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

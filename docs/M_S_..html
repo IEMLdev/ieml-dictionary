@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:S:.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>becoming sign</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>devenir signe</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>devenir signe</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>becoming sign</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,20 +239,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -227,8 +260,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -251,8 +284,8 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                 </tbody>
@@ -260,9 +293,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -285,68 +318,68 @@
                 
                     <tr>
                         <td><a href="M_S_.wo.-.html">M:S:.wo.-</a></td>
-                        <td>formal quest</td>
                         <td>quête formelle</td>
+                        <td>formal quest</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.wa.-.html">M:S:.wa.-</a></td>
-                        <td>quest for rightness</td>
                         <td>quête de justesse</td>
+                        <td>quest for rightness</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.y.-.html">M:S:.y.-</a></td>
-                        <td>knowledge of the sign</td>
                         <td>connaissance du signe</td>
+                        <td>knowledge of the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.o.-.html">M:S:.o.-</a></td>
-                        <td>want becoming sign</td>
                         <td>vouloir devenir signe</td>
+                        <td>want becoming sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.e.-.html">M:S:.e.-</a></td>
-                        <td>grammar</td>
                         <td>grammaire</td>
+                        <td>grammar</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.wu.-.html">M:S:.wu.-</a></td>
-                        <td>quest for aesthetic forms</td>
                         <td>quête de formes esthétiques</td>
+                        <td>quest for aesthetic forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.we.-.html">M:S:.we.-</a></td>
-                        <td>effort to adapt</td>
                         <td>effort d'adaptation</td>
+                        <td>effort to adapt</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.u.-.html">M:S:.u.-</a></td>
-                        <td>sign oriented sign</td>
                         <td>signe tourné vers le signe</td>
+                        <td>sign oriented sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.a.-.html">M:S:.a.-</a></td>
-                        <td>role facing sign</td>
                         <td>rôle tourné vers le signe</td>
+                        <td>role facing sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.i.-.html">M:S:.i.-</a></td>
-                        <td>sign in technical attribute</td>
                         <td>signe en attribut technique</td>
+                        <td>sign in technical attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.O_M_.-.html">M:S:.O:M:.-</a></td>
-                        <td>human development becoming sign</td>
                         <td>devenir signe du développement humain</td>
+                        <td>human development becoming sign</td>
                     </tr>
                 
                 </tbody>
@@ -354,8 +387,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -378,134 +411,134 @@
                 
                     <tr>
                         <td><a href="wo.M_S_.-.html">wo.M:S:.-</a></td>
-                        <td>cultivate the sign of experience variation</td>
                         <td>cultiver le signe de la variation de l'expérience</td>
+                        <td>cultivate the sign of experience variation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.M_S_.-.html">wa.M:S:.-</a></td>
-                        <td>cultivate the sign of action strength</td>
                         <td>cultiver le signe de la force de l'action</td>
+                        <td>cultivate the sign of action strength</td>
                     </tr>
                 
                     <tr>
                         <td><a href="y.M_S_.-.html">y.M:S:.-</a></td>
-                        <td>show the sign of ignorance</td>
                         <td>montrer le signe de l'ignorance</td>
+                        <td>show the sign of ignorance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="o.M_S_.-.html">o.M:S:.-</a></td>
-                        <td>show the sign of darkness</td>
                         <td>montrer le signe de l'obscurité</td>
+                        <td>show the sign of darkness</td>
                     </tr>
                 
                     <tr>
                         <td><a href="e.M_S_.-.html">e.M:S:.-</a></td>
-                        <td>lack grammatical skills</td>
                         <td>manquer d'habiletés grammaticales</td>
+                        <td>lack grammatical skills</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.M_S_.-.html">wu.M:S:.-</a></td>
-                        <td>cultivate the subtle sign of perception</td>
                         <td>cultiver le signe subtil de la perception</td>
+                        <td>cultivate the subtle sign of perception</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.M_S_.-.html">we.M:S:.-</a></td>
-                        <td>cultivate the sign of balance</td>
                         <td>cultiver le signe de l'équilibre</td>
+                        <td>cultivate the sign of balance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="u.M_S_.-.html">u.M:S:.-</a></td>
-                        <td>show the sign of destroyed signification</td>
                         <td>montrer le signe de la signification détruite</td>
+                        <td>show the sign of destroyed signification</td>
                     </tr>
                 
                     <tr>
                         <td><a href="a.M_S_.-.html">a.M:S:.-</a></td>
-                        <td>show the sign of destroyed relationships</td>
                         <td>montrer le signe des relations détruites</td>
+                        <td>show the sign of destroyed relationships</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.M_S_.-.html">i.M:S:.-</a></td>
-                        <td>show the sign of technical destruction</td>
                         <td>montrer le signe de la destruction technique</td>
+                        <td>show the sign of technical destruction</td>
                     </tr>
                 
                     <tr>
                         <td><a href="j.M_S_.-.html">j.M:S:.-</a></td>
-                        <td>linguistic defect</td>
                         <td>défaut linguistique</td>
+                        <td>linguistic defect</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.M_S_.-.html">g.M:S:.-</a></td>
-                        <td>formal failure of communication</td>
                         <td>défaillance formelle de la communication</td>
+                        <td>formal failure of communication</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_S_.-.html">h.M:S:.-</a></td>
-                        <td>spiritual failure in formal matters</td>
                         <td>défaillance spirituelle dans la forme</td>
+                        <td>spiritual failure in formal matters</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.M_S_.-.html">c.M:S:.-</a></td>
-                        <td>formal socio-political failure</td>
                         <td>défaillance socio-politique formelle</td>
+                        <td>formal socio-political failure</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.M_S_.-.html">p.M:S:.-</a></td>
-                        <td>formal economic failure</td>
                         <td>défaillance économique formelle</td>
+                        <td>formal economic failure</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.M_S_.-.html">x.M:S:.-</a></td>
-                        <td>formal technical failure</td>
                         <td>défaillance technique formelle</td>
+                        <td>formal technical failure</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_S_.-l.-'.html">E:.-U:.M:S:.-l.-'</a></td>
-                        <td>absolute direction in relation to a vertical axis</td>
                         <td>direction absolue par rapport à un axe vertical</td>
+                        <td>absolute direction in relation to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_S_.-l.-'.html">E:.-A:.M:S:.-l.-'</a></td>
-                        <td>movement in relation to a horizontal axis</td>
                         <td>mouvement par rapport à un axe horizontal</td>
+                        <td>movement in relation to a horizontal axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.M_S_.-l.-'.html">E:.-S:.M:S:.-l.-'</a></td>
-                        <td>shifter</td>
                         <td>moteur (situation spatiale)</td>
+                        <td>shifter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.M_S_.-l.-'.html">E:.-B:.M:S:.-l.-'</a></td>
-                        <td>inside-outside orientation</td>
                         <td>orientation dedans-dehors</td>
+                        <td>inside-outside orientation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.M_S_.-l.-'.html">E:.-T:.M:S:.-l.-'</a></td>
-                        <td>relative to a point</td>
                         <td>relatif à un point</td>
+                        <td>relative to a point</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-x.-s.y.-'wa.e.-M_S_.-'_.html">t.-x.-s.y.-'wa.e.-M:S:.-',</a></td>
-                        <td>awareness</td>
                         <td>conscience</td>
+                        <td>awareness</td>
                     </tr>
                 
                 </tbody>
@@ -513,7 +546,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -527,19 +560,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_S_..html">M:S:.</a> becoming sign</div>-->
+            <!--<div class="card-header">Table <a href="M_S_..html">M:S:.</a> devenir signe</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_S_..html"> M:S:. </a>
             <span class="translation"
-                data-fr="becoming sign"
-                data-en="devenir signe">
-                becoming sign
+                data-fr="devenir signe"
+                data-en="becoming sign">
+                devenir signe
             </span>
         </div>
     
@@ -554,9 +587,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s..html"> s. </a>
             <span class="translation"
-                data-fr="reflection"
-                data-en="réflexions">
-                reflection
+                data-fr="réflexion"
+                data-en="reflection">
+                réflexion
             </span>
         </div>
     
@@ -571,9 +604,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k..html"> k. </a>
             <span class="translation"
-                data-fr="society"
-                data-en="sociétés">
-                society
+                data-fr="société"
+                data-en="society">
+                société
             </span>
         </div>
     
@@ -588,9 +621,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d..html"> d. </a>
             <span class="translation"
-                data-fr="truth"
-                data-en="vérités">
-                truth
+                data-fr="vérité"
+                data-en="truth">
+                vérité
             </span>
         </div>
     
@@ -604,7 +637,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -619,6 +652,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -628,6 +671,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -664,5 +708,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             S:M:.wo.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>intellectual connexion</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>connexion intellectuelle</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>connexion intellectuelle</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>intellectual connexion</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-crossed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="M_S_.wo.-.html">M:S:.wo.-</a></td>
-                        <td>formal quest</td>
                         <td>quête formelle</td>
+                        <td>formal quest</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,14 +235,14 @@
                 
                     <tr>
                         <td><a href="M_M_.wo.-.html">M:M:.wo.-</a></td>
-                        <td>intellectual sources of meaning</td>
                         <td>sources intellectuelles du sens</td>
+                        <td>intellectual sources of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.O_O_.-.html">M:M:.O:O:.-</a></td>
-                        <td>resources of meaning</td>
                         <td>ressources du sens</td>
+                        <td>resources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -218,11 +250,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="S_M_..html">S:M:.</a></td>
-                        <td>becoming of the sign</td>
                         <td>devenir du signe</td>
+                        <td>becoming of the sign</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,8 +311,8 @@
                 
                     <tr>
                         <td><a href="wo..html">wo.</a></td>
-                        <td>exist, begin</td>
                         <td>exister, devenir</td>
+                        <td>exist, begin</td>
                     </tr>
                 
                 </tbody>
@@ -287,8 +320,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -302,19 +335,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="S_M_.wo.-.html">S:M:.wo.-</a> intellectual connexion</div>-->
+            <!--<div class="card-header">Table <a href="S_M_.wo.-.html">S:M:.wo.-</a> connexion intellectuelle</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_M_.wo.-.html"> S:M:.wo.- </a>
             <span class="translation"
-                data-fr="intellectual connexion"
-                data-en="connexion intellectuelle">
-                intellectual connexion
+                data-fr="connexion intellectuelle"
+                data-en="intellectual connexion">
+                connexion intellectuelle
             </span>
         </div>
     
@@ -329,9 +362,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-.html"> s.wo.- </a>
             <span class="translation"
-                data-fr="meta-level"
-                data-en="méta-niveau">
-                meta-level
+                data-fr="méta-niveau"
+                data-en="meta-level">
+                méta-niveau
             </span>
         </div>
     
@@ -346,9 +379,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.wo.-.html"> b.wo.- </a>
             <span class="translation"
-                data-fr="intellectual exchange"
-                data-en="échange intellectuel">
-                intellectual exchange
+                data-fr="échange intellectuel"
+                data-en="intellectual exchange">
+                échange intellectuel
             </span>
         </div>
     
@@ -363,9 +396,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.wo.-.html"> t.wo.- </a>
             <span class="translation"
-                data-fr="link | relationship"
-                data-en="lien | relation">
-                link | relationship
+                data-fr="lien | relation"
+                data-en="link | relationship">
+                lien | relation
             </span>
         </div>
     
@@ -379,7 +412,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -394,6 +427,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -403,6 +446,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -439,5 +483,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

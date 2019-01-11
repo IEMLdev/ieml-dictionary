@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             b.i.-s.i.-'O:O:.-'s.-T:.U:.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>dry, continental climate</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>climat sec, continental</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>climat sec, continental</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>dry, continental climate</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -174,8 +206,8 @@
                 
                     <tr>
                         <td><a href="b.i.-s.i.-'O_O_.-'s.-T_.A_.-'_.html">b.i.-s.i.-'O:O:.-'s.-T:.A:.-',</a></td>
-                        <td>wet, marine climate</td>
                         <td>climat humide, maritime, océanique</td>
+                        <td>wet, marine climate</td>
                     </tr>
                 
                 </tbody>
@@ -183,10 +215,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -209,8 +241,8 @@
                 
                     <tr>
                         <td><a href="b.i.-s.i.-'O_O_.-'E_.-'+s.-T_.O_.-'_.html">b.i.-s.i.-'O:O:.-'E:.-'+s.-T:.O:.-',</a></td>
-                        <td>climates, latitudes</td>
                         <td>climats, latitudes</td>
+                        <td>climates, latitudes</td>
                     </tr>
                 
                 </tbody>
@@ -218,11 +250,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="b.i.-s.i.-'.html">b.i.-s.i.-'</a></td>
-                        <td>atmosphere</td>
                         <td>atmosphère</td>
+                        <td>atmosphere</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,8 +311,8 @@
                 
                     <tr>
                         <td><a href="O_O_..html">O:O:.</a></td>
-                        <td>interaction phases | tetrad</td>
                         <td>phases de l'interaction | tétrade</td>
+                        <td>interaction phases | tetrad</td>
                     </tr>
                 
                 </tbody>
@@ -287,8 +320,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -311,8 +344,8 @@
                 
                     <tr>
                         <td><a href="s.-T_.U_.-'.html">s.-T:.U:.-'</a></td>
-                        <td>dry</td>
                         <td>sec</td>
+                        <td>dry</td>
                     </tr>
                 
                 </tbody>
@@ -320,8 +353,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -335,19 +368,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="b.i.-s.i.-'O_O_.-'s.-T_.U_.-'_.html">b.i.-s.i.-'O:O:.-'s.-T:.U:.-',</a> dry, continental climate</div>-->
+            <!--<div class="card-header">Table <a href="b.i.-s.i.-'O_O_.-'s.-T_.U_.-'_.html">b.i.-s.i.-'O:O:.-'s.-T:.U:.-',</a> climat sec, continental</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'O_O_.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'O:O:.-'s.-T:.U:.-', </a>
             <span class="translation"
-                data-fr="dry, continental climate"
-                data-en="climat sec, continental">
-                dry, continental climate
+                data-fr="climat sec, continental"
+                data-en="dry, continental climate">
+                climat sec, continental
             </span>
         </div>
     
@@ -358,7 +391,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'O_U_.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'O:U:.-'s.-T:.U:.-', </a>
@@ -373,7 +406,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'O_A_.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'O:A:.-'s.-T:.U:.-', </a>
@@ -391,7 +424,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'U_O_.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'U:O:.-'s.-T:.U:.-', </a>
@@ -412,9 +445,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'wo.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'wo.-'s.-T:.U:.-', </a>
             <span class="translation"
-                data-fr="dry, continental polar climate"
-                data-en="climat polaire sec, continental">
-                dry, continental polar climate
+                data-fr="climat polaire sec, continental"
+                data-en="dry, continental polar climate">
+                climat polaire sec, continental
             </span>
         </div>
     
@@ -427,9 +460,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'wa.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'wa.-'s.-T:.U:.-', </a>
             <span class="translation"
-                data-fr="dry, continental temperated or intermediary climate"
-                data-en="climat intermédiaire ou tempéré sec, continental">
-                dry, continental temperated or intermediary climate
+                data-fr="climat intermédiaire ou tempéré sec, continental"
+                data-en="dry, continental temperated or intermediary climate">
+                climat intermédiaire ou tempéré sec, continental
             </span>
         </div>
     
@@ -440,7 +473,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'A_O_.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'A:O:.-'s.-T:.U:.-', </a>
@@ -461,9 +494,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'wu.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'wu.-'s.-T:.U:.-', </a>
             <span class="translation"
-                data-fr="tropical, dry, continental climate"
-                data-en="climat tropical sec, continental">
-                tropical, dry, continental climate
+                data-fr="climat tropical sec, continental"
+                data-en="tropical, dry, continental climate">
+                climat tropical sec, continental
             </span>
         </div>
     
@@ -476,9 +509,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-'we.-'s.-T_.U_.-'_.html"> b.i.-s.i.-'we.-'s.-T:.U:.-', </a>
             <span class="translation"
-                data-fr="continental equatorial climate"
-                data-en="climat équatorial continental">
-                continental equatorial climate
+                data-fr="climat équatorial continental"
+                data-en="continental equatorial climate">
+                climat équatorial continental
             </span>
         </div>
     
@@ -493,7 +526,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -508,6 +541,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -517,6 +560,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -553,5 +597,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

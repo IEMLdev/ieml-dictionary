@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:M:.O:S:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>human development of the sign</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>développement humain du signe</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>développement humain du signe</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>human development of the sign</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,140 +202,140 @@
                 
                     <tr>
                         <td><a href="s.O_S_.-.html">s.O:S:.-</a></td>
-                        <td>abstract thought factors</td>
                         <td>facteurs abstraits de pensée</td>
+                        <td>abstract thought factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.O_S_.-.html">b.O:S:.-</a></td>
-                        <td>abstract language factors</td>
                         <td>facteurs abstraits de langage</td>
+                        <td>abstract language factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_S_.-.html">t.O:S:.-</a></td>
-                        <td>abstract memory factors</td>
                         <td>facteurs abstraits de mémoire</td>
+                        <td>abstract memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.O_S_.-.html">k.O:S:.-</a></td>
-                        <td>abstract society factors</td>
                         <td>facteurs abstraits de société</td>
+                        <td>abstract society factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.O_S_.-.html">m.O:S:.-</a></td>
-                        <td>abstract factors of an affective bond</td>
                         <td>facteurs abstraits de lien affectif</td>
+                        <td>abstract factors of an affective bond</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.O_S_.-.html">n.O:S:.-</a></td>
-                        <td>abstract world factors</td>
                         <td>facteurs abstraits de monde</td>
+                        <td>abstract world factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="d.O_S_.-.html">d.O:S:.-</a></td>
-                        <td>abstract factors of truth</td>
                         <td>facteurs abstraits de vérité</td>
+                        <td>abstract factors of truth</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_S_.-.html">f.O:S:.-</a></td>
-                        <td>abstract life factors</td>
                         <td>facteurs abstraits de vie</td>
+                        <td>abstract life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.O_S_.-.html">l.O:S:.-</a></td>
-                        <td>abstract space factors</td>
                         <td>facteurs abstraits d'espace</td>
+                        <td>abstract space factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.y.-.html">S:M:.y.-</a></td>
-                        <td>knowing by sign</td>
                         <td>connaissance par le signe</td>
+                        <td>knowing by sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_M_.u.-.html">S:M:.u.-</a></td>
-                        <td>signifying sign</td>
                         <td>signifie le signe</td>
+                        <td>signifying sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.y.-.html">B:M:.y.-</a></td>
-                        <td>knowing by being</td>
                         <td>connaissance par l'être</td>
+                        <td>knowing by being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.u.-.html">B:M:.u.-</a></td>
-                        <td>signifying being</td>
                         <td>signifie l'être</td>
+                        <td>signifying being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_M_.y.-.html">T:M:.y.-</a></td>
-                        <td>knowing by thing</td>
                         <td>connaissance par la chose</td>
+                        <td>knowing by thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_M_.u.-.html">T:M:.u.-</a></td>
-                        <td>signifying thing</td>
                         <td>signifie la chose</td>
+                        <td>signifying thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.y.-.html">M:S:.y.-</a></td>
-                        <td>knowledge of the sign</td>
                         <td>connaissance du signe</td>
+                        <td>knowledge of the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.u.-.html">M:S:.u.-</a></td>
-                        <td>sign oriented sign</td>
                         <td>signe tourné vers le signe</td>
+                        <td>sign oriented sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_B_.y.-.html">M:B:.y.-</a></td>
-                        <td>knowledge of the being</td>
                         <td>connaissance de l'être</td>
+                        <td>knowledge of the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_B_.u.-.html">M:B:.u.-</a></td>
-                        <td>being oriented sign</td>
                         <td>signe tourné vers l'être</td>
+                        <td>being oriented sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_T_.y.-.html">M:T:.y.-</a></td>
-                        <td>knowledge of the thing</td>
                         <td>connaissance de la chose</td>
+                        <td>knowledge of the thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_T_.u.-.html">M:T:.u.-</a></td>
-                        <td>thing oriented sign</td>
                         <td>signe tourné vers la chose</td>
+                        <td>thing oriented sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.y.-.html">M:M:.y.-</a></td>
-                        <td>kinds of knowledge</td>
                         <td>genres de connaissances</td>
+                        <td>kinds of knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-.html">M:M:.u.-</a></td>
-                        <td>kinds of signs</td>
                         <td>genres de signes</td>
+                        <td>kinds of signs</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +343,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -335,14 +367,14 @@
                 
                     <tr>
                         <td><a href="M_M_.O_M_.-.html">M:M:.O:M:.-</a></td>
-                        <td>human development</td>
                         <td>développement humain</td>
+                        <td>human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
-                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                         <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -350,11 +382,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -377,8 +410,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -386,8 +419,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -410,8 +443,8 @@
                 
                     <tr>
                         <td><a href="O_S_..html">O:S:.</a></td>
-                        <td>signifying actions</td>
                         <td>actions signifiantes</td>
+                        <td>signifying actions</td>
                     </tr>
                 
                 </tbody>
@@ -419,8 +452,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -434,19 +467,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_M_.O_S_.-.html">M:M:.O:S:.-</a> human development of the sign</div>-->
+            <!--<div class="card-header">Table <a href="M_M_.O_S_.-.html">M:M:.O:S:.-</a> développement humain du signe</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.O_S_.-.html"> M:M:.O:S:.- </a>
             <span class="translation"
-                data-fr="human development of the sign"
-                data-en="développement humain du signe">
-                human development of the sign
+                data-fr="développement humain du signe"
+                data-en="human development of the sign">
+                développement humain du signe
             </span>
         </div>
     
@@ -457,14 +490,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.y.-.html"> M:M:.y.- </a>
             <span class="translation"
-                data-fr="kinds of knowledge"
-                data-en="genres de connaissances">
-                kinds of knowledge
+                data-fr="genres de connaissances"
+                data-en="kinds of knowledge">
+                genres de connaissances
             </span>
         </div>
     
@@ -472,14 +505,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.u.-.html"> M:M:.u.- </a>
             <span class="translation"
-                data-fr="kinds of signs"
-                data-en="genres de signes">
-                kinds of signs
+                data-fr="genres de signes"
+                data-en="kinds of signs">
+                genres de signes
             </span>
         </div>
     
@@ -490,14 +523,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_S_.-.html"> s.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract thought factors"
-                data-en="facteurs abstraits de pensée">
-                abstract thought factors
+                data-fr="facteurs abstraits de pensée"
+                data-en="abstract thought factors">
+                facteurs abstraits de pensée
             </span>
         </div>
     
@@ -511,9 +544,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.y.-.html"> s.y.- </a>
             <span class="translation"
-                data-fr="organized knowledge"
-                data-en="connaissance organisée">
-                organized knowledge
+                data-fr="connaissance organisée"
+                data-en="organized knowledge">
+                connaissance organisée
             </span>
         </div>
     
@@ -526,9 +559,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.u.-.html"> s.u.- </a>
             <span class="translation"
-                data-fr="image, analog sign, representation"
-                data-en="image, signe analogique, représentation">
-                image, analog sign, representation
+                data-fr="image, signe analogique, représentation"
+                data-en="image, analog sign, representation">
+                image, signe analogique, représentation
             </span>
         </div>
     
@@ -539,14 +572,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.O_S_.-.html"> b.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract language factors"
-                data-en="facteurs abstraits de langage">
-                abstract language factors
+                data-fr="facteurs abstraits de langage"
+                data-en="abstract language factors">
+                facteurs abstraits de langage
             </span>
         </div>
     
@@ -560,9 +593,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.y.-.html"> b.y.- </a>
             <span class="translation"
-                data-fr="formal intelligence"
-                data-en="intelligence formelle">
-                formal intelligence
+                data-fr="intelligence formelle"
+                data-en="formal intelligence">
+                intelligence formelle
             </span>
         </div>
     
@@ -575,9 +608,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.u.-.html"> b.u.- </a>
             <span class="translation"
-                data-fr="speech | linguistic sign"
-                data-en="parole | signe linguistique">
-                speech | linguistic sign
+                data-fr="parole | signe linguistique"
+                data-en="speech | linguistic sign">
+                parole | signe linguistique
             </span>
         </div>
     
@@ -588,14 +621,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.O_S_.-.html"> t.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract memory factors"
-                data-en="facteurs abstraits de mémoire">
-                abstract memory factors
+                data-fr="facteurs abstraits de mémoire"
+                data-en="abstract memory factors">
+                facteurs abstraits de mémoire
             </span>
         </div>
     
@@ -609,9 +642,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.y.-.html"> t.y.- </a>
             <span class="translation"
-                data-fr="memory management, mnemonics"
-                data-en="gestion de la mémoire, mnémotechnique">
-                memory management, mnemonics
+                data-fr="gestion de la mémoire, mnémotechnique"
+                data-en="memory management, mnemonics">
+                gestion de la mémoire, mnémotechnique
             </span>
         </div>
     
@@ -624,9 +657,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.u.-.html"> t.u.- </a>
             <span class="translation"
-                data-fr="mark | enduring sign"
-                data-en="marque | signe durable">
-                mark | enduring sign
+                data-fr="marque | signe durable"
+                data-en="mark | enduring sign">
+                marque | signe durable
             </span>
         </div>
     
@@ -637,14 +670,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.O_S_.-.html"> k.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract society factors"
-                data-en="facteurs abstraits de société">
-                abstract society factors
+                data-fr="facteurs abstraits de société"
+                data-en="abstract society factors">
+                facteurs abstraits de société
             </span>
         </div>
     
@@ -658,9 +691,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.y.-.html"> k.y.- </a>
             <span class="translation"
-                data-fr="relational intelligence"
-                data-en="intelligence relationnelle">
-                relational intelligence
+                data-fr="intelligence relationnelle"
+                data-en="relational intelligence">
+                intelligence relationnelle
             </span>
         </div>
     
@@ -673,9 +706,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.u.-.html"> k.u.- </a>
             <span class="translation"
-                data-fr="symbol | conventional sign"
-                data-en="symbole | signe conventionnel">
-                symbol | conventional sign
+                data-fr="symbole | signe conventionnel"
+                data-en="symbol | conventional sign">
+                symbole | signe conventionnel
             </span>
         </div>
     
@@ -686,14 +719,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.O_S_.-.html"> m.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract factors of an affective bond"
-                data-en="facteurs abstraits de lien affectif">
-                abstract factors of an affective bond
+                data-fr="facteurs abstraits de lien affectif"
+                data-en="abstract factors of an affective bond">
+                facteurs abstraits de lien affectif
             </span>
         </div>
     
@@ -707,9 +740,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.y.-.html"> m.y.- </a>
             <span class="translation"
-                data-fr="emotional intelligence"
-                data-en="intelligence émotionnelle">
-                emotional intelligence
+                data-fr="intelligence émotionnelle"
+                data-en="emotional intelligence">
+                intelligence émotionnelle
             </span>
         </div>
     
@@ -722,9 +755,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.u.-.html"> m.u.- </a>
             <span class="translation"
-                data-fr="symptom | sign of affect"
-                data-en="symptôme | signe d'affect">
-                symptom | sign of affect
+                data-fr="symptôme | signe d'affect"
+                data-en="symptom | sign of affect">
+                symptôme | signe d'affect
             </span>
         </div>
     
@@ -735,14 +768,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.O_S_.-.html"> n.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract world factors"
-                data-en="facteurs abstraits de monde">
-                abstract world factors
+                data-fr="facteurs abstraits de monde"
+                data-en="abstract world factors">
+                facteurs abstraits de monde
             </span>
         </div>
     
@@ -756,9 +789,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.y.-.html"> n.y.- </a>
             <span class="translation"
-                data-fr="knowledge of principles"
-                data-en="connaissance des principes">
-                knowledge of principles
+                data-fr="connaissance des principes"
+                data-en="knowledge of principles">
+                connaissance des principes
             </span>
         </div>
     
@@ -771,9 +804,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.u.-.html"> n.u.- </a>
             <span class="translation"
-                data-fr="name | symbolic place"
-                data-en="nom | place symbolique">
-                name | symbolic place
+                data-fr="nom | place symbolique"
+                data-en="name | symbolic place">
+                nom | place symbolique
             </span>
         </div>
     
@@ -784,14 +817,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.O_S_.-.html"> d.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract factors of truth"
-                data-en="facteurs abstraits de vérité">
-                abstract factors of truth
+                data-fr="facteurs abstraits de vérité"
+                data-en="abstract factors of truth">
+                facteurs abstraits de vérité
             </span>
         </div>
     
@@ -805,9 +838,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.y.-.html"> d.y.- </a>
             <span class="translation"
-                data-fr="knowledge of facts"
-                data-en="connaissance factuelle">
-                knowledge of facts
+                data-fr="connaissance factuelle"
+                data-en="knowledge of facts">
+                connaissance factuelle
             </span>
         </div>
     
@@ -820,9 +853,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-.html"> d.u.- </a>
             <span class="translation"
-                data-fr="pointer | indexation sign"
-                data-en="pointeur | signe indiciel">
-                pointer | indexation sign
+                data-fr="pointeur | signe indiciel"
+                data-en="pointer | indexation sign">
+                pointeur | signe indiciel
             </span>
         </div>
     
@@ -833,14 +866,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.O_S_.-.html"> f.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract life factors"
-                data-en="facteurs abstraits de vie">
-                abstract life factors
+                data-fr="facteurs abstraits de vie"
+                data-en="abstract life factors">
+                facteurs abstraits de vie
             </span>
         </div>
     
@@ -854,9 +887,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.y.-.html"> f.y.- </a>
             <span class="translation"
-                data-fr="body intelligence"
-                data-en="intelligence du corps">
-                body intelligence
+                data-fr="intelligence du corps"
+                data-en="body intelligence">
+                intelligence du corps
             </span>
         </div>
     
@@ -869,9 +902,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.u.-.html"> f.u.- </a>
             <span class="translation"
-                data-fr="sensation | phenomenal sign"
-                data-en="sensation | signe phénomenal">
-                sensation | phenomenal sign
+                data-fr="sensation | signe phénomenal"
+                data-en="sensation | phenomenal sign">
+                sensation | signe phénomenal
             </span>
         </div>
     
@@ -882,14 +915,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.O_S_.-.html"> l.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract space factors"
-                data-en="facteurs abstraits d'espace">
-                abstract space factors
+                data-fr="facteurs abstraits d'espace"
+                data-en="abstract space factors">
+                facteurs abstraits d'espace
             </span>
         </div>
     
@@ -903,9 +936,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.y.-.html"> l.y.- </a>
             <span class="translation"
-                data-fr="awareness of limits"
-                data-en="conscience des limites">
-                awareness of limits
+                data-fr="conscience des limites"
+                data-en="awareness of limits">
+                conscience des limites
             </span>
         </div>
     
@@ -918,9 +951,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.u.-.html"> l.u.- </a>
             <span class="translation"
-                data-fr="trace | material sign"
-                data-en="trace | signe matériel">
-                trace | material sign
+                data-fr="trace | signe matériel"
+                data-en="trace | material sign">
+                trace | signe matériel
             </span>
         </div>
     
@@ -935,7 +968,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -950,6 +983,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -959,6 +1002,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -995,5 +1039,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

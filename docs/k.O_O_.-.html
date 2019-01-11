@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             k.O:O:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>sources of meaning in community</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sources du sens dans la communauté</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sources du sens dans la communauté</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>sources of meaning in community</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-crossed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="b.O_O_.-.html">b.O:O:.-</a></td>
-                        <td>sources of meaning in communication</td>
                         <td>sources du sens dans la communication</td>
+                        <td>sources of meaning in communication</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,26 +235,26 @@
                 
                     <tr>
                         <td><a href="k.U_O_.-.html">k.U:O:.-</a></td>
-                        <td>virtual sources of meaning in a community</td>
                         <td>sources virtuelles du sens dans une communauté</td>
+                        <td>virtual sources of meaning in a community</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.A_O_.-.html">k.A:O:.-</a></td>
-                        <td>actual sources of meaning in a community</td>
                         <td>sources actuelles du sens dans la communauté</td>
+                        <td>actual sources of meaning in a community</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.O_U_.-.html">k.O:U:.-</a></td>
-                        <td>sources of meaning in a virtual community</td>
                         <td>sources du sens dans une communauté virtuelle</td>
+                        <td>sources of meaning in a virtual community</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.O_A_.-.html">k.O:A:.-</a></td>
-                        <td>sources of meaning in an actual community</td>
                         <td>sources du sens dans une communauté actuelle</td>
+                        <td>sources of meaning in an actual community</td>
                     </tr>
                 
                 </tbody>
@@ -230,8 +262,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -254,8 +286,8 @@
                 
                     <tr>
                         <td><a href="M_M_.O_O_.-.html">M:M:.O:O:.-</a></td>
-                        <td>resources of meaning</td>
                         <td>ressources du sens</td>
+                        <td>resources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -263,11 +295,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -290,8 +323,8 @@
                 
                     <tr>
                         <td><a href="k..html">k.</a></td>
+                        <td>société</td>
                         <td>society</td>
-                        <td>sociétés</td>
                     </tr>
                 
                 </tbody>
@@ -299,8 +332,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -323,8 +356,8 @@
                 
                     <tr>
                         <td><a href="O_O_..html">O:O:.</a></td>
-                        <td>interaction phases | tetrad</td>
                         <td>phases de l'interaction | tétrade</td>
+                        <td>interaction phases | tetrad</td>
                     </tr>
                 
                 </tbody>
@@ -332,8 +365,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -347,19 +380,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="k.O_O_.-.html">k.O:O:.-</a> sources of meaning in community</div>-->
+            <!--<div class="card-header">Table <a href="k.O_O_.-.html">k.O:O:.-</a> sources du sens dans la communauté</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.O_O_.-.html"> k.O:O:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in community"
-                data-en="sources du sens dans la communauté">
-                sources of meaning in community
+                data-fr="sources du sens dans la communauté"
+                data-en="sources of meaning in community">
+                sources du sens dans la communauté
             </span>
         </div>
     
@@ -370,14 +403,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.O_U_.-.html"> k.O:U:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in a virtual community"
-                data-en="sources du sens dans une communauté virtuelle">
-                sources of meaning in a virtual community
+                data-fr="sources du sens dans une communauté virtuelle"
+                data-en="sources of meaning in a virtual community">
+                sources du sens dans une communauté virtuelle
             </span>
         </div>
     
@@ -385,14 +418,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.O_A_.-.html"> k.O:A:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in an actual community"
-                data-en="sources du sens dans une communauté actuelle">
-                sources of meaning in an actual community
+                data-fr="sources du sens dans une communauté actuelle"
+                data-en="sources of meaning in an actual community">
+                sources du sens dans une communauté actuelle
             </span>
         </div>
     
@@ -403,14 +436,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.U_O_.-.html"> k.U:O:.- </a>
             <span class="translation"
-                data-fr="virtual sources of meaning in a community"
-                data-en="sources virtuelles du sens dans une communauté">
-                virtual sources of meaning in a community
+                data-fr="sources virtuelles du sens dans une communauté"
+                data-en="virtual sources of meaning in a community">
+                sources virtuelles du sens dans une communauté
             </span>
         </div>
     
@@ -424,9 +457,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.wo.-.html"> k.wo.- </a>
             <span class="translation"
-                data-fr="school of thought"
-                data-en="école de pensée">
-                school of thought
+                data-fr="école de pensée"
+                data-en="school of thought">
+                école de pensée
             </span>
         </div>
     
@@ -439,9 +472,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.wa.-.html"> k.wa.- </a>
             <span class="translation"
-                data-fr="community of action"
-                data-en="communauté d'action">
-                community of action
+                data-fr="communauté d'action"
+                data-en="community of action">
+                communauté d'action
             </span>
         </div>
     
@@ -452,14 +485,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.A_O_.-.html"> k.A:O:.- </a>
             <span class="translation"
-                data-fr="actual sources of meaning in a community"
-                data-en="sources actuelles du sens dans la communauté">
-                actual sources of meaning in a community
+                data-fr="sources actuelles du sens dans la communauté"
+                data-en="actual sources of meaning in a community">
+                sources actuelles du sens dans la communauté
             </span>
         </div>
     
@@ -473,9 +506,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.wu.-.html"> k.wu.- </a>
             <span class="translation"
-                data-fr="community of taste"
-                data-en="communauté de goût">
-                community of taste
+                data-fr="communauté de goût"
+                data-en="community of taste">
+                communauté de goût
             </span>
         </div>
     
@@ -488,9 +521,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.we.-.html"> k.we.- </a>
             <span class="translation"
-                data-fr="residential community"
-                data-en="communauté de résidence">
-                residential community
+                data-fr="communauté de résidence"
+                data-en="residential community">
+                communauté de résidence
             </span>
         </div>
     
@@ -505,7 +538,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -520,6 +553,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -529,6 +572,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -565,5 +609,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

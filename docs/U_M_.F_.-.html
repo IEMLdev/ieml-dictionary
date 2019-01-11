@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             U:M:.F:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>move objectively</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>bouger objectivement</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>bouger objectivement</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>move objectively</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,50 +202,50 @@
                 
                     <tr>
                         <td><a href="U_M_.U_.-.html">U:M:.U:.-</a></td>
-                        <td>move elements centripetally</td>
                         <td>bouger des éléments de façon centripète</td>
+                        <td>move elements centripetally</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.A_.-.html">U:M:.A:.-</a></td>
-                        <td>move elements centrifugally</td>
                         <td>bouger des éléments de manière centrifuge</td>
+                        <td>move elements centrifugally</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.S_.-.html">U:M:.S:.-</a></td>
-                        <td>move-blow elements</td>
                         <td>bouger-souffler des éléments</td>
+                        <td>move-blow elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.B_.-.html">U:M:.B:.-</a></td>
-                        <td>move-leak elements</td>
                         <td>bouger-couler des éléments</td>
+                        <td>move-leak elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.T_.-.html">U:M:.T:.-</a></td>
-                        <td>move-stick elements</td>
                         <td>bouger-coller des éléments</td>
+                        <td>move-stick elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="y.F_.-.html">y.F:.-</a></td>
-                        <td>perform a topological act</td>
                         <td>accomplir un acte topologique</td>
+                        <td>perform a topological act</td>
                     </tr>
                 
                     <tr>
                         <td><a href="o.F_.-.html">o.F:.-</a></td>
-                        <td>manipulate valuable objects</td>
                         <td>manipuler des objets de valeur</td>
+                        <td>manipulate valuable objects</td>
                     </tr>
                 
                     <tr>
                         <td><a href="e.F_.-.html">e.F:.-</a></td>
-                        <td>place | displace objects</td>
                         <td>placer | déplacer des objets</td>
+                        <td>place | displace objects</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +253,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +277,8 @@
                 
                     <tr>
                         <td><a href="O_M_.F_.-.html">O:M:.F:.-</a></td>
-                        <td>movements and physical actions (verbs)</td>
                         <td>mouvements et actions physiques (verbes)</td>
+                        <td>movements and physical actions (verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -254,11 +286,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -281,8 +314,8 @@
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -290,8 +323,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -314,32 +347,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -347,8 +380,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -362,19 +395,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="U_M_.F_.-.html">U:M:.F:.-</a> move objectively</div>-->
+            <!--<div class="card-header">Table <a href="U_M_.F_.-.html">U:M:.F:.-</a> bouger objectivement</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="6" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="6" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.F_.-.html"> U:M:.F:.- </a>
             <span class="translation"
-                data-fr="move objectively"
-                data-en="bouger objectivement">
-                move objectively
+                data-fr="bouger objectivement"
+                data-en="move objectively">
+                bouger objectivement
             </span>
         </div>
     
@@ -385,14 +418,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.U_.-.html"> U:M:.U:.- </a>
             <span class="translation"
-                data-fr="move elements centripetally"
-                data-en="bouger des éléments de façon centripète">
-                move elements centripetally
+                data-fr="bouger des éléments de façon centripète"
+                data-en="move elements centripetally">
+                bouger des éléments de façon centripète
             </span>
         </div>
     
@@ -400,14 +433,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.A_.-.html"> U:M:.A:.- </a>
             <span class="translation"
-                data-fr="move elements centrifugally"
-                data-en="bouger des éléments de manière centrifuge">
-                move elements centrifugally
+                data-fr="bouger des éléments de manière centrifuge"
+                data-en="move elements centrifugally">
+                bouger des éléments de manière centrifuge
             </span>
         </div>
     
@@ -415,14 +448,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.S_.-.html"> U:M:.S:.- </a>
             <span class="translation"
-                data-fr="move-blow elements"
-                data-en="bouger-souffler des éléments">
-                move-blow elements
+                data-fr="bouger-souffler des éléments"
+                data-en="move-blow elements">
+                bouger-souffler des éléments
             </span>
         </div>
     
@@ -430,14 +463,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.B_.-.html"> U:M:.B:.- </a>
             <span class="translation"
-                data-fr="move-leak elements"
-                data-en="bouger-couler des éléments">
-                move-leak elements
+                data-fr="bouger-couler des éléments"
+                data-en="move-leak elements">
+                bouger-couler des éléments
             </span>
         </div>
     
@@ -445,14 +478,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.T_.-.html"> U:M:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick elements"
-                data-en="bouger-coller des éléments">
-                move-stick elements
+                data-fr="bouger-coller des éléments"
+                data-en="move-stick elements">
+                bouger-coller des éléments
             </span>
         </div>
     
@@ -463,14 +496,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="y.F_.-.html"> y.F:.- </a>
             <span class="translation"
-                data-fr="perform a topological act"
-                data-en="accomplir un acte topologique">
-                perform a topological act
+                data-fr="accomplir un acte topologique"
+                data-en="perform a topological act">
+                accomplir un acte topologique
             </span>
         </div>
     
@@ -484,9 +517,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.U_.-.html"> y.U:.- </a>
             <span class="translation"
-                data-fr="fold | wrap"
-                data-en="plier | envelopper">
-                fold | wrap
+                data-fr="plier | envelopper"
+                data-en="fold | wrap">
+                plier | envelopper
             </span>
         </div>
     
@@ -499,9 +532,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.A_.-.html"> y.A:.- </a>
             <span class="translation"
-                data-fr="unfold | unwrap"
-                data-en="déplier | développer">
-                unfold | unwrap
+                data-fr="déplier | développer"
+                data-en="unfold | unwrap">
+                déplier | développer
             </span>
         </div>
     
@@ -514,9 +547,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.S_.-.html"> y.S:.- </a>
             <span class="translation"
-                data-fr="sort | differentiate"
-                data-en="trier | différentier">
-                sort | differentiate
+                data-fr="trier | différentier"
+                data-en="sort | differentiate">
+                trier | différentier
             </span>
         </div>
     
@@ -529,9 +562,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.B_.-.html"> y.B:.- </a>
             <span class="translation"
-                data-fr="tie | attach"
-                data-en="nouer | attacher">
-                tie | attach
+                data-fr="nouer | attacher"
+                data-en="tie | attach">
+                nouer | attacher
             </span>
         </div>
     
@@ -544,9 +577,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.T_.-.html"> y.T:.- </a>
             <span class="translation"
-                data-fr="dig | pierce | sculpt"
-                data-en="creuser | percer | sculpter">
-                dig | pierce | sculpt
+                data-fr="creuser | percer | sculpter"
+                data-en="dig | pierce | sculpt">
+                creuser | percer | sculpter
             </span>
         </div>
     
@@ -557,14 +590,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="o.F_.-.html"> o.F:.- </a>
             <span class="translation"
-                data-fr="manipulate valuable objects"
-                data-en="manipuler des objets de valeur">
-                manipulate valuable objects
+                data-fr="manipuler des objets de valeur"
+                data-en="manipulate valuable objects">
+                manipuler des objets de valeur
             </span>
         </div>
     
@@ -578,9 +611,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.U_.-.html"> o.U:.- </a>
             <span class="translation"
-                data-fr="receive"
-                data-en="recevoir">
-                receive
+                data-fr="recevoir"
+                data-en="receive">
+                recevoir
             </span>
         </div>
     
@@ -593,9 +626,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.A_.-.html"> o.A:.- </a>
             <span class="translation"
-                data-fr="send"
-                data-en="envoyer">
-                send
+                data-fr="envoyer"
+                data-en="send">
+                envoyer
             </span>
         </div>
     
@@ -608,9 +641,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.S_.-.html"> o.S:.- </a>
             <span class="translation"
-                data-fr="bring | carry"
-                data-en="transporter | amener">
-                bring | carry
+                data-fr="transporter | amener"
+                data-en="bring | carry">
+                transporter | amener
             </span>
         </div>
     
@@ -623,9 +656,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.B_.-.html"> o.B:.- </a>
             <span class="translation"
-                data-fr="catch | grasp"
-                data-en="attraper | tenir">
-                catch | grasp
+                data-fr="attraper | tenir"
+                data-en="catch | grasp">
+                attraper | tenir
             </span>
         </div>
     
@@ -638,9 +671,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.T_.-.html"> o.T:.- </a>
             <span class="translation"
-                data-fr="keep"
-                data-en="garder">
-                keep
+                data-fr="garder"
+                data-en="keep">
+                garder
             </span>
         </div>
     
@@ -651,14 +684,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="e.F_.-.html"> e.F:.- </a>
             <span class="translation"
-                data-fr="place | displace objects"
-                data-en="placer | déplacer des objets">
-                place | displace objects
+                data-fr="placer | déplacer des objets"
+                data-en="place | displace objects">
+                placer | déplacer des objets
             </span>
         </div>
     
@@ -672,9 +705,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.U_.-.html"> e.U:.- </a>
             <span class="translation"
-                data-fr="pull"
-                data-en="tirer">
-                pull
+                data-fr="tirer"
+                data-en="pull">
+                tirer
             </span>
         </div>
     
@@ -687,9 +720,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.A_.-.html"> e.A:.- </a>
             <span class="translation"
-                data-fr="push"
-                data-en="pousser">
-                push
+                data-fr="pousser"
+                data-en="push">
+                pousser
             </span>
         </div>
     
@@ -702,9 +735,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.S_.-.html"> e.S:.- </a>
             <span class="translation"
-                data-fr="disperse, distribute"
-                data-en="disperser, distribuer">
-                disperse, distribute
+                data-fr="disperser, distribuer"
+                data-en="disperse, distribute">
+                disperser, distribuer
             </span>
         </div>
     
@@ -717,9 +750,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.B_.-.html"> e.B:.- </a>
             <span class="translation"
-                data-fr="gather"
-                data-en="rassembler, ramasser">
-                gather
+                data-fr="rassembler, ramasser"
+                data-en="gather">
+                rassembler, ramasser
             </span>
         </div>
     
@@ -732,9 +765,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.T_.-.html"> e.T:.- </a>
             <span class="translation"
-                data-fr="build | combine"
-                data-en="construire | combiner">
-                build | combine
+                data-fr="construire | combiner"
+                data-en="build | combine">
+                construire | combiner
             </span>
         </div>
     
@@ -749,7 +782,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -764,6 +797,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -773,6 +816,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -809,5 +853,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

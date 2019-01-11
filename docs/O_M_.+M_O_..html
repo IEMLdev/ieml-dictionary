@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:M:.+M:O:.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>actions and agents | vertical and horizontal hexads</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>actions et agents | hexades verticale et horizontale</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>actions et agents | hexades verticale et horizontale</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>actions and agents | vertical and horizontal hexads</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>4</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
         
             
@@ -146,6 +158,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -158,10 +189,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -184,62 +216,62 @@
                 
                     <tr>
                         <td><a href="O_S_..html">O:S:.</a></td>
-                        <td>signifying actions</td>
                         <td>actions signifiantes</td>
+                        <td>signifying actions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_..html">O:B:.</a></td>
-                        <td>personal actions</td>
                         <td>actions personnelles</td>
+                        <td>personal actions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_..html">O:T:.</a></td>
-                        <td>effective actions</td>
                         <td>actions effectives</td>
+                        <td>effective actions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_O_..html">S:O:.</a></td>
-                        <td>signifying agents</td>
                         <td>agents signifiants</td>
+                        <td>signifying agents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_..html">B:O:.</a></td>
-                        <td>personal agents</td>
                         <td>agents personnels</td>
+                        <td>personal agents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_..html">T:O:.</a></td>
-                        <td>effective agents</td>
                         <td>agents effectifs</td>
+                        <td>effective agents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_..html">A:M:.</a></td>
-                        <td>actions virtuelles</td>
                         <td>actions actuelles</td>
+                        <td>actions virtuelles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_..html">M:U:.</a></td>
-                        <td>virtual agents</td>
                         <td>agents virtuels</td>
+                        <td>virtual agents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_..html">M:A:.</a></td>
-                        <td>actual agents</td>
                         <td>agents actuels</td>
+                        <td>actual agents</td>
                     </tr>
                 
                     <tr>
@@ -259,11 +291,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -286,32 +319,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -319,8 +352,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -343,32 +376,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -376,8 +409,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -398,7 +431,7 @@
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_..html"> O:M:. </a>
@@ -416,14 +449,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_S_..html"> O:S:. </a>
             <span class="translation"
-                data-fr="signifying actions"
-                data-en="actions signifiantes">
-                signifying actions
+                data-fr="actions signifiantes"
+                data-en="signifying actions">
+                actions signifiantes
             </span>
         </div>
     
@@ -431,14 +464,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_B_..html"> O:B:. </a>
             <span class="translation"
-                data-fr="personal actions"
-                data-en="actions personnelles">
-                personal actions
+                data-fr="actions personnelles"
+                data-en="personal actions">
+                actions personnelles
             </span>
         </div>
     
@@ -446,14 +479,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_T_..html"> O:T:. </a>
             <span class="translation"
-                data-fr="effective actions"
-                data-en="actions effectives">
-                effective actions
+                data-fr="actions effectives"
+                data-en="effective actions">
+                actions effectives
             </span>
         </div>
     
@@ -464,14 +497,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_..html"> U:M:. </a>
             <span class="translation"
-                data-fr="virtual actions"
-                data-en="actions virtuelles">
-                virtual actions
+                data-fr="actions virtuelles"
+                data-en="virtual actions">
+                actions virtuelles
             </span>
         </div>
     
@@ -485,9 +518,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y..html"> y. </a>
             <span class="translation"
-                data-fr="know"
-                data-en="savoir">
-                know
+                data-fr="savoir"
+                data-en="know">
+                savoir
             </span>
         </div>
     
@@ -500,9 +533,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o..html"> o. </a>
             <span class="translation"
-                data-fr="want"
-                data-en="vouloir">
-                want
+                data-fr="vouloir"
+                data-en="want">
+                vouloir
             </span>
         </div>
     
@@ -515,9 +548,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e..html"> e. </a>
             <span class="translation"
-                data-fr="can"
-                data-en="pouvoir">
-                can
+                data-fr="pouvoir"
+                data-en="can">
+                pouvoir
             </span>
         </div>
     
@@ -528,14 +561,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_M_..html"> A:M:. </a>
             <span class="translation"
-                data-fr="actions virtuelles"
-                data-en="actions actuelles">
-                actions virtuelles
+                data-fr="actions actuelles"
+                data-en="actions virtuelles">
+                actions actuelles
             </span>
         </div>
     
@@ -549,9 +582,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u..html"> u. </a>
             <span class="translation"
-                data-fr="say"
-                data-en="dire">
-                say
+                data-fr="dire"
+                data-en="say">
+                dire
             </span>
         </div>
     
@@ -564,9 +597,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a..html"> a. </a>
             <span class="translation"
-                data-fr="be commited"
-                data-en="s'engager">
-                be commited
+                data-fr="s'engager"
+                data-en="be commited">
+                s'engager
             </span>
         </div>
     
@@ -579,9 +612,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i..html"> i. </a>
             <span class="translation"
-                data-fr="do"
-                data-en="faire">
-                do
+                data-fr="faire"
+                data-en="do">
+                faire
             </span>
         </div>
     
@@ -608,7 +641,7 @@
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_..html"> M:O:. </a>
@@ -626,14 +659,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_..html"> M:U:. </a>
             <span class="translation"
-                data-fr="virtual agents"
-                data-en="agents virtuels">
-                virtual agents
+                data-fr="agents virtuels"
+                data-en="virtual agents">
+                agents virtuels
             </span>
         </div>
     
@@ -641,14 +674,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_A_..html"> M:A:. </a>
             <span class="translation"
-                data-fr="actual agents"
-                data-en="agents actuels">
-                actual agents
+                data-fr="agents actuels"
+                data-en="actual agents">
+                agents actuels
             </span>
         </div>
     
@@ -659,14 +692,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_O_..html"> S:O:. </a>
             <span class="translation"
-                data-fr="signifying agents"
-                data-en="agents signifiants">
-                signifying agents
+                data-fr="agents signifiants"
+                data-en="signifying agents">
+                agents signifiants
             </span>
         </div>
     
@@ -680,9 +713,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j..html"> j. </a>
             <span class="translation"
-                data-fr="idea"
-                data-en="idée">
-                idea
+                data-fr="idée"
+                data-en="idea">
+                idée
             </span>
         </div>
     
@@ -708,14 +741,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_O_..html"> B:O:. </a>
             <span class="translation"
-                data-fr="personal agents"
-                data-en="agents personnels">
-                personal agents
+                data-fr="agents personnels"
+                data-en="personal agents">
+                agents personnels
             </span>
         </div>
     
@@ -729,9 +762,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h..html"> h. </a>
             <span class="translation"
-                data-fr="subject"
-                data-en="sujet">
-                subject
+                data-fr="sujet"
+                data-en="subject">
+                sujet
             </span>
         </div>
     
@@ -744,9 +777,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c..html"> c. </a>
             <span class="translation"
-                data-fr="individual"
-                data-en="individu">
-                individual
+                data-fr="individu"
+                data-en="individual">
+                individu
             </span>
         </div>
     
@@ -757,14 +790,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_O_..html"> T:O:. </a>
             <span class="translation"
-                data-fr="effective agents"
-                data-en="agents effectifs">
-                effective agents
+                data-fr="agents effectifs"
+                data-en="effective agents">
+                agents effectifs
             </span>
         </div>
     
@@ -778,9 +811,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p..html"> p. </a>
             <span class="translation"
-                data-fr="object"
-                data-en="objet">
-                object
+                data-fr="objet"
+                data-en="object">
+                objet
             </span>
         </div>
     
@@ -793,9 +826,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x..html"> x. </a>
             <span class="translation"
-                data-fr="body"
-                data-en="corps">
-                body
+                data-fr="corps"
+                data-en="body">
+                corps
             </span>
         </div>
     
@@ -812,7 +845,7 @@
         
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -827,6 +860,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -836,6 +879,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -872,5 +916,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

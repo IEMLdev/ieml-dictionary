@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>process, verb, dyad</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>processus, verbe, dyade</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>processus, verbe, dyade</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>process, verb, dyad</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,29 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            <p>L’indétermination abstraite du virtuel s’oppose à la délimitation concrète de l’actuel. L’actuel possède une adresse spatio-temporelle, il est situé dans le temps séquentiel et dans l’espace physique tridimensionnel (par exemple telle décision de justice, prise par tel tribunal, tel jour) tandis qu’on ne peut assigner d’adresse spatio-temporelle précise au virtuel (où se trouve l’idée de justice?). Néanmoins l’idée générale et l’acte concret se présupposent mutuellement. La justice, concept pratique par excellence, possède une phase virtuelle et une phase actuelle qui sont relatives l’une à l’autre : la décision répond à l’idée, l’idée mène à la décision. Deux formes différentes se contiennent, se succèdent et se co-produisent, comme la graine virtuelle et l’arbre actuel.
+Au-delà des oppositions particulières du ciel et de la terre, du yang et du yin, de l'âme et du corps, et ainsi de suite, notre lettre "O" = U+A représente la "Dyade" ou symétrie binaire entre deux concepts complémentaires. 
+En IEML chaque <em>verbe</em> commence par "U" ou "A".</p>
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            <p>The abstract indeterminacy of the virtual is opposed to the concrete delimitation of the actual. The actual has a spatio-temporal address, it is located in sequential time and three-dimensional physical space (for example: a decision of justice is taken by such a court, on a specific day), whereas one cannot assign a precise spatio-temporal address to the virtual (for example: where does the idea of justice resides?). In a virtual/actual dialectic, two different kinds of realities follow one another and co-produce each other, like in the example of the virtuality of a seed that can produce an actual tree. 
+Beyond the oppositions of heaven and earth, yang and yin, body and soul, and so on, our "O" = U+A represents the "Dyad" or binary symmetry between two complementary concepts. 
+In IEML every <em>verb</em> begins by "U" or "A".</p>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +179,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +206,14 @@
                 
                     <tr>
                         <td><a href="F_.html">F:</a></td>
-                        <td>fullness | form | pentad | dyad/pentad dialectic</td>
                         <td>plénitude | forme | pentade | dialectique dyade/triade</td>
+                        <td>fullness | form | pentad | dyad/pentad dialectic</td>
                     </tr>
                 
                     <tr>
                         <td><a href="I_.html">I:</a></td>
-                        <td>information, emptiness/form and monad/pentad dialectics</td>
                         <td>information, dialectiques vide/forme et monade/pentade</td>
+                        <td>information, emptiness/form and monad/pentad dialectics</td>
                     </tr>
                 
                 </tbody>
@@ -185,11 +221,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                    
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -203,19 +240,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_.html">O:</a> process, verb, dyad</div>-->
+            <!--<div class="card-header">Table <a href="O_.html">O:</a> processus, verbe, dyade</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_.html"> O: </a>
             <span class="translation"
-                data-fr="process, verb, dyad"
-                data-en="processus, verbe, dyade">
-                process, verb, dyad
+                data-fr="processus, verbe, dyade"
+                data-en="process, verb, dyad">
+                processus, verbe, dyade
             </span>
         </div>
     
@@ -230,9 +267,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="U_.html"> U: </a>
             <span class="translation"
-                data-fr="virtual"
-                data-en="virtuel">
-                virtual
+                data-fr="virtuel"
+                data-en="virtual">
+                virtuel
             </span>
         </div>
     
@@ -247,9 +284,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="A_.html"> A: </a>
             <span class="translation"
-                data-fr="actual"
-                data-en="actuel">
-                actual
+                data-fr="actuel"
+                data-en="actual">
+                actuel
             </span>
         </div>
     
@@ -263,7 +300,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -278,6 +315,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -287,6 +334,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -323,5 +371,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

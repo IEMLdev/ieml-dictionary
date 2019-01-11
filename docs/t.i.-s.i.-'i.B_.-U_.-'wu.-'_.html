@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             t.i.-s.i.-'i.B:.-U:.-'wu.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>freight satellite</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>satellite cargo</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>satellite cargo</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>freight satellite</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -161,20 +193,20 @@
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'i.B_.-U_.-'wo.-'_.html">t.i.-s.i.-'i.B:.-U:.-'wo.-',</a></td>
-                        <td>unmanned satellite</td>
                         <td>satellite sans équipage</td>
+                        <td>unmanned satellite</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'i.B_.-U_.-'wa.-'_.html">t.i.-s.i.-'i.B:.-U:.-'wa.-',</a></td>
-                        <td>manned satellite</td>
                         <td>satellite avec équipage</td>
+                        <td>manned satellite</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'i.B_.-U_.-'we.-'_.html">t.i.-s.i.-'i.B:.-U:.-'we.-',</a></td>
-                        <td>satellite with passengers</td>
                         <td>satellite avec passagers</td>
+                        <td>satellite with passengers</td>
                     </tr>
                 
                 </tbody>
@@ -182,10 +214,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -214,14 +246,14 @@
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'i.B_.-+u.M_.-O_.-'wu.-'_.html">t.i.-s.i.-'i.B:.-+u.M:.-O:.-'wu.-',</a></td>
-                        <td>freight vehicle</td>
                         <td>véhicule cargo</td>
+                        <td>freight vehicle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'i.B_.-+u.M_.-O_.-'O_O_.-'_.html">t.i.-s.i.-'i.B:.-+u.M:.-O:.-'O:O:.-',</a></td>
-                        <td>kinds of vehicles</td>
                         <td>genres de véhicules</td>
+                        <td>kinds of vehicles</td>
                     </tr>
                 
                 </tbody>
@@ -229,11 +261,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -256,8 +289,8 @@
                 
                     <tr>
                         <td><a href="t.i.-s.i.-'.html">t.i.-s.i.-'</a></td>
-                        <td>vehicle</td>
                         <td>véhicule</td>
+                        <td>vehicle</td>
                     </tr>
                 
                 </tbody>
@@ -265,8 +298,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -289,8 +322,8 @@
                 
                     <tr>
                         <td><a href="i.B_.-U_.-'.html">i.B:.-U:.-'</a></td>
-                        <td>navigate in outer space</td>
                         <td>naviguer dans l'espace</td>
+                        <td>navigate in outer space</td>
                     </tr>
                 
                 </tbody>
@@ -298,8 +331,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -322,8 +355,8 @@
                 
                     <tr>
                         <td><a href="wu..html">wu.</a></td>
-                        <td>perceive</td>
                         <td>percevoir</td>
+                        <td>perceive</td>
                     </tr>
                 
                 </tbody>
@@ -331,8 +364,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,7 +374,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -356,6 +389,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -365,6 +408,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -401,5 +445,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

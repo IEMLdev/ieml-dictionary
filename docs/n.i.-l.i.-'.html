@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             n.i.-l.i.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>glue | joint</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>colle | joint</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>colle | joint</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>glue | joint</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -161,8 +193,8 @@
                 
                     <tr>
                         <td><a href="n.i.-l.i.-t.u.-'.html">n.i.-l.i.-t.u.-'</a></td>
-                        <td>glued | joint</td>
                         <td>collé | joint</td>
+                        <td>glued | joint</td>
                     </tr>
                 
                 </tbody>
@@ -170,8 +202,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -194,14 +226,14 @@
                 
                     <tr>
                         <td><a href="l.i.-n.i.-'.html">l.i.-n.i.-'</a></td>
-                        <td>cutting | piercing tool</td>
                         <td>outil coupant | perçant</td>
+                        <td>cutting | piercing tool</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.i.-n.i.-t.u.-'.html">l.i.-n.i.-t.u.-'</a></td>
-                        <td>cut | pierced</td>
                         <td>découpé | percé</td>
+                        <td>cut | pierced</td>
                     </tr>
                 
                 </tbody>
@@ -209,10 +241,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -235,26 +267,26 @@
                 
                     <tr>
                         <td><a href="n.i.-M_M_.i.-'.html">n.i.-M:M:.i.-'</a></td>
-                        <td>fire in substance</td>
                         <td>feu en substance</td>
+                        <td>fire in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.i.-l.i.-'.html">M:M:.i.-l.i.-'</a></td>
-                        <td>knot in attribute</td>
                         <td>noeud en attribut</td>
+                        <td>knot in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-'.html">M:M:.i.-M:M:.i.-'</a></td>
-                        <td>technical functions</td>
                         <td>fonctions techniques</td>
+                        <td>technical functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-E_.-+t.u.-'.html">M:M:.i.-M:M:.i.-E:.-+t.u.-'</a></td>
-                        <td>technical functions and qualities</td>
                         <td>fonctions et qualités techniques</td>
+                        <td>technical functions and qualities</td>
                     </tr>
                 
                 </tbody>
@@ -262,11 +294,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -289,8 +322,8 @@
                 
                     <tr>
                         <td><a href="n.i.-.html">n.i.-</a></td>
-                        <td>fire | transformation technique</td>
                         <td>feu | technique de transformation</td>
+                        <td>fire | transformation technique</td>
                     </tr>
                 
                 </tbody>
@@ -298,8 +331,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -322,8 +355,8 @@
                 
                     <tr>
                         <td><a href="l.i.-.html">l.i.-</a></td>
-                        <td>knot | connection technique</td>
                         <td>noeud | technique de connection</td>
+                        <td>knot | connection technique</td>
                     </tr>
                 
                 </tbody>
@@ -331,8 +364,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,7 +374,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -356,6 +389,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -365,6 +408,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -401,5 +445,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

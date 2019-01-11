@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             p.E:F:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>gradient adjectives</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>adjectifs de gradient</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>adjectifs de gradient</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>gradient adjectives</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,50 +202,50 @@
                 
                     <tr>
                         <td><a href="p.E_U_M_.-.html">p.E:U:M:.-</a></td>
-                        <td>qualitative gradient adjective</td>
                         <td>adjectifs de gradient qualitatifs</td>
+                        <td>qualitative gradient adjective</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_A_M_.-.html">p.E:A:M:.-</a></td>
-                        <td>Gradient adjectives (size)</td>
                         <td>adjectifs de gradient (taille)</td>
+                        <td>Gradient adjectives (size)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_S_M_.-.html">p.E:S:M:.-</a></td>
-                        <td>time distribution (gradient distribution)</td>
                         <td>distribution dans le temps (adjectif de gradient)</td>
+                        <td>time distribution (gradient distribution)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_B_M_.-.html">p.E:B:M:.-</a></td>
-                        <td>frequency (gradient adjective)</td>
                         <td>fréquence (adjectifs de gradient)</td>
+                        <td>frequency (gradient adjective)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_T_M_.-.html">p.E:T:M:.-</a></td>
-                        <td>space distribution (gradient adjective)</td>
                         <td>distribution dans l'espace (adjectif de gradient)</td>
+                        <td>space distribution (gradient adjective)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_F_S_.-.html">p.E:F:S:.-</a></td>
-                        <td>less (gradient adjective)</td>
                         <td>moins (adjectif de gradient)</td>
+                        <td>less (gradient adjective)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_F_B_.-.html">p.E:F:B:.-</a></td>
-                        <td>medium (gradient adjective)</td>
                         <td>medium (adjectif de gradient)</td>
+                        <td>medium (gradient adjective)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.E_F_T_.-.html">p.E:F:T:.-</a></td>
-                        <td>more (gradient adjective)</td>
                         <td>plus (adjectif de gradient)</td>
+                        <td>more (gradient adjective)</td>
                     </tr>
                 
                 </tbody>
@@ -221,11 +253,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -248,8 +281,8 @@
                 
                     <tr>
                         <td><a href="p..html">p.</a></td>
-                        <td>object</td>
                         <td>objet</td>
+                        <td>object</td>
                     </tr>
                 
                 </tbody>
@@ -257,8 +290,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -281,8 +314,8 @@
                 
                     <tr>
                         <td><a href="E_F_M_..html">E:F:M:.</a></td>
-                        <td>gradient adverb | in topic or clause mode</td>
                         <td>adverbes de gradient | en mode de topic ou de clause</td>
+                        <td>gradient adverb | in topic or clause mode</td>
                     </tr>
                 
                 </tbody>
@@ -290,8 +323,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -305,19 +338,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="p.E_F_M_.-.html">p.E:F:M:.-</a> gradient adjectives</div>-->
+            <!--<div class="card-header">Table <a href="p.E_F_M_.-.html">p.E:F:M:.-</a> adjectifs de gradient</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_F_M_.-.html"> p.E:F:M:.- </a>
             <span class="translation"
-                data-fr="gradient adjectives"
-                data-en="adjectifs de gradient">
-                gradient adjectives
+                data-fr="adjectifs de gradient"
+                data-en="gradient adjectives">
+                adjectifs de gradient
             </span>
         </div>
     
@@ -328,14 +361,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_F_S_.-.html"> p.E:F:S:.- </a>
             <span class="translation"
-                data-fr="less (gradient adjective)"
-                data-en="moins (adjectif de gradient)">
-                less (gradient adjective)
+                data-fr="moins (adjectif de gradient)"
+                data-en="less (gradient adjective)">
+                moins (adjectif de gradient)
             </span>
         </div>
     
@@ -343,14 +376,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_F_B_.-.html"> p.E:F:B:.- </a>
             <span class="translation"
-                data-fr="medium (gradient adjective)"
-                data-en="medium (adjectif de gradient)">
-                medium (gradient adjective)
+                data-fr="medium (adjectif de gradient)"
+                data-en="medium (gradient adjective)">
+                medium (adjectif de gradient)
             </span>
         </div>
     
@@ -358,14 +391,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_F_T_.-.html"> p.E:F:T:.- </a>
             <span class="translation"
-                data-fr="more (gradient adjective)"
-                data-en="plus (adjectif de gradient)">
-                more (gradient adjective)
+                data-fr="plus (adjectif de gradient)"
+                data-en="more (gradient adjective)">
+                plus (adjectif de gradient)
             </span>
         </div>
     
@@ -376,14 +409,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_U_M_.-.html"> p.E:U:M:.- </a>
             <span class="translation"
-                data-fr="qualitative gradient adjective"
-                data-en="adjectifs de gradient qualitatifs">
-                qualitative gradient adjective
+                data-fr="adjectifs de gradient qualitatifs"
+                data-en="qualitative gradient adjective">
+                adjectifs de gradient qualitatifs
             </span>
         </div>
     
@@ -397,9 +430,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_U_S_.-.html"> p.E:U:S:.- </a>
             <span class="translation"
-                data-fr="bad"
-                data-en="mauvais, méchant">
-                bad
+                data-fr="mauvais, méchant"
+                data-en="bad">
+                mauvais, méchant
             </span>
         </div>
     
@@ -412,9 +445,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_U_B_.-.html"> p.E:U:B:.- </a>
             <span class="translation"
-                data-fr="middle quality"
-                data-en="de qualité moyenne">
-                middle quality
+                data-fr="de qualité moyenne"
+                data-en="middle quality">
+                de qualité moyenne
             </span>
         </div>
     
@@ -427,9 +460,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_U_T_.-.html"> p.E:U:T:.- </a>
             <span class="translation"
-                data-fr="good"
-                data-en="bon">
-                good
+                data-fr="bon"
+                data-en="good">
+                bon
             </span>
         </div>
     
@@ -440,14 +473,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_A_M_.-.html"> p.E:A:M:.- </a>
             <span class="translation"
-                data-fr="Gradient adjectives (size)"
-                data-en="adjectifs de gradient (taille)">
-                Gradient adjectives (size)
+                data-fr="adjectifs de gradient (taille)"
+                data-en="Gradient adjectives (size)">
+                adjectifs de gradient (taille)
             </span>
         </div>
     
@@ -461,9 +494,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_A_S_.-.html"> p.E:A:S:.- </a>
             <span class="translation"
-                data-fr="small"
-                data-en="petit">
-                small
+                data-fr="petit"
+                data-en="small">
+                petit
             </span>
         </div>
     
@@ -476,9 +509,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_A_B_.-.html"> p.E:A:B:.- </a>
             <span class="translation"
-                data-fr="middle sized"
-                data-en="de taille moyenne">
-                middle sized
+                data-fr="de taille moyenne"
+                data-en="middle sized">
+                de taille moyenne
             </span>
         </div>
     
@@ -491,9 +524,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_A_T_.-.html"> p.E:A:T:.- </a>
             <span class="translation"
-                data-fr="large"
-                data-en="grand">
-                large
+                data-fr="grand"
+                data-en="large">
+                grand
             </span>
         </div>
     
@@ -504,14 +537,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_S_M_.-.html"> p.E:S:M:.- </a>
             <span class="translation"
-                data-fr="time distribution (gradient distribution)"
-                data-en="distribution dans le temps (adjectif de gradient)">
-                time distribution (gradient distribution)
+                data-fr="distribution dans le temps (adjectif de gradient)"
+                data-en="time distribution (gradient distribution)">
+                distribution dans le temps (adjectif de gradient)
             </span>
         </div>
     
@@ -540,9 +573,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_S_B_.-.html"> p.E:S:B:.- </a>
             <span class="translation"
-                data-fr="occasional, intermittent, contingent"
-                data-en="occasionnel, intermittent, contingent">
-                occasional, intermittent, contingent
+                data-fr="occasionnel, intermittent, contingent"
+                data-en="occasional, intermittent, contingent">
+                occasionnel, intermittent, contingent
             </span>
         </div>
     
@@ -555,9 +588,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_S_T_.-.html"> p.E:S:T:.- </a>
             <span class="translation"
-                data-fr="eternal, everlasting"
-                data-en="éternel, constant">
-                eternal, everlasting
+                data-fr="éternel, constant"
+                data-en="eternal, everlasting">
+                éternel, constant
             </span>
         </div>
     
@@ -568,14 +601,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_B_M_.-.html"> p.E:B:M:.- </a>
             <span class="translation"
-                data-fr="frequency (gradient adjective)"
-                data-en="fréquence (adjectifs de gradient)">
-                frequency (gradient adjective)
+                data-fr="fréquence (adjectifs de gradient)"
+                data-en="frequency (gradient adjective)">
+                fréquence (adjectifs de gradient)
             </span>
         </div>
     
@@ -604,9 +637,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_B_B_.-.html"> p.E:B:B:.- </a>
             <span class="translation"
-                data-fr="regular"
-                data-en="regulier">
-                regular
+                data-fr="regulier"
+                data-en="regular">
+                regulier
             </span>
         </div>
     
@@ -619,9 +652,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_B_T_.-.html"> p.E:B:T:.- </a>
             <span class="translation"
-                data-fr="frequent"
-                data-en="fréquent">
-                frequent
+                data-fr="fréquent"
+                data-en="frequent">
+                fréquent
             </span>
         </div>
     
@@ -632,14 +665,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.E_T_M_.-.html"> p.E:T:M:.- </a>
             <span class="translation"
-                data-fr="space distribution (gradient adjective)"
-                data-en="distribution dans l'espace (adjectif de gradient)">
-                space distribution (gradient adjective)
+                data-fr="distribution dans l'espace (adjectif de gradient)"
+                data-en="space distribution (gradient adjective)">
+                distribution dans l'espace (adjectif de gradient)
             </span>
         </div>
     
@@ -653,9 +686,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_T_S_.-.html"> p.E:T:S:.- </a>
             <span class="translation"
-                data-fr="non existant"
-                data-en="inexistant">
-                non existant
+                data-fr="inexistant"
+                data-en="non existant">
+                inexistant
             </span>
         </div>
     
@@ -668,9 +701,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_T_B_.-.html"> p.E:T:B:.- </a>
             <span class="translation"
-                data-fr="existing"
-                data-en="existant">
-                existing
+                data-fr="existant"
+                data-en="existing">
+                existant
             </span>
         </div>
     
@@ -683,9 +716,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.E_T_T_.-.html"> p.E:T:T:.- </a>
             <span class="translation"
-                data-fr="omnipresent, distributed all over"
-                data-en="omnipresent, partout distribué">
-                omnipresent, distributed all over
+                data-fr="omnipresent, partout distribué"
+                data-en="omnipresent, distributed all over">
+                omnipresent, partout distribué
             </span>
         </div>
     
@@ -700,7 +733,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -715,6 +748,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -724,6 +767,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -760,5 +804,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

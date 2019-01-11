@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:O:.we.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>environment mutation</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>mutation de l'environnement</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>mutation de l'environnement</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>environment mutation</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,32 +202,32 @@
                 
                     <tr>
                         <td><a href="S_O_.we.-.html">S:O:.we.-</a></td>
-                        <td>mutation of the symbolic environment</td>
                         <td>mutation de l'environnement symbolique</td>
+                        <td>mutation of the symbolic environment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.we.-.html">B:O:.we.-</a></td>
-                        <td>mutation of the social environment</td>
                         <td>mutation de l'environnement social</td>
+                        <td>mutation of the social environment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.we.-.html">T:O:.we.-</a></td>
-                        <td>mutation of the objective environment</td>
                         <td>mutation de l'environnement objectif</td>
+                        <td>mutation of the objective environment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.we.-.html">M:U:.we.-</a></td>
-                        <td>virtual mutation of the environment</td>
                         <td>mutation virtuelle de l'environnement</td>
+                        <td>virtual mutation of the environment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.we.-.html">M:A:.we.-</a></td>
-                        <td>actual mutation of the environment</td>
                         <td>mutation actuelle de l'environnement</td>
+                        <td>actual mutation of the environment</td>
                     </tr>
                 
                 </tbody>
@@ -203,8 +235,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,8 +259,8 @@
                 
                     <tr>
                         <td><a href="M_O_.O_O_.-.html">M:O:.O:O:.-</a></td>
-                        <td>generative mutations</td>
                         <td>mutations génératives</td>
+                        <td>generative mutations</td>
                     </tr>
                 
                 </tbody>
@@ -236,11 +268,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -296,8 +329,8 @@
                 
                     <tr>
                         <td><a href="we..html">we.</a></td>
-                        <td>appear, happen</td>
                         <td>apparaître, arriver</td>
+                        <td>appear, happen</td>
                     </tr>
                 
                 </tbody>
@@ -305,8 +338,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -320,19 +353,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_O_.we.-.html">M:O:.we.-</a> environment mutation</div>-->
+            <!--<div class="card-header">Table <a href="M_O_.we.-.html">M:O:.we.-</a> mutation de l'environnement</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.we.-.html"> M:O:.we.- </a>
             <span class="translation"
-                data-fr="environment mutation"
-                data-en="mutation de l'environnement">
-                environment mutation
+                data-fr="mutation de l'environnement"
+                data-en="environment mutation">
+                mutation de l'environnement
             </span>
         </div>
     
@@ -343,14 +376,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_U_.we.-.html"> M:U:.we.- </a>
             <span class="translation"
-                data-fr="virtual mutation of the environment"
-                data-en="mutation virtuelle de l'environnement">
-                virtual mutation of the environment
+                data-fr="mutation virtuelle de l'environnement"
+                data-en="virtual mutation of the environment">
+                mutation virtuelle de l'environnement
             </span>
         </div>
     
@@ -358,14 +391,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_A_.we.-.html"> M:A:.we.- </a>
             <span class="translation"
-                data-fr="actual mutation of the environment"
-                data-en="mutation actuelle de l'environnement">
-                actual mutation of the environment
+                data-fr="mutation actuelle de l'environnement"
+                data-en="actual mutation of the environment">
+                mutation actuelle de l'environnement
             </span>
         </div>
     
@@ -376,14 +409,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_O_.we.-.html"> S:O:.we.- </a>
             <span class="translation"
-                data-fr="mutation of the symbolic environment"
-                data-en="mutation de l'environnement symbolique">
-                mutation of the symbolic environment
+                data-fr="mutation de l'environnement symbolique"
+                data-en="mutation of the symbolic environment">
+                mutation de l'environnement symbolique
             </span>
         </div>
     
@@ -397,9 +430,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.we.-.html"> j.we.- </a>
             <span class="translation"
-                data-fr="cultural adaptation | transfer"
-                data-en="adaptation | transfert culturel">
-                cultural adaptation | transfer
+                data-fr="adaptation | transfert culturel"
+                data-en="cultural adaptation | transfer">
+                adaptation | transfert culturel
             </span>
         </div>
     
@@ -412,9 +445,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.we.-.html"> g.we.- </a>
             <span class="translation"
-                data-fr="context variation"
-                data-en="variation du contexte">
-                context variation
+                data-fr="variation du contexte"
+                data-en="context variation">
+                variation du contexte
             </span>
         </div>
     
@@ -425,14 +458,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_O_.we.-.html"> B:O:.we.- </a>
             <span class="translation"
-                data-fr="mutation of the social environment"
-                data-en="mutation de l'environnement social">
-                mutation of the social environment
+                data-fr="mutation de l'environnement social"
+                data-en="mutation of the social environment">
+                mutation de l'environnement social
             </span>
         </div>
     
@@ -446,9 +479,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.we.-.html"> h.we.- </a>
             <span class="translation"
-                data-fr="situation reversa"
-                data-en="retournement de situation">
-                situation reversa
+                data-fr="retournement de situation"
+                data-en="situation reversa">
+                retournement de situation
             </span>
         </div>
     
@@ -461,9 +494,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.we.-.html"> c.we.- </a>
             <span class="translation"
-                data-fr="family event"
-                data-en="événement familial">
-                family event
+                data-fr="événement familial"
+                data-en="family event">
+                événement familial
             </span>
         </div>
     
@@ -474,14 +507,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_O_.we.-.html"> T:O:.we.- </a>
             <span class="translation"
-                data-fr="mutation of the objective environment"
-                data-en="mutation de l'environnement objectif">
-                mutation of the objective environment
+                data-fr="mutation de l'environnement objectif"
+                data-en="mutation of the objective environment">
+                mutation de l'environnement objectif
             </span>
         </div>
     
@@ -495,9 +528,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.we.-.html"> p.we.- </a>
             <span class="translation"
-                data-fr="irreversible consequence"
-                data-en="conséquence irréversible">
-                irreversible consequence
+                data-fr="conséquence irréversible"
+                data-en="irreversible consequence">
+                conséquence irréversible
             </span>
         </div>
     
@@ -510,9 +543,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.we.-.html"> x.we.- </a>
             <span class="translation"
-                data-fr="mutation of natural environment"
-                data-en="mutation de l'environnement naturel">
-                mutation of natural environment
+                data-fr="mutation de l'environnement naturel"
+                data-en="mutation of natural environment">
+                mutation de l'environnement naturel
             </span>
         </div>
     
@@ -527,7 +560,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -542,6 +575,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -551,6 +594,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -587,5 +631,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

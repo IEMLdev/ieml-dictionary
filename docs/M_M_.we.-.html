@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:M:.we.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>sources of meaning in sustainability</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sources du sens dans la durabilité</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sources du sens dans la durabilité</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>sources of meaning in sustainability</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,38 +202,38 @@
                 
                     <tr>
                         <td><a href="S_M_.we.-.html">S:M:.we.-</a></td>
-                        <td>stable culture</td>
                         <td>culture stable</td>
+                        <td>stable culture</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.we.-.html">B:M:.we.-</a></td>
-                        <td>stable society</td>
                         <td>société stable</td>
+                        <td>stable society</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_M_.we.-.html">T:M:.we.-</a></td>
-                        <td>stable activity</td>
                         <td>activité stable</td>
+                        <td>stable activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.we.-.html">M:S:.we.-</a></td>
-                        <td>effort to adapt</td>
                         <td>effort d'adaptation</td>
+                        <td>effort to adapt</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_B_.we.-.html">M:B:.we.-</a></td>
-                        <td>effort of compliance</td>
                         <td>effort de conformité</td>
+                        <td>effort of compliance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_T_.we.-.html">M:T:.we.-</a></td>
-                        <td>effort of continuity</td>
                         <td>effort de continuité</td>
+                        <td>effort of continuity</td>
                     </tr>
                 
                 </tbody>
@@ -209,8 +241,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -233,8 +265,8 @@
                 
                     <tr>
                         <td><a href="M_M_.O_O_.-.html">M:M:.O:O:.-</a></td>
-                        <td>resources of meaning</td>
                         <td>ressources du sens</td>
+                        <td>resources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +302,8 @@
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="we..html">we.</a></td>
-                        <td>appear, happen</td>
                         <td>apparaître, arriver</td>
+                        <td>appear, happen</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -326,19 +359,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_M_.we.-.html">M:M:.we.-</a> sources of meaning in sustainability</div>-->
+            <!--<div class="card-header">Table <a href="M_M_.we.-.html">M:M:.we.-</a> sources du sens dans la durabilité</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.we.-.html"> M:M:.we.- </a>
             <span class="translation"
-                data-fr="sources of meaning in sustainability"
-                data-en="sources du sens dans la durabilité">
-                sources of meaning in sustainability
+                data-fr="sources du sens dans la durabilité"
+                data-en="sources of meaning in sustainability">
+                sources du sens dans la durabilité
             </span>
         </div>
     
@@ -349,14 +382,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_S_.we.-.html"> M:S:.we.- </a>
             <span class="translation"
-                data-fr="effort to adapt"
-                data-en="effort d'adaptation">
-                effort to adapt
+                data-fr="effort d'adaptation"
+                data-en="effort to adapt">
+                effort d'adaptation
             </span>
         </div>
     
@@ -364,14 +397,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_B_.we.-.html"> M:B:.we.- </a>
             <span class="translation"
-                data-fr="effort of compliance"
-                data-en="effort de conformité">
-                effort of compliance
+                data-fr="effort de conformité"
+                data-en="effort of compliance">
+                effort de conformité
             </span>
         </div>
     
@@ -379,14 +412,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_T_.we.-.html"> M:T:.we.- </a>
             <span class="translation"
-                data-fr="effort of continuity"
-                data-en="effort de continuité">
-                effort of continuity
+                data-fr="effort de continuité"
+                data-en="effort of continuity">
+                effort de continuité
             </span>
         </div>
     
@@ -397,14 +430,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_M_.we.-.html"> S:M:.we.- </a>
             <span class="translation"
-                data-fr="stable culture"
-                data-en="culture stable">
-                stable culture
+                data-fr="culture stable"
+                data-en="stable culture">
+                culture stable
             </span>
         </div>
     
@@ -418,9 +451,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-.html"> s.we.- </a>
             <span class="translation"
-                data-fr="concern for the environment"
-                data-en="souci de l'environnemt">
-                concern for the environment
+                data-fr="souci de l'environnemt"
+                data-en="concern for the environment">
+                souci de l'environnemt
             </span>
         </div>
     
@@ -433,9 +466,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.we.-.html"> b.we.- </a>
             <span class="translation"
-                data-fr="media climate"
-                data-en="climat médiatique">
-                media climate
+                data-fr="climat médiatique"
+                data-en="media climate">
+                climat médiatique
             </span>
         </div>
     
@@ -448,9 +481,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.we.-.html"> t.we.- </a>
             <span class="translation"
-                data-fr="regularity"
-                data-en="régularité">
-                regularity
+                data-fr="régularité"
+                data-en="regularity">
+                régularité
             </span>
         </div>
     
@@ -461,14 +494,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.we.-.html"> B:M:.we.- </a>
             <span class="translation"
-                data-fr="stable society"
-                data-en="société stable">
-                stable society
+                data-fr="société stable"
+                data-en="stable society">
+                société stable
             </span>
         </div>
     
@@ -482,9 +515,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.we.-.html"> k.we.- </a>
             <span class="translation"
-                data-fr="residential community"
-                data-en="communauté de résidence">
-                residential community
+                data-fr="communauté de résidence"
+                data-en="residential community">
+                communauté de résidence
             </span>
         </div>
     
@@ -497,9 +530,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.we.-.html"> m.we.- </a>
             <span class="translation"
-                data-fr="acceptance of constraints"
-                data-en="acceptation des contraintes">
-                acceptance of constraints
+                data-fr="acceptation des contraintes"
+                data-en="acceptance of constraints">
+                acceptation des contraintes
             </span>
         </div>
     
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.we.-.html"> n.we.- </a>
             <span class="translation"
-                data-fr="cultural roots"
-                data-en="racines culturelles">
-                cultural roots
+                data-fr="racines culturelles"
+                data-en="cultural roots">
+                racines culturelles
             </span>
         </div>
     
@@ -525,14 +558,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_M_.we.-.html"> T:M:.we.- </a>
             <span class="translation"
-                data-fr="stable activity"
-                data-en="activité stable">
-                stable activity
+                data-fr="activité stable"
+                data-en="stable activity">
+                activité stable
             </span>
         </div>
     
@@ -546,9 +579,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.we.-.html"> d.we.- </a>
             <span class="translation"
-                data-fr="technical constraint"
-                data-en="contrainte technique">
-                technical constraint
+                data-fr="contrainte technique"
+                data-en="technical constraint">
+                contrainte technique
             </span>
         </div>
     
@@ -561,9 +594,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.we.-.html"> f.we.- </a>
             <span class="translation"
-                data-fr="leisure | entertainment | recreation"
-                data-en="loisir | divertissement | récréation">
-                leisure | entertainment | recreation
+                data-fr="loisir | divertissement | récréation"
+                data-en="leisure | entertainment | recreation">
+                loisir | divertissement | récréation
             </span>
         </div>
     
@@ -576,9 +609,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.we.-.html"> l.we.- </a>
             <span class="translation"
-                data-fr="economic freedom | responsibility"
-                data-en="liberté | responsabilité économique">
-                economic freedom | responsibility
+                data-fr="liberté | responsabilité économique"
+                data-en="economic freedom | responsibility">
+                liberté | responsabilité économique
             </span>
         </div>
     
@@ -593,7 +626,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -608,6 +641,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -617,6 +660,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -653,5 +697,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

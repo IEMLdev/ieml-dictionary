@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             f.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>life</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>vies</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>vie</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>life</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,10 +168,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -163,20 +195,20 @@
                 
                     <tr>
                         <td><a href="T_M_..html">T:M:.</a></td>
+                        <td>devenir de la chose</td>
                         <td>becoming of the thing</td>
-                        <td>devenir de la choses</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_B_..html">M:B:.</a></td>
-                        <td>becoming being</td>
                         <td>devenir être</td>
+                        <td>becoming being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -184,11 +216,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -211,8 +244,8 @@
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -220,8 +253,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -244,8 +277,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -253,9 +286,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,146 +311,146 @@
                 
                     <tr>
                         <td><a href="f.U_O_.-.html">f.U:O:.-</a></td>
-                        <td>resourcing of meaning by exercise</td>
                         <td>ressourcement du sens par l'exercice</td>
+                        <td>resourcing of meaning by exercise</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.A_O_.-.html">f.A:O:.-</a></td>
-                        <td>resourcing of meaning by enjoyment</td>
                         <td>ressourcement du sens par le plaisir</td>
+                        <td>resourcing of meaning by enjoyment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_U_.-.html">f.O:U:.-</a></td>
-                        <td>sources of meaning in internal activity</td>
                         <td>sources du sens dans l'activité interne</td>
+                        <td>sources of meaning in internal activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_A_.-.html">f.O:A:.-</a></td>
-                        <td>sources of meaning in external activity</td>
                         <td>sources du sens dans l'activité externe</td>
+                        <td>sources of meaning in external activity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_S_.-.html">f.O:S:.-</a></td>
-                        <td>abstract life factors</td>
                         <td>facteurs abstraits de vie</td>
+                        <td>abstract life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_B_.-.html">f.O:B:.-</a></td>
-                        <td>existential life factors</td>
                         <td>facteurs existentiels de vie</td>
+                        <td>existential life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_T_.-.html">f.O:T:.-</a></td>
-                        <td>concrete life factors</td>
                         <td>facteurs concrets de vie</td>
+                        <td>concrete life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.S_O_.-.html">f.S:O:.-</a></td>
-                        <td>formal personal connexion</td>
                         <td>connexion personnelle formelle</td>
+                        <td>formal personal connexion</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.B_O_.-.html">f.B:O:.-</a></td>
-                        <td>subjective personal connection</td>
                         <td>connexion personnelle subjective</td>
+                        <td>subjective personal connection</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.T_O_.-.html">f.T:O:.-</a></td>
-                        <td>objective personal connection</td>
                         <td>connexion personnelle objective</td>
+                        <td>objective personal connection</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.U_M_.-.html">f.U:M:.-</a></td>
-                        <td>virtual life factors</td>
                         <td>facteurs virtuels de vie</td>
+                        <td>virtual life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.A_M_.-.html">f.A:M:.-</a></td>
-                        <td>actual life factors</td>
                         <td>facteurs actuels de vie</td>
+                        <td>actual life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.M_U_.-.html">f.M:U:.-</a></td>
-                        <td>virtual personal connection</td>
                         <td>connexion personnelle virtuelle</td>
+                        <td>virtual personal connection</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.M_A_.-.html">f.M:A:.-</a></td>
-                        <td>actual  personal connection</td>
                         <td>connexion personnelle actuelle</td>
+                        <td>actual  personal connection</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_O_.-.html">f.O:O:.-</a></td>
-                        <td>sources of meaning in the body</td>
                         <td>sources du sens dans le corps</td>
+                        <td>sources of meaning in the body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.O_M_.-.html">f.O:M:.-</a></td>
-                        <td>life factors</td>
                         <td>facteurs de vie</td>
+                        <td>life factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.M_O_.-.html">f.M:O:.-</a></td>
-                        <td>personal connection</td>
                         <td>connexion personnelle</td>
+                        <td>personal connection</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-O_M_.-'.html">f.-O:M:.-'</a></td>
-                        <td>living phenomena (1)</td>
                         <td>phénomènes vivants (1)</td>
+                        <td>living phenomena (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-O_M_.-s.y.-'.html">f.-O:M:.-s.y.-'</a></td>
-                        <td>life studies (1)</td>
                         <td>études du vivant (1)</td>
+                        <td>life studies (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-M_.O_.-'.html">f.-M:.O:.-'</a></td>
-                        <td>tastes</td>
                         <td>goûts</td>
+                        <td>tastes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-M_O_.-'.html">f.-M:O:.-'</a></td>
-                        <td>living phenomena (2)</td>
                         <td>phénomènes vivants (2)</td>
+                        <td>living phenomena (2)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-M_O_.-s.y.-'.html">f.-M:O:.-s.y.-'</a></td>
-                        <td>life studies (2)</td>
                         <td>études du vivant (2)</td>
+                        <td>life studies (2)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-O_M_.+M_O_.-'.html">f.-O:M:.+M:O:.-'</a></td>
-                        <td>objects of life studies</td>
                         <td>objets des études du vivant</td>
+                        <td>objects of life studies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.-O_M_.+M_O_.-s.y.-'.html">f.-O:M:.+M:O:.-s.y.-'</a></td>
-                        <td>lively and life studies</td>
                         <td>études vivantes et du vivant</td>
+                        <td>lively and life studies</td>
                     </tr>
                 
                 </tbody>
@@ -425,8 +458,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -449,320 +482,320 @@
                 
                     <tr>
                         <td><a href="U_O_.f.-.html">U:O:.f.-</a></td>
-                        <td>virtual relation to the body</td>
                         <td>rapport virtuel au corps</td>
+                        <td>virtual relation to the body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.f.U_.-.html">U:O:.f.U:.-</a></td>
-                        <td>create and broadcast sound</td>
                         <td>créer et diffuser du son</td>
+                        <td>create and broadcast sound</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.f.A_.-.html">U:O:.f.A:.-</a></td>
-                        <td>shape and show the pressure</td>
                         <td>former et exhiber la pression</td>
+                        <td>shape and show the pressure</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.f.S_.-.html">U:O:.f.S:.-</a></td>
-                        <td>shape and display an image</td>
                         <td>former et afficher une image</td>
+                        <td>shape and display an image</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.f.B_.-.html">U:O:.f.B:.-</a></td>
-                        <td>create and display a taste | a smell</td>
                         <td>créer et diffuser un goût | une odeur</td>
+                        <td>create and display a taste | a smell</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.f.T_.-.html">U:O:.f.T:.-</a></td>
-                        <td>manipulate and display a movement</td>
                         <td>manipuler et afficher un mouvement</td>
+                        <td>manipulate and display a movement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.-.html">A:O:.f.-</a></td>
-                        <td>actual relation to the body</td>
                         <td>rapport actuel au corps</td>
+                        <td>actual relation to the body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.U_.-.html">A:O:.f.U:.-</a></td>
-                        <td>hear and cut off the sound</td>
                         <td>entendre et couper le son</td>
+                        <td>hear and cut off the sound</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.A_.-.html">A:O:.f.A:.-</a></td>
-                        <td>touch and protect from contact</td>
                         <td>toucher et protéger du contact</td>
+                        <td>touch and protect from contact</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.S_.-.html">A:O:.f.S:.-</a></td>
-                        <td>see and hide an image</td>
                         <td>voir et cacher une image</td>
+                        <td>see and hide an image</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.B_.-.html">A:O:.f.B:.-</a></td>
-                        <td>sense and insulate a chemical form</td>
                         <td>sentir et isoler une forme chimique</td>
+                        <td>sense and insulate a chemical form</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.f.T_.-.html">A:O:.f.T:.-</a></td>
-                        <td>recognize and stop a movement</td>
                         <td>reconnaître et stopper un mouvement</td>
+                        <td>recognize and stop a movement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.-.html">O:U:.f.-</a></td>
-                        <td>relation to the virtual body</td>
                         <td>relation au corps virtuel</td>
+                        <td>relation to the virtual body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.U_.-.html">O:U:.f.U:.-</a></td>
-                        <td>create and recognize sound forms</td>
                         <td>créer et reconnaître des formes sonores</td>
+                        <td>create and recognize sound forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.A_.-.html">O:U:.f.A:.-</a></td>
-                        <td>shape and recognize a tactile form</td>
                         <td>former et reconnaître une forme tactile</td>
+                        <td>shape and recognize a tactile form</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.S_.-.html">O:U:.f.S:.-</a></td>
-                        <td>shape and see an image</td>
                         <td>former et voir une image</td>
+                        <td>shape and see an image</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.B_.-.html">O:U:.f.B:.-</a></td>
-                        <td>create and sense a taste | a smell</td>
                         <td>créer et sentir un goût | une odeur</td>
+                        <td>create and sense a taste | a smell</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.f.T_.-.html">O:U:.f.T:.-</a></td>
-                        <td>provoke and recognize a movement</td>
                         <td>provoquer et reconnaître un mouvement</td>
+                        <td>provoke and recognize a movement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.-.html">O:A:.f.-</a></td>
-                        <td>relation to the actual body</td>
                         <td>relation au corps actuel</td>
+                        <td>relation to the actual body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.U_.-.html">O:A:.f.U:.-</a></td>
-                        <td>broadcast and cut off the sound</td>
                         <td>diffuser et couper le son</td>
+                        <td>broadcast and cut off the sound</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.A_.-.html">O:A:.f.A:.-</a></td>
-                        <td>show and cut off contact</td>
                         <td>montrer et couper le contact</td>
+                        <td>show and cut off contact</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.S_.-.html">O:A:.f.S:.-</a></td>
-                        <td>display and hide a visual image</td>
                         <td>afficher et cacher une image visuelle</td>
+                        <td>display and hide a visual image</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.B_.-.html">O:A:.f.B:.-</a></td>
-                        <td>display and block a gustative | olfactive experience</td>
                         <td>diffuser et bloquer une expérience gustative | olfactive</td>
+                        <td>display and block a gustative | olfactive experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.f.T_.-.html">O:A:.f.T:.-</a></td>
-                        <td>display and stop a movement</td>
                         <td>afficher et stopper un mouvement</td>
+                        <td>display and stop a movement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_S_.f.-.html">O:S:.f.-</a></td>
-                        <td>weaken life in an abstract way</td>
                         <td>affaiblir la vie abstraitement</td>
+                        <td>weaken life in an abstract way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_.f.-.html">O:B:.f.-</a></td>
-                        <td>weaken life existentially</td>
                         <td>affaiblir la vie existentiellement</td>
+                        <td>weaken life existentially</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.f.-.html">O:T:.f.-</a></td>
-                        <td>weaken life in a concrete way</td>
                         <td>affaiblir la vie concrètement</td>
+                        <td>weaken life in a concrete way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.f.-.html">U:M:.f.-</a></td>
-                        <td>weaken life virtually</td>
                         <td>affaiblir la vie virtuellement</td>
+                        <td>weaken life virtually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.f.-.html">A:M:.f.-</a></td>
-                        <td>weaken life actually</td>
                         <td>affaiblir la vie actuellement</td>
+                        <td>weaken life actually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.-.html">O:O:.f.-</a></td>
-                        <td>relation to the body</td>
                         <td>rapport au corps</td>
+                        <td>relation to the body</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.U_.-.html">O:O:.f.U:.-</a></td>
-                        <td>control auditory experience</td>
                         <td>contrôler l'expérience auditive</td>
+                        <td>control auditory experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.A_.-.html">O:O:.f.A:.-</a></td>
-                        <td>control tactile experience</td>
                         <td>contrôler l'expérience tactile</td>
+                        <td>control tactile experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.S_.-.html">O:O:.f.S:.-</a></td>
-                        <td>control visual experience</td>
                         <td>contrôler l'expérience visuelle</td>
+                        <td>control visual experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.B_.-.html">O:O:.f.B:.-</a></td>
-                        <td>control the chemical sensation</td>
                         <td>contrôler la sensation chimique</td>
+                        <td>control the chemical sensation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.T_.-.html">O:O:.f.T:.-</a></td>
-                        <td>control motor experience</td>
                         <td>contrôler l'expérience motrice</td>
+                        <td>control motor experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.f.F_.-.html">wo.f.F:.-</a></td>
-                        <td>modulate phenomena</td>
                         <td>moduler les phénomènes</td>
+                        <td>modulate phenomena</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.f.F_.-.html">wa.f.F:.-</a></td>
-                        <td>display sensorimotricity</td>
                         <td>exposer la sensori-motricité</td>
+                        <td>display sensorimotricity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.f.F_.-.html">wu.f.F:.-</a></td>
-                        <td>feel | recognize shapes</td>
                         <td>sentir | reconnaître les formes</td>
+                        <td>feel | recognize shapes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.f.F_.-.html">we.f.F:.-</a></td>
-                        <td>shut off sensorimotricity</td>
                         <td>interrompre la sensori-motricité</td>
+                        <td>shut off sensorimotricity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.f.-.html">O:M:.f.-</a></td>
-                        <td>weaken life</td>
                         <td>affaiblir la vie</td>
+                        <td>weaken life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.f.-.html">M:O:.f.-</a></td>
-                        <td>personal obstacle</td>
                         <td>obstacle personnel</td>
+                        <td>personal obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.f.F_.-.html">O:O:.f.F:.-</a></td>
-                        <td>control sensori-motor experience</td>
                         <td>contrôler l'expérience sensori-motrice</td>
+                        <td>control sensori-motor experience</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.f.-l.-'.html">E:.-O:.f.-l.-'</a></td>
-                        <td>relative position: lower, behind</td>
                         <td>position relative: en bas, derrière</td>
+                        <td>relative position: lower, behind</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.f.-l.-'.html">E:.-M:.f.-l.-'</a></td>
-                        <td>relative termination</td>
                         <td>terminaison relative</td>
+                        <td>relative termination</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.f.-l.-'.html">E:.-F:.f.-l.-'</a></td>
-                        <td>relation of insi-stance</td>
                         <td>relation d'insi-stance</td>
+                        <td>relation of insi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.S_.n.-'E_.-T_.n.+f.-l.-'_.html">B:.S:.n.-'E:.-T:.n.+f.-l.-',</a></td>
-                        <td>parts of the plants from the outside to the inside</td>
                         <td>parties des plantes de l'extérieur à l'intérieur</td>
+                        <td>parts of the plants from the outside to the inside</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-S_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-S:.U:.-',</a></td>
-                        <td>vibrators made of clay, glass, plastic...</td>
                         <td>vibrateurs de terre, verre, plastique...</td>
+                        <td>vibrators made of clay, glass, plastic...</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-B_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-B:.U:.-',</a></td>
-                        <td>wooden vibrators</td>
                         <td>vibrateurs de bois</td>
+                        <td>wooden vibrators</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-B_.A_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-B:.A:.-',</a></td>
-                        <td>metallic vibrator</td>
                         <td>vibrateur de métal</td>
+                        <td>metallic vibrator</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.o.-n.o.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.o.-n.o.-',</a></td>
-                        <td>vibrator of flesh</td>
                         <td>vibrateur de chair</td>
+                        <td>vibrator of flesh</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'f.o.-f.o.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'f.o.-f.o.-',</a></td>
-                        <td>vibrator made of animal matter</td>
                         <td>vibrateur de matière animale</td>
+                        <td>vibrator made of animal matter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.S_.n.-'we.O_O_.t.-'+E_.-T_.n.+f.-+U_.n.+S_+T_S_.-l.-'_.html">B:.S:.n.-'we.O:O:.t.-'+E:.-T:.n.+f.-+U:.n.+S:+T:S:.-l.-',</a></td>
-                        <td>parts of the plants</td>
                         <td>parties des plantes</td>
+                        <td>parts of the plants</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>parts of musical instruments, orchestra, lutherie: vibrators</td>
                         <td>parties des instruments de musique, orchestre, lutherie: vibrateurs</td>
+                        <td>parts of musical instruments, orchestra, lutherie: vibrators</td>
                     </tr>
                 
                 </tbody>
@@ -770,7 +803,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -779,7 +812,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -794,6 +827,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -803,6 +846,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -839,5 +883,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

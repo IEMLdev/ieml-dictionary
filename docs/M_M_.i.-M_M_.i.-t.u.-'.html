@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:M:.i.-M:M:.i.-t.u.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>technical qualities</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>qualités techniques</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>qualités techniques</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>technical qualities</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-twin">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-'.html">M:M:.i.-M:M:.i.-'</a></td>
-                        <td>technical functions</td>
                         <td>fonctions techniques</td>
+                        <td>technical functions</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,8 +233,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-'.html">M:M:.i.-M:M:.i.-'</a></td>
-                        <td>technical functions</td>
                         <td>fonctions techniques</td>
+                        <td>technical functions</td>
                     </tr>
                 
                 </tbody>
@@ -210,8 +242,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -234,8 +266,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-'.html">M:M:.i.-M:M:.i.-'</a></td>
-                        <td>technical functions</td>
                         <td>fonctions techniques</td>
+                        <td>technical functions</td>
                     </tr>
                 
                 </tbody>
@@ -243,10 +275,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +301,8 @@
                 
                     <tr>
                         <td><a href="s.i.-M_M_.i.-t.u.-'.html">s.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>interface in substance</td>
                         <td>interface en substance</td>
+                        <td>interface in substance</td>
                     </tr>
                 
                     <tr>
@@ -281,44 +313,44 @@
                 
                     <tr>
                         <td><a href="t.i.-M_M_.i.-t.u.-'.html">t.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>container in substance</td>
                         <td>contenant en substance</td>
+                        <td>container in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.i.-M_M_.i.-t.u.-'.html">k.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>gift in substance</td>
                         <td>don en substance</td>
+                        <td>gift in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.i.-M_M_.i.-t.u.-'.html">m.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>toy in substance</td>
                         <td>jouet en substance</td>
+                        <td>toy in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.i.-M_M_.i.-t.u.-'.html">n.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>fire in substance</td>
                         <td>feu en substance</td>
+                        <td>fire in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="d.i.-M_M_.i.-t.u.-'.html">d.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>meter, measurement instrument in substance</td>
                         <td>mètre, instrument de mesure en substance</td>
+                        <td>meter, measurement instrument in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.i.-M_M_.i.-t.u.-'.html">f.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>organ in substance</td>
                         <td>organe en substance</td>
+                        <td>organ in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.i.-M_M_.i.-t.u.-'.html">l.i.-M:M:.i.-t.u.-'</a></td>
-                        <td>knot in substance</td>
                         <td>noeud en substance</td>
+                        <td>knot in substance</td>
                     </tr>
                 
                 </tbody>
@@ -326,8 +358,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -350,8 +382,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-M_M_.i.-E_.-+t.u.-'.html">M:M:.i.-M:M:.i.-E:.-+t.u.-'</a></td>
-                        <td>technical functions and qualities</td>
                         <td>fonctions et qualités techniques</td>
+                        <td>technical functions and qualities</td>
                     </tr>
                 
                 </tbody>
@@ -359,11 +391,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -386,8 +419,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-.html">M:M:.i.-</a></td>
-                        <td>kind of tools | technology</td>
                         <td>genres d'outils | techniques</td>
+                        <td>kind of tools | technology</td>
                     </tr>
                 
                 </tbody>
@@ -395,8 +428,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -419,8 +452,8 @@
                 
                     <tr>
                         <td><a href="M_M_.i.-.html">M:M:.i.-</a></td>
-                        <td>kind of tools | technology</td>
                         <td>genres d'outils | techniques</td>
+                        <td>kind of tools | technology</td>
                     </tr>
                 
                 </tbody>
@@ -428,8 +461,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -452,8 +485,8 @@
                 
                     <tr>
                         <td><a href="t.u.-.html">t.u.-</a></td>
-                        <td>mark | enduring sign</td>
                         <td>marque | signe durable</td>
+                        <td>mark | enduring sign</td>
                     </tr>
                 
                 </tbody>
@@ -461,8 +494,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -476,19 +509,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_M_.i.-M_M_.i.-t.u.-'.html">M:M:.i.-M:M:.i.-t.u.-'</a> technical qualities</div>-->
+            <!--<div class="card-header">Table <a href="M_M_.i.-M_M_.i.-t.u.-'.html">M:M:.i.-M:M:.i.-t.u.-'</a> qualités techniques</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="10" style="background-color: #d9eaff;">
+    <th class="cell" colspan="10" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-M_M_.i.-t.u.-'.html"> M:M:.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="technical qualities"
-                data-en="qualités techniques">
-                technical qualities
+                data-fr="qualités techniques"
+                data-en="technical qualities">
+                qualités techniques
             </span>
         </div>
     
@@ -499,7 +532,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-s.i.-t.u.-'.html"> M:M:.i.-s.i.-t.u.-' </a>
@@ -514,7 +547,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-b.i.-t.u.-'.html"> M:M:.i.-b.i.-t.u.-' </a>
@@ -529,7 +562,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-t.i.-t.u.-'.html"> M:M:.i.-t.i.-t.u.-' </a>
@@ -544,7 +577,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-k.i.-t.u.-'.html"> M:M:.i.-k.i.-t.u.-' </a>
@@ -559,7 +592,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-m.i.-t.u.-'.html"> M:M:.i.-m.i.-t.u.-' </a>
@@ -574,7 +607,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-n.i.-t.u.-'.html"> M:M:.i.-n.i.-t.u.-' </a>
@@ -589,7 +622,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-d.i.-t.u.-'.html"> M:M:.i.-d.i.-t.u.-' </a>
@@ -604,7 +637,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-f.i.-t.u.-'.html"> M:M:.i.-f.i.-t.u.-' </a>
@@ -619,7 +652,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_M_.i.-l.i.-t.u.-'.html"> M:M:.i.-l.i.-t.u.-' </a>
@@ -637,14 +670,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-M_M_.i.-t.u.-'.html"> s.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="interface in substance"
-                data-en="interface en substance">
-                interface in substance
+                data-fr="interface en substance"
+                data-en="interface in substance">
+                interface en substance
             </span>
         </div>
     
@@ -658,9 +691,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-s.i.-t.u.-'.html"> s.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="switched on"
-                data-en="allumé">
-                switched on
+                data-fr="allumé"
+                data-en="switched on">
+                allumé
             </span>
         </div>
     
@@ -673,9 +706,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-b.i.-t.u.-'.html"> s.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="multimedia"
-                data-en="multimédia">
-                multimedia
+                data-fr="multimédia"
+                data-en="multimedia">
+                multimédia
             </span>
         </div>
     
@@ -688,9 +721,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-t.i.-t.u.-'.html"> s.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="filtered"
-                data-en="filtré">
-                filtered
+                data-fr="filtré"
+                data-en="filtered">
+                filtré
             </span>
         </div>
     
@@ -703,9 +736,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-k.i.-t.u.-'.html"> s.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="harvested"
-                data-en="récolté">
-                harvested
+                data-fr="récolté"
+                data-en="harvested">
+                récolté
             </span>
         </div>
     
@@ -718,9 +751,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-m.i.-t.u.-'.html"> s.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="mechanical"
-                data-en="mécanique">
-                mechanical
+                data-fr="mécanique"
+                data-en="mechanical">
+                mécanique
             </span>
         </div>
     
@@ -733,9 +766,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-n.i.-t.u.-'.html"> s.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="refrigerated"
-                data-en="réfrigéré">
-                refrigerated
+                data-fr="réfrigéré"
+                data-en="refrigerated">
+                réfrigéré
             </span>
         </div>
     
@@ -748,9 +781,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-d.i.-t.u.-'.html"> s.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="emitted | broadcasted, program"
-                data-en="émis | diffusé, émission">
-                emitted | broadcasted, program
+                data-fr="émis | diffusé, émission"
+                data-en="emitted | broadcasted, program">
+                émis | diffusé, émission
             </span>
         </div>
     
@@ -763,9 +796,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-f.i.-t.u.-'.html"> s.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="recognized"
-                data-en="reconnu">
-                recognized
+                data-fr="reconnu"
+                data-en="recognized">
+                reconnu
             </span>
         </div>
     
@@ -778,9 +811,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-l.i.-t.u.-'.html"> s.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="articulated"
-                data-en="articulé">
-                articulated
+                data-fr="articulé"
+                data-en="articulated">
+                articulé
             </span>
         </div>
     
@@ -791,7 +824,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-M_M_.i.-t.u.-'.html"> b.i.-M:M:.i.-t.u.-' </a>
@@ -812,9 +845,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-s.i.-t.u.-'.html"> b.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="atmospheric"
-                data-en="atmosphérique">
-                atmospheric
+                data-fr="atmosphérique"
+                data-en="atmospheric">
+                atmosphérique
             </span>
         </div>
     
@@ -827,9 +860,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-b.i.-t.u.-'.html"> b.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="ubiquitous, online, in the algorithmic medium"
-                data-en="ubiquitaire, présent sur Internet, dans le médium algorithmique">
-                ubiquitous, online, in the algorithmic medium
+                data-fr="ubiquitaire, présent sur Internet, dans le médium algorithmique"
+                data-en="ubiquitous, online, in the algorithmic medium">
+                ubiquitaire, présent sur Internet, dans le médium algorithmique
             </span>
         </div>
     
@@ -842,9 +875,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-t.i.-t.u.-'.html"> b.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="information medium"
-                data-en="support d'information">
-                information medium
+                data-fr="support d'information"
+                data-en="information medium">
+                support d'information
             </span>
         </div>
     
@@ -872,9 +905,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-m.i.-t.u.-'.html"> b.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="bright"
-                data-en="brillant">
-                bright
+                data-fr="brillant"
+                data-en="bright">
+                brillant
             </span>
         </div>
     
@@ -887,9 +920,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-t.u.-'.html"> b.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="virtuoso"
-                data-en="virtuose">
-                virtuoso
+                data-fr="virtuose"
+                data-en="virtuoso">
+                virtuose
             </span>
         </div>
     
@@ -902,9 +935,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-d.i.-t.u.-'.html"> b.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="displayed"
-                data-en="affiché">
-                displayed
+                data-fr="affiché"
+                data-en="displayed">
+                affiché
             </span>
         </div>
     
@@ -917,9 +950,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-f.i.-t.u.-'.html"> b.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="distributed"
-                data-en="distribué">
-                distributed
+                data-fr="distribué"
+                data-en="distributed">
+                distribué
             </span>
         </div>
     
@@ -932,9 +965,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-l.i.-t.u.-'.html"> b.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="linked"
-                data-en="relié">
-                linked
+                data-fr="relié"
+                data-en="linked">
+                relié
             </span>
         </div>
     
@@ -945,14 +978,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-M_M_.i.-t.u.-'.html"> t.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="container in substance"
-                data-en="contenant en substance">
-                container in substance
+                data-fr="contenant en substance"
+                data-en="container in substance">
+                contenant en substance
             </span>
         </div>
     
@@ -966,9 +999,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-s.i.-t.u.-'.html"> t.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="in transit"
-                data-en="en transit">
-                in transit
+                data-fr="en transit"
+                data-en="in transit">
+                en transit
             </span>
         </div>
     
@@ -981,9 +1014,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-b.i.-t.u.-'.html"> t.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="informative"
-                data-en="informatif">
-                informative
+                data-fr="informatif"
+                data-en="informative">
+                informatif
             </span>
         </div>
     
@@ -996,9 +1029,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-t.i.-t.u.-'.html"> t.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="recorded"
-                data-en="enregistré">
-                recorded
+                data-fr="enregistré"
+                data-en="recorded">
+                enregistré
             </span>
         </div>
     
@@ -1011,9 +1044,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-k.i.-t.u.-'.html"> t.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="stocked"
-                data-en="stocké">
-                stocked
+                data-fr="stocké"
+                data-en="stocked">
+                stocké
             </span>
         </div>
     
@@ -1026,9 +1059,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-m.i.-t.u.-'.html"> t.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="precious"
-                data-en="précieux">
-                precious
+                data-fr="précieux"
+                data-en="precious">
+                précieux
             </span>
         </div>
     
@@ -1041,9 +1074,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-n.i.-t.u.-'.html"> t.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="heated"
-                data-en="chauffé">
-                heated
+                data-fr="chauffé"
+                data-en="heated">
+                chauffé
             </span>
         </div>
     
@@ -1056,9 +1089,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-d.i.-t.u.-'.html"> t.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="measured time"
-                data-en="chronométré">
-                measured time
+                data-fr="chronométré"
+                data-en="measured time">
+                chronométré
             </span>
         </div>
     
@@ -1071,9 +1104,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-f.i.-t.u.-'.html"> t.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="genetic"
-                data-en="génétique">
-                genetic
+                data-fr="génétique"
+                data-en="genetic">
+                génétique
             </span>
         </div>
     
@@ -1086,9 +1119,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="t.i.-l.i.-t.u.-'.html"> t.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="urban"
-                data-en="urbain">
-                urban
+                data-fr="urbain"
+                data-en="urban">
+                urbain
             </span>
         </div>
     
@@ -1099,14 +1132,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-M_M_.i.-t.u.-'.html"> k.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="gift in substance"
-                data-en="don en substance">
-                gift in substance
+                data-fr="don en substance"
+                data-en="gift in substance">
+                don en substance
             </span>
         </div>
     
@@ -1120,9 +1153,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-s.i.-t.u.-'.html"> k.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="to be recycled"
-                data-en="à  recycler">
-                to be recycled
+                data-fr="à  recycler"
+                data-en="to be recycled">
+                à  recycler
             </span>
         </div>
     
@@ -1135,9 +1168,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-b.i.-t.u.-'.html"> k.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="software, program, algorithm"
-                data-en="logiciel, programme, algorithme">
-                software, program, algorithm
+                data-fr="logiciel, programme, algorithme"
+                data-en="software, program, algorithm">
+                logiciel, programme, algorithme
             </span>
         </div>
     
@@ -1150,9 +1183,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-t.i.-t.u.-'.html"> k.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="stored"
-                data-en="entreposé">
-                stored
+                data-fr="entreposé"
+                data-en="stored">
+                entreposé
             </span>
         </div>
     
@@ -1165,9 +1198,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-k.i.-t.u.-'.html"> k.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="economic"
-                data-en="économique">
-                economic
+                data-fr="économique"
+                data-en="economic">
+                économique
             </span>
         </div>
     
@@ -1180,9 +1213,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-m.i.-t.u.-'.html"> k.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="play symbol"
-                data-en="symbole de jeu">
-                play symbol
+                data-fr="symbole de jeu"
+                data-en="play symbol">
+                symbole de jeu
             </span>
         </div>
     
@@ -1195,9 +1228,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-n.i.-t.u.-'.html"> k.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="assembled | manufactured"
-                data-en="assemblé | manufacturé">
-                assembled | manufactured
+                data-fr="assemblé | manufacturé"
+                data-en="assembled | manufactured">
+                assemblé | manufacturé
             </span>
         </div>
     
@@ -1210,9 +1243,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-d.i.-t.u.-'.html"> k.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="price"
-                data-en="prix">
-                price
+                data-fr="prix"
+                data-en="price">
+                prix
             </span>
         </div>
     
@@ -1225,9 +1258,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-f.i.-t.u.-'.html"> k.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="digested"
-                data-en="digéré">
-                digested
+                data-fr="digéré"
+                data-en="digested">
+                digéré
             </span>
         </div>
     
@@ -1240,9 +1273,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.i.-l.i.-t.u.-'.html"> k.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="inhabited"
-                data-en="habité">
-                inhabited
+                data-fr="habité"
+                data-en="inhabited">
+                habité
             </span>
         </div>
     
@@ -1253,14 +1286,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-M_M_.i.-t.u.-'.html"> m.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="toy in substance"
-                data-en="jouet en substance">
-                toy in substance
+                data-fr="jouet en substance"
+                data-en="toy in substance">
+                jouet en substance
             </span>
         </div>
     
@@ -1274,9 +1307,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-s.i.-t.u.-'.html"> m.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="trapped"
-                data-en="piégé">
-                trapped
+                data-fr="piégé"
+                data-en="trapped">
+                piégé
             </span>
         </div>
     
@@ -1289,9 +1322,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-b.i.-t.u.-'.html"> m.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="perfumed"
-                data-en="parfumé">
-                perfumed
+                data-fr="parfumé"
+                data-en="perfumed">
+                parfumé
             </span>
         </div>
     
@@ -1304,9 +1337,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-t.i.-t.u.-'.html"> m.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="protected"
-                data-en="protégé">
-                protected
+                data-fr="protégé"
+                data-en="protected">
+                protégé
             </span>
         </div>
     
@@ -1319,9 +1352,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-k.i.-t.u.-'.html"> m.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="playful"
-                data-en="ludique">
-                playful
+                data-fr="ludique"
+                data-en="playful">
+                ludique
             </span>
         </div>
     
@@ -1334,9 +1367,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-m.i.-t.u.-'.html"> m.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="fetishized"
-                data-en="fétichisé">
-                fetishized
+                data-fr="fétichisé"
+                data-en="fetishized">
+                fétichisé
             </span>
         </div>
     
@@ -1349,9 +1382,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-n.i.-t.u.-'.html"> m.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="cleaned"
-                data-en="nettoyé">
-                cleaned
+                data-fr="nettoyé"
+                data-en="cleaned">
+                nettoyé
             </span>
         </div>
     
@@ -1364,9 +1397,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-d.i.-t.u.-'.html"> m.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="targeted"
-                data-en="ciblé">
-                targeted
+                data-fr="ciblé"
+                data-en="targeted">
+                ciblé
             </span>
         </div>
     
@@ -1379,9 +1412,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-f.i.-t.u.-'.html"> m.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="caressed"
-                data-en="caressé">
-                caressed
+                data-fr="caressé"
+                data-en="caressed">
+                caressé
             </span>
         </div>
     
@@ -1394,9 +1427,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.i.-l.i.-t.u.-'.html"> m.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="clothed | covered"
-                data-en="vêtu | recouvert">
-                clothed | covered
+                data-fr="vêtu | recouvert"
+                data-en="clothed | covered">
+                vêtu | recouvert
             </span>
         </div>
     
@@ -1407,14 +1440,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-M_M_.i.-t.u.-'.html"> n.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="fire in substance"
-                data-en="feu en substance">
-                fire in substance
+                data-fr="feu en substance"
+                data-en="fire in substance">
+                feu en substance
             </span>
         </div>
     
@@ -1428,9 +1461,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-s.i.-t.u.-'.html"> n.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="in motion"
-                data-en="en mouvement">
-                in motion
+                data-fr="en mouvement"
+                data-en="in motion">
+                en mouvement
             </span>
         </div>
     
@@ -1443,9 +1476,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-b.i.-t.u.-'.html"> n.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="lighted"
-                data-en="éclairé">
-                lighted
+                data-fr="éclairé"
+                data-en="lighted">
+                éclairé
             </span>
         </div>
     
@@ -1458,9 +1491,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-t.i.-t.u.-'.html"> n.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="consumed"
-                data-en="consommé">
-                consumed
+                data-fr="consommé"
+                data-en="consumed">
+                consommé
             </span>
         </div>
     
@@ -1473,9 +1506,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-k.i.-t.u.-'.html"> n.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="for sale"
-                data-en="à  vendre">
-                for sale
+                data-fr="à  vendre"
+                data-en="for sale">
+                à  vendre
             </span>
         </div>
     
@@ -1488,9 +1521,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-m.i.-t.u.-'.html"> n.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="added value"
-                data-en="valeur ajoutée">
-                added value
+                data-fr="valeur ajoutée"
+                data-en="added value">
+                valeur ajoutée
             </span>
         </div>
     
@@ -1503,9 +1536,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-n.i.-t.u.-'.html"> n.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="energy source"
-                data-en="source d'énergie">
-                energy source
+                data-fr="source d'énergie"
+                data-en="energy source">
+                source d'énergie
             </span>
         </div>
     
@@ -1518,9 +1551,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-d.i.-t.u.-'.html"> n.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="quick"
-                data-en="rapide">
-                quick
+                data-fr="rapide"
+                data-en="quick">
+                rapide
             </span>
         </div>
     
@@ -1533,9 +1566,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-f.i.-t.u.-'.html"> n.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="taken | possessed"
-                data-en="pris | possédé">
-                taken | possessed
+                data-fr="pris | possédé"
+                data-en="taken | possessed">
+                pris | possédé
             </span>
         </div>
     
@@ -1548,9 +1581,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.i.-l.i.-t.u.-'.html"> n.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="glued | joint"
-                data-en="collé | joint">
-                glued | joint
+                data-fr="collé | joint"
+                data-en="glued | joint">
+                collé | joint
             </span>
         </div>
     
@@ -1561,14 +1594,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-M_M_.i.-t.u.-'.html"> d.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="meter, measurement instrument in substance"
-                data-en="mètre, instrument de mesure en substance">
-                meter, measurement instrument in substance
+                data-fr="mètre, instrument de mesure en substance"
+                data-en="meter, measurement instrument in substance">
+                mètre, instrument de mesure en substance
             </span>
         </div>
     
@@ -1582,9 +1615,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-s.i.-t.u.-'.html"> d.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="electronics | photonics"
-                data-en="électronique | photonique">
-                electronics | photonics
+                data-fr="électronique | photonique"
+                data-en="electronics | photonics">
+                électronique | photonique
             </span>
         </div>
     
@@ -1597,9 +1630,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-b.i.-t.u.-'.html"> d.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="digital"
-                data-en="numérique">
-                digital
+                data-fr="numérique"
+                data-en="digital">
+                numérique
             </span>
         </div>
     
@@ -1612,9 +1645,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-t.i.-t.u.-'.html"> d.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="numbered | measured"
-                data-en="compté | mesuré">
-                numbered | measured
+                data-fr="compté | mesuré"
+                data-en="numbered | measured">
+                compté | mesuré
             </span>
         </div>
     
@@ -1627,9 +1660,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-k.i.-t.u.-'.html"> d.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="monetary"
-                data-en="monétaire">
-                monetary
+                data-fr="monétaire"
+                data-en="monetary">
+                monétaire
             </span>
         </div>
     
@@ -1642,9 +1675,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-m.i.-t.u.-'.html"> d.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="awarded | decorated"
-                data-en="primé | décoré">
-                awarded | decorated
+                data-fr="primé | décoré"
+                data-en="awarded | decorated">
+                primé | décoré
             </span>
         </div>
     
@@ -1657,9 +1690,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-n.i.-t.u.-'.html"> d.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="steered"
-                data-en="piloté">
-                steered
+                data-fr="piloté"
+                data-en="steered">
+                piloté
             </span>
         </div>
     
@@ -1672,9 +1705,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-d.i.-t.u.-'.html"> d.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="quantified"
-                data-en="quantifié">
-                quantified
+                data-fr="quantifié"
+                data-en="quantified">
+                quantifié
             </span>
         </div>
     
@@ -1702,9 +1735,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.i.-l.i.-t.u.-'.html"> d.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="address | indicator"
-                data-en="adresse | indicateur">
-                address | indicator
+                data-fr="adresse | indicateur"
+                data-en="address | indicator">
+                adresse | indicateur
             </span>
         </div>
     
@@ -1715,14 +1748,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-M_M_.i.-t.u.-'.html"> f.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="organ in substance"
-                data-en="organe en substance">
-                organ in substance
+                data-fr="organe en substance"
+                data-en="organ in substance">
+                organe en substance
             </span>
         </div>
     
@@ -1736,9 +1769,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-s.i.-t.u.-'.html"> f.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="assisted"
-                data-en="assisté">
-                assisted
+                data-fr="assisté"
+                data-en="assisted">
+                assisté
             </span>
         </div>
     
@@ -1751,9 +1784,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-b.i.-t.u.-'.html"> f.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="medicated"
-                data-en="médicamenté">
-                medicated
+                data-fr="médicamenté"
+                data-en="medicated">
+                médicamenté
             </span>
         </div>
     
@@ -1766,9 +1799,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-t.i.-t.u.-'.html"> f.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="fed"
-                data-en="nourri">
-                fed
+                data-fr="nourri"
+                data-en="fed">
+                nourri
             </span>
         </div>
     
@@ -1781,9 +1814,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-k.i.-t.u.-'.html"> f.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="edible | drinkable"
-                data-en="comestible | potable">
-                edible | drinkable
+                data-fr="comestible | potable"
+                data-en="edible | drinkable">
+                comestible | potable
             </span>
         </div>
     
@@ -1796,9 +1829,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-m.i.-t.u.-'.html"> f.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="sexual"
-                data-en="sexuel">
-                sexual
+                data-fr="sexuel"
+                data-en="sexual">
+                sexuel
             </span>
         </div>
     
@@ -1811,9 +1844,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-n.i.-t.u.-'.html"> f.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="armed"
-                data-en="armé">
-                armed
+                data-fr="armé"
+                data-en="armed">
+                armé
             </span>
         </div>
     
@@ -1826,9 +1859,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-d.i.-t.u.-'.html"> f.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="detected | sensed"
-                data-en="détecté | capté">
-                detected | sensed
+                data-fr="détecté | capté"
+                data-en="detected | sensed">
+                détecté | capté
             </span>
         </div>
     
@@ -1841,9 +1874,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-f.i.-t.u.-'.html"> f.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="organic"
-                data-en="organique">
-                organic
+                data-fr="organique"
+                data-en="organic">
+                organique
             </span>
         </div>
     
@@ -1856,9 +1889,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.i.-l.i.-t.u.-'.html"> f.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="supported"
-                data-en="soutenu">
-                supported
+                data-fr="soutenu"
+                data-en="supported">
+                soutenu
             </span>
         </div>
     
@@ -1869,14 +1902,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-M_M_.i.-t.u.-'.html"> l.i.-M:M:.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="knot in substance"
-                data-en="noeud en substance">
-                knot in substance
+                data-fr="noeud en substance"
+                data-en="knot in substance">
+                noeud en substance
             </span>
         </div>
     
@@ -1890,9 +1923,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-s.i.-t.u.-'.html"> l.i.-s.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="open"
-                data-en="ouvert">
-                open
+                data-fr="ouvert"
+                data-en="open">
+                ouvert
             </span>
         </div>
     
@@ -1905,9 +1938,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-b.i.-t.u.-'.html"> l.i.-b.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="simulated"
-                data-en="simulé">
-                simulated
+                data-fr="simulé"
+                data-en="simulated">
+                simulé
             </span>
         </div>
     
@@ -1920,9 +1953,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-t.i.-t.u.-'.html"> l.i.-t.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="closed | packed"
-                data-en="fermé | emballé">
-                closed | packed
+                data-fr="fermé | emballé"
+                data-en="closed | packed">
+                fermé | emballé
             </span>
         </div>
     
@@ -1935,9 +1968,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-k.i.-t.u.-'.html"> l.i.-k.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="real-estate | land"
-                data-en="immobilier | foncier">
-                real-estate | land
+                data-fr="immobilier | foncier"
+                data-en="real-estate | land">
+                immobilier | foncier
             </span>
         </div>
     
@@ -1950,9 +1983,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-m.i.-t.u.-'.html"> l.i.-m.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="furnished"
-                data-en="meublé">
-                furnished
+                data-fr="meublé"
+                data-en="furnished">
+                meublé
             </span>
         </div>
     
@@ -1965,9 +1998,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-n.i.-t.u.-'.html"> l.i.-n.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="cut | pierced"
-                data-en="découpé | percé">
-                cut | pierced
+                data-fr="découpé | percé"
+                data-en="cut | pierced">
+                découpé | percé
             </span>
         </div>
     
@@ -1980,9 +2013,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-d.i.-t.u.-'.html"> l.i.-d.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="directed (toward)"
-                data-en="dirigé (vers)">
-                directed (toward)
+                data-fr="dirigé (vers)"
+                data-en="directed (toward)">
+                dirigé (vers)
             </span>
         </div>
     
@@ -1995,9 +2028,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-f.i.-t.u.-'.html"> l.i.-f.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="powerful | agile"
-                data-en="puissant | agile">
-                powerful | agile
+                data-fr="puissant | agile"
+                data-en="powerful | agile">
+                puissant | agile
             </span>
         </div>
     
@@ -2010,9 +2043,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="l.i.-l.i.-t.u.-'.html"> l.i.-l.i.-t.u.-' </a>
             <span class="translation"
-                data-fr="networked"
-                data-en="en réseau">
-                networked
+                data-fr="en réseau"
+                data-en="networked">
+                en réseau
             </span>
         </div>
     
@@ -2027,7 +2060,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -2042,6 +2075,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -2051,6 +2094,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -2087,5 +2131,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

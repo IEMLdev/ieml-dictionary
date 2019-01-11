@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             b.-S:.U:.-'O:M:.-'O:.-',+b.-S:.U:.-'M:O:.-O:.-'M:.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>visual shapes</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>formes visuelles</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>formes visuelles</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>visual shapes</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>4</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
         
             
@@ -146,6 +158,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -158,10 +189,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -184,14 +216,14 @@
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'y.-'O_.-'_.html">b.-S:.U:.-'y.-'O:.-',</a></td>
-                        <td>discontinuity</td>
                         <td>discontinuité</td>
+                        <td>discontinuity</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'o.-'O_.-'_.html">b.-S:.U:.-'o.-'O:.-',</a></td>
-                        <td>curvature</td>
                         <td>courbure</td>
+                        <td>curvature</td>
                     </tr>
                 
                     <tr>
@@ -202,134 +234,134 @@
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'u.-'O_.-'_.html">b.-S:.U:.-'u.-'O:.-',</a></td>
-                        <td>cut</td>
                         <td>coupure</td>
+                        <td>cut</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'a.-'O_.-'_.html">b.-S:.U:.-'a.-'O:.-',</a></td>
-                        <td>deformation</td>
                         <td>déformation</td>
+                        <td>deformation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'i.-'O_.-'_.html">b.-S:.U:.-'i.-'O:.-',</a></td>
-                        <td>cover</td>
                         <td>couverture</td>
+                        <td>cover</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'j.-U_.-'M_.-'_.html">b.-S:.U:.-'j.-U:.-'M:.-',</a></td>
-                        <td>symmetry one</td>
                         <td>symétrie un</td>
+                        <td>symmetry one</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'j.-A_.-'M_.-'_.html">b.-S:.U:.-'j.-A:.-'M:.-',</a></td>
-                        <td>symmetry two</td>
                         <td>symétrie deux</td>
+                        <td>symmetry two</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'g.-U_.-'M_.-'_.html">b.-S:.U:.-'g.-U:.-'M:.-',</a></td>
-                        <td>symmetry three</td>
                         <td>symétrie trois</td>
+                        <td>symmetry three</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'g.-A_.-'M_.-'_.html">b.-S:.U:.-'g.-A:.-'M:.-',</a></td>
-                        <td>symmetry four</td>
                         <td>symétrie quatre</td>
+                        <td>symmetry four</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'h.-U_.-'M_.-'_.html">b.-S:.U:.-'h.-U:.-'M:.-',</a></td>
-                        <td>symmetry five</td>
                         <td>symétrie cinq</td>
+                        <td>symmetry five</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'h.-A_.-'M_.-'_.html">b.-S:.U:.-'h.-A:.-'M:.-',</a></td>
-                        <td>symmetry six</td>
                         <td>symétrie six</td>
+                        <td>symmetry six</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'c.-U_.-'M_.-'_.html">b.-S:.U:.-'c.-U:.-'M:.-',</a></td>
-                        <td>symmetry seven</td>
                         <td>symétrie sept</td>
+                        <td>symmetry seven</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'c.-A_.-'M_.-'_.html">b.-S:.U:.-'c.-A:.-'M:.-',</a></td>
-                        <td>symmetry eight</td>
                         <td>symétrie huit</td>
+                        <td>symmetry eight</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'p.-U_.-'M_.-'_.html">b.-S:.U:.-'p.-U:.-'M:.-',</a></td>
-                        <td>symmetry nine</td>
                         <td>symétrie neuf</td>
+                        <td>symmetry nine</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'p.-A_.-'M_.-'_.html">b.-S:.U:.-'p.-A:.-'M:.-',</a></td>
-                        <td>symmetry ten</td>
                         <td>symétrie dix</td>
+                        <td>symmetry ten</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'x.-U_.-'M_.-'_.html">b.-S:.U:.-'x.-U:.-'M:.-',</a></td>
-                        <td>symmetry eleven</td>
                         <td>symétrie onze</td>
+                        <td>symmetry eleven</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'x.-A_.-'M_.-'_.html">b.-S:.U:.-'x.-A:.-'M:.-',</a></td>
-                        <td>symmetry twelve</td>
                         <td>symétrie douze</td>
+                        <td>symmetry twelve</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'O_M_.-'U_.-'_.html">b.-S:.U:.-'O:M:.-'U:.-',</a></td>
-                        <td>minimal modifications</td>
                         <td>modifications minimales</td>
+                        <td>minimal modifications</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'O_M_.-'A_.-'_.html">b.-S:.U:.-'O:M:.-'A:.-',</a></td>
-                        <td>maximal modifications</td>
                         <td>modifications maximales</td>
+                        <td>maximal modifications</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'O_M_.-'O_.-'_.html">b.-S:.U:.-'O:M:.-'O:.-',</a></td>
-                        <td>visual shapes: modifications</td>
                         <td>formes visuelles: modifications</td>
+                        <td>visual shapes: modifications</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'M_O_.-O_.-'S_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'S:.-',</a></td>
-                        <td>lines, one dimensional forms</td>
                         <td>lignes, formes à une dimension</td>
+                        <td>lines, one dimensional forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'M_O_.-O_.-'B_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'B:.-',</a></td>
-                        <td>surfaces, two dimensional shapes</td>
                         <td>surfaces, formes à deux dimensions</td>
+                        <td>surfaces, two dimensional shapes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'M_O_.-O_.-'T_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'T:.-',</a></td>
-                        <td>volumes, three dimensional shapes</td>
                         <td>volumes, formes à trois dimensions</td>
+                        <td>volumes, three dimensional shapes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'M:.-',</a></td>
-                        <td>visual shapes: symmetries and dimensions</td>
                         <td>formes visuelles: symétries et dimensions</td>
+                        <td>visual shapes: symmetries and dimensions</td>
                     </tr>
                 
                 </tbody>
@@ -337,11 +369,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -364,8 +397,8 @@
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'.html">b.-S:.U:.-'</a></td>
-                        <td>visual form | shape</td>
                         <td>forme visuelle</td>
+                        <td>visual form | shape</td>
                     </tr>
                 
                 </tbody>
@@ -373,8 +406,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -397,14 +430,14 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
@@ -424,8 +457,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -448,32 +481,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -481,8 +514,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -498,19 +531,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="b.-S_.U_.-'O_M_.-'O_.-'_.html">b.-S:.U:.-'O:M:.-'O:.-',</a> visual shapes: modifications</div>-->
+            <!--<div class="card-header">Table <a href="b.-S_.U_.-'O_M_.-'O_.-'_.html">b.-S:.U:.-'O:M:.-'O:.-',</a> formes visuelles: modifications</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'O_M_.-'O_.-'_.html"> b.-S:.U:.-'O:M:.-'O:.-', </a>
             <span class="translation"
-                data-fr="visual shapes: modifications"
-                data-en="formes visuelles: modifications">
-                visual shapes: modifications
+                data-fr="formes visuelles: modifications"
+                data-en="visual shapes: modifications">
+                formes visuelles: modifications
             </span>
         </div>
     
@@ -521,14 +554,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'O_M_.-'U_.-'_.html"> b.-S:.U:.-'O:M:.-'U:.-', </a>
             <span class="translation"
-                data-fr="minimal modifications"
-                data-en="modifications minimales">
-                minimal modifications
+                data-fr="modifications minimales"
+                data-en="minimal modifications">
+                modifications minimales
             </span>
         </div>
     
@@ -536,14 +569,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'O_M_.-'A_.-'_.html"> b.-S:.U:.-'O:M:.-'A:.-', </a>
             <span class="translation"
-                data-fr="maximal modifications"
-                data-en="modifications maximales">
-                maximal modifications
+                data-fr="modifications maximales"
+                data-en="maximal modifications">
+                modifications maximales
             </span>
         </div>
     
@@ -554,14 +587,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'y.-'O_.-'_.html"> b.-S:.U:.-'y.-'O:.-', </a>
             <span class="translation"
-                data-fr="discontinuity"
-                data-en="discontinuité">
-                discontinuity
+                data-fr="discontinuité"
+                data-en="discontinuity">
+                discontinuité
             </span>
         </div>
     
@@ -575,9 +608,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'y.-'U_.-'_.html"> b.-S:.U:.-'y.-'U:.-', </a>
             <span class="translation"
-                data-fr="continuous"
-                data-en="continu">
-                continuous
+                data-fr="continu"
+                data-en="continuous">
+                continu
             </span>
         </div>
     
@@ -590,9 +623,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'y.-'A_.-'_.html"> b.-S:.U:.-'y.-'A:.-', </a>
             <span class="translation"
-                data-fr="discontinuous, discrete"
-                data-en="discontinu, discret">
-                discontinuous, discrete
+                data-fr="discontinu, discret"
+                data-en="discontinuous, discrete">
+                discontinu, discret
             </span>
         </div>
     
@@ -603,14 +636,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'o.-'O_.-'_.html"> b.-S:.U:.-'o.-'O:.-', </a>
             <span class="translation"
-                data-fr="curvature"
-                data-en="courbure">
-                curvature
+                data-fr="courbure"
+                data-en="curvature">
+                courbure
             </span>
         </div>
     
@@ -624,9 +657,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'o.-'U_.-'_.html"> b.-S:.U:.-'o.-'U:.-', </a>
             <span class="translation"
-                data-fr="straight"
-                data-en="droit">
-                straight
+                data-fr="droit"
+                data-en="straight">
+                droit
             </span>
         </div>
     
@@ -639,9 +672,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'o.-'A_.-'_.html"> b.-S:.U:.-'o.-'A:.-', </a>
             <span class="translation"
-                data-fr="curved"
-                data-en="courbe">
-                curved
+                data-fr="courbe"
+                data-en="curved">
+                courbe
             </span>
         </div>
     
@@ -652,7 +685,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'e.-'O_.-'_.html"> b.-S:.U:.-'e.-'O:.-', </a>
@@ -688,9 +721,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'e.-'A_.-'_.html"> b.-S:.U:.-'e.-'A:.-', </a>
             <span class="translation"
-                data-fr="convex"
-                data-en="convexe">
-                convex
+                data-fr="convexe"
+                data-en="convex">
+                convexe
             </span>
         </div>
     
@@ -701,14 +734,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'u.-'O_.-'_.html"> b.-S:.U:.-'u.-'O:.-', </a>
             <span class="translation"
-                data-fr="cut"
-                data-en="coupure">
-                cut
+                data-fr="coupure"
+                data-en="cut">
+                coupure
             </span>
         </div>
     
@@ -722,9 +755,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'u.-'U_.-'_.html"> b.-S:.U:.-'u.-'U:.-', </a>
             <span class="translation"
-                data-fr="cut, split, cracked"
-                data-en="coupé, fendu, fissuré">
-                cut, split, cracked
+                data-fr="coupé, fendu, fissuré"
+                data-en="cut, split, cracked">
+                coupé, fendu, fissuré
             </span>
         </div>
     
@@ -737,9 +770,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'u.-'A_.-'_.html"> b.-S:.U:.-'u.-'A:.-', </a>
             <span class="translation"
-                data-fr="fragmented, in pieces"
-                data-en="fragmenté, en morceaux">
-                fragmented, in pieces
+                data-fr="fragmenté, en morceaux"
+                data-en="fragmented, in pieces">
+                fragmenté, en morceaux
             </span>
         </div>
     
@@ -750,14 +783,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'a.-'O_.-'_.html"> b.-S:.U:.-'a.-'O:.-', </a>
             <span class="translation"
-                data-fr="deformation"
-                data-en="déformation">
-                deformation
+                data-fr="déformation"
+                data-en="deformation">
+                déformation
             </span>
         </div>
     
@@ -771,9 +804,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'a.-'U_.-'_.html"> b.-S:.U:.-'a.-'U:.-', </a>
             <span class="translation"
-                data-fr="regularly deformed, flattened, elongated"
-                data-en="régulièrement déformé, aplati, allongé">
-                regularly deformed, flattened, elongated
+                data-fr="régulièrement déformé, aplati, allongé"
+                data-en="regularly deformed, flattened, elongated">
+                régulièrement déformé, aplati, allongé
             </span>
         </div>
     
@@ -786,9 +819,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'a.-'A_.-'_.html"> b.-S:.U:.-'a.-'A:.-', </a>
             <span class="translation"
-                data-fr="irregularly deformed or warped"
-                data-en="irrégulièrement déformé ou tordu">
-                irregularly deformed or warped
+                data-fr="irrégulièrement déformé ou tordu"
+                data-en="irregularly deformed or warped">
+                irrégulièrement déformé ou tordu
             </span>
         </div>
     
@@ -799,14 +832,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'i.-'O_.-'_.html"> b.-S:.U:.-'i.-'O:.-', </a>
             <span class="translation"
-                data-fr="cover"
-                data-en="couverture">
-                cover
+                data-fr="couverture"
+                data-en="cover">
+                couverture
             </span>
         </div>
     
@@ -820,9 +853,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'i.-'U_.-'_.html"> b.-S:.U:.-'i.-'U:.-', </a>
             <span class="translation"
-                data-fr="smooth, hairless, without vegetation"
-                data-en="lisse, sans poil, sans végétation">
-                smooth, hairless, without vegetation
+                data-fr="lisse, sans poil, sans végétation"
+                data-en="smooth, hairless, without vegetation">
+                lisse, sans poil, sans végétation
             </span>
         </div>
     
@@ -835,9 +868,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'i.-'A_.-'_.html"> b.-S:.U:.-'i.-'A:.-', </a>
             <span class="translation"
-                data-fr="textured, hairy, covered with vegetation"
-                data-en="texturé, poilu, couvert de végétation">
-                textured, hairy, covered with vegetation
+                data-fr="texturé, poilu, couvert de végétation"
+                data-en="textured, hairy, covered with vegetation">
+                texturé, poilu, couvert de végétation
             </span>
         </div>
     
@@ -859,19 +892,19 @@
        aria-labelledby="nav-tables-2-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'M:.-',</a> visual shapes: symmetries and dimensions</div>-->
+            <!--<div class="card-header">Table <a href="b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html">b.-S:.U:.-'M:O:.-O:.-'M:.-',</a> formes visuelles: symétries et dimensions</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'M_O_.-O_.-'M_.-'_.html"> b.-S:.U:.-'M:O:.-O:.-'M:.-', </a>
             <span class="translation"
-                data-fr="visual shapes: symmetries and dimensions"
-                data-en="formes visuelles: symétries et dimensions">
-                visual shapes: symmetries and dimensions
+                data-fr="formes visuelles: symétries et dimensions"
+                data-en="visual shapes: symmetries and dimensions">
+                formes visuelles: symétries et dimensions
             </span>
         </div>
     
@@ -882,14 +915,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'M_O_.-O_.-'S_.-'_.html"> b.-S:.U:.-'M:O:.-O:.-'S:.-', </a>
             <span class="translation"
-                data-fr="lines, one dimensional forms"
-                data-en="lignes, formes à une dimension">
-                lines, one dimensional forms
+                data-fr="lignes, formes à une dimension"
+                data-en="lines, one dimensional forms">
+                lignes, formes à une dimension
             </span>
         </div>
     
@@ -897,14 +930,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'M_O_.-O_.-'B_.-'_.html"> b.-S:.U:.-'M:O:.-O:.-'B:.-', </a>
             <span class="translation"
-                data-fr="surfaces, two dimensional shapes"
-                data-en="surfaces, formes à deux dimensions">
-                surfaces, two dimensional shapes
+                data-fr="surfaces, formes à deux dimensions"
+                data-en="surfaces, two dimensional shapes">
+                surfaces, formes à deux dimensions
             </span>
         </div>
     
@@ -912,14 +945,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'M_O_.-O_.-'T_.-'_.html"> b.-S:.U:.-'M:O:.-O:.-'T:.-', </a>
             <span class="translation"
-                data-fr="volumes, three dimensional shapes"
-                data-en="volumes, formes à trois dimensions">
-                volumes, three dimensional shapes
+                data-fr="volumes, formes à trois dimensions"
+                data-en="volumes, three dimensional shapes">
+                volumes, formes à trois dimensions
             </span>
         </div>
     
@@ -930,14 +963,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-U_.-'M_.-'_.html"> b.-S:.U:.-'j.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry one"
-                data-en="symétrie un">
-                symmetry one
+                data-fr="symétrie un"
+                data-en="symmetry one">
+                symétrie un
             </span>
         </div>
     
@@ -951,9 +984,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-U_.-'S_.-'_.html"> b.-S:.U:.-'j.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="cercle, ring"
-                data-en="cercle, anneau">
-                cercle, ring
+                data-fr="cercle, anneau"
+                data-en="cercle, ring">
+                cercle, anneau
             </span>
         </div>
     
@@ -966,9 +999,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-U_.-'B_.-'_.html"> b.-S:.U:.-'j.-U:.-'B:.-', </a>
             <span class="translation"
-                data-fr="round, circular surface"
-                data-en="rond, surface circulaire">
-                round, circular surface
+                data-fr="rond, surface circulaire"
+                data-en="round, circular surface">
+                rond, surface circulaire
             </span>
         </div>
     
@@ -981,9 +1014,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-U_.-'T_.-'_.html"> b.-S:.U:.-'j.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="sphere, ball"
-                data-en="sphère, boule">
-                sphere, ball
+                data-fr="sphère, boule"
+                data-en="sphere, ball">
+                sphère, boule
             </span>
         </div>
     
@@ -994,14 +1027,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-A_.-'M_.-'_.html"> b.-S:.U:.-'j.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry two"
-                data-en="symétrie deux">
-                symmetry two
+                data-fr="symétrie deux"
+                data-en="symmetry two">
+                symétrie deux
             </span>
         </div>
     
@@ -1015,9 +1048,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-A_.-'S_.-'_.html"> b.-S:.U:.-'j.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="line"
-                data-en="ligne">
-                line
+                data-fr="ligne"
+                data-en="line">
+                ligne
             </span>
         </div>
     
@@ -1030,9 +1063,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-A_.-'B_.-'_.html"> b.-S:.U:.-'j.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="strip, stripe, surface in general"
-                data-en="bande, rayure, surface en général">
-                strip, stripe, surface in general
+                data-fr="bande, rayure, surface en général"
+                data-en="strip, stripe, surface in general">
+                bande, rayure, surface en général
             </span>
         </div>
     
@@ -1045,9 +1078,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'j.-A_.-'T_.-'_.html"> b.-S:.U:.-'j.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="cylinder, volume in general"
-                data-en="cylindre, volume en général">
-                cylinder, volume in general
+                data-fr="cylindre, volume en général"
+                data-en="cylinder, volume in general">
+                cylindre, volume en général
             </span>
         </div>
     
@@ -1058,14 +1091,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-U_.-'M_.-'_.html"> b.-S:.U:.-'g.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry three"
-                data-en="symétrie trois">
-                symmetry three
+                data-fr="symétrie trois"
+                data-en="symmetry three">
+                symétrie trois
             </span>
         </div>
     
@@ -1079,9 +1112,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-U_.-'S_.-'_.html"> b.-S:.U:.-'g.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="triangle (perimeter, edge)"
-                data-en="triangle (périmètre, bord)">
-                triangle (perimeter, edge)
+                data-fr="triangle (périmètre, bord)"
+                data-en="triangle (perimeter, edge)">
+                triangle (périmètre, bord)
             </span>
         </div>
     
@@ -1109,9 +1142,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-U_.-'T_.-'_.html"> b.-S:.U:.-'g.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="cone, point"
-                data-en="cône, pointe">
-                cone, point
+                data-fr="cône, pointe"
+                data-en="cone, point">
+                cône, pointe
             </span>
         </div>
     
@@ -1122,14 +1155,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-A_.-'M_.-'_.html"> b.-S:.U:.-'g.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry four"
-                data-en="symétrie quatre">
-                symmetry four
+                data-fr="symétrie quatre"
+                data-en="symmetry four">
+                symétrie quatre
             </span>
         </div>
     
@@ -1143,9 +1176,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-A_.-'S_.-'_.html"> b.-S:.U:.-'g.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="square, rectangle, trapezoid (perimeter, edge)"
-                data-en="carré, rectangle, trapèze (périmètre, bord)">
-                square, rectangle, trapezoid (perimeter, edge)
+                data-fr="carré, rectangle, trapèze (périmètre, bord)"
+                data-en="square, rectangle, trapezoid (perimeter, edge)">
+                carré, rectangle, trapèze (périmètre, bord)
             </span>
         </div>
     
@@ -1158,9 +1191,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-A_.-'B_.-'_.html"> b.-S:.U:.-'g.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="square (surface)"
-                data-en="carré (surface)">
-                square (surface)
+                data-fr="carré (surface)"
+                data-en="square (surface)">
+                carré (surface)
             </span>
         </div>
     
@@ -1173,9 +1206,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'g.-A_.-'T_.-'_.html"> b.-S:.U:.-'g.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="tetrahedron"
-                data-en="tetraèdre">
-                tetrahedron
+                data-fr="tetraèdre"
+                data-en="tetrahedron">
+                tetraèdre
             </span>
         </div>
     
@@ -1186,14 +1219,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-U_.-'M_.-'_.html"> b.-S:.U:.-'h.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry five"
-                data-en="symétrie cinq">
-                symmetry five
+                data-fr="symétrie cinq"
+                data-en="symmetry five">
+                symétrie cinq
             </span>
         </div>
     
@@ -1207,9 +1240,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-U_.-'S_.-'_.html"> b.-S:.U:.-'h.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="pentagon (perimeter, edge)"
-                data-en="pentagone (périmètre, bord)">
-                pentagon (perimeter, edge)
+                data-fr="pentagone (périmètre, bord)"
+                data-en="pentagon (perimeter, edge)">
+                pentagone (périmètre, bord)
             </span>
         </div>
     
@@ -1222,9 +1255,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-U_.-'B_.-'_.html"> b.-S:.U:.-'h.-U:.-'B:.-', </a>
             <span class="translation"
-                data-fr="pentagon (surface)"
-                data-en="pentagone (surface)">
-                pentagon (surface)
+                data-fr="pentagone (surface)"
+                data-en="pentagon (surface)">
+                pentagone (surface)
             </span>
         </div>
     
@@ -1237,9 +1270,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-U_.-'T_.-'_.html"> b.-S:.U:.-'h.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="pyramid"
-                data-en="pyramide">
-                pyramid
+                data-fr="pyramide"
+                data-en="pyramid">
+                pyramide
             </span>
         </div>
     
@@ -1250,14 +1283,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-A_.-'M_.-'_.html"> b.-S:.U:.-'h.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry six"
-                data-en="symétrie six">
-                symmetry six
+                data-fr="symétrie six"
+                data-en="symmetry six">
+                symétrie six
             </span>
         </div>
     
@@ -1271,9 +1304,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-A_.-'S_.-'_.html"> b.-S:.U:.-'h.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="hexagone (perimeter, edge)"
-                data-en="hexagone (périmètre, bord)">
-                hexagone (perimeter, edge)
+                data-fr="hexagone (périmètre, bord)"
+                data-en="hexagone (perimeter, edge)">
+                hexagone (périmètre, bord)
             </span>
         </div>
     
@@ -1286,9 +1319,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-A_.-'B_.-'_.html"> b.-S:.U:.-'h.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="hexagon (surface)"
-                data-en="hexagone (surface)">
-                hexagon (surface)
+                data-fr="hexagone (surface)"
+                data-en="hexagon (surface)">
+                hexagone (surface)
             </span>
         </div>
     
@@ -1301,9 +1334,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'h.-A_.-'T_.-'_.html"> b.-S:.U:.-'h.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="cube, rectangular parallelepiped"
-                data-en="cube, parallélépipède rectangle">
-                cube, rectangular parallelepiped
+                data-fr="cube, parallélépipède rectangle"
+                data-en="cube, rectangular parallelepiped">
+                cube, parallélépipède rectangle
             </span>
         </div>
     
@@ -1314,14 +1347,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-U_.-'M_.-'_.html"> b.-S:.U:.-'c.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry seven"
-                data-en="symétrie sept">
-                symmetry seven
+                data-fr="symétrie sept"
+                data-en="symmetry seven">
+                symétrie sept
             </span>
         </div>
     
@@ -1335,9 +1368,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-U_.-'S_.-'_.html"> b.-S:.U:.-'c.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="heptagon (perimeter, edge)"
-                data-en="heptagone (périmètre, bord)">
-                heptagon (perimeter, edge)
+                data-fr="heptagone (périmètre, bord)"
+                data-en="heptagon (perimeter, edge)">
+                heptagone (périmètre, bord)
             </span>
         </div>
     
@@ -1350,9 +1383,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-U_.-'B_.-'_.html"> b.-S:.U:.-'c.-U:.-'B:.-', </a>
             <span class="translation"
-                data-fr="heptagon (surface)"
-                data-en="heptagone (surface)">
-                heptagon (surface)
+                data-fr="heptagone (surface)"
+                data-en="heptagon (surface)">
+                heptagone (surface)
             </span>
         </div>
     
@@ -1365,9 +1398,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-U_.-'T_.-'_.html"> b.-S:.U:.-'c.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="heptahedron"
-                data-en="heptahèdre">
-                heptahedron
+                data-fr="heptahèdre"
+                data-en="heptahedron">
+                heptahèdre
             </span>
         </div>
     
@@ -1378,14 +1411,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-A_.-'M_.-'_.html"> b.-S:.U:.-'c.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry eight"
-                data-en="symétrie huit">
-                symmetry eight
+                data-fr="symétrie huit"
+                data-en="symmetry eight">
+                symétrie huit
             </span>
         </div>
     
@@ -1399,9 +1432,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-A_.-'S_.-'_.html"> b.-S:.U:.-'c.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="octagon (perimeter, edge)"
-                data-en="octogone (périmètre, bord)">
-                octagon (perimeter, edge)
+                data-fr="octogone (périmètre, bord)"
+                data-en="octagon (perimeter, edge)">
+                octogone (périmètre, bord)
             </span>
         </div>
     
@@ -1414,9 +1447,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-A_.-'B_.-'_.html"> b.-S:.U:.-'c.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="octagon (surface), eight-pointed rose"
-                data-en="octogone (surface), rosace à huit pointes">
-                octagon (surface), eight-pointed rose
+                data-fr="octogone (surface), rosace à huit pointes"
+                data-en="octagon (surface), eight-pointed rose">
+                octogone (surface), rosace à huit pointes
             </span>
         </div>
     
@@ -1429,9 +1462,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'c.-A_.-'T_.-'_.html"> b.-S:.U:.-'c.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="octahedron"
-                data-en="octahèdre">
-                octahedron
+                data-fr="octahèdre"
+                data-en="octahedron">
+                octahèdre
             </span>
         </div>
     
@@ -1442,14 +1475,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-U_.-'M_.-'_.html"> b.-S:.U:.-'p.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry nine"
-                data-en="symétrie neuf">
-                symmetry nine
+                data-fr="symétrie neuf"
+                data-en="symmetry nine">
+                symétrie neuf
             </span>
         </div>
     
@@ -1463,9 +1496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-U_.-'S_.-'_.html"> b.-S:.U:.-'p.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="nonagon (perimeter, edge)"
-                data-en="ennéagone (périmètre, bord)">
-                nonagon (perimeter, edge)
+                data-fr="ennéagone (périmètre, bord)"
+                data-en="nonagon (perimeter, edge)">
+                ennéagone (périmètre, bord)
             </span>
         </div>
     
@@ -1478,9 +1511,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-U_.-'B_.-'_.html"> b.-S:.U:.-'p.-U:.-'B:.-', </a>
             <span class="translation"
-                data-fr="nonagon (surface), nine-pointed rose"
-                data-en="ennéagone (surface), rosace à neuf pointes">
-                nonagon (surface), nine-pointed rose
+                data-fr="ennéagone (surface), rosace à neuf pointes"
+                data-en="nonagon (surface), nine-pointed rose">
+                ennéagone (surface), rosace à neuf pointes
             </span>
         </div>
     
@@ -1493,9 +1526,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-U_.-'T_.-'_.html"> b.-S:.U:.-'p.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="enneahedron"
-                data-en="ennéahèdre">
-                enneahedron
+                data-fr="ennéahèdre"
+                data-en="enneahedron">
+                ennéahèdre
             </span>
         </div>
     
@@ -1506,14 +1539,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-A_.-'M_.-'_.html"> b.-S:.U:.-'p.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry ten"
-                data-en="symétrie dix">
-                symmetry ten
+                data-fr="symétrie dix"
+                data-en="symmetry ten">
+                symétrie dix
             </span>
         </div>
     
@@ -1527,9 +1560,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-A_.-'S_.-'_.html"> b.-S:.U:.-'p.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="decagon (perimeter, edge)"
-                data-en="décagone (périmètre, bord)">
-                decagon (perimeter, edge)
+                data-fr="décagone (périmètre, bord)"
+                data-en="decagon (perimeter, edge)">
+                décagone (périmètre, bord)
             </span>
         </div>
     
@@ -1542,9 +1575,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-A_.-'B_.-'_.html"> b.-S:.U:.-'p.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="decagon (surface), ten-pointed rose"
-                data-en="décagone (surface), rosace à dix pointes">
-                decagon (surface), ten-pointed rose
+                data-fr="décagone (surface), rosace à dix pointes"
+                data-en="decagon (surface), ten-pointed rose">
+                décagone (surface), rosace à dix pointes
             </span>
         </div>
     
@@ -1557,9 +1590,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'p.-A_.-'T_.-'_.html"> b.-S:.U:.-'p.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="decahedron"
-                data-en="décahèdre">
-                decahedron
+                data-fr="décahèdre"
+                data-en="decahedron">
+                décahèdre
             </span>
         </div>
     
@@ -1570,14 +1603,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-U_.-'M_.-'_.html"> b.-S:.U:.-'x.-U:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry eleven"
-                data-en="symétrie onze">
-                symmetry eleven
+                data-fr="symétrie onze"
+                data-en="symmetry eleven">
+                symétrie onze
             </span>
         </div>
     
@@ -1591,9 +1624,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-U_.-'S_.-'_.html"> b.-S:.U:.-'x.-U:.-'S:.-', </a>
             <span class="translation"
-                data-fr="hendecagon (perimeter, edge)"
-                data-en="hendécagone (périmètre, bord)">
-                hendecagon (perimeter, edge)
+                data-fr="hendécagone (périmètre, bord)"
+                data-en="hendecagon (perimeter, edge)">
+                hendécagone (périmètre, bord)
             </span>
         </div>
     
@@ -1606,9 +1639,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-U_.-'B_.-'_.html"> b.-S:.U:.-'x.-U:.-'B:.-', </a>
             <span class="translation"
-                data-fr="hendecagon (surface), eleven-pointed rose"
-                data-en="hendécagone (surface), rosace à onze pointes">
-                hendecagon (surface), eleven-pointed rose
+                data-fr="hendécagone (surface), rosace à onze pointes"
+                data-en="hendecagon (surface), eleven-pointed rose">
+                hendécagone (surface), rosace à onze pointes
             </span>
         </div>
     
@@ -1621,9 +1654,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-U_.-'T_.-'_.html"> b.-S:.U:.-'x.-U:.-'T:.-', </a>
             <span class="translation"
-                data-fr="hendecahedron"
-                data-en="hendécahèdre">
-                hendecahedron
+                data-fr="hendécahèdre"
+                data-en="hendecahedron">
+                hendécahèdre
             </span>
         </div>
     
@@ -1634,14 +1667,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-A_.-'M_.-'_.html"> b.-S:.U:.-'x.-A:.-'M:.-', </a>
             <span class="translation"
-                data-fr="symmetry twelve"
-                data-en="symétrie douze">
-                symmetry twelve
+                data-fr="symétrie douze"
+                data-en="symmetry twelve">
+                symétrie douze
             </span>
         </div>
     
@@ -1655,9 +1688,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-A_.-'S_.-'_.html"> b.-S:.U:.-'x.-A:.-'S:.-', </a>
             <span class="translation"
-                data-fr="dodecagon (perimeter, edge)"
-                data-en="dodécagone (périmètre, bord)">
-                dodecagon (perimeter, edge)
+                data-fr="dodécagone (périmètre, bord)"
+                data-en="dodecagon (perimeter, edge)">
+                dodécagone (périmètre, bord)
             </span>
         </div>
     
@@ -1670,9 +1703,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-A_.-'B_.-'_.html"> b.-S:.U:.-'x.-A:.-'B:.-', </a>
             <span class="translation"
-                data-fr="dodecagon (surface), twelve-pointed rose"
-                data-en="dodécagone (surface), rosace à douze pointes">
-                dodecagon (surface), twelve-pointed rose
+                data-fr="dodécagone (surface), rosace à douze pointes"
+                data-en="dodecagon (surface), twelve-pointed rose">
+                dodécagone (surface), rosace à douze pointes
             </span>
         </div>
     
@@ -1685,9 +1718,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.-S_.U_.-'x.-A_.-'T_.-'_.html"> b.-S:.U:.-'x.-A:.-'T:.-', </a>
             <span class="translation"
-                data-fr="dodecahedron"
-                data-en="dodécahèdre">
-                dodecahedron
+                data-fr="dodécahèdre"
+                data-en="dodecahedron">
+                dodécahèdre
             </span>
         </div>
     
@@ -1704,7 +1737,7 @@
         
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1719,6 +1752,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1728,6 +1771,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1764,5 +1808,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

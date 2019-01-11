@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:M:.T:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>move-stick</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>bouger-coller</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>bouger-coller</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>move-stick</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,32 +202,32 @@
                 
                     <tr>
                         <td><a href="O_S_.T_.-.html">O:S:.T:.-</a></td>
-                        <td>move-stick by sliping</td>
                         <td>bouger-coller en glissant</td>
+                        <td>move-stick by sliping</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_.T_.-.html">O:B:.T:.-</a></td>
-                        <td>move-stick by containing</td>
                         <td>bouger-coller en contenant</td>
+                        <td>move-stick by containing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.T_.-.html">O:T:.T:.-</a></td>
-                        <td>move-stick by displacing</td>
                         <td>bouger-coller en déplaçant</td>
+                        <td>move-stick by displacing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.T_.-.html">U:M:.T:.-</a></td>
-                        <td>move-stick elements</td>
                         <td>bouger-coller des éléments</td>
+                        <td>move-stick elements</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.T_.-.html">A:M:.T:.-</a></td>
-                        <td>move-stick oneself</td>
                         <td>bouger-coller soi-même</td>
+                        <td>move-stick oneself</td>
                     </tr>
                 
                 </tbody>
@@ -203,8 +235,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -227,14 +259,14 @@
                 
                     <tr>
                         <td><a href="O_M_.M_.-.html">O:M:.M:.-</a></td>
-                        <td>provoke a physical change</td>
                         <td>provoquer un changement physique</td>
+                        <td>provoke a physical change</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.F_.-.html">O:M:.F:.-</a></td>
-                        <td>movements and physical actions (verbs)</td>
                         <td>mouvements et actions physiques (verbes)</td>
+                        <td>movements and physical actions (verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -326,19 +359,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_M_.T_.-.html">O:M:.T:.-</a> move-stick</div>-->
+            <!--<div class="card-header">Table <a href="O_M_.T_.-.html">O:M:.T:.-</a> bouger-coller</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.T_.-.html"> O:M:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick"
-                data-en="bouger-coller">
-                move-stick
+                data-fr="bouger-coller"
+                data-en="move-stick">
+                bouger-coller
             </span>
         </div>
     
@@ -349,14 +382,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_S_.T_.-.html"> O:S:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick by sliping"
-                data-en="bouger-coller en glissant">
-                move-stick by sliping
+                data-fr="bouger-coller en glissant"
+                data-en="move-stick by sliping">
+                bouger-coller en glissant
             </span>
         </div>
     
@@ -364,14 +397,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_B_.T_.-.html"> O:B:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick by containing"
-                data-en="bouger-coller en contenant">
-                move-stick by containing
+                data-fr="bouger-coller en contenant"
+                data-en="move-stick by containing">
+                bouger-coller en contenant
             </span>
         </div>
     
@@ -379,14 +412,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_T_.T_.-.html"> O:T:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick by displacing"
-                data-en="bouger-coller en déplaçant">
-                move-stick by displacing
+                data-fr="bouger-coller en déplaçant"
+                data-en="move-stick by displacing">
+                bouger-coller en déplaçant
             </span>
         </div>
     
@@ -397,14 +430,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.T_.-.html"> U:M:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick elements"
-                data-en="bouger-coller des éléments">
-                move-stick elements
+                data-fr="bouger-coller des éléments"
+                data-en="move-stick elements">
+                bouger-coller des éléments
             </span>
         </div>
     
@@ -418,9 +451,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.T_.-.html"> y.T:.- </a>
             <span class="translation"
-                data-fr="dig | pierce | sculpt"
-                data-en="creuser | percer | sculpter">
-                dig | pierce | sculpt
+                data-fr="creuser | percer | sculpter"
+                data-en="dig | pierce | sculpt">
+                creuser | percer | sculpter
             </span>
         </div>
     
@@ -433,9 +466,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.T_.-.html"> o.T:.- </a>
             <span class="translation"
-                data-fr="keep"
-                data-en="garder">
-                keep
+                data-fr="garder"
+                data-en="keep">
+                garder
             </span>
         </div>
     
@@ -448,9 +481,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.T_.-.html"> e.T:.- </a>
             <span class="translation"
-                data-fr="build | combine"
-                data-en="construire | combiner">
-                build | combine
+                data-fr="construire | combiner"
+                data-en="build | combine">
+                construire | combiner
             </span>
         </div>
     
@@ -461,14 +494,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_M_.T_.-.html"> A:M:.T:.- </a>
             <span class="translation"
-                data-fr="move-stick oneself"
-                data-en="bouger-coller soi-même">
-                move-stick oneself
+                data-fr="bouger-coller soi-même"
+                data-en="move-stick oneself">
+                bouger-coller soi-même
             </span>
         </div>
     
@@ -482,9 +515,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.T_.-.html"> u.T:.- </a>
             <span class="translation"
-                data-fr="walk | travel on land"
-                data-en="marcher | voyager sur terre">
-                walk | travel on land
+                data-fr="marcher | voyager sur terre"
+                data-en="walk | travel on land">
+                marcher | voyager sur terre
             </span>
         </div>
     
@@ -497,9 +530,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.T_.-.html"> a.T:.- </a>
             <span class="translation"
-                data-fr="eat"
-                data-en="manger">
-                eat
+                data-fr="manger"
+                data-en="eat">
+                manger
             </span>
         </div>
     
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.T_.-.html"> i.T:.- </a>
             <span class="translation"
-                data-fr="run"
-                data-en="courir">
-                run
+                data-fr="courir"
+                data-en="run">
+                courir
             </span>
         </div>
     
@@ -529,7 +562,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -544,6 +577,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -553,6 +596,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -589,5 +633,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

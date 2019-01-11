@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             d.u.-M:M:.u.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>pointer in substance</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>pointeur en substance</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>pointeur en substance</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>pointer in substance</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="d.u.-M_M_.u.-d.u.-'.html">d.u.-M:M:.u.-d.u.-'</a></td>
-                        <td>pointer in substance (quality)</td>
                         <td>pointeur en substance (qualité)</td>
+                        <td>pointer in substance (quality)</td>
                     </tr>
                 
                 </tbody>
@@ -177,8 +209,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -201,14 +233,14 @@
                 
                     <tr>
                         <td><a href="M_M_.u.-d.u.-'.html">M:M:.u.-d.u.-'</a></td>
-                        <td>pointer in attribute</td>
                         <td>pointeur en attribut</td>
+                        <td>pointer in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-d.u.-d.u.-'.html">M:M:.u.-d.u.-d.u.-'</a></td>
-                        <td>pointer in attribute (quality)</td>
                         <td>pointeur en attribut (qualité)</td>
+                        <td>pointer in attribute (quality)</td>
                     </tr>
                 
                 </tbody>
@@ -216,10 +248,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -242,14 +274,14 @@
                 
                     <tr>
                         <td><a href="M_M_.u.-M_M_.u.-'.html">M:M:.u.-M:M:.u.-'</a></td>
-                        <td>semiotic functions</td>
                         <td>fonctions sémiotiques</td>
+                        <td>semiotic functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.u.-M_M_.u.-E_.-+d.u.-'.html">M:M:.u.-M:M:.u.-E:.-+d.u.-'</a></td>
-                        <td>semiotic functions and qualities</td>
                         <td>fonctions et qualités sémiotiques</td>
+                        <td>semiotic functions and qualities</td>
                     </tr>
                 
                 </tbody>
@@ -257,11 +289,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -284,8 +317,8 @@
                 
                     <tr>
                         <td><a href="d.u.-.html">d.u.-</a></td>
-                        <td>pointer | indexation sign</td>
                         <td>pointeur | signe indiciel</td>
+                        <td>pointer | indexation sign</td>
                     </tr>
                 
                 </tbody>
@@ -293,8 +326,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -317,8 +350,8 @@
                 
                     <tr>
                         <td><a href="M_M_.u.-.html">M:M:.u.-</a></td>
-                        <td>kinds of signs</td>
                         <td>genres de signes</td>
+                        <td>kinds of signs</td>
                     </tr>
                 
                 </tbody>
@@ -326,8 +359,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -341,19 +374,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="d.u.-M_M_.u.-'.html">d.u.-M:M:.u.-'</a> pointer in substance</div>-->
+            <!--<div class="card-header">Table <a href="d.u.-M_M_.u.-'.html">d.u.-M:M:.u.-'</a> pointeur en substance</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-M_M_.u.-'.html"> d.u.-M:M:.u.-' </a>
             <span class="translation"
-                data-fr="pointer in substance"
-                data-en="pointeur en substance">
-                pointer in substance
+                data-fr="pointeur en substance"
+                data-en="pointer in substance">
+                pointeur en substance
             </span>
         </div>
     
@@ -364,7 +397,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-M_S_.u.-'.html"> d.u.-M:S:.u.-' </a>
@@ -379,7 +412,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-M_B_.u.-'.html"> d.u.-M:B:.u.-' </a>
@@ -394,7 +427,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-M_T_.u.-'.html"> d.u.-M:T:.u.-' </a>
@@ -412,7 +445,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-S_M_.u.-'.html"> d.u.-S:M:.u.-' </a>
@@ -433,9 +466,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-s.u.-'.html"> d.u.-s.u.-' </a>
             <span class="translation"
-                data-fr="map"
-                data-en="carte">
-                map
+                data-fr="carte"
+                data-en="map">
+                carte
             </span>
         </div>
     
@@ -448,9 +481,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-b.u.-'.html"> d.u.-b.u.-' </a>
             <span class="translation"
-                data-fr="warning"
-                data-en="avertissement">
-                warning
+                data-fr="avertissement"
+                data-en="warning">
+                avertissement
             </span>
         </div>
     
@@ -463,9 +496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-t.u.-'.html"> d.u.-t.u.-' </a>
             <span class="translation"
-                data-fr="hyperlink | note | reference"
-                data-en="hyperlien | note | référence">
-                hyperlink | note | reference
+                data-fr="hyperlien | note | référence"
+                data-en="hyperlink | note | reference">
+                hyperlien | note | référence
             </span>
         </div>
     
@@ -476,7 +509,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-B_M_.u.-'.html"> d.u.-B:M:.u.-' </a>
@@ -512,9 +545,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-m.u.-'.html"> d.u.-m.u.-' </a>
             <span class="translation"
-                data-fr="body reaction: pallor, blush, etc."
-                data-en="réaction corporelle: pâleur, rougeur, etc.">
-                body reaction: pallor, blush, etc.
+                data-fr="réaction corporelle: pâleur, rougeur, etc."
+                data-en="body reaction: pallor, blush, etc.">
+                réaction corporelle: pâleur, rougeur, etc.
             </span>
         </div>
     
@@ -527,9 +560,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-n.u.-'.html"> d.u.-n.u.-' </a>
             <span class="translation"
-                data-fr="deictic"
-                data-en="déictique">
-                deictic
+                data-fr="déictique"
+                data-en="deictic">
+                déictique
             </span>
         </div>
     
@@ -540,7 +573,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-T_M_.u.-'.html"> d.u.-T:M:.u.-' </a>
@@ -576,9 +609,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-f.u.-'.html"> d.u.-f.u.-' </a>
             <span class="translation"
-                data-fr="presence"
-                data-en="présence">
-                presence
+                data-fr="présence"
+                data-en="presence">
+                présence
             </span>
         </div>
     
@@ -591,9 +624,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="d.u.-l.u.-'.html"> d.u.-l.u.-' </a>
             <span class="translation"
-                data-fr="clue"
-                data-en="indice">
-                clue
+                data-fr="indice"
+                data-en="clue">
+                indice
             </span>
         </div>
     
@@ -608,7 +641,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -623,6 +656,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -632,6 +675,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -668,5 +712,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             h.-'U:M:.-'n.o.-s.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>religion: regulation of the sacred</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>religion: régulation du sacré</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>religion: régulation du sacré</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>religion: regulation of the sacred</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +202,14 @@
                 
                     <tr>
                         <td><a href="h.-'O_M_.-'n.o.-s.o.-'_.html">h.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>sacrificial and religious functions</td>
                         <td>fonctions sacrificielles et religieuses</td>
+                        <td>sacrificial and religious functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'O_M_.-'n.o.-s.o.-'_.html">M:O:.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>cultural functions</td>
                         <td>fonctions culturelles</td>
+                        <td>cultural functions</td>
                     </tr>
                 
                 </tbody>
@@ -185,11 +217,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -212,8 +245,8 @@
                 
                     <tr>
                         <td><a href="h..html">h.</a></td>
-                        <td>subject</td>
                         <td>sujet</td>
+                        <td>subject</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -287,8 +320,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -302,19 +335,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="h.-'U_M_.-'n.o.-s.o.-'_.html">h.-'U:M:.-'n.o.-s.o.-',</a> religion: regulation of the sacred</div>-->
+            <!--<div class="card-header">Table <a href="h.-'U_M_.-'n.o.-s.o.-'_.html">h.-'U:M:.-'n.o.-s.o.-',</a> religion: régulation du sacré</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.-'U_M_.-'n.o.-s.o.-'_.html"> h.-'U:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="religion: regulation of the sacred"
-                data-en="religion: régulation du sacré">
-                religion: regulation of the sacred
+                data-fr="religion: régulation du sacré"
+                data-en="religion: regulation of the sacred">
+                religion: régulation du sacré
             </span>
         </div>
     
@@ -329,9 +362,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'y.-'n.o.-s.o.-'_.html"> h.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="spiritual teachings"
-                data-en="enseignements spirituels">
-                spiritual teachings
+                data-fr="enseignements spirituels"
+                data-en="spiritual teachings">
+                enseignements spirituels
             </span>
         </div>
     
@@ -346,9 +379,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'o.-'n.o.-s.o.-'_.html"> h.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="rules organizing a spiritual community: identities, functions..."
-                data-en="règles régissant une communauté spirituelle: identités, fonctions...">
-                rules organizing a spiritual community: identities, functions...
+                data-fr="règles régissant une communauté spirituelle: identités, fonctions..."
+                data-en="rules organizing a spiritual community: identities, functions...">
+                règles régissant une communauté spirituelle: identités, fonctions...
             </span>
         </div>
     
@@ -363,9 +396,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'e.-'n.o.-s.o.-'_.html"> h.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc."
-                data-en="réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc.">
-                ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc.
+                data-fr="réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc."
+                data-en="ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc.">
+                réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc.
             </span>
         </div>
     
@@ -379,7 +412,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -394,6 +427,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -403,6 +446,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -439,5 +483,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>parts of musical instruments, orchestra, lutherie: mediators and vibrating parts</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>parts of musical instruments, orchestra, lutherie: mediators and vibrating parts</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,164 +202,164 @@
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>plectrum</td>
                         <td>plectre</td>
+                        <td>plectrum</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>bow</td>
                         <td>archet</td>
+                        <td>bow</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.-S_.U_.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.-S:.U:.-',</a></td>
-                        <td>earthy mediators</td>
                         <td>médiateurs de terre</td>
+                        <td>earthy mediators</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.-B_.U_.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.-B:.U:.-',</a></td>
-                        <td>wooden mediators</td>
                         <td>médiateurs de bois</td>
+                        <td>wooden mediators</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.-B_.A_.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.-B:.A:.-',</a></td>
-                        <td>metallic mediator</td>
                         <td>médiateur de métal</td>
+                        <td>metallic mediator</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.o.-n.o.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.o.-n.o.-',</a></td>
-                        <td>fleshy mediator</td>
                         <td>médiateur de chair</td>
+                        <td>fleshy mediator</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'f.o.-f.o.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'f.o.-f.o.-',</a></td>
-                        <td>mediator made of animal matter</td>
                         <td>médiateur de matière animale</td>
+                        <td>mediator made of animal matter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'wu.f.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'wu.f.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>keyboard</td>
                         <td>clavier</td>
+                        <td>keyboard</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'a.S_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'a.S:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>bellows</td>
                         <td>soufflet</td>
+                        <td>bellows</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'i.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'i.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>stick or hammer</td>
                         <td>baguette ou marteau</td>
+                        <td>stick or hammer</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-S_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-S:.U:.-',</a></td>
-                        <td>vibrators made of clay, glass, plastic...</td>
                         <td>vibrateurs de terre, verre, plastique...</td>
+                        <td>vibrators made of clay, glass, plastic...</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-B_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-B:.U:.-',</a></td>
-                        <td>wooden vibrators</td>
                         <td>vibrateurs de bois</td>
+                        <td>wooden vibrators</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.-B_.A_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.-B:.A:.-',</a></td>
-                        <td>metallic vibrator</td>
                         <td>vibrateur de métal</td>
+                        <td>metallic vibrator</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.o.-n.o.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.o.-n.o.-',</a></td>
-                        <td>vibrator of flesh</td>
                         <td>vibrateur de chair</td>
+                        <td>vibrator of flesh</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'f.o.-f.o.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'f.o.-f.o.-',</a></td>
-                        <td>vibrator made of animal matter</td>
                         <td>vibrateur de matière animale</td>
+                        <td>vibrator made of animal matter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>bell</td>
                         <td>cloche</td>
+                        <td>bell</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>vibrating membrane</td>
                         <td>membrane vibrante</td>
+                        <td>vibrating membrane</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>string</td>
                         <td>corde</td>
+                        <td>string</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>whistle</td>
                         <td>sifflet</td>
+                        <td>whistle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>vibrating plate</td>
                         <td>plaquette vibrante</td>
+                        <td>vibrating plate</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-S_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-S:.U:.-',</a></td>
-                        <td>mediators and vibrating parts made of earthy matters (ceramic, plastic, glass...)</td>
                         <td>médiateurs et parties vibrantes faites de matière terreuse (céramique, plastique, verre...)</td>
+                        <td>mediators and vibrating parts made of earthy matters (ceramic, plastic, glass...)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-B:.U:.-',</a></td>
-                        <td>mediators and vibrating parts made of wood</td>
                         <td>médiateurs et parties vibrantes faites de bois</td>
+                        <td>mediators and vibrating parts made of wood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.-B_.A_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.-B:.A:.-',</a></td>
-                        <td>mediators and vibrating parts made of metal</td>
                         <td>médiateurs et parties vibrantes faites de métal</td>
+                        <td>mediators and vibrating parts made of metal</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'n.o.-n.o.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'n.o.-n.o.-',</a></td>
-                        <td>mediators and vibrating parts made of human flesh</td>
                         <td>médiateurs et parties vibrantes faites de chair humaine</td>
+                        <td>mediators and vibrating parts made of human flesh</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-+S_+T_T_.i.-'f.o.-f.o.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-+S:+T:T:.i.-'f.o.-f.o.-',</a></td>
-                        <td>mediators diaries and vibrating parts made of animal matter</td>
                         <td>médiateurs et parties vibrantes faites de matière animale</td>
+                        <td>mediators diaries and vibrating parts made of animal matter</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'e.A_.-+wu.f.A_.-+a.S_.-+O_T_.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'e.A:.-+wu.f.A:.-+a.S:.-+O:T:.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>parts of musical instruments, orchestra, lutherie: mediators</td>
                         <td>parties des instruments de musique, orchestre, lutherie: médiateurs</td>
+                        <td>parts of musical instruments, orchestra, lutherie: mediators</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E_.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'t.i.-'+m.i.-f.i.-'+l.i.-E:.-+n.+f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a></td>
-                        <td>parts of musical instruments, orchestra, lutherie: vibrators</td>
                         <td>parties des instruments de musique, orchestre, lutherie: vibrateurs</td>
+                        <td>parts of musical instruments, orchestra, lutherie: vibrators</td>
                     </tr>
                 
                 </tbody>
@@ -335,11 +367,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -362,8 +395,8 @@
                 
                     <tr>
                         <td><a href="b.i.-n.i.-'.html">b.i.-n.i.-'</a></td>
-                        <td>musical instrument</td>
                         <td>instrument de musique</td>
+                        <td>musical instrument</td>
                     </tr>
                 
                 </tbody>
@@ -371,8 +404,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -395,80 +428,80 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="e..html">e.</a></td>
-                        <td>can</td>
                         <td>pouvoir</td>
+                        <td>can</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i..html">i.</a></td>
-                        <td>do</td>
                         <td>faire</td>
+                        <td>do</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m..html">m.</a></td>
                         <td>affect</td>
-                        <td>affects</td>
+                        <td>affect</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l..html">l.</a></td>
+                        <td>espace</td>
                         <td>space</td>
-                        <td>espaces</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.f.A_.-.html">wu.f.A:.-</a></td>
-                        <td>touch | recognize a tactile form</td>
                         <td>toucher | reconnaître une forme tactile</td>
+                        <td>touch | recognize a tactile form</td>
                     </tr>
                 
                     <tr>
                         <td><a href="a.S_.-.html">a.S:.-</a></td>
-                        <td>breathe</td>
                         <td>respirer</td>
+                        <td>breathe</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.U_.-.html">i.U:.-</a></td>
-                        <td>hit</td>
                         <td>frapper</td>
+                        <td>hit</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.i.-.html">f.i.-</a></td>
-                        <td>organ | caring technique</td>
                         <td>organe | technique de soin</td>
+                        <td>organ | caring technique</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.i.-n.i.-'.html">l.i.-n.i.-'</a></td>
-                        <td>cutting | piercing tool</td>
                         <td>outil coupant | perçant</td>
+                        <td>cutting | piercing tool</td>
                     </tr>
                 
                 </tbody>
@@ -476,8 +509,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -500,44 +533,44 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n..html">n.</a></td>
+                        <td>monde</td>
                         <td>world</td>
-                        <td>mondes</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.o.-n.o.-'.html">n.o.-n.o.-'</a></td>
-                        <td>human being</td>
                         <td>être humain</td>
+                        <td>human being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'.html">f.o.-f.o.-'</a></td>
-                        <td>body</td>
                         <td>corps</td>
+                        <td>body</td>
                     </tr>
                 
                 </tbody>
@@ -545,8 +578,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -560,19 +593,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a> parts of musical instruments, orchestra, lutherie: mediators and vibrating parts</div>-->
+            <!--<div class="card-header">Table <a href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html">b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-',</a> parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="6" style="background-color: #d9eaff;">
+    <th class="cell" colspan="6" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="parts of musical instruments, orchestra, lutherie: mediators and vibrating parts"
-                data-en="parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes">
-                parts of musical instruments, orchestra, lutherie: mediators and vibrating parts
+                data-fr="parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes"
+                data-en="parts of musical instruments, orchestra, lutherie: mediators and vibrating parts">
+                parties des instruments de musique, orchestre, lutherie: médiateurs et parties vibrantes
             </span>
         </div>
     
@@ -583,7 +616,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.-S:.U:.-', </a>
@@ -598,7 +631,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.-B:.U:.-', </a>
@@ -613,7 +646,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.-B:.A:.-', </a>
@@ -628,7 +661,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'n.o.-n.o.-', </a>
@@ -643,7 +676,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A_.-+a.S_.-+i.U_.-+e.O_.-+S_+T_T_.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'+m.+l.i.-f.i.-'+wu.f.A:.-+a.S:.-+i.U:.-+e.O:.-+S:+T:T:.i.-'f.o.-f.o.-', </a>
@@ -661,14 +694,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'e.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="plectrum"
-                data-en="plectre">
-                plectrum
+                data-fr="plectre"
+                data-en="plectrum">
+                plectre
             </span>
         </div>
     
@@ -682,9 +715,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'e.U:.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="plectrum (or mediator) made of stone, ceramic or plastic"
-                data-en="plectre de pierre, céramique ou plastique">
-                plectrum (or mediator) made of stone, ceramic or plastic
+                data-fr="plectre de pierre, céramique ou plastique"
+                data-en="plectrum (or mediator) made of stone, ceramic or plastic">
+                plectre de pierre, céramique ou plastique
             </span>
         </div>
     
@@ -697,9 +730,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'e.U:.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wood plectrum (or mediator)"
-                data-en="plectre de bois">
-                wood plectrum (or mediator)
+                data-fr="plectre de bois"
+                data-en="wood plectrum (or mediator)">
+                plectre de bois
             </span>
         </div>
     
@@ -712,9 +745,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'e.U:.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metal plectrum (or mediator)"
-                data-en="plectre de métal">
-                metal plectrum (or mediator)
+                data-fr="plectre de métal"
+                data-en="metal plectrum (or mediator)">
+                plectre de métal
             </span>
         </div>
     
@@ -727,9 +760,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'e.U:.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="hand pinching or pulling a musical instrument"
-                data-en="main qui tire ou pince un instrument de musique">
-                hand pinching or pulling a musical instrument
+                data-fr="main qui tire ou pince un instrument de musique"
+                data-en="hand pinching or pulling a musical instrument">
+                main qui tire ou pince un instrument de musique
             </span>
         </div>
     
@@ -742,9 +775,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.U_.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'e.U:.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="plectrum made with animal matter (horn...)"
-                data-en="plectre fait de matière animale (corne...)">
-                plectrum made with animal matter (horn...)
+                data-fr="plectre fait de matière animale (corne...)"
+                data-en="plectrum made with animal matter (horn...)">
+                plectre fait de matière animale (corne...)
             </span>
         </div>
     
@@ -755,14 +788,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'e.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="bow"
-                data-en="archet">
-                bow
+                data-fr="archet"
+                data-en="bow">
+                archet
             </span>
         </div>
     
@@ -776,9 +809,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'e.A:.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="bow made of ceramic or plastic"
-                data-en="archet de céramique ou de plastique">
-                bow made of ceramic or plastic
+                data-fr="archet de céramique ou de plastique"
+                data-en="bow made of ceramic or plastic">
+                archet de céramique ou de plastique
             </span>
         </div>
     
@@ -791,9 +824,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'e.A:.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="bow made of wood"
-                data-en="archet de bois">
-                bow made of wood
+                data-fr="archet de bois"
+                data-en="bow made of wood">
+                archet de bois
             </span>
         </div>
     
@@ -806,9 +839,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'e.A:.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic bow"
-                data-en="archet métallique">
-                metallic bow
+                data-fr="archet métallique"
+                data-en="metallic bow">
+                archet métallique
             </span>
         </div>
     
@@ -821,9 +854,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'e.A:.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="hand that rubs or pushes on a musical intrument"
-                data-en="main qui frotte ou pousse sur un instrument de musique">
-                hand that rubs or pushes on a musical intrument
+                data-fr="main qui frotte ou pousse sur un instrument de musique"
+                data-en="hand that rubs or pushes on a musical intrument">
+                main qui frotte ou pousse sur un instrument de musique
             </span>
         </div>
     
@@ -836,9 +869,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'e.A_.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'e.A:.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="bow made of animal matter (horsehair, etc.)"
-                data-en="archet fait de matière animale (crin, etc.)">
-                bow made of animal matter (horsehair, etc.)
+                data-fr="archet fait de matière animale (crin, etc.)"
+                data-en="bow made of animal matter (horsehair, etc.)">
+                archet fait de matière animale (crin, etc.)
             </span>
         </div>
     
@@ -849,14 +882,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'wu.f.A:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="keyboard"
-                data-en="clavier">
-                keyboard
+                data-fr="clavier"
+                data-en="keyboard">
+                clavier
             </span>
         </div>
     
@@ -870,9 +903,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'wu.f.A:.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="keyboard made of stone, ceramic or plastic"
-                data-en="clavier fait de pierre, céramique ou plastique">
-                keyboard made of stone, ceramic or plastic
+                data-fr="clavier fait de pierre, céramique ou plastique"
+                data-en="keyboard made of stone, ceramic or plastic">
+                clavier fait de pierre, céramique ou plastique
             </span>
         </div>
     
@@ -885,9 +918,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'wu.f.A:.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wooden keyboard"
-                data-en="clavier de bois">
-                wooden keyboard
+                data-fr="clavier de bois"
+                data-en="wooden keyboard">
+                clavier de bois
             </span>
         </div>
     
@@ -900,9 +933,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'wu.f.A:.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic keyboard"
-                data-en="clavier de métal">
-                metallic keyboard
+                data-fr="clavier de métal"
+                data-en="metallic keyboard">
+                clavier de métal
             </span>
         </div>
     
@@ -915,9 +948,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'wu.f.A:.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="direct touch on a musical instrument"
-                data-en="toucher direct sur un instrument de musique">
-                direct touch on a musical instrument
+                data-fr="toucher direct sur un instrument de musique"
+                data-en="direct touch on a musical instrument">
+                toucher direct sur un instrument de musique
             </span>
         </div>
     
@@ -930,9 +963,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'wu.f.A_.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'wu.f.A:.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="keyboard made of animal matter (ivory, bone...)"
-                data-en="clavier fait de matière animale (ivoire, os...)">
-                keyboard made of animal matter (ivory, bone...)
+                data-fr="clavier fait de matière animale (ivoire, os...)"
+                data-en="keyboard made of animal matter (ivory, bone...)">
+                clavier fait de matière animale (ivoire, os...)
             </span>
         </div>
     
@@ -943,14 +976,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'a.S:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="bellows"
-                data-en="soufflet">
-                bellows
+                data-fr="soufflet"
+                data-en="bellows">
+                soufflet
             </span>
         </div>
     
@@ -964,9 +997,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'a.S:.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="bellows made of ceramic or plastic"
-                data-en="soufflet de céramique ou plastique">
-                bellows made of ceramic or plastic
+                data-fr="soufflet de céramique ou plastique"
+                data-en="bellows made of ceramic or plastic">
+                soufflet de céramique ou plastique
             </span>
         </div>
     
@@ -979,9 +1012,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'a.S:.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wooden bellows"
-                data-en="soufflet de bois">
-                wooden bellows
+                data-fr="soufflet de bois"
+                data-en="wooden bellows">
+                soufflet de bois
             </span>
         </div>
     
@@ -994,9 +1027,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'a.S:.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic bellows"
-                data-en="soufflet de métal">
-                metallic bellows
+                data-fr="soufflet de métal"
+                data-en="metallic bellows">
+                soufflet de métal
             </span>
         </div>
     
@@ -1009,9 +1042,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'a.S:.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="mouth blowing into a musical instrument"
-                data-en="bouche qui souffle dans un instrument de musique">
-                mouth blowing into a musical instrument
+                data-fr="bouche qui souffle dans un instrument de musique"
+                data-en="mouth blowing into a musical instrument">
+                bouche qui souffle dans un instrument de musique
             </span>
         </div>
     
@@ -1024,9 +1057,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'a.S_.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'a.S:.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="bellows made of animal matter (skin, leather...)"
-                data-en="soufflet fait de matière animale (peau, cuir...)">
-                bellows made of animal matter (skin, leather...)
+                data-fr="soufflet fait de matière animale (peau, cuir...)"
+                data-en="bellows made of animal matter (skin, leather...)">
+                soufflet fait de matière animale (peau, cuir...)
             </span>
         </div>
     
@@ -1037,14 +1070,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'i.U:.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="stick or hammer"
-                data-en="baguette ou marteau">
-                stick or hammer
+                data-fr="baguette ou marteau"
+                data-en="stick or hammer">
+                baguette ou marteau
             </span>
         </div>
     
@@ -1058,9 +1091,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'i.U:.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="stick or hammer made of stone, ceramic or plastic"
-                data-en="baguette ou marteau de pierre, de céramique ou plastique">
-                stick or hammer made of stone, ceramic or plastic
+                data-fr="baguette ou marteau de pierre, de céramique ou plastique"
+                data-en="stick or hammer made of stone, ceramic or plastic">
+                baguette ou marteau de pierre, de céramique ou plastique
             </span>
         </div>
     
@@ -1073,9 +1106,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'i.U:.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wooden stick or hammer"
-                data-en="baguette ou marteau de bois">
-                wooden stick or hammer
+                data-fr="baguette ou marteau de bois"
+                data-en="wooden stick or hammer">
+                baguette ou marteau de bois
             </span>
         </div>
     
@@ -1088,9 +1121,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'i.U:.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic stick or hammer"
-                data-en="baguette ou marteau de métal">
-                metallic stick or hammer
+                data-fr="baguette ou marteau de métal"
+                data-en="metallic stick or hammer">
+                baguette ou marteau de métal
             </span>
         </div>
     
@@ -1103,9 +1136,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'i.U:.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="instrumentalist's body part used to strike on a musical instrument"
-                data-en="partie du corps de l'instrumentiste utilisée pour frapper sur un instrument de musique">
-                instrumentalist's body part used to strike on a musical instrument
+                data-fr="partie du corps de l'instrumentiste utilisée pour frapper sur un instrument de musique"
+                data-en="instrumentalist's body part used to strike on a musical instrument">
+                partie du corps de l'instrumentiste utilisée pour frapper sur un instrument de musique
             </span>
         </div>
     
@@ -1118,9 +1151,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'i.U_.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'i.U:.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="stick or hammer made of animal matter (bone...)"
-                data-en="baguette ou marteau fait d'une matière animale (os...)">
-                stick or hammer made of animal matter (bone...)
+                data-fr="baguette ou marteau fait d'une matière animale (os...)"
+                data-en="stick or hammer made of animal matter (bone...)">
+                baguette ou marteau fait d'une matière animale (os...)
             </span>
         </div>
     
@@ -1131,14 +1164,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'t.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="bell"
-                data-en="cloche">
-                bell
+                data-fr="cloche"
+                data-en="bell">
+                cloche
             </span>
         </div>
     
@@ -1152,9 +1185,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'t.i.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="bell made of glass, stone, ceramic or plastic"
-                data-en="cloche de de verre, de pierre, de céramique ou de plastique">
-                bell made of glass, stone, ceramic or plastic
+                data-fr="cloche de de verre, de pierre, de céramique ou de plastique"
+                data-en="bell made of glass, stone, ceramic or plastic">
+                cloche de de verre, de pierre, de céramique ou de plastique
             </span>
         </div>
     
@@ -1167,9 +1200,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'t.i.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wooden bell"
-                data-en="cloche de bois">
-                wooden bell
+                data-fr="cloche de bois"
+                data-en="wooden bell">
+                cloche de bois
             </span>
         </div>
     
@@ -1182,9 +1215,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'t.i.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic bell"
-                data-en="cloche de métal">
-                metallic bell
+                data-fr="cloche de métal"
+                data-en="metallic bell">
+                cloche de métal
             </span>
         </div>
     
@@ -1197,9 +1230,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'t.i.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="part of the instrumentalist's body used as a bell"
-                data-en="partie du corps de l'instrumentiste utilisée comme cloche">
-                part of the instrumentalist's body used as a bell
+                data-fr="partie du corps de l'instrumentiste utilisée comme cloche"
+                data-en="part of the instrumentalist's body used as a bell">
+                partie du corps de l'instrumentiste utilisée comme cloche
             </span>
         </div>
     
@@ -1212,9 +1245,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'t.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'t.i.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="bell made of animal matter"
-                data-en="cloche faite de matière animale">
-                bell made of animal matter
+                data-fr="cloche faite de matière animale"
+                data-en="bell made of animal matter">
+                cloche faite de matière animale
             </span>
         </div>
     
@@ -1225,14 +1258,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="vibrating membrane"
-                data-en="membrane vibrante">
-                vibrating membrane
+                data-fr="membrane vibrante"
+                data-en="vibrating membrane">
+                membrane vibrante
             </span>
         </div>
     
@@ -1246,9 +1279,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="Vibrating membrane made of stone or plastic"
-                data-en="membrane vibrante faite de pierre ou plastique">
-                Vibrating membrane made of stone or plastic
+                data-fr="membrane vibrante faite de pierre ou plastique"
+                data-en="Vibrating membrane made of stone or plastic">
+                membrane vibrante faite de pierre ou plastique
             </span>
         </div>
     
@@ -1261,9 +1294,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="vibrating membrane made of wood or other vegetal matter"
-                data-en="membrane vibrante faite de bois ou autre matière végétale">
-                vibrating membrane made of wood or other vegetal matter
+                data-fr="membrane vibrante faite de bois ou autre matière végétale"
+                data-en="vibrating membrane made of wood or other vegetal matter">
+                membrane vibrante faite de bois ou autre matière végétale
             </span>
         </div>
     
@@ -1276,9 +1309,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="vibrating membrane made of metal"
-                data-en="membrane vibrante faite de métal">
-                vibrating membrane made of metal
+                data-fr="membrane vibrante faite de métal"
+                data-en="vibrating membrane made of metal">
+                membrane vibrante faite de métal
             </span>
         </div>
     
@@ -1291,9 +1324,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="part of the instrumentalist's body used as a vibrating membrane"
-                data-en="partie du corps de l'instrumentiste utilisée comme membrane vibrante">
-                part of the instrumentalist's body used as a vibrating membrane
+                data-fr="partie du corps de l'instrumentiste utilisée comme membrane vibrante"
+                data-en="part of the instrumentalist's body used as a vibrating membrane">
+                partie du corps de l'instrumentiste utilisée comme membrane vibrante
             </span>
         </div>
     
@@ -1306,9 +1339,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'m.i.-f.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'m.i.-f.i.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="vibrating membrane made of animal matter (skin...)"
-                data-en="membrane vibrante faite de matière animale (peau...)">
-                vibrating membrane made of animal matter (skin...)
+                data-fr="membrane vibrante faite de matière animale (peau...)"
+                data-en="vibrating membrane made of animal matter (skin...)">
+                membrane vibrante faite de matière animale (peau...)
             </span>
         </div>
     
@@ -1319,14 +1352,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'l.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="string"
-                data-en="corde">
-                string
+                data-fr="corde"
+                data-en="string">
+                corde
             </span>
         </div>
     
@@ -1340,9 +1373,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'l.i.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="vibrating string made of plastic"
-                data-en="corde vibrante faite de plastique">
-                vibrating string made of plastic
+                data-fr="corde vibrante faite de plastique"
+                data-en="vibrating string made of plastic">
+                corde vibrante faite de plastique
             </span>
         </div>
     
@@ -1355,9 +1388,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'l.i.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="vibrating string made of vegetal matter"
-                data-en="corde vibrante faite de matière végétale">
-                vibrating string made of vegetal matter
+                data-fr="corde vibrante faite de matière végétale"
+                data-en="vibrating string made of vegetal matter">
+                corde vibrante faite de matière végétale
             </span>
         </div>
     
@@ -1370,9 +1403,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'l.i.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="vibrating string made of metal"
-                data-en="corde vibrante faite de métal">
-                vibrating string made of metal
+                data-fr="corde vibrante faite de métal"
+                data-en="vibrating string made of metal">
+                corde vibrante faite de métal
             </span>
         </div>
     
@@ -1385,9 +1418,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'l.i.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="vocal chords"
-                data-en="cordes vocales">
-                vocal chords
+                data-fr="cordes vocales"
+                data-en="vocal chords">
+                cordes vocales
             </span>
         </div>
     
@@ -1400,9 +1433,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'l.i.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="vibrating string made of animal matter (cat hose...)"
-                data-en="corde vibrante faite de matière animale (boyau de chat...)">
-                vibrating string made of animal matter (cat hose...)
+                data-fr="corde vibrante faite de matière animale (boyau de chat...)"
+                data-en="vibrating string made of animal matter (cat hose...)">
+                corde vibrante faite de matière animale (boyau de chat...)
             </span>
         </div>
     
@@ -1413,14 +1446,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="whistle"
-                data-en="sifflet">
-                whistle
+                data-fr="sifflet"
+                data-en="whistle">
+                sifflet
             </span>
         </div>
     
@@ -1434,9 +1467,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="whistle made of stone, ceramic or plastic"
-                data-en="sifflet de pierre, céramique ou plastique">
-                whistle made of stone, ceramic or plastic
+                data-fr="sifflet de pierre, céramique ou plastique"
+                data-en="whistle made of stone, ceramic or plastic">
+                sifflet de pierre, céramique ou plastique
             </span>
         </div>
     
@@ -1449,9 +1482,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="wooden whistle"
-                data-en="sifflet de bois">
-                wooden whistle
+                data-fr="sifflet de bois"
+                data-en="wooden whistle">
+                sifflet de bois
             </span>
         </div>
     
@@ -1464,9 +1497,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metallic whistle"
-                data-en="sifflet de métal">
-                metallic whistle
+                data-fr="sifflet de métal"
+                data-en="metallic whistle">
+                sifflet de métal
             </span>
         </div>
     
@@ -1479,9 +1512,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="mouth used to whistle"
-                data-en="bouche utilisée pour siffler">
-                mouth used to whistle
+                data-fr="bouche utilisée pour siffler"
+                data-en="mouth used to whistle">
+                bouche utilisée pour siffler
             </span>
         </div>
     
@@ -1494,9 +1527,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-n.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'l.i.-n.i.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="whistle made of animal matter (bone...)"
-                data-en="sifflet fait de matière animale (os...)">
-                whistle made of animal matter (bone...)
+                data-fr="sifflet fait de matière animale (os...)"
+                data-en="whistle made of animal matter (bone...)">
+                sifflet fait de matière animale (os...)
             </span>
         </div>
     
@@ -1507,14 +1540,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B_.A_.-+S_+B_.U_.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'+f.o.-f.o.-'+n.-B:.A:.-+S:+B:.U:.-', </a>
             <span class="translation"
-                data-fr="vibrating plate"
-                data-en="plaquette vibrante">
-                vibrating plate
+                data-fr="plaquette vibrante"
+                data-en="vibrating plate">
+                plaquette vibrante
             </span>
         </div>
     
@@ -1528,9 +1561,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'n.-S_.U_.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'n.-S:.U:.-', </a>
             <span class="translation"
-                data-fr="plates of stone, glass or plastic"
-                data-en="plaquettes de pierre, de verre ou de plastique">
-                plates of stone, glass or plastic
+                data-fr="plaquettes de pierre, de verre ou de plastique"
+                data-en="plates of stone, glass or plastic">
+                plaquettes de pierre, de verre ou de plastique
             </span>
         </div>
     
@@ -1543,9 +1576,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'n.-B_.U_.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'n.-B:.U:.-', </a>
             <span class="translation"
-                data-fr="plates of wood"
-                data-en="plaquettes de bois">
-                plates of wood
+                data-fr="plaquettes de bois"
+                data-en="plates of wood">
+                plaquettes de bois
             </span>
         </div>
     
@@ -1558,9 +1591,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'n.-B_.A_.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'n.-B:.A:.-', </a>
             <span class="translation"
-                data-fr="metal plates"
-                data-en="plaquettes de métal">
-                metal plates
+                data-fr="plaquettes de métal"
+                data-en="metal plates">
+                plaquettes de métal
             </span>
         </div>
     
@@ -1573,9 +1606,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'n.o.-n.o.-', </a>
             <span class="translation"
-                data-fr="part of the instrumentalist's body used as vibrating plaque (teeth...)"
-                data-en="partie du corps de l'instrumentiste utilisée comme plaquette vibrante (dents...)">
-                part of the instrumentalist's body used as vibrating plaque (teeth...)
+                data-fr="partie du corps de l'instrumentiste utilisée comme plaquette vibrante (dents...)"
+                data-en="part of the instrumentalist's body used as vibrating plaque (teeth...)">
+                partie du corps de l'instrumentiste utilisée comme plaquette vibrante (dents...)
             </span>
         </div>
     
@@ -1588,9 +1621,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="b.i.-n.i.-'l.i.-f.i.-'f.o.-f.o.-'_.html"> b.i.-n.i.-'l.i.-f.i.-'f.o.-f.o.-', </a>
             <span class="translation"
-                data-fr="Vibrating plates made of animal matter (bone ...)"
-                data-en="plaquettes vibrantes faites de matière animale (os...)">
-                Vibrating plates made of animal matter (bone ...)
+                data-fr="plaquettes vibrantes faites de matière animale (os...)"
+                data-en="Vibrating plates made of animal matter (bone ...)">
+                plaquettes vibrantes faites de matière animale (os...)
             </span>
         </div>
     
@@ -1605,7 +1638,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1620,6 +1653,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1629,6 +1672,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1665,5 +1709,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>Oceanian countries</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>Pays d'Océanie</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>Pays d'Océanie</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>Oceanian countries</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,20 +202,20 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',S:.-',_</a></td>
-                        <td>Australia West middle part</td>
                         <td>Australie, moitié Ouest</td>
+                        <td>Australia West middle part</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',B:.-',_</a></td>
-                        <td>Australia, Eastern part</td>
                         <td>Australie, moitié orientale</td>
+                        <td>Australia, Eastern part</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',T:.-',_</a></td>
-                        <td>Papua, Islands, New Zeland</td>
                         <td>Papouasie, îles, Nouvelle Zélande</td>
+                        <td>Papua, Islands, New Zeland</td>
                     </tr>
                 
                 </tbody>
@@ -191,11 +223,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -218,8 +251,8 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'T_.-'T_.-'_.html">n.-S:.U:.-'T:.-'T:.-',</a></td>
-                        <td>Oceania</td>
                         <td>Océanie</td>
+                        <td>Oceania</td>
                     </tr>
                 
                 </tbody>
@@ -227,8 +260,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -251,20 +284,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -272,8 +305,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -296,20 +329,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -317,8 +350,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -332,19 +365,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_</a> Oceanian countries</div>-->
+            <!--<div class="card-header">Table <a href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_</a> Pays d'Océanie</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',M:.-',M:.-',_ </a>
             <span class="translation"
-                data-fr="Oceanian countries"
-                data-en="Pays d'Océanie">
-                Oceanian countries
+                data-fr="Pays d'Océanie"
+                data-en="Oceanian countries">
+                Pays d'Océanie
             </span>
         </div>
     
@@ -355,14 +388,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',M:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Australia West middle part"
-                data-en="Australie, moitié Ouest">
-                Australia West middle part
+                data-fr="Australie, moitié Ouest"
+                data-en="Australia West middle part">
+                Australie, moitié Ouest
             </span>
         </div>
     
@@ -370,14 +403,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',M:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Australia, Eastern part"
-                data-en="Australie, moitié orientale">
-                Australia, Eastern part
+                data-fr="Australie, moitié orientale"
+                data-en="Australia, Eastern part">
+                Australie, moitié orientale
             </span>
         </div>
     
@@ -385,14 +418,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_M_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',M:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Papua, Islands, New Zeland"
-                data-en="Papouasie, îles, Nouvelle Zélande">
-                Papua, Islands, New Zeland
+                data-fr="Papouasie, îles, Nouvelle Zélande"
+                data-en="Papua, Islands, New Zeland">
+                Papouasie, îles, Nouvelle Zélande
             </span>
         </div>
     
@@ -403,7 +436,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_S_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',S:.-',M:.-',_ </a>
@@ -424,9 +457,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_S_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',S:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Northern Territory, Australia"
-                data-en="Australie, Territoire du nord">
-                Northern Territory, Australia
+                data-fr="Australie, Territoire du nord"
+                data-en="Northern Territory, Australia">
+                Australie, Territoire du nord
             </span>
         </div>
     
@@ -439,9 +472,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_S_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',S:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Queensland Australia"
-                data-en="Queensland Australie">
-                Queensland Australia
+                data-fr="Queensland Australie"
+                data-en="Queensland Australia">
+                Queensland Australie
             </span>
         </div>
     
@@ -454,9 +487,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_S_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',S:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Papua New Guinea"
-                data-en="Papouasie Nouvelle Guinée">
-                Papua New Guinea
+                data-fr="Papouasie Nouvelle Guinée"
+                data-en="Papua New Guinea">
+                Papouasie Nouvelle Guinée
             </span>
         </div>
     
@@ -467,7 +500,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_B_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',B:.-',M:.-',_ </a>
@@ -488,9 +521,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_B_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',B:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Western Australia"
-                data-en="Australie de l'Ouest">
-                Western Australia
+                data-fr="Australie de l'Ouest"
+                data-en="Western Australia">
+                Australie de l'Ouest
             </span>
         </div>
     
@@ -503,9 +536,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_B_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',B:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="New South Wales Australia"
-                data-en="Nouvelles Galle du Sud Australie">
-                New South Wales Australia
+                data-fr="Nouvelles Galle du Sud Australie"
+                data-en="New South Wales Australia">
+                Nouvelles Galle du Sud Australie
             </span>
         </div>
     
@@ -518,9 +551,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_B_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',B:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="Melanesia, Micronesia and Polynesia islands: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Easter..."
-                data-en="Iles de Mélanésie, Micronésie et Polynésie: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Pâques...">
-                Melanesia, Micronesia and Polynesia islands: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Easter...
+                data-fr="Iles de Mélanésie, Micronésie et Polynésie: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Pâques..."
+                data-en="Melanesia, Micronesia and Polynesia islands: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Easter...">
+                Iles de Mélanésie, Micronésie et Polynésie: Hawaii, Salomon, Vanuatu, Samoa, Fiji, Tahiti, Pâques...
             </span>
         </div>
     
@@ -531,7 +564,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_T_.-'_M_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',T:.-',M:.-',_ </a>
@@ -552,9 +585,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_T_.-'_S_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',T:.-',S:.-',_ </a>
             <span class="translation"
-                data-fr="Southern Australia"
-                data-en="Australie du Sud">
-                Southern Australia
+                data-fr="Australie du Sud"
+                data-en="Southern Australia">
+                Australie du Sud
             </span>
         </div>
     
@@ -567,9 +600,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_T_.-'_B_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',T:.-',B:.-',_ </a>
             <span class="translation"
-                data-fr="Tasmania Australia"
-                data-en="Tasmanie Australie">
-                Tasmania Australia
+                data-fr="Tasmanie Australie"
+                data-en="Tasmania Australia">
+                Tasmanie Australie
             </span>
         </div>
     
@@ -582,9 +615,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.-S_.U_.-'T_.-'T_.-'_T_.-'_T_.-'__.html"> n.-S:.U:.-'T:.-'T:.-',T:.-',T:.-',_ </a>
             <span class="translation"
-                data-fr="New Zeland"
-                data-en="Nouvelle Zélande">
-                New Zeland
+                data-fr="Nouvelle Zélande"
+                data-en="New Zeland">
+                Nouvelle Zélande
             </span>
         </div>
     
@@ -599,7 +632,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -614,6 +647,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -623,6 +666,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -659,5 +703,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

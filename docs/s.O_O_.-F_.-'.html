@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             s.O:O:.-F:.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>symbolic cognition</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>cognition symbolique</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>cognition symbolique</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>symbolic cognition</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,20 +202,20 @@
                 
                     <tr>
                         <td><a href="s.wo.-O_.-'.html">s.wo.-O:.-'</a></td>
-                        <td>reflection process (cognition)</td>
                         <td>processus de réflexion (cognition)</td>
+                        <td>reflection process (cognition)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wa.-O_.-'.html">s.wa.-O:.-'</a></td>
-                        <td>ideas context</td>
                         <td>contexte des idées</td>
+                        <td>ideas context</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wu.-O_.-'.html">s.wu.-O:.-'</a></td>
-                        <td>meaning</td>
                         <td>sens</td>
+                        <td>meaning</td>
                     </tr>
                 
                     <tr>
@@ -194,14 +226,14 @@
                 
                     <tr>
                         <td><a href="s.wo.-M_.-'.html">s.wo.-M:.-'</a></td>
-                        <td>subjectivation process</td>
                         <td>processus de subjectivation</td>
+                        <td>subjectivation process</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wa.-M_.-'.html">s.wa.-M:.-'</a></td>
-                        <td>ideas content</td>
                         <td>contenu des idées</td>
+                        <td>ideas content</td>
                     </tr>
                 
                     <tr>
@@ -212,62 +244,62 @@
                 
                     <tr>
                         <td><a href="s.we.-M_.-'.html">s.we.-M:.-'</a></td>
-                        <td>media</td>
                         <td>médias</td>
+                        <td>media</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_O_.-U_.-'.html">s.O:O:.-U:.-'</a></td>
-                        <td>cognitive virtualities</td>
                         <td>virtualités cognitives</td>
+                        <td>cognitive virtualities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_O_.-A_.-'.html">s.O:O:.-A:.-'</a></td>
-                        <td>cognitive actualities</td>
                         <td>actualités cognitives</td>
+                        <td>cognitive actualities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_O_.-S_.-'.html">s.O:O:.-S:.-'</a></td>
-                        <td>cognitive signs</td>
                         <td>signes cognitifs</td>
+                        <td>cognitive signs</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_O_.-B_.-'.html">s.O:O:.-B:.-'</a></td>
-                        <td>cognitive beings</td>
                         <td>êtres cognitifs</td>
+                        <td>cognitive beings</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_O_.-T_.-'.html">s.O:O:.-T:.-'</a></td>
-                        <td>cognitive things</td>
                         <td>choses cognitives</td>
+                        <td>cognitive things</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wo.-F_.-'.html">s.wo.-F:.-'</a></td>
-                        <td>reflexive intelligence</td>
                         <td>intelligence réflexive</td>
+                        <td>reflexive intelligence</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wa.-F_.-'.html">s.wa.-F:.-'</a></td>
-                        <td>communication of ideas</td>
                         <td>communication des idées</td>
+                        <td>communication of ideas</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.wu.-F_.-'.html">s.wu.-F:.-'</a></td>
-                        <td>system of concepts (sensorium)</td>
                         <td>système de concepts (sensorium)</td>
+                        <td>system of concepts (sensorium)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.we.-F_.-'.html">s.we.-F:.-'</a></td>
-                        <td>system of symbols</td>
                         <td>système de symboles</td>
+                        <td>system of symbols</td>
                     </tr>
                 
                 </tbody>
@@ -275,11 +307,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="s.O_O_.-.html">s.O:O:.-</a></td>
-                        <td>sources of meaning in thought</td>
                         <td>sources du sens dans la pensée</td>
+                        <td>sources of meaning in thought</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -335,32 +368,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -368,8 +401,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -383,19 +416,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="s.O_O_.-F_.-'.html">s.O:O:.-F:.-'</a> symbolic cognition</div>-->
+            <!--<div class="card-header">Table <a href="s.O_O_.-F_.-'.html">s.O:O:.-F:.-'</a> cognition symbolique</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="6" style="background-color: #d9eaff;">
+    <th class="cell" colspan="6" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-F_.-'.html"> s.O:O:.-F:.-' </a>
             <span class="translation"
-                data-fr="symbolic cognition"
-                data-en="cognition symbolique">
-                symbolic cognition
+                data-fr="cognition symbolique"
+                data-en="symbolic cognition">
+                cognition symbolique
             </span>
         </div>
     
@@ -406,14 +439,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-U_.-'.html"> s.O:O:.-U:.-' </a>
             <span class="translation"
-                data-fr="cognitive virtualities"
-                data-en="virtualités cognitives">
-                cognitive virtualities
+                data-fr="virtualités cognitives"
+                data-en="cognitive virtualities">
+                virtualités cognitives
             </span>
         </div>
     
@@ -421,14 +454,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-A_.-'.html"> s.O:O:.-A:.-' </a>
             <span class="translation"
-                data-fr="cognitive actualities"
-                data-en="actualités cognitives">
-                cognitive actualities
+                data-fr="actualités cognitives"
+                data-en="cognitive actualities">
+                actualités cognitives
             </span>
         </div>
     
@@ -436,14 +469,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-S_.-'.html"> s.O:O:.-S:.-' </a>
             <span class="translation"
-                data-fr="cognitive signs"
-                data-en="signes cognitifs">
-                cognitive signs
+                data-fr="signes cognitifs"
+                data-en="cognitive signs">
+                signes cognitifs
             </span>
         </div>
     
@@ -451,14 +484,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-B_.-'.html"> s.O:O:.-B:.-' </a>
             <span class="translation"
-                data-fr="cognitive beings"
-                data-en="êtres cognitifs">
-                cognitive beings
+                data-fr="êtres cognitifs"
+                data-en="cognitive beings">
+                êtres cognitifs
             </span>
         </div>
     
@@ -466,14 +499,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_O_.-T_.-'.html"> s.O:O:.-T:.-' </a>
             <span class="translation"
-                data-fr="cognitive things"
-                data-en="choses cognitives">
-                cognitive things
+                data-fr="choses cognitives"
+                data-en="cognitive things">
+                choses cognitives
             </span>
         </div>
     
@@ -484,14 +517,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-F_.-'.html"> s.wo.-F:.-' </a>
             <span class="translation"
-                data-fr="reflexive intelligence"
-                data-en="intelligence réflexive">
-                reflexive intelligence
+                data-fr="intelligence réflexive"
+                data-en="reflexive intelligence">
+                intelligence réflexive
             </span>
         </div>
     
@@ -505,9 +538,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-U_.-'.html"> s.wo.-U:.-' </a>
             <span class="translation"
-                data-fr="consciousness continuum"
-                data-en="continuum de conscience">
-                consciousness continuum
+                data-fr="continuum de conscience"
+                data-en="consciousness continuum">
+                continuum de conscience
             </span>
         </div>
     
@@ -520,9 +553,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-A_.-'.html"> s.wo.-A:.-' </a>
             <span class="translation"
-                data-fr="ideas ecosystem (of a subject)"
-                data-en="écosystème d'idées (d'un sujet)">
-                ideas ecosystem (of a subject)
+                data-fr="écosystème d'idées (d'un sujet)"
+                data-en="ideas ecosystem (of a subject)">
+                écosystème d'idées (d'un sujet)
             </span>
         </div>
     
@@ -535,9 +568,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-S_.-'.html"> s.wo.-S:.-' </a>
             <span class="translation"
-                data-fr="self-analysis"
-                data-en="auto-analyse">
-                self-analysis
+                data-fr="auto-analyse"
+                data-en="self-analysis">
+                auto-analyse
             </span>
         </div>
     
@@ -550,9 +583,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-B_.-'.html"> s.wo.-B:.-' </a>
             <span class="translation"
-                data-fr="self-synthesis"
-                data-en="auto-synthèse">
-                self-synthesis
+                data-fr="auto-synthèse"
+                data-en="self-synthesis">
+                auto-synthèse
             </span>
         </div>
     
@@ -565,9 +598,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wo.-T_.-'.html"> s.wo.-T:.-' </a>
             <span class="translation"
-                data-fr="self-understanding"
-                data-en="auto-compréhension">
-                self-understanding
+                data-fr="auto-compréhension"
+                data-en="self-understanding">
+                auto-compréhension
             </span>
         </div>
     
@@ -578,14 +611,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.wa.-F_.-'.html"> s.wa.-F:.-' </a>
             <span class="translation"
-                data-fr="communication of ideas"
-                data-en="communication des idées">
-                communication of ideas
+                data-fr="communication des idées"
+                data-en="communication of ideas">
+                communication des idées
             </span>
         </div>
     
@@ -599,9 +632,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wa.-U_.-'.html"> s.wa.-U:.-' </a>
             <span class="translation"
-                data-fr="language games"
-                data-en="jeux de langage">
-                language games
+                data-fr="jeux de langage"
+                data-en="language games">
+                jeux de langage
             </span>
         </div>
     
@@ -614,9 +647,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wa.-A_.-'.html"> s.wa.-A:.-' </a>
             <span class="translation"
-                data-fr="community of language game players"
-                data-en="communauté de participants à un jeu de langage">
-                community of language game players
+                data-fr="communauté de participants à un jeu de langage"
+                data-en="community of language game players">
+                communauté de participants à un jeu de langage
             </span>
         </div>
     
@@ -672,14 +705,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-F_.-'.html"> s.wu.-F:.-' </a>
             <span class="translation"
-                data-fr="system of concepts (sensorium)"
-                data-en="système de concepts (sensorium)">
-                system of concepts (sensorium)
+                data-fr="système de concepts (sensorium)"
+                data-en="system of concepts (sensorium)">
+                système de concepts (sensorium)
             </span>
         </div>
     
@@ -693,9 +726,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-U_.-'.html"> s.wu.-U:.-' </a>
             <span class="translation"
-                data-fr="intellection of relations"
-                data-en="intellections des relations">
-                intellection of relations
+                data-fr="intellections des relations"
+                data-en="intellection of relations">
+                intellections des relations
             </span>
         </div>
     
@@ -708,9 +741,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-A_.-'.html"> s.wu.-A:.-' </a>
             <span class="translation"
-                data-fr="intuitions of relations"
-                data-en="intuitions des relations">
-                intuitions of relations
+                data-fr="intuitions des relations"
+                data-en="intuitions of relations">
+                intuitions des relations
             </span>
         </div>
     
@@ -723,9 +756,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-S_.-'.html"> s.wu.-S:.-' </a>
             <span class="translation"
-                data-fr="symbols"
-                data-en="symboles">
-                symbols
+                data-fr="symboles"
+                data-en="symbols">
+                symboles
             </span>
         </div>
     
@@ -738,9 +771,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-B_.-'.html"> s.wu.-B:.-' </a>
             <span class="translation"
-                data-fr="interpreters"
-                data-en="interprétants">
-                interpreters
+                data-fr="interprétants"
+                data-en="interpreters">
+                interprétants
             </span>
         </div>
     
@@ -753,9 +786,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.wu.-T_.-'.html"> s.wu.-T:.-' </a>
             <span class="translation"
-                data-fr="references"
-                data-en="références">
-                references
+                data-fr="références"
+                data-en="references">
+                références
             </span>
         </div>
     
@@ -766,14 +799,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-F_.-'.html"> s.we.-F:.-' </a>
             <span class="translation"
-                data-fr="system of symbols"
-                data-en="système de symboles">
-                system of symbols
+                data-fr="système de symboles"
+                data-en="system of symbols">
+                système de symboles
             </span>
         </div>
     
@@ -787,9 +820,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-U_.-'.html"> s.we.-U:.-' </a>
             <span class="translation"
-                data-fr="signifieds"
-                data-en="signifiés">
-                signifieds
+                data-fr="signifiés"
+                data-en="signifieds">
+                signifiés
             </span>
         </div>
     
@@ -802,9 +835,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-A_.-'.html"> s.we.-A:.-' </a>
             <span class="translation"
-                data-fr="signifiers"
-                data-en="signifiants">
-                signifiers
+                data-fr="signifiants"
+                data-en="signifiers">
+                signifiants
             </span>
         </div>
     
@@ -817,9 +850,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-S_.-'.html"> s.we.-S:.-' </a>
             <span class="translation"
-                data-fr="symbolic code"
-                data-en="code symbolique">
-                symbolic code
+                data-fr="code symbolique"
+                data-en="symbolic code">
+                code symbolique
             </span>
         </div>
     
@@ -832,9 +865,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-B_.-'.html"> s.we.-B:.-' </a>
             <span class="translation"
-                data-fr="signs mobilisation"
-                data-en="mobilisation des signes">
-                signs mobilisation
+                data-fr="mobilisation des signes"
+                data-en="signs mobilisation">
+                mobilisation des signes
             </span>
         </div>
     
@@ -847,9 +880,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.we.-T_.-'.html"> s.we.-T:.-' </a>
             <span class="translation"
-                data-fr="signs support"
-                data-en="support des signes">
-                signs support
+                data-fr="support des signes"
+                data-en="signs support">
+                support des signes
             </span>
         </div>
     
@@ -864,7 +897,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -879,6 +912,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -888,6 +931,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -924,5 +968,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

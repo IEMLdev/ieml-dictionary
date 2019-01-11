@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:M:.-O:M:.-'s.o.-k.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>weave the collective intelligence (36 verbs)</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>tisser l'intelligence collective (36 verbes)</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>tisser l'intelligence collective (36 verbes)</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>weave the collective intelligence (36 verbs)</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,74 +202,74 @@
                 
                     <tr>
                         <td><a href="y.-O_M_.-'s.o.-k.o.-'_.html">y.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize knowledge</td>
                         <td>valoriser la connaissance</td>
+                        <td>valorize knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="o.-O_M_.-'s.o.-k.o.-'_.html">o.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize governance</td>
                         <td>valoriser la gouvernance</td>
+                        <td>valorize governance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="e.-O_M_.-'s.o.-k.o.-'_.html">e.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize empowerment</td>
                         <td>valoriser le gain de puissance</td>
+                        <td>valorize empowerment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="u.-O_M_.-'s.o.-k.o.-'_.html">u.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize communication</td>
                         <td>valoriser la communication</td>
+                        <td>valorize communication</td>
                     </tr>
                 
                     <tr>
                         <td><a href="a.-O_M_.-'s.o.-k.o.-'_.html">a.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize the social bond</td>
                         <td>valoriser le lien social</td>
+                        <td>valorize the social bond</td>
                     </tr>
                 
                     <tr>
                         <td><a href="i.-O_M_.-'s.o.-k.o.-'_.html">i.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>valorize concrete action</td>
                         <td>valoriser l'action concrète</td>
+                        <td>valorize concrete action</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-y.-'s.o.-k.o.-'_.html">O:M:.-y.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen knowledge</td>
                         <td>renforcer la connaissance</td>
+                        <td>strengthen knowledge</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-o.-'s.o.-k.o.-'_.html">O:M:.-o.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen governance</td>
                         <td>renforcer la gouvernance</td>
+                        <td>strengthen governance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-e.-'s.o.-k.o.-'_.html">O:M:.-e.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen empowerment</td>
                         <td>renforcer la puissance</td>
+                        <td>strengthen empowerment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-u.-'s.o.-k.o.-'_.html">O:M:.-u.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen communication</td>
                         <td>renforcer la communication</td>
+                        <td>strengthen communication</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-a.-'s.o.-k.o.-'_.html">O:M:.-a.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen social bond</td>
                         <td>renforcer le lien social</td>
+                        <td>strengthen social bond</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.-i.-'s.o.-k.o.-'_.html">O:M:.-i.-'s.o.-k.o.-',</a></td>
-                        <td>strengthen the concrete action</td>
                         <td>renforcer l'action concrète</td>
+                        <td>strengthen the concrete action</td>
                     </tr>
                 
                 </tbody>
@@ -245,11 +277,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -281,8 +314,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -305,8 +338,8 @@
                 
                     <tr>
                         <td><a href="s.o.-k.o.-'.html">s.o.-k.o.-'</a></td>
-                        <td>collective intelligence</td>
                         <td>intelligence collective</td>
+                        <td>collective intelligence</td>
                     </tr>
                 
                 </tbody>
@@ -314,8 +347,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -329,19 +362,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_M_.-O_M_.-'s.o.-k.o.-'_.html">O:M:.-O:M:.-'s.o.-k.o.-',</a> weave the collective intelligence (36 verbs)</div>-->
+            <!--<div class="card-header">Table <a href="O_M_.-O_M_.-'s.o.-k.o.-'_.html">O:M:.-O:M:.-'s.o.-k.o.-',</a> tisser l'intelligence collective (36 verbes)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="7" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="7" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-O_M_.-'s.o.-k.o.-'_.html"> O:M:.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="weave the collective intelligence (36 verbs)"
-                data-en="tisser l'intelligence collective (36 verbes)">
-                weave the collective intelligence (36 verbs)
+                data-fr="tisser l'intelligence collective (36 verbes)"
+                data-en="weave the collective intelligence (36 verbs)">
+                tisser l'intelligence collective (36 verbes)
             </span>
         </div>
     
@@ -352,14 +385,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-y.-'s.o.-k.o.-'_.html"> O:M:.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen knowledge"
-                data-en="renforcer la connaissance">
-                strengthen knowledge
+                data-fr="renforcer la connaissance"
+                data-en="strengthen knowledge">
+                renforcer la connaissance
             </span>
         </div>
     
@@ -367,14 +400,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-o.-'s.o.-k.o.-'_.html"> O:M:.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen governance"
-                data-en="renforcer la gouvernance">
-                strengthen governance
+                data-fr="renforcer la gouvernance"
+                data-en="strengthen governance">
+                renforcer la gouvernance
             </span>
         </div>
     
@@ -382,14 +415,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-e.-'s.o.-k.o.-'_.html"> O:M:.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen empowerment"
-                data-en="renforcer la puissance">
-                strengthen empowerment
+                data-fr="renforcer la puissance"
+                data-en="strengthen empowerment">
+                renforcer la puissance
             </span>
         </div>
     
@@ -397,14 +430,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-u.-'s.o.-k.o.-'_.html"> O:M:.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen communication"
-                data-en="renforcer la communication">
-                strengthen communication
+                data-fr="renforcer la communication"
+                data-en="strengthen communication">
+                renforcer la communication
             </span>
         </div>
     
@@ -412,14 +445,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-a.-'s.o.-k.o.-'_.html"> O:M:.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen social bond"
-                data-en="renforcer le lien social">
-                strengthen social bond
+                data-fr="renforcer le lien social"
+                data-en="strengthen social bond">
+                renforcer le lien social
             </span>
         </div>
     
@@ -427,14 +460,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-i.-'s.o.-k.o.-'_.html"> O:M:.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen the concrete action"
-                data-en="renforcer l'action concrète">
-                strengthen the concrete action
+                data-fr="renforcer l'action concrète"
+                data-en="strengthen the concrete action">
+                renforcer l'action concrète
             </span>
         </div>
     
@@ -445,14 +478,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="y.-O_M_.-'s.o.-k.o.-'_.html"> y.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize knowledge"
-                data-en="valoriser la connaissance">
-                valorize knowledge
+                data-fr="valoriser la connaissance"
+                data-en="valorize knowledge">
+                valoriser la connaissance
             </span>
         </div>
     
@@ -466,9 +499,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-y.-'s.o.-k.o.-'_.html"> y.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="clarify knowledge"
-                data-en="clarifier la connaissance">
-                clarify knowledge
+                data-fr="clarifier la connaissance"
+                data-en="clarify knowledge">
+                clarifier la connaissance
             </span>
         </div>
     
@@ -481,9 +514,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-o.-'s.o.-k.o.-'_.html"> y.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="define problems"
-                data-en="définir les problèmes">
-                define problems
+                data-fr="définir les problèmes"
+                data-en="define problems">
+                définir les problèmes
             </span>
         </div>
     
@@ -496,9 +529,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-e.-'s.o.-k.o.-'_.html"> y.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="propose solutions"
-                data-en="proposer des solutions">
-                propose solutions
+                data-fr="proposer des solutions"
+                data-en="propose solutions">
+                proposer des solutions
             </span>
         </div>
     
@@ -511,9 +544,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-u.-'s.o.-k.o.-'_.html"> y.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="record a work of the mind"
-                data-en="enregistrer une œuvre de l'esprit">
-                record a work of the mind
+                data-fr="enregistrer une œuvre de l'esprit"
+                data-en="record a work of the mind">
+                enregistrer une œuvre de l'esprit
             </span>
         </div>
     
@@ -526,9 +559,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-a.-'s.o.-k.o.-'_.html"> y.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="innovate in social matters"
-                data-en="innover en matière sociale">
-                innovate in social matters
+                data-fr="innover en matière sociale"
+                data-en="innovate in social matters">
+                innover en matière sociale
             </span>
         </div>
     
@@ -541,9 +574,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-i.-'s.o.-k.o.-'_.html"> y.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="transfer knowledge in the practical field"
-                data-en="transférer des connaissances en pratique">
-                transfer knowledge in the practical field
+                data-fr="transférer des connaissances en pratique"
+                data-en="transfer knowledge in the practical field">
+                transférer des connaissances en pratique
             </span>
         </div>
     
@@ -554,14 +587,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="o.-O_M_.-'s.o.-k.o.-'_.html"> o.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize governance"
-                data-en="valoriser la gouvernance">
-                valorize governance
+                data-fr="valoriser la gouvernance"
+                data-en="valorize governance">
+                valoriser la gouvernance
             </span>
         </div>
     
@@ -575,9 +608,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-y.-'s.o.-k.o.-'_.html"> o.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="orient research"
-                data-en="orienter la recherche">
-                orient research
+                data-fr="orienter la recherche"
+                data-en="orient research">
+                orienter la recherche
             </span>
         </div>
     
@@ -590,9 +623,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-o.-'s.o.-k.o.-'_.html"> o.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="deepen a view"
-                data-en="approfondir la vision">
-                deepen a view
+                data-fr="approfondir la vision"
+                data-en="deepen a view">
+                approfondir la vision
             </span>
         </div>
     
@@ -605,9 +638,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-e.-'s.o.-k.o.-'_.html"> o.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="educate"
-                data-en="éduquer">
-                educate
+                data-fr="éduquer"
+                data-en="educate">
+                éduquer
             </span>
         </div>
     
@@ -620,9 +653,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-u.-'s.o.-k.o.-'_.html"> o.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="filter information"
-                data-en="filtrer l'information">
-                filter information
+                data-fr="filtrer l'information"
+                data-en="filter information">
+                filtrer l'information
             </span>
         </div>
     
@@ -635,9 +668,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-a.-'s.o.-k.o.-'_.html"> o.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="assert cultural values"
-                data-en="affirmer des valeurs culturelles">
-                assert cultural values
+                data-fr="affirmer des valeurs culturelles"
+                data-en="assert cultural values">
+                affirmer des valeurs culturelles
             </span>
         </div>
     
@@ -650,9 +683,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-i.-'s.o.-k.o.-'_.html"> o.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="orient production"
-                data-en="orienter la production">
-                orient production
+                data-fr="orienter la production"
+                data-en="orient production">
+                orienter la production
             </span>
         </div>
     
@@ -663,14 +696,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="e.-O_M_.-'s.o.-k.o.-'_.html"> e.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize empowerment"
-                data-en="valoriser le gain de puissance">
-                valorize empowerment
+                data-fr="valoriser le gain de puissance"
+                data-en="valorize empowerment">
+                valoriser le gain de puissance
             </span>
         </div>
     
@@ -684,9 +717,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-y.-'s.o.-k.o.-'_.html"> e.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="provide tools for research"
-                data-en="outiller la recherche">
-                provide tools for research
+                data-fr="outiller la recherche"
+                data-en="provide tools for research">
+                outiller la recherche
             </span>
         </div>
     
@@ -699,9 +732,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-o.-'s.o.-k.o.-'_.html"> e.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="establish norms & standards"
-                data-en="poser des normes & standards">
-                establish norms & standards
+                data-fr="poser des normes & standards"
+                data-en="establish norms & standards">
+                poser des normes & standards
             </span>
         </div>
     
@@ -714,9 +747,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-e.-'s.o.-k.o.-'_.html"> e.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="solve problems"
-                data-en="résoudre les problèmes">
-                solve problems
+                data-fr="résoudre les problèmes"
+                data-en="solve problems">
+                résoudre les problèmes
             </span>
         </div>
     
@@ -729,9 +762,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-u.-'s.o.-k.o.-'_.html"> e.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="provide tools for information search"
-                data-en="outiller la recherche d'information">
-                provide tools for information search
+                data-fr="outiller la recherche d'information"
+                data-en="provide tools for information search">
+                outiller la recherche d'information
             </span>
         </div>
     
@@ -744,9 +777,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-a.-'s.o.-k.o.-'_.html"> e.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="enrich the community"
-                data-en="enrichir la communauté">
-                enrich the community
+                data-fr="enrichir la communauté"
+                data-en="enrich the community">
+                enrichir la communauté
             </span>
         </div>
     
@@ -759,9 +792,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-i.-'s.o.-k.o.-'_.html"> e.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="draw | stimulate investments"
-                data-en="attirer | favoriser l'investissement">
-                draw | stimulate investments
+                data-fr="attirer | favoriser l'investissement"
+                data-en="draw | stimulate investments">
+                attirer | favoriser l'investissement
             </span>
         </div>
     
@@ -772,14 +805,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="u.-O_M_.-'s.o.-k.o.-'_.html"> u.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize communication"
-                data-en="valoriser la communication">
-                valorize communication
+                data-fr="valoriser la communication"
+                data-en="valorize communication">
+                valoriser la communication
             </span>
         </div>
     
@@ -793,9 +826,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-y.-'s.o.-k.o.-'_.html"> u.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="specify information"
-                data-en="préciser l'information">
-                specify information
+                data-fr="préciser l'information"
+                data-en="specify information">
+                préciser l'information
             </span>
         </div>
     
@@ -808,9 +841,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-o.-'s.o.-k.o.-'_.html"> u.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="summarize for governance"
-                data-en="résumer en vue de la gouvernance">
-                summarize for governance
+                data-fr="résumer en vue de la gouvernance"
+                data-en="summarize for governance">
+                résumer en vue de la gouvernance
             </span>
         </div>
     
@@ -823,9 +856,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-e.-'s.o.-k.o.-'_.html"> u.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="produce didactic materials"
-                data-en="produire du matériel didactique">
-                produce didactic materials
+                data-fr="produire du matériel didactique"
+                data-en="produce didactic materials">
+                produire du matériel didactique
             </span>
         </div>
     
@@ -838,9 +871,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-u.-'s.o.-k.o.-'_.html"> u.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="bring consistency"
-                data-en="mettre en cohérence">
-                bring consistency
+                data-fr="mettre en cohérence"
+                data-en="bring consistency">
+                mettre en cohérence
             </span>
         </div>
     
@@ -853,9 +886,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-a.-'s.o.-k.o.-'_.html"> u.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="cultivate collective memory"
-                data-en="cultiver la mémoire collective">
-                cultivate collective memory
+                data-fr="cultiver la mémoire collective"
+                data-en="cultivate collective memory">
+                cultiver la mémoire collective
             </span>
         </div>
     
@@ -868,9 +901,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-i.-'s.o.-k.o.-'_.html"> u.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="invite someone to address | listen"
-                data-en="donner la parole | écouter">
-                invite someone to address | listen
+                data-fr="donner la parole | écouter"
+                data-en="invite someone to address | listen">
+                donner la parole | écouter
             </span>
         </div>
     
@@ -881,14 +914,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="a.-O_M_.-'s.o.-k.o.-'_.html"> a.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize the social bond"
-                data-en="valoriser le lien social">
-                valorize the social bond
+                data-fr="valoriser le lien social"
+                data-en="valorize the social bond">
+                valoriser le lien social
             </span>
         </div>
     
@@ -902,9 +935,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-y.-'s.o.-k.o.-'_.html"> a.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="invest in research"
-                data-en="investir dans la recherche">
-                invest in research
+                data-fr="investir dans la recherche"
+                data-en="invest in research">
+                investir dans la recherche
             </span>
         </div>
     
@@ -917,9 +950,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-o.-'s.o.-k.o.-'_.html"> a.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="delegate governance"
-                data-en="déléguer la gouvernance">
-                delegate governance
+                data-fr="déléguer la gouvernance"
+                data-en="delegate governance">
+                déléguer la gouvernance
             </span>
         </div>
     
@@ -932,9 +965,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-e.-'s.o.-k.o.-'_.html"> a.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="cultivate human development"
-                data-en="cultiver le développement humain">
-                cultivate human development
+                data-fr="cultiver le développement humain"
+                data-en="cultivate human development">
+                cultiver le développement humain
             </span>
         </div>
     
@@ -947,9 +980,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-u.-'s.o.-k.o.-'_.html"> a.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="open public space"
-                data-en="ouvrir l'espace public">
-                open public space
+                data-fr="ouvrir l'espace public"
+                data-en="open public space">
+                ouvrir l'espace public
             </span>
         </div>
     
@@ -962,9 +995,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-a.-'s.o.-k.o.-'_.html"> a.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="create trust"
-                data-en="créer la confiance">
-                create trust
+                data-fr="créer la confiance"
+                data-en="create trust">
+                créer la confiance
             </span>
         </div>
     
@@ -977,9 +1010,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-i.-'s.o.-k.o.-'_.html"> a.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="organize the work"
-                data-en="organiser le travail">
-                organize the work
+                data-fr="organiser le travail"
+                data-en="organize the work">
+                organiser le travail
             </span>
         </div>
     
@@ -990,14 +1023,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="i.-O_M_.-'s.o.-k.o.-'_.html"> i.-O:M:.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="valorize concrete action"
-                data-en="valoriser l'action concrète">
-                valorize concrete action
+                data-fr="valoriser l'action concrète"
+                data-en="valorize concrete action">
+                valoriser l'action concrète
             </span>
         </div>
     
@@ -1011,9 +1044,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-y.-'s.o.-k.o.-'_.html"> i.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="provide tools for thought"
-                data-en="outiller la pensée">
-                provide tools for thought
+                data-fr="outiller la pensée"
+                data-en="provide tools for thought">
+                outiller la pensée
             </span>
         </div>
     
@@ -1026,9 +1059,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-o.-'s.o.-k.o.-'_.html"> i.-o.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="create opportunities"
-                data-en="créer des opportunités">
-                create opportunities
+                data-fr="créer des opportunités"
+                data-en="create opportunities">
+                créer des opportunités
             </span>
         </div>
     
@@ -1041,9 +1074,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-e.-'s.o.-k.o.-'_.html"> i.-e.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="invest in business"
-                data-en="investir dans les affaires">
-                invest in business
+                data-fr="investir dans les affaires"
+                data-en="invest in business">
+                investir dans les affaires
             </span>
         </div>
     
@@ -1056,9 +1089,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-u.-'s.o.-k.o.-'_.html"> i.-u.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="speak out"
-                data-en="prendre la parole">
-                speak out
+                data-fr="prendre la parole"
+                data-en="speak out">
+                prendre la parole
             </span>
         </div>
     
@@ -1071,9 +1104,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-a.-'s.o.-k.o.-'_.html"> i.-a.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="look after the infrastructure"
-                data-en="entretenir l'infrastructure">
-                look after the infrastructure
+                data-fr="entretenir l'infrastructure"
+                data-en="look after the infrastructure">
+                entretenir l'infrastructure
             </span>
         </div>
     
@@ -1086,9 +1119,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-i.-'s.o.-k.o.-'_.html"> i.-i.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="guarantee compatibility"
-                data-en="assurer la compatibilité">
-                guarantee compatibility
+                data-fr="assurer la compatibilité"
+                data-en="guarantee compatibility">
+                assurer la compatibilité
             </span>
         </div>
     
@@ -1103,7 +1136,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1118,6 +1151,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1127,6 +1170,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1163,5 +1207,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

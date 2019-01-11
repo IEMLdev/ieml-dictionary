@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             B:M:.e.-M:M:.a.-E:.-+wa.e.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>virtues and their objects</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>les vertus et leurs objets</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>les vertus et leurs objets</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>virtues and their objects</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>3</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
         
             
@@ -146,6 +158,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -158,10 +189,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -184,158 +216,158 @@
                 
                     <tr>
                         <td><a href="B_M_.e.-s.a.-'.html">B:M:.e.-s.a.-'</a></td>
-                        <td>ideals of thought</td>
                         <td>idéaux de pensée</td>
+                        <td>ideals of thought</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-s.a.-wa.e.-'.html">B:M:.e.-s.a.-wa.e.-'</a></td>
-                        <td>virtues of understanding</td>
                         <td>vertus de compréhension</td>
+                        <td>virtues of understanding</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-b.a.-'.html">B:M:.e.-b.a.-'</a></td>
-                        <td>ideals of speech</td>
                         <td>idéaux de parole</td>
+                        <td>ideals of speech</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-b.a.-wa.e.-'.html">B:M:.e.-b.a.-wa.e.-'</a></td>
-                        <td>virtues of speech</td>
                         <td>vertus de parole</td>
+                        <td>virtues of speech</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-t.a.-'.html">B:M:.e.-t.a.-'</a></td>
-                        <td>ideals of memory</td>
                         <td>idéaux de mémoire</td>
+                        <td>ideals of memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-t.a.-wa.e.-'.html">B:M:.e.-t.a.-wa.e.-'</a></td>
-                        <td>virtues of memory</td>
                         <td>vertus de mémoire</td>
+                        <td>virtues of memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-k.a.-'.html">B:M:.e.-k.a.-'</a></td>
-                        <td>commitment ideals</td>
                         <td>idéaux d'engagement</td>
+                        <td>commitment ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-k.a.-wa.e.-'.html">B:M:.e.-k.a.-wa.e.-'</a></td>
-                        <td>virtues of commitment</td>
                         <td>vertus d'engagement</td>
+                        <td>virtues of commitment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-m.a.-'.html">B:M:.e.-m.a.-'</a></td>
-                        <td>heart ideals</td>
                         <td>idéaux du coeur</td>
+                        <td>heart ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-m.a.-wa.e.-'.html">B:M:.e.-m.a.-wa.e.-'</a></td>
-                        <td>virtues of the heart</td>
                         <td>vertus de coeur</td>
+                        <td>virtues of the heart</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-n.a.-'.html">B:M:.e.-n.a.-'</a></td>
-                        <td>discerning ideals</td>
                         <td>idéaux de discernement</td>
+                        <td>discerning ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-n.a.-wa.e.-'.html">B:M:.e.-n.a.-wa.e.-'</a></td>
-                        <td>virtues of discerning</td>
                         <td>vertus de discernement</td>
+                        <td>virtues of discerning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-d.a.-'.html">B:M:.e.-d.a.-'</a></td>
-                        <td>truthfulness ideals</td>
                         <td>idéaux de véracité</td>
+                        <td>truthfulness ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-d.a.-wa.e.-'.html">B:M:.e.-d.a.-wa.e.-'</a></td>
-                        <td>virtues of truthfulness</td>
                         <td>vertus de véracité</td>
+                        <td>virtues of truthfulness</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-f.a.-'.html">B:M:.e.-f.a.-'</a></td>
-                        <td>health ideals</td>
                         <td>idéaux de santé</td>
+                        <td>health ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-f.a.-wa.e.-'.html">B:M:.e.-f.a.-wa.e.-'</a></td>
-                        <td>health virtues</td>
                         <td>vertus de santé</td>
+                        <td>health virtues</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-l.a.-'.html">B:M:.e.-l.a.-'</a></td>
-                        <td>safety ideals</td>
                         <td>idéaux de sureté</td>
+                        <td>safety ideals</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-l.a.-wa.e.-'.html">B:M:.e.-l.a.-wa.e.-'</a></td>
-                        <td>virtues of safety</td>
                         <td>vertus de sureté</td>
+                        <td>virtues of safety</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.e.-M_M_.a.-'.html">k.e.-M:M:.a.-'</a></td>
-                        <td>personal finalities</td>
                         <td>finalités personnelles</td>
+                        <td>personal finalities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.e.-M_M_.a.-wa.e.-'.html">k.e.-M:M:.a.-wa.e.-'</a></td>
-                        <td>grammar of the being</td>
                         <td>grammaire de l'être</td>
+                        <td>grammar of the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.e.-M_M_.a.-'.html">m.e.-M:M:.a.-'</a></td>
-                        <td>inter-personal finalities</td>
                         <td>finalités inter-personnelles</td>
+                        <td>inter-personal finalities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.e.-M_M_.a.-wa.e.-'.html">m.e.-M:M:.a.-wa.e.-'</a></td>
-                        <td>dialectic of the being</td>
                         <td>dialectique de l'être</td>
+                        <td>dialectic of the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.e.-M_M_.a.-'.html">n.e.-M:M:.a.-'</a></td>
-                        <td>collective finalities</td>
                         <td>finalités collectives</td>
+                        <td>collective finalities</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.e.-M_M_.a.-wa.e.-'.html">n.e.-M:M:.a.-wa.e.-'</a></td>
-                        <td>rhetoric of the being</td>
                         <td>rhétorique de l'être</td>
+                        <td>rhetoric of the being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-M_M_.a.-'.html">B:M:.e.-M:M:.a.-'</a></td>
-                        <td>finalities of beings</td>
                         <td>finalités des êtres</td>
+                        <td>finalities of beings</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_M_.e.-M_M_.a.-wa.e.-'.html">B:M:.e.-M:M:.a.-wa.e.-'</a></td>
-                        <td>virtues | arts of beings</td>
                         <td>vertus | arts des êtres</td>
+                        <td>virtues | arts of beings</td>
                     </tr>
                 
                 </tbody>
@@ -343,8 +375,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -367,8 +399,8 @@
                 
                     <tr>
                         <td><a href="S_M_.e.-M_M_.u.-E_.-+wa.e.-'+B_M_.e.-M_M_.a.-E_.-+wa.e.-'+T_M_.e.-M_M_.i.-E_.-+wa.e.-'.html">S:M:.e.-M:M:.u.-E:.-+wa.e.-'+B:M:.e.-M:M:.a.-E:.-+wa.e.-'+T:M:.e.-M:M:.i.-E:.-+wa.e.-'</a></td>
-                        <td>competencies and objects of competencies</td>
                         <td>compétences et objets de compétences</td>
+                        <td>competencies and objects of competencies</td>
                     </tr>
                 
                 </tbody>
@@ -376,11 +408,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -403,8 +436,8 @@
                 
                     <tr>
                         <td><a href="B_M_.e.-.html">B:M:.e.-</a></td>
-                        <td>expertise on beings</td>
                         <td>savoir faire portant sur les êtres</td>
+                        <td>expertise on beings</td>
                     </tr>
                 
                 </tbody>
@@ -412,8 +445,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -436,8 +469,8 @@
                 
                     <tr>
                         <td><a href="M_M_.a.-.html">M:M:.a.-</a></td>
-                        <td>kinds of social roles</td>
                         <td>genres de rôles sociaux</td>
+                        <td>kinds of social roles</td>
                     </tr>
                 
                 </tbody>
@@ -445,8 +478,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -469,8 +502,8 @@
                 
                     <tr>
                         <td><a href="wa.e.-.html">wa.e.-</a></td>
-                        <td>master competences</td>
                         <td>maîtriser les compétences</td>
+                        <td>master competences</td>
                     </tr>
                 
                 </tbody>
@@ -478,8 +511,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -495,19 +528,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="B_M_.e.-M_M_.a.-'.html">B:M:.e.-M:M:.a.-'</a> finalities of beings</div>-->
+            <!--<div class="card-header">Table <a href="B_M_.e.-M_M_.a.-'.html">B:M:.e.-M:M:.a.-'</a> finalités des êtres</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="10" style="background-color: #d9eaff;">
+    <th class="cell" colspan="10" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-M_M_.a.-'.html"> B:M:.e.-M:M:.a.-' </a>
             <span class="translation"
-                data-fr="finalities of beings"
-                data-en="finalités des êtres">
-                finalities of beings
+                data-fr="finalités des êtres"
+                data-en="finalities of beings">
+                finalités des êtres
             </span>
         </div>
     
@@ -518,14 +551,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-s.a.-'.html"> B:M:.e.-s.a.-' </a>
             <span class="translation"
-                data-fr="ideals of thought"
-                data-en="idéaux de pensée">
-                ideals of thought
+                data-fr="idéaux de pensée"
+                data-en="ideals of thought">
+                idéaux de pensée
             </span>
         </div>
     
@@ -533,14 +566,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-b.a.-'.html"> B:M:.e.-b.a.-' </a>
             <span class="translation"
-                data-fr="ideals of speech"
-                data-en="idéaux de parole">
-                ideals of speech
+                data-fr="idéaux de parole"
+                data-en="ideals of speech">
+                idéaux de parole
             </span>
         </div>
     
@@ -548,14 +581,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-t.a.-'.html"> B:M:.e.-t.a.-' </a>
             <span class="translation"
-                data-fr="ideals of memory"
-                data-en="idéaux de mémoire">
-                ideals of memory
+                data-fr="idéaux de mémoire"
+                data-en="ideals of memory">
+                idéaux de mémoire
             </span>
         </div>
     
@@ -563,14 +596,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-k.a.-'.html"> B:M:.e.-k.a.-' </a>
             <span class="translation"
-                data-fr="commitment ideals"
-                data-en="idéaux d'engagement">
-                commitment ideals
+                data-fr="idéaux d'engagement"
+                data-en="commitment ideals">
+                idéaux d'engagement
             </span>
         </div>
     
@@ -578,14 +611,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-m.a.-'.html"> B:M:.e.-m.a.-' </a>
             <span class="translation"
-                data-fr="heart ideals"
-                data-en="idéaux du coeur">
-                heart ideals
+                data-fr="idéaux du coeur"
+                data-en="heart ideals">
+                idéaux du coeur
             </span>
         </div>
     
@@ -593,14 +626,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-n.a.-'.html"> B:M:.e.-n.a.-' </a>
             <span class="translation"
-                data-fr="discerning ideals"
-                data-en="idéaux de discernement">
-                discerning ideals
+                data-fr="idéaux de discernement"
+                data-en="discerning ideals">
+                idéaux de discernement
             </span>
         </div>
     
@@ -608,14 +641,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-d.a.-'.html"> B:M:.e.-d.a.-' </a>
             <span class="translation"
-                data-fr="truthfulness ideals"
-                data-en="idéaux de véracité">
-                truthfulness ideals
+                data-fr="idéaux de véracité"
+                data-en="truthfulness ideals">
+                idéaux de véracité
             </span>
         </div>
     
@@ -623,14 +656,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-f.a.-'.html"> B:M:.e.-f.a.-' </a>
             <span class="translation"
-                data-fr="health ideals"
-                data-en="idéaux de santé">
-                health ideals
+                data-fr="idéaux de santé"
+                data-en="health ideals">
+                idéaux de santé
             </span>
         </div>
     
@@ -638,14 +671,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-l.a.-'.html"> B:M:.e.-l.a.-' </a>
             <span class="translation"
-                data-fr="safety ideals"
-                data-en="idéaux de sureté">
-                safety ideals
+                data-fr="idéaux de sureté"
+                data-en="safety ideals">
+                idéaux de sureté
             </span>
         </div>
     
@@ -656,14 +689,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-M_M_.a.-'.html"> k.e.-M:M:.a.-' </a>
             <span class="translation"
-                data-fr="personal finalities"
-                data-en="finalités personnelles">
-                personal finalities
+                data-fr="finalités personnelles"
+                data-en="personal finalities">
+                finalités personnelles
             </span>
         </div>
     
@@ -677,9 +710,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-s.a.-'.html"> k.e.-s.a.-' </a>
             <span class="translation"
-                data-fr="psychic autonomy"
-                data-en="autonomie psychique">
-                psychic autonomy
+                data-fr="autonomie psychique"
+                data-en="psychic autonomy">
+                autonomie psychique
             </span>
         </div>
     
@@ -692,9 +725,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-b.a.-'.html"> k.e.-b.a.-' </a>
             <span class="translation"
-                data-fr="personal credibility"
-                data-en="crédibilité personnelle">
-                personal credibility
+                data-fr="crédibilité personnelle"
+                data-en="personal credibility">
+                crédibilité personnelle
             </span>
         </div>
     
@@ -707,9 +740,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-t.a.-'.html"> k.e.-t.a.-' </a>
             <span class="translation"
-                data-fr="personal memory (remembering)"
-                data-en="mémoire personnelle (se souvenir)">
-                personal memory (remembering)
+                data-fr="mémoire personnelle (se souvenir)"
+                data-en="personal memory (remembering)">
+                mémoire personnelle (se souvenir)
             </span>
         </div>
     
@@ -737,9 +770,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-m.a.-'.html"> k.e.-m.a.-' </a>
             <span class="translation"
-                data-fr="affective autonomy"
-                data-en="autonomie affective">
-                affective autonomy
+                data-fr="autonomie affective"
+                data-en="affective autonomy">
+                autonomie affective
             </span>
         </div>
     
@@ -752,9 +785,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-n.a.-'.html"> k.e.-n.a.-' </a>
             <span class="translation"
-                data-fr="personal ethics"
-                data-en="éthique personnelle">
-                personal ethics
+                data-fr="éthique personnelle"
+                data-en="personal ethics">
+                éthique personnelle
             </span>
         </div>
     
@@ -767,9 +800,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-d.a.-'.html"> k.e.-d.a.-' </a>
             <span class="translation"
-                data-fr="sober judgement"
-                data-en="jugement sobre">
-                sober judgement
+                data-fr="jugement sobre"
+                data-en="sober judgement">
+                jugement sobre
             </span>
         </div>
     
@@ -782,9 +815,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-f.a.-'.html"> k.e.-f.a.-' </a>
             <span class="translation"
-                data-fr="physical autonomy"
-                data-en="autonomie physique">
-                physical autonomy
+                data-fr="autonomie physique"
+                data-en="physical autonomy">
+                autonomie physique
             </span>
         </div>
     
@@ -797,9 +830,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-l.a.-'.html"> k.e.-l.a.-' </a>
             <span class="translation"
-                data-fr="personal security | personal safety"
-                data-en="sécurité personnelle">
-                personal security | personal safety
+                data-fr="sécurité personnelle"
+                data-en="personal security | personal safety">
+                sécurité personnelle
             </span>
         </div>
     
@@ -810,14 +843,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-M_M_.a.-'.html"> m.e.-M:M:.a.-' </a>
             <span class="translation"
-                data-fr="inter-personal finalities"
-                data-en="finalités inter-personnelles">
-                inter-personal finalities
+                data-fr="finalités inter-personnelles"
+                data-en="inter-personal finalities">
+                finalités inter-personnelles
             </span>
         </div>
     
@@ -831,9 +864,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-s.a.-'.html"> m.e.-s.a.-' </a>
             <span class="translation"
-                data-fr="teachings from others"
-                data-en="enseignements d'autrui">
-                teachings from others
+                data-fr="enseignements d'autrui"
+                data-en="teachings from others">
+                enseignements d'autrui
             </span>
         </div>
     
@@ -861,9 +894,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-t.a.-'.html"> m.e.-t.a.-' </a>
             <span class="translation"
-                data-fr="strength of personal ties"
-                data-en="force des liens personnels">
-                strength of personal ties
+                data-fr="force des liens personnels"
+                data-en="strength of personal ties">
+                force des liens personnels
             </span>
         </div>
     
@@ -876,9 +909,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-k.a.-'.html"> m.e.-k.a.-' </a>
             <span class="translation"
-                data-fr="collective efficiency"
-                data-en="efficacité collective">
-                collective efficiency
+                data-fr="efficacité collective"
+                data-en="collective efficiency">
+                efficacité collective
             </span>
         </div>
     
@@ -891,9 +924,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-m.a.-'.html"> m.e.-m.a.-' </a>
             <span class="translation"
-                data-fr="reciprocity"
-                data-en="réciprocité">
-                reciprocity
+                data-fr="réciprocité"
+                data-en="reciprocity">
+                réciprocité
             </span>
         </div>
     
@@ -906,9 +939,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-n.a.-'.html"> m.e.-n.a.-' </a>
             <span class="translation"
-                data-fr="ethic of the entourage"
-                data-en="éthique de l'entourage">
-                ethic of the entourage
+                data-fr="éthique de l'entourage"
+                data-en="ethic of the entourage">
+                éthique de l'entourage
             </span>
         </div>
     
@@ -921,9 +954,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-d.a.-'.html"> m.e.-d.a.-' </a>
             <span class="translation"
-                data-fr="method of investigation"
-                data-en="méthode d'investigation">
-                method of investigation
+                data-fr="méthode d'investigation"
+                data-en="method of investigation">
+                méthode d'investigation
             </span>
         </div>
     
@@ -936,9 +969,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-f.a.-'.html"> m.e.-f.a.-' </a>
             <span class="translation"
-                data-fr="well-being"
-                data-en="bien-être">
-                well-being
+                data-fr="bien-être"
+                data-en="well-being">
+                bien-être
             </span>
         </div>
     
@@ -951,9 +984,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-l.a.-'.html"> m.e.-l.a.-' </a>
             <span class="translation"
-                data-fr="power of the law"
-                data-en="force de la loi">
-                power of the law
+                data-fr="force de la loi"
+                data-en="power of the law">
+                force de la loi
             </span>
         </div>
     
@@ -964,14 +997,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-M_M_.a.-'.html"> n.e.-M:M:.a.-' </a>
             <span class="translation"
-                data-fr="collective finalities"
-                data-en="finalités collectives">
-                collective finalities
+                data-fr="finalités collectives"
+                data-en="collective finalities">
+                finalités collectives
             </span>
         </div>
     
@@ -985,9 +1018,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-s.a.-'.html"> n.e.-s.a.-' </a>
             <span class="translation"
-                data-fr="collective approach"
-                data-en="démarche collective">
-                collective approach
+                data-fr="démarche collective"
+                data-en="collective approach">
+                démarche collective
             </span>
         </div>
     
@@ -1000,9 +1033,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-b.a.-'.html"> n.e.-b.a.-' </a>
             <span class="translation"
-                data-fr="community's influence"
-                data-en="rayonnement de la communauté">
-                community's influence
+                data-fr="rayonnement de la communauté"
+                data-en="community's influence">
+                rayonnement de la communauté
             </span>
         </div>
     
@@ -1015,9 +1048,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-t.a.-'.html"> n.e.-t.a.-' </a>
             <span class="translation"
-                data-fr="civilization"
-                data-en="civilisation">
-                civilization
+                data-fr="civilisation"
+                data-en="civilization">
+                civilisation
             </span>
         </div>
     
@@ -1030,9 +1063,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-k.a.-'.html"> n.e.-k.a.-' </a>
             <span class="translation"
-                data-fr="transparency (absence of corruption)"
-                data-en="transparence (absence de corruption)">
-                transparency (absence of corruption)
+                data-fr="transparence (absence de corruption)"
+                data-en="transparency (absence of corruption)">
+                transparence (absence de corruption)
             </span>
         </div>
     
@@ -1045,9 +1078,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-m.a.-'.html"> n.e.-m.a.-' </a>
             <span class="translation"
-                data-fr="harmony | mutual understanding"
-                data-en="harmonie | entente | compréhension mutuelle">
-                harmony | mutual understanding
+                data-fr="harmonie | entente | compréhension mutuelle"
+                data-en="harmony | mutual understanding">
+                harmonie | entente | compréhension mutuelle
             </span>
         </div>
     
@@ -1060,9 +1093,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-n.a.-'.html"> n.e.-n.a.-' </a>
             <span class="translation"
-                data-fr="moral refinement"
-                data-en="raffinement moral">
-                moral refinement
+                data-fr="raffinement moral"
+                data-en="moral refinement">
+                raffinement moral
             </span>
         </div>
     
@@ -1075,9 +1108,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-d.a.-'.html"> n.e.-d.a.-' </a>
             <span class="translation"
-                data-fr="informing the public"
-                data-en="information du public">
-                informing the public
+                data-fr="information du public"
+                data-en="informing the public">
+                information du public
             </span>
         </div>
     
@@ -1090,9 +1123,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-f.a.-'.html"> n.e.-f.a.-' </a>
             <span class="translation"
-                data-fr="prevention, recovery"
-                data-en="prévention, guérison">
-                prevention, recovery
+                data-fr="prévention, guérison"
+                data-en="prevention, recovery">
+                prévention, guérison
             </span>
         </div>
     
@@ -1105,9 +1138,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-l.a.-'.html"> n.e.-l.a.-' </a>
             <span class="translation"
-                data-fr="collective security | collective safety"
-                data-en="sécurité collective">
-                collective security | collective safety
+                data-fr="sécurité collective"
+                data-en="collective security | collective safety">
+                sécurité collective
             </span>
         </div>
     
@@ -1129,19 +1162,19 @@
        aria-labelledby="nav-tables-2-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="B_M_.e.-M_M_.a.-wa.e.-'.html">B:M:.e.-M:M:.a.-wa.e.-'</a> virtues | arts of beings</div>-->
+            <!--<div class="card-header">Table <a href="B_M_.e.-M_M_.a.-wa.e.-'.html">B:M:.e.-M:M:.a.-wa.e.-'</a> vertus | arts des êtres</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="10" style="background-color: #d9eaff;">
+    <th class="cell" colspan="10" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-M_M_.a.-wa.e.-'.html"> B:M:.e.-M:M:.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues | arts of beings"
-                data-en="vertus | arts des êtres">
-                virtues | arts of beings
+                data-fr="vertus | arts des êtres"
+                data-en="virtues | arts of beings">
+                vertus | arts des êtres
             </span>
         </div>
     
@@ -1152,14 +1185,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-s.a.-wa.e.-'.html"> B:M:.e.-s.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of understanding"
-                data-en="vertus de compréhension">
-                virtues of understanding
+                data-fr="vertus de compréhension"
+                data-en="virtues of understanding">
+                vertus de compréhension
             </span>
         </div>
     
@@ -1167,14 +1200,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-b.a.-wa.e.-'.html"> B:M:.e.-b.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of speech"
-                data-en="vertus de parole">
-                virtues of speech
+                data-fr="vertus de parole"
+                data-en="virtues of speech">
+                vertus de parole
             </span>
         </div>
     
@@ -1182,14 +1215,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-t.a.-wa.e.-'.html"> B:M:.e.-t.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of memory"
-                data-en="vertus de mémoire">
-                virtues of memory
+                data-fr="vertus de mémoire"
+                data-en="virtues of memory">
+                vertus de mémoire
             </span>
         </div>
     
@@ -1197,14 +1230,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-k.a.-wa.e.-'.html"> B:M:.e.-k.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of commitment"
-                data-en="vertus d'engagement">
-                virtues of commitment
+                data-fr="vertus d'engagement"
+                data-en="virtues of commitment">
+                vertus d'engagement
             </span>
         </div>
     
@@ -1212,14 +1245,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-m.a.-wa.e.-'.html"> B:M:.e.-m.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of the heart"
-                data-en="vertus de coeur">
-                virtues of the heart
+                data-fr="vertus de coeur"
+                data-en="virtues of the heart">
+                vertus de coeur
             </span>
         </div>
     
@@ -1227,14 +1260,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-n.a.-wa.e.-'.html"> B:M:.e.-n.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of discerning"
-                data-en="vertus de discernement">
-                virtues of discerning
+                data-fr="vertus de discernement"
+                data-en="virtues of discerning">
+                vertus de discernement
             </span>
         </div>
     
@@ -1242,14 +1275,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-d.a.-wa.e.-'.html"> B:M:.e.-d.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of truthfulness"
-                data-en="vertus de véracité">
-                virtues of truthfulness
+                data-fr="vertus de véracité"
+                data-en="virtues of truthfulness">
+                vertus de véracité
             </span>
         </div>
     
@@ -1257,14 +1290,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-f.a.-wa.e.-'.html"> B:M:.e.-f.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="health virtues"
-                data-en="vertus de santé">
-                health virtues
+                data-fr="vertus de santé"
+                data-en="health virtues">
+                vertus de santé
             </span>
         </div>
     
@@ -1272,14 +1305,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_M_.e.-l.a.-wa.e.-'.html"> B:M:.e.-l.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="virtues of safety"
-                data-en="vertus de sureté">
-                virtues of safety
+                data-fr="vertus de sureté"
+                data-en="virtues of safety">
+                vertus de sureté
             </span>
         </div>
     
@@ -1290,14 +1323,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-M_M_.a.-wa.e.-'.html"> k.e.-M:M:.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="grammar of the being"
-                data-en="grammaire de l'être">
-                grammar of the being
+                data-fr="grammaire de l'être"
+                data-en="grammar of the being">
+                grammaire de l'être
             </span>
         </div>
     
@@ -1311,9 +1344,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-s.a.-wa.e.-'.html"> k.e.-s.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="understanding oneself (skill)"
-                data-en="compréhension de soi-même (compétence)">
-                understanding oneself (skill)
+                data-fr="compréhension de soi-même (compétence)"
+                data-en="understanding oneself (skill)">
+                compréhension de soi-même (compétence)
             </span>
         </div>
     
@@ -1326,9 +1359,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-b.a.-wa.e.-'.html"> k.e.-b.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="speaking sincerely (skill)"
-                data-en="parole sincère (compétence)">
-                speaking sincerely (skill)
+                data-fr="parole sincère (compétence)"
+                data-en="speaking sincerely (skill)">
+                parole sincère (compétence)
             </span>
         </div>
     
@@ -1341,9 +1374,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-t.a.-wa.e.-'.html"> k.e.-t.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="memory training (skill)"
-                data-en="entraînement de la mémoire (compétence)">
-                memory training (skill)
+                data-fr="entraînement de la mémoire (compétence)"
+                data-en="memory training (skill)">
+                entraînement de la mémoire (compétence)
             </span>
         </div>
     
@@ -1356,9 +1389,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-k.a.-wa.e.-'.html"> k.e.-k.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="following a discipline (skill)"
-                data-en="adhésion à une discipline (compétence)">
-                following a discipline (skill)
+                data-fr="adhésion à une discipline (compétence)"
+                data-en="following a discipline (skill)">
+                adhésion à une discipline (compétence)
             </span>
         </div>
     
@@ -1371,9 +1404,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-m.a.-wa.e.-'.html"> k.e.-m.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="friendship with oneself (skill)"
-                data-en="amitié avec soi-même (compétence)">
-                friendship with oneself (skill)
+                data-fr="amitié avec soi-même (compétence)"
+                data-en="friendship with oneself (skill)">
+                amitié avec soi-même (compétence)
             </span>
         </div>
     
@@ -1386,9 +1419,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-n.a.-wa.e.-'.html"> k.e.-n.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="self-evaluation (skill)"
-                data-en="auto-évaluation (compétence)">
-                self-evaluation (skill)
+                data-fr="auto-évaluation (compétence)"
+                data-en="self-evaluation (skill)">
+                auto-évaluation (compétence)
             </span>
         </div>
     
@@ -1401,9 +1434,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-d.a.-wa.e.-'.html"> k.e.-d.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="having a cool head (skill)"
-                data-en="avoir la tête froide (compétence)">
-                having a cool head (skill)
+                data-fr="avoir la tête froide (compétence)"
+                data-en="having a cool head (skill)">
+                avoir la tête froide (compétence)
             </span>
         </div>
     
@@ -1416,9 +1449,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-f.a.-wa.e.-'.html"> k.e.-f.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="taking care of oneself (skill)"
-                data-en="prendre soin de soi-même (compétence)">
-                taking care of oneself (skill)
+                data-fr="prendre soin de soi-même (compétence)"
+                data-en="taking care of oneself (skill)">
+                prendre soin de soi-même (compétence)
             </span>
         </div>
     
@@ -1431,9 +1464,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.e.-l.a.-wa.e.-'.html"> k.e.-l.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="self-protection (skill)"
-                data-en="auto-protection (compétence)">
-                self-protection (skill)
+                data-fr="auto-protection (compétence)"
+                data-en="self-protection (skill)">
+                auto-protection (compétence)
             </span>
         </div>
     
@@ -1444,14 +1477,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-M_M_.a.-wa.e.-'.html"> m.e.-M:M:.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="dialectic of the being"
-                data-en="dialectique de l'être">
-                dialectic of the being
+                data-fr="dialectique de l'être"
+                data-en="dialectic of the being">
+                dialectique de l'être
             </span>
         </div>
     
@@ -1465,9 +1498,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-s.a.-wa.e.-'.html"> m.e.-s.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="understanding others (skill)"
-                data-en="compréhension d'autrui (compétence)">
-                understanding others (skill)
+                data-fr="compréhension d'autrui (compétence)"
+                data-en="understanding others (skill)">
+                compréhension d'autrui (compétence)
             </span>
         </div>
     
@@ -1480,9 +1513,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-b.a.-wa.e.-'.html"> m.e.-b.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="speaking wisely (skill)"
-                data-en="paroles sages (compétence)">
-                speaking wisely (skill)
+                data-fr="paroles sages (compétence)"
+                data-en="speaking wisely (skill)">
+                paroles sages (compétence)
             </span>
         </div>
     
@@ -1495,9 +1528,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-t.a.-wa.e.-'.html"> m.e.-t.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="fidelity (skill)"
-                data-en="fidélité (compétence)">
-                fidelity (skill)
+                data-fr="fidélité (compétence)"
+                data-en="fidelity (skill)">
+                fidélité (compétence)
             </span>
         </div>
     
@@ -1510,9 +1543,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-k.a.-wa.e.-'.html"> m.e.-k.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="collaborative attitude (skill)"
-                data-en="attitude collaborative (compétence)">
-                collaborative attitude (skill)
+                data-fr="attitude collaborative (compétence)"
+                data-en="collaborative attitude (skill)">
+                attitude collaborative (compétence)
             </span>
         </div>
     
@@ -1525,9 +1558,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-m.a.-wa.e.-'.html"> m.e.-m.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="solicitude (skill)"
-                data-en="sollicitude (compétence)">
-                solicitude (skill)
+                data-fr="sollicitude (compétence)"
+                data-en="solicitude (skill)">
+                sollicitude (compétence)
             </span>
         </div>
     
@@ -1540,9 +1573,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-n.a.-wa.e.-'.html"> m.e.-n.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="moral judgement (skill)"
-                data-en="jugement moral (compétence)">
-                moral judgement (skill)
+                data-fr="jugement moral (compétence)"
+                data-en="moral judgement (skill)">
+                jugement moral (compétence)
             </span>
         </div>
     
@@ -1555,9 +1588,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-d.a.-wa.e.-'.html"> m.e.-d.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="truth seeking (skill)"
-                data-en="recherche de la vérité (compétence)">
-                truth seeking (skill)
+                data-fr="recherche de la vérité (compétence)"
+                data-en="truth seeking (skill)">
+                recherche de la vérité (compétence)
             </span>
         </div>
     
@@ -1570,9 +1603,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-f.a.-wa.e.-'.html"> m.e.-f.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="causing well-being (skill)"
-                data-en="causer le bien-être (compétence)">
-                causing well-being (skill)
+                data-fr="causer le bien-être (compétence)"
+                data-en="causing well-being (skill)">
+                causer le bien-être (compétence)
             </span>
         </div>
     
@@ -1585,9 +1618,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.e.-l.a.-wa.e.-'.html"> m.e.-l.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="abiding by law and norms (skill)"
-                data-en="respect de la loi et des normes (compétence)">
-                abiding by law and norms (skill)
+                data-fr="respect de la loi et des normes (compétence)"
+                data-en="abiding by law and norms (skill)">
+                respect de la loi et des normes (compétence)
             </span>
         </div>
     
@@ -1598,14 +1631,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-M_M_.a.-wa.e.-'.html"> n.e.-M:M:.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="rhetoric of the being"
-                data-en="rhétorique de l'être">
-                rhetoric of the being
+                data-fr="rhétorique de l'être"
+                data-en="rhetoric of the being">
+                rhétorique de l'être
             </span>
         </div>
     
@@ -1619,9 +1652,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-s.a.-wa.e.-'.html"> n.e.-s.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="giving meaning to a group (skill)"
-                data-en="donner du sens à un groupe (compétence)">
-                giving meaning to a group (skill)
+                data-fr="donner du sens à un groupe (compétence)"
+                data-en="giving meaning to a group (skill)">
+                donner du sens à un groupe (compétence)
             </span>
         </div>
     
@@ -1634,9 +1667,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-b.a.-wa.e.-'.html"> n.e.-b.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="representing a group (skill)"
-                data-en="représenter un groupe (compétence)">
-                representing a group (skill)
+                data-fr="représenter un groupe (compétence)"
+                data-en="representing a group (skill)">
+                représenter un groupe (compétence)
             </span>
         </div>
     
@@ -1649,9 +1682,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-t.a.-wa.e.-'.html"> n.e.-t.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="establishing a tradition (skill)"
-                data-en="établir une tradition (compétence)">
-                establishing a tradition (skill)
+                data-fr="établir une tradition (compétence)"
+                data-en="establishing a tradition (skill)">
+                établir une tradition (compétence)
             </span>
         </div>
     
@@ -1664,9 +1697,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-k.a.-wa.e.-'.html"> n.e.-k.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="giving oneself as an example (skill)"
-                data-en="se donner en exemple (compétence)">
-                giving oneself as an example (skill)
+                data-fr="se donner en exemple (compétence)"
+                data-en="giving oneself as an example (skill)">
+                se donner en exemple (compétence)
             </span>
         </div>
     
@@ -1679,9 +1712,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-m.a.-wa.e.-'.html"> n.e.-m.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="inspiring harmony (skill)"
-                data-en="inspirer l'harmonie (compétence)">
-                inspiring harmony (skill)
+                data-fr="inspirer l'harmonie (compétence)"
+                data-en="inspiring harmony (skill)">
+                inspirer l'harmonie (compétence)
             </span>
         </div>
     
@@ -1694,9 +1727,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-n.a.-wa.e.-'.html"> n.e.-n.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="forging values (skill)"
-                data-en="forger des valeurs (compétence)">
-                forging values (skill)
+                data-fr="forger des valeurs (compétence)"
+                data-en="forging values (skill)">
+                forger des valeurs (compétence)
             </span>
         </div>
     
@@ -1709,9 +1742,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-d.a.-wa.e.-'.html"> n.e.-d.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="releasing the truth (skill)"
-                data-en="publier la vérité (compétence)">
-                releasing the truth (skill)
+                data-fr="publier la vérité (compétence)"
+                data-en="releasing the truth (skill)">
+                publier la vérité (compétence)
             </span>
         </div>
     
@@ -1724,9 +1757,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-f.a.-wa.e.-'.html"> n.e.-f.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="prevent, heal (skill)"
-                data-en="prévenir, guérir (compétence)">
-                prevent, heal (skill)
+                data-fr="prévenir, guérir (compétence)"
+                data-en="prevent, heal (skill)">
+                prévenir, guérir (compétence)
             </span>
         </div>
     
@@ -1739,9 +1772,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="n.e.-l.a.-wa.e.-'.html"> n.e.-l.a.-wa.e.-' </a>
             <span class="translation"
-                data-fr="protecting a group (skill)"
-                data-en="protéger un groupe (compétence)">
-                protecting a group (skill)
+                data-fr="protéger un groupe (compétence)"
+                data-en="protecting a group (skill)">
+                protéger un groupe (compétence)
             </span>
         </div>
     
@@ -1758,7 +1791,7 @@
         
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1773,6 +1806,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1782,6 +1825,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1818,5 +1862,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

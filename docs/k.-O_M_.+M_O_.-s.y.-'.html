@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             k.-O:M:.+M:O:.-s.y.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>social studies</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>études sociales</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>études sociales</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>social studies</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>4</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
         
             
@@ -146,6 +158,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -158,8 +189,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -182,8 +214,8 @@
                 
                     <tr>
                         <td><a href="k.-O_M_.+M_O_.-'.html">k.-O:M:.+M:O:.-'</a></td>
-                        <td>objects of social sciences</td>
                         <td>objets des sciences sociales</td>
+                        <td>objects of social sciences</td>
                     </tr>
                 
                 </tbody>
@@ -191,10 +223,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -217,14 +249,14 @@
                 
                     <tr>
                         <td><a href="k.-O_M_.-s.y.-'.html">k.-O:M:.-s.y.-'</a></td>
-                        <td>social studies (1)</td>
                         <td>études sociales (1)</td>
+                        <td>social studies (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="k.-M_O_.-s.y.-'.html">k.-M:O:.-s.y.-'</a></td>
-                        <td>social studies (2)</td>
                         <td>études sociales (2)</td>
+                        <td>social studies (2)</td>
                     </tr>
                 
                 </tbody>
@@ -232,8 +264,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -256,14 +288,14 @@
                 
                     <tr>
                         <td><a href="M_M_.-O_M_.+M_O_.-s.y.-'.html">M:M:.-O:M:.+M:O:.-s.y.-'</a></td>
-                        <td>humanities and social sciences</td>
                         <td>sciences humaines</td>
+                        <td>humanities and social sciences</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-O_M_.+M_O_.-E_.-+s.y.-'.html">M:M:.-O:M:.+M:O:.-E:.-+s.y.-'</a></td>
-                        <td>humanities, social sciences and their objects</td>
                         <td>les sciences humaines et leurs objets</td>
+                        <td>humanities, social sciences and their objects</td>
                     </tr>
                 
                 </tbody>
@@ -271,11 +303,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -298,8 +331,8 @@
                 
                     <tr>
                         <td><a href="k..html">k.</a></td>
+                        <td>société</td>
                         <td>society</td>
-                        <td>sociétés</td>
                     </tr>
                 
                 </tbody>
@@ -307,8 +340,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -346,8 +379,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -370,8 +403,8 @@
                 
                     <tr>
                         <td><a href="s.y.-.html">s.y.-</a></td>
-                        <td>organized knowledge</td>
                         <td>connaissance organisée</td>
+                        <td>organized knowledge</td>
                     </tr>
                 
                 </tbody>
@@ -379,8 +412,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -396,19 +429,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="k.-O_M_.-s.y.-'.html">k.-O:M:.-s.y.-'</a> social studies (1)</div>-->
+            <!--<div class="card-header">Table <a href="k.-O_M_.-s.y.-'.html">k.-O:M:.-s.y.-'</a> études sociales (1)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-O_M_.-s.y.-'.html"> k.-O:M:.-s.y.-' </a>
             <span class="translation"
-                data-fr="social studies (1)"
-                data-en="études sociales (1)">
-                social studies (1)
+                data-fr="études sociales (1)"
+                data-en="social studies (1)">
+                études sociales (1)
             </span>
         </div>
     
@@ -419,7 +452,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-O_S_.-s.y.-'.html"> k.-O:S:.-s.y.-' </a>
@@ -434,7 +467,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-O_B_.-s.y.-'.html"> k.-O:B:.-s.y.-' </a>
@@ -449,7 +482,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-O_T_.-s.y.-'.html"> k.-O:T:.-s.y.-' </a>
@@ -467,7 +500,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-U_M_.-s.y.-'.html"> k.-U:M:.-s.y.-' </a>
@@ -488,9 +521,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-y.-s.y.-'.html"> k.-y.-s.y.-' </a>
             <span class="translation"
-                data-fr="sociology of sciences"
-                data-en="sociologie des sciences">
-                sociology of sciences
+                data-fr="sociologie des sciences"
+                data-en="sociology of sciences">
+                sociologie des sciences
             </span>
         </div>
     
@@ -503,9 +536,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-o.-s.y.-'.html"> k.-o.-s.y.-' </a>
             <span class="translation"
-                data-fr="socio-political movements studies"
-                data-en="études mouvements socio-politiquess">
-                socio-political movements studies
+                data-fr="études mouvements socio-politiquess"
+                data-en="socio-political movements studies">
+                études mouvements socio-politiquess
             </span>
         </div>
     
@@ -518,9 +551,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-e.-s.y.-'.html"> k.-e.-s.y.-' </a>
             <span class="translation"
-                data-fr="management sciences"
-                data-en="sciences de la gestion">
-                management sciences
+                data-fr="sciences de la gestion"
+                data-en="management sciences">
+                sciences de la gestion
             </span>
         </div>
     
@@ -531,7 +564,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-A_M_.-s.y.-'.html"> k.-A:M:.-s.y.-' </a>
@@ -552,9 +585,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-u.-s.y.-'.html"> k.-u.-s.y.-' </a>
             <span class="translation"
-                data-fr="media studies | social communication studies"
-                data-en="études des médias et de la communication sociale">
-                media studies | social communication studies
+                data-fr="études des médias et de la communication sociale"
+                data-en="media studies | social communication studies">
+                études des médias et de la communication sociale
             </span>
         </div>
     
@@ -567,9 +600,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-a.-s.y.-'.html"> k.-a.-s.y.-' </a>
             <span class="translation"
-                data-fr="civil society studies"
-                data-en="études de la société civile">
-                civil society studies
+                data-fr="études de la société civile"
+                data-en="civil society studies">
+                études de la société civile
             </span>
         </div>
     
@@ -582,9 +615,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-i.-s.y.-'.html"> k.-i.-s.y.-' </a>
             <span class="translation"
-                data-fr="sociology of techniques"
-                data-en="sociologie des techniques">
-                sociology of techniques
+                data-fr="sociologie des techniques"
+                data-en="sociology of techniques">
+                sociologie des techniques
             </span>
         </div>
     
@@ -606,19 +639,19 @@
        aria-labelledby="nav-tables-2-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="k.-M_O_.-s.y.-'.html">k.-M:O:.-s.y.-'</a> social studies (2)</div>-->
+            <!--<div class="card-header">Table <a href="k.-M_O_.-s.y.-'.html">k.-M:O:.-s.y.-'</a> études sociales (2)</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-M_O_.-s.y.-'.html"> k.-M:O:.-s.y.-' </a>
             <span class="translation"
-                data-fr="social studies (2)"
-                data-en="études sociales (2)">
-                social studies (2)
+                data-fr="études sociales (2)"
+                data-en="social studies (2)">
+                études sociales (2)
             </span>
         </div>
     
@@ -629,7 +662,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-M_U_.-s.y.-'.html"> k.-M:U:.-s.y.-' </a>
@@ -644,7 +677,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-M_A_.-s.y.-'.html"> k.-M:A:.-s.y.-' </a>
@@ -662,7 +695,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-S_O_.-s.y.-'.html"> k.-S:O:.-s.y.-' </a>
@@ -683,9 +716,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-j.-s.y.-'.html"> k.-j.-s.y.-' </a>
             <span class="translation"
-                data-fr="art | literature sociology"
-                data-en="sociologie de l'art | de la littérature">
-                art | literature sociology
+                data-fr="sociologie de l'art | de la littérature"
+                data-en="art | literature sociology">
+                sociologie de l'art | de la littérature
             </span>
         </div>
     
@@ -698,9 +731,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-g.-s.y.-'.html"> k.-g.-s.y.-' </a>
             <span class="translation"
-                data-fr="focus groups"
-                data-en="enquêtes par groupes de discussion">
-                focus groups
+                data-fr="enquêtes par groupes de discussion"
+                data-en="focus groups">
+                enquêtes par groupes de discussion
             </span>
         </div>
     
@@ -711,7 +744,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-B_O_.-s.y.-'.html"> k.-B:O:.-s.y.-' </a>
@@ -732,9 +765,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-h.-s.y.-'.html"> k.-h.-s.y.-' </a>
             <span class="translation"
-                data-fr="ecclesiology | religious communitity studies"
-                data-en="ecclésiologie | étude des communautés religieuse">
-                ecclesiology | religious communitity studies
+                data-fr="ecclésiologie | étude des communautés religieuse"
+                data-en="ecclesiology | religious communitity studies">
+                ecclésiologie | étude des communautés religieuse
             </span>
         </div>
     
@@ -747,9 +780,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-c.-s.y.-'.html"> k.-c.-s.y.-' </a>
             <span class="translation"
-                data-fr="social psychology"
-                data-en="psychologie sociale">
-                social psychology
+                data-fr="psychologie sociale"
+                data-en="social psychology">
+                psychologie sociale
             </span>
         </div>
     
@@ -760,7 +793,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="k.-T_O_.-s.y.-'.html"> k.-T:O:.-s.y.-' </a>
@@ -781,9 +814,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-p.-s.y.-'.html"> k.-p.-s.y.-' </a>
             <span class="translation"
-                data-fr="criminology"
-                data-en="criminologie">
-                criminology
+                data-fr="criminologie"
+                data-en="criminology">
+                criminologie
             </span>
         </div>
     
@@ -796,9 +829,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="k.-x.-s.y.-'.html"> k.-x.-s.y.-' </a>
             <span class="translation"
-                data-fr="conversation | recommandation (studies)"
-                data-en="conversation | recommandation (études)">
-                conversation | recommandation (studies)
+                data-fr="conversation | recommandation (études)"
+                data-en="conversation | recommandation (studies)">
+                conversation | recommandation (études)
             </span>
         </div>
     
@@ -815,7 +848,7 @@
         
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -830,6 +863,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -839,6 +882,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -875,5 +919,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

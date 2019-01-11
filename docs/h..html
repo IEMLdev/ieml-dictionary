@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             h.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>subject</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sujet</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sujet</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>subject</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -161,8 +193,8 @@
                 
                     <tr>
                         <td><a href="o..html">o.</a></td>
-                        <td>want</td>
                         <td>vouloir</td>
+                        <td>want</td>
                     </tr>
                 
                 </tbody>
@@ -170,10 +202,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -196,14 +228,14 @@
                 
                     <tr>
                         <td><a href="B_O_..html">B:O:.</a></td>
-                        <td>personal agents</td>
                         <td>agents personnels</td>
+                        <td>personal agents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_..html">M:U:.</a></td>
-                        <td>virtual agents</td>
                         <td>agents virtuels</td>
+                        <td>virtual agents</td>
                     </tr>
                 
                     <tr>
@@ -214,8 +246,8 @@
                 
                     <tr>
                         <td><a href="O_M_.+M_O_..html">O:M:.+M:O:.</a></td>
-                        <td>actions and agents | vertical and horizontal hexads</td>
                         <td>actions et agents | hexades verticale et horizontale</td>
+                        <td>actions and agents | vertical and horizontal hexads</td>
                     </tr>
                 
                 </tbody>
@@ -223,11 +255,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -250,8 +283,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -259,8 +292,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -283,8 +316,8 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                 </tbody>
@@ -292,9 +325,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -317,212 +350,212 @@
                 
                     <tr>
                         <td><a href="h.U_O_.-.html">h.U:O:.-</a></td>
-                        <td>virtual change of meaning</td>
                         <td>changement virtuel de sens</td>
+                        <td>virtual change of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.A_O_.-.html">h.A:O:.-</a></td>
-                        <td>actual change of meaning</td>
                         <td>changement actuel de sens</td>
+                        <td>actual change of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_U_.-.html">h.O:U:.-</a></td>
-                        <td>inside change of meaning</td>
                         <td>changement de sens intérieur</td>
+                        <td>inside change of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_A_.-.html">h.O:A:.-</a></td>
-                        <td>outside change of meaning</td>
                         <td>changement de sens extérieur</td>
+                        <td>outside change of meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_S_.-.html">h.O:S:.-</a></td>
-                        <td>abstract semantic framework</td>
                         <td>cadre sémantique abstrait</td>
+                        <td>abstract semantic framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_S_.m.-.html">h.O:S:.m.-</a></td>
-                        <td>absence from the world</td>
                         <td>absence au monde</td>
+                        <td>absence from the world</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_B_.-.html">h.O:B:.-</a></td>
-                        <td>affective semantic framework</td>
                         <td>cadre sémantique affectif</td>
+                        <td>affective semantic framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_B_.m.-.html">h.O:B:.m.-</a></td>
-                        <td>presence to self and the world</td>
                         <td>présence à soi et au monde</td>
+                        <td>presence to self and the world</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_T_.-.html">h.O:T:.-</a></td>
-                        <td>concrete semantic framewo</td>
                         <td>cadre sémantique concret</td>
+                        <td>concrete semantic framewo</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_T_.m.-.html">h.O:T:.m.-</a></td>
-                        <td>absence to oneself</td>
                         <td>absence à soi</td>
+                        <td>absence to oneself</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.S_O_.-.html">h.S:O:.-</a></td>
-                        <td>abstract transformation of the meaning</td>
                         <td>transformation abstraite du sens</td>
+                        <td>abstract transformation of the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.B_O_.-.html">h.B:O:.-</a></td>
-                        <td>subjective transformation of the meaning</td>
                         <td>transformation subjective du sens</td>
+                        <td>subjective transformation of the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.T_O_.-.html">h.T:O:.-</a></td>
-                        <td>objective transformation of the meaning</td>
                         <td>transformation objective du sens</td>
+                        <td>objective transformation of the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.-.html">h.U:M:.-</a></td>
-                        <td>virtual semantic framework</td>
                         <td>cadre sémantique virtuel</td>
+                        <td>virtual semantic framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.m.-.html">h.U:M:.m.-</a></td>
-                        <td>inter-subjective tropism</td>
                         <td>tropisme inter-subjectif</td>
+                        <td>inter-subjective tropism</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.U_M_.d.-.html">h.U:M:.d.-</a></td>
-                        <td>ethics, subjective forms</td>
                         <td>éthique, formes subjectives</td>
+                        <td>ethics, subjective forms</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.A_M_.-.html">h.A:M:.-</a></td>
-                        <td>actual semantic framework</td>
                         <td>cadre sémantique actuel</td>
+                        <td>actual semantic framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.A_M_.m.-.html">h.A:M:.m.-</a></td>
-                        <td>integration of the self</td>
                         <td>intégration du moi</td>
+                        <td>integration of the self</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.S_M_.-.html">h.S:M:.-</a></td>
-                        <td>formal spiritual obstacle</td>
                         <td>obstacle spirituel formel</td>
+                        <td>formal spiritual obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.B_M_.-.html">h.B:M:.-</a></td>
-                        <td>existential spiritual obstacle</td>
                         <td>obstacle spirituel existentiel</td>
+                        <td>existential spiritual obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.T_M_.-.html">h.T:M:.-</a></td>
-                        <td>objective spiritual obstacle</td>
                         <td>obstacle spirituel objectif</td>
+                        <td>objective spiritual obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_U_.-.html">h.M:U:.-</a></td>
-                        <td>virtual transformation of the meaning</td>
                         <td>transformation virtuelle du sens</td>
+                        <td>virtual transformation of the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_A_.-.html">h.M:A:.-</a></td>
-                        <td>actual transformation of the meaning</td>
                         <td>transformation actuelle du sens</td>
+                        <td>actual transformation of the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_S_.-.html">h.M:S:.-</a></td>
-                        <td>spiritual failure in formal matters</td>
                         <td>défaillance spirituelle dans la forme</td>
+                        <td>spiritual failure in formal matters</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_B_.-.html">h.M:B:.-</a></td>
-                        <td>spiritual failure in intersubjective matters</td>
                         <td>défaillance spirituelle dans l'intersubjectivité</td>
+                        <td>spiritual failure in intersubjective matters</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_T_.-.html">h.M:T:.-</a></td>
-                        <td>spiritual failure in objective matters</td>
                         <td>défaillance spirituelle dans l'objectivité</td>
+                        <td>spiritual failure in objective matters</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_O_.-.html">h.O:O:.-</a></td>
-                        <td>meaning change</td>
                         <td>changement de sens</td>
+                        <td>meaning change</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_M_.-.html">h.O:M:.-</a></td>
-                        <td>semantic process</td>
                         <td>cadre sémantique</td>
+                        <td>semantic process</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.O_M_.m.-.html">h.O:M:.m.-</a></td>
-                        <td>types of subjective self-reference</td>
                         <td>types d'auto-référence subjective</td>
+                        <td>types of subjective self-reference</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_O_.-.html">h.M:O:.-</a></td>
-                        <td>subject in substance</td>
                         <td>sujet en substance</td>
+                        <td>subject in substance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.M_M_.-.html">h.M:M:.-</a></td>
-                        <td>spiritual obstacle</td>
                         <td>obstacle spirituel</td>
+                        <td>spiritual obstacle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'U_M_.-'n.o.-s.o.-'_.html">h.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>religion: regulation of the sacred</td>
                         <td>religion: régulation du sacré</td>
+                        <td>religion: regulation of the sacred</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'A_M_.-'n.o.-s.o.-'_.html">h.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>religion: sacrificial function, rôles du sacrifice</td>
                         <td>religion: fonction sacrificielle, rôles du sacrifice</td>
+                        <td>religion: sacrificial function, rôles du sacrifice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'F_.-'k.o.-t.o.-'_.html">h.-'F:.-'k.o.-t.o.-',</a></td>
-                        <td>religious mutation</td>
                         <td>mutation religieuse</td>
+                        <td>religious mutation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'O_M_.-'n.o.-s.o.-'_.html">h.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>sacrificial and religious functions</td>
                         <td>fonctions sacrificielles et religieuses</td>
+                        <td>sacrificial and religious functions</td>
                     </tr>
                 
                 </tbody>
@@ -530,8 +563,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -554,146 +587,146 @@
                 
                     <tr>
                         <td><a href="U_O_.h.-.html">U:O:.h.-</a></td>
-                        <td>question and deepen the meaning</td>
                         <td>questionner et approfondir le sens</td>
+                        <td>question and deepen the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.h.-.html">A:O:.h.-</a></td>
-                        <td>assess the interpretation and unify the meaning</td>
                         <td>évaluer l'interprétation et unifier le sens</td>
+                        <td>assess the interpretation and unify the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.h.-.html">O:U:.h.-</a></td>
-                        <td>question the meaning and assess the interpretation</td>
                         <td>questionner le sens et évaluer l'interprétation</td>
+                        <td>question the meaning and assess the interpretation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.h.-.html">O:A:.h.-</a></td>
-                        <td>deepen and unify the meaning</td>
                         <td>approfondir et unifier le sens</td>
+                        <td>deepen and unify the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_S_.h.-.html">O:S:.h.-</a></td>
-                        <td>work on the interpretation according to sign</td>
                         <td>travailler l'interprétation selon le sign</td>
+                        <td>work on the interpretation according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_.h.-.html">O:B:.h.-</a></td>
-                        <td>work on the interpretation according to being</td>
                         <td>travailler l'interprétation selon l'être</td>
+                        <td>work on the interpretation according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.h.-.html">O:T:.h.-</a></td>
-                        <td>work on the interpretation according to thing</td>
                         <td>travailler l'interprétation selon la chose</td>
+                        <td>work on the interpretation according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_O_.h.-.html">S:O:.h.-</a></td>
-                        <td>abstract transformation in the meaning</td>
                         <td>transformation abstraite dans le sens</td>
+                        <td>abstract transformation in the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_O_.h.-.html">B:O:.h.-</a></td>
-                        <td>subjective transformation in the meaning</td>
                         <td>transformation subjective dans le sens</td>
+                        <td>subjective transformation in the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_O_.h.-.html">T:O:.h.-</a></td>
-                        <td>objective transformation in the meaning</td>
                         <td>transformation objective dans le sens</td>
+                        <td>objective transformation in the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.h.-.html">U:M:.h.-</a></td>
-                        <td>work on the interpretation virtually</td>
                         <td>travailler l'interprétation virtuellement</td>
+                        <td>work on the interpretation virtually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.h.-.html">A:M:.h.-</a></td>
-                        <td>work on the interpretation actually</td>
                         <td>travailler l'interprétation actuellement</td>
+                        <td>work on the interpretation actually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_U_.h.-.html">M:U:.h.-</a></td>
-                        <td>virtual transformation in the meaning</td>
                         <td>transformation virtuelle dans le sens</td>
+                        <td>virtual transformation in the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_A_.h.-.html">M:A:.h.-</a></td>
-                        <td>actual transformation in the meaning</td>
                         <td>transformation actuelle dans le sens</td>
+                        <td>actual transformation in the meaning</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.h.-.html">O:O:.h.-</a></td>
-                        <td>govern the meaning (of the enterprise)</td>
                         <td>gouverner le sens (de l'entreprise)</td>
+                        <td>govern the meaning (of the enterprise)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.h.O_O_.-.html">s.h.O:O:.-</a></td>
-                        <td>qualitative judgement</td>
                         <td>jugement qualitatif</td>
+                        <td>qualitative judgement</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.h.-.html">O:M:.h.-</a></td>
-                        <td>work on the interpretation</td>
                         <td>travailler l'interprétation</td>
+                        <td>work on the interpretation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.h.-.html">M:O:.h.-</a></td>
-                        <td>subject in attribute</td>
                         <td>sujet en attribut</td>
+                        <td>subject in attribute</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.h.-.html">M:M:.h.-</a></td>
-                        <td>cultural creation</td>
                         <td>création culturelle</td>
+                        <td>cultural creation</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.h.-t.o.-'.html">E:.-O:.h.-t.o.-'</a></td>
-                        <td>simultaneous, perfect</td>
                         <td>simultané, parfait</td>
+                        <td>simultaneous, perfect</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-h.-'.html">M:M:.-h.-'</a></td>
-                        <td>sacred, religion</td>
                         <td>sacré, religion</td>
+                        <td>sacred, religion</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.-h.-s.y.-'.html">M:M:.-h.-s.y.-'</a></td>
-                        <td>sacred | religion studies</td>
                         <td>études du sacré | de la religion</td>
+                        <td>sacred | religion studies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'h.-U_.-'M_.-'_.html">b.-S:.U:.-'h.-U:.-'M:.-',</a></td>
-                        <td>symmetry five</td>
                         <td>symétrie cinq</td>
+                        <td>symmetry five</td>
                     </tr>
                 
                     <tr>
                         <td><a href="b.-S_.U_.-'h.-A_.-'M_.-'_.html">b.-S:.U:.-'h.-A:.-'M:.-',</a></td>
-                        <td>symmetry six</td>
                         <td>symétrie six</td>
+                        <td>symmetry six</td>
                     </tr>
                 
                 </tbody>
@@ -701,8 +734,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -725,20 +758,20 @@
                 
                     <tr>
                         <td><a href="E_.O_.h.-.html">E:.O:.h.-</a></td>
-                        <td>manner of tropism</td>
                         <td>manière de tropisme</td>
+                        <td>manner of tropism</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.M_.h.-.html">E:.M:.h.-</a></td>
-                        <td>virtual systemic cause</td>
                         <td>cause systémique virtuelle</td>
+                        <td>virtual systemic cause</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_</a></td>
-                        <td>second joint of the limb</td>
                         <td>deuxième articulation du membre</td>
+                        <td>second joint of the limb</td>
                     </tr>
                 
                 </tbody>
@@ -746,7 +779,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -755,7 +788,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -770,6 +803,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -779,6 +822,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -815,5 +859,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

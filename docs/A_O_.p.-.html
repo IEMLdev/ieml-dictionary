@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             A:O:.p.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>unify and measure the distance to the objectives</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>unifier et mesurer la distance aux objectifs</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>unifier et mesurer la distance aux objectifs</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>unify and measure the distance to the objectives</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +202,14 @@
                 
                     <tr>
                         <td><a href="O_O_.p.-.html">O:O:.p.-</a></td>
-                        <td>govern the objectives</td>
                         <td>gouverner les objectifs</td>
+                        <td>govern the objectives</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.M_O_.-.html">O:O:.M:O:.-</a></td>
-                        <td>governance cycle (verbes)</td>
                         <td>cycle de gouvernance (verbes)</td>
+                        <td>governance cycle (verbes)</td>
                     </tr>
                 
                 </tbody>
@@ -185,11 +217,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -212,8 +245,8 @@
                 
                     <tr>
                         <td><a href="A_O_..html">A:O:.</a></td>
-                        <td>from the inter-actant</td>
                         <td>à  partir de l'inter-actant</td>
+                        <td>from the inter-actant</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="p..html">p.</a></td>
-                        <td>object</td>
                         <td>objet</td>
+                        <td>object</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -269,19 +302,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="A_O_.p.-.html">A:O:.p.-</a> unify and measure the distance to the objectives</div>-->
+            <!--<div class="card-header">Table <a href="A_O_.p.-.html">A:O:.p.-</a> unifier et mesurer la distance aux objectifs</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_O_.p.-.html"> A:O:.p.- </a>
             <span class="translation"
-                data-fr="unify and measure the distance to the objectives"
-                data-en="unifier et mesurer la distance aux objectifs">
-                unify and measure the distance to the objectives
+                data-fr="unifier et mesurer la distance aux objectifs"
+                data-en="unify and measure the distance to the objectives">
+                unifier et mesurer la distance aux objectifs
             </span>
         </div>
     
@@ -296,9 +329,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="wu.p.-.html"> wu.p.- </a>
             <span class="translation"
-                data-fr="measure the distance to the objectives"
-                data-en="mesurer la distance aux objectifs">
-                measure the distance to the objectives
+                data-fr="mesurer la distance aux objectifs"
+                data-en="measure the distance to the objectives">
+                mesurer la distance aux objectifs
             </span>
         </div>
     
@@ -313,9 +346,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="we.p.-.html"> we.p.- </a>
             <span class="translation"
-                data-fr="unify objectives"
-                data-en="unifier les objectifs">
-                unify objectives
+                data-fr="unifier les objectifs"
+                data-en="unify objectives">
+                unifier les objectifs
             </span>
         </div>
     
@@ -329,7 +362,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -344,6 +377,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -353,6 +396,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -389,5 +433,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

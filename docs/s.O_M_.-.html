@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             s.O:M:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>thought factors</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>facteurs de pensée</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>facteurs de pensée</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>thought factors</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="O_M_.s.-.html">O:M:.s.-</a></td>
-                        <td>undermine thought</td>
                         <td>miner la pensée</td>
+                        <td>undermine thought</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,32 +235,32 @@
                 
                     <tr>
                         <td><a href="s.O_S_.-.html">s.O:S:.-</a></td>
-                        <td>abstract thought factors</td>
                         <td>facteurs abstraits de pensée</td>
+                        <td>abstract thought factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_B_.-.html">s.O:B:.-</a></td>
-                        <td>existential thought factors</td>
                         <td>facteurs existentiels de pensée</td>
+                        <td>existential thought factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.O_T_.-.html">s.O:T:.-</a></td>
-                        <td>concrete thought factors</td>
                         <td>facteurs concrets de pensée</td>
+                        <td>concrete thought factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.U_M_.-.html">s.U:M:.-</a></td>
-                        <td>virtual thought factors</td>
                         <td>facteurs virtuels de pensée</td>
+                        <td>virtual thought factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="s.A_M_.-.html">s.A:M:.-</a></td>
-                        <td>actual thought factors</td>
                         <td>facteurs actuels de pensée</td>
+                        <td>actual thought factors</td>
                     </tr>
                 
                 </tbody>
@@ -236,8 +268,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -260,26 +292,26 @@
                 
                     <tr>
                         <td><a href="S_M_.O_M_.-.html">S:M:.O:M:.-</a></td>
-                        <td>sign of human development</td>
                         <td>signe du développement humain</td>
+                        <td>sign of human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_S_.O_M_.-.html">M:S:.O:M:.-</a></td>
-                        <td>human development becoming sign</td>
                         <td>devenir signe du développement humain</td>
+                        <td>human development becoming sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_.O_M_.-.html">M:M:.O:M:.-</a></td>
-                        <td>human development</td>
                         <td>développement humain</td>
+                        <td>human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
-                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                         <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -287,11 +319,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -314,8 +347,8 @@
                 
                     <tr>
                         <td><a href="s..html">s.</a></td>
+                        <td>réflexion</td>
                         <td>reflection</td>
-                        <td>réflexions</td>
                     </tr>
                 
                 </tbody>
@@ -323,8 +356,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -356,8 +389,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -371,19 +404,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="s.O_M_.-.html">s.O:M:.-</a> thought factors</div>-->
+            <!--<div class="card-header">Table <a href="s.O_M_.-.html">s.O:M:.-</a> facteurs de pensée</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #d9eaff;">
+    <th class="cell" colspan="4" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_M_.-.html"> s.O:M:.- </a>
             <span class="translation"
-                data-fr="thought factors"
-                data-en="facteurs de pensée">
-                thought factors
+                data-fr="facteurs de pensée"
+                data-en="thought factors">
+                facteurs de pensée
             </span>
         </div>
     
@@ -394,14 +427,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_S_.-.html"> s.O:S:.- </a>
             <span class="translation"
-                data-fr="abstract thought factors"
-                data-en="facteurs abstraits de pensée">
-                abstract thought factors
+                data-fr="facteurs abstraits de pensée"
+                data-en="abstract thought factors">
+                facteurs abstraits de pensée
             </span>
         </div>
     
@@ -409,14 +442,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_B_.-.html"> s.O:B:.- </a>
             <span class="translation"
-                data-fr="existential thought factors"
-                data-en="facteurs existentiels de pensée">
-                existential thought factors
+                data-fr="facteurs existentiels de pensée"
+                data-en="existential thought factors">
+                facteurs existentiels de pensée
             </span>
         </div>
     
@@ -424,14 +457,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.O_T_.-.html"> s.O:T:.- </a>
             <span class="translation"
-                data-fr="concrete thought factors"
-                data-en="facteurs concrets de pensée">
-                concrete thought factors
+                data-fr="facteurs concrets de pensée"
+                data-en="concrete thought factors">
+                facteurs concrets de pensée
             </span>
         </div>
     
@@ -442,14 +475,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.U_M_.-.html"> s.U:M:.- </a>
             <span class="translation"
-                data-fr="virtual thought factors"
-                data-en="facteurs virtuels de pensée">
-                virtual thought factors
+                data-fr="facteurs virtuels de pensée"
+                data-en="virtual thought factors">
+                facteurs virtuels de pensée
             </span>
         </div>
     
@@ -463,9 +496,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.y.-.html"> s.y.- </a>
             <span class="translation"
-                data-fr="organized knowledge"
-                data-en="connaissance organisée">
-                organized knowledge
+                data-fr="connaissance organisée"
+                data-en="organized knowledge">
+                connaissance organisée
             </span>
         </div>
     
@@ -478,9 +511,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.o.-.html"> s.o.- </a>
             <span class="translation"
-                data-fr="concern for thought"
-                data-en="souci de la pensée">
-                concern for thought
+                data-fr="souci de la pensée"
+                data-en="concern for thought">
+                souci de la pensée
             </span>
         </div>
     
@@ -493,9 +526,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.e.-.html"> s.e.- </a>
             <span class="translation"
-                data-fr="mastery of codes, grammar in the narrow sense"
-                data-en="maîtrise des codes, grammaire au sens étroit">
-                mastery of codes, grammar in the narrow sense
+                data-fr="maîtrise des codes, grammaire au sens étroit"
+                data-en="mastery of codes, grammar in the narrow sense">
+                maîtrise des codes, grammaire au sens étroit
             </span>
         </div>
     
@@ -506,14 +539,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="s.A_M_.-.html"> s.A:M:.- </a>
             <span class="translation"
-                data-fr="actual thought factors"
-                data-en="facteurs actuels de pensée">
-                actual thought factors
+                data-fr="facteurs actuels de pensée"
+                data-en="actual thought factors">
+                facteurs actuels de pensée
             </span>
         </div>
     
@@ -527,9 +560,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.u.-.html"> s.u.- </a>
             <span class="translation"
-                data-fr="image, analog sign, representation"
-                data-en="image, signe analogique, représentation">
-                image, analog sign, representation
+                data-fr="image, signe analogique, représentation"
+                data-en="image, analog sign, representation">
+                image, signe analogique, représentation
             </span>
         </div>
     
@@ -542,9 +575,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.a.-.html"> s.a.- </a>
             <span class="translation"
-                data-fr="interpreter"
-                data-en="interprète">
-                interpreter
+                data-fr="interprète"
+                data-en="interpreter">
+                interprète
             </span>
         </div>
     
@@ -557,9 +590,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="s.i.-.html"> s.i.- </a>
             <span class="translation"
-                data-fr="interface | translation tech."
-                data-en="interface | tech. de traduction">
-                interface | translation tech.
+                data-fr="interface | tech. de traduction"
+                data-en="interface | translation tech.">
+                interface | tech. de traduction
             </span>
         </div>
     
@@ -574,7 +607,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -589,6 +622,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -598,6 +641,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -634,5 +678,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

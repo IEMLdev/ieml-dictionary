@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:M:.-y.-'s.o.-k.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>strengthen knowledge</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>renforcer la connaissance</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>renforcer la connaissance</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>strengthen knowledge</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,8 +202,8 @@
                 
                     <tr>
                         <td><a href="O_M_.-O_M_.-'s.o.-k.o.-'_.html">O:M:.-O:M:.-'s.o.-k.o.-',</a></td>
-                        <td>weave the collective intelligence (36 verbs)</td>
                         <td>tisser l'intelligence collective (36 verbes)</td>
+                        <td>weave the collective intelligence (36 verbs)</td>
                     </tr>
                 
                 </tbody>
@@ -179,11 +211,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -206,8 +239,8 @@
                 
                     <tr>
                         <td><a href="y..html">y.</a></td>
-                        <td>know</td>
                         <td>savoir</td>
+                        <td>know</td>
                     </tr>
                 
                     <tr>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="s.o.-k.o.-'.html">s.o.-k.o.-'</a></td>
-                        <td>collective intelligence</td>
                         <td>intelligence collective</td>
+                        <td>collective intelligence</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -269,19 +302,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_M_.-y.-'s.o.-k.o.-'_.html">O:M:.-y.-'s.o.-k.o.-',</a> strengthen knowledge</div>-->
+            <!--<div class="card-header">Table <a href="O_M_.-y.-'s.o.-k.o.-'_.html">O:M:.-y.-'s.o.-k.o.-',</a> renforcer la connaissance</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.-y.-'s.o.-k.o.-'_.html"> O:M:.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="strengthen knowledge"
-                data-en="renforcer la connaissance">
-                strengthen knowledge
+                data-fr="renforcer la connaissance"
+                data-en="strengthen knowledge">
+                renforcer la connaissance
             </span>
         </div>
     
@@ -292,7 +325,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_S_.-y.-'s.o.-k.o.-'_.html"> O:S:.-y.-'s.o.-k.o.-', </a>
@@ -307,7 +340,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_B_.-y.-'s.o.-k.o.-'_.html"> O:B:.-y.-'s.o.-k.o.-', </a>
@@ -322,7 +355,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_T_.-y.-'s.o.-k.o.-'_.html"> O:T:.-y.-'s.o.-k.o.-', </a>
@@ -340,7 +373,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.-y.-'s.o.-k.o.-'_.html"> U:M:.-y.-'s.o.-k.o.-', </a>
@@ -361,9 +394,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.-y.-'s.o.-k.o.-'_.html"> y.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="clarify knowledge"
-                data-en="clarifier la connaissance">
-                clarify knowledge
+                data-fr="clarifier la connaissance"
+                data-en="clarify knowledge">
+                clarifier la connaissance
             </span>
         </div>
     
@@ -376,9 +409,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.-y.-'s.o.-k.o.-'_.html"> o.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="orient research"
-                data-en="orienter la recherche">
-                orient research
+                data-fr="orienter la recherche"
+                data-en="orient research">
+                orienter la recherche
             </span>
         </div>
     
@@ -391,9 +424,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.-y.-'s.o.-k.o.-'_.html"> e.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="provide tools for research"
-                data-en="outiller la recherche">
-                provide tools for research
+                data-fr="outiller la recherche"
+                data-en="provide tools for research">
+                outiller la recherche
             </span>
         </div>
     
@@ -404,7 +437,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_M_.-y.-'s.o.-k.o.-'_.html"> A:M:.-y.-'s.o.-k.o.-', </a>
@@ -425,9 +458,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.-y.-'s.o.-k.o.-'_.html"> u.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="specify information"
-                data-en="préciser l'information">
-                specify information
+                data-fr="préciser l'information"
+                data-en="specify information">
+                préciser l'information
             </span>
         </div>
     
@@ -440,9 +473,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.-y.-'s.o.-k.o.-'_.html"> a.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="invest in research"
-                data-en="investir dans la recherche">
-                invest in research
+                data-fr="investir dans la recherche"
+                data-en="invest in research">
+                investir dans la recherche
             </span>
         </div>
     
@@ -455,9 +488,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.-y.-'s.o.-k.o.-'_.html"> i.-y.-'s.o.-k.o.-', </a>
             <span class="translation"
-                data-fr="provide tools for thought"
-                data-en="outiller la pensée">
-                provide tools for thought
+                data-fr="outiller la pensée"
+                data-en="provide tools for thought">
+                outiller la pensée
             </span>
         </div>
     
@@ -472,7 +505,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -487,6 +520,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -496,6 +539,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -532,5 +576,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

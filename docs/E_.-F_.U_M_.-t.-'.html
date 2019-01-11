@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.-F:.U:M:.-t.-'
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>declarative mood</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>mode déclaratif</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>mode déclaratif</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>declarative mood</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,50 +202,50 @@
                 
                     <tr>
                         <td><a href="E_.-U_.U_M_.-t.-'.html">E:.-U:.U:M:.-t.-'</a></td>
-                        <td>virtual passive voice</td>
                         <td>voix passive virtuelle</td>
+                        <td>virtual passive voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.U_M_.-t.-'.html">E:.-A:.U:M:.-t.-'</a></td>
-                        <td>virtual active voice</td>
                         <td>voix active virtuelle</td>
+                        <td>virtual active voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.U_M_.-t.-'.html">E:.-S:.U:M:.-t.-'</a></td>
-                        <td>virtual future</td>
                         <td>futur virtuel</td>
+                        <td>virtual future</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.U_M_.-t.-'.html">E:.-B:.U:M:.-t.-'</a></td>
-                        <td>virtual present</td>
                         <td>présent virtuel</td>
+                        <td>virtual present</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.U_M_.-t.-'.html">E:.-T:.U:M:.-t.-'</a></td>
-                        <td>virtual past</td>
                         <td>passé virtuel</td>
+                        <td>virtual past</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.y.-t.-'.html">E:.-F:.y.-t.-'</a></td>
-                        <td>cognitive mood</td>
                         <td>mode cognitif</td>
+                        <td>cognitive mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.o.-t.-'.html">E:.-F:.o.-t.-'</a></td>
-                        <td>optative mood</td>
                         <td>mode optatif</td>
+                        <td>optative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.e.-t.-'.html">E:.-F:.e.-t.-'</a></td>
-                        <td>abilitative mood</td>
                         <td>mode abilitatif</td>
+                        <td>abilitative mood</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +253,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +277,8 @@
                 
                     <tr>
                         <td><a href="E_.-F_.O_M_.-t.-'.html">E:.-F:.O:M:.-t.-'</a></td>
-                        <td>conjugations and verbal modes, tense, time</td>
                         <td>conjugaisons et modes verbaux, temps</td>
+                        <td>conjugations and verbal modes, tense, time</td>
                     </tr>
                 
                 </tbody>
@@ -254,11 +286,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -281,38 +314,38 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -320,8 +353,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -344,8 +377,8 @@
                 
                     <tr>
                         <td><a href="t..html">t.</a></td>
+                        <td>mémoire</td>
                         <td>memory</td>
-                        <td>mémoires</td>
                     </tr>
                 
                 </tbody>
@@ -353,8 +386,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -368,19 +401,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.-F_.U_M_.-t.-'.html">E:.-F:.U:M:.-t.-'</a> declarative mood</div>-->
+            <!--<div class="card-header">Table <a href="E_.-F_.U_M_.-t.-'.html">E:.-F:.U:M:.-t.-'</a> mode déclaratif</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #fff1bc;">
+    <th class="cell" colspan="4" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.U_M_.-t.-'.html"> E:.-F:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="declarative mood"
-                data-en="mode déclaratif">
-                declarative mood
+                data-fr="mode déclaratif"
+                data-en="declarative mood">
+                mode déclaratif
             </span>
         </div>
     
@@ -391,14 +424,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.y.-t.-'.html"> E:.-F:.y.-t.-' </a>
             <span class="translation"
-                data-fr="cognitive mood"
-                data-en="mode cognitif">
-                cognitive mood
+                data-fr="mode cognitif"
+                data-en="cognitive mood">
+                mode cognitif
             </span>
         </div>
     
@@ -406,14 +439,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.o.-t.-'.html"> E:.-F:.o.-t.-' </a>
             <span class="translation"
-                data-fr="optative mood"
-                data-en="mode optatif">
-                optative mood
+                data-fr="mode optatif"
+                data-en="optative mood">
+                mode optatif
             </span>
         </div>
     
@@ -421,14 +454,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-F_.e.-t.-'.html"> E:.-F:.e.-t.-' </a>
             <span class="translation"
-                data-fr="abilitative mood"
-                data-en="mode abilitatif">
-                abilitative mood
+                data-fr="mode abilitatif"
+                data-en="abilitative mood">
+                mode abilitatif
             </span>
         </div>
     
@@ -439,14 +472,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.U_M_.-t.-'.html"> E:.-U:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="virtual passive voice"
-                data-en="voix passive virtuelle">
-                virtual passive voice
+                data-fr="voix passive virtuelle"
+                data-en="virtual passive voice">
+                voix passive virtuelle
             </span>
         </div>
     
@@ -460,9 +493,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.y.-t.-'.html"> E:.-U:.y.-t.-' </a>
             <span class="translation"
-                data-fr="known"
-                data-en="connu">
-                known
+                data-fr="connu"
+                data-en="known">
+                connu
             </span>
         </div>
     
@@ -475,9 +508,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.o.-t.-'.html"> E:.-U:.o.-t.-' </a>
             <span class="translation"
-                data-fr="wanted"
-                data-en="voulu">
-                wanted
+                data-fr="voulu"
+                data-en="wanted">
+                voulu
             </span>
         </div>
     
@@ -490,9 +523,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-U_.e.-t.-'.html"> E:.-U:.e.-t.-' </a>
             <span class="translation"
-                data-fr="able | enabled"
-                data-en="capable | habilité">
-                able | enabled
+                data-fr="capable | habilité"
+                data-en="able | enabled">
+                capable | habilité
             </span>
         </div>
     
@@ -503,14 +536,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.U_M_.-t.-'.html"> E:.-A:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="virtual active voice"
-                data-en="voix active virtuelle">
-                virtual active voice
+                data-fr="voix active virtuelle"
+                data-en="virtual active voice">
+                voix active virtuelle
             </span>
         </div>
     
@@ -524,9 +557,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.y.-t.-'.html"> E:.-A:.y.-t.-' </a>
             <span class="translation"
-                data-fr="knowing"
-                data-en="connaissant">
-                knowing
+                data-fr="connaissant"
+                data-en="knowing">
+                connaissant
             </span>
         </div>
     
@@ -539,9 +572,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.o.-t.-'.html"> E:.-A:.o.-t.-' </a>
             <span class="translation"
-                data-fr="willing"
-                data-en="voulant">
-                willing
+                data-fr="voulant"
+                data-en="willing">
+                voulant
             </span>
         </div>
     
@@ -554,9 +587,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-A_.e.-t.-'.html"> E:.-A:.e.-t.-' </a>
             <span class="translation"
-                data-fr="abling | enabling"
-                data-en="capacitant | habilitant">
-                abling | enabling
+                data-fr="capacitant | habilitant"
+                data-en="abling | enabling">
+                capacitant | habilitant
             </span>
         </div>
     
@@ -567,14 +600,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.U_M_.-t.-'.html"> E:.-S:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="virtual future"
-                data-en="futur virtuel">
-                virtual future
+                data-fr="futur virtuel"
+                data-en="virtual future">
+                futur virtuel
             </span>
         </div>
     
@@ -588,9 +621,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.y.-t.-'.html"> E:.-S:.y.-t.-' </a>
             <span class="translation"
-                data-fr="will know"
-                data-en="connaître au futur">
-                will know
+                data-fr="connaître au futur"
+                data-en="will know">
+                connaître au futur
             </span>
         </div>
     
@@ -603,9 +636,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.o.-t.-'.html"> E:.-S:.o.-t.-' </a>
             <span class="translation"
-                data-fr="will want"
-                data-en="vouloir au futur">
-                will want
+                data-fr="vouloir au futur"
+                data-en="will want">
+                vouloir au futur
             </span>
         </div>
     
@@ -618,9 +651,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-S_.e.-t.-'.html"> E:.-S:.e.-t.-' </a>
             <span class="translation"
-                data-fr="will be able"
-                data-en="pouvoir au futur">
-                will be able
+                data-fr="pouvoir au futur"
+                data-en="will be able">
+                pouvoir au futur
             </span>
         </div>
     
@@ -631,14 +664,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.U_M_.-t.-'.html"> E:.-B:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="virtual present"
-                data-en="présent virtuel">
-                virtual present
+                data-fr="présent virtuel"
+                data-en="virtual present">
+                présent virtuel
             </span>
         </div>
     
@@ -652,9 +685,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.y.-t.-'.html"> E:.-B:.y.-t.-' </a>
             <span class="translation"
-                data-fr="know now"
-                data-en="connaître maintenant">
-                know now
+                data-fr="connaître maintenant"
+                data-en="know now">
+                connaître maintenant
             </span>
         </div>
     
@@ -667,9 +700,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.o.-t.-'.html"> E:.-B:.o.-t.-' </a>
             <span class="translation"
-                data-fr="want now"
-                data-en="vouloir maintenant">
-                want now
+                data-fr="vouloir maintenant"
+                data-en="want now">
+                vouloir maintenant
             </span>
         </div>
     
@@ -682,9 +715,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-B_.e.-t.-'.html"> E:.-B:.e.-t.-' </a>
             <span class="translation"
-                data-fr="can now"
-                data-en="pouvoir maintenant">
-                can now
+                data-fr="pouvoir maintenant"
+                data-en="can now">
+                pouvoir maintenant
             </span>
         </div>
     
@@ -695,14 +728,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.U_M_.-t.-'.html"> E:.-T:.U:M:.-t.-' </a>
             <span class="translation"
-                data-fr="virtual past"
-                data-en="passé virtuel">
-                virtual past
+                data-fr="passé virtuel"
+                data-en="virtual past">
+                passé virtuel
             </span>
         </div>
     
@@ -716,9 +749,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.y.-t.-'.html"> E:.-T:.y.-t.-' </a>
             <span class="translation"
-                data-fr="knowing in the past"
-                data-en="connaître au passé">
-                knowing in the past
+                data-fr="connaître au passé"
+                data-en="knowing in the past">
+                connaître au passé
             </span>
         </div>
     
@@ -731,9 +764,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.o.-t.-'.html"> E:.-T:.o.-t.-' </a>
             <span class="translation"
-                data-fr="want in the past"
-                data-en="vouloir au passé">
-                want in the past
+                data-fr="vouloir au passé"
+                data-en="want in the past">
+                vouloir au passé
             </span>
         </div>
     
@@ -746,9 +779,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.-T_.e.-t.-'.html"> E:.-T:.e.-t.-' </a>
             <span class="translation"
-                data-fr="can in the past"
-                data-en="pouvoir au passé">
-                can in the past
+                data-fr="pouvoir au passé"
+                data-en="can in the past">
+                pouvoir au passé
             </span>
         </div>
     
@@ -763,7 +796,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -778,6 +811,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -787,6 +830,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -823,5 +867,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

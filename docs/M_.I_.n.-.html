@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:.I:.n.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>nature's levels</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>niveaux de la nature</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>niveaux de la nature</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>nature's levels</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,38 +202,38 @@
                 
                     <tr>
                         <td><a href="M_.E_.n.-.html">M:.E:.n.-</a></td>
-                        <td>mathematic level</td>
                         <td>niveau mathématique</td>
+                        <td>mathematic level</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_.U_.n.-.html">M:.U:.n.-</a></td>
-                        <td>energetic level</td>
                         <td>niveau énergétique</td>
+                        <td>energetic level</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_.A_.n.-.html">M:.A:.n.-</a></td>
-                        <td>mineral and molecular level</td>
                         <td>niveau minéral et moléculaire</td>
+                        <td>mineral and molecular level</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_.S_.n.-.html">M:.S:.n.-</a></td>
-                        <td>biological level (vegetal)</td>
                         <td>niveau biologique (végétaux)</td>
+                        <td>biological level (vegetal)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_.B_.n.-.html">M:.B:.n.-</a></td>
-                        <td>animal level</td>
                         <td>niveau animal</td>
+                        <td>animal level</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_.T_.n.-.html">M:.T:.n.-</a></td>
-                        <td>cultural level</td>
                         <td>niveau culturel</td>
+                        <td>cultural level</td>
                     </tr>
                 
                     <tr>
@@ -212,14 +244,14 @@
                 
                     <tr>
                         <td><a href="B_.I_.n.-.html">B:.I:.n.-</a></td>
-                        <td>generative process</td>
                         <td>processus générateur</td>
+                        <td>generative process</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.I_.n.-.html">T:.I:.n.-</a></td>
-                        <td>emerging forms</td>
                         <td>formes émergentes</td>
+                        <td>emerging forms</td>
                     </tr>
                 
                 </tbody>
@@ -227,11 +259,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -254,20 +287,20 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -275,8 +308,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -299,32 +332,32 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -332,8 +365,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -356,8 +389,8 @@
                 
                     <tr>
                         <td><a href="n..html">n.</a></td>
+                        <td>monde</td>
                         <td>world</td>
-                        <td>mondes</td>
                     </tr>
                 
                 </tbody>
@@ -365,8 +398,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -380,19 +413,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_.I_.n.-.html">M:.I:.n.-</a> nature's levels</div>-->
+            <!--<div class="card-header">Table <a href="M_.I_.n.-.html">M:.I:.n.-</a> niveaux de la nature</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="7" style="background-color: #d9eaff;">
+    <th class="cell" colspan="7" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.I_.n.-.html"> M:.I:.n.- </a>
             <span class="translation"
-                data-fr="nature's levels"
-                data-en="niveaux de la nature">
-                nature's levels
+                data-fr="niveaux de la nature"
+                data-en="nature's levels">
+                niveaux de la nature
             </span>
         </div>
     
@@ -403,14 +436,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.E_.n.-.html"> M:.E:.n.- </a>
             <span class="translation"
-                data-fr="mathematic level"
-                data-en="niveau mathématique">
-                mathematic level
+                data-fr="niveau mathématique"
+                data-en="mathematic level">
+                niveau mathématique
             </span>
         </div>
     
@@ -418,14 +451,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.U_.n.-.html"> M:.U:.n.- </a>
             <span class="translation"
-                data-fr="energetic level"
-                data-en="niveau énergétique">
-                energetic level
+                data-fr="niveau énergétique"
+                data-en="energetic level">
+                niveau énergétique
             </span>
         </div>
     
@@ -433,14 +466,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.A_.n.-.html"> M:.A:.n.- </a>
             <span class="translation"
-                data-fr="mineral and molecular level"
-                data-en="niveau minéral et moléculaire">
-                mineral and molecular level
+                data-fr="niveau minéral et moléculaire"
+                data-en="mineral and molecular level">
+                niveau minéral et moléculaire
             </span>
         </div>
     
@@ -448,14 +481,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.S_.n.-.html"> M:.S:.n.- </a>
             <span class="translation"
-                data-fr="biological level (vegetal)"
-                data-en="niveau biologique (végétaux)">
-                biological level (vegetal)
+                data-fr="niveau biologique (végétaux)"
+                data-en="biological level (vegetal)">
+                niveau biologique (végétaux)
             </span>
         </div>
     
@@ -463,14 +496,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.B_.n.-.html"> M:.B:.n.- </a>
             <span class="translation"
-                data-fr="animal level"
-                data-en="niveau animal">
-                animal level
+                data-fr="niveau animal"
+                data-en="animal level">
+                niveau animal
             </span>
         </div>
     
@@ -478,14 +511,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_.T_.n.-.html"> M:.T:.n.- </a>
             <span class="translation"
-                data-fr="cultural level"
-                data-en="niveau culturel">
-                cultural level
+                data-fr="niveau culturel"
+                data-en="cultural level">
+                niveau culturel
             </span>
         </div>
     
@@ -496,7 +529,7 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="S_.I_.n.-.html"> S:.I:.n.- </a>
@@ -547,9 +580,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="S_.A_.n.-.html"> S:.A:.n.- </a>
             <span class="translation"
-                data-fr="atoms"
-                data-en="atomes">
-                atoms
+                data-fr="atomes"
+                data-en="atoms">
+                atomes
             </span>
         </div>
     
@@ -562,9 +595,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="S_.S_.n.-.html"> S:.S:.n.- </a>
             <span class="translation"
-                data-fr="DNA"
-                data-en="ADN">
-                DNA
+                data-fr="ADN"
+                data-en="DNA">
+                ADN
             </span>
         </div>
     
@@ -577,9 +610,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="S_.B_.n.-.html"> S:.B:.n.- </a>
             <span class="translation"
-                data-fr="neurons"
-                data-en="neurones">
-                neurons
+                data-fr="neurones"
+                data-en="neurons">
+                neurones
             </span>
         </div>
     
@@ -592,9 +625,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="S_.T_.n.-.html"> S:.T:.n.- </a>
             <span class="translation"
-                data-fr="symbols | cultural codes"
-                data-en="symboles | codes culturels">
-                symbols | cultural codes
+                data-fr="symboles | codes culturels"
+                data-en="symbols | cultural codes">
+                symboles | codes culturels
             </span>
         </div>
     
@@ -605,14 +638,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="B_.I_.n.-.html"> B:.I:.n.- </a>
             <span class="translation"
-                data-fr="generative process"
-                data-en="processus générateur">
-                generative process
+                data-fr="processus générateur"
+                data-en="generative process">
+                processus générateur
             </span>
         </div>
     
@@ -626,9 +659,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.E_.n.-.html"> B:.E:.n.- </a>
             <span class="translation"
-                data-fr="operations"
-                data-en="opérations">
-                operations
+                data-fr="opérations"
+                data-en="operations">
+                opérations
             </span>
         </div>
     
@@ -641,9 +674,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.U_.n.-.html"> B:.U:.n.- </a>
             <span class="translation"
-                data-fr="irreversible transformations (mass-energy-space-time)"
-                data-en="transformations irréversibles (masse-énergie-espace-temps)">
-                irreversible transformations (mass-energy-space-time)
+                data-fr="transformations irréversibles (masse-énergie-espace-temps)"
+                data-en="irreversible transformations (mass-energy-space-time)">
+                transformations irréversibles (masse-énergie-espace-temps)
             </span>
         </div>
     
@@ -656,9 +689,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.A_.n.-.html"> B:.A:.n.- </a>
             <span class="translation"
-                data-fr="bindings-reactions"
-                data-en="liaisons-réactions">
-                bindings-reactions
+                data-fr="liaisons-réactions"
+                data-en="bindings-reactions">
+                liaisons-réactions
             </span>
         </div>
     
@@ -671,9 +704,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.S_.n.-.html"> B:.S:.n.- </a>
             <span class="translation"
-                data-fr="self-replicating organisms, microbes, vegetal life"
-                data-en="organismes auto-reproducteurs, microbes, vie végétale">
-                self-replicating organisms, microbes, vegetal life
+                data-fr="organismes auto-reproducteurs, microbes, vie végétale"
+                data-en="self-replicating organisms, microbes, vegetal life">
+                organismes auto-reproducteurs, microbes, vie végétale
             </span>
         </div>
     
@@ -686,9 +719,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.B_.n.-.html"> B:.B:.n.- </a>
             <span class="translation"
-                data-fr="phenomena (sensorial, motor, affective), animal life"
-                data-en="phénomènes (sensoriels, moteurs, affectifs), vie animale">
-                phenomena (sensorial, motor, affective), animal life
+                data-fr="phénomènes (sensoriels, moteurs, affectifs), vie animale"
+                data-en="phenomena (sensorial, motor, affective), animal life">
+                phénomènes (sensoriels, moteurs, affectifs), vie animale
             </span>
         </div>
     
@@ -701,9 +734,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="B_.T_.n.-.html"> B:.T:.n.- </a>
             <span class="translation"
-                data-fr="reflexive consciousness, human subjectivity"
-                data-en="conscience réflexive, subjectivité humaine">
-                reflexive consciousness, human subjectivity
+                data-fr="conscience réflexive, subjectivité humaine"
+                data-en="reflexive consciousness, human subjectivity">
+                conscience réflexive, subjectivité humaine
             </span>
         </div>
     
@@ -714,14 +747,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="T_.I_.n.-.html"> T:.I:.n.- </a>
             <span class="translation"
-                data-fr="emerging forms"
-                data-en="formes émergentes">
-                emerging forms
+                data-fr="formes émergentes"
+                data-en="emerging forms">
+                formes émergentes
             </span>
         </div>
     
@@ -750,9 +783,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="T_.U_.n.-.html"> T:.U:.n.- </a>
             <span class="translation"
-                data-fr="physical systems"
-                data-en="systèmes physiques">
-                physical systems
+                data-fr="systèmes physiques"
+                data-en="physical systems">
+                systèmes physiques
             </span>
         </div>
     
@@ -765,9 +798,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="T_.A_.n.-.html"> T:.A:.n.- </a>
             <span class="translation"
-                data-fr="molecular ecosystems"
-                data-en="écosystèmes moléculaires">
-                molecular ecosystems
+                data-fr="écosystèmes moléculaires"
+                data-en="molecular ecosystems">
+                écosystèmes moléculaires
             </span>
         </div>
     
@@ -780,9 +813,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="T_.S_.n.-.html"> T:.S:.n.- </a>
             <span class="translation"
-                data-fr="biological ecosystems"
-                data-en="écosystèmes biologiques">
-                biological ecosystems
+                data-fr="écosystèmes biologiques"
+                data-en="biological ecosystems">
+                écosystèmes biologiques
             </span>
         </div>
     
@@ -795,9 +828,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="T_.B_.n.-.html"> T:.B:.n.- </a>
             <span class="translation"
-                data-fr="social ecosystems (intra | inter species]"
-                data-en="écosystèmes sociaux (intra | inter espèces)">
-                social ecosystems (intra | inter species]
+                data-fr="écosystèmes sociaux (intra | inter espèces)"
+                data-en="social ecosystems (intra | inter species]">
+                écosystèmes sociaux (intra | inter espèces)
             </span>
         </div>
     
@@ -810,9 +843,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="T_.T_.n.-.html"> T:.T:.n.- </a>
             <span class="translation"
-                data-fr="cultural ecosystems (ideas)"
-                data-en="écosystèmes culturels (idées)">
-                cultural ecosystems (ideas)
+                data-fr="écosystèmes culturels (idées)"
+                data-en="cultural ecosystems (ideas)">
+                écosystèmes culturels (idées)
             </span>
         </div>
     
@@ -827,7 +860,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -842,6 +875,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -851,6 +894,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -887,5 +931,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

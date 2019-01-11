@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_+f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>body parts</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>parties du corps</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>parties du corps</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>body parts</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>4</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
         
             
@@ -146,6 +158,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -158,10 +189,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -184,146 +216,146 @@
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_j.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',j.-O:.-',_</a></td>
-                        <td>first joint of the limb</td>
                         <td>première articulation du membre</td>
+                        <td>first joint of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_g.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',g.-O:.-',_</a></td>
-                        <td>first segment of the limb</td>
                         <td>premier segment du membre</td>
+                        <td>first segment of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_</a></td>
-                        <td>second joint of the limb</td>
                         <td>deuxième articulation du membre</td>
+                        <td>second joint of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_c.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',c.-O:.-',_</a></td>
-                        <td>second segment of the limb</td>
                         <td>deuxième segment du membre</td>
+                        <td>second segment of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_p.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',p.-O:.-',_</a></td>
-                        <td>third joint of the limb</td>
                         <td>troisième articulation du membre</td>
+                        <td>third joint of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_</a></td>
-                        <td>third segment (end) of the limb</td>
                         <td>troisième segment (extrémité) du membre</td>
+                        <td>third segment (end) of the limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.t.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.t.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>top of the head</td>
                         <td>haut de la tête</td>
+                        <td>top of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.n.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.n.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>median part of the head</td>
                         <td>partie médiane de la tête</td>
+                        <td>median part of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.l.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.l.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>bottom of the head</td>
                         <td>bas de la tête</td>
+                        <td>bottom of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.t.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.t.-l.-',_</a></td>
-                        <td>face, center of the head</td>
                         <td>face, centre de la tête</td>
+                        <td>face, center of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.n.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.n.-l.-',_</a></td>
-                        <td>side of the head</td>
                         <td>côté de la tête</td>
+                        <td>side of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.l.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.l.-l.-',_</a></td>
-                        <td>back of the head</td>
                         <td>arrière de la tête</td>
+                        <td>back of the head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.t.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.t.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>top of the trunk</td>
                         <td>haut du tronc</td>
+                        <td>top of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.n.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.n.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>middle of the trunk</td>
                         <td>milieu du tronc</td>
+                        <td>middle of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.l.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.l.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>bottom of the trunk</td>
                         <td>bas du tronc</td>
+                        <td>bottom of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.t.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.t.-l.-',_</a></td>
-                        <td>front part of the trunk</td>
                         <td>partie avant du tronc</td>
+                        <td>front part of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.n.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.n.-l.-',_</a></td>
-                        <td>sides of the trunk</td>
                         <td>côtés du tronc</td>
+                        <td>sides of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.l.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.l.-l.-',_</a></td>
-                        <td>back of the trunk</td>
                         <td>arrière du tronc</td>
+                        <td>back of the trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-U_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-U:.-',_</a></td>
-                        <td>arm, superior limb</td>
                         <td>bras, membre supérieur</td>
+                        <td>arm, superior limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-A_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-A:.-',_</a></td>
-                        <td>leg, inferior limb</td>
                         <td>jambe, membre inférieur</td>
+                        <td>leg, inferior limb</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>Body parts: head</td>
                         <td>Parties du corps: la tête</td>
+                        <td>Body parts: head</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>Body parts: trunk</td>
                         <td>Parties du corps: le tronc</td>
+                        <td>Body parts: trunk</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a></td>
-                        <td>body parts: limbs</td>
                         <td>Parties du corps: membres</td>
+                        <td>body parts: limbs</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a></td>
-                        <td>Body parts: head and trunk</td>
                         <td>Parties du corps: la tête et le tronc</td>
+                        <td>Body parts: head and trunk</td>
                     </tr>
                 
                 </tbody>
@@ -331,11 +363,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -358,38 +391,38 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l..html">l.</a></td>
+                        <td>espace</td>
                         <td>space</td>
-                        <td>espaces</td>
                     </tr>
                 
                     <tr>
                         <td><a href="f.o.-f.o.-'.html">f.o.-f.o.-'</a></td>
-                        <td>body</td>
                         <td>corps</td>
+                        <td>body</td>
                     </tr>
                 
                 </tbody>
@@ -397,8 +430,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -421,20 +454,20 @@
                 
                     <tr>
                         <td><a href="n.i.-f.i.-'.html">n.i.-f.i.-'</a></td>
-                        <td>limb, end of limb, hand and foot</td>
                         <td>membre, extrémité, main et pied</td>
+                        <td>limb, end of limb, hand and foot</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.M_T_.-l.-'.html">E:.-U:.M:T:.-l.-'</a></td>
-                        <td>absolute position in relation to a vertical axis</td>
                         <td>position absolue par rapport à un axe vertical</td>
+                        <td>absolute position in relation to a vertical axis</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.M_T_.-l.-'.html">E:.-A:.M:T:.-l.-'</a></td>
-                        <td>absolute position in relation to a horizontal axis</td>
                         <td>position absolue par rapport à un axe horizontal</td>
+                        <td>absolute position in relation to a horizontal axis</td>
                     </tr>
                 
                 </tbody>
@@ -442,8 +475,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -466,14 +499,14 @@
                 
                     <tr>
                         <td><a href="U_.html">U:</a></td>
-                        <td>virtual</td>
                         <td>virtuel</td>
+                        <td>virtual</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_.html">A:</a></td>
-                        <td>actual</td>
                         <td>actuel</td>
+                        <td>actual</td>
                     </tr>
                 
                     <tr>
@@ -487,8 +520,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -504,19 +537,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a> body parts: limbs</div>-->
+            <!--<div class="card-header">Table <a href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html">f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_</a> Parties du corps: membres</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-O:.-',_ </a>
             <span class="translation"
-                data-fr="body parts: limbs"
-                data-en="Parties du corps: membres">
-                body parts: limbs
+                data-fr="Parties du corps: membres"
+                data-en="body parts: limbs">
+                Parties du corps: membres
             </span>
         </div>
     
@@ -527,14 +560,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-U:.-',_ </a>
             <span class="translation"
-                data-fr="arm, superior limb"
-                data-en="bras, membre supérieur">
-                arm, superior limb
+                data-fr="bras, membre supérieur"
+                data-en="arm, superior limb">
+                bras, membre supérieur
             </span>
         </div>
     
@@ -542,14 +575,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_M_O_.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',M:O:.-A:.-',_ </a>
             <span class="translation"
-                data-fr="leg, inferior limb"
-                data-en="jambe, membre inférieur">
-                leg, inferior limb
+                data-fr="jambe, membre inférieur"
+                data-en="leg, inferior limb">
+                jambe, membre inférieur
             </span>
         </div>
     
@@ -560,14 +593,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-O:.-',_ </a>
             <span class="translation"
-                data-fr="first joint of the limb"
-                data-en="première articulation du membre">
-                first joint of the limb
+                data-fr="première articulation du membre"
+                data-en="first joint of the limb">
+                première articulation du membre
             </span>
         </div>
     
@@ -581,9 +614,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-U:.-',_ </a>
             <span class="translation"
-                data-fr="shoulder"
-                data-en="épaule">
-                shoulder
+                data-fr="épaule"
+                data-en="shoulder">
+                épaule
             </span>
         </div>
     
@@ -596,9 +629,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_j.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',j.-A:.-',_ </a>
             <span class="translation"
-                data-fr="groin"
-                data-en="aine">
-                groin
+                data-fr="aine"
+                data-en="groin">
+                aine
             </span>
         </div>
     
@@ -609,14 +642,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-O:.-',_ </a>
             <span class="translation"
-                data-fr="first segment of the limb"
-                data-en="premier segment du membre">
-                first segment of the limb
+                data-fr="premier segment du membre"
+                data-en="first segment of the limb">
+                premier segment du membre
             </span>
         </div>
     
@@ -630,9 +663,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-U:.-',_ </a>
             <span class="translation"
-                data-fr="arm"
-                data-en="bras (entre le coude et l'épaule)">
-                arm
+                data-fr="bras (entre le coude et l'épaule)"
+                data-en="arm">
+                bras (entre le coude et l'épaule)
             </span>
         </div>
     
@@ -645,9 +678,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_g.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',g.-A:.-',_ </a>
             <span class="translation"
-                data-fr="thigh"
-                data-en="cuisse">
-                thigh
+                data-fr="cuisse"
+                data-en="thigh">
+                cuisse
             </span>
         </div>
     
@@ -658,14 +691,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-O:.-',_ </a>
             <span class="translation"
-                data-fr="second joint of the limb"
-                data-en="deuxième articulation du membre">
-                second joint of the limb
+                data-fr="deuxième articulation du membre"
+                data-en="second joint of the limb">
+                deuxième articulation du membre
             </span>
         </div>
     
@@ -679,9 +712,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-U:.-',_ </a>
             <span class="translation"
-                data-fr="elbow"
-                data-en="coude">
-                elbow
+                data-fr="coude"
+                data-en="elbow">
+                coude
             </span>
         </div>
     
@@ -694,9 +727,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_h.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',h.-A:.-',_ </a>
             <span class="translation"
-                data-fr="knee"
-                data-en="genou">
-                knee
+                data-fr="genou"
+                data-en="knee">
+                genou
             </span>
         </div>
     
@@ -707,14 +740,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-O:.-',_ </a>
             <span class="translation"
-                data-fr="second segment of the limb"
-                data-en="deuxième segment du membre">
-                second segment of the limb
+                data-fr="deuxième segment du membre"
+                data-en="second segment of the limb">
+                deuxième segment du membre
             </span>
         </div>
     
@@ -728,9 +761,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-U:.-',_ </a>
             <span class="translation"
-                data-fr="forearm"
-                data-en="avant-bras">
-                forearm
+                data-fr="avant-bras"
+                data-en="forearm">
+                avant-bras
             </span>
         </div>
     
@@ -743,9 +776,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_c.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',c.-A:.-',_ </a>
             <span class="translation"
-                data-fr="shank"
-                data-en="mollet, jaret">
-                shank
+                data-fr="mollet, jaret"
+                data-en="shank">
+                mollet, jaret
             </span>
         </div>
     
@@ -756,14 +789,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-O:.-',_ </a>
             <span class="translation"
-                data-fr="third joint of the limb"
-                data-en="troisième articulation du membre">
-                third joint of the limb
+                data-fr="troisième articulation du membre"
+                data-en="third joint of the limb">
+                troisième articulation du membre
             </span>
         </div>
     
@@ -777,9 +810,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-U:.-',_ </a>
             <span class="translation"
-                data-fr="wrist"
-                data-en="poignet">
-                wrist
+                data-fr="poignet"
+                data-en="wrist">
+                poignet
             </span>
         </div>
     
@@ -792,9 +825,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_p.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',p.-A:.-',_ </a>
             <span class="translation"
-                data-fr="ankle"
-                data-en="cheville">
-                ankle
+                data-fr="cheville"
+                data-en="ankle">
+                cheville
             </span>
         </div>
     
@@ -805,14 +838,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-O_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-O:.-',_ </a>
             <span class="translation"
-                data-fr="third segment (end) of the limb"
-                data-en="troisième segment (extrémité) du membre">
-                third segment (end) of the limb
+                data-fr="troisième segment (extrémité) du membre"
+                data-en="third segment (end) of the limb">
+                troisième segment (extrémité) du membre
             </span>
         </div>
     
@@ -826,9 +859,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-U_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-U:.-',_ </a>
             <span class="translation"
-                data-fr="hand"
-                data-en="main">
-                hand
+                data-fr="main"
+                data-en="hand">
+                main
             </span>
         </div>
     
@@ -841,9 +874,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'_n.i.-f.i.-'_x.-A_.-'__.html"> f.o.-f.o.-',n.i.-f.i.-',x.-A:.-',_ </a>
             <span class="translation"
-                data-fr="foot"
-                data-en="pied">
-                foot
+                data-fr="pied"
+                data-en="foot">
+                pied
             </span>
         </div>
     
@@ -865,19 +898,19 @@
        aria-labelledby="nav-tables-2-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a> Body parts: head and trunk</div>-->
+            <!--<div class="card-header">Table <a href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html">f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_</a> Parties du corps: la tête et le tronc</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="10" style="background-color: #d9eaff;">
+    <th class="cell" colspan="10" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_ </a>
             <span class="translation"
-                data-fr="Body parts: head and trunk"
-                data-en="Parties du corps: la tête et le tronc">
-                Body parts: head and trunk
+                data-fr="Parties du corps: la tête et le tronc"
+                data-en="Body parts: head and trunk">
+                Parties du corps: la tête et le tronc
             </span>
         </div>
     
@@ -888,7 +921,7 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.t.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.t.-l.-'E:.-A:.t.-l.-',_ </a>
@@ -903,7 +936,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.t.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.t.-l.-'E:.-A:.n.-l.-',_ </a>
@@ -918,7 +951,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.t.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.t.-l.-'E:.-A:.l.-l.-',_ </a>
@@ -933,7 +966,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.n.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.n.-l.-'E:.-A:.t.-l.-',_ </a>
@@ -948,7 +981,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.n.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.n.-l.-'E:.-A:.n.-l.-',_ </a>
@@ -963,7 +996,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.n.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.n.-l.-'E:.-A:.l.-l.-',_ </a>
@@ -978,7 +1011,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.l.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.l.-l.-'E:.-A:.t.-l.-',_ </a>
@@ -993,7 +1026,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.l.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.l.-l.-'E:.-A:.n.-l.-',_ </a>
@@ -1008,7 +1041,7 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.S_+B_T_.-l.-'_E_.-U_.l.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.S:+B:T:.-l.-',E:.-U:.l.-l.-'E:.-A:.l.-l.-',_ </a>
@@ -1026,14 +1059,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_ </a>
             <span class="translation"
-                data-fr="Body parts: head"
-                data-en="Parties du corps: la tête">
-                Body parts: head
+                data-fr="Parties du corps: la tête"
+                data-en="Body parts: head">
+                Parties du corps: la tête
             </span>
         </div>
     
@@ -1047,9 +1080,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.t.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.t.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="forehead"
-                data-en="front">
-                forehead
+                data-fr="front"
+                data-en="forehead">
+                front
             </span>
         </div>
     
@@ -1062,9 +1095,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.t.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.t.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="temples"
-                data-en="tempes">
-                temples
+                data-fr="tempes"
+                data-en="temples">
+                tempes
             </span>
         </div>
     
@@ -1077,9 +1110,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.t.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.t.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="skull, cranium"
-                data-en="crâne">
-                skull, cranium
+                data-fr="crâne"
+                data-en="skull, cranium">
+                crâne
             </span>
         </div>
     
@@ -1092,9 +1125,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.n.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.n.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="nose"
-                data-en="nez">
-                nose
+                data-fr="nez"
+                data-en="nose">
+                nez
             </span>
         </div>
     
@@ -1107,9 +1140,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.n.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.n.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="eye, eyes"
-                data-en="yeux, oeil">
-                eye, eyes
+                data-fr="yeux, oeil"
+                data-en="eye, eyes">
+                yeux, oeil
             </span>
         </div>
     
@@ -1122,9 +1155,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.n.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.n.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="ear"
-                data-en="oreille">
-                ear
+                data-fr="oreille"
+                data-en="ear">
+                oreille
             </span>
         </div>
     
@@ -1137,9 +1170,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.l.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.l.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="mouth"
-                data-en="bouche">
-                mouth
+                data-fr="bouche"
+                data-en="mouth">
+                bouche
             </span>
         </div>
     
@@ -1152,9 +1185,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.l.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.l.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="cheek"
-                data-en="joue">
-                cheek
+                data-fr="joue"
+                data-en="cheek">
+                joue
             </span>
         </div>
     
@@ -1167,9 +1200,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.t.-l.-'_E_.-U_.l.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.t.-l.-',E:.-U:.l.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="neck"
-                data-en="cou">
-                neck
+                data-fr="cou"
+                data-en="neck">
+                cou
             </span>
         </div>
     
@@ -1180,14 +1213,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.M_T_.-l.-'E_.-A_.M_T_.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.M:T:.-l.-'E:.-A:.M:T:.-l.-',_ </a>
             <span class="translation"
-                data-fr="Body parts: trunk"
-                data-en="Parties du corps: le tronc">
-                Body parts: trunk
+                data-fr="Parties du corps: le tronc"
+                data-en="Body parts: trunk">
+                Parties du corps: le tronc
             </span>
         </div>
     
@@ -1201,9 +1234,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.t.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.t.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="chest: between the plexus and the neck"
-                data-en="poitrine: entre le plexus et le cou">
-                chest: between the plexus and the neck
+                data-fr="poitrine: entre le plexus et le cou"
+                data-en="chest: between the plexus and the neck">
+                poitrine: entre le plexus et le cou
             </span>
         </div>
     
@@ -1216,9 +1249,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.t.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.t.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="ribs"
-                data-en="côtes">
-                ribs
+                data-fr="côtes"
+                data-en="ribs">
+                côtes
             </span>
         </div>
     
@@ -1231,9 +1264,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.t.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.t.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="top of the back"
-                data-en="haut du dos">
-                top of the back
+                data-fr="haut du dos"
+                data-en="top of the back">
+                haut du dos
             </span>
         </div>
     
@@ -1246,9 +1279,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.n.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.n.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="Belly: between the plexus and the navel"
-                data-en="ventre: entre le plexus et le nombril">
-                Belly: between the plexus and the navel
+                data-fr="ventre: entre le plexus et le nombril"
+                data-en="Belly: between the plexus and the navel">
+                ventre: entre le plexus et le nombril
             </span>
         </div>
     
@@ -1261,9 +1294,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.n.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.n.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="flank"
-                data-en="flanc">
-                flank
+                data-fr="flanc"
+                data-en="flank">
+                flanc
             </span>
         </div>
     
@@ -1276,9 +1309,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.n.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.n.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="lower back"
-                data-en="bas du dos">
-                lower back
+                data-fr="bas du dos"
+                data-en="lower back">
+                bas du dos
             </span>
         </div>
     
@@ -1291,9 +1324,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.l.-l.-'E_.-A_.t.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.l.-l.-'E:.-A:.t.-l.-',_ </a>
             <span class="translation"
-                data-fr="lower belly, lower abdomen: under the navel"
-                data-en="bas-ventre: sous le nombril">
-                lower belly, lower abdomen: under the navel
+                data-fr="bas-ventre: sous le nombril"
+                data-en="lower belly, lower abdomen: under the navel">
+                bas-ventre: sous le nombril
             </span>
         </div>
     
@@ -1306,9 +1339,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.l.-l.-'E_.-A_.n.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.l.-l.-'E:.-A:.n.-l.-',_ </a>
             <span class="translation"
-                data-fr="hips"
-                data-en="hanches">
-                hips
+                data-fr="hanches"
+                data-en="hips">
+                hanches
             </span>
         </div>
     
@@ -1321,9 +1354,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="f.o.-f.o.-'E_.-U_.n.-l.-'_E_.-U_.l.-l.-'E_.-A_.l.-l.-'__.html"> f.o.-f.o.-'E:.-U:.n.-l.-',E:.-U:.l.-l.-'E:.-A:.l.-l.-',_ </a>
             <span class="translation"
-                data-fr="behind, ass"
-                data-en="derrière, cul">
-                behind, ass
+                data-fr="derrière, cul"
+                data-en="behind, ass">
+                derrière, cul
             </span>
         </div>
     
@@ -1340,7 +1373,7 @@
         
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1355,6 +1388,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1364,6 +1407,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1400,5 +1444,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

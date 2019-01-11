@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             t.
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>memory</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>mémoires</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>mémoire</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>memory</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,10 +168,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -163,20 +195,20 @@
                 
                     <tr>
                         <td><a href="S_M_..html">S:M:.</a></td>
-                        <td>becoming of the sign</td>
                         <td>devenir du signe</td>
+                        <td>becoming of the sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_T_..html">M:T:.</a></td>
-                        <td>becoming thing</td>
                         <td>devenir chose</td>
+                        <td>becoming thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_M_..html">M:M:.</a></td>
-                        <td>dimensions of interaction | ennead</td>
                         <td>dimensions de l'interaction | ennéade</td>
+                        <td>dimensions of interaction | ennead</td>
                     </tr>
                 
                 </tbody>
@@ -184,11 +216,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -211,8 +244,8 @@
                 
                     <tr>
                         <td><a href="S_.html">S:</a></td>
-                        <td>sign</td>
                         <td>signe</td>
+                        <td>sign</td>
                     </tr>
                 
                 </tbody>
@@ -220,8 +253,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -244,8 +277,8 @@
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -253,9 +286,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -278,146 +311,146 @@
                 
                     <tr>
                         <td><a href="t.U_O_.-.html">t.U:O:.-</a></td>
-                        <td>virtual sources of meaning in memory</td>
                         <td>sources virtuelles du sens dans la mémoire</td>
+                        <td>virtual sources of meaning in memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.A_O_.-.html">t.A:O:.-</a></td>
-                        <td>actual sources of meaning in memory</td>
                         <td>sources actuelles du sens dans la mémoire</td>
+                        <td>actual sources of meaning in memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_U_.-.html">t.O:U:.-</a></td>
-                        <td>sources of meaning in memory connections</td>
                         <td>sources du sens dans les connections de la mémoire</td>
+                        <td>sources of meaning in memory connections</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_A_.-.html">t.O:A:.-</a></td>
-                        <td>sources of meaning in temporal series</td>
                         <td>sources du sens dans les séries temporelles</td>
+                        <td>sources of meaning in temporal series</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_S_.-.html">t.O:S:.-</a></td>
-                        <td>abstract memory factors</td>
                         <td>facteurs abstraits de mémoire</td>
+                        <td>abstract memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_B_.-.html">t.O:B:.-</a></td>
-                        <td>existential memory factors</td>
                         <td>facteurs existentiels de mémoire</td>
+                        <td>existential memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_T_.-.html">t.O:T:.-</a></td>
-                        <td>concrete memory factors</td>
                         <td>facteurs concrets de mémoire</td>
+                        <td>concrete memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.S_O_.-.html">t.S:O:.-</a></td>
-                        <td>formal projection in time</td>
                         <td>projection formelle dans le temps</td>
+                        <td>formal projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.B_O_.-.html">t.B:O:.-</a></td>
-                        <td>subjective projection in time</td>
                         <td>projection subjective dans le temps</td>
+                        <td>subjective projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.T_O_.-.html">t.T:O:.-</a></td>
-                        <td>objective projection in time</td>
                         <td>projection objective dans le temps</td>
+                        <td>objective projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.U_M_.-.html">t.U:M:.-</a></td>
-                        <td>virtual memory factors</td>
                         <td>facteurs virtuels de mémoire</td>
+                        <td>virtual memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.A_M_.-.html">t.A:M:.-</a></td>
-                        <td>actual memory factors</td>
                         <td>facteurs actuels de mémoire</td>
+                        <td>actual memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.M_U_.-.html">t.M:U:.-</a></td>
-                        <td>virtual projection in time</td>
                         <td>projection virtuelle dans le temps</td>
+                        <td>virtual projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.M_A_.-.html">t.M:A:.-</a></td>
-                        <td>actual projection in time</td>
                         <td>projection actuelle dans le temps</td>
+                        <td>actual projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_O_.-.html">t.O:O:.-</a></td>
-                        <td>sources of meaning in memory</td>
                         <td>sources du sens dans la mémoire</td>
+                        <td>sources of meaning in memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.O_M_.-.html">t.O:M:.-</a></td>
-                        <td>memory factors</td>
                         <td>facteurs de mémoire</td>
+                        <td>memory factors</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.M_O_.-.html">t.M:O:.-</a></td>
-                        <td>projection in time</td>
                         <td>projection dans le temps</td>
+                        <td>projection in time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-O_M_.-'.html">t.-O:M:.-'</a></td>
-                        <td>dated phenomena (1)</td>
                         <td>phénomènes datés (1)</td>
+                        <td>dated phenomena (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-O_M_.-s.y.-'.html">t.-O:M:.-s.y.-'</a></td>
-                        <td>historical studies (1)</td>
                         <td>études historiques (1)</td>
+                        <td>historical studies (1)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-M_.O_.-'.html">t.-M:.O:.-'</a></td>
-                        <td>seasons</td>
                         <td>saisons</td>
+                        <td>seasons</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-M_O_.-'.html">t.-M:O:.-'</a></td>
-                        <td>dated phenomena (2)</td>
                         <td>phénomènes datés (2)</td>
+                        <td>dated phenomena (2)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-M_O_.-s.y.-'.html">t.-M:O:.-s.y.-'</a></td>
-                        <td>historical studies (2)</td>
                         <td>études historiques (2)</td>
+                        <td>historical studies (2)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-O_M_.+M_O_.-'.html">t.-O:M:.+M:O:.-'</a></td>
-                        <td>objects of historical studies</td>
                         <td>objets des études historiques</td>
+                        <td>objects of historical studies</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.-O_M_.+M_O_.-s.y.-'.html">t.-O:M:.+M:O:.-s.y.-'</a></td>
-                        <td>historical studies</td>
                         <td>études historiques</td>
+                        <td>historical studies</td>
                     </tr>
                 
                 </tbody>
@@ -425,8 +458,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -449,98 +482,98 @@
                 
                     <tr>
                         <td><a href="U_O_.t.-.html">U:O:.t.-</a></td>
-                        <td>virtual mastering of time</td>
                         <td>maîtrise virtuelle du temps</td>
+                        <td>virtual mastering of time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.t.-.html">A:O:.t.-</a></td>
-                        <td>actual mastering of time</td>
                         <td>maîtrise actuelle du temps</td>
+                        <td>actual mastering of time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.t.-.html">O:U:.t.-</a></td>
-                        <td>mastering virtual time</td>
                         <td>maîtrise du temps virtuel</td>
+                        <td>mastering virtual time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.t.-.html">O:A:.t.-</a></td>
-                        <td>mastering actual time</td>
                         <td>maîtrise du temps actuel</td>
+                        <td>mastering actual time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_S_.t.-.html">O:S:.t.-</a></td>
-                        <td>destroy memory in an abstract way</td>
                         <td>détruire la mémoire abstraitement</td>
+                        <td>destroy memory in an abstract way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_.t.-.html">O:B:.t.-</a></td>
-                        <td>destroy memory in an existential way</td>
                         <td>détruire la mémoire existentiellement</td>
+                        <td>destroy memory in an existential way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.t.-.html">O:T:.t.-</a></td>
-                        <td>destroy memory in a concrete way</td>
                         <td>détruire la mémoire concrètement</td>
+                        <td>destroy memory in a concrete way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.t.-.html">U:M:.t.-</a></td>
-                        <td>destroy memory virtually</td>
                         <td>détruire la mémoire virtuellement</td>
+                        <td>destroy memory virtually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.t.-.html">A:M:.t.-</a></td>
-                        <td>destroy memory actually</td>
                         <td>détruire la mémoire actuellement</td>
+                        <td>destroy memory actually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.t.-.html">O:O:.t.-</a></td>
-                        <td>time mastering</td>
                         <td>maîtrise du temps</td>
+                        <td>time mastering</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.t.-.html">O:M:.t.-</a></td>
-                        <td>destroy memory</td>
                         <td>détruire la mémoire</td>
+                        <td>destroy memory</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.t.-.html">M:O:.t.-</a></td>
-                        <td>temporal defect</td>
                         <td>défaut temporel</td>
+                        <td>temporal defect</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.t.-l.-'.html">E:.-O:.t.-l.-'</a></td>
-                        <td>absolute position: top / front</td>
                         <td>position absolue: haut / avant</td>
+                        <td>absolute position: top / front</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.t.-l.-'.html">E:.-M:.t.-l.-'</a></td>
-                        <td>absolute origin</td>
                         <td>origine absolue</td>
+                        <td>absolute origin</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.t.-l.-'.html">E:.-F:.t.-l.-'</a></td>
-                        <td>structure of exi-stance</td>
                         <td>structure d'exi-stance</td>
+                        <td>structure of exi-stance</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-y.-'E_U_.t.-l.-'E_U_.S_M_.-l.-'_.html">l.-y.-'E:U:.t.-l.-'E:U:.S:M:.-l.-',</a></td>
-                        <td>high parts of the landscape</td>
                         <td>parties hautes du paysage</td>
+                        <td>high parts of the landscape</td>
                     </tr>
                 
                 </tbody>
@@ -548,8 +581,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -572,500 +605,500 @@
                 
                     <tr>
                         <td><a href="wo.U_O_.t.-.html">wo.U:O:.t.-</a></td>
-                        <td>going through the waxing phase of the symbolic cycle</td>
                         <td>traverser la phase croissante du cycle symbolique</td>
+                        <td>going through the waxing phase of the symbolic cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.A_O_.t.-.html">wo.A:O:.t.-</a></td>
-                        <td>going through the waning phase of the symbolic cycle</td>
                         <td>traverser la phase décroissante du cycle symbolique</td>
+                        <td>going through the waning phase of the symbolic cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_U_.t.-.html">wo.O:U:.t.-</a></td>
-                        <td>begin a phase of the symbolic cycle</td>
                         <td>commencer une phase du cycle symbolique</td>
+                        <td>begin a phase of the symbolic cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_A_.t.-.html">wo.O:A:.t.-</a></td>
-                        <td>end a phase of the symbolic phase</td>
                         <td>terminer une phase du cycle symbolique</td>
+                        <td>end a phase of the symbolic phase</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.U_O_.t.-.html">wa.U:O:.t.-</a></td>
-                        <td>going through the waxing phase of the daily cycle</td>
                         <td>traverser la phase croissante du cycle quotidien</td>
+                        <td>going through the waxing phase of the daily cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.A_O_.t.-.html">wa.A:O:.t.-</a></td>
-                        <td>going through the waning phase of the daily cycle</td>
                         <td>traverser la phase décroissante du cycle quotidien</td>
+                        <td>going through the waning phase of the daily cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_U_.t.-.html">wa.O:U:.t.-</a></td>
-                        <td>begin a phase of the daily cycle</td>
                         <td>commencer une phase du cycle quotidien</td>
+                        <td>begin a phase of the daily cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_A_.t.-.html">wa.O:A:.t.-</a></td>
-                        <td>end a phase of the daily cycle</td>
                         <td>terminer une phase du cycle quotidien</td>
+                        <td>end a phase of the daily cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.wo.t.-.html">U:O:.wo.t.-</a></td>
-                        <td>begin the waxing phase of the symbolic and daily cycles</td>
                         <td>commencer la phase croissante des cycles symbolique et quotidien</td>
+                        <td>begin the waxing phase of the symbolic and daily cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.wa.t.-.html">U:O:.wa.t.-</a></td>
-                        <td>end the waxing phase of the symbolic and daily cycles</td>
                         <td>terminer la phase croissante des cycles symbolique et quotidien</td>
+                        <td>end the waxing phase of the symbolic and daily cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.wu.t.-.html">U:O:.wu.t.-</a></td>
-                        <td>begin the waning phase of the symbolic and daily cycles</td>
                         <td>commencer la phase décroissante des cycles symbolique et quotidien</td>
+                        <td>begin the waning phase of the symbolic and daily cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_O_.we.t.-.html">U:O:.we.t.-</a></td>
-                        <td>end the waning phase of the symbolic and daily cycles</td>
                         <td>terminer la phase décroissante des cycles symbolique et quotidien</td>
+                        <td>end the waning phase of the symbolic and daily cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.U_O_.t.-.html">wu.U:O:.t.-</a></td>
-                        <td>going through the waxing phase of the age cycle</td>
                         <td>traverser la phase croissante du cycle des âges</td>
+                        <td>going through the waxing phase of the age cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.A_O_.t.-.html">wu.A:O:.t.-</a></td>
-                        <td>going through the waning phase of the age cycle</td>
                         <td>traverser la phase décroissante du cycle des âges</td>
+                        <td>going through the waning phase of the age cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_U_.t.-.html">wu.O:U:.t.-</a></td>
-                        <td>begin a phase of the age cycle</td>
                         <td>commencer une phase du cycle des âges</td>
+                        <td>begin a phase of the age cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_A_.t.-.html">wu.O:A:.t.-</a></td>
-                        <td>end a phase of the age cycle</td>
                         <td>terminer une phase du cycle des âges</td>
+                        <td>end a phase of the age cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.U_O_.t.-.html">we.U:O:.t.-</a></td>
-                        <td>going through the waxing phase of the reproductive cycle</td>
                         <td>traverser la phase croissante du cycle reproducteur</td>
+                        <td>going through the waxing phase of the reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.A_O_.t.-.html">we.A:O:.t.-</a></td>
-                        <td>going through the waning phase of the reproductive cycle</td>
                         <td>traverser la phase décroissante du cycle reproducteur</td>
+                        <td>going through the waning phase of the reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_U_.t.-.html">we.O:U:.t.-</a></td>
-                        <td>begin a phase of the reproductive cycle</td>
                         <td>commencer une phase du cycle reproducteur</td>
+                        <td>begin a phase of the reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_A_.t.-.html">we.O:A:.t.-</a></td>
-                        <td>end a phase of the reproductive cycle</td>
                         <td>terminer une phase du cycle reproducteur</td>
+                        <td>end a phase of the reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.wo.t.-.html">A:O:.wo.t.-</a></td>
-                        <td>begin the waxing phase of the age and reproductive cycles</td>
                         <td>commencer la phase croissante des cycles des âges et reproducteur</td>
+                        <td>begin the waxing phase of the age and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.wa.t.-.html">A:O:.wa.t.-</a></td>
-                        <td>end the waxing phase of the age and reproductive cycles</td>
                         <td>terminer la phase croissante des cycles des âges et reproducteur</td>
+                        <td>end the waxing phase of the age and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.wu.t.-.html">A:O:.wu.t.-</a></td>
-                        <td>begin the waning phase of the age and reproductive cycles</td>
                         <td>commencer la phase décroissante des cycles des âges et reproducteur</td>
+                        <td>begin the waning phase of the age and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_O_.we.t.-.html">A:O:.we.t.-</a></td>
-                        <td>end the waning phase of the age and reproductive cycle</td>
                         <td>terminer la phase décroissante des cycles des âges et reproducteur</td>
+                        <td>end the waning phase of the age and reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.wo.t.-.html">O:U:.wo.t.-</a></td>
-                        <td>begin the waxing phase of the symbolic and age cycles</td>
                         <td>commencer la phase croissante des cycles symbolique et des âges</td>
+                        <td>begin the waxing phase of the symbolic and age cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.wa.t.-.html">O:U:.wa.t.-</a></td>
-                        <td>end the waxing phase of the symbolic and age cycles</td>
                         <td>terminer la phase croissante des cycles symbolique et des âges</td>
+                        <td>end the waxing phase of the symbolic and age cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.wu.t.-.html">O:U:.wu.t.-</a></td>
-                        <td>begin the waning phase of the symbolic and age cycles</td>
                         <td>commencer la phase décroissante des cycles symbolique et des âges</td>
+                        <td>begin the waning phase of the symbolic and age cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_U_.we.t.-.html">O:U:.we.t.-</a></td>
-                        <td>end the waning phase of the symbolic and age cycles</td>
                         <td>terminer la phase décroissante des cycles symbolique et des âges</td>
+                        <td>end the waning phase of the symbolic and age cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.wo.t.-.html">O:A:.wo.t.-</a></td>
-                        <td>begin the waxing phase of the daily and reproductive cycles</td>
                         <td>commencer la phase croissante des cycles quotidien et reproducteur</td>
+                        <td>begin the waxing phase of the daily and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.wa.t.-.html">O:A:.wa.t.-</a></td>
-                        <td>end the waxing phase of the daily and reproductive cycles</td>
                         <td>terminer la phase croissante des cycles quotidien et reproducteur</td>
+                        <td>end the waxing phase of the daily and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.wu.t.-.html">O:A:.wu.t.-</a></td>
-                        <td>begin the waning phase of the daily and reproductive cycles</td>
                         <td>commencer la phase décroissante des cycles quotidien et reproducteur</td>
+                        <td>begin the waning phase of the daily and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_A_.we.t.-.html">O:A:.we.t.-</a></td>
-                        <td>end the waning phase of the daily and reproductive cycles</td>
                         <td>terminer la phase décroissante des cycles quotidien et reproducteur</td>
+                        <td>end the waning phase of the daily and reproductive cycles</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wo.O_O_.t.-.html">wo.O:O:.t.-</a></td>
-                        <td>go through the symbolic cycle</td>
                         <td>traverser le cycle symbolique</td>
+                        <td>go through the symbolic cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wa.O_O_.t.-.html">wa.O:O:.t.-</a></td>
-                        <td>go through the daily cycle</td>
                         <td>traverser le cycle quotidien</td>
+                        <td>go through the daily cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="wu.O_O_.t.-.html">wu.O:O:.t.-</a></td>
-                        <td>go through the age cycle</td>
                         <td>traverser le cycle des âges</td>
+                        <td>go through the age cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="we.O_O_.t.-.html">we.O:O:.t.-</a></td>
-                        <td>go through the reproductive cycle</td>
                         <td>traverser le cycle reproducteur</td>
+                        <td>go through the reproductive cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.wo.t.-.html">O:O:.wo.t.-</a></td>
-                        <td>sprout</td>
                         <td>germer</td>
+                        <td>sprout</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.wa.t.-.html">O:O:.wa.t.-</a></td>
-                        <td>flourish</td>
                         <td>fleurir</td>
+                        <td>flourish</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.wu.t.-.html">O:O:.wu.t.-</a></td>
-                        <td>bear fruit</td>
                         <td>porter fruit</td>
+                        <td>bear fruit</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.we.t.-.html">O:O:.we.t.-</a></td>
-                        <td>wane</td>
                         <td>décliner</td>
+                        <td>wane</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_O_.O_O_.t.-.html">O:O:.O:O:.t.-</a></td>
-                        <td>life cycle, time cycle</td>
                         <td>cycle de vie, cycle du temps</td>
+                        <td>life cycle, time cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.O_S_.-t.-'.html">E:.-U:.O:S:.-t.-'</a></td>
-                        <td>passive voice according to sign</td>
                         <td>voix passive selon le signe</td>
+                        <td>passive voice according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.O_B_.-t.-'.html">E:.-U:.O:B:.-t.-'</a></td>
-                        <td>passive voice according to being</td>
                         <td>voix passive selon l'être</td>
+                        <td>passive voice according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.O_T_.-t.-'.html">E:.-U:.O:T:.-t.-'</a></td>
-                        <td>passive voice according to thing</td>
                         <td>voix passive selon la chose</td>
+                        <td>passive voice according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.O_S_.-t.-'.html">E:.-A:.O:S:.-t.-'</a></td>
-                        <td>active voice according to sign</td>
                         <td>voix active selon le signe</td>
+                        <td>active voice according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.O_B_.-t.-'.html">E:.-A:.O:B:.-t.-'</a></td>
-                        <td>active voice according to being</td>
                         <td>voix active selon l'être</td>
+                        <td>active voice according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.O_T_.-t.-'.html">E:.-A:.O:T:.-t.-'</a></td>
-                        <td>active voice according to thing</td>
                         <td>voix active selon la chose</td>
+                        <td>active voice according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.O_S_.-t.-'.html">E:.-S:.O:S:.-t.-'</a></td>
-                        <td>future according to sign</td>
                         <td>futur selon le signe</td>
+                        <td>future according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.O_B_.-t.-'.html">E:.-S:.O:B:.-t.-'</a></td>
-                        <td>future according to being</td>
                         <td>futur selon l'être</td>
+                        <td>future according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.O_T_.-t.-'.html">E:.-S:.O:T:.-t.-'</a></td>
-                        <td>future according to thing</td>
                         <td>futur selon la chose</td>
+                        <td>future according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.O_S_.-t.-'.html">E:.-B:.O:S:.-t.-'</a></td>
-                        <td>present according to sign</td>
                         <td>présent selon le signe</td>
+                        <td>present according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.O_B_.-t.-'.html">E:.-B:.O:B:.-t.-'</a></td>
-                        <td>present according to being</td>
                         <td>présent selon l'être</td>
+                        <td>present according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.O_T_.-t.-'.html">E:.-B:.O:T:.-t.-'</a></td>
-                        <td>present according to thing</td>
                         <td>présent selon la chose</td>
+                        <td>present according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.O_S_.-t.-'.html">E:.-T:.O:S:.-t.-'</a></td>
-                        <td>past according to sign</td>
                         <td>passé selon le signe</td>
+                        <td>past according to sign</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.O_B_.-t.-'.html">E:.-T:.O:B:.-t.-'</a></td>
-                        <td>past according to being</td>
                         <td>passé selon l'être</td>
+                        <td>past according to being</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.O_T_.-t.-'.html">E:.-T:.O:T:.-t.-'</a></td>
-                        <td>past according to thing</td>
                         <td>passé selon la chose</td>
+                        <td>past according to thing</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.U_M_.-t.-'.html">E:.-U:.U:M:.-t.-'</a></td>
-                        <td>virtual passive voice</td>
                         <td>voix passive virtuelle</td>
+                        <td>virtual passive voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.A_M_.-t.-'.html">E:.-U:.A:M:.-t.-'</a></td>
-                        <td>actual passive voice</td>
                         <td>voix passive actuelle</td>
+                        <td>actual passive voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.U_M_.-t.-'.html">E:.-A:.U:M:.-t.-'</a></td>
-                        <td>virtual active voice</td>
                         <td>voix active virtuelle</td>
+                        <td>virtual active voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.A_M_.-t.-'.html">E:.-A:.A:M:.-t.-'</a></td>
-                        <td>actual active voice</td>
                         <td>voix active actuelle</td>
+                        <td>actual active voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.U_M_.-t.-'.html">E:.-S:.U:M:.-t.-'</a></td>
-                        <td>virtual future</td>
                         <td>futur virtuel</td>
+                        <td>virtual future</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.U_M_.-t.-'.html">E:.-B:.U:M:.-t.-'</a></td>
-                        <td>virtual present</td>
                         <td>présent virtuel</td>
+                        <td>virtual present</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.A_M_.-t.-'.html">E:.-B:.A:M:.-t.-'</a></td>
-                        <td>actual present</td>
                         <td>présent actuel</td>
+                        <td>actual present</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.U_M_.-t.-'.html">E:.-T:.U:M:.-t.-'</a></td>
-                        <td>virtual past</td>
                         <td>passé virtuel</td>
+                        <td>virtual past</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.A_M_.-t.-'.html">E:.-T:.A:M:.-t.-'</a></td>
-                        <td>actual past</td>
                         <td>passé actuel</td>
+                        <td>actual past</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.y.-t.-'.html">E:.-F:.y.-t.-'</a></td>
-                        <td>cognitive mood</td>
                         <td>mode cognitif</td>
+                        <td>cognitive mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.o.-t.-'.html">E:.-F:.o.-t.-'</a></td>
-                        <td>optative mood</td>
                         <td>mode optatif</td>
+                        <td>optative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.e.-t.-'.html">E:.-F:.e.-t.-'</a></td>
-                        <td>abilitative mood</td>
                         <td>mode abilitatif</td>
+                        <td>abilitative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.u.-t.-'.html">E:.-F:.u.-t.-'</a></td>
-                        <td>expressive mood</td>
                         <td>mode expressif</td>
+                        <td>expressive mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.a.-t.-'.html">E:.-F:.a.-t.-'</a></td>
-                        <td>promisive mood</td>
                         <td>mode promissif</td>
+                        <td>promisive mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.i.-t.-'.html">E:.-F:.i.-t.-'</a></td>
-                        <td>imperative mood</td>
                         <td>mode impératif</td>
+                        <td>imperative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-U_.O_M_.-t.-'.html">E:.-U:.O:M:.-t.-'</a></td>
-                        <td>passive voice</td>
                         <td>voix passive</td>
+                        <td>passive voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-A_.O_M_.-t.-'.html">E:.-A:.O:M:.-t.-'</a></td>
-                        <td>active voice</td>
                         <td>voix active</td>
+                        <td>active voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-S_.O_M_.-t.-'.html">E:.-S:.O:M:.-t.-'</a></td>
-                        <td>future tense</td>
                         <td>temps futur</td>
+                        <td>future tense</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-B_.O_M_.-t.-'.html">E:.-B:.O:M:.-t.-'</a></td>
-                        <td>present tense</td>
                         <td>temps présent</td>
+                        <td>present tense</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-T_.O_M_.-t.-'.html">E:.-T:.O:M:.-t.-'</a></td>
-                        <td>past tense</td>
                         <td>temps passé</td>
+                        <td>past tense</td>
                     </tr>
                 
                     <tr>
                         <td><a href="t.i.-d.i.-t.+M_O_.-'.html">t.i.-d.i.-t.+M:O:.-'</a></td>
-                        <td>clock time units</td>
                         <td>unités de temps chronométrées</td>
+                        <td>clock time units</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-O_.O_M_.-t.-'.html">E:.-O:.O:M:.-t.-'</a></td>
-                        <td>diathesis | grammatical voice</td>
                         <td>diathèse | voix grammaticale</td>
+                        <td>diathesis | grammatical voice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.U_M_.-t.-'.html">E:.-F:.U:M:.-t.-'</a></td>
-                        <td>declarative mood</td>
                         <td>mode déclaratif</td>
+                        <td>declarative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.A_M_.-t.-'.html">E:.-F:.A:M:.-t.-'</a></td>
-                        <td>performative mood</td>
                         <td>mode performatif</td>
+                        <td>performative mood</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-M_.O_M_.-t.-'.html">E:.-M:.O:M:.-t.-'</a></td>
-                        <td>tense | time | when</td>
                         <td>temps | quand</td>
+                        <td>tense | time | when</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.-F_.O_M_.-t.-'.html">E:.-F:.O:M:.-t.-'</a></td>
-                        <td>conjugations and verbal modes, tense, time</td>
                         <td>conjugaisons et modes verbaux, temps</td>
+                        <td>conjugations and verbal modes, tense, time</td>
                     </tr>
                 
                     <tr>
                         <td><a href="l.-y.-'E_U_.M_T_.-l.-'E_U_.t.-l.-'_.html">l.-y.-'E:U:.M:T:.-l.-'E:U:.t.-l.-',</a></td>
-                        <td>hollow, rugged landsacpe</td>
                         <td>paysage creusé</td>
+                        <td>hollow, rugged landsacpe</td>
                     </tr>
                 
                 </tbody>
@@ -1073,7 +1106,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -1082,7 +1115,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1097,6 +1130,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1106,6 +1149,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1142,5 +1186,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

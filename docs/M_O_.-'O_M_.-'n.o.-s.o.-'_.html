@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             M:O:.-'O:M:.-'n.o.-s.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>cultural functions</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>fonctions culturelles</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>fonctions culturelles</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>cultural functions</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,146 +202,146 @@
                 
                     <tr>
                         <td><a href="j.-'U_M_.-'n.o.-s.o.-'_.html">j.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>regulation of the works of the mind</td>
                         <td>régulation des oeuvres de l'esprit</td>
+                        <td>regulation of the works of the mind</td>
                     </tr>
                 
                     <tr>
                         <td><a href="j.-'A_M_.-'n.o.-s.o.-'_.html">j.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>roles of the intellectual and artistic life</td>
                         <td>rôles de la vie intellectuelle et artistique</td>
+                        <td>roles of the intellectual and artistic life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.-'U_M_.-'n.o.-s.o.-'_.html">g.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>transmission environment</td>
                         <td>environnement de transmission</td>
+                        <td>transmission environment</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.-'A_M_.-'n.o.-s.o.-'_.html">g.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>transmission cycle</td>
                         <td>cycle de transmission</td>
+                        <td>transmission cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'U_M_.-'n.o.-s.o.-'_.html">h.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>religion: regulation of the sacred</td>
                         <td>religion: régulation du sacré</td>
+                        <td>religion: regulation of the sacred</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'A_M_.-'n.o.-s.o.-'_.html">h.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>religion: sacrificial function, rôles du sacrifice</td>
                         <td>religion: fonction sacrificielle, rôles du sacrifice</td>
+                        <td>religion: sacrificial function, rôles du sacrifice</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.-'U_M_.-'n.o.-s.o.-'_.html">c.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>governmental function, government roles, political powers</td>
                         <td>fonction gouvernementale, rôles de gouvernement, pouvoirs politiques</td>
+                        <td>governmental function, government roles, political powers</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.-'A_M_.-'n.o.-s.o.-'_.html">c.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>social relations</td>
                         <td>relations sociales</td>
+                        <td>social relations</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.-'U_M_.-'n.o.-s.o.-'_.html">p.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>factors defining a capital, an economic good, an asset</td>
                         <td>facteurs définissant un capital, un bien économique, un actif</td>
+                        <td>factors defining a capital, an economic good, an asset</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.-'A_M_.-'n.o.-s.o.-'_.html">p.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>roles or factors of work | labour</td>
                         <td>rôles ou facteurs du travail</td>
+                        <td>roles or factors of work | labour</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.-'U_M_.-'n.o.-s.o.-'_.html">x.-'U:M:.-'n.o.-s.o.-',</a></td>
-                        <td>environment, means of the economic life</td>
                         <td>environnement, moyens de la vie économique</td>
+                        <td>environment, means of the economic life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.-'A_M_.-'n.o.-s.o.-'_.html">x.-'A:M:.-'n.o.-s.o.-',</a></td>
-                        <td>economic life cycle</td>
                         <td>cycle de la vie économique</td>
+                        <td>economic life cycle</td>
                     </tr>
                 
                     <tr>
                         <td><a href="j.-'O_M_.-'n.o.-s.o.-'_.html">j.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>factors of the intellectual and aesthetic life</td>
                         <td>facteurs de la vie intellectuelle et esthétique</td>
+                        <td>factors of the intellectual and aesthetic life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="g.-'O_M_.-'n.o.-s.o.-'_.html">g.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>transmission functions of the works of the mind</td>
                         <td>fonctions de transmission des oeuvres de l'esprit</td>
+                        <td>transmission functions of the works of the mind</td>
                     </tr>
                 
                     <tr>
                         <td><a href="h.-'O_M_.-'n.o.-s.o.-'_.html">h.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>sacrificial and religious functions</td>
                         <td>fonctions sacrificielles et religieuses</td>
+                        <td>sacrificial and religious functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="c.-'O_M_.-'n.o.-s.o.-'_.html">c.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>socio-political functions</td>
                         <td>fonctions socio-politiques</td>
+                        <td>socio-political functions</td>
                     </tr>
                 
                     <tr>
                         <td><a href="p.-'O_M_.-'n.o.-s.o.-'_.html">p.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>dialectic of capital and labour, of goods and services (economy)</td>
                         <td>dialectique du capital et du travail, des biens et des services (économie)</td>
+                        <td>dialectic of capital and labour, of goods and services (economy)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="x.-'O_M_.-'n.o.-s.o.-'_.html">x.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>phases and means of economic circuits</td>
                         <td>phases et moyens des circuits économiques</td>
+                        <td>phases and means of economic circuits</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'y.-'n.o.-s.o.-'_.html">M:O:.-'y.-'n.o.-s.o.-',</a></td>
-                        <td>semiotic frameworks</td>
                         <td>cadres sémiotiques</td>
+                        <td>semiotic frameworks</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'o.-'n.o.-s.o.-'_.html">M:O:.-'o.-'n.o.-s.o.-',</a></td>
-                        <td>relational framework</td>
                         <td>cadres relationnels</td>
+                        <td>relational framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'e.-'n.o.-s.o.-'_.html">M:O:.-'e.-'n.o.-s.o.-',</a></td>
-                        <td>realization framework</td>
                         <td>cadre de réalisation</td>
+                        <td>realization framework</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'u.-'n.o.-s.o.-'_.html">M:O:.-'u.-'n.o.-s.o.-',</a></td>
-                        <td>semiotic contents</td>
                         <td>contenus sémiotiques</td>
+                        <td>semiotic contents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'a.-'n.o.-s.o.-'_.html">M:O:.-'a.-'n.o.-s.o.-',</a></td>
-                        <td>relational content</td>
                         <td>contenu relationnel</td>
+                        <td>relational content</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'i.-'n.o.-s.o.-'_.html">M:O:.-'i.-'n.o.-s.o.-',</a></td>
-                        <td>content of realization</td>
                         <td>contenu de réalisation</td>
+                        <td>content of realization</td>
                     </tr>
                 
                 </tbody>
@@ -317,11 +349,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -353,8 +386,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -386,8 +419,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -419,8 +452,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -434,19 +467,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="M_O_.-'O_M_.-'n.o.-s.o.-'_.html">M:O:.-'O:M:.-'n.o.-s.o.-',</a> cultural functions</div>-->
+            <!--<div class="card-header">Table <a href="M_O_.-'O_M_.-'n.o.-s.o.-'_.html">M:O:.-'O:M:.-'n.o.-s.o.-',</a> fonctions culturelles</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="7" style="background-color: #d9eaff;">
+    <th class="cell" colspan="7" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'O_M_.-'n.o.-s.o.-'_.html"> M:O:.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="cultural functions"
-                data-en="fonctions culturelles">
-                cultural functions
+                data-fr="fonctions culturelles"
+                data-en="cultural functions">
+                fonctions culturelles
             </span>
         </div>
     
@@ -457,14 +490,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'y.-'n.o.-s.o.-'_.html"> M:O:.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="semiotic frameworks"
-                data-en="cadres sémiotiques">
-                semiotic frameworks
+                data-fr="cadres sémiotiques"
+                data-en="semiotic frameworks">
+                cadres sémiotiques
             </span>
         </div>
     
@@ -472,14 +505,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'o.-'n.o.-s.o.-'_.html"> M:O:.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="relational framework"
-                data-en="cadres relationnels">
-                relational framework
+                data-fr="cadres relationnels"
+                data-en="relational framework">
+                cadres relationnels
             </span>
         </div>
     
@@ -487,14 +520,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'e.-'n.o.-s.o.-'_.html"> M:O:.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="realization framework"
-                data-en="cadre de réalisation">
-                realization framework
+                data-fr="cadre de réalisation"
+                data-en="realization framework">
+                cadre de réalisation
             </span>
         </div>
     
@@ -502,14 +535,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'u.-'n.o.-s.o.-'_.html"> M:O:.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="semiotic contents"
-                data-en="contenus sémiotiques">
-                semiotic contents
+                data-fr="contenus sémiotiques"
+                data-en="semiotic contents">
+                contenus sémiotiques
             </span>
         </div>
     
@@ -517,14 +550,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'a.-'n.o.-s.o.-'_.html"> M:O:.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="relational content"
-                data-en="contenu relationnel">
-                relational content
+                data-fr="contenu relationnel"
+                data-en="relational content">
+                contenu relationnel
             </span>
         </div>
     
@@ -532,14 +565,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="M_O_.-'i.-'n.o.-s.o.-'_.html"> M:O:.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="content of realization"
-                data-en="contenu de réalisation">
-                content of realization
+                data-fr="contenu de réalisation"
+                data-en="content of realization">
+                contenu de réalisation
             </span>
         </div>
     
@@ -550,14 +583,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="j.-'O_M_.-'n.o.-s.o.-'_.html"> j.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="factors of the intellectual and aesthetic life"
-                data-en="facteurs de la vie intellectuelle et esthétique">
-                factors of the intellectual and aesthetic life
+                data-fr="facteurs de la vie intellectuelle et esthétique"
+                data-en="factors of the intellectual and aesthetic life">
+                facteurs de la vie intellectuelle et esthétique
             </span>
         </div>
     
@@ -571,9 +604,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'y.-'n.o.-s.o.-'_.html"> j.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="paradigms (history of science) epistemic rules, aesthetic canons"
-                data-en="paradigmes (histoire des sciences), règles épistémiques, canons esthétiques">
-                paradigms (history of science) epistemic rules, aesthetic canons
+                data-fr="paradigmes (histoire des sciences), règles épistémiques, canons esthétiques"
+                data-en="paradigms (history of science) epistemic rules, aesthetic canons">
+                paradigmes (histoire des sciences), règles épistémiques, canons esthétiques
             </span>
         </div>
     
@@ -586,9 +619,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'o.-'n.o.-s.o.-'_.html"> j.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="community competent enough to decide what is true, beautiful, what is the value of a work of the mind"
-                data-en="communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit">
-                community competent enough to decide what is true, beautiful, what is the value of a work of the mind
+                data-fr="communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit"
+                data-en="community competent enough to decide what is true, beautiful, what is the value of a work of the mind">
+                communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit
             </span>
         </div>
     
@@ -601,9 +634,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'e.-'n.o.-s.o.-'_.html"> j.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="scientific and artistic corpus used as a reference"
-                data-en="corpus scientifique et artistique de référence">
-                scientific and artistic corpus used as a reference
+                data-fr="corpus scientifique et artistique de référence"
+                data-en="scientific and artistic corpus used as a reference">
+                corpus scientifique et artistique de référence
             </span>
         </div>
     
@@ -616,9 +649,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'u.-'n.o.-s.o.-'_.html"> j.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="creator of works of the mind, artist"
-                data-en="créateur d'oeuvres de l'esprit, artiste">
-                creator of works of the mind, artist
+                data-fr="créateur d'oeuvres de l'esprit, artiste"
+                data-en="creator of works of the mind, artist">
+                créateur d'oeuvres de l'esprit, artiste
             </span>
         </div>
     
@@ -631,9 +664,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'a.-'n.o.-s.o.-'_.html"> j.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="amateur, fan of works of the mind"
-                data-en="amateur d'oeuvres de l'esprit">
-                amateur, fan of works of the mind
+                data-fr="amateur d'oeuvres de l'esprit"
+                data-en="amateur, fan of works of the mind">
+                amateur d'oeuvres de l'esprit
             </span>
         </div>
     
@@ -646,9 +679,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'i.-'n.o.-s.o.-'_.html"> j.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="curator of works of the mind"
-                data-en="conservateur (curateur) d'oeuvres de l'esprit">
-                curator of works of the mind
+                data-fr="conservateur (curateur) d'oeuvres de l'esprit"
+                data-en="curator of works of the mind">
+                conservateur (curateur) d'oeuvres de l'esprit
             </span>
         </div>
     
@@ -659,14 +692,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="g.-'O_M_.-'n.o.-s.o.-'_.html"> g.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="transmission functions of the works of the mind"
-                data-en="fonctions de transmission des oeuvres de l'esprit">
-                transmission functions of the works of the mind
+                data-fr="fonctions de transmission des oeuvres de l'esprit"
+                data-en="transmission functions of the works of the mind">
+                fonctions de transmission des oeuvres de l'esprit
             </span>
         </div>
     
@@ -680,9 +713,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'y.-'n.o.-s.o.-'_.html"> g.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="symbolic environment of the communication, available sign systems"
-                data-en="environnement symbolique de la communication, systèmes de signes disponibles">
-                symbolic environment of the communication, available sign systems
+                data-fr="environnement symbolique de la communication, systèmes de signes disponibles"
+                data-en="symbolic environment of the communication, available sign systems">
+                environnement symbolique de la communication, systèmes de signes disponibles
             </span>
         </div>
     
@@ -695,9 +728,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'o.-'n.o.-s.o.-'_.html"> g.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="ritual communication environment, kind of collective personal participation (bodily involvement)"
-                data-en="environnement rituel de la communication, type de participation collective des personnes (implication des corps)">
-                ritual communication environment, kind of collective personal participation (bodily involvement)
+                data-fr="environnement rituel de la communication, type de participation collective des personnes (implication des corps)"
+                data-en="ritual communication environment, kind of collective personal participation (bodily involvement)">
+                environnement rituel de la communication, type de participation collective des personnes (implication des corps)
             </span>
         </div>
     
@@ -710,9 +743,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'e.-'n.o.-s.o.-'_.html"> g.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="material environment of communication, building, scene, stage, decor"
-                data-en="environnement matériel de la communication, bâtiment, scène, décor">
-                material environment of communication, building, scene, stage, decor
+                data-fr="environnement matériel de la communication, bâtiment, scène, décor"
+                data-en="material environment of communication, building, scene, stage, decor">
+                environnement matériel de la communication, bâtiment, scène, décor
             </span>
         </div>
     
@@ -725,9 +758,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'u.-'n.o.-s.o.-'_.html"> g.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr=""recitation", process of emission of a work of the mind (literature, theatre, film, music...)"
-                data-en=""récitation", processus d'émission d'une oeuvre de l'esprit (littéraire, dramatique, cinématographique, musicale...)">
-                "recitation", process of emission of a work of the mind (literature, theatre, film, music...)
+                data-fr=""récitation", processus d'émission d'une oeuvre de l'esprit (littéraire, dramatique, cinématographique, musicale...)"
+                data-en=""recitation", process of emission of a work of the mind (literature, theatre, film, music...)">
+                "récitation", processus d'émission d'une oeuvre de l'esprit (littéraire, dramatique, cinématographique, musicale...)
             </span>
         </div>
     
@@ -740,9 +773,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'a.-'n.o.-s.o.-'_.html"> g.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="discussion of a work of the mind"
-                data-en="discussion d'une oeuvre de l'esprit">
-                discussion of a work of the mind
+                data-fr="discussion d'une oeuvre de l'esprit"
+                data-en="discussion of a work of the mind">
+                discussion d'une oeuvre de l'esprit
             </span>
         </div>
     
@@ -755,9 +788,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="g.-'i.-'n.o.-s.o.-'_.html"> g.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="remembering, memories of a work of the mind"
-                data-en="mémorisation, souvenir d'une oeuvre de l'esprit">
-                remembering, memories of a work of the mind
+                data-fr="mémorisation, souvenir d'une oeuvre de l'esprit"
+                data-en="remembering, memories of a work of the mind">
+                mémorisation, souvenir d'une oeuvre de l'esprit
             </span>
         </div>
     
@@ -768,14 +801,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="h.-'O_M_.-'n.o.-s.o.-'_.html"> h.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="sacrificial and religious functions"
-                data-en="fonctions sacrificielles et religieuses">
-                sacrificial and religious functions
+                data-fr="fonctions sacrificielles et religieuses"
+                data-en="sacrificial and religious functions">
+                fonctions sacrificielles et religieuses
             </span>
         </div>
     
@@ -789,9 +822,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'y.-'n.o.-s.o.-'_.html"> h.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="spiritual teachings"
-                data-en="enseignements spirituels">
-                spiritual teachings
+                data-fr="enseignements spirituels"
+                data-en="spiritual teachings">
+                enseignements spirituels
             </span>
         </div>
     
@@ -804,9 +837,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'o.-'n.o.-s.o.-'_.html"> h.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="rules organizing a spiritual community: identities, functions..."
-                data-en="règles régissant une communauté spirituelle: identités, fonctions...">
-                rules organizing a spiritual community: identities, functions...
+                data-fr="règles régissant une communauté spirituelle: identités, fonctions..."
+                data-en="rules organizing a spiritual community: identities, functions...">
+                règles régissant une communauté spirituelle: identités, fonctions...
             </span>
         </div>
     
@@ -819,9 +852,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'e.-'n.o.-s.o.-'_.html"> h.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc."
-                data-en="réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc.">
-                ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc.
+                data-fr="réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc."
+                data-en="ultimate reality according to a spiritual community: God, Divinities, Buddha nature, Mind, Humanity, Nature, etc.">
+                réalité ultime selon une communauté spirituelle: Dieu, divinités, Nature de Bouddha, Esprit, Humanité, Nature, etc.
             </span>
         </div>
     
@@ -834,9 +867,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'u.-'n.o.-s.o.-'_.html"> h.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="sacrificing"
-                data-en="sacrifiant">
-                sacrificing
+                data-fr="sacrifiant"
+                data-en="sacrificing">
+                sacrifiant
             </span>
         </div>
     
@@ -849,9 +882,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'a.-'n.o.-s.o.-'_.html"> h.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="sacrified"
-                data-en="sacrifié">
-                sacrified
+                data-fr="sacrifié"
+                data-en="sacrified">
+                sacrifié
             </span>
         </div>
     
@@ -864,9 +897,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="h.-'i.-'n.o.-s.o.-'_.html"> h.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="performing a sacrifice | priest"
-                data-en="sacrificateur | prêtre">
-                performing a sacrifice | priest
+                data-fr="sacrificateur | prêtre"
+                data-en="performing a sacrifice | priest">
+                sacrificateur | prêtre
             </span>
         </div>
     
@@ -877,14 +910,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="c.-'O_M_.-'n.o.-s.o.-'_.html"> c.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="socio-political functions"
-                data-en="fonctions socio-politiques">
-                socio-political functions
+                data-fr="fonctions socio-politiques"
+                data-en="socio-political functions">
+                fonctions socio-politiques
             </span>
         </div>
     
@@ -898,9 +931,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'y.-'n.o.-s.o.-'_.html"> c.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="legislative power"
-                data-en="pouvoir législatif">
-                legislative power
+                data-fr="pouvoir législatif"
+                data-en="legislative power">
+                pouvoir législatif
             </span>
         </div>
     
@@ -913,9 +946,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'o.-'n.o.-s.o.-'_.html"> c.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="judiciary power"
-                data-en="pouvoir judiciaire">
-                judiciary power
+                data-fr="pouvoir judiciaire"
+                data-en="judiciary power">
+                pouvoir judiciaire
             </span>
         </div>
     
@@ -928,9 +961,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'e.-'n.o.-s.o.-'_.html"> c.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="executive power"
-                data-en="pouvoir executif">
-                executive power
+                data-fr="pouvoir executif"
+                data-en="executive power">
+                pouvoir executif
             </span>
         </div>
     
@@ -943,9 +976,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'u.-'n.o.-s.o.-'_.html"> c.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="law | custom relationships"
-                data-en="relations de droit | coutume">
-                law | custom relationships
+                data-fr="relations de droit | coutume"
+                data-en="law | custom relationships">
+                relations de droit | coutume
             </span>
         </div>
     
@@ -958,9 +991,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'a.-'n.o.-s.o.-'_.html"> c.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="trust relationships"
-                data-en="relations de confiance">
-                trust relationships
+                data-fr="relations de confiance"
+                data-en="trust relationships">
+                relations de confiance
             </span>
         </div>
     
@@ -973,9 +1006,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="c.-'i.-'n.o.-s.o.-'_.html"> c.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="force relationships"
-                data-en="relations de force">
-                force relationships
+                data-fr="relations de force"
+                data-en="force relationships">
+                relations de force
             </span>
         </div>
     
@@ -986,14 +1019,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="p.-'O_M_.-'n.o.-s.o.-'_.html"> p.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="dialectic of capital and labour, of goods and services (economy)"
-                data-en="dialectique du capital et du travail, des biens et des services (économie)">
-                dialectic of capital and labour, of goods and services (economy)
+                data-fr="dialectique du capital et du travail, des biens et des services (économie)"
+                data-en="dialectic of capital and labour, of goods and services (economy)">
+                dialectique du capital et du travail, des biens et des services (économie)
             </span>
         </div>
     
@@ -1007,9 +1040,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'y.-'n.o.-s.o.-'_.html"> p.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="value, reputation of a good, a capital, an asset"
-                data-en="valeur, réputation d'un bien, d'un capital, d'un actif">
-                value, reputation of a good, a capital, an asset
+                data-fr="valeur, réputation d'un bien, d'un capital, d'un actif"
+                data-en="value, reputation of a good, a capital, an asset">
+                valeur, réputation d'un bien, d'un capital, d'un actif
             </span>
         </div>
     
@@ -1022,9 +1055,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'o.-'n.o.-s.o.-'_.html"> p.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="property of a good, a capital, an asset"
-                data-en="propriété d'un bien, d'un capital, d'un actif">
-                property of a good, a capital, an asset
+                data-fr="propriété d'un bien, d'un capital, d'un actif"
+                data-en="property of a good, a capital, an asset">
+                propriété d'un bien, d'un capital, d'un actif
             </span>
         </div>
     
@@ -1037,9 +1070,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'e.-'n.o.-s.o.-'_.html"> p.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="usefulness of a good, a capital, an asset"
-                data-en="utilité d'un bien, d'un capital, d'un actif">
-                usefulness of a good, a capital, an asset
+                data-fr="utilité d'un bien, d'un capital, d'un actif"
+                data-en="usefulness of a good, a capital, an asset">
+                utilité d'un bien, d'un capital, d'un actif
             </span>
         </div>
     
@@ -1052,9 +1085,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'u.-'n.o.-s.o.-'_.html"> p.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="expert, specialist role (in relation with a division of labour)"
-                data-en="expert, rôle de spécialiste (en relation avec une division du travail)">
-                expert, specialist role (in relation with a division of labour)
+                data-fr="expert, rôle de spécialiste (en relation avec une division du travail)"
+                data-en="expert, specialist role (in relation with a division of labour)">
+                expert, rôle de spécialiste (en relation avec une division du travail)
             </span>
         </div>
     
@@ -1067,9 +1100,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'a.-'n.o.-s.o.-'_.html"> p.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="cooperator, cooperation role (in relation to a division of labor)"
-                data-en="coopérateur, rôle de coopération (en relation avec une division du travail)">
-                cooperator, cooperation role (in relation to a division of labor)
+                data-fr="coopérateur, rôle de coopération (en relation avec une division du travail)"
+                data-en="cooperator, cooperation role (in relation to a division of labor)">
+                coopérateur, rôle de coopération (en relation avec une division du travail)
             </span>
         </div>
     
@@ -1082,9 +1115,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="p.-'i.-'n.o.-s.o.-'_.html"> p.-'i.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="servant, achiever role, real accomplishment, efficiency of the service"
-                data-en="serviteur, rôle d'accomplissement réel, efficacité du service">
-                servant, achiever role, real accomplishment, efficiency of the service
+                data-fr="serviteur, rôle d'accomplissement réel, efficacité du service"
+                data-en="servant, achiever role, real accomplishment, efficiency of the service">
+                serviteur, rôle d'accomplissement réel, efficacité du service
             </span>
         </div>
     
@@ -1095,14 +1128,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="x.-'O_M_.-'n.o.-s.o.-'_.html"> x.-'O:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="phases and means of economic circuits"
-                data-en="phases et moyens des circuits économiques">
-                phases and means of economic circuits
+                data-fr="phases et moyens des circuits économiques"
+                data-en="phases and means of economic circuits">
+                phases et moyens des circuits économiques
             </span>
         </div>
     
@@ -1116,9 +1149,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.-'y.-'n.o.-s.o.-'_.html"> x.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="accountancy environment, currency, accountancy technologies..."
-                data-en="environnement de comptabilité: monnaie, techniques comptables...">
-                accountancy environment, currency, accountancy technologies...
+                data-fr="environnement de comptabilité: monnaie, techniques comptables..."
+                data-en="accountancy environment, currency, accountancy technologies...">
+                environnement de comptabilité: monnaie, techniques comptables...
             </span>
         </div>
     
@@ -1131,9 +1164,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.-'o.-'n.o.-s.o.-'_.html"> x.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="contractualisation environment: commercial law, labour laws..."
-                data-en="environnement de contractualisation: droit commercial, droit du travail...">
-                contractualisation environment: commercial law, labour laws...
+                data-fr="environnement de contractualisation: droit commercial, droit du travail..."
+                data-en="contractualisation environment: commercial law, labour laws...">
+                environnement de contractualisation: droit commercial, droit du travail...
             </span>
         </div>
     
@@ -1146,9 +1179,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.-'e.-'n.o.-s.o.-'_.html"> x.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="production environment: state of infrastructures and technologies, available energy sources..."
-                data-en="environnement de production: état des infrastructures et des techniques, sources d'énergies disponibles...">
-                production environment: state of infrastructures and technologies, available energy sources...
+                data-fr="environnement de production: état des infrastructures et des techniques, sources d'énergies disponibles..."
+                data-en="production environment: state of infrastructures and technologies, available energy sources...">
+                environnement de production: état des infrastructures et des techniques, sources d'énergies disponibles...
             </span>
         </div>
     
@@ -1161,9 +1194,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.-'u.-'n.o.-s.o.-'_.html"> x.-'u.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="consumption"
-                data-en="consommation">
-                consumption
+                data-fr="consommation"
+                data-en="consumption">
+                consommation
             </span>
         </div>
     
@@ -1176,9 +1209,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="x.-'a.-'n.o.-s.o.-'_.html"> x.-'a.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="distribution, exchange"
-                data-en="distribution, échange">
-                distribution, exchange
+                data-fr="distribution, échange"
+                data-en="distribution, exchange">
+                distribution, échange
             </span>
         </div>
     
@@ -1208,7 +1241,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -1223,6 +1256,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -1232,6 +1275,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -1268,5 +1312,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             O:M:.b.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>undo language</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>défaire le  langage</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>défaire le  langage</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>undo language</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-opposed">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,8 +200,8 @@
                 
                     <tr>
                         <td><a href="b.O_M_.-.html">b.O:M:.-</a></td>
-                        <td>language factors</td>
                         <td>facteurs de langage</td>
+                        <td>language factors</td>
                     </tr>
                 
                 </tbody>
@@ -177,10 +209,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -203,32 +235,32 @@
                 
                     <tr>
                         <td><a href="O_S_.b.-.html">O:S:.b.-</a></td>
-                        <td>undo language in an abstract way</td>
                         <td>défaire le langage abstraitement</td>
+                        <td>undo language in an abstract way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_B_.b.-.html">O:B:.b.-</a></td>
-                        <td>undo language in an existential way</td>
                         <td>défaire le langage existentiellement</td>
+                        <td>undo language in an existential way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_T_.b.-.html">O:T:.b.-</a></td>
-                        <td>undo language in a concrete way</td>
                         <td>défaire le langage concrètement</td>
+                        <td>undo language in a concrete way</td>
                     </tr>
                 
                     <tr>
                         <td><a href="U_M_.b.-.html">U:M:.b.-</a></td>
-                        <td>undo language virtually</td>
                         <td>défaire le langage virtuellement</td>
+                        <td>undo language virtually</td>
                     </tr>
                 
                     <tr>
                         <td><a href="A_M_.b.-.html">A:M:.b.-</a></td>
-                        <td>undo language actually</td>
                         <td>défaire le langage actuellement</td>
+                        <td>undo language actually</td>
                     </tr>
                 
                 </tbody>
@@ -236,8 +268,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -260,14 +292,14 @@
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-.html">O:M:.M:M:.-</a></td>
-                        <td>undermine human development</td>
                         <td>saper le développement humain</td>
+                        <td>undermine human development</td>
                     </tr>
                 
                     <tr>
                         <td><a href="O_M_.M_M_.-+M_M_.O_M_.-.html">O:M:.M:M:.-+M:M:.O:M:.-</a></td>
-                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                         <td>déterminants du développement humain, positifs et négatifs (verbes et noms)</td>
+                        <td>determinants of human development, positive and negative (verbs and nouns)</td>
                     </tr>
                 
                 </tbody>
@@ -275,11 +307,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -335,8 +368,8 @@
                 
                     <tr>
                         <td><a href="b..html">b.</a></td>
+                        <td>langage</td>
                         <td>language</td>
-                        <td>langages</td>
                     </tr>
                 
                 </tbody>
@@ -344,8 +377,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -359,19 +392,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="O_M_.b.-.html">O:M:.b.-</a> undo language</div>-->
+            <!--<div class="card-header">Table <a href="O_M_.b.-.html">O:M:.b.-</a> défaire le  langage</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="4" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="4" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_M_.b.-.html"> O:M:.b.- </a>
             <span class="translation"
-                data-fr="undo language"
-                data-en="défaire le  langage">
-                undo language
+                data-fr="défaire le  langage"
+                data-en="undo language">
+                défaire le  langage
             </span>
         </div>
     
@@ -382,14 +415,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_S_.b.-.html"> O:S:.b.- </a>
             <span class="translation"
-                data-fr="undo language in an abstract way"
-                data-en="défaire le langage abstraitement">
-                undo language in an abstract way
+                data-fr="défaire le langage abstraitement"
+                data-en="undo language in an abstract way">
+                défaire le langage abstraitement
             </span>
         </div>
     
@@ -397,14 +430,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_B_.b.-.html"> O:B:.b.- </a>
             <span class="translation"
-                data-fr="undo language in an existential way"
-                data-en="défaire le langage existentiellement">
-                undo language in an existential way
+                data-fr="défaire le langage existentiellement"
+                data-en="undo language in an existential way">
+                défaire le langage existentiellement
             </span>
         </div>
     
@@ -412,14 +445,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="O_T_.b.-.html"> O:T:.b.- </a>
             <span class="translation"
-                data-fr="undo language in a concrete way"
-                data-en="défaire le langage concrètement">
-                undo language in a concrete way
+                data-fr="défaire le langage concrètement"
+                data-en="undo language in a concrete way">
+                défaire le langage concrètement
             </span>
         </div>
     
@@ -430,14 +463,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="U_M_.b.-.html"> U:M:.b.- </a>
             <span class="translation"
-                data-fr="undo language virtually"
-                data-en="défaire le langage virtuellement">
-                undo language virtually
+                data-fr="défaire le langage virtuellement"
+                data-en="undo language virtually">
+                défaire le langage virtuellement
             </span>
         </div>
     
@@ -451,9 +484,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="y.b.-.html"> y.b.- </a>
             <span class="translation"
-                data-fr="not be able to abstract"
-                data-en="ne pas abstraire">
-                not be able to abstract
+                data-fr="ne pas abstraire"
+                data-en="not be able to abstract">
+                ne pas abstraire
             </span>
         </div>
     
@@ -466,9 +499,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="o.b.-.html"> o.b.- </a>
             <span class="translation"
-                data-fr="misunderstand"
-                data-en="mal comprendre">
-                misunderstand
+                data-fr="mal comprendre"
+                data-en="misunderstand">
+                mal comprendre
             </span>
         </div>
     
@@ -481,9 +514,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="e.b.-.html"> e.b.- </a>
             <span class="translation"
-                data-fr="be incoherent"
-                data-en="être incohérent">
-                be incoherent
+                data-fr="être incohérent"
+                data-en="be incoherent">
+                être incohérent
             </span>
         </div>
     
@@ -494,14 +527,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #ffe5d7;">
+    <th class="cell" colspan="1" style="background-color: #ffd8c0;">
     
         <div class="ieml-cell">
             <a class="ieml" href="A_M_.b.-.html"> A:M:.b.- </a>
             <span class="translation"
-                data-fr="undo language actually"
-                data-en="défaire le langage actuellement">
-                undo language actually
+                data-fr="défaire le langage actuellement"
+                data-en="undo language actually">
+                défaire le langage actuellement
             </span>
         </div>
     
@@ -515,9 +548,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="u.b.-.html"> u.b.- </a>
             <span class="translation"
-                data-fr="soliloquize"
-                data-en="soliloquer">
-                soliloquize
+                data-fr="soliloquer"
+                data-en="soliloquize">
+                soliloquer
             </span>
         </div>
     
@@ -530,9 +563,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="a.b.-.html"> a.b.- </a>
             <span class="translation"
-                data-fr="interrupt the communication"
-                data-en="interrompre la communication">
-                interrupt the communication
+                data-fr="interrompre la communication"
+                data-en="interrupt the communication">
+                interrompre la communication
             </span>
         </div>
     
@@ -545,9 +578,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="i.b.-.html"> i.b.- </a>
             <span class="translation"
-                data-fr="cut off transmission"
-                data-en="interrompre la transmission">
-                cut off transmission
+                data-fr="interrompre la transmission"
+                data-en="cut off transmission">
+                interrompre la transmission
             </span>
         </div>
     
@@ -562,7 +595,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -577,6 +610,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -586,6 +629,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -622,5 +666,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

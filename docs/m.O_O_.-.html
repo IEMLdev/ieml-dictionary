@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             m.O:O:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>sources of meaning in emotions</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>sources du sens dans l'émotion</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>sources du sens dans l'émotion</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>sources of meaning in emotions</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>2</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contains">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,26 +202,26 @@
                 
                     <tr>
                         <td><a href="m.U_O_.-.html">m.U:O:.-</a></td>
-                        <td>sources of meaning in a virtual-related emotion</td>
                         <td>sources du sens dans une émotion liée au virtuel</td>
+                        <td>sources of meaning in a virtual-related emotion</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.A_O_.-.html">m.A:O:.-</a></td>
-                        <td>sources of meaning in an actual-related emotion</td>
                         <td>sources du sens dans une émotion liée à l'actuel</td>
+                        <td>sources of meaning in an actual-related emotion</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.O_U_.-.html">m.O:U:.-</a></td>
-                        <td>sources of meaning in hope</td>
                         <td>sources du sens dans l'espérance</td>
+                        <td>sources of meaning in hope</td>
                     </tr>
                 
                     <tr>
                         <td><a href="m.O_A_.-.html">m.O:A:.-</a></td>
-                        <td>sources of meaning in courage</td>
                         <td>sources du sens dans le courage</td>
+                        <td>sources of meaning in courage</td>
                     </tr>
                 
                 </tbody>
@@ -197,8 +229,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -221,8 +253,8 @@
                 
                     <tr>
                         <td><a href="M_M_.O_O_.-.html">M:M:.O:O:.-</a></td>
-                        <td>resources of meaning</td>
                         <td>ressources du sens</td>
+                        <td>resources of meaning</td>
                     </tr>
                 
                 </tbody>
@@ -230,11 +262,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -258,7 +291,7 @@
                     <tr>
                         <td><a href="m..html">m.</a></td>
                         <td>affect</td>
-                        <td>affects</td>
+                        <td>affect</td>
                     </tr>
                 
                 </tbody>
@@ -266,8 +299,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -290,8 +323,8 @@
                 
                     <tr>
                         <td><a href="O_O_..html">O:O:.</a></td>
-                        <td>interaction phases | tetrad</td>
                         <td>phases de l'interaction | tétrade</td>
+                        <td>interaction phases | tetrad</td>
                     </tr>
                 
                 </tbody>
@@ -299,8 +332,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -314,19 +347,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="m.O_O_.-.html">m.O:O:.-</a> sources of meaning in emotions</div>-->
+            <!--<div class="card-header">Table <a href="m.O_O_.-.html">m.O:O:.-</a> sources du sens dans l'émotion</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="3" style="background-color: #d9eaff;">
+    <th class="cell" colspan="3" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.O_O_.-.html"> m.O:O:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in emotions"
-                data-en="sources du sens dans l'émotion">
-                sources of meaning in emotions
+                data-fr="sources du sens dans l'émotion"
+                data-en="sources of meaning in emotions">
+                sources du sens dans l'émotion
             </span>
         </div>
     
@@ -337,14 +370,14 @@
             <th style="background-color: lightgrey;"></th>
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.O_U_.-.html"> m.O:U:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in hope"
-                data-en="sources du sens dans l'espérance">
-                sources of meaning in hope
+                data-fr="sources du sens dans l'espérance"
+                data-en="sources of meaning in hope">
+                sources du sens dans l'espérance
             </span>
         </div>
     
@@ -352,14 +385,14 @@
     
             
                 
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.O_A_.-.html"> m.O:A:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in courage"
-                data-en="sources du sens dans le courage">
-                sources of meaning in courage
+                data-fr="sources du sens dans le courage"
+                data-en="sources of meaning in courage">
+                sources du sens dans le courage
             </span>
         </div>
     
@@ -370,14 +403,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.U_O_.-.html"> m.U:O:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in a virtual-related emotion"
-                data-en="sources du sens dans une émotion liée au virtuel">
-                sources of meaning in a virtual-related emotion
+                data-fr="sources du sens dans une émotion liée au virtuel"
+                data-en="sources of meaning in a virtual-related emotion">
+                sources du sens dans une émotion liée au virtuel
             </span>
         </div>
     
@@ -391,9 +424,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.wo.-.html"> m.wo.- </a>
             <span class="translation"
-                data-fr="appeal of the unknown"
-                data-en="appel de l'inconnu">
-                appeal of the unknown
+                data-fr="appel de l'inconnu"
+                data-en="appeal of the unknown">
+                appel de l'inconnu
             </span>
         </div>
     
@@ -406,9 +439,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.wa.-.html"> m.wa.- </a>
             <span class="translation"
-                data-fr="audacity"
-                data-en="audace">
-                audacity
+                data-fr="audace"
+                data-en="audacity">
+                audace
             </span>
         </div>
     
@@ -419,14 +452,14 @@
         
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="m.A_O_.-.html"> m.A:O:.- </a>
             <span class="translation"
-                data-fr="sources of meaning in an actual-related emotion"
-                data-en="sources du sens dans une émotion liée à l'actuel">
-                sources of meaning in an actual-related emotion
+                data-fr="sources du sens dans une émotion liée à l'actuel"
+                data-en="sources of meaning in an actual-related emotion">
+                sources du sens dans une émotion liée à l'actuel
             </span>
         </div>
     
@@ -440,9 +473,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.wu.-.html"> m.wu.- </a>
             <span class="translation"
-                data-fr="zest for life"
-                data-en="joie de vivre">
-                zest for life
+                data-fr="joie de vivre"
+                data-en="zest for life">
+                joie de vivre
             </span>
         </div>
     
@@ -455,9 +488,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="m.we.-.html"> m.we.- </a>
             <span class="translation"
-                data-fr="acceptance of constraints"
-                data-en="acceptation des contraintes">
-                acceptance of constraints
+                data-fr="acceptation des contraintes"
+                data-en="acceptance of constraints">
+                acceptation des contraintes
             </span>
         </div>
     
@@ -472,7 +505,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -487,6 +520,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -496,6 +539,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -532,5 +576,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

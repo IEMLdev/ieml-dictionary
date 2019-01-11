@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             j.-'U:M:.-'n.o.-s.o.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>regulation of the works of the mind</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>régulation des oeuvres de l'esprit</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>régulation des oeuvres de l'esprit</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>regulation of the works of the mind</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,10 +175,11 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -170,14 +202,14 @@
                 
                     <tr>
                         <td><a href="j.-'O_M_.-'n.o.-s.o.-'_.html">j.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>factors of the intellectual and aesthetic life</td>
                         <td>facteurs de la vie intellectuelle et esthétique</td>
+                        <td>factors of the intellectual and aesthetic life</td>
                     </tr>
                 
                     <tr>
                         <td><a href="M_O_.-'O_M_.-'n.o.-s.o.-'_.html">M:O:.-'O:M:.-'n.o.-s.o.-',</a></td>
-                        <td>cultural functions</td>
                         <td>fonctions culturelles</td>
+                        <td>cultural functions</td>
                     </tr>
                 
                 </tbody>
@@ -185,11 +217,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -212,8 +245,8 @@
                 
                     <tr>
                         <td><a href="j..html">j.</a></td>
-                        <td>idea</td>
                         <td>idée</td>
+                        <td>idea</td>
                     </tr>
                 
                 </tbody>
@@ -221,8 +254,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -245,8 +278,8 @@
                 
                     <tr>
                         <td><a href="U_M_..html">U:M:.</a></td>
-                        <td>virtual actions</td>
                         <td>actions virtuelles</td>
+                        <td>virtual actions</td>
                     </tr>
                 
                 </tbody>
@@ -254,8 +287,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -287,8 +320,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -302,19 +335,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="j.-'U_M_.-'n.o.-s.o.-'_.html">j.-'U:M:.-'n.o.-s.o.-',</a> regulation of the works of the mind</div>-->
+            <!--<div class="card-header">Table <a href="j.-'U_M_.-'n.o.-s.o.-'_.html">j.-'U:M:.-'n.o.-s.o.-',</a> régulation des oeuvres de l'esprit</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #d9eaff;">
+    <th class="cell" colspan="1" style="background-color: #94ceff;">
     
         <div class="ieml-cell">
             <a class="ieml" href="j.-'U_M_.-'n.o.-s.o.-'_.html"> j.-'U:M:.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="regulation of the works of the mind"
-                data-en="régulation des oeuvres de l'esprit">
-                regulation of the works of the mind
+                data-fr="régulation des oeuvres de l'esprit"
+                data-en="regulation of the works of the mind">
+                régulation des oeuvres de l'esprit
             </span>
         </div>
     
@@ -329,9 +362,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'y.-'n.o.-s.o.-'_.html"> j.-'y.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="paradigms (history of science) epistemic rules, aesthetic canons"
-                data-en="paradigmes (histoire des sciences), règles épistémiques, canons esthétiques">
-                paradigms (history of science) epistemic rules, aesthetic canons
+                data-fr="paradigmes (histoire des sciences), règles épistémiques, canons esthétiques"
+                data-en="paradigms (history of science) epistemic rules, aesthetic canons">
+                paradigmes (histoire des sciences), règles épistémiques, canons esthétiques
             </span>
         </div>
     
@@ -346,9 +379,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'o.-'n.o.-s.o.-'_.html"> j.-'o.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="community competent enough to decide what is true, beautiful, what is the value of a work of the mind"
-                data-en="communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit">
-                community competent enough to decide what is true, beautiful, what is the value of a work of the mind
+                data-fr="communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit"
+                data-en="community competent enough to decide what is true, beautiful, what is the value of a work of the mind">
+                communauté compétente pour décider du vrai, du beau, de la valeur d'une oeuvre de l'esprit
             </span>
         </div>
     
@@ -363,9 +396,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="j.-'e.-'n.o.-s.o.-'_.html"> j.-'e.-'n.o.-s.o.-', </a>
             <span class="translation"
-                data-fr="scientific and artistic corpus used as a reference"
-                data-en="corpus scientifique et artistique de référence">
-                scientific and artistic corpus used as a reference
+                data-fr="corpus scientifique et artistique de référence"
+                data-en="scientific and artistic corpus used as a reference">
+                corpus scientifique et artistique de référence
             </span>
         </div>
     
@@ -379,7 +412,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -394,6 +427,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -403,6 +446,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -439,5 +483,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             E:.T:.U:O:.-
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>pronoun of number in the third person</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>pronom de nombre à la troisième personne</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>pronom de nombre à la troisième personne</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>pronoun of number in the third person</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>1</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     <a class="nav-item nav-link"
        id="nav-tables-1-tab"
@@ -132,6 +144,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -144,8 +175,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -168,20 +200,20 @@
                 
                     <tr>
                         <td><a href="E_.T_.A_O_.-.html">E:.T:.A:O:.-</a></td>
-                        <td>gender pronoun at the third person</td>
                         <td>pronom de genre à la troisième personne</td>
+                        <td>gender pronoun at the third person</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.T_.O_U_.-.html">E:.T:.O:U:.-</a></td>
-                        <td>pronoun in the third person masculine singular</td>
                         <td>pronom à la troisième personne masculin singulier</td>
+                        <td>pronoun in the third person masculine singular</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.T_.O_A_.-.html">E:.T:.O:A:.-</a></td>
-                        <td>pronoun in the third person feminine plural</td>
                         <td>pronom à la troisième personne féminin pluriel</td>
+                        <td>pronoun in the third person feminine plural</td>
                     </tr>
                 
                 </tbody>
@@ -189,10 +221,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -215,26 +247,26 @@
                 
                     <tr>
                         <td><a href="E_.T_.O_O_.-.html">E:.T:.O:O:.-</a></td>
-                        <td>pronoun in the third person</td>
                         <td>pronom à la troisième personne</td>
+                        <td>pronoun in the third person</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.F_.U_O_.-.html">E:.F:.U:O:.-</a></td>
-                        <td>indifferent number</td>
                         <td>nombre indifférent</td>
+                        <td>indifferent number</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.M_.O_O_.-.html">E:.M:.O:O:.-</a></td>
-                        <td>pronoun of person (first, second, third)</td>
                         <td>pronom de personne (première, deuxième, troisième)</td>
+                        <td>pronoun of person (first, second, third)</td>
                     </tr>
                 
                     <tr>
                         <td><a href="E_.F_.O_O_.-.html">E:.F:.O:O:.-</a></td>
-                        <td>pronouns</td>
                         <td>pronoms</td>
+                        <td>pronouns</td>
                     </tr>
                 
                 </tbody>
@@ -242,11 +274,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -269,8 +302,8 @@
                 
                     <tr>
                         <td><a href="T_.html">T:</a></td>
-                        <td>thing</td>
                         <td>chose</td>
+                        <td>thing</td>
                     </tr>
                 
                 </tbody>
@@ -278,8 +311,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -302,8 +335,8 @@
                 
                     <tr>
                         <td><a href="U_O_..html">U:O:.</a></td>
-                        <td>from the actant</td>
                         <td>à partir de l'actant</td>
+                        <td>from the actant</td>
                     </tr>
                 
                 </tbody>
@@ -311,8 +344,8 @@
         </div>
     </div>
 </div>
-                    
-                    
+                        
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -326,19 +359,19 @@
        aria-labelledby="nav-tables-1-tab">
 
         <!--<div class="card">-->
-            <!--<div class="card-header">Table <a href="E_.T_.U_O_.-.html">E:.T:.U:O:.-</a> pronoun of number in the third person</div>-->
+            <!--<div class="card-header">Table <a href="E_.T_.U_O_.-.html">E:.T:.U:O:.-</a> pronom de nombre à la troisième personne</div>-->
             <!--<div class="card-body">-->
                 <table class="table table-bordered table-fixed">
         <tr>
             
-    <th class="cell" colspan="1" style="background-color: #fff1bc;">
+    <th class="cell" colspan="1" style="background-color: #fff38e;">
     
         <div class="ieml-cell">
             <a class="ieml" href="E_.T_.U_O_.-.html"> E:.T:.U:O:.- </a>
             <span class="translation"
-                data-fr="pronoun of number in the third person"
-                data-en="pronom de nombre à la troisième personne">
-                pronoun of number in the third person
+                data-fr="pronom de nombre à la troisième personne"
+                data-en="pronoun of number in the third person">
+                pronom de nombre à la troisième personne
             </span>
         </div>
     
@@ -353,9 +386,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.T_.wo.-.html"> E:.T:.wo.- </a>
             <span class="translation"
-                data-fr="third person singular | it"
-                data-en="troisième personne singulier">
-                third person singular | it
+                data-fr="troisième personne singulier"
+                data-en="third person singular | it">
+                troisième personne singulier
             </span>
         </div>
     
@@ -370,9 +403,9 @@
         <div class="ieml-cell">
             <a class="ieml" href="E_.T_.wa.-.html"> E:.T:.wa.- </a>
             <span class="translation"
-                data-fr="third person plural"
-                data-en="troisième personne plurielle">
-                third person plural
+                data-fr="troisième personne plurielle"
+                data-en="third person plural">
+                troisième personne plurielle
             </span>
         </div>
     
@@ -386,7 +419,7 @@
     </div>
     
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -401,6 +434,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -410,6 +453,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -446,5 +490,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>

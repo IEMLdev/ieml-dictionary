@@ -8,44 +8,47 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Dictionary</a>
-            <button class="btn btn-outline-light ml-auto"
-                  data-toggle="modal"
-                  data-target="#modal-stats">
-              &#9432;
-            </button>
-        </div>
-    </nav>
+    <div class="fixed-top" id="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html">Dictionary</a>
+                <button class="btn btn-outline-light ml-auto"
+                      data-toggle="modal"
+                      data-target="#modal-stats">
+                  &#9432;
+                </button>
+            </div>
+        </nav>
 
-	
-    <div class="container-fluid">
+	    
+    </div>
+    <div id="main-content" class="container-fluid">
+        
+    <!--<div class="container-fluid">-->
         <h2 class="text-center m-4">
             n.-S:.U:.-'B:.-'B:.-',
         </h2>
 
         <div class="row" id="translations">
-            <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">Translations</div>
-                <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        
-                        <dt> FR </dt>
-                        <dd>north Africa</dd>
-                        
-                        <dt> EN </dt>
-                        <dd>Afrique du nord</dd>
-                        
-                    </dl>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">Translations</div>
+                    <div class="card-body">
+                        <dl class="list-group list-group-flush">
+                            
+                            <dt> FR </dt>
+                            <dd>Afrique du nord</dd>
+                            
+                            <dt> EN </dt>
+                            <dd>north Africa</dd>
+                            
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-            <div class="col-sm-8">
+            <div class="col-sm-6">
                 <div class="card" id="properties">
                     <div class="card-header">Properties</div>
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col-sm-2">
@@ -73,7 +76,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl class="list-group list-group-flush">
 
                                     <dt>Parent</dt>
@@ -90,7 +93,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-2">
+                            <div class="col-sm-3">
                                 <dl>
                                     <dt>Ndim of table</dt>
                                     <dd>0</dd>
@@ -108,12 +111,21 @@
 
         <div class="nav nav-tabs mt-2" role="tablist">
             <a class="nav-item nav-link active"
+               id="nav-comments-tab"
+               data-toggle="tab"
+               href="#comments"
+               role="tab"
+               aria-controls="comments"
+               aria-selected="true">Comments</a>
+
+            <a class="nav-item nav-link"
                id="nav-relations-tab"
                data-toggle="tab"
                href="#relations"
                role="tab"
                aria-controls="relations"
-               aria-selected="true">Relations</a>
+               aria-selected="false">Relations</a>
+
             
     
 
@@ -125,6 +137,25 @@
 
         <div class="tab-content" id="tab-content">
             <div class="tab-pane fade show active"
+                   id="comments"
+                   role="tabpanel"
+                   aria-labelledby="nav-comments-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <span class="comment"
+                            data-lang="fr">
+                            
+                        </span>
+                        <span class="comment"
+                            data-lang="en" style="display: none;">
+                            
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade show"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
@@ -137,8 +168,9 @@
 
                 <div class="row m-1">
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Analogies - Same layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-associated">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -161,14 +193,14 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'S_.-'_.html">n.-S:.U:.-'B:.-'S:.-',</a></td>
-                        <td>central America</td>
                         <td>Amérique centrale</td>
+                        <td>central America</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'T_.-'_.html">n.-S:.U:.-'B:.-'T:.-',</a></td>
-                        <td>southern Asia</td>
                         <td>Asie du sud</td>
+                        <td>southern Asia</td>
                     </tr>
                 
                 </tbody>
@@ -176,10 +208,10 @@
         </div>
     </div>
 </div>
-                    
+                        
 
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-contained">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -202,20 +234,20 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'M_.-'_.html">n.-S:.U:.-'B:.-'M:.-',</a></td>
-                        <td>central continental areas</td>
                         <td>zones continentales centrales</td>
+                        <td>central continental areas</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'M_.-'B_.-'_.html">n.-S:.U:.-'M:.-'B:.-',</a></td>
-                        <td>central continents</td>
                         <td>continents centraux</td>
+                        <td>central continents</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'M_.-'M_.-'_.html">n.-S:.U:.-'M:.-'M:.-',</a></td>
-                        <td>continental zones</td>
                         <td>zones continentales</td>
+                        <td>continental zones</td>
                     </tr>
                 
                     <tr>
@@ -229,11 +261,12 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                     <div class="col-sm-6">
-                    
-                        <div class="card m-1">
+                        <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -256,8 +289,8 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'.html">n.-S:.U:.-'</a></td>
-                        <td>earth</td>
                         <td>terre</td>
+                        <td>earth</td>
                     </tr>
                 
                 </tbody>
@@ -265,8 +298,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-attribute">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -289,8 +322,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -298,8 +331,8 @@
         </div>
     </div>
 </div>
-                    
-                        <div class="card m-1">
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-father-mode">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -322,8 +355,8 @@
                 
                     <tr>
                         <td><a href="B_.html">B:</a></td>
-                        <td>being</td>
                         <td>être</td>
+                        <td>being</td>
                     </tr>
                 
                 </tbody>
@@ -331,9 +364,9 @@
         </div>
     </div>
 </div>
-                    
-                    
-                        <div class="card m-1">
+                        
+                        
+                            <div class="card m-1">
     <div class="card-header" id="heading-child-substance">
         <h5 class="mb-0">
             <button class="btn btn-link"
@@ -356,44 +389,44 @@
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_S_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',S:.-',M:.-',_</a></td>
-                        <td>North african countries with a coast on the mediterranean sea</td>
                         <td>Pays d'Afrique du Nord avec une côte sur la mer Méditerranée</td>
+                        <td>North african countries with a coast on the mediterranean sea</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_B_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',B:.-',M:.-',_</a></td>
-                        <td>North african countries located on the southern part of the Sahara desert</td>
                         <td>Pays d'Afrique bordant au Sud le désert du Sahara</td>
+                        <td>North african countries located on the southern part of the Sahara desert</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_T_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',T:.-',M:.-',_</a></td>
-                        <td>Tropical rainy Africa at the south of savannah, horn of Africa</td>
                         <td>Afrique tropicale humide au sud de la savane, corne de l'Afrique</td>
+                        <td>Tropical rainy Africa at the south of savannah, horn of Africa</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_S_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',S:.-',_</a></td>
-                        <td>Countries of northern and southern Africa on the western part of the continent, bordering the Atlantic ocean</td>
                         <td>Pays d'Afrique du nord et du centre à l'ouest du continent, bordant l'océan Atlantique</td>
+                        <td>Countries of northern and southern Africa on the western part of the continent, bordering the Atlantic ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_B_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',B:.-',_</a></td>
-                        <td>Countries of northern and central Africa, median area</td>
                         <td>Pays d'Afrique du nord et du centre, zone médiane</td>
+                        <td>Countries of northern and central Africa, median area</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_T_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',T:.-',_</a></td>
-                        <td>North and central Africa, oriental part, facing the red sea and the indian ocean</td>
                         <td>Afrique du nord et du centre: partie orientale, faisant face à la mer rouge et à l'océan indien</td>
+                        <td>North and central Africa, oriental part, facing the red sea and the indian ocean</td>
                     </tr>
                 
                     <tr>
                         <td><a href="n.-S_.U_.-'B_.-'B_.-'_M_.-'_M_.-'__.html">n.-S:.U:.-'B:.-'B:.-',M:.-',M:.-',_</a></td>
-                        <td>Countries of northern and central Africa</td>
                         <td>Pays d'Afrique du nord et du centre</td>
+                        <td>Countries of northern and central Africa</td>
                     </tr>
                 
                 </tbody>
@@ -401,7 +434,7 @@
         </div>
     </div>
 </div>
-                    
+                        
                     </div>
                 </div>
                     <!--</div>-->
@@ -410,7 +443,7 @@
 
             
         </div>
-    </div>
+    <!--</div>-->
 
 <script>
     	document.addEventListener("DOMContentLoaded", function(event) {
@@ -425,6 +458,16 @@
 					var text = node.getAttribute('data-' + lang)
                     node.textContent = text
 				}
+
+
+				var comments = document.getElementsByClassName("comment");
+
+				for (var node of comments) {
+				    if (node.getAttribute('data-lang') == lang)
+				        node.style.display = ''
+				    else
+				        node.style.display = 'none'
+				}
 			}
 
             do_select_language()
@@ -434,6 +477,7 @@
 
 </script>
 
+    </div>
 
     <div class="modal fade"
          id="modal-stats"
@@ -470,5 +514,14 @@
 	<script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="static/js/popper.min.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var fixed_top = document.getElementById('fixed-top');
+            var main_content = document.getElementById('main-content');
+
+            main_content.style.top = fixed_top.offsetHeight + "px";
+        })
+    </script>
 </body>
 </html>
