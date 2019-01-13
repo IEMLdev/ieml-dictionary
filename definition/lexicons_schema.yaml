@@ -1,0 +1,83 @@
+schema;translations_sch:
+  type: map
+  mapping:
+    fr:
+      required: True
+      type: str
+    en:
+      required: True
+      type: str
+
+schema;mutli_translations_sch:
+  type: map
+  mapping:
+    fr:
+      required: True
+      type: seq
+      sequence:
+        - type: str
+    en:
+      required: True
+      type: seq
+      sequence:
+        - type: str
+
+
+schema;comments_sch:
+  type: map
+  mapping:
+    fr:
+      required: False
+      type: str
+    en:
+      required: False
+      type: str
+
+type: map
+mapping:
+  MorphemesSerie:
+    type: map
+    required: True
+    mapping:
+      groups:
+        required: True
+        type: seq
+        sequence:
+          - type: map
+            mapping:
+              semes:
+                type: seq
+                sequence:
+                  - type: str
+              multiplicity:
+                type: int
+
+      constants:
+        required: True
+        type: map
+        mapping:
+          semes:
+            type: seq
+            sequence:
+              - type: str
+      translations:
+        required: True
+        include: translations_sch
+      comments:
+        required: False
+        include: comments_sch
+      morphemes:
+        type: seq
+        sequence:
+          type: map
+          mapping:
+            ieml:
+              type: str
+              required: True
+            translations:
+              include: multi_translations_sch
+              required: True
+            comments:
+              include: comments_sch
+
+

@@ -1,4 +1,5 @@
 from itertools import islice
+from typing import Union, List
 
 from ieml.constants import LANGUAGES
 from ieml.dictionary.script import Script
@@ -48,16 +49,13 @@ class IEMLSyntaxType(type):
         return self.__rank
 
 
+Literal = Union[List[str], str]
+
 class Usl(metaclass=IEMLSyntaxType):
 
-    def __init__(self, literals=None):
+    def __init__(self, literals: Literal=None):
         super().__init__()
         self._paths = None
-
-        # if dictionary_version:
-        #     self.dictionary_version = dictionary_version
-        # else:
-        #     raise InvalidIEMLObjectArgument(self.__class__, "No dictionary version specified for this syntax object.")
 
         _literals = []
         if literals is not None:

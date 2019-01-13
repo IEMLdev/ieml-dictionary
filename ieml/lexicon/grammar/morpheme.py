@@ -1,81 +1,75 @@
 from functools import reduce
 from operator import mul
+from typing import List, Union
 
 from ieml.constants import MORPHEME_SIZE_LIMIT
+from ieml.dictionary.script import script, Script
 from ieml.exceptions import InvalidIEMLObjectArgument
+from ieml.lexicon.grammar.usl import Literal
 from .usl import Usl
-from .word import word, Word
 
 
-def morpheme(words, literals=None):
+def morpheme(semes: List[Union[Script, str]], literals:str=None):
     try:
-        _words = [word(e) for e in words]
+        _semes = [script(e) for e in semes]
     except TypeError:
-        raise InvalidIEMLObjectArgument(Morpheme, "The root argument %s is not an iterable" % str(words))
+        raise InvalidIEMLObjectArgument(Morpheme, "The root argument %s is not an iterable" % str(semes))
 
-    if len(_words) > MORPHEME_SIZE_LIMIT:
-        raise InvalidIEMLObjectArgument(Morpheme, "Invalid words count %d, must be lower or equal than %d."
-                                        % (len(_words), MORPHEME_SIZE_LIMIT))
-    if words == []:
+    if len(_semes) > MORPHEME_SIZE_LIMIT:
+        raise InvalidIEMLObjectArgument(Morpheme, "Invalid semes count %d, must be lower or equal than %d."
+                                        % (len(_semes), MORPHEME_SIZE_LIMIT))
+    if _semes == []:
         return Morpheme(tuple(), literals=literals)
 
-    if any(not isinstance(c, Word) for c in _words):
+    if any(not isinstance(c, Script) for c in _semes):
         raise InvalidIEMLObjectArgument(Morpheme, "The children of a Topic must be a Word instance.")
 
-    dict_version = words[0].dictionary_version
-    if any(dict_version != w.dictionary_version for w in _words):
-        raise InvalidIEMLObjectArgument(Morpheme, "Different dictionary version used in this morpheme.")
-
-    singular_sequences = [s for t in _words for s in t.script.singular_sequences]
+    singular_sequences = [s for t in _semes for s in t.singular_sequences]
     if len(singular_sequences) != len(set(singular_sequences)):
         raise InvalidIEMLObjectArgument(Morpheme, "Singular sequences intersection in %s." %
-                                        str([str(t) for t in _words]))
+                                        str([str(t) for t in _semes]))
 
-    return Morpheme(tuple(sorted(_words)), literals=literals)
+    return Morpheme(tuple(sorted(_semes)), literals=literals)
 
 
 class Morpheme(Usl):
-    def __init__(self, words, literals=None):
-        self._words = words
+    def __init__(self, semes: List[Script], literals: Literal=None):
+        self._semes = semes
 
-        super().__init__(self._words[0].dictionary_version, literals=literals)
+        super().__init__(literals=literals)
 
     def _do_gt(self, other):
-        return self._words > other._words
+        return self._semes > other._semes
 
     @property
     def empty(self):
-        return len(self._words) == 0
+        return len(self._semes) == 0
 
     @property
     def grammatical_class(self):
-        return max(w.grammatical_class for w in self._words)
+        return max(w.script_class for w in self._semes)
 
     def compute_str(self):
-        return "({0})".format("+".join(str(e) for e in self._words))
+        return "({0})".format("+".join("[{}]".format(str(e)) for e in self._semes))
 
     def __iter__(self):
-        return self._words.__iter__()
+        return self._semes.__iter__()
 
     def _get_cardinal(self):
-        return reduce(mul, [w.cardinal for w in self._words], initial=1)
+        return reduce(mul, [w.cardinal for w in self._semes], initial=1)
 
     def _get_words(self):
-        return set(self._words)
+        return set(self._semes)
 
     def _get_topics(self):
-        return {}
+        return set()
 
     def _get_facts(self):
-        return {}
+        return set()
 
     def _get_theories(self):
-        return {}
-
-    def _set_version(self, version):
-        for r in self._words:
-            r.set_dictionary_version(version)
+        return set()
 
     def __repr__(self, lang='en'):
         return '\n'.join("{:80s}".format(
-            "{0} ({1})".format(str(w), w.translations[lang])) for w in self._words)
+            "{0} ({1})".format(str(w), w.translations[lang])) for w in self._semes)
