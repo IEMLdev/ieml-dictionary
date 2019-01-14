@@ -1,6 +1,8 @@
 import re
 from requests import get
 from tqdm import tqdm
+import os
+
 
 URL_ALL_MS = 'https://intlekt.io/api/morphemes_series/'
 URL_MS_DETAIL = 'https://intlekt.io/api/morphemes_series/{}/'
@@ -14,7 +16,7 @@ def download_lexicons():
     return all_ms
 
 
-INDENT = '    '
+INDENT = '  '
 
 def _clean_translation(s):
     s = re.sub('"', '\"', s)
@@ -33,7 +35,7 @@ def _serialize_constant(constant, indent=2):
 def _serialize_morpheme(mrph, indent=2):
     if not mrph['id']:
         return ''
-    res = INDENT * indent + '- ieml: "{}"\n'.format(mrph['ieml']) + \
+    res = INDENT * indent + '- ieml: "[{}]"\n'.format(mrph['ieml']) + \
           INDENT * indent + "  translations:\n" + \
           INDENT * (indent + 1) + "fr:\n" + \
           ''.join(INDENT * (indent + 2) + '- "{}"\n'.format(_clean_translation(fr)) for fr in
@@ -41,6 +43,22 @@ def _serialize_morpheme(mrph, indent=2):
           INDENT * (indent + 1) + "en:\n" + \
           ''.join(
               INDENT * (indent + 2) + '- "{}"\n'.format(_clean_translation(en)) for en in mrph['descriptors']['en'])
+
+    return res
+
+
+def _serialize_word(mrph):
+    if not mrph['id']:
+        return ''
+
+    res = INDENT * 1 + '- ieml: "[{}]"\n'.format(mrph['ieml']) + \
+          INDENT * 2 + "translations:\n" + \
+          INDENT * 3 + "fr:\n" + \
+          ''.join(INDENT * 4 + '- "{}"\n'.format(_clean_translation(fr)) for fr in
+                  mrph['descriptors']['fr']) + \
+          INDENT * 3 + "en:\n" + \
+          ''.join(
+              INDENT * 4 + '- "{}"\n'.format(_clean_translation(en)) for en in mrph['descriptors']['en'])
 
     return res
 
@@ -65,12 +83,13 @@ def serialize_morphemes_serie(ms_json):
     return res
 
 
-import os
+def serialize_lexicon(ms_json):
+    return "Words:\n" + ''.join(_serialize_word(mrph) for mrph in ms_json['morphemes'])
 
 
 def _clean_name(n):
     n = re.sub('[èéê]', 'e', n)
-    n = re.sub('[ÉÉÊ]', 'E', n)
+    n = re.sub('[ÉÈÊ]', 'E', n)
     n = re.sub('[àáâ]', 'a', n)
     return re.sub('[^a-zA-Z0-9\-]+', '_', n)
 
@@ -86,7 +105,7 @@ def save_morphemes_serie(all_ms, output_folder):
 
         print(ms['id'], file_name)
         with open(file_name, 'w') as fp:
-            print(serialize_morphemes_serie(ms), file=fp)
+            print(serialize_lexicon(ms), file=fp)
 
 
 if __name__ == '__main__':

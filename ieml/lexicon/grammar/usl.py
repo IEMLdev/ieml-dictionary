@@ -4,8 +4,6 @@ from typing import Union, List
 from ieml.constants import LANGUAGES
 from ieml.dictionary.script import Script
 from ieml.exceptions import InvalidIEMLObjectArgument
-import numpy as np
-
 
 
 class IEMLSyntaxType(type):
@@ -51,8 +49,8 @@ class IEMLSyntaxType(type):
 
 Literal = Union[List[str], str]
 
-class Usl(metaclass=IEMLSyntaxType):
 
+class Usl(metaclass=IEMLSyntaxType):
     def __init__(self, literals: Literal=None):
         super().__init__()
         self._paths = None
@@ -120,11 +118,11 @@ class Usl(metaclass=IEMLSyntaxType):
 
         from .word import Word
         if item == Word:
-            return self.words
+            return self.semes
 
-        from .topic import Topic
-        if item == Topic:
-            return self.topics
+        from .word import Word
+        if item == Word:
+            return self.words
 
         from .fact import Fact
         if item == Fact:
@@ -147,11 +145,11 @@ class Usl(metaclass=IEMLSyntaxType):
 
         from .word import Word
         if isinstance(item, Word):
-            return item in self.words
+            return item in self.semes
 
-        from .topic import Topic
-        if isinstance(item, Topic):
-            return item in self.topics
+        from .word import Word
+        if isinstance(item, Word):
+            return item in self.words
 
         from .fact import Fact
         if isinstance(item, Fact):
@@ -163,9 +161,9 @@ class Usl(metaclass=IEMLSyntaxType):
 
         from .text import Text
         if isinstance(item, Text):
-            return item.words.issubset(self.words)   and \
-                   item.topics.issubset(self.topics) and \
-                   item.facts.issubset(self.facts)   and \
+            return item.semes.issubset(self.semes) and \
+                   item.words.issubset(self.words) and \
+                   item.facts.issubset(self.facts) and \
                    item.theories.issubset(self.theories)
 
     def rules(self, type):
@@ -181,16 +179,15 @@ class Usl(metaclass=IEMLSyntaxType):
 
     @property
     def paths(self):
-        from .word import Word
-        return self.rules(Word)
+        return self.rules(Script)
 
     def _get_cardinal(self):
         raise NotImplementedError()
 
-    def _get_words(self):
+    def _get_semes(self):
         raise NotImplementedError()
 
-    def _get_topics(self):
+    def _get_words(self):
         raise NotImplementedError()
 
     def _get_facts(self):
@@ -200,12 +197,12 @@ class Usl(metaclass=IEMLSyntaxType):
         raise NotImplementedError()
 
     @property
-    def words(self):
-        return frozenset(self._get_words())
+    def semes(self):
+        return frozenset(self._get_semes())
 
     @property
-    def topics(self):
-        return frozenset(self._get_topics())
+    def words(self):
+        return frozenset(self._get_words())
 
     @property
     def facts(self):
@@ -215,22 +212,15 @@ class Usl(metaclass=IEMLSyntaxType):
     def theories(self):
         return frozenset(self._get_theories())
 
-    @property
-    def words_vector(self, dictionary):
-        v = np.zeros(len(dictionary))
-        v[[w.index for w in self.words]] = 1
-        return v
+    # @property
+    # def words_vector(self, dictionary):
+    #     v = np.zeros(len(dictionary))
+    #     v[[w.index for w in self.semes]] = 1
+    #     return v
 
     @property
     def cardinal(self):
         return self._get_cardinal()
-
-    def _set_version(self, version):
-        raise NotImplementedError()
-
-    def set_dictionary_version(self, dictionary_version):
-        self._set_version(dictionary_version)
-        self._str = self._compute_str()
 
     def auto_translation(self):
         result = {}
@@ -250,8 +240,8 @@ def usl(arg):
         return IEMLParser().parse(arg)
 
     if isinstance(arg, Script):
-        from .word import Word
-        return Word(arg)
+        from .word import word
+        return word([arg])
 
     if isinstance(arg, Usl):
         return arg

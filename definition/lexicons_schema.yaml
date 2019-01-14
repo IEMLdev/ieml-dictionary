@@ -35,49 +35,18 @@ schema;comments_sch:
 
 type: map
 mapping:
-  MorphemesSerie:
-    type: map
-    required: True
-    mapping:
-      groups:
-        required: True
-        type: seq
-        sequence:
-          - type: map
-            mapping:
-              semes:
-                type: seq
-                sequence:
-                  - type: str
-              multiplicity:
-                type: int
-
-      constants:
-        required: True
-        type: map
-        mapping:
-          semes:
-            type: seq
-            sequence:
-              - type: str
-      translations:
-        required: True
-        include: translations_sch
-      comments:
-        required: False
-        include: comments_sch
-      morphemes:
-        type: seq
-        sequence:
-          type: map
-          mapping:
-            ieml:
-              type: str
-              required: True
-            translations:
-              include: multi_translations_sch
-              required: True
-            comments:
-              include: comments_sch
+  Words:
+    type: seq
+    sequence:
+      type: map
+      mapping:
+        ieml:
+          type: str
+          required: True
+        translations:
+          include: multi_translations_sch
+          required: True
+        comments:
+          include: comments_sch
 
 

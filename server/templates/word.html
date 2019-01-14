@@ -1,0 +1,87 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <h2 class="text-center m-4">
+        {{word.ieml}}
+    </h2>
+
+    <div class="row" id="translations">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">Translations</div>
+                <div class="card-body">
+                    <dl class="list-group list-group-flush">
+                        {% for lang in word.translations %}
+                        <dt> {{lang|upper}} </dt>
+                        <dd>{{word.translations[lang]}}</dd>
+                        {% endfor %}
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-6">-->
+            <!--<div class="card" id="properties">-->
+                <!--<div class="card-header">Properties</div>-->
+                <!--<div class="card-body">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-sm-2">-->
+                            <!--<dl class="list-group list-group-flush">-->
+                                <!--<dt>Layer</dt>-->
+                                <!--<dd>{{script.layer}}</dd>-->
+
+                                <!--<dt>Size</dt>-->
+                                <!--<dd>{{script.size}}</dd>-->
+                            <!--</dl>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-2">-->
+                            <!--<dl class="list-group list-group-flush">-->
+                                <!--<dt>Type</dt>-->
+                                <!--<dd>{{script.type}}</dd>-->
+                                <!--<dt>Class</dt>-->
+                                <!--<dd>{{script.class}}</dd>-->
+                            <!--</dl>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-2">-->
+                            <!--<dl>-->
+                                <!--<dt>Rank</dt>-->
+                                <!--<dd>{{script.tables.rank}}</dd>-->
+
+                            <!--</dl>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-sm-3">-->
+                            <!--<dl class="list-group list-group-flush">-->
+
+                                <!--<dt>Parent</dt>-->
+                                <!--<dd>-->
+                                    <!--{% if script.tables.parent == "Root" %}-->
+                                    <!--Root paradigm-->
+                                    <!--{% else %}-->
+                                    <!--<a href="{{url_for('scripts', filename=script.tables.parent)}}"> {{script.tables.parent}} </a>-->
+                                    <!--{% endif %}-->
+                                <!--</dd>-->
+                                <!--<dt>Root paradigm</dt>-->
+                                <!--<dd>-->
+                                    <!--<a href="{{url_for('scripts', filename=script.tables.root)}}"> {{script.tables.root}} </a>-->
+                                <!--</dd>-->
+
+                            <!--</dl>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-sm-3">-->
+                            <!--<dl>-->
+                                <!--<dt>Ndim of table</dt>-->
+                                <!--<dd>{{script.tables.dim}}</dd>-->
+
+                                <!--<dt>Shape of table</dt>-->
+                                <!--<dd>{{script.tables.shape}}</dd>-->
+                            <!--</dl>-->
+                        <!--</div>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+
+{% endblock %}

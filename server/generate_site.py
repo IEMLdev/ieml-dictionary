@@ -1,7 +1,7 @@
 from jinja2 import Environment, FileSystemLoader, UndefinedError
 from functools import lru_cache
 import re
-from ieml.constants import DICTIONARY_FOLDER
+from ieml.constants import DICTIONARY_FOLDER, LEXICONS_FOLDER
 from ieml.dictionary import Dictionary
 from ieml.dictionary.table.table import TableSet, Table1D, Table2D, Cell
 import os
@@ -140,7 +140,6 @@ def generate_script_site(dictionary, output_folder, base_url):
 
         return e
 
-
     env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
     env.globals['url_for'] = url_for
 
@@ -178,6 +177,9 @@ if __name__ == '__main__':
 
     parser.add_argument('--dictionary-folder', type=str, required=False, default=DICTIONARY_FOLDER,
                         help='the dictionary definition folder')
+
+    parser.add_argument('--lexicon-folder', type=str, required=False, default=LEXICONS_FOLDER,
+                        help='the lexicons definition folder')
 
 
     args = parser.parse_args()

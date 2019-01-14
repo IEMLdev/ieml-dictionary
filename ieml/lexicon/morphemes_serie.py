@@ -3,10 +3,10 @@ from typing import List, Sequence, Union, Tuple
 
 from collections import defaultdict, OrderedDict
 
-from ieml.constants import MORPHEME_SIZE_LIMIT
+from ieml.constants import CHARACTER_SIZE_LIMIT
 from ieml.dictionary.dictionary import Translations
 from ieml.dictionary.script import Script
-from ieml.lexicon.grammar import morpheme, Morpheme
+from ieml.lexicon.grammar import morpheme, Character
 
 
 class LastUpdatedOrderedDict(OrderedDict):
@@ -47,7 +47,7 @@ class MorphemesSerie:
         self.morphemes = self._build_morphemes(self.groups, self.constant)
 
     @staticmethod
-    def _build_morphemes(groups: List[SemesGroup], constant: SemesGroup) -> Tuple[Morpheme]:
+    def _build_morphemes(groups: List[SemesGroup], constant: SemesGroup) -> Tuple[Character]:
         # constants = seconstants
         # groups = [words_of_repertory(r) for r in groups]
 
@@ -139,7 +139,7 @@ class MorphemesSerie:
 
         for gs in iter_groups_combinations():
             morpheme_semes = list(chain(*gs, constant))
-            if len(morpheme_semes) == 0 or len(morpheme_semes) > MORPHEME_SIZE_LIMIT:
+            if len(morpheme_semes) == 0 or len(morpheme_semes) > CHARACTER_SIZE_LIMIT:
                 continue
 
             m = morpheme(morpheme_semes)

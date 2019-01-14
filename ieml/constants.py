@@ -3,6 +3,8 @@ import os
 
 LIBRARY_VERSION = '1.0.3'
 DICTIONARY_FOLDER = os.path.abspath(os.path.join(__file__, '../../definition/dictionary'))
+LEXICONS_FOLDER = os.path.abspath(os.path.join(__file__, '../../definition/lexicons'))
+
 DICTIONARY_SCHEMA_FILE = os.path.abspath(os.path.join(__file__, '../../definition/dictionary_paradigm_schema.yaml'))
 
 
@@ -21,7 +23,7 @@ LANGUAGES = [
     'en'
 ]
 
-MORPHEME_SIZE_LIMIT = 6
+CHARACTER_SIZE_LIMIT = 6
 MAX_NODES_IN_SENTENCE = 20
 MAX_DEPTH_IN_HYPERTEXT = 8
 MAX_NODES_IN_HYPERTEXT = 20

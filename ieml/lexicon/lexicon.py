@@ -1,11 +1,10 @@
-from typing import Dict, List
-from collections import namedtuple
+from typing import Dict, List, Union
+from collections import namedtuple, defaultdict
 import yaml
+import os
 
-from ieml.constants import LANGUAGES
-from ieml.dictionary.dictionary import Translations
-from ieml.lexicon.grammar import Usl
-from ieml.lexicon.morphemes_serie import SemesGroup, MorphemesSerie
+from ieml.constants import LANGUAGES, LEXICONS_FOLDER
+from ieml.lexicon.grammar import usl
 
 
 class MultiTranslations:
@@ -19,31 +18,59 @@ class MultiTranslations:
 
         raise KeyError("Unknown language {}".format(item))
 
+
 class Lexicon:
     @classmethod
-    def parse_file(cls, file: str):
-        with open(file) as fp:
-            file = yaml.load(fp)
+    def load(cls, root_folder: str = LEXICONS_FOLDER, names: Union[List[str], None] = None):
+        lexicon = Lexicon(root_folder=root_folder)
+        if names is None:
+            # add all
+            names = os.listdir(root_folder)
 
-        ms = file['MorphemesSerie']
-        groups = [SemesGroup(semes=sg['semes'], multiplicity=sg['multiplicity']) for sg in ms['groups']]
-        constant = SemesGroup(semes=ms['constant']['semes'], multiplicity=None)
-        translations = Translations(**ms['translations'])
+        for n in names:
+            lexicon.add_lexicon(n)
 
-        morphemes_serie = MorphemesSerie(groups=groups, constant=constant, translations=translations)
+        return lexicon
 
-        return morphemes_serie
+    def add_lexicon(self, file: str):
+        name = os.path.join(self.root_folder, file)
 
-    def __init__(self, usls: List[Usl], translations: Dict[Usl, MultiTranslations]):
-        self.usls = sorted(usls)
-        self.translations = translations
+        if os.path.isdir(name):
+            files = [os.path.join(name, f) for f in os.listdir(name)]
+        else:
+            files = [name]
 
-        self.inv_translations = {l: {trans: u for trans in self.translations[u][l] for u in self.usls} for l in LANGUAGES}
+        usls = []
 
+        for file in files:
+            with open(file) as fp:
+                file = yaml.load(fp)
+
+            words = file['Words'] if file['Words'] else []
+
+            for w in words:
+                u = usl(w['ieml'])
+                self.translations[u] = w['translations']
+                usls.append(u)
+
+        self.usls = sorted(self.usls + usls)
+
+        self.inv_translations = {l: defaultdict(list) for l in LANGUAGES}
+        for l in LANGUAGES:
+            for u in self.usls:
+                for trs in self.translations[u][l]:
+                    self.inv_translations[l][trs].append(u)
+
+    def __init__(self, root_folder: str):
+        self.root_folder = root_folder
+
+        self.usls = []
+        self.translations = {l: {} for l in LANGUAGES} #translations
+        self.inv_translations = {l: defaultdict(list) for l in LANGUAGES}
 
 
 if __name__ == '__main__':
     file = '/home/louis/code/ieml/ieml-dictionary/definition/lexicons/eau/ms_qualite_de_l_eau.yaml'
-    ms = Lexicon.parse_file(file)
-    for m in ms.morphemes:
-        print(str(m))
+    lexicon = Lexicon.load()
+    for u in lexicon.usls:
+        print(str(u), lexicon.translations[u])
