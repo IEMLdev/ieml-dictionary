@@ -3,6 +3,7 @@ from typing import Union, List
 
 from ieml.constants import LANGUAGES
 from ieml.dictionary.script import Script
+from ieml.dictionary.script.script import NULL_SCRIPTS
 from ieml.exceptions import InvalidIEMLObjectArgument
 
 
@@ -198,7 +199,7 @@ class Usl(metaclass=IEMLSyntaxType):
 
     @property
     def semes(self):
-        return frozenset(self._get_semes())
+        return frozenset(set(self._get_semes()) - set(NULL_SCRIPTS))
 
     @property
     def words(self):

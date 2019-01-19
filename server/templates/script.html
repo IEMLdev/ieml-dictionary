@@ -174,19 +174,19 @@
                         <div class="row">
                             <div class="col-sm-2">
                                 <dl class="list-group list-group-flush">
+                                    <dt>Type</dt>
+                                    <dd>{{ badge_type(script) }} ({{script.type}})</dd>
+                                    <dt>Class</dt>
+                                    <dd>{{ badge_class(script) }}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-sm-2">
+                                <dl class="list-group list-group-flush">
                                     <dt>Layer</dt>
                                     <dd>{{script.layer}}</dd>
 
                                     <dt>Size</dt>
                                     <dd>{{script.size}}</dd>
-                                </dl>
-                            </div>
-                            <div class="col-sm-2">
-                                <dl class="list-group list-group-flush">
-                                    <dt>Type</dt>
-                                    <dd>{{script.type}}</dd>
-                                    <dt>Class</dt>
-                                    <dd>{{script.class}}</dd>
                                 </dl>
                             </div>
                             <div class="col-sm-2">

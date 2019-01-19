@@ -60,7 +60,11 @@
                 data-type="{{s.type}}"
                 data-class="{{s.class}}">
 
-                <td><a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a></td>
+                <td>
+                    <a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a>
+                </td>
+                <td>{{ badge_type(s) }}</td>
+                <td>{{ badge_class(s) }}</td>
                 <td>{{s.fr}}</td>
                 <td>{{s.en}}</td>
             </tr>

@@ -63,6 +63,9 @@ class Word(Usl):
         if self.cardinal > MAX_SINGULAR_SEQUENCES:
             raise InvalidIEMLObjectArgument(Word, "Too many Topic- singular sequences defined (max: 360): %d" % self.cardinal)
 
+    def __iter__(self):
+        return [self.substance, self.attribute, self.mode].__iter__()
+
     @property
     def grammatical_class(self):
         return max(s.script_class for s in self.substance)
@@ -82,8 +85,8 @@ class Word(Usl):
     def _do_gt(self, other):
         return (self.substance, self.attribute, self.mode) > (other.substance, other.attribute, other.mode)
 
-    def __iter__(self):
-        return self.semes.__iter__()
+    # def __iter__(self):
+    #     return self.semes.__iter__()
 
     def _get_semes(self):
         return set(self.attribute + self.substance + self.mode)

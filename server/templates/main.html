@@ -1,7 +1,14 @@
+{% macro badge_class(u) -%}
+    <span class="badge badge-{{u.class}}">{{u.class_pretty}}</span>
+{%- endmacro %}
+{% macro badge_type(u) -%}
+    <span class="badge badge-secondary">{{u.type_pretty}}</span>
+{%- endmacro %}
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dictionary</title>
+    <title>IEML database</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 	<base href="{{ base_url }}">

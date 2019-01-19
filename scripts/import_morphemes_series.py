@@ -1,4 +1,8 @@
 import re
+
+from ieml.lexicon.grammar import word, usl
+from ieml.dictionary.script import script
+
 from requests import get
 from tqdm import tqdm
 import os
@@ -50,8 +54,8 @@ def _serialize_morpheme(mrph, indent=2):
 def _serialize_word(mrph):
     if not mrph['id']:
         return ''
-
-    res = INDENT * 1 + '- ieml: "[{}]"\n'.format(mrph['ieml']) + \
+    ieml = str(usl(mrph['ieml'] if mrph['ieml'][0] == '[' else '[{}]'.format(mrph['ieml'])))
+    res = INDENT * 1 + '- ieml: "{}"\n'.format(ieml) + \
           INDENT * 2 + "translations:\n" + \
           INDENT * 3 + "fr:\n" + \
           ''.join(INDENT * 4 + '- "{}"\n'.format(_clean_translation(fr)) for fr in
@@ -61,6 +65,16 @@ def _serialize_word(mrph):
               INDENT * 4 + '- "{}"\n'.format(_clean_translation(en)) for en in mrph['descriptors']['en'])
 
     return res
+
+def _serialize_character_serie(char_serie):
+    mrph = {
+        'id': True,
+        'ieml': str(word([script(grp['words'], promote=True) for grp in char_serie['groups']] + \
+                         [script(w) for w in char_serie['constants']['words']] if char_serie['constants'] else [])),
+        'descriptors' : {'fr': [char_serie['name']], 'en': []}
+    }
+
+    return _serialize_word(mrph)
 
 def serialize_morphemes_serie(ms_json):
     res = """MorphemesSerie:
@@ -73,18 +87,19 @@ def serialize_morphemes_serie(ms_json):
             {}
         en: |-
             {}
-    morphemes:
 {}""".format(''.join(
         _serialize_group(grp['words'], grp['multiplicity'], indent=2) for grp in ms_json['groups']).rstrip(),
              _serialize_constant(ms_json['constants'], indent=2).rstrip(),
              ms_json['name'], ms_json['name'],
-             ''.join(_serialize_morpheme(mrph, indent=2) for mrph in ms_json['morphemes']))
+             serialize_lexicon(ms_json))
 
     return res
 
 
 def serialize_lexicon(ms_json):
-    return "Words:\n" + ''.join(_serialize_word(mrph) for mrph in ms_json['morphemes'])
+    return "Words:\n" + \
+           _serialize_character_serie(ms_json) + '\n' + \
+           ''.join(_serialize_word(mrph) for mrph in ms_json['morphemes'])
 
 
 def _clean_name(n):

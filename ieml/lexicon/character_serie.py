@@ -6,7 +6,7 @@ from collections import defaultdict, OrderedDict
 from ieml.constants import CHARACTER_SIZE_LIMIT
 from ieml.dictionary.dictionary import Translations
 from ieml.dictionary.script import Script
-from ieml.lexicon.grammar import morpheme, Character
+from ieml.lexicon.grammar import word, Word
 
 
 class LastUpdatedOrderedDict(OrderedDict):
@@ -35,7 +35,7 @@ class SemesGroup:
         return self.semes[item]
 
 
-class MorphemesSerie:
+class CharacterSerie:
     def __init__(self, translations: Translations,
                  groups: Sequence[SemesGroup],
                  constant: SemesGroup):
@@ -47,7 +47,7 @@ class MorphemesSerie:
         self.morphemes = self._build_morphemes(self.groups, self.constant)
 
     @staticmethod
-    def _build_morphemes(groups: List[SemesGroup], constant: SemesGroup) -> Tuple[Character]:
+    def _build_morphemes(groups: List[SemesGroup], constant: SemesGroup) -> Tuple[Word]:
         # constants = seconstants
         # groups = [words_of_repertory(r) for r in groups]
 
@@ -142,7 +142,7 @@ class MorphemesSerie:
             if len(morpheme_semes) == 0 or len(morpheme_semes) > CHARACTER_SIZE_LIMIT:
                 continue
 
-            m = morpheme(morpheme_semes)
+            m = word(morpheme_semes)
             morphemes[str(m)] = m
 
         return tuple(morphemes.values())

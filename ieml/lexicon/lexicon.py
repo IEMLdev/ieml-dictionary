@@ -50,7 +50,12 @@ class Lexicon:
 
             for w in words:
                 u = usl(w['ieml'])
-                self.translations[u] = w['translations']
+
+                self.translations[u] = {}
+                for l in LANGUAGES:
+                    self.translations[u][l] = w['translations'][l] if l in w['translations'] and w['translations'][l] \
+                        else []
+
                 usls.append(u)
 
         self.usls = sorted(self.usls + usls)
@@ -65,12 +70,14 @@ class Lexicon:
         self.root_folder = root_folder
 
         self.usls = []
-        self.translations = {l: {} for l in LANGUAGES} #translations
+        self.translations = {} #translations
         self.inv_translations = {l: defaultdict(list) for l in LANGUAGES}
 
 
 if __name__ == '__main__':
     file = '/home/louis/code/ieml/ieml-dictionary/definition/lexicons/eau/ms_qualite_de_l_eau.yaml'
     lexicon = Lexicon.load()
-    for u in lexicon.usls:
-        print(str(u), lexicon.translations[u])
+
+    print(list(lexicon.inv_translations['fr']))
+    # for u in lexicon.usls:
+    #     print(str(u), lexicon.translations[u])
