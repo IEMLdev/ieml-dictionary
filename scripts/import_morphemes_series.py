@@ -69,7 +69,7 @@ def _serialize_word(mrph):
 def _serialize_character_serie(char_serie):
     mrph = {
         'id': True,
-        'ieml': str(word([script(grp['words'], promote=True) for grp in char_serie['groups']] + \
+        'ieml': str(word([script(grp['words'] + ['E:'], promote=True) for grp in char_serie['groups']] + \
                          [script(w) for w in char_serie['constants']['words']] if char_serie['constants'] else [])),
         'descriptors' : {'fr': [char_serie['name']], 'en': []}
     }
