@@ -1,9 +1,12 @@
+import hashlib
+import traceback
+from itertools import chain
 from typing import List
 
 from jinja2 import Environment, FileSystemLoader, UndefinedError
-from functools import lru_cache
+from functools import lru_cache, singledispatch
 import re
-from ieml.constants import DICTIONARY_FOLDER, LEXICONS_FOLDER
+from ieml.constants import DICTIONARY_FOLDER, LEXICONS_FOLDER, LANGUAGES
 from ieml.dictionary import Dictionary
 from ieml.dictionary.script import Script
 from ieml.dictionary.table.table import TableSet, Table1D, Table2D, Cell
@@ -29,22 +32,37 @@ CLASS_TO_COLOR_HEADER = ['#fff38e', '#ffd8c0', '#94ceff']
 CHARACTERS_NAME = ['substance', 'attribute', 'mode']
 
 
+def get_script_description_metadata(s: Script, dictionary: Dictionary):
+    if s in dictionary:
+        translations = {l: dictionary.translations[s][l] for l in ['fr', 'en']}
+    else:
+        translations = {'fr': '', 'en': ''}
+
+    res = {
+        'folder': 'scripts',
+
+        'ieml': str(s),
+        **translations,
+        'translations': translations,
+        'color': CLASS_TO_COLOR[s.script_class] if len(s) == 1 else CLASS_TO_COLOR_HEADER[s.script_class],
+        'layer': s.layer,
+        'type': s.__class__.__name__,
+        'type_pretty': 'Seme' if len(s) == 1 else ('RootParadigm' if s in dictionary.tables.roots else 'Paradigm'),
+        'class': I_TO_CLASS[s.script_class],
+        'class_pretty': I_TO_CLASS_DISPLAY[s.script_class],
+    }
+
+    return res
+
 @lru_cache(maxsize=10000)
-def _get_script_properties(dictionary, r):
-    t = dictionary.tables[r]
+def get_script_description(s: Script, dictionary: Dictionary, lexicon: Lexicon):
+    _cell = lambda s: get_script_description_metadata(s, dictionary)
 
-    def _cell(s):
-        if s in dictionary:
-            translations = {l: dictionary.translations[s][l] for l in ['fr', 'en']}
-        else:
-            translations = {}
+    if s not in dictionary:
+        return _cell(s)
 
-        return {
-            'ieml': str(s),
-            'translations': translations,
-            'color': CLASS_TO_COLOR[s.script_class] if len(s) == 1 else CLASS_TO_COLOR_HEADER[s.script_class]
-        }
 
+    t = dictionary.tables[s]
     if isinstance(t, Cell):
         cells, columns, rows = [], [], []
     elif isinstance(t, Table1D):
@@ -52,22 +70,23 @@ def _get_script_properties(dictionary, r):
     elif isinstance(t, Table2D):
         cells, columns, rows = [[_cell(s) for s in r] for r in t.cells], [_cell(c) for c in t.columns], [_cell(r) for r in t.rows]
     elif isinstance(t, TableSet):
-        cells, columns, rows = {str(tt): _get_script_properties(dictionary, tt) for tt in t.tables}, [], []
+        cells, columns, rows = {str(tt): get_script_description(tt, dictionary, lexicon) for tt in t.tables}, [], []
 
     relations = {
         'sibling': {
-            reltype: [_cell(tt) for tt in dictionary.relations.object(r, reltype) if tt != r] for reltype in RELATIONS_CATEGORIES['sibling']
+            reltype: [_cell(tt) for tt in dictionary.relations.object(s, reltype) if tt != s] for reltype in RELATIONS_CATEGORIES['sibling']
         },
         'inclusion': {
-            reltype: [_cell(tt) for tt in dictionary.relations.object(r, reltype) if tt != r and len(tt) != 1] for reltype in RELATIONS_CATEGORIES['inclusion']
+            reltype: [_cell(tt) for tt in dictionary.relations.object(s, reltype) if tt != s and len(tt) != 1] for reltype in RELATIONS_CATEGORIES['inclusion']
         },
         'father': {
-            key: [_cell(tt) for tt in dictionary.relations.object(r, 'father_' + key) if tt != r] for key in SAM
+            key: [_cell(tt) for tt in dictionary.relations.object(s, 'father_' + key) if tt != s] for key in SAM
         },
         'child': {
-            key: [_cell(tt) for tt in dictionary.relations.object(r, 'child_' + key) if tt != r and len(tt) != 1] for key in SAM
+            key: [_cell(tt) for tt in dictionary.relations.object(s, 'child_' + key) if tt != s and len(tt) != 1] for key in SAM
         }
     }
+
     for rel, rel_v in relations.items():
         to_remove_cat = []
         for cat, cat_v in rel_v.items():
@@ -76,20 +95,25 @@ def _get_script_properties(dictionary, r):
         for cat in to_remove_cat:
             del rel_v[cat]
 
-    # relations['inclusion']['table_2_4'] = [_cell(tt) for tt in t.root.relations.contained if tt.rank in [2,4]]
+    words_metadatas = {w: get_word_description_metadata(w, lexicon) for w in lexicon.words if s in w.semes}
+    names = {name: sorted(filter(lambda w: lexicon.metadatas[w]['name'] == name, words_metadatas)) for name in lexicon.names}
 
-    return {
-            # 'ieml': str(r),
-            'type': t.__class__.__name__,
-            'type_pretty': 'Seme' if len(r) == 1 else ('RootParadigm' if r in dictionary.tables.roots else 'Paradigm'),
+    words = [
+            {
+                'name': name,
 
-            'class': I_TO_CLASS[r.script_class],
-            'class_pretty': I_TO_CLASS_DISPLAY[r.script_class],
-            'layer': r.layer,
-            'size': len(r),
-            # 'translations': {l: dictionary.translations[r][l] for l in ['fr', 'en']},
-            'comments': {l: markdown.markdown(dictionary.comments[r][l]) for l in ['fr', 'en']},
-            # 'color': CLASS_TO_COLOR[r.script_class],
+                'words': [get_word_description_metadata(w, lexicon) for w in names[name]] ,
+                'singulars': [words_metadatas[w] for w in names[name] if w.cardinal == 1],
+                'paradigms': [words_metadatas[w] for w in names[name] if w.cardinal != 1],
+            } for name in lexicon.names if len(names[name])
+        ]
+
+    res = {**_cell(s),
+            'size': len(s),
+            'comments': {l: markdown.markdown(dictionary.comments[s][l]) for l in ['fr', 'en']},
+
+            'words': words,
+
             'tables': {
                 'rank': t.rank,
                 'parent': str(t.parent.script) if t.parent else 'Root',
@@ -99,47 +123,152 @@ def _get_script_properties(dictionary, r):
                 'rows': rows,
                 'columns': columns,
                 'root': str(dictionary.tables.table_to_root[t]),
-                'header': _cell(r)
+                'header': _cell(s)
             },
             'relations': relations,
-            **_cell(r)
     }
 
+    return res
 
-def _get_character_properties(dictionary, char: List[Script], i):
+#
+# def _get_script_properties(dictionary, r):
+#     if r not in dictionary.scripts:
+#         return {
+#             'type_pretty': 'Seme' if len(r) == 1 else 'RootParadigm',
+#
+#             'class': I_TO_CLASS[r.script_class],
+#             'class_pretty': I_TO_CLASS_DISPLAY[r.script_class],
+#             'layer': r.layer,
+#             'size': len(r),
+#             'ieml': str(r),
+#             'color': CLASS_TO_COLOR[r.script_class] if len(r) == 1 else CLASS_TO_COLOR_HEADER[r.script_class],
+#
+#             'translations': {'fr': '', 'en': ''}
+#         }
+#     # t = dictionary.tables[r]
+#     #
+#     # def _cell(s):
+#     #
+#     #         translations = {l: dictionary.translations[s][l] for l in ['fr', 'en']}
+#     #     else:
+#     #         translations = {}
+#     #
+#     #     return {
+#     #         'ieml': str(s),
+#     #         'translations': translations,
+#     #         'color': CLASS_TO_COLOR[s.script_class] if len(s) == 1 else CLASS_TO_COLOR_HEADER[s.script_class]
+#     #     }
+#
+#     if isinstance(t, Cell):
+#         cells, columns, rows = [], [], []
+#     elif isinstance(t, Table1D):
+#         cells, columns, rows = [_cell(s) for s in t.cells], [_cell(t.script)], []
+#     elif isinstance(t, Table2D):
+#         cells, columns, rows = [[_cell(s) for s in r] for r in t.cells], [_cell(c) for c in t.columns], [_cell(r) for r in t.rows]
+#     elif isinstance(t, TableSet):
+#         cells, columns, rows = {str(tt): _get_script_properties(dictionary, tt) for tt in t.tables}, [], []
+#
+#     relations = {
+#         'sibling': {
+#             reltype: [_cell(tt) for tt in dictionary.relations.object(r, reltype) if tt != r] for reltype in RELATIONS_CATEGORIES['sibling']
+#         },
+#         'inclusion': {
+#             reltype: [_cell(tt) for tt in dictionary.relations.object(r, reltype) if tt != r and len(tt) != 1] for reltype in RELATIONS_CATEGORIES['inclusion']
+#         },
+#         'father': {
+#             key: [_cell(tt) for tt in dictionary.relations.object(r, 'father_' + key) if tt != r] for key in SAM
+#         },
+#         'child': {
+#             key: [_cell(tt) for tt in dictionary.relations.object(r, 'child_' + key) if tt != r and len(tt) != 1] for key in SAM
+#         }
+#     }
+#     for rel, rel_v in relations.items():
+#         to_remove_cat = []
+#         for cat, cat_v in rel_v.items():
+#             if not cat_v:
+#                 to_remove_cat.append(cat)
+#         for cat in to_remove_cat:
+#             del rel_v[cat]
+#
+#     # relations['inclusion']['table_2_4'] = [_cell(tt) for tt in t.root.relations.contained if tt.rank in [2,4]]
+#
+#     return {
+#             # 'ieml': str(r),
+#             'type': t.__class__.__name__,
+#             'type_pretty': 'Seme' if len(r) == 1 else ('RootParadigm' if r in dictionary.tables.roots else 'Paradigm'),
+#
+#             'class': I_TO_CLASS[r.script_class],
+#             'class_pretty': I_TO_CLASS_DISPLAY[r.script_class],
+#             'layer': r.layer,
+#             'size': len(r),
+#             # 'translations': {l: dictionary.translations[r][l] for l in ['fr', 'en']},
+#             'comments': {l: markdown.markdown(dictionary.comments[r][l]) for l in ['fr', 'en']},
+#             # 'color': CLASS_TO_COLOR[r.script_class],
+#             'tables': {
+#                 'rank': t.rank,
+#                 'parent': str(t.parent.script) if t.parent else 'Root',
+#                 'dim': t.ndim,
+#                 'shape': t.shape if not isinstance(t, TableSet) else [dictionary.tables[t].shape for t in t.tables],
+#                 'cells': cells,
+#                 'rows': rows,
+#                 'columns': columns,
+#                 'root': str(dictionary.tables.table_to_root[t]),
+#                 'header': _cell(r)
+#             },
+#             'relations': relations,
+#             **_cell(r)
+#     }
+#
+
+
+def get_word_description_metadata(e: Word, lexicon: Lexicon):
+    if e in lexicon.words:
+        translations = {l: lexicon.translations[e][l][0] if lexicon.translations[e][l] else '' for l in LANGUAGES}
+    else:
+        translations = {'fr': '', 'en': ''}
+
     return {
-        'ieml': str(word(char)),
-        'name': CHARACTERS_NAME[i],
-        'semes': [_get_script_properties(dictionary, s) for s in char]
+        'folder': 'words',
+        'ieml': str(e),
+        **translations,
+        'color': CLASS_TO_COLOR[e.grammatical_class] if len(e.singular_sequences) == 1 else CLASS_TO_COLOR_HEADER[e.grammatical_class],
+        'layer': e.cardinal,
+        'type': e.__class__.__name__,
+        'type_pretty': 'Word' if e.cardinal == 1 else 'WordParadigm',
+        'class': I_TO_CLASS[e.grammatical_class],
+        'class_pretty': I_TO_CLASS_DISPLAY[e.grammatical_class],
     }
 
 
-def _get_word_properties(dictionary: Dictionary, lexicon: Lexicon, word: Word):
-    return {'ieml': str(word),
-            'type': word.__class__.__name__,
-            'type_pretty': 'Word',
-            'class': I_TO_CLASS[word.grammatical_class],
-            'class_pretty': I_TO_CLASS_DISPLAY[word.grammatical_class],
-            'layer': len(word.semes),
-            'multiplicty': word.cardinal,
-            'composition': [_get_character_properties(dictionary, char, i) for i, char in enumerate(word)],
+def get_word_description(w: Word, dictionary: Dictionary, lexicon: Lexicon):
+    return {
+            'multiplicty': w.cardinal,
+            'composition': [
+                {
+                    'ieml': str(word(char)),
+                    'name': CHARACTERS_NAME[i],
+                    'semes': [get_script_description(s, dictionary, lexicon) for s in char]
+                } for i, char in enumerate(w)],
             'morpheme_serie': {
-                'dim': sum(len(s) != 1 for s in word.semes),
-                'shape': [tuple(len(s) for s in char if len(s) != 1) for char in word],
+                'dim': sum(len(s) != 1 for s in w.semes),
+                'shape': [tuple(len(s) for s in char if len(s) != 1) for char in w],
                 'parents': [],
                 'roots': []
             },
             'translations': {
-                'fr': lexicon.translations[word]['fr'],
-                'en': lexicon.translations[word]['en'],
-            }}
+                'fr': lexicon.translations[w]['fr'],
+                'en': lexicon.translations[w]['en'],
+            },
+            **get_word_description_metadata(w, lexicon)
+    }
+
 
 def _script_to_filename(s):
     return "{}.html".format(re.sub(r'[,:;]', '_', str(s)))
 
 
 def _usl_to_filename(u):
-    return "{}.html".format(re.sub(r"[^a-zA-Z.\-*+)(\]\[]", '_', str(u)))
+    return "usl_{}.html".format(hashlib.sha224(str(u).encode('utf8')).hexdigest())
 
 
 def generate_script_site(dictionary, lexicon, output_folder, base_url):
@@ -154,16 +283,8 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
 
     copytree(os.path.join(local_folder, 'static'), static_folder)
 
-    all_scripts = [{
-        'ieml': str(s),
-        'fr': dictionary.translations[s].fr,
-        'en': dictionary.translations[s].en,
-        'layer': s.layer,
-        'type': 'seme' if len(s) == 1 else ('root' if s in dictionary.tables.roots else 'paradigm'),
-        'type_pretty': 'Seme' if len(s) == 1 else ('RootParadigm' if s in dictionary.tables.roots else 'Paradigm'),
-        'class': I_TO_CLASS[s.script_class],
-        'class_pretty': I_TO_CLASS_DISPLAY[s.script_class],
-    } for s in dictionary.scripts]
+    all_items = [get_word_description_metadata(s, lexicon=lexicon) for s in lexicon.words] + \
+        [get_script_description_metadata(s, dictionary=dictionary) for s in dictionary.scripts]
 
     dictionary_stats = {
         'nb_roots': len(dictionary.tables.roots),
@@ -172,14 +293,15 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
         'nb_relations': len(dictionary.relations.pandas())
     }
 
-
     def url_for(folder, filename):
         if folder == 'scripts':
-            e = _script_to_filename(filename)
+            e = os.path.join('scripts', _script_to_filename(filename))
+        elif folder == 'words':
+            e = os.path.join('words', _usl_to_filename(filename))
         else:
             e = os.path.join(folder, filename)
 
-        return e
+        return '/' + e
 
     env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
     env.globals['url_for'] = url_for
@@ -187,41 +309,49 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
     template = env.get_template('index.html')
 
     with open(os.path.join(output_folder, 'index.html'), 'w') as fp:
-        print(template.render(scripts=all_scripts,
+        print(template.render(items=all_items,
                               dictionary_stats=dictionary_stats,
                               base_url=base_url), file=fp)
 
-    # template = env.get_template('script.html')
-    #
-    # for script in tqdm(dictionary.scripts, "Generating site at {}".format(output_folder)):
-    #     try:
-    #         rendered = template.render(script=get_table(dictionary, script),
-    #                                    all_scripts=all_scripts,
-    #                                    dictionary_stats=dictionary_stats,
-    #                                    base_url=base_url)
-    #     except UndefinedError as e:
-    #         print(e.__repr__(), file=sys.stderr)
-    #         print("Unable to generate templates for script: {}, no HTML generated.".format(str(script)), file=sys.stderr)
-    #         continue
-    #
-    #     with open(os.path.join(output_folder, _script_to_filename(script)), 'w') as fp:
-    #         print(rendered, file=fp)
+    template = env.get_template('script.html')
 
-    template = env.get_template('word.html')
+    scripts_folder = os.path.join(output_folder, 'scripts')
+    os.makedirs(scripts_folder)
 
-    for word in tqdm(lexicon.usls, "Generating usls"):
+    for script in tqdm(dictionary.scripts, "Generating dictionary at {}".format(scripts_folder)):
         try:
-            rendered = template.render(word=_get_word_properties(dictionary, lexicon, word),
+            rendered = template.render(script=get_script_description(script, dictionary, lexicon),
                                        # all_scripts=all_scripts,
                                        dictionary_stats=dictionary_stats,
                                        base_url=base_url)
         except UndefinedError as e:
+            traceback.print_exc()
+            print(e.__repr__(), file=sys.stderr)
+            print("Unable to generate templates for script: {}, no HTML generated.".format(str(script)), file=sys.stderr)
+            continue
+
+        with open(os.path.join(scripts_folder, _script_to_filename(script)), 'w') as fp:
+            print(rendered, file=fp)
+
+    template = env.get_template('word.html')
+
+    words_folder = os.path.join(output_folder, 'words')
+    os.makedirs(words_folder)
+
+    for word in tqdm(lexicon.usls, "Generating usls at {}".format(words_folder)):
+        try:
+            rendered = template.render(word=get_word_description(word, dictionary, lexicon),
+                                       # items=all_items,
+                                       dictionary_stats=dictionary_stats,
+                                       base_url=base_url)
+        except UndefinedError as e:
+            traceback.print_exc()
             print(e.__repr__(), file=sys.stderr)
             print("[error] Unable to generate templates for word: {}, no HTML generated.".format(str(word)),
                   file=sys.stderr)
             continue
 
-        with open(os.path.join(output_folder, _usl_to_filename(word)), 'w') as fp:
+        with open(os.path.join(words_folder, _usl_to_filename(word)), 'w') as fp:
             print(rendered, file=fp)
 
 

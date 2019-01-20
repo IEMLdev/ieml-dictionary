@@ -8,9 +8,19 @@
                 <label for="filter_type" class="ml-1" style="font-size: 12px;">Filter types</label>
                 <select id="filter_type" class="custom-select">
                     <option value="all" selected>All</option>
-                    <option value="root">Root paradigms</option>
-                    <option value="paradigm">Paradigms</option>
-                    <option value="seme">Semes</option>
+
+                    <optgroup label="Dictionary">
+                        <option value="RootParadigm">Root paradigms</option>
+                        <option value="Paradigm">Paradigms</option>
+                        <option value="Seme">Semes</option>
+                    </optgroup>
+
+                    <optgroup label="Lexicon">
+                        <option value="WordParadigm">Word Paradigms</option>
+                        <option value="Word">Words</option>
+                    </optgroup>
+
+
                 </select>
             </div>
             <div class="form-group col-md-2">
@@ -52,16 +62,16 @@
 <!--<div class="container-fluid">-->
     <table class="table table-striped">
         <tbody id="search_results">
-            {% for s in scripts%}
+            {% for s in items%}
             <tr data-ieml="{{s.ieml}}"
                 data-fr="{{s.fr}}"
                 data-en="{{s.en}}"
                 data-layer="{{s.layer}}"
-                data-type="{{s.type}}"
+                data-type="{{s.type_pretty}}"
                 data-class="{{s.class}}">
 
                 <td>
-                    <a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a>
+                    <a href="{{url_for(s.folder, filename=s.ieml)}}">{{s.ieml | truncate(100, True) }}</a>
                 </td>
                 <td>{{ badge_type(s) }}</td>
                 <td>{{ badge_class(s) }}</td>
@@ -80,25 +90,25 @@
             var select_class = document.getElementById('filter_class');
 
 			function filter_dictionary() {
-				var query = input.value
-				var query_layer = select_layer.value
-				var query_type = select_type.value
-				var query_class = select_class.value
+				var query = input.value;
+				var query_layer = select_layer.value;
+				var query_type = select_type.value;
+				var query_class = select_class.value;
 
 				var list = document.getElementById("search_results");
 
 				for (var node of list.children) {
-					var ieml = node.getAttribute('data-ieml')
-					var fr = node.getAttribute('data-fr')
-					var en = node.getAttribute('data-en')
-					var layer = node.getAttribute('data-layer')
-					var type = node.getAttribute('data-type')
-					var klass = node.getAttribute('data-class')
+					var ieml = node.getAttribute('data-ieml');
+					var fr = node.getAttribute('data-fr');
+					var en = node.getAttribute('data-en');
+					var layer = node.getAttribute('data-layer');
+					var type = node.getAttribute('data-type');
+					var klass = node.getAttribute('data-class');
 
 					if ((ieml.includes(query) || fr.includes(query) || en.includes(query)) &&
-					    (query_type == 'all' || query_type == type) &&
-					    (query_layer == 'all' || query_layer == layer) &&
-					    (query_class == 'all' || query_class == klass)) {
+					    (query_type === 'all' || query_type === type) &&
+					    (query_layer === 'all' || query_layer === layer) &&
+					    (query_class === 'all' || query_class === klass)) {
 						node.style.display = "";
 					} else {
 						node.style.display = "none";
@@ -106,12 +116,12 @@
 				}
 			}
 
-            filter_dictionary()
+            filter_dictionary();
             
-			input.addEventListener('input', filter_dictionary)
-			select_layer.addEventListener('change', filter_dictionary)
-			select_type.addEventListener('change', filter_dictionary)
-            select_class.addEventListener('change', filter_dictionary)
+			input.addEventListener('input', filter_dictionary);
+			select_layer.addEventListener('change', filter_dictionary);
+			select_type.addEventListener('change', filter_dictionary);
+            select_class.addEventListener('change', filter_dictionary);
 
 			document.getElementById("search_form").addEventListener('submit', function(event){event.preventDefault();});
 		});

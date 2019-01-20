@@ -134,7 +134,7 @@
                     {% for char in word.composition %}
                     <div class="col-sm-4">
                         <h6 class="text-center m-3"> {{char.name}} </h6>
-                        <table class="table table-bordered text-truncate">
+                        <table class="table table-bordered text-truncate table-component" >
                             <tbody>
                                    <!--<colgroup>-->
                                     <!--<col span="2" style="background-color:red">-->
@@ -143,13 +143,7 @@
                                 {% for script in char.semes %}
                                 <tr>
                                     <td><a href="{{url_for('scripts', filename=script.ieml)}}">{{script.ieml}}</a></td>
-                                    <td>
-                                        <span data-lang="fr">
-                                            {{script.translations.fr}}
-                                        </span>
-                                        <span data-lang="en" style="display: none;">
-                                            {{script.translations.en}}
-                                        </span>
+                                    <td data-fr="{{script.translations.fr}}" data-en="{{script.translations.en}}" class="translation">
                                     </td>
                                 </tr>
                                 {% endfor %}

@@ -8,7 +8,7 @@
     {% endif %}
         <div class="ieml-cell">
             <a class="ieml" href="{{url_for('scripts', filename=cell.ieml)}}"> {{cell.ieml}} </a>
-            <span class="translation"
+            <span class="translation table-cell"
                 data-fr="{{cell.translations.fr}}"
                 data-en="{{cell.translations.en}}">
                 {{cell.translations.fr}}
@@ -112,32 +112,33 @@
     {% endif %}
 {%- endmacro %}
 
-{% macro _relation_accordion(reltype, relations) -%}
+{% macro _relation_accordion(parent, reltype, items) -%}
+{% set id = range(1, 100000000000) | random %}
+
 <div class="card m-1">
-    <div class="card-header" id="heading-{{reltype}}">
+    <div class="card-header" id="heading-{{id}}">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#{{reltype}}"
+                    data-target="#body-{{id}}"
                     aria-expanded="false"
-                    aria-controls="{{reltype}}">
+                    aria-controls="body-{{id}}">
                 {{reltype}}
             </button>
         </h5>
     </div>
 
-    <div id="{{reltype}}"
+    <div id="body-{{id}}"
          class="collapse"
-         aria-labelledby="heading-{{reltype}}"
-         data-parent="#relations">
+         aria-labelledby="heading-{{id}}"
+         data-parent="#{{parent}}">
         <div class="card-body">
             <table class="table">
                 <tbody>
-                {% for s in relations %}
+                {% for s in items %}
                     <tr>
-                        <td><a href="{{url_for('scripts', filename=s.ieml)}}">{{s.ieml}}</a></td>
-                        <td>{{s.translations.fr}}</td>
-                        <td>{{s.translations.en}}</td>
+                        <td><a href="{{url_for(s.folder, filename=s.ieml)}}">{{s.ieml}}</a></td>
+                        <td data-fr="{{s.fr}}" data-en="{{s.en}}" class="translation">{{s.fr}}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -251,6 +252,14 @@
 
             {{_table_menu_tabs(script, 1)}}
 
+            <a class="nav-item nav-link"
+               id="nav-words-tab"
+               data-toggle="tab"
+               href="#words"
+               role="tab"
+               aria-controls="words"
+               aria-selected="false">Words</a>
+
             <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
                 <option value="fr" selected >Fr</option>
                 <option value="en">En</option>
@@ -292,20 +301,20 @@
                     <div class="col-sm-6">
                         <h6 class="text-center m-3">Analogies - Same layer</h6>
                         {% for rel, relations in script.relations['sibling'].items() %}
-                            {{_relation_accordion(rel, relations)}}
+                            {{_relation_accordion('relations', rel, relations)}}
                         {% endfor %}
 
                         {% for rel, relations in script.relations['inclusion'].items() %}
-                            {{_relation_accordion(rel, relations)}}
+                            {{_relation_accordion('relations', rel, relations)}}
                         {% endfor %}
                     </div>
                     <div class="col-sm-6">
                         <h6 class="text-center m-3">Etymologies - Different layer</h6>
                         {% for rel, relations in script.relations['father'].items() %}
-                            {{_relation_accordion('father-' + rel, relations)}}
+                            {{_relation_accordion('relations', 'father-' + rel, relations)}}
                         {% endfor %}
                         {% for rel, relations in script.relations['child'].items() %}
-                            {{_relation_accordion('child-' + rel, relations)}}
+                            {{_relation_accordion('relations', 'child-' + rel, relations)}}
                         {% endfor %}
                     </div>
                 </div>
@@ -314,38 +323,22 @@
             </div>
 
             {{_table_tabs(script, 1)}}
+
+
+            <div class="tab-pane fade show"
+               id="words"
+               role="tabpanel"
+               aria-labelledby="nav-words-tab">
+
+                {% for name in script.words %}
+                    {{_relation_accordion('words', name.name, name.words)}}
+                {% endfor %}
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+
         </div>
     <!--</div>-->
 
-<script>
-    	document.addEventListener("DOMContentLoaded", function(event) {
-			var select_language = document.getElementById('selectLanguage');
-
-			function do_select_language() {
-				var lang = select_language.value
-
-				var list = document.getElementsByClassName("translation");
-
-				for (var node of list) {
-					var text = node.getAttribute('data-' + lang)
-                    node.textContent = text
-				}
-
-
-				var comments = document.getElementsByClassName("comment");
-
-				for (var node of comments) {
-				    if (node.getAttribute('data-lang') == lang)
-				        node.style.display = ''
-				    else
-				        node.style.display = 'none'
-				}
-			}
-
-            do_select_language()
-
-			select_language.addEventListener('change', do_select_language)
-		});
-
-</script>
 {% endblock content %}
