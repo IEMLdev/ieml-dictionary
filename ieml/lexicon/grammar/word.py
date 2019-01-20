@@ -1,4 +1,5 @@
 from functools import reduce
+from itertools import product
 from operator import mul
 from typing import List, Union
 
@@ -27,8 +28,8 @@ def _character(semes: List[Union[Script, str]]):
     if any(not isinstance(c, Script) for c in _semes):
         raise InvalidIEMLObjectArgument(Character, "The children of a Topic must be a Word instance.")
 
-    singular_sequences = [s for t in _semes for s in t.singular_sequences]
-    if len(singular_sequences) != len(set(singular_sequences)):
+    singular_sequences = [s for t in _semes for s in t.singular_sequences if not s.empty]
+    if len(singular_sequences) != len(set(s for s in singular_sequences if not s.empty)):
         raise InvalidIEMLObjectArgument(Character, "Singular sequences intersection in %s." %
                                         str([str(t) for t in _semes]))
 
@@ -57,14 +58,34 @@ class Word(Usl):
         self.substance = substance
         self.attribute = attribute
         self.mode = mode
+        self.characters = [self.substance, self.attribute, self.mode]
 
         super().__init__(literals=literals)
 
         if self.cardinal > MAX_SINGULAR_SEQUENCES:
             raise InvalidIEMLObjectArgument(Word, "Too many Topic- singular sequences defined (max: 360): %d" % self.cardinal)
 
+        self.singular_sequences = self._build_singular_sequences()
+
+    def _build_singular_sequences(self):
+        characters = []
+        for char in self.characters:
+            characters.append(list(product(*[s.singular_sequences for s in char])))
+
+        singular_sequences = [w for w in product(*characters)]
+        if len(singular_sequences) == 1:
+            return {self}
+
+        return {word(*w) for w in singular_sequences}
+
+    def __contains__(self, item):
+        if isinstance(item, Word):
+            return item.singular_sequences.issubset(self.singular_sequences)
+
+        return super().__contains__(item)
+
     def __iter__(self):
-        return [self.substance, self.attribute, self.mode].__iter__()
+        return self.characters.__iter__()
 
     @property
     def grammatical_class(self):
@@ -85,9 +106,6 @@ class Word(Usl):
     def _do_gt(self, other):
         return (self.substance, self.attribute, self.mode) > (other.substance, other.attribute, other.mode)
 
-    # def __iter__(self):
-    #     return self.semes.__iter__()
-
     def _get_semes(self):
         return set(self.attribute + self.substance + self.mode)
 
@@ -99,28 +117,3 @@ class Word(Usl):
 
     def _get_theories(self):
         return set()
-    #
-    # def __repr__(self, lang='en'):
-    #     row_format = "{:50s}" * 2
-    #     print(row_format.format("root", "flexion"))
-    #
-    #     clip = lambda s, n: s[:n-3] + '..' if len(s) > n else s
-    #     res = ''
-    #     for r, f in zip_longest(self.root, self.flexing, fillvalue=""):
-    #         if r:
-    #             r = clip(r.__repr__(lang=lang), 50)
-    #         if f:
-    #             f = clip(f.__repr__(lang=lang), 50)
-    #         res += "{}\n".format(row_format.format(r,f))
-    #
-    #     return res
-
-
-# class Topic(Word):
-#     def __init__(self, substance: List[Script], attribute: List[Script], literals: Literal = None):
-#         super().__init__(substance=substance, attribute=attribute, mode=[], literals=literals)
-#
-#
-# class Character(Topic):
-#     def __init__(self, substance: List[Script], literals: Literal = None):
-#         super().__init__(substance=substance, attribute=[], literals=literals)

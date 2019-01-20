@@ -101,9 +101,6 @@ class CharacterSerie:
 
         # C3 + C2
         # etc...
-        #
-        # K = nb de Groups
-        # nb morphemes(N) =
 
         # number of groups
         N = len(groups)
