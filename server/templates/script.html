@@ -112,41 +112,6 @@
     {% endif %}
 {%- endmacro %}
 
-{% macro _relation_accordion(parent, reltype, items) -%}
-{% set id = range(1, 100000000000) | random %}
-
-<div class="card m-1">
-    <div class="card-header" id="heading-{{id}}">
-        <h5 class="mb-0">
-            <button class="btn btn-link"
-                    data-toggle="collapse"
-                    data-target="#body-{{id}}"
-                    aria-expanded="false"
-                    aria-controls="body-{{id}}">
-                {{reltype}}
-            </button>
-        </h5>
-    </div>
-
-    <div id="body-{{id}}"
-         class="collapse"
-         aria-labelledby="heading-{{id}}"
-         data-parent="#{{parent}}">
-        <div class="card-body">
-            <table class="table">
-                <tbody>
-                {% for s in items %}
-                    <tr>
-                        <td><a href="{{url_for(s.folder, filename=s.ieml)}}">{{s.ieml}}</a></td>
-                        <td data-fr="{{s.fr}}" data-en="{{s.en}}" class="translation">{{s.fr}}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-{%- endmacro %}
 
 {% block content %}
     <!--<div class="container-fluid">-->
@@ -260,10 +225,6 @@
                aria-controls="words"
                aria-selected="false">Words</a>
 
-            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
-                <option value="fr" selected >Fr</option>
-                <option value="en">En</option>
-            </select>
         </div>
 
         <div class="tab-content" id="tab-content">

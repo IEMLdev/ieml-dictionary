@@ -5,17 +5,41 @@
         {{word.ieml}}
     </h2>
 
+    <div class="card-body row">
+        {% for char in word.composition %}
+        <div class="col-sm-4">
+            <h6 class="text-center m-3"> {{char.name}} </h6>
+            <table class="table table-bordered text-truncate table-component" >
+                <tbody>
+                       <!--<colgroup>-->
+                        <!--<col span="2" style="background-color:red">-->
+                        <!--<col style="background-color:yellow">-->
+                       <!--</colgroup>-->
+                    {% for script in char.semes %}
+                    <tr>
+                        <td><a href="{{url_for('scripts', filename=script.ieml)}}">{{script.ieml}}</a></td>
+                        <td data-fr="{{script.translations.fr}}" data-en="{{script.translations.en}}" class="translation">
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+
     <div class="row" id="translations">
         <div class="col-sm-6">
             <div class="card">
                 <div class="card-header">Translations</div>
                 <div class="card-body">
-                    <dl class="list-group list-group-flush">
-                        {% for lang in word.translations %}
-                        <dt> {{lang|upper}} </dt>
-                        <dd>{{word.translations[lang]}}</dd>
+                    {% for lang in word.translations %}
+                    <ul class="translation list-group" data-lang="{{lang}}">
+                        {% for entry in word.translations[lang] %}
+                        <li class="list-group-item">{{entry}}</li>
                         {% endfor %}
-                    </dl>
+                    </ul>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -24,7 +48,7 @@
                 <div class="card-header">Properties</div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <dl class="list-group list-group-flush">
                                 <dt>Type</dt>
                                 <dd>{{ badge_type(word) }}</dd>
@@ -33,50 +57,24 @@
                             </dl>
                         </div>
 
-                        <div class="col-sm-3">
+                        <div class="col-sm-5">
                             <dl class="list-group list-group-flush">
-                                <dt>Layer / nb of semes </dt>
+                                <dt>File</dt>
+                                <dd><small>{{word.file}}</small></dd>
+                            </dl>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <dl class="list-group list-group-flush">
+                                <dt>Layer </dt>
                                 <dd>{{word.layer}}</dd>
 
-                                <dt>Multiplicity (ms/word)</dt>
+                                <dt>Multiplicity </dt>
                                 <dd>{{word.multiplicity}}
-                                    ({% if word.multiplicity == 1 %}
-                                        word
-                                    {% else %}
-                                        morpheme serie
-                                    {% endif %})</dd>
+                                    {% if word.multiplicity == 1 %}(word){% else %}(word paradigm){% endif %}</dd>
                             </dl>
                         </div>
-                        <!--<div class="col-sm-2">-->
-                            <!--<dl>-->
-                                <!--<dt>Rank</dt>-->
-                                <!--<dd></dd>-->
 
-                            <!--</dl>-->
-                        <!--</div>-->
-
-                        <div class="col-sm-3">
-                            <dl class="list-group list-group-flush">
-
-                                <dt>Parents</dt>
-                                <dd>
-                                    {% if not word.morpheme_serie.parents %}
-                                    Root morpheme_serie
-                                    {% else %}
-                                    {% for parent in word.morpheme_serie.parents %}
-                                    <a href="{{url_for('morphemes_series', filename=parent)}}"> {{parent}} </a>
-                                    {% endfor %}
-                                    {% endif %}
-                                </dd>
-                                <dt>Roots</dt>
-                                <dd>
-                                    {% for root in word.morpheme_serie.roots %}
-                                    <a href="{{url_for('morphemes_series', filename=root)}}"> {{root}} </a>
-                                    {% endfor %}
-                                </dd>
-
-                            </dl>
-                        </div>
                         {% if word.multiplicity != 1 %}
                         <div class="col-sm-3">
                             <dl>
@@ -96,100 +94,80 @@
     </div>
 
     <div class="nav nav-tabs mt-2" role="tablist">
+        <!--<a class="nav-item nav-link active"-->
+           <!--id="nav-composition-tab"-->
+           <!--data-toggle="tab"-->
+           <!--href="#composition"-->
+           <!--role="tab"-->
+           <!--aria-controls="composition"-->
+           <!--aria-selected="true">Composition</a>-->
         <a class="nav-item nav-link active"
-           id="nav-composition-tab"
-           data-toggle="tab"
-           href="#composition"
-           role="tab"
-           aria-controls="composition"
-           aria-selected="true">Composition</a>
-        <a class="nav-item nav-link"
            id="nav-relations-tab"
            data-toggle="tab"
            href="#relations"
            role="tab"
            aria-controls="relations"
-           aria-selected="false">Relations</a>
-        <a class="nav-item nav-link"
-           id="nav-character_series-tab"
-           data-toggle="tab"
-           href="#character_series"
-           role="tab"
-           aria-controls="character_series"
-           aria-selected="false">Character series</a>
+           aria-selected="true">Relations</a>
+        <!--<a class="nav-item nav-link"-->
+           <!--id="nav-character_series-tab"-->
+           <!--data-toggle="tab"-->
+           <!--href="#character_series"-->
+           <!--role="tab"-->
+           <!--aria-controls="character_series"-->
+           <!--aria-selected="false">Character series</a>-->
 
-        <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
-            <option value="fr" selected >Fr</option>
-            <option value="en">En</option>
-        </select>
     </div>
 
     <div class="tab-content" id="tab-content">
+        <!--<div class="tab-pane fade show active"-->
+               <!--id="composition"-->
+               <!--role="tabpanel"-->
+               <!--aria-labelledby="nav-composition-tab">-->
+        <!--</div>-->
         <div class="tab-pane fade show active"
-               id="composition"
-               role="tabpanel"
-               aria-labelledby="nav-composition-tab">
-            <div class="card">
-                <div class="card-body row">
-                    {% for char in word.composition %}
-                    <div class="col-sm-4">
-                        <h6 class="text-center m-3"> {{char.name}} </h6>
-                        <table class="table table-bordered text-truncate table-component" >
-                            <tbody>
-                                   <!--<colgroup>-->
-                                    <!--<col span="2" style="background-color:red">-->
-                                    <!--<col style="background-color:yellow">-->
-                                   <!--</colgroup>-->
-                                {% for script in char.semes %}
-                                <tr>
-                                    <td><a href="{{url_for('scripts', filename=script.ieml)}}">{{script.ieml}}</a></td>
-                                    <td data-fr="{{script.translations.fr}}" data-en="{{script.translations.en}}" class="translation">
-                                    </td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade"
                id="relations"
                role="tabpanel"
                aria-labelledby="nav-relations-tab">
             <div class="card">
                 <div class="card-body">
-                    <span class="relations"
-                        data-lang="fr">
-                        {{word.translations.fr}}
-                    </span>
-                    <span class="relations"
-                        data-lang="en" style="display: none;">
-                        {{word.translations.en}}
-                    </span>
+                    <div class="row m-1">
+                        <div class="col-sm-6">
+                            <h6 class="text-center m-3">Analogies - Same layer</h6>
 
+                            {{_relation_accordion('relations', 'Contained by', word.relations.analogy.contained_by)}}
+
+                            {{_relation_accordion('relations', 'Contains', word.relations.analogy.contains)}}
+
+                        </div>
+                        <div class="col-sm-6">
+                            <h6 class="text-center m-3">Etymologies - Different layer</h6>
+                            {{_relation_accordion('relations', 'Child', word.relations.etymology.child)}}
+
+                            {{_relation_accordion('relations', 'Parents', word.relations.etymology.parents)}}
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade"
-               id="morpheme_series"
-               role="tabpanel"
-               aria-labelledby="nav-morpheme_series-tab">
-            <div class="card">
-                <div class="card-body">
-                    <span class="morpheme_series"
-                        data-lang="fr">
-                        {{word.translations.fr}}
-                    </span>
-                    <span class="morpheme_series"
-                        data-lang="en" style="display: none;">
-                        {{word.translations.en}}
-                    </span>
+        <!--<div class="tab-pane fade"-->
+               <!--id="morpheme_series"-->
+               <!--role="tabpanel"-->
+               <!--aria-labelledby="nav-morpheme_series-tab">-->
+            <!--<div class="card">-->
+                <!--<div class="card-body">-->
+                    <!--<span class="morpheme_series"-->
+                        <!--data-lang="fr">-->
+                        <!--{{word.translations.fr}}-->
+                    <!--</span>-->
+                    <!--<span class="morpheme_series"-->
+                        <!--data-lang="en" style="display: none;">-->
+                        <!--{{word.translations.en}}-->
+                    <!--</span>-->
 
-                </div>
-            </div>
-        </div>
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
 
     </div>
 

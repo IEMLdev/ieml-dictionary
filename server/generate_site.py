@@ -114,6 +114,13 @@ def get_script_description(s: Script, dictionary: Dictionary, lexicon: Lexicon):
 
             'words': words,
 
+            # 'composition': [
+            #         {
+            #             'ieml': str(word(char)),
+            #             'name': CHARACTERS_NAME[i],
+            #             'semes': [get_script_description(s, dictionary, lexicon) for s in char]
+            #         } for i, char in enumerate(w)],
+
             'tables': {
                 'rank': t.rank,
                 'parent': str(t.parent.script) if t.parent else 'Root',
@@ -229,10 +236,12 @@ def get_word_description_metadata(e: Word, lexicon: Lexicon):
 
     return {
         'folder': 'words',
+        'file': lexicon.metadatas[e]['name'],
         'ieml': str(e),
         **translations,
         'color': CLASS_TO_COLOR[e.grammatical_class] if len(e.singular_sequences) == 1 else CLASS_TO_COLOR_HEADER[e.grammatical_class],
-        'layer': e.cardinal,
+        'layer': e.layer,
+        'multiplicity': e.cardinal,
         'type': e.__class__.__name__,
         'type_pretty': 'Word' if e.cardinal == 1 else 'WordParadigm',
         'class': I_TO_CLASS[e.grammatical_class],
@@ -242,7 +251,6 @@ def get_word_description_metadata(e: Word, lexicon: Lexicon):
 
 def get_word_description(w: Word, dictionary: Dictionary, lexicon: Lexicon):
     return {
-            'multiplicty': w.cardinal,
             'composition': [
                 {
                     'ieml': str(word(char)),
@@ -259,6 +267,16 @@ def get_word_description(w: Word, dictionary: Dictionary, lexicon: Lexicon):
                 'fr': lexicon.translations[w]['fr'],
                 'en': lexicon.translations[w]['en'],
             },
+            'relations': {
+                'etymology': {
+                    'child': [get_word_description_metadata(wr,lexicon) for wr in lexicon.lattice[w].child],
+                    'parents': [get_word_description_metadata(wr, lexicon) for wr in lexicon.lattice[w].parents]
+                },
+                'analogy': {
+                    'contains': [get_word_description_metadata(wr,lexicon) for wr in lexicon.lattice[w].contains],
+                    'contained_by': [get_word_description_metadata(wr, lexicon) for wr in lexicon.lattice[w].contained_by],
+                }
+            },
             **get_word_description_metadata(w, lexicon)
     }
 
@@ -269,6 +287,9 @@ def _script_to_filename(s):
 
 def _usl_to_filename(u):
     return "usl_{}.html".format(hashlib.sha224(str(u).encode('utf8')).hexdigest())
+
+
+# def _generate_page(queue):
 
 
 def generate_script_site(dictionary, lexicon, output_folder, base_url):
@@ -283,14 +304,31 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
 
     copytree(os.path.join(local_folder, 'static'), static_folder)
 
-    all_items = [get_word_description_metadata(s, lexicon=lexicon) for s in lexicon.words] + \
-        [get_script_description_metadata(s, dictionary=dictionary) for s in dictionary.scripts]
+    all_semes = []
+    for s in dictionary.scripts:
+        all_semes.append(get_script_description_metadata(s, dictionary=dictionary))
 
-    dictionary_stats = {
-        'nb_roots': len(dictionary.tables.roots),
-        'nb_semes': len([s for s in dictionary.scripts if len(s) == 1]),
-        'nb_paradigms': len([s for s in dictionary.scripts if len(s) != 1]),
-        'nb_relations': len(dictionary.relations.pandas())
+    all_words = []
+    for s in lexicon.words:
+        all_words.append(get_word_description_metadata(s, lexicon=lexicon))
+
+    all_items = all_semes + all_words
+
+    print("Computing IEML database statistics...", file=sys.stderr)
+    db_stats = {
+        'dictionary': {
+            'nb_roots': len(dictionary.tables.roots),
+            'nb_semes': len([s for s in dictionary.scripts if len(s) == 1]),
+            'nb_paradigms': len([s for s in dictionary.scripts if len(s) != 1]),
+            'nb_relations': len(dictionary.relations.pandas())
+        },
+        'lexicon': {
+            'nb_words': len([w for w in lexicon.words if len(w) == 1]),
+            'nb_paradigms': len([w for w in lexicon.words if len(w) != 1]),
+            'nb_semes_used': len(set(chain.from_iterable(w.semes for w in lexicon.words))),
+            'nb_relations': sum(len(n.parents) + len(n.child) + len(n.contains) + len(n.contained_by)
+                                for n in lexicon.lattice.words_to_latticeNode.values())
+        }
     }
 
     def url_for(folder, filename):
@@ -310,7 +348,7 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
 
     with open(os.path.join(output_folder, 'index.html'), 'w') as fp:
         print(template.render(items=all_items,
-                              dictionary_stats=dictionary_stats,
+                              db_stats=db_stats,
                               base_url=base_url), file=fp)
 
     template = env.get_template('script.html')
@@ -322,7 +360,7 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
         try:
             rendered = template.render(script=get_script_description(script, dictionary, lexicon),
                                        # all_scripts=all_scripts,
-                                       dictionary_stats=dictionary_stats,
+                                       db_stats=db_stats,
                                        base_url=base_url)
         except UndefinedError as e:
             traceback.print_exc()
@@ -342,7 +380,7 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
         try:
             rendered = template.render(word=get_word_description(word, dictionary, lexicon),
                                        # items=all_items,
-                                       dictionary_stats=dictionary_stats,
+                                       db_stats=db_stats,
                                        base_url=base_url)
         except UndefinedError as e:
             traceback.print_exc()

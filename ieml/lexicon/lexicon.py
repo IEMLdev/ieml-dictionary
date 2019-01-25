@@ -1,11 +1,11 @@
-from typing import Dict, List, Union
-from collections import namedtuple, defaultdict
+from typing import List, Union
+from collections import defaultdict
 import yaml
 import os
 
 from ieml.constants import LANGUAGES, LEXICONS_FOLDER
 from ieml.lexicon.grammar import usl, Word
-from ieml.lexicon.lattice_sctrucure import LatticeStructure
+from ieml.lexicon.relations.lattice_sctrucure import LatticeStructure
 
 
 class MultiTranslations:
@@ -90,7 +90,7 @@ class Lexicon:
 
         self.lattice = LatticeStructure(self.words)
 
-    def display(self, u, metadatas=True, parents=True, recurse=True, indent=0):
+    def display(self, u, metadatas=True, parents=True, descendents=True, recurse=True, indent=0):
         def _print(*e):
             print('\t'*indent, *e)
 
@@ -124,6 +124,15 @@ class Lexicon:
             for p in self.lattice[u].child:
                 _display(p, 1)
 
+        if descendents:
+            _print("*descendents:")
+            for p in self.lattice[u].descendents:
+                _display(p, 1)
+
+            _print("*ancestors:")
+            for p in self.lattice[u].ancestors:
+                _display(p, 1)
+
 
 
 
@@ -133,8 +142,10 @@ if __name__ == '__main__':
 
     print(list(lexicon.inv_translations['fr']))
     for w in lexicon.words:
-        if w.cardinal == 1:
-            print(lexicon.metadatas[w])
+        lexicon.display(w)
+        print(flush=True)
+        # if w.cardinal == 1:
+        #     print(lexicon.metadatas[w])
 
         # print(list(lexicon.inv_translations['fr']))
         # print(w, id(w), w.singular_sequences)

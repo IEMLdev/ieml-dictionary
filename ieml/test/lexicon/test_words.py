@@ -31,7 +31,44 @@ class MyTestCase(unittest.TestCase):
                     self.fail("Not found in paradigms")
 
 
+    def test_layers(self):
+        w0 = usl("[([E:.A:.g.-]+[T:.U:.n.-]+[n.-T:.U:.-']+[b.i.-s.i.-'O:O:.-'E:.-'+s.-T:.O:.-',])*([E:])*([E:])]")
+        self.assertEqual(w0.layer, 4)
+
+        w0 = usl("[([E:])*([E:])*([E:])]")
+        self.assertEqual(w0.layer, 0)
+
+        w0 = usl("[([A:])*([E:])*([E:])]")
+        self.assertEqual(w0.layer, 1)
+
+        w0 = usl("[([E:.A:.g.-])*([A:])*([E:])]")
+        self.assertEqual(w0.layer, 2)
+
+        w0 = usl("[([E:.A:.g.-])*([A:])*([U:])]")
+        self.assertEqual(w0.layer, 3)
     # [("[([n.-T:.A:.-']+[d.-h.-']+[u.l.-+a.B:.-'+f.-S:.U:.-+T:.A:.-'])*([E:])*([E:])]", )]
+
+    def test_relations(self):
+        w0 = usl("[([E:.A:.g.-]+[T:.U:.n.-]+[n.-T:.U:.-']+[b.i.-s.i.-'O:O:.-'E:.-'+s.-T:.O:.-',])*([E:])*([E:])]")
+        w_p = usl("[([E:.A:.g.-]+[T:.U:.n.-]+[n.-T:.U:.-'])*([E:])*([E:])]")
+        self.assertIn(w_p, w0.ancestors)
+
+        w_p = usl("[([E:.A:.g.-]+[T:.U:.n.-])*([E:])*([E:])]")
+        self.assertIn(w_p, w0.ancestors)
+
+        w_p = usl("[([E:.A:.g.-])*([E:])*([E:])]")
+        self.assertIn(w_p, w0.ancestors)
+
+        # w_p = usl("[([E:])*([E:])*([E:])]")
+        # self.assertIn(w_p, w0.ancestors)
+
+        self.assertNotIn(w0, w0.ancestors)
+
+        self.assertIn(w0, w0)
+
+        w_in = usl("[([E:.A:.g.-]+[T:.U:.n.-]+[n.-T:.U:.-']+[b.i.-s.i.-'wo.-'s.-T:.U:.-',])*([E:])*([E:])]")
+        self.assertIn(w_in, w0)
+
 
 if __name__ == '__main__':
     unittest.main()

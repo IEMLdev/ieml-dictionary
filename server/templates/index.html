@@ -75,8 +75,7 @@
                 </td>
                 <td>{{ badge_type(s) }}</td>
                 <td>{{ badge_class(s) }}</td>
-                <td>{{s.fr}}</td>
-                <td>{{s.en}}</td>
+                <td data-fr="{{s.fr}}" data-en="{{s.en}}" class="translation">{{s.fr}}</td>
             </tr>
             {% endfor %}
         </tbody>

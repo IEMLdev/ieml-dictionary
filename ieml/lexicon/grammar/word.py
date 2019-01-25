@@ -1,5 +1,5 @@
 from functools import reduce
-from itertools import product
+from itertools import product, combinations, chain
 from operator import mul
 from typing import List, Union
 
@@ -66,6 +66,7 @@ class Word(Usl):
             raise InvalidIEMLObjectArgument(Word, "Too many Topic- singular sequences defined (max: 360): %d" % self.cardinal)
 
         self.singular_sequences = self._build_singular_sequences()
+        self.ancestors = self._build_ancestors()
 
     def _build_singular_sequences(self):
         characters = []
@@ -77,6 +78,18 @@ class Word(Usl):
             return {self}
 
         return {word(*w) for w in singular_sequences}
+
+    def _build_ancestors(self):
+        characters = []
+        for char in self.characters:
+            characters.append(list(chain.from_iterable(combinations(char, i) for i in range(1, len(char) + 1))))
+
+        ancestors = {w for w in product(*characters)}
+        #remove self
+        return {word(*w) for w in ancestors if not all(len(w[i]) == len(char) for i, char in enumerate(self.characters))}
+
+    def __len__(self):
+        return self.cardinal
 
     def __contains__(self, item):
         if isinstance(item, Word):
@@ -90,6 +103,10 @@ class Word(Usl):
     @property
     def grammatical_class(self):
         return max(s.script_class for s in self.substance)
+
+    @property
+    def layer(self):
+        return sum(not s.is_empty for s in self.semes)
 
     def _get_cardinal(self):
         return reduce(mul, [w.cardinal for char in [self.substance, self.attribute, self.mode] for w in char], 1)
