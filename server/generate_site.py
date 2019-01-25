@@ -339,7 +339,7 @@ def generate_script_site(dictionary, lexicon, output_folder, base_url):
         else:
             e = os.path.join(folder, filename)
 
-        return '/' + e
+        return e
 
     env = Environment(loader=FileSystemLoader(os.path.join(local_folder, 'templates')))
     env.globals['url_for'] = url_for
