@@ -1,6 +1,8 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +18,13 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/./index.html">IEML database</a>
-                <button class="btn btn-outline-light ml-auto"
+
+                <select class="custom-select ml-auto" style="width: auto; float: right;" id="selectLanguage">
+                    <option value="fr" selected >Fr</option>
+                    <option value="en">En</option>
+                </select>
+
+                <button class="btn btn-outline-light" style="margin-left: 10px"
                       data-toggle="modal"
                       data-target="#modal-stats">
                   &#9432;
@@ -141,10 +149,6 @@
                aria-controls="words"
                aria-selected="false">Words</a>
 
-            <select class="custom-select ml-auto" style="width: auto;" id="selectLanguage">
-                <option value="fr" selected >Fr</option>
-                <option value="en">En</option>
-            </select>
         </div>
 
         <div class="tab-content" id="tab-content">
@@ -187,21 +191,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-80295010940">
+    <div class="card-header" id="heading-44374714138">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-80295010940"
+                    data-target="#body-44374714138"
                     aria-expanded="false"
-                    aria-controls="body-80295010940">
-                contained
+                    aria-controls="body-44374714138">
+                    <span> <span class="badge badge-pill badge-Light">3</span> contained </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-80295010940"
+    <div id="body-44374714138"
          class="collapse"
-         aria-labelledby="heading-80295010940"
+         aria-labelledby="heading-44374714138"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -235,21 +239,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-54267863186">
+    <div class="card-header" id="heading-5517405220">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-54267863186"
+                    data-target="#body-5517405220"
                     aria-expanded="false"
-                    aria-controls="body-54267863186">
-                father-substance
+                    aria-controls="body-5517405220">
+                    <span> <span class="badge badge-pill badge-Light">1</span> father-substance </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-54267863186"
+    <div id="body-5517405220"
          class="collapse"
-         aria-labelledby="heading-54267863186"
+         aria-labelledby="heading-5517405220"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -269,21 +273,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-3838183235">
+    <div class="card-header" id="heading-53171809199">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-3838183235"
+                    data-target="#body-53171809199"
                     aria-expanded="false"
-                    aria-controls="body-3838183235">
-                father-attribute
+                    aria-controls="body-53171809199">
+                    <span> <span class="badge badge-pill badge-Light">1</span> father-attribute </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-3838183235"
+    <div id="body-53171809199"
          class="collapse"
-         aria-labelledby="heading-3838183235"
+         aria-labelledby="heading-53171809199"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -304,21 +308,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-70746799792">
+    <div class="card-header" id="heading-13912539981">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-70746799792"
+                    data-target="#body-13912539981"
                     aria-expanded="false"
-                    aria-controls="body-70746799792">
-                child-substance
+                    aria-controls="body-13912539981">
+                    <span> <span class="badge badge-pill badge-Light">24</span> child-substance </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-70746799792"
+    <div id="body-13912539981"
          class="collapse"
-         aria-labelledby="heading-70746799792"
+         aria-labelledby="heading-13912539981"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -453,21 +457,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-10069946138">
+    <div class="card-header" id="heading-26403742173">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-10069946138"
+                    data-target="#body-26403742173"
                     aria-expanded="false"
-                    aria-controls="body-10069946138">
-                child-attribute
+                    aria-controls="body-26403742173">
+                    <span> <span class="badge badge-pill badge-Light">13</span> child-attribute </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-10069946138"
+    <div id="body-26403742173"
          class="collapse"
-         aria-labelledby="heading-10069946138"
+         aria-labelledby="heading-26403742173"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -547,21 +551,21 @@
                             
 
 <div class="card m-1">
-    <div class="card-header" id="heading-91924379937">
+    <div class="card-header" id="heading-65002267306">
         <h5 class="mb-0">
             <button class="btn btn-link"
                     data-toggle="collapse"
-                    data-target="#body-91924379937"
+                    data-target="#body-65002267306"
                     aria-expanded="false"
-                    aria-controls="body-91924379937">
-                child-mode
+                    aria-controls="body-65002267306">
+                    <span> <span class="badge badge-pill badge-Light">1</span> child-mode </span>
             </button>
         </h5>
     </div>
 
-    <div id="body-91924379937"
+    <div id="body-65002267306"
          class="collapse"
-         aria-labelledby="heading-91924379937"
+         aria-labelledby="heading-65002267306"
          data-parent="#relations">
         <div class="card-body">
             <table class="table">
@@ -618,22 +622,33 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <h6>Dictionary statistics</h6>
-                    <dl class="list-inline navbar-nav">
-                        <dt>Number of root paradigms</dt>
-                        <dd>85</dd>
-                        <dt>Number of semes</dt>
-                        <dd>2707</dd>
-                        <dt>Number of paradigms</dt>
-                        <dd>2224</dd>
-                        <dt>Number of relations</dt>
-                        <dd>1175503</dd>
-                    </dl>
-                    <h6>Lexicon statistics</h6>
-                    <dl class="list-inline navbar-nav">
+                <div class="modal-body row">
+                    <div class="col-6">
+                        <h5>Dictionary statistics</h5>
+                        <dl class="list-inline navbar-nav">
+                            <dt>Number of semes</dt>
+                            <dd>2707</dd>
+                            <dt>Number of root paradigms</dt>
+                            <dd>85</dd>
+                            <dt>Number of paradigms</dt>
+                            <dd>2224</dd>
+                            <dt>Number of relations</dt>
+                            <dd>1175503</dd>
                         </dl>
-
+                    </div>
+                    <div class="col-6">
+                        <h5>Lexicon statistics</h5>
+                        <dl class="list-inline navbar-nav">
+                            <dt>Number of singular words</dt>
+                            <dd>157</dd>
+                            <dt>Number of word paradigms</dt>
+                            <dd>16</dd>
+                            <dt>Number of relations</dt>
+                            <dd>860</dd>
+                            <dt>Number of semes used</dt>
+                            <dd>124</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
@@ -661,7 +676,13 @@
 
                     let list = document.getElementsByClassName("translation");
                     for (let node of list) {
-                        node.textContent = node.getAttribute('data-' + lang);
+                        if (node.getAttribute('data-' + lang))
+                            node.textContent = node.getAttribute('data-' + lang);
+                        else
+                            if (node.getAttribute('data-lang') === lang)
+                                node.style.display = '';
+                            else
+                                node.style.display = 'none';
                     }
 
                     let comments = document.getElementsByClassName("comment");
